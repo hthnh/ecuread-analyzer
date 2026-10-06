@@ -1,0 +1,30 @@
+{
+  "id": "analysis_20260921T011852Z_fdf65fd1763b",
+  "session_id": "esp-fake-overheat-20260920144735",
+  "model_version_id": null,
+  "telemetry_schema_version": "canonical-telemetry-v1",
+  "feature_schema_version": "ecu-window-features-v1",
+  "signal_columns": [
+    "rpm",
+    "tps_voltage",
+    "tps_raw_candidate",
+    "battery_voltage",
+    "iat_c",
+    "ect_c_candidate",
+    "map_raw"
+  ],
+  "status": "completed",
+  "window_size_samples": 50,
+  "window_step_samples": 10,
+  "anomaly_window_count": 116,
+  "total_window_count": 116,
+  "anomaly_ratio": 1.0,
+  "health_score": 18.47,
+  "overall_status": "attention",
+  "warnings": [
+    "model metadata does not record training decoder versions; decoder compatibility is unknown"
+  ],
+  "started_at": "2026-09-21T01:18:49.897693+00:00",
+  "completed_at": "2026-09-21T01:18:52.006349+00:00",
+  "created_at": "2026-09-21T01:18:49.897693+00:00"
+}

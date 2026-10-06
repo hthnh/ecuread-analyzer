@@ -1,0 +1,79 @@
+{
+  "baseline_governance": {
+    "historical_evidence_corpus": "All suitable prior structured observations, never assumed normal.",
+    "nominal_reference_baseline": "Only explicit reference-candidate sessions that have not produced indexed anomaly observations.",
+    "trusted_normal_ground_truth": "Not created by H8."
+  },
+  "check_priority_categories": {
+    "deferred": "Another evidence-tied check is prioritized, so this check can be reviewed later without being removed.",
+    "insufficient_evidence": "Historical compatibility is too weak to prioritize or defer the check.",
+    "priority": "History shows recurrent or persistent comparable evidence for the check family.",
+    "relevant": "The check remains tied to current evidence, but history does not justify prioritization."
+  },
+  "comparison_output_fields": [
+    "comparable_session_count",
+    "occurrence_count",
+    "occurrence_rate",
+    "first_observed",
+    "most_recent_prior_occurrence",
+    "recurrence_category",
+    "persistence",
+    "trend",
+    "comparison_limitations"
+  ],
+  "compatibility_requirements": {
+    "decoder": "Decoder version key must match when available.",
+    "detector_rule_version": "Detector/rule versions must match when both records expose a comparable version.",
+    "independence": "The current session, same sample hash, and same source path are excluded.",
+    "operating_context": "Operating contexts must match when both current and historical records expose one; otherwise the comparison is limited.",
+    "recording_quality": "Historical session must be evaluation-ready with at least one window.",
+    "signals": "Current observation required signals must be available in the historical session.",
+    "temporal_order": "Only sessions captured before the current session may be considered.",
+    "vehicle_source": "Vehicle identity must match when available."
+  },
+  "historical_observation_fields": [
+    "vehicle_identity",
+    "session_id",
+    "capture_timestamp",
+    "detector_versions",
+    "decoder",
+    "operating_context",
+    "observation_family",
+    "observation_type",
+    "signals",
+    "features",
+    "event",
+    "event_magnitude",
+    "source_provenance"
+  ],
+  "policy": {
+    "agents_used": false,
+    "diagnostic_confidence_percentages_allowed": false,
+    "drive_safe_behavior_changed": false,
+    "embedding_similarity_used": false,
+    "future_sessions_allowed_in_history": false,
+    "history_can_create_root_cause": false,
+    "llm_used": false,
+    "new_detector_added": false,
+    "production_behavior_changed": false,
+    "score_fusion_used": false,
+    "unsupported_h7_v1_hypotheses_indexed_as_facts": false,
+    "vector_database_used": false
+  },
+  "policy_version": "historical-evidence-compatibility-v1",
+  "rca_v2_history_extension_version": "root-cause-analysis-v2-history-extension-v1",
+  "recurrence_categories": {
+    "first_observed": "Compatible prior sessions exist, but no materially similar prior observation was found.",
+    "historical_comparison_unavailable": "No compatible prior sessions or required comparison metadata are available.",
+    "persistent_across_sessions": "A materially similar observation occurred in at least three prior comparable sessions and in at least half of all comparable prior sessions. This is a conservative recurrence category, not a degradation claim.",
+    "rare_recurrence": "A materially similar observation occurred in exactly one prior comparable session.",
+    "recurrent": "A materially similar observation occurred in at least two prior comparable sessions."
+  },
+  "schema_version": "historical-evidence-v1",
+  "trend_categories": {
+    "insufficient_historical_data": "Fewer than three compatible numeric occurrence points are available.",
+    "no_observable_trend": "Numeric occurrence points are not monotonically increasing or decreasing.",
+    "possible_decreasing_trend": "At least three compatible numeric points decrease monotonically in detector-local severity semantics.",
+    "possible_increasing_trend": "At least three compatible numeric points increase monotonically in detector-local severity semantics."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "answers": {
+    "cross_session_history_adds_single_session_unavailable_information": true,
+    "future_data_leakage_prevented": true,
+    "h7_v1_hypotheses_indexed_as_facts": false,
+    "historical_layer_suitable_for_later_drivesafe_integration": true,
+    "history_improves_recommended_check_prioritization": true,
+    "history_reduces_or_worsens_diagnostic_noise": "reduces triage noise through deterministic priority/deferred labels without removing checks",
+    "recurrence_can_be_measured_reliably": true,
+    "root_cause_claims_created_from_history": false,
+    "trends_can_be_measured_without_overinterpretation": "simple monotonic numeric evidence only; most sparse cases remain insufficient"
+  },
+  "drive_safe_behavior_changed": false,
+  "limitations": [
+    "Temporal order falls back to session manifest order keys when a parsed capture timestamp is unavailable.",
+    "Operating context is unavailable for some historical aggregate events, so those comparisons are marked limited.",
+    "History is offline research evidence only and does not update production inference, detector thresholds or DriveSafe APIs.",
+    "Nominal reference candidates are not verified healthy ground truth."
+  ],
+  "production_behavior_changed": false,
+  "recommendation": "advance",
+  "schema_version": "historical-evidence-decision-v1",
+  "suitable_for_later_drivesafe_integration": true
+}

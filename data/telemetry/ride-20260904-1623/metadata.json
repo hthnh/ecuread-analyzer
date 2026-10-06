@@ -1,0 +1,41 @@
+{
+  "session_id": "ride-20260904-1623",
+  "vehicle_id": "Honda SH Mode 125",
+  "device_id": "esp32-shmode-01",
+  "ecu_profile_id": "honda_keihin_71_17",
+  "decoder_id": "honda_keihin_71_17",
+  "decoder_version": "1.0.0",
+  "telemetry_schema_version": "canonical-telemetry-v2",
+  "sampling": {
+    "sample_interval_ms": 250.0,
+    "sampling_rate_hz": null
+  },
+  "signal_definitions": {
+    "rpm": {
+      "status": "verified",
+      "unit": "rpm"
+    },
+    "tps_voltage": {
+      "status": "verified",
+      "unit": "V"
+    },
+    "tps_raw": {
+      "status": "verified_as_raw",
+      "unit": "raw"
+    },
+    "battery_voltage": {
+      "status": "verified",
+      "unit": "V"
+    },
+    "iat_c": {
+      "status": "provisional_high_confidence",
+      "unit": "degC"
+    },
+    "ect_c": {
+      "status": "provisional_high_confidence",
+      "unit": "degC"
+    }
+  },
+  "sample_count": 3017,
+  "created_at": "2026-09-21T05:17:16.612040+00:00"
+}

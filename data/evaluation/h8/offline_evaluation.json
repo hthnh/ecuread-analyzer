@@ -1,0 +1,78 @@
+{
+  "case_ids_where_history_added_no_value": [
+    "h7-1-expert-case-0005",
+    "h7-1-expert-case-0014",
+    "h7-1-expert-case-0021",
+    "h7-1-expert-case-0022",
+    "h7-1-expert-case-0023",
+    "h7-1-expert-case-0024",
+    "h7-1-expert-case-0025",
+    "h7-1-expert-case-0031"
+  ],
+  "case_ids_where_history_changed_interpretation": [
+    "h7-1-expert-case-0001",
+    "h7-1-expert-case-0002",
+    "h7-1-expert-case-0003",
+    "h7-1-expert-case-0004",
+    "h7-1-expert-case-0006",
+    "h7-1-expert-case-0007",
+    "h7-1-expert-case-0008",
+    "h7-1-expert-case-0009",
+    "h7-1-expert-case-0010",
+    "h7-1-expert-case-0011",
+    "h7-1-expert-case-0012",
+    "h7-1-expert-case-0013",
+    "h7-1-expert-case-0015",
+    "h7-1-expert-case-0016",
+    "h7-1-expert-case-0017",
+    "h7-1-expert-case-0018",
+    "h7-1-expert-case-0019",
+    "h7-1-expert-case-0020",
+    "h7-1-expert-case-0026",
+    "h7-1-expert-case-0027",
+    "h7-1-expert-case-0028",
+    "h7-1-expert-case-0029",
+    "h7-1-expert-case-0030",
+    "h7-1-expert-case-0032",
+    "h7-1-expert-case-0033"
+  ],
+  "interpretation": {
+    "history_confirms_root_cause": false,
+    "history_increases_check_count": false,
+    "history_reduces_check_noise_by_prioritization_not_deletion": true
+  },
+  "schema_version": "historical-evidence-offline-evaluation-v1",
+  "summary": {
+    "case_count": 33,
+    "cases_where_history_added_no_value": 8,
+    "cases_where_history_changed_interpretation": 25,
+    "cases_with_usable_history": 27,
+    "cases_without_adequate_history": 6,
+    "check_priority_counts": {
+      "insufficient_evidence": 50,
+      "priority": 42,
+      "relevant": 17
+    },
+    "checks_removed_by_history": 0,
+    "current_observation_comparison_count": 96,
+    "deferred_check_count": 0,
+    "history_augmented_recommended_check_count": 109,
+    "observations_with_measurable_trend": 38,
+    "original_recommended_check_count": 109,
+    "priority_check_count": 42,
+    "recurrence_category_counts": {
+      "first_observed": 9,
+      "historical_comparison_unavailable": 41,
+      "persistent_across_sessions": 5,
+      "rare_recurrence": 8,
+      "recurrent": 33
+    },
+    "sessions_with_usable_history": 20,
+    "sessions_without_adequate_history": 6,
+    "trend_status_counts": {
+      "insufficient_historical_data": 58,
+      "no_observable_trend": 34,
+      "possible_increasing_trend": 4
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "entries": [
+    {
+      "basis": "RPM, TPS raw/voltage and battery voltage are treated as verified in v2; IAT/ECT remain high-confidence/provisional for research constraints.",
+      "component": "ECU decoder",
+      "evidence_maturity": "high_for_verified_signals",
+      "production": true,
+      "rejected": false,
+      "research": true
+    },
+    {
+      "basis": "H2 parity passed; H6 controlled recall was 3/3 on sparse condition-level cases, with no precision/FPR proof.",
+      "component": "Isolation Forest",
+      "evidence_maturity": "controlled_internal_evidence",
+      "production": true,
+      "rejected": false,
+      "research": true
+    },
+    {
+      "basis": "H3/H3.1 support stability and distinct evidence; H6 controlled recall was 1/1 for a relevant controlled low-battery case.",
+      "component": "Contextual Battery",
+      "evidence_maturity": "research_observational_plus_sparse_controlled",
+      "production": false,
+      "rejected": false,
+      "research": true
+    },
+    {
+      "basis": "H4 found one stable event but H4.1 rejected it for lack of unique value.",
+      "component": "Temporal Battery",
+      "evidence_maturity": "negative_experiment",
+      "production": false,
+      "rejected": true,
+      "research": false
+    },
+    {
+      "basis": "H4.1 found one Core3-only event but rejected the detector because coverage and parameter sensitivity were not sufficient.",
+      "component": "Temporal RPM",
+      "evidence_maturity": "negative_experiment",
+      "production": false,
+      "rejected": true,
+      "research": false
+    },
+    {
+      "basis": "H5 explicitly preserved coverage and disagreement without voting or score fusion.",
+      "component": "Evidence Aggregator",
+      "evidence_maturity": "engineering_validated_research",
+      "production": false,
+      "rejected": false,
+      "research": true
+    },
+    {
+      "basis": "H7 generated hypotheses, but H7.2/H7.3 removed unsupported causal language.",
+      "component": "RCA v1",
+      "evidence_maturity": "unsupported_semantics",
+      "production": false,
+      "rejected": true,
+      "research": false
+    },
+    {
+      "basis": "H7.3 produced 95 observations, 8 symptoms, 0 possible causes and 109 checks over 33 cases.",
+      "component": "RCA v2",
+      "evidence_maturity": "research_interpretation",
+      "production": false,
+      "rejected": false,
+      "research": true
+    },
+    {
+      "basis": "H8 indexed 716 records across 38 sessions and changed check priorities without changing causal hypotheses.",
+      "component": "Historical Evidence",
+      "evidence_maturity": "research_observational",
+      "production": false,
+      "rejected": false,
+      "research": true
+    },
+    {
+      "basis": "H9 analyzer payload is additive and backwards-compatible; H9B confirms DriveSafe persistence/API/UI consumption.",
+      "component": "Diagnostic Evidence Contract",
+      "evidence_maturity": "integrated_contract",
+      "production": true,
+      "rejected": false,
+      "research": true
+    },
+    {
+      "basis": "H9B integrates versioned research evidence into DriveSafe review surfaces without changing production status, health, alerts or completion semantics.",
+      "component": "DriveSafe Diagnostic Evidence Consumer",
+      "evidence_maturity": "integrated_research_presentation",
+      "production": true,
+      "rejected": false,
+      "research": true
+    }
+  ],
+  "evidence_hierarchy": [
+    "independent physical ground truth",
+    "qualified expert judgment",
+    "OEM or normative documentation",
+    "peer-reviewed engineering literature",
+    "internal controlled empirical evidence",
+    "internal observational evidence",
+    "engineering assumption"
+  ],
+  "schema_version": "research-architecture-audit-v1.1"
+}

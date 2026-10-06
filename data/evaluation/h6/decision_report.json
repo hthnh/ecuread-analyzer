@@ -1,0 +1,80 @@
+{
+  "detector_decisions": {
+    "contextual_battery_voltage": {
+      "controlled_condition_recall": {
+        "computed": true,
+        "detected_case_count": 1,
+        "eligible_case_count": 1,
+        "eligible_sessions": [
+          "ride-20260909-0725"
+        ],
+        "missed_case_count": 0,
+        "missed_sessions": [],
+        "value": 1.0
+      },
+      "decision": "retain_with_limitations",
+      "ground_truth_limitations": [
+        "No detector-positive verified-normal event set is available for precision.",
+        "No root-cause labels are assigned from anomaly output."
+      ],
+      "known_blind_spots": [
+        "high-load/unmodeled contexts",
+        "legacy sessions without required prepared features"
+      ],
+      "known_false_positive_patterns_or_ambiguities": [
+        "first-window or short voltage dips requiring physical corroboration",
+        "battery-low candidate labels without external voltage measurement remain expert-only"
+      ],
+      "not_supported_for": [
+        "high-RPM/load behavior without voltage deviation",
+        "thermal anomalies",
+        "unmodeled contexts and sessions missing required TPS raw features"
+      ],
+      "review_item_count": 8,
+      "supported_phenomenon": "Context-conditioned battery-voltage deviation in modeled RPM/TPS operating contexts."
+    },
+    "isolation_forest": {
+      "controlled_condition_recall": {
+        "computed": true,
+        "detected_case_count": 3,
+        "eligible_case_count": 3,
+        "eligible_sessions": [
+          "ride-20260904-1810",
+          "ride-20260909-0725",
+          "ride-20260914-1935"
+        ],
+        "missed_case_count": 0,
+        "missed_sessions": [],
+        "value": 1.0
+      },
+      "decision": "retain_with_limitations",
+      "ground_truth_limitations": [
+        "No detector-positive verified-normal event set is available for precision.",
+        "No root-cause labels are assigned from anomaly output."
+      ],
+      "known_blind_spots": [
+        "contextual-only voltage deviations where IF remains negative"
+      ],
+      "known_false_positive_patterns_or_ambiguities": [
+        "startup or engine-off constant-signal windows",
+        "normal/high-load riding patterns that are uncommon relative to the baseline",
+        "voltage-related regions also captured by contextual detector"
+      ],
+      "not_supported_for": [
+        "mechanical root-cause diagnosis",
+        "fault probability",
+        "clean distinction between unusual-but-normal operating behavior and faults without expert review"
+      ],
+      "review_item_count": 18,
+      "supported_phenomenon": "Broad multivariate response to available controlled abnormal sessions."
+    }
+  },
+  "drive_safe_behavior_changed": false,
+  "ground_truth_limitations": [
+    "Controlled labels are sparse and condition-level.",
+    "Human-review labels are useful expert context but are not used as precision/recall ground truth.",
+    "Most aggregate events remain inconclusive until blind/manual review is completed."
+  ],
+  "production_behavior_changed": false,
+  "schema_version": "active-detector-validation-decision-v1"
+}

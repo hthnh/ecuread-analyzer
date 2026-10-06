@@ -1,0 +1,46 @@
+{
+  "comparison": {
+    "case_coverage_expected": 33,
+    "case_coverage_lost": [],
+    "case_coverage_retained": 33,
+    "case_coverage_retained_ratio": 1.0,
+    "causal_claim_reduction": 52,
+    "checks_without_causes_supported": 33,
+    "expected_causal_claim_reduction": true,
+    "insufficient_evidence_handling": {
+      "changed": false,
+      "v1_insufficient_evidence_count": 5,
+      "v2_insufficient_evidence_count": 5
+    },
+    "unsupported_claims_removed": 52
+  },
+  "schema_version": "rca-v1-v2-comparison-v1",
+  "v1": {
+    "hypothesis_count": 52,
+    "insufficient_evidence_count": 5,
+    "result_count": 33,
+    "rule_catalog_version": "evidence-based-rca-rules-v1"
+  },
+  "v2": {
+    "cases_with_recommended_checks_without_causes": 33,
+    "empty_possible_cause_case_count": 33,
+    "observation_count": 95,
+    "observation_type_counts": {
+      "aggregate_evidence": 33,
+      "detector_observation": 26,
+      "evidence_relationship": 10,
+      "operating_pattern_observation": 12,
+      "signal_feature_observation": 14
+    },
+    "possible_cause_count": 0,
+    "possible_cause_type_counts": {},
+    "recommended_check_count": 109,
+    "result_count": 33,
+    "rule_catalog_version": "evidence-grounded-rca-v2",
+    "symptom_count": 8,
+    "symptom_type_counts": {
+      "electrical_voltage": 8
+    },
+    "unsupported_v1_causal_claims_removed": 52
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "answers": {
+    "completed_hypothesis_judgment_count": 0,
+    "detector_evidence_rca_output_expert_judgment_separated": true,
+    "independently_confirmed_physical_root_cause_count": 0,
+    "inter_expert_agreement_computed": false,
+    "reviewed_case_count": 0,
+    "rule_decision_counts": {
+      "insufficient_expert_evidence": 7
+    }
+  },
+  "drive_safe_behavior_changed": false,
+  "limitations": [
+    "No completed expert judgments are present until reviewers fill the H7.1 dataset.",
+    "Expert judgment validates reasoning quality and utility, not physical root cause by itself.",
+    "Rules with insufficient expert samples remain inconclusive."
+  ],
+  "overall_recommendation": "insufficient_expert_evidence",
+  "per_rule_decisions": {
+    "rca.coverage.insufficient_evidence": "insufficient_expert_evidence",
+    "rca.data_quality.constant_signal_pattern": "insufficient_expert_evidence",
+    "rca.detectors.disagreement_preservation": "insufficient_expert_evidence",
+    "rca.electrical.contextual_voltage_deviation": "insufficient_expert_evidence",
+    "rca.iforest.multivariate_pattern": "insufficient_expert_evidence",
+    "rca.no_evidence.no_hypothesis": "insufficient_expert_evidence",
+    "rca.operating_state.throttle_related_pattern": "insufficient_expert_evidence"
+  },
+  "production_behavior_changed": false,
+  "schema_version": "rca-expert-validation-decision-v1"
+}

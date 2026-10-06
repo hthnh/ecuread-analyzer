@@ -1,0 +1,824 @@
+{
+  "category_counts": {
+    "context_transition": 43,
+    "isolation_forest_anomaly_contextual_normal": 621,
+    "isolation_forest_normal_contextual_anomaly": 2,
+    "near_threshold_behavior": 271,
+    "possible_data_quality_artifact": 0,
+    "repeated_pattern_across_independent_sessions": 621,
+    "repeated_pattern_within_one_session": 617,
+    "unresolved": 0
+  },
+  "classification_policy": {
+    "categories_are_observable_patterns_not_fault_causes": true,
+    "near_contextual_threshold_delta": 0.5,
+    "near_if_decision_threshold_delta": 0.025,
+    "transition_radius_windows": 1
+  },
+  "operating_context_counts": {
+    "idle_closed_throttle": 341,
+    "low_load_running": 54,
+    "mid_load_running": 228
+  },
+  "primary_category_counts": {
+    "isolation_forest_anomaly_contextual_normal": 621,
+    "isolation_forest_normal_contextual_anomaly": 2
+  },
+  "representative_examples": [
+    {
+      "categories": [
+        "isolation_forest_anomaly_contextual_normal",
+        "repeated_pattern_within_one_session",
+        "repeated_pattern_across_independent_sessions"
+      ],
+      "contextual_detector": {
+        "evidence": {
+          "applicable": true,
+          "feature_scores": [
+            {
+              "direction": "matched",
+              "feature": "battery_voltage_median",
+              "observed": 14.5,
+              "reference_median": 14.5,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": 0.0
+            },
+            {
+              "direction": "lower",
+              "feature": "battery_voltage_mean",
+              "observed": 14.518,
+              "reference_median": 14.518,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": -0.0
+            },
+            {
+              "direction": "matched",
+              "feature": "battery_voltage_min",
+              "observed": 14.4,
+              "reference_median": 14.4,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": 0.0
+            }
+          ],
+          "interpretation": "statistical deviation; not a confirmed mechanical failure",
+          "operating_context": "mid_load_running",
+          "status": "ok",
+          "threshold": 4.5,
+          "top_deviation": {
+            "direction": "matched",
+            "feature": "battery_voltage_median",
+            "observed": 14.5,
+            "reference_median": 14.5,
+            "robust_scale": 0.35,
+            "robust_z": 0.0,
+            "signed_delta": 0.0
+          }
+        },
+        "is_anomaly": false,
+        "prediction": 1,
+        "reference_stats": {
+          "count": 2633,
+          "iqr": 0.0,
+          "mad": 0.0,
+          "median": 14.5,
+          "p10": 14.5,
+          "p90": 14.5,
+          "robust_scale": 0.35,
+          "scale_floor": 0.35
+        },
+        "robust_z": 0.0,
+        "threshold": 4.5,
+        "top_feature": "battery_voltage_median"
+      },
+      "example_for": "isolation_forest_anomaly_contextual_normal",
+      "isolation_forest": {
+        "decision_score": -0.0597485284,
+        "is_anomaly": true,
+        "most_unusual_features": "ect_c_delta;iat_c_constant_signal;iat_c_delta;iat_c_max_absolute_diff;iat_c_range",
+        "prediction": -1,
+        "score_sample": -0.6038223976,
+        "threshold_reference": "decision_score < 0 maps to Isolation Forest anomaly"
+      },
+      "operating_context": "mid_load_running",
+      "provenance": {
+        "artifacts": {
+          "metadata_sha256": "ab19007a0e048b912369eb5868e9714a8309c6396d6b92168266eec5caf7e04b",
+          "samples_sha256": "490eecb8857c48f34513c8d4960dec3eaf9b8e5ec9cc3fdbfc4f8532c6865efd"
+        },
+        "capture_provenance": {
+          "device_id": "esp32-shmode-01",
+          "ecu_profile_id": "honda_keihin_71_17",
+          "source_type": "canonical",
+          "vehicle_id": "Honda SH Mode 125"
+        },
+        "decoder": {
+          "decoder_id": "honda_keihin_71_17",
+          "decoder_version": "1.0.0",
+          "decoder_version_key": "honda_keihin_71_17:1.0.0"
+        },
+        "path": "data/telemetry/ride-20260913-0826",
+        "session_id": "ride-20260913-0826",
+        "telemetry_schema_version": "canonical-telemetry-v2",
+        "training_evaluation_split": {
+          "ground_truth_available": true,
+          "label": "unknown",
+          "label_source": "no_explicit_operational_label",
+          "metrics_reason": "not a verified binary normal/fault ground-truth label",
+          "notes": "Needs human review before being used as normal or abnormal truth.",
+          "split": "excluded_unresolved",
+          "suitable_for_precision_recall_f1": false
+        }
+      },
+      "session_id": "ride-20260913-0826",
+      "telemetry": {
+        "battery_voltage_mean": 14.518,
+        "battery_voltage_median": 14.5,
+        "battery_voltage_min": 14.4,
+        "battery_voltage_range": 0.2,
+        "checksum_failure_ratio": 0.0,
+        "invalid_decoded_ratio": 0.0,
+        "rpm_mean": 6991.4,
+        "rpm_median": 7449.0,
+        "sample_count": 50,
+        "tps_raw_median": 80.5,
+        "tps_voltage_median": 2.529296875
+      },
+      "time": {
+        "duration_ms": 12249.0,
+        "end_time_ms": 1005249.0,
+        "start_time_ms": 993000.0
+      },
+      "window_number": 397
+    },
+    {
+      "categories": [
+        "isolation_forest_normal_contextual_anomaly",
+        "near_threshold_behavior"
+      ],
+      "contextual_detector": {
+        "evidence": {
+          "applicable": true,
+          "feature_scores": [
+            {
+              "direction": "lower",
+              "feature": "battery_voltage_median",
+              "observed": 14.4,
+              "reference_median": 14.5,
+              "robust_scale": 0.35,
+              "robust_z": 0.2857142857,
+              "signed_delta": -0.1
+            },
+            {
+              "direction": "lower",
+              "feature": "battery_voltage_mean",
+              "observed": 14.088,
+              "reference_median": 14.508,
+              "robust_scale": 0.35,
+              "robust_z": 1.2,
+              "signed_delta": -0.42
+            },
+            {
+              "direction": "lower",
+              "feature": "battery_voltage_min",
+              "observed": 10.9,
+              "reference_median": 14.2,
+              "robust_scale": 0.35,
+              "robust_z": 9.4285714286,
+              "signed_delta": -3.3
+            }
+          ],
+          "interpretation": "statistical deviation; not a confirmed mechanical failure",
+          "operating_context": "idle_closed_throttle",
+          "status": "ok",
+          "threshold": 4.5,
+          "top_deviation": {
+            "direction": "lower",
+            "feature": "battery_voltage_min",
+            "observed": 10.9,
+            "reference_median": 14.2,
+            "robust_scale": 0.35,
+            "robust_z": 9.4285714286,
+            "signed_delta": -3.3
+          }
+        },
+        "is_anomaly": true,
+        "prediction": -1,
+        "reference_stats": {
+          "count": 337,
+          "iqr": 0.2,
+          "mad": 0.1,
+          "median": 14.2,
+          "p10": 13.8,
+          "p90": 14.3,
+          "robust_scale": 0.35,
+          "scale_floor": 0.35
+        },
+        "robust_z": 9.4285714286,
+        "threshold": 4.5,
+        "top_feature": "battery_voltage_min"
+      },
+      "example_for": "isolation_forest_normal_contextual_anomaly",
+      "isolation_forest": {
+        "decision_score": 0.016833325,
+        "is_anomaly": false,
+        "most_unusual_features": "ect_c_delta;battery_voltage_median;ect_c_slope;battery_voltage_mean;battery_voltage_delta",
+        "prediction": 1,
+        "score_sample": -0.5272405442,
+        "threshold_reference": "decision_score < 0 maps to Isolation Forest anomaly"
+      },
+      "operating_context": "idle_closed_throttle",
+      "provenance": {
+        "artifacts": {
+          "metadata_sha256": "c27a2040830564307adf54ea7b58383bca6640526a5f861cbacee411eb8a2c76",
+          "samples_sha256": "4c845e5e35cb5af6170a7149c03eaa8415732c40d931a6a6abdb01872e159f72"
+        },
+        "capture_provenance": {
+          "device_id": "esp32-shmode-calib",
+          "ecu_profile_id": "honda_keihin_71_17",
+          "source_type": "canonical",
+          "vehicle_id": "Honda SH Mode 125"
+        },
+        "decoder": {
+          "decoder_id": "honda_keihin_71_17",
+          "decoder_version": "1.0.0",
+          "decoder_version_key": "honda_keihin_71_17:1.0.0"
+        },
+        "path": "data/telemetry/calib-real-run-session-000007-part-01",
+        "session_id": "calib-real-run-session-000007-part-01",
+        "telemetry_schema_version": "canonical-telemetry-v2",
+        "training_evaluation_split": {
+          "ground_truth_available": false,
+          "label": null,
+          "label_source": null,
+          "metrics_reason": "not a verified binary normal/fault ground-truth label",
+          "notes": null,
+          "split": "unassigned",
+          "suitable_for_precision_recall_f1": false
+        }
+      },
+      "session_id": "calib-real-run-session-000007-part-01",
+      "telemetry": {
+        "battery_voltage_mean": 14.088,
+        "battery_voltage_median": 14.4,
+        "battery_voltage_min": 10.9,
+        "battery_voltage_range": 3.9,
+        "checksum_failure_ratio": 0.0,
+        "invalid_decoded_ratio": 0.0,
+        "rpm_mean": 2127.16,
+        "rpm_median": 1706.0,
+        "sample_count": 50,
+        "tps_raw_median": 0.0,
+        "tps_voltage_median": 0.48828125
+      },
+      "time": {
+        "duration_ms": 12250.0,
+        "end_time_ms": 12250.0,
+        "start_time_ms": 0.0
+      },
+      "window_number": 0
+    },
+    {
+      "categories": [
+        "isolation_forest_anomaly_contextual_normal",
+        "context_transition",
+        "repeated_pattern_within_one_session",
+        "repeated_pattern_across_independent_sessions"
+      ],
+      "contextual_detector": {
+        "evidence": {
+          "applicable": true,
+          "feature_scores": [
+            {
+              "direction": "matched",
+              "feature": "battery_voltage_median",
+              "observed": 14.5,
+              "reference_median": 14.5,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": 0.0
+            },
+            {
+              "direction": "higher",
+              "feature": "battery_voltage_mean",
+              "observed": 14.526,
+              "reference_median": 14.518,
+              "robust_scale": 0.35,
+              "robust_z": 0.0228571429,
+              "signed_delta": 0.008
+            },
+            {
+              "direction": "matched",
+              "feature": "battery_voltage_min",
+              "observed": 14.4,
+              "reference_median": 14.4,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": 0.0
+            }
+          ],
+          "interpretation": "statistical deviation; not a confirmed mechanical failure",
+          "operating_context": "mid_load_running",
+          "status": "ok",
+          "threshold": 4.5,
+          "top_deviation": {
+            "direction": "higher",
+            "feature": "battery_voltage_mean",
+            "observed": 14.526,
+            "reference_median": 14.518,
+            "robust_scale": 0.35,
+            "robust_z": 0.0228571429,
+            "signed_delta": 0.008
+          }
+        },
+        "is_anomaly": false,
+        "prediction": 1,
+        "reference_stats": {
+          "count": 2633,
+          "iqr": 0.016,
+          "mad": 0.008,
+          "median": 14.518,
+          "p10": 14.504,
+          "p90": 14.534,
+          "robust_scale": 0.35,
+          "scale_floor": 0.35
+        },
+        "robust_z": 0.0228571429,
+        "threshold": 4.5,
+        "top_feature": "battery_voltage_mean"
+      },
+      "example_for": "context_transition",
+      "isolation_forest": {
+        "decision_score": -0.0701393587,
+        "is_anomaly": true,
+        "most_unusual_features": "tps_raw_min;ect_c_delta;iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range",
+        "prediction": -1,
+        "score_sample": -0.6142132279,
+        "threshold_reference": "decision_score < 0 maps to Isolation Forest anomaly"
+      },
+      "operating_context": "mid_load_running",
+      "provenance": {
+        "artifacts": {
+          "metadata_sha256": "22011d088ba16bf6a33d4312ef46f14900c2d3b53441a950d74cea2da7b7dcba",
+          "samples_sha256": "9ff0da53f00f275bd0f59b87f6a3bc80b2c56598106651da509f045fa97a7295"
+        },
+        "capture_provenance": {
+          "device_id": "esp32-shmode-01",
+          "ecu_profile_id": "honda_keihin_71_17",
+          "source_type": "canonical",
+          "vehicle_id": "Honda SH Mode 125"
+        },
+        "decoder": {
+          "decoder_id": "honda_keihin_71_17",
+          "decoder_version": "1.0.0",
+          "decoder_version_key": "honda_keihin_71_17:1.0.0"
+        },
+        "path": "data/telemetry/ride-20260919-1147",
+        "session_id": "ride-20260919-1147",
+        "telemetry_schema_version": "canonical-telemetry-v2",
+        "training_evaluation_split": {
+          "ground_truth_available": true,
+          "label": "high_rpm_candidate",
+          "label_source": "human_review",
+          "metrics_reason": "not a verified binary normal/fault ground-truth label",
+          "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=high_rpm_candidate",
+          "split": "evaluation_only",
+          "suitable_for_precision_recall_f1": false
+        }
+      },
+      "session_id": "ride-20260919-1147",
+      "telemetry": {
+        "battery_voltage_mean": 14.526,
+        "battery_voltage_median": 14.5,
+        "battery_voltage_min": 14.4,
+        "battery_voltage_range": 0.4,
+        "checksum_failure_ratio": 0.0,
+        "invalid_decoded_ratio": 0.0,
+        "rpm_mean": 7267.0,
+        "rpm_median": 7151.5,
+        "sample_count": 50,
+        "tps_raw_median": 41.0,
+        "tps_voltage_median": 1.5234375
+      },
+      "time": {
+        "duration_ms": 12252.0,
+        "end_time_ms": 352252.0,
+        "start_time_ms": 340000.0
+      },
+      "window_number": 136
+    },
+    {
+      "categories": [
+        "isolation_forest_normal_contextual_anomaly",
+        "near_threshold_behavior"
+      ],
+      "contextual_detector": {
+        "evidence": {
+          "applicable": true,
+          "feature_scores": [
+            {
+              "direction": "lower",
+              "feature": "battery_voltage_median",
+              "observed": 14.4,
+              "reference_median": 14.5,
+              "robust_scale": 0.35,
+              "robust_z": 0.2857142857,
+              "signed_delta": -0.1
+            },
+            {
+              "direction": "lower",
+              "feature": "battery_voltage_mean",
+              "observed": 14.088,
+              "reference_median": 14.508,
+              "robust_scale": 0.35,
+              "robust_z": 1.2,
+              "signed_delta": -0.42
+            },
+            {
+              "direction": "lower",
+              "feature": "battery_voltage_min",
+              "observed": 10.9,
+              "reference_median": 14.2,
+              "robust_scale": 0.35,
+              "robust_z": 9.4285714286,
+              "signed_delta": -3.3
+            }
+          ],
+          "interpretation": "statistical deviation; not a confirmed mechanical failure",
+          "operating_context": "idle_closed_throttle",
+          "status": "ok",
+          "threshold": 4.5,
+          "top_deviation": {
+            "direction": "lower",
+            "feature": "battery_voltage_min",
+            "observed": 10.9,
+            "reference_median": 14.2,
+            "robust_scale": 0.35,
+            "robust_z": 9.4285714286,
+            "signed_delta": -3.3
+          }
+        },
+        "is_anomaly": true,
+        "prediction": -1,
+        "reference_stats": {
+          "count": 337,
+          "iqr": 0.2,
+          "mad": 0.1,
+          "median": 14.2,
+          "p10": 13.8,
+          "p90": 14.3,
+          "robust_scale": 0.35,
+          "scale_floor": 0.35
+        },
+        "robust_z": 9.4285714286,
+        "threshold": 4.5,
+        "top_feature": "battery_voltage_min"
+      },
+      "example_for": "near_threshold_behavior",
+      "isolation_forest": {
+        "decision_score": 0.016833325,
+        "is_anomaly": false,
+        "most_unusual_features": "ect_c_delta;battery_voltage_median;ect_c_slope;battery_voltage_mean;battery_voltage_delta",
+        "prediction": 1,
+        "score_sample": -0.5272405442,
+        "threshold_reference": "decision_score < 0 maps to Isolation Forest anomaly"
+      },
+      "operating_context": "idle_closed_throttle",
+      "provenance": {
+        "artifacts": {
+          "metadata_sha256": "7613355ea1d5b0ff44a00da6e57fb106605a16a996f50a6fed4a28932f199ee3",
+          "samples_sha256": "33ba8bcd1c2131c9799dabd2fb8a90d967550d62bb42a76f3d7930c33df35e7f"
+        },
+        "capture_provenance": {
+          "device_id": "esp32-shmode-01",
+          "ecu_profile_id": "honda_keihin_71_17",
+          "source_type": "canonical",
+          "vehicle_id": "Honda SH Mode 125"
+        },
+        "decoder": {
+          "decoder_id": "honda_keihin_71_17",
+          "decoder_version": "1.0.0",
+          "decoder_version_key": "honda_keihin_71_17:1.0.0"
+        },
+        "path": "data/telemetry/ride-20260908-1431",
+        "session_id": "ride-20260908-1431",
+        "telemetry_schema_version": "canonical-telemetry-v2",
+        "training_evaluation_split": {
+          "ground_truth_available": true,
+          "label": "battery_low_candidate",
+          "label_source": "human_review",
+          "metrics_reason": "not a verified binary normal/fault ground-truth label",
+          "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate",
+          "split": "evaluation_only",
+          "suitable_for_precision_recall_f1": false
+        }
+      },
+      "session_id": "ride-20260908-1431",
+      "telemetry": {
+        "battery_voltage_mean": 14.088,
+        "battery_voltage_median": 14.4,
+        "battery_voltage_min": 10.9,
+        "battery_voltage_range": 3.9,
+        "checksum_failure_ratio": 0.0,
+        "invalid_decoded_ratio": 0.0,
+        "rpm_mean": 2127.16,
+        "rpm_median": 1706.0,
+        "sample_count": 50,
+        "tps_raw_median": 0.0,
+        "tps_voltage_median": 0.48828125
+      },
+      "time": {
+        "duration_ms": 12250.0,
+        "end_time_ms": 12250.0,
+        "start_time_ms": 0.0
+      },
+      "window_number": 0
+    },
+    {
+      "categories": [
+        "isolation_forest_anomaly_contextual_normal",
+        "repeated_pattern_within_one_session",
+        "repeated_pattern_across_independent_sessions"
+      ],
+      "contextual_detector": {
+        "evidence": {
+          "applicable": true,
+          "feature_scores": [
+            {
+              "direction": "matched",
+              "feature": "battery_voltage_median",
+              "observed": 14.5,
+              "reference_median": 14.5,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": 0.0
+            },
+            {
+              "direction": "lower",
+              "feature": "battery_voltage_mean",
+              "observed": 14.518,
+              "reference_median": 14.518,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": -0.0
+            },
+            {
+              "direction": "matched",
+              "feature": "battery_voltage_min",
+              "observed": 14.4,
+              "reference_median": 14.4,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": 0.0
+            }
+          ],
+          "interpretation": "statistical deviation; not a confirmed mechanical failure",
+          "operating_context": "mid_load_running",
+          "status": "ok",
+          "threshold": 4.5,
+          "top_deviation": {
+            "direction": "matched",
+            "feature": "battery_voltage_median",
+            "observed": 14.5,
+            "reference_median": 14.5,
+            "robust_scale": 0.35,
+            "robust_z": 0.0,
+            "signed_delta": 0.0
+          }
+        },
+        "is_anomaly": false,
+        "prediction": 1,
+        "reference_stats": {
+          "count": 2633,
+          "iqr": 0.0,
+          "mad": 0.0,
+          "median": 14.5,
+          "p10": 14.5,
+          "p90": 14.5,
+          "robust_scale": 0.35,
+          "scale_floor": 0.35
+        },
+        "robust_z": 0.0,
+        "threshold": 4.5,
+        "top_feature": "battery_voltage_median"
+      },
+      "example_for": "repeated_pattern_within_one_session",
+      "isolation_forest": {
+        "decision_score": -0.055740981,
+        "is_anomaly": true,
+        "most_unusual_features": "ect_c_delta;ect_c_slope;ect_c_first;ect_c_max;ect_c_median",
+        "prediction": -1,
+        "score_sample": -0.5998148501,
+        "threshold_reference": "decision_score < 0 maps to Isolation Forest anomaly"
+      },
+      "operating_context": "mid_load_running",
+      "provenance": {
+        "artifacts": {
+          "metadata_sha256": "22011d088ba16bf6a33d4312ef46f14900c2d3b53441a950d74cea2da7b7dcba",
+          "samples_sha256": "9ff0da53f00f275bd0f59b87f6a3bc80b2c56598106651da509f045fa97a7295"
+        },
+        "capture_provenance": {
+          "device_id": "esp32-shmode-01",
+          "ecu_profile_id": "honda_keihin_71_17",
+          "source_type": "canonical",
+          "vehicle_id": "Honda SH Mode 125"
+        },
+        "decoder": {
+          "decoder_id": "honda_keihin_71_17",
+          "decoder_version": "1.0.0",
+          "decoder_version_key": "honda_keihin_71_17:1.0.0"
+        },
+        "path": "data/telemetry/ride-20260919-1147",
+        "session_id": "ride-20260919-1147",
+        "telemetry_schema_version": "canonical-telemetry-v2",
+        "training_evaluation_split": {
+          "ground_truth_available": true,
+          "label": "high_rpm_candidate",
+          "label_source": "human_review",
+          "metrics_reason": "not a verified binary normal/fault ground-truth label",
+          "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=high_rpm_candidate",
+          "split": "evaluation_only",
+          "suitable_for_precision_recall_f1": false
+        }
+      },
+      "session_id": "ride-20260919-1147",
+      "telemetry": {
+        "battery_voltage_mean": 14.518,
+        "battery_voltage_median": 14.5,
+        "battery_voltage_min": 14.4,
+        "battery_voltage_range": 0.3,
+        "checksum_failure_ratio": 0.0,
+        "invalid_decoded_ratio": 0.0,
+        "rpm_mean": 6664.44,
+        "rpm_median": 6334.5,
+        "sample_count": 50,
+        "tps_raw_median": 12.0,
+        "tps_voltage_median": 0.80078125
+      },
+      "time": {
+        "duration_ms": 12250.0,
+        "end_time_ms": 224751.0,
+        "start_time_ms": 212501.0
+      },
+      "window_number": 85
+    },
+    {
+      "categories": [
+        "isolation_forest_anomaly_contextual_normal",
+        "repeated_pattern_within_one_session",
+        "repeated_pattern_across_independent_sessions"
+      ],
+      "contextual_detector": {
+        "evidence": {
+          "applicable": true,
+          "feature_scores": [
+            {
+              "direction": "matched",
+              "feature": "battery_voltage_median",
+              "observed": 14.5,
+              "reference_median": 14.5,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": 0.0
+            },
+            {
+              "direction": "lower",
+              "feature": "battery_voltage_mean",
+              "observed": 14.518,
+              "reference_median": 14.518,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": -0.0
+            },
+            {
+              "direction": "matched",
+              "feature": "battery_voltage_min",
+              "observed": 14.4,
+              "reference_median": 14.4,
+              "robust_scale": 0.35,
+              "robust_z": 0.0,
+              "signed_delta": 0.0
+            }
+          ],
+          "interpretation": "statistical deviation; not a confirmed mechanical failure",
+          "operating_context": "mid_load_running",
+          "status": "ok",
+          "threshold": 4.5,
+          "top_deviation": {
+            "direction": "matched",
+            "feature": "battery_voltage_median",
+            "observed": 14.5,
+            "reference_median": 14.5,
+            "robust_scale": 0.35,
+            "robust_z": 0.0,
+            "signed_delta": 0.0
+          }
+        },
+        "is_anomaly": false,
+        "prediction": 1,
+        "reference_stats": {
+          "count": 2633,
+          "iqr": 0.0,
+          "mad": 0.0,
+          "median": 14.5,
+          "p10": 14.5,
+          "p90": 14.5,
+          "robust_scale": 0.35,
+          "scale_floor": 0.35
+        },
+        "robust_z": 0.0,
+        "threshold": 4.5,
+        "top_feature": "battery_voltage_median"
+      },
+      "example_for": "repeated_pattern_across_independent_sessions",
+      "isolation_forest": {
+        "decision_score": -0.0553253481,
+        "is_anomaly": true,
+        "most_unusual_features": "tps_raw_min;tps_voltage_min;ect_c_delta;ect_c_slope;tps_voltage_mean",
+        "prediction": -1,
+        "score_sample": -0.5993992172,
+        "threshold_reference": "decision_score < 0 maps to Isolation Forest anomaly"
+      },
+      "operating_context": "mid_load_running",
+      "provenance": {
+        "artifacts": {
+          "metadata_sha256": "22011d088ba16bf6a33d4312ef46f14900c2d3b53441a950d74cea2da7b7dcba",
+          "samples_sha256": "9ff0da53f00f275bd0f59b87f6a3bc80b2c56598106651da509f045fa97a7295"
+        },
+        "capture_provenance": {
+          "device_id": "esp32-shmode-01",
+          "ecu_profile_id": "honda_keihin_71_17",
+          "source_type": "canonical",
+          "vehicle_id": "Honda SH Mode 125"
+        },
+        "decoder": {
+          "decoder_id": "honda_keihin_71_17",
+          "decoder_version": "1.0.0",
+          "decoder_version_key": "honda_keihin_71_17:1.0.0"
+        },
+        "path": "data/telemetry/ride-20260919-1147",
+        "session_id": "ride-20260919-1147",
+        "telemetry_schema_version": "canonical-telemetry-v2",
+        "training_evaluation_split": {
+          "ground_truth_available": true,
+          "label": "high_rpm_candidate",
+          "label_source": "human_review",
+          "metrics_reason": "not a verified binary normal/fault ground-truth label",
+          "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=high_rpm_candidate",
+          "split": "evaluation_only",
+          "suitable_for_precision_recall_f1": false
+        }
+      },
+      "session_id": "ride-20260919-1147",
+      "telemetry": {
+        "battery_voltage_mean": 14.518,
+        "battery_voltage_median": 14.5,
+        "battery_voltage_min": 14.4,
+        "battery_voltage_range": 0.3,
+        "checksum_failure_ratio": 0.0,
+        "invalid_decoded_ratio": 0.0,
+        "rpm_mean": 7201.78,
+        "rpm_median": 7297.0,
+        "sample_count": 50,
+        "tps_raw_median": 86.0,
+        "tps_voltage_median": 2.65625
+      },
+      "time": {
+        "duration_ms": 12250.0,
+        "end_time_ms": 244750.0,
+        "start_time_ms": 232500.0
+      },
+      "window_number": 93
+    }
+  ],
+  "schema_version": "contextual-disagreement-summary-v1",
+  "session_count": 23,
+  "sessions_with_disagreements": {
+    "calib-20260814-153329-812a3f": 187,
+    "calib-real-run-r0024d0-c93a5fb4-part-01": 46,
+    "calib-real-run-r1032c0-849aa7f8-part-01": 15,
+    "calib-real-run-r1032c0-849aa7f8-part-02": 2,
+    "calib-real-run-session-000002-part-01": 12,
+    "calib-real-run-session-000005-part-01": 7,
+    "calib-real-run-session-000007-part-01": 7,
+    "ride-20260901-0715": 6,
+    "ride-20260902-1032": 12,
+    "ride-20260907-1157": 7,
+    "ride-20260908-1431": 7,
+    "ride-20260909-1748": 113,
+    "ride-20260910-0922": 7,
+    "ride-20260911-1239": 9,
+    "ride-20260911-1257": 2,
+    "ride-20260912-1556": 9,
+    "ride-20260913-0730": 12,
+    "ride-20260913-0826": 49,
+    "ride-20260914-1047": 4,
+    "ride-20260917-1638": 4,
+    "ride-20260918-0855": 28,
+    "ride-20260919-1147": 59,
+    "ride-20260920-1446": 19
+  },
+  "total_disagreement_windows": 623
+}

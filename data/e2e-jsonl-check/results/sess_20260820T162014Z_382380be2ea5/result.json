@@ -1,0 +1,57 @@
+{
+  "session_id": "sess_20260820T162014Z_382380be2ea5",
+  "analysis_run_id": "analysis_20260820T162014Z_58c9635ee0b7",
+  "created_at": "2026-08-20T16:20:14.611233+00:00",
+  "status": "processed",
+  "input": {
+    "filename": "session_000001.jsonl",
+    "device_id": "sim-esp-e2e-001",
+    "vehicle_id": "honda_shmode_4v_001",
+    "sample_interval_ms": 100.0,
+    "sampling_rate_hz": null,
+    "session_note": null,
+    "firmware_version": "sim-fw-e2e-0.1",
+    "client_session_id": "road-run-000001",
+    "upload_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+    "source_format": "esp_jsonl",
+    "time_basis": "source_timestamp_ms"
+  },
+  "statistics": {
+    "total_lines": 117,
+    "frames_found": 117,
+    "frames_parsed": 117,
+    "frame_errors": 0,
+    "checksum_valid_frames": 117,
+    "checksum_invalid_frames": 0,
+    "source_format": "esp_jsonl",
+    "timestamped_frames": 117,
+    "decoded_valid_frames": 117,
+    "decoded_invalid_frames": 0,
+    "windows_generated": 7,
+    "anomaly_windows": 0
+  },
+  "result": {
+    "overall_status": "model_unavailable",
+    "health_score": null,
+    "anomaly_ratio": 0.0,
+    "most_unusual_features": [],
+    "model_loaded": false,
+    "model_version": null,
+    "feature_schema_version": "ecu-window-features-v1",
+    "warnings": [],
+    "note": "No trained model was available; run the CLI training script first."
+  },
+  "artifacts": {
+    "raw": "data/e2e-jsonl-check/raw/sess_20260820T162014Z_382380be2ea5/original.txt",
+    "frames": "data/e2e-jsonl-check/processed/sess_20260820T162014Z_382380be2ea5/frames.csv",
+    "windows": "data/e2e-jsonl-check/processed/sess_20260820T162014Z_382380be2ea5/windows.csv",
+    "result": "data/e2e-jsonl-check/results/sess_20260820T162014Z_382380be2ea5/result.json"
+  },
+  "processing_duration_seconds": 0.1421,
+  "duplicate_reused": false,
+  "idempotency": {
+    "reused": false,
+    "client_session_id": "road-run-000001",
+    "upload_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017"
+  }
+}

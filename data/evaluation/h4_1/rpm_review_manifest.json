@@ -1,0 +1,158 @@
+{
+  "annotation_policy": {
+    "allowed_observable_categories": [
+      "stable RPM behavior",
+      "sustained RPM variability increase",
+      "transient",
+      "context-transition artifact",
+      "acquisition artifact",
+      "insufficient evidence"
+    ],
+    "mechanical_root_causes_assigned": false
+  },
+  "items": [
+    {
+      "categories": [
+        "sustained RPM variability increase",
+        "Core3-only RPM temporal event"
+      ],
+      "current_variability_statistics": {
+        "event_ids": [
+          "rpm-stability-change-001"
+        ],
+        "max_change_statistic": 5.7831185409,
+        "max_dispersion_increase": 578.3118540884,
+        "max_persistence_count": 9
+      },
+      "event": {
+        "duration_ms": 24748.0,
+        "end_sequence": 309,
+        "end_window_index": 26,
+        "start_sequence": 210,
+        "start_window_index": 21,
+        "window_count": 6
+      },
+      "event_index_within_session": 1,
+      "item_type": "rpm_stability_event",
+      "overlap": {
+        "contextual_battery": 0,
+        "isolation_forest": 0,
+        "rpm_stability": 6,
+        "temporal_battery_shift": 0
+      },
+      "prediction_source": {
+        "configuration": {
+          "closed_tps_raw_max": 5.0,
+          "closed_tps_voltage_max": 0.65,
+          "dispersion_scale_floor_rpm": 100.0,
+          "ewma_alpha": 0.3,
+          "max_start_frame_step": 15,
+          "min_dispersion_increase_rpm": 250.0,
+          "min_engine_running_rpm": 500.0,
+          "min_persistence_windows": 4,
+          "min_warmup_windows": 8,
+          "robust_z_threshold": 3.0
+        },
+        "detector_id": "temporal_rpm_stability",
+        "fault_label_assigned": false,
+        "model_version": "temporal-rpm-stability-v1-c79308082009"
+      },
+      "provenance": {
+        "artifacts": {
+          "metadata_sha256": "21226f003655be3ff8799661af3e6096d3c4e1e69fd1b901033c414370d0e298",
+          "samples_sha256": "dae07817f3df8978e340d33cb2f0833bba63144a51929df5298de90250c12849"
+        },
+        "capture_provenance": {
+          "device_id": "esp32-shmode-01",
+          "ecu_profile_id": "honda_keihin_71_17",
+          "source_type": "canonical",
+          "vehicle_id": "Honda SH Mode 125"
+        },
+        "decoder": {
+          "decoder_id": "honda_keihin_71_17",
+          "decoder_version": "1.0.0",
+          "decoder_version_key": "honda_keihin_71_17:1.0.0"
+        },
+        "path": "data/telemetry/ride-20260912-1556",
+        "session_id": "ride-20260912-1556",
+        "telemetry_schema_version": "canonical-telemetry-v2",
+        "training_evaluation_split": {
+          "ground_truth_available": true,
+          "label": "battery_low_candidate",
+          "label_source": "human_review",
+          "metrics_reason": "not a verified binary normal/fault ground-truth label",
+          "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate",
+          "split": "evaluation_only",
+          "suitable_for_precision_recall_f1": false
+        }
+      },
+      "review_annotation": {
+        "fault_label_assigned": false,
+        "notes": null,
+        "reviewed_at": null,
+        "reviewer": null,
+        "selected": null
+      },
+      "review_item_id": "rpm-temporal-event-001",
+      "rpm_baseline_statistics": {
+        "baseline_center": 1373.25,
+        "baseline_dispersion": 153.9148642888,
+        "baseline_dispersion_scale": 100.0,
+        "change_statistic": 5.1525079412,
+        "ewma_dispersion": 669.1656584043,
+        "observed_center": 2755.5,
+        "observed_dispersion": 773.1193856061,
+        "persistence_count": 3,
+        "status": "applicable",
+        "window_index": 20
+      },
+      "rpm_sequence_summary": {
+        "rpm_mean_absolute_diff": {
+          "count": 6,
+          "max": 431.591837,
+          "median": 402.683673,
+          "min": 373.285714
+        },
+        "rpm_median": {
+          "count": 6,
+          "max": 2638.0,
+          "median": 2412.0,
+          "min": 2183.0
+        },
+        "rpm_range": {
+          "count": 6,
+          "max": 2354.0,
+          "median": 2353.5,
+          "min": 2275.0
+        },
+        "rpm_std": {
+          "count": 6,
+          "max": 774.914092,
+          "median": 731.736094,
+          "min": 659.867236
+        }
+      },
+      "session_id": "ride-20260912-1556",
+      "tps_context_state": {
+        "tps_raw_median": {
+          "count": 6,
+          "max": 2.0,
+          "median": 2.0,
+          "min": 0.0
+        },
+        "tps_voltage_median": {
+          "count": 6,
+          "max": 0.566406,
+          "median": 0.561523,
+          "min": 0.517578
+        }
+      }
+    }
+  ],
+  "representative_categories": {
+    "Core3-only RPM temporal event": "rpm-temporal-event-001",
+    "sustained RPM variability increase": "rpm-temporal-event-001"
+  },
+  "rpm_event_count": 1,
+  "schema_version": "rpm-temporal-review-manifest-v1"
+}

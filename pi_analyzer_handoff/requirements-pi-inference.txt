@@ -1,0 +1,6 @@
+# Runtime used to load and verify the exported sklearn artifacts: Python 3.14.4
+numpy==2.5.1
+pandas==2.3.3
+scikit-learn==1.9.0
+joblib==1.5.3
+pydantic==2.13.4

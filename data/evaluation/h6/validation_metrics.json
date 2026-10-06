@@ -1,0 +1,207 @@
+{
+  "controlled_cases": [
+    {
+      "controlled_condition_type": "synthetic_high_ect",
+      "responses": {
+        "contextual_battery_voltage": {
+          "detected": true,
+          "detection_latency_ms": null,
+          "detection_latency_ms_reason": "Condition start timestamps are not independently preserved in the current benchmark event payload.",
+          "detection_latency_windows": null,
+          "event_count": 1,
+          "first_event": {
+            "duration_ms": 299750.0,
+            "end_sequence": 1199,
+            "end_window_index": 115,
+            "start_sequence": 0,
+            "start_window_index": 0,
+            "window_count": 116
+          },
+          "status": "ok",
+          "target_relevant": false
+        },
+        "isolation_forest": {
+          "detected": true,
+          "detection_latency_ms": null,
+          "detection_latency_ms_reason": "Condition start timestamps are not independently preserved in the current benchmark event payload.",
+          "detection_latency_windows": 0,
+          "event_count": 1,
+          "first_event": {
+            "duration_ms": 299750.0,
+            "end_sequence": 1199,
+            "end_window_index": 115,
+            "start_sequence": 0,
+            "start_window_index": 0,
+            "window_count": 116
+          },
+          "status": "ok",
+          "target_relevant": true
+        }
+      },
+      "session_id": "ride-20260904-1810",
+      "source_label": "known_abnormal",
+      "source_notes": "synthetically injected high ECT session from demo seed generation",
+      "target_relevant_detectors": [
+        "isolation_forest"
+      ]
+    },
+    {
+      "controlled_condition_type": "synthetic_low_battery",
+      "responses": {
+        "contextual_battery_voltage": {
+          "detected": true,
+          "detection_latency_ms": null,
+          "detection_latency_ms_reason": "Condition start timestamps are not independently preserved in the current benchmark event payload.",
+          "detection_latency_windows": 0,
+          "event_count": 1,
+          "first_event": {
+            "duration_ms": 299750.0,
+            "end_sequence": 1199,
+            "end_window_index": 115,
+            "start_sequence": 0,
+            "start_window_index": 0,
+            "window_count": 116
+          },
+          "status": "ok",
+          "target_relevant": true
+        },
+        "isolation_forest": {
+          "detected": true,
+          "detection_latency_ms": null,
+          "detection_latency_ms_reason": "Condition start timestamps are not independently preserved in the current benchmark event payload.",
+          "detection_latency_windows": 0,
+          "event_count": 1,
+          "first_event": {
+            "duration_ms": 299750.0,
+            "end_sequence": 1199,
+            "end_window_index": 115,
+            "start_sequence": 0,
+            "start_window_index": 0,
+            "window_count": 116
+          },
+          "status": "ok",
+          "target_relevant": true
+        }
+      },
+      "session_id": "ride-20260909-0725",
+      "source_label": "known_abnormal",
+      "source_notes": "synthetically injected low battery session from demo seed generation",
+      "target_relevant_detectors": [
+        "isolation_forest",
+        "contextual_battery_voltage"
+      ]
+    },
+    {
+      "controlled_condition_type": "synthetic_high_rpm_load",
+      "responses": {
+        "contextual_battery_voltage": {
+          "detected": false,
+          "detection_latency_ms": null,
+          "detection_latency_ms_reason": "Condition start timestamps are not independently preserved in the current benchmark event payload.",
+          "detection_latency_windows": null,
+          "event_count": 0,
+          "first_event": null,
+          "status": "skipped",
+          "target_relevant": false
+        },
+        "isolation_forest": {
+          "detected": true,
+          "detection_latency_ms": null,
+          "detection_latency_ms_reason": "Condition start timestamps are not independently preserved in the current benchmark event payload.",
+          "detection_latency_windows": 0,
+          "event_count": 1,
+          "first_event": {
+            "duration_ms": 299750.0,
+            "end_sequence": 1199,
+            "end_window_index": 115,
+            "start_sequence": 0,
+            "start_window_index": 0,
+            "window_count": 116
+          },
+          "status": "ok",
+          "target_relevant": true
+        }
+      },
+      "session_id": "ride-20260914-1935",
+      "source_label": "known_abnormal",
+      "source_notes": "synthetically injected high RPM/load session from demo seed generation",
+      "target_relevant_detectors": [
+        "isolation_forest"
+      ]
+    }
+  ],
+  "detectors": {
+    "contextual_battery_voltage": {
+      "controlled_condition_recall": {
+        "computed": true,
+        "detected_case_count": 1,
+        "eligible_case_count": 1,
+        "eligible_sessions": [
+          "ride-20260909-0725"
+        ],
+        "missed_case_count": 0,
+        "missed_sessions": [],
+        "value": 1.0
+      },
+      "detection_latency_windows": {
+        "count": 1,
+        "max": 0.0,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "event_level_precision": {
+        "computed": false,
+        "reason": "No independently verified detector-positive normal/artifact event labels are available."
+      },
+      "false_alerts_per_hour": {
+        "computed": false,
+        "reason": "No verified normal operating-hour denominator is available."
+      }
+    },
+    "isolation_forest": {
+      "controlled_condition_recall": {
+        "computed": true,
+        "detected_case_count": 3,
+        "eligible_case_count": 3,
+        "eligible_sessions": [
+          "ride-20260904-1810",
+          "ride-20260909-0725",
+          "ride-20260914-1935"
+        ],
+        "missed_case_count": 0,
+        "missed_sessions": [],
+        "value": 1.0
+      },
+      "detection_latency_windows": {
+        "count": 3,
+        "max": 0.0,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "event_level_precision": {
+        "computed": false,
+        "reason": "No independently verified detector-positive normal/artifact event labels are available."
+      },
+      "false_alerts_per_hour": {
+        "computed": false,
+        "reason": "No verified normal operating-hour denominator is available."
+      }
+    }
+  },
+  "expert_only_review_label_counts": {
+    "observed_normal_behavior": 2,
+    "observed_unusual_behavior": 8
+  },
+  "metric_policy": {
+    "detector_outputs_used_as_ground_truth": false,
+    "expert_only_labels_used_for_precision_recall": false,
+    "unlabeled_events_treated_as_normal": false
+  },
+  "not_computed": {
+    "agreement_with_expert_labels": "Blind expert review packet is prepared but not completed.",
+    "event_level_precision": "No independently verified detector-positive normal/artifact event labels are available.",
+    "event_level_recall": "Controlled labels are session/condition-level in current data, not exhaustive event-level annotations.",
+    "false_alerts_per_hour": "No verified normal operating-hour set is available; alert-rate can be counted but not called false alerts."
+  },
+  "schema_version": "active-detector-validation-metrics-v1"
+}

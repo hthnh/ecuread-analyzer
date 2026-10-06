@@ -1,0 +1,45 @@
+{
+  "case_review_fields": {
+    "comments": "free text",
+    "correctly_returned_insufficient_evidence": "boolean or null",
+    "important_cause_missing": "boolean or null",
+    "missing_hypothesis": "free text or structured hypothesis proposal",
+    "produced_unsupported_hypotheses": "boolean or null",
+    "provided_reasonable_hypothesis": "boolean or null",
+    "recommended_useful_next_action": "boolean or null",
+    "reviewed_at": "timestamp or null",
+    "reviewer_id": "stable reviewer identifier"
+  },
+  "hypothesis_ratings": [
+    "reasonable",
+    "partially_reasonable",
+    "unsupported",
+    "insufficient_evidence"
+  ],
+  "hypothesis_review_fields": {
+    "comments": "free text",
+    "evidence_sufficient_for_hypothesis": "boolean",
+    "hypothesis_review_id": "identifier from the review case",
+    "hypothesis_too_broad": "boolean",
+    "hypothesis_too_specific": "boolean",
+    "important_cause_missing": "boolean",
+    "missing_hypothesis": "optional expert-added hypothesis",
+    "rating": [
+      "reasonable",
+      "partially_reasonable",
+      "unsupported",
+      "insufficient_evidence"
+    ],
+    "recommended_check_appropriate": "boolean",
+    "reviewer_id": "stable reviewer identifier"
+  },
+  "policy": {
+    "confidence_percentages_allowed": false,
+    "detector_prediction_is_ground_truth": false,
+    "expert_opinion_is_physical_root_cause": false,
+    "multiple_hypotheses_allowed": true,
+    "physical_root_cause_requires_independent_physical_evidence": true,
+    "rca_hypothesis_is_ground_truth": false
+  },
+  "schema_version": "rca-expert-judgment-schema-v1"
+}

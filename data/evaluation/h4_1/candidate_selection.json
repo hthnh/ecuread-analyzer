@@ -1,0 +1,48 @@
+{
+  "candidate_a_temporal_battery_shift": {
+    "anomaly_window_count": 329,
+    "available": true,
+    "basis": {
+      "artifact_category_event_count": 0,
+      "core3_only_event_count": 0,
+      "feasible": true,
+      "parameter_sensitive": false,
+      "supervised_accuracy_claims_made": false,
+      "temporal_event_count": 1
+    },
+    "candidate_id": "temporal_battery_shift",
+    "core1_core3_event_count": 1,
+    "core3_only_event_count": 0,
+    "event_count": 1,
+    "parameter_sensitive": false,
+    "recommendation": "revise",
+    "scored_window_count": 6082
+  },
+  "candidate_b_temporal_rpm_stability": {
+    "artifact_category_event_count": 0,
+    "artifact_dominated": false,
+    "core3_only_event_count": 1,
+    "coverage": {
+      "anomaly_window_count": 6,
+      "applicable_ratio": 0.123705,
+      "applicable_window_count": 1230,
+      "event_count": 1,
+      "skipped_ratio": 0.701197,
+      "skipped_window_count": 6972,
+      "total_window_count": 9943,
+      "warmup_ratio": 0.175098,
+      "warmup_window_count": 1741
+    },
+    "event_count": 1,
+    "parameter_sensitive": true,
+    "representative_categories": {
+      "Core3-only RPM temporal event": "rpm-temporal-event-001",
+      "sustained RPM variability increase": "rpm-temporal-event-001"
+    }
+  },
+  "production_registration_changed": false,
+  "rationale": "Neither temporal candidate currently demonstrates sufficient distinct event-level value.",
+  "schema_version": "temporal-candidate-selection-v1",
+  "selection": "both_reject",
+  "supervised_accuracy_claims_made": false
+}

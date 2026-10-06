@@ -1,0 +1,152 @@
+{
+  "cadence": {
+    "missing_or_irregular_window_gap_count": 0,
+    "window_duration_ms": {
+      "count": 12859,
+      "max": 12751.0,
+      "median": 12250.0,
+      "min": 12247.0
+    },
+    "window_start_frame_step": {
+      "count": 12819,
+      "max": 10.0,
+      "median": 10.0,
+      "min": 10.0
+    },
+    "window_start_step_ms": {
+      "count": 12819,
+      "max": 2753.0,
+      "median": 2500.0,
+      "min": 2497.0
+    }
+  },
+  "candidate_target": "sustained intra-session battery-voltage shift within stable RPM/TPS operating contexts",
+  "continuity_policy": {
+    "no_cross_session_continuity_assumed": true,
+    "reset_on_context_change": true,
+    "reset_on_start_frame_gap_gt": 15,
+    "state_scope": "within one session only"
+  },
+  "data_availability": {
+    "evaluated_session_count": 40,
+    "excluded_sessions": [
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "calib-real-run-session-000001"
+      },
+      {
+        "reason": "duplicate_of_reference_capture",
+        "session_id": "calib-real-run-session-000003"
+      },
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "calib-real-run-session-000004"
+      },
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "calib-real-run-session-000006"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260902-1050"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260903-1349"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260905-0840"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260905-0858"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260908-1449"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260911-1335"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260913-0748"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260913-0807"
+      },
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "ride-20260918-0815"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260919-1129"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260919-1206"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260919-1225"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260920-1504"
+      }
+    ],
+    "v2_sessions_with_verified_required_signals": 52
+  },
+  "detector_configuration": {
+    "ewma_alpha": 0.3,
+    "max_start_frame_step": 15,
+    "min_persistence_windows": 4,
+    "min_warmup_windows": 8,
+    "modeled_contexts": [
+      "idle_closed_throttle",
+      "low_load_running",
+      "mid_load_running"
+    ],
+    "shift_threshold_volts": 0.4
+  },
+  "feasibility_reason": "Stable context runs are long enough to build intra-session temporal baselines.",
+  "feasible": true,
+  "schema_version": "temporal-feasibility-audit-v1",
+  "session_duration_ms": {
+    "count": 40,
+    "max": 4496001.0,
+    "median": 755001.0,
+    "min": 21501.0
+  },
+  "stable_context_runs": {
+    "adequate_for_temporal_detection": 208,
+    "contexts": {
+      "idle_closed_throttle": 84,
+      "low_load_running": 290,
+      "mid_load_running": 219
+    },
+    "required_run_windows": 12,
+    "run_length_windows": {
+      "count": 593,
+      "max": 367.0,
+      "median": 8.0,
+      "min": 1.0
+    },
+    "total": 593
+  },
+  "unsupported_scope": [
+    "cross-session degradation or long-term memory",
+    "generic mechanical fault diagnosis",
+    "temporal modeling through context transitions"
+  ],
+  "verified_signals_used": [
+    "rpm",
+    "tps_voltage",
+    "tps_raw",
+    "battery_voltage"
+  ]
+}

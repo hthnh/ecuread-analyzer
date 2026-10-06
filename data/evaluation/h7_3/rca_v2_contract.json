@@ -1,0 +1,34 @@
+{
+  "blocked_claims": [
+    "battery failure from contextual voltage deviation alone",
+    "regulator failure from contextual voltage deviation alone",
+    "stator failure from contextual voltage deviation alone",
+    "throttle fault from RPM/TPS features alone",
+    "acquisition failure from constant-signal feature alone",
+    "component failure from Isolation Forest anomaly alone"
+  ],
+  "claim_levels": [
+    "observation",
+    "symptom",
+    "possible_hypothesis"
+  ],
+  "engine_version": "deterministic-rca-engine-v2",
+  "policy": {
+    "agents_used": false,
+    "confidence_percentages_allowed": false,
+    "drive_safe_behavior_changed": false,
+    "empty_possible_cause_list_allowed": true,
+    "h7_v1_reproducibility_preserved": true,
+    "llm_used": false,
+    "production_behavior_changed": false,
+    "score_fusion_used": false
+  },
+  "rule_catalog_version": "evidence-grounded-rca-v2",
+  "schema_version": "root-cause-analysis-v2-contract-v1",
+  "semantic_sections": {
+    "observations": "Direct telemetry or detector evidence. Observations are not causes.",
+    "possible_causes": "Optional causal hypotheses emitted only when extra case evidence justifies that claim level.",
+    "recommended_checks": "Evidence-tied follow-up actions that do not require a cause hypothesis.",
+    "symptoms": "Evidence-backed non-causal interpretations derived from observations."
+  }
+}

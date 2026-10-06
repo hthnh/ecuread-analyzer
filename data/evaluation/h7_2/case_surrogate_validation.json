@@ -1,0 +1,1322 @@
+{
+  "cases": [
+    {
+      "case_id": "h7-1-expert-case-0001",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0001",
+      "source_validation_region_type": "isolation_forest_only_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0001-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0001-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0001-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0002",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0002",
+      "source_validation_region_type": "isolation_forest_only_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0002-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0002-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0002-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0003",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0003",
+      "source_validation_region_type": "isolation_forest_only_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "no_specific_counterexample_found",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0003-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0003-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0004",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0004",
+      "source_validation_region_type": "isolation_forest_only_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0004-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0004-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0004-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0005",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0005",
+      "source_validation_region_type": "isolation_forest_only_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0005-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0005-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0005-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0006",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0006",
+      "source_validation_region_type": "isolation_forest_only_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0006-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0007",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0007",
+      "source_validation_region_type": "contextual_only_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.electrical_supply_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0007-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "retain_with_restricted_claim",
+            "maximum_supported_claim_level": "symptom",
+            "recommended_rule_revision": "Split observed voltage symptom from possible electrical causes.",
+            "source_rule_id": "rca.electrical.contextual_voltage_deviation",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was external battery/charging voltage measured?",
+              "What electrical loads were active?",
+              "Were wiring/ground/regulator/battery checks performed?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0008",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0008",
+      "source_validation_region_type": "contextual_only_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.electrical_supply_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0008-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "retain_with_restricted_claim",
+            "maximum_supported_claim_level": "symptom",
+            "recommended_rule_revision": "Split observed voltage symptom from possible electrical causes.",
+            "source_rule_id": "rca.electrical.contextual_voltage_deviation",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was external battery/charging voltage measured?",
+              "What electrical loads were active?",
+              "Were wiring/ground/regulator/battery checks performed?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0009",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0009",
+      "source_validation_region_type": "overlapping_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.electrical_supply_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0009-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "retain_with_restricted_claim",
+            "maximum_supported_claim_level": "symptom",
+            "recommended_rule_revision": "Split observed voltage symptom from possible electrical causes.",
+            "source_rule_id": "rca.electrical.contextual_voltage_deviation",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was external battery/charging voltage measured?",
+              "What electrical loads were active?",
+              "Were wiring/ground/regulator/battery checks performed?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0009-02",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0009-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0009-04",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0010",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0010",
+      "source_validation_region_type": "overlapping_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.electrical_supply_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0010-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "retain_with_restricted_claim",
+            "maximum_supported_claim_level": "symptom",
+            "recommended_rule_revision": "Split observed voltage symptom from possible electrical causes.",
+            "source_rule_id": "rca.electrical.contextual_voltage_deviation",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was external battery/charging voltage measured?",
+              "What electrical loads were active?",
+              "Were wiring/ground/regulator/battery checks performed?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0010-02",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0010-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0011",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0011",
+      "source_validation_region_type": "overlapping_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.electrical_supply_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0011-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "retain_with_restricted_claim",
+            "maximum_supported_claim_level": "symptom",
+            "recommended_rule_revision": "Split observed voltage symptom from possible electrical causes.",
+            "source_rule_id": "rca.electrical.contextual_voltage_deviation",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was external battery/charging voltage measured?",
+              "What electrical loads were active?",
+              "Were wiring/ground/regulator/battery checks performed?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0011-02",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0012",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0012",
+      "source_validation_region_type": "overlapping_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.electrical_supply_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0012-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "retain_with_restricted_claim",
+            "maximum_supported_claim_level": "symptom",
+            "recommended_rule_revision": "Split observed voltage symptom from possible electrical causes.",
+            "source_rule_id": "rca.electrical.contextual_voltage_deviation",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was external battery/charging voltage measured?",
+              "What electrical loads were active?",
+              "Were wiring/ground/regulator/battery checks performed?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0012-02",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0012-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0012-04",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0013",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0013",
+      "source_validation_region_type": "overlapping_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.electrical_supply_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0013-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "retain_with_restricted_claim",
+            "maximum_supported_claim_level": "symptom",
+            "recommended_rule_revision": "Split observed voltage symptom from possible electrical causes.",
+            "source_rule_id": "rca.electrical.contextual_voltage_deviation",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was external battery/charging voltage measured?",
+              "What electrical loads were active?",
+              "Were wiring/ground/regulator/battery checks performed?"
+            ]
+          },
+          {
+            "counterexample_status": "no_specific_counterexample_found",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0013-02",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0013-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0014",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0014",
+      "source_validation_region_type": "overlapping_event",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.electrical_supply_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0014-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "retain_with_restricted_claim",
+            "maximum_supported_claim_level": "symptom",
+            "recommended_rule_revision": "Split observed voltage symptom from possible electrical causes.",
+            "source_rule_id": "rca.electrical.contextual_voltage_deviation",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was external battery/charging voltage measured?",
+              "What electrical loads were active?",
+              "Were wiring/ground/regulator/battery checks performed?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0014-02",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0015",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0015",
+      "source_validation_region_type": "disagreement_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0015-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0015-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0015-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0016",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0016",
+      "source_validation_region_type": "disagreement_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0016-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0016-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0016-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0017",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0017",
+      "source_validation_region_type": "disagreement_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "no_specific_counterexample_found",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0017-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0017-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0018",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0018",
+      "source_validation_region_type": "disagreement_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "no_specific_counterexample_found",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0018-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0018-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0018-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0019",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0019",
+      "source_validation_region_type": "disagreement_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0019-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0019-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0019-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0020",
+      "rca_state": "hypotheses_generated",
+      "source_review_item_id": "h7-rca-review-0020",
+      "source_validation_region_type": "insufficient_coverage_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Surrogate review evaluates rule grounding, not physical root cause."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.multivariate_pattern_outside_reference",
+            "hypothesis_review_id": "h7-1-hypothesis-0020-01",
+            "internal_evidence_grounding_decision": "grounded_in_detector_evidence_only",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Reclassify as detector observation, not RCA hypothesis.",
+            "source_rule_id": "rca.iforest.multivariate_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Which raw feature family actually changed and under what operating condition?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+            "hypothesis_review_id": "h7-1-hypothesis-0020-02",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require operator/context evidence before generating causal hypothesis.",
+            "source_rule_id": "rca.operating_state.throttle_related_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Was RPM/TPS variation expected from operator input or route/load?",
+              "Is there evidence of unexplained signal behavior?"
+            ]
+          },
+          {
+            "counterexample_status": "counterexample_or_claim_limiter_present",
+            "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+            "hypothesis_review_id": "h7-1-hypothesis-0020-03",
+            "internal_evidence_grounding_decision": "requires_additional_context_or_integrity_evidence",
+            "literature_grounding_decision": "revise",
+            "maximum_supported_claim_level": "observation",
+            "recommended_rule_revision": "Require acquisition-integrity evidence before artifact hypothesis.",
+            "source_rule_id": "rca.data_quality.constant_signal_pattern",
+            "surrogate_namespace": "surrogate_validation",
+            "unresolved_questions": [
+              "Are timestamps valid and contiguous?",
+              "Do raw frames repeat unexpectedly or fail checksum/header validation?",
+              "Could the constant signal reflect stable operation?"
+            ]
+          }
+        ],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0021",
+      "rca_state": "insufficient_evidence",
+      "source_review_item_id": "h7-rca-review-0021",
+      "source_validation_region_type": "insufficient_coverage_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Case remains insufficient evidence; no surrogate causal upgrade is allowed."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0022",
+      "rca_state": "insufficient_evidence",
+      "source_review_item_id": "h7-rca-review-0022",
+      "source_validation_region_type": "insufficient_coverage_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Case remains insufficient evidence; no surrogate causal upgrade is allowed."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0023",
+      "rca_state": "insufficient_evidence",
+      "source_review_item_id": "h7-rca-review-0023",
+      "source_validation_region_type": "insufficient_coverage_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Case remains insufficient evidence; no surrogate causal upgrade is allowed."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0024",
+      "rca_state": "insufficient_evidence",
+      "source_review_item_id": "h7-rca-review-0024",
+      "source_validation_region_type": "insufficient_coverage_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Case remains insufficient evidence; no surrogate causal upgrade is allowed."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0025",
+      "rca_state": "insufficient_evidence",
+      "source_review_item_id": "h7-rca-review-0025",
+      "source_validation_region_type": "insufficient_coverage_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "Case remains insufficient evidence; no surrogate causal upgrade is allowed."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0026",
+      "rca_state": "no_anomaly_evidence",
+      "source_review_item_id": "h7-rca-review-0026",
+      "source_validation_region_type": "no_evidence_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "No-anomaly-evidence case remains a review control, not verified healthy ground truth."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0027",
+      "rca_state": "no_anomaly_evidence",
+      "source_review_item_id": "h7-rca-review-0027",
+      "source_validation_region_type": "no_evidence_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "No-anomaly-evidence case remains a review control, not verified healthy ground truth."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0028",
+      "rca_state": "no_anomaly_evidence",
+      "source_review_item_id": "h7-rca-review-0028",
+      "source_validation_region_type": "no_evidence_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "No-anomaly-evidence case remains a review control, not verified healthy ground truth."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0029",
+      "rca_state": "no_anomaly_evidence",
+      "source_review_item_id": "h7-rca-review-0029",
+      "source_validation_region_type": "no_evidence_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "No-anomaly-evidence case remains a review control, not verified healthy ground truth."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0030",
+      "rca_state": "no_anomaly_evidence",
+      "source_review_item_id": "h7-rca-review-0030",
+      "source_validation_region_type": "no_evidence_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "No-anomaly-evidence case remains a review control, not verified healthy ground truth."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0031",
+      "rca_state": "no_anomaly_evidence",
+      "source_review_item_id": "h7-rca-review-0031",
+      "source_validation_region_type": "no_evidence_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "No-anomaly-evidence case remains a review control, not verified healthy ground truth."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0032",
+      "rca_state": "no_anomaly_evidence",
+      "source_review_item_id": "h7-rca-review-0032",
+      "source_validation_region_type": "no_evidence_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "No-anomaly-evidence case remains a review control, not verified healthy ground truth."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    },
+    {
+      "case_id": "h7-1-expert-case-0033",
+      "rca_state": "no_anomaly_evidence",
+      "source_review_item_id": "h7-rca-review-0033",
+      "source_validation_region_type": "no_evidence_region",
+      "surrogate_validation": {
+        "case_notes": [
+          "No-anomaly-evidence case remains a review control, not verified healthy ground truth."
+        ],
+        "expert_judgment_populated": false,
+        "expert_rating_populated": false,
+        "hypotheses": [],
+        "reviewer_id_populated": false
+      }
+    }
+  ],
+  "namespace": "surrogate_validation",
+  "policy": {
+    "does_not_populate_expert_fields": true,
+    "historical_h7_1_expert_judgment_fields_untouched": true,
+    "literature_grounding_is_not_physical_confirmation": true
+  },
+  "schema_version": "rca-case-surrogate-validation-v1",
+  "summary": {
+    "case_count": 33,
+    "claim_level_counts": {
+      "observation": 44,
+      "symptom": 8
+    },
+    "hypothesis_count": 52,
+    "literature_grounding_decision_counts": {
+      "retain_with_restricted_claim": 8,
+      "revise": 44
+    }
+  }
+}

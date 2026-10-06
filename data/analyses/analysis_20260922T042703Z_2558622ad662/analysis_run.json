@@ -1,0 +1,27 @@
+{
+  "id": "analysis_20260922T042703Z_2558622ad662",
+  "session_id": "calib-real-run-session-000005-part-02",
+  "model_version_id": "iforest-baseline-20260920T091709Z",
+  "telemetry_schema_version": "canonical-telemetry-v2",
+  "feature_schema_version": "ecu-window-features-v1",
+  "signal_columns": [
+    "rpm",
+    "tps_voltage",
+    "tps_raw",
+    "battery_voltage",
+    "iat_c",
+    "ect_c"
+  ],
+  "status": "completed",
+  "window_size_samples": 50,
+  "window_step_samples": 10,
+  "anomaly_window_count": 0,
+  "total_window_count": 281,
+  "anomaly_ratio": 0.0,
+  "health_score": 97.88,
+  "overall_status": "ok",
+  "warnings": [],
+  "started_at": "2026-09-22T04:27:00.224376+00:00",
+  "completed_at": "2026-09-22T04:27:03.504653+00:00",
+  "created_at": "2026-09-22T04:27:00.224376+00:00"
+}

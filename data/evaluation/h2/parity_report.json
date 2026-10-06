@@ -1,0 +1,264 @@
+{
+  "cases": [
+    {
+      "case": "v2_short_or_limited",
+      "comparisons": [
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 88,
+          "name": "feature_columns",
+          "passed": true,
+          "right_count": 88
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 94,
+          "name": "window_columns",
+          "passed": true,
+          "right_count": 94
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 7,
+          "name": "window_index",
+          "passed": true,
+          "right_count": 7
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 7,
+          "name": "start_frame_index",
+          "passed": true,
+          "right_count": 7
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 7,
+          "name": "end_frame_index",
+          "passed": true,
+          "right_count": 7
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 7,
+          "name": "prediction",
+          "passed": true,
+          "right_count": 7
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 7,
+          "name": "is_anomaly",
+          "passed": true,
+          "right_count": 7
+        },
+        {
+          "atol": 1e-09,
+          "count": 7,
+          "kind": "numeric",
+          "max_abs_diff": 0.0,
+          "name": "score_sample",
+          "passed": true,
+          "rtol": 1e-12
+        },
+        {
+          "atol": 1e-09,
+          "count": 7,
+          "kind": "numeric",
+          "max_abs_diff": 0.0,
+          "name": "decision_score",
+          "passed": true,
+          "rtol": 1e-12
+        },
+        {
+          "atol": 1e-09,
+          "count": 7,
+          "kind": "numeric",
+          "max_abs_diff": 0.0,
+          "name": "window_health_score",
+          "passed": true,
+          "rtol": 1e-12
+        },
+        {
+          "kind": "exact_dict",
+          "left": null,
+          "name": "analysis_summary",
+          "passed": true,
+          "right": null
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 1,
+          "name": "event_boundaries",
+          "passed": true,
+          "right_count": 1
+        }
+      ],
+      "historical_execution": {
+        "available": true,
+        "source": "pi_analyzer_handoff.tar.gz"
+      },
+      "passed": true,
+      "post_h1_additive_metadata": {
+        "detector_statuses": [
+          "ok"
+        ],
+        "detectors_summary_present": true
+      },
+      "window_count": 7
+    },
+    {
+      "case": "v2_regular_session",
+      "comparisons": [
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 88,
+          "name": "feature_columns",
+          "passed": true,
+          "right_count": 88
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 94,
+          "name": "window_columns",
+          "passed": true,
+          "right_count": 94
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 297,
+          "name": "window_index",
+          "passed": true,
+          "right_count": 297
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 297,
+          "name": "start_frame_index",
+          "passed": true,
+          "right_count": 297
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 297,
+          "name": "end_frame_index",
+          "passed": true,
+          "right_count": 297
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 297,
+          "name": "prediction",
+          "passed": true,
+          "right_count": 297
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 297,
+          "name": "is_anomaly",
+          "passed": true,
+          "right_count": 297
+        },
+        {
+          "atol": 1e-09,
+          "count": 297,
+          "kind": "numeric",
+          "max_abs_diff": 0.0,
+          "name": "score_sample",
+          "passed": true,
+          "rtol": 1e-12
+        },
+        {
+          "atol": 1e-09,
+          "count": 297,
+          "kind": "numeric",
+          "max_abs_diff": 0.0,
+          "name": "decision_score",
+          "passed": true,
+          "rtol": 1e-12
+        },
+        {
+          "atol": 1e-09,
+          "count": 297,
+          "kind": "numeric",
+          "max_abs_diff": 0.0,
+          "name": "window_health_score",
+          "passed": true,
+          "rtol": 1e-12
+        },
+        {
+          "kind": "exact_dict",
+          "left": null,
+          "name": "analysis_summary",
+          "passed": true,
+          "right": null
+        },
+        {
+          "first_difference": null,
+          "kind": "exact",
+          "left_count": 1,
+          "name": "event_boundaries",
+          "passed": true,
+          "right_count": 1
+        }
+      ],
+      "historical_execution": {
+        "available": true,
+        "source": "pi_analyzer_handoff.tar.gz"
+      },
+      "passed": true,
+      "post_h1_additive_metadata": {
+        "detector_statuses": [
+          "ok"
+        ],
+        "detectors_summary_present": true
+      },
+      "window_count": 297
+    }
+  ],
+  "historical_source": {
+    "available": true,
+    "legacy_inference_member": "pi_analyzer_handoff/source/app/ml/inference.py",
+    "legacy_inference_sha256": "1c33c0a4f78ab520cbdc8256f6abfdbd70c1f06c0178e3c4678f17325f310ff7",
+    "manifest_sha256": "eb93ababc1968af5285494157b46fbfc2f872d179a90b4b701a4825fffd05216",
+    "source": "pi_analyzer_handoff.tar.gz",
+    "source_kind": "checked-in handoff tarball",
+    "source_revision": "unavailable-no-git-repository"
+  },
+  "limitations": [
+    "No .git directory is present, so Git revision checkout of pre-H1 code is not possible.",
+    "The pre-H1 reference is the checked-in pi_analyzer_handoff.tar.gz source snapshot plus an isolated copy of its inference logic."
+  ],
+  "numeric_tolerance": {
+    "float_atol": 1e-09,
+    "float_rtol": 1e-12
+  },
+  "passed": true,
+  "public_api_compatibility": {
+    "additive_fields": [
+      "detectors",
+      "session_id"
+    ],
+    "detectors_additive_metadata_present": true,
+    "endpoint": "POST /api/v1/analysis",
+    "passed": true,
+    "stable_fields_present": true,
+    "status_code": 200
+  },
+  "schema_version": "model-harness-parity-report-v1"
+}

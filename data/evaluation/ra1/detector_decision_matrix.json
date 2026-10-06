@@ -1,0 +1,183 @@
+{
+  "active_detector_ids": [
+    "isolation_forest",
+    "contextual_battery_voltage"
+  ],
+  "detectors": [
+    {
+      "component_state": "production_baseline_and_research_active",
+      "decision": "retain_with_limitations",
+      "detector_id": "isolation_forest",
+      "h5_observed": {
+        "anomaly_window_count": 1165,
+        "event_count": 163,
+        "scored_window_count": 9943,
+        "session_count": 40,
+        "skipped_window_count": 0,
+        "status_counts": {
+          "ok": 35,
+          "skipped": 5
+        }
+      },
+      "h6_validation": {
+        "controlled_condition_recall": {
+          "computed": true,
+          "detected_case_count": 3,
+          "eligible_case_count": 3,
+          "eligible_sessions": [
+            "ride-20260904-1810",
+            "ride-20260909-0725",
+            "ride-20260914-1935"
+          ],
+          "missed_case_count": 0,
+          "missed_sessions": [],
+          "value": 1.0
+        },
+        "decision": "retain_with_limitations",
+        "ground_truth_limitations": [
+          "No detector-positive verified-normal event set is available for precision.",
+          "No root-cause labels are assigned from anomaly output."
+        ],
+        "known_blind_spots": [
+          "contextual-only voltage deviations where IF remains negative"
+        ],
+        "known_false_positive_patterns_or_ambiguities": [
+          "startup or engine-off constant-signal windows",
+          "normal/high-load riding patterns that are uncommon relative to the baseline",
+          "voltage-related regions also captured by contextual detector"
+        ],
+        "not_supported_for": [
+          "mechanical root-cause diagnosis",
+          "fault probability",
+          "clean distinction between unusual-but-normal operating behavior and faults without expert review"
+        ],
+        "review_item_count": 18,
+        "supported_phenomenon": "Broad multivariate response to available controlled abnormal sessions."
+      },
+      "limitations": [
+        "Not a root-cause detector.",
+        "Cannot distinguish unusual-but-normal operation from faults without external evidence.",
+        "Controlled-condition recall is sparse and not universal accuracy."
+      ],
+      "location": "app/ml/iforest_detector.py",
+      "scope": "Broad multivariate outlier detection over prepared window features.",
+      "score_semantics": "score_sample lower is more anomalous; decision_score threshold is 0 for prediction."
+    },
+    {
+      "component_state": "research_active_shadow",
+      "decision": "retain_with_limitations",
+      "detector_id": "contextual_battery_voltage",
+      "h5_observed": {
+        "anomaly_window_count": 257,
+        "event_count": 23,
+        "scored_window_count": 9653,
+        "session_count": 40,
+        "skipped_window_count": 290,
+        "status_counts": {
+          "ok": 32,
+          "skipped": 8
+        }
+      },
+      "h6_validation": {
+        "controlled_condition_recall": {
+          "computed": true,
+          "detected_case_count": 1,
+          "eligible_case_count": 1,
+          "eligible_sessions": [
+            "ride-20260909-0725"
+          ],
+          "missed_case_count": 0,
+          "missed_sessions": [],
+          "value": 1.0
+        },
+        "decision": "retain_with_limitations",
+        "ground_truth_limitations": [
+          "No detector-positive verified-normal event set is available for precision.",
+          "No root-cause labels are assigned from anomaly output."
+        ],
+        "known_blind_spots": [
+          "high-load/unmodeled contexts",
+          "legacy sessions without required prepared features"
+        ],
+        "known_false_positive_patterns_or_ambiguities": [
+          "first-window or short voltage dips requiring physical corroboration",
+          "battery-low candidate labels without external voltage measurement remain expert-only"
+        ],
+        "not_supported_for": [
+          "high-RPM/load behavior without voltage deviation",
+          "thermal anomalies",
+          "unmodeled contexts and sessions missing required TPS raw features"
+        ],
+        "review_item_count": 8,
+        "supported_phenomenon": "Context-conditioned battery-voltage deviation in modeled RPM/TPS operating contexts."
+      },
+      "limitations": [
+        "Not production-gating.",
+        "Requires verified RPM/TPS/battery features and modeled contexts.",
+        "Reports statistical deviation, not mechanical failure."
+      ],
+      "location": "app/ml/contextual_detector.py",
+      "scope": "Context-conditioned battery-voltage deviation in modeled RPM/TPS contexts.",
+      "score_semantics": "max robust-z over battery-voltage features; higher is more anomalous."
+    },
+    {
+      "component_state": "rejected_research_candidate",
+      "decision": "revise",
+      "detector_id": "temporal_battery_shift",
+      "h4_observed": {
+        "anomaly_window_count": 329,
+        "event_count": 1,
+        "scored_window_count": 6082,
+        "session_count": 40,
+        "skipped_window_count": 290,
+        "status_counts": {
+          "ok": 30,
+          "skipped": 10
+        }
+      },
+      "location": "app/ml/temporal_detector.py",
+      "reason": "One stable event overlapped Core 1 and did not add unique event value.",
+      "scope": "Within-session EWMA battery-voltage shifts.",
+      "score_semantics": "change statistic against configured shift threshold; higher is more anomalous."
+    },
+    {
+      "component_state": "rejected_research_candidate",
+      "decision": "reject",
+      "detector_id": "temporal_rpm_stability",
+      "h4_1_observed": {
+        "artifact_category_event_count": 0,
+        "artifact_dominated": false,
+        "core3_only_event_count": 1,
+        "coverage": {
+          "anomaly_window_count": 6,
+          "applicable_ratio": 0.123705,
+          "applicable_window_count": 1230,
+          "event_count": 1,
+          "skipped_ratio": 0.701197,
+          "skipped_window_count": 6972,
+          "total_window_count": 9943,
+          "warmup_ratio": 0.175098,
+          "warmup_window_count": 1741
+        },
+        "event_count": 1,
+        "parameter_sensitive": true,
+        "representative_categories": {
+          "Core3-only RPM temporal event": "rpm-temporal-event-001",
+          "sustained RPM variability increase": "rpm-temporal-event-001"
+        }
+      },
+      "location": "app/ml/rpm_stability_detector.py",
+      "reason": "Feasible candidate produced one Core3-only event but was low-coverage and parameter-sensitive.",
+      "scope": "Sustained RPM dispersion increases in closed-throttle running segments.",
+      "score_semantics": "robust temporal dispersion statistic; higher is more anomalous."
+    }
+  ],
+  "production_detector_ids": [
+    "isolation_forest"
+  ],
+  "rejected_detector_ids": [
+    "temporal_battery_shift",
+    "temporal_rpm_stability"
+  ],
+  "schema_version": "research-architecture-audit-v1.1"
+}

@@ -1,0 +1,10 @@
+source_file,records_seen,records_parsed,valid_frames,ml_eligible_frames,checksum_failures,checksum_failure_ratio,header_failures,length_failures,malformed_records,malformed_raw_records,time_regressions,duplicate_frames,duration_ms,time_source
+real_data/real_run/r0024d0_c93a5fb4.dat.jsonl,6922,6922,6922,6922,0,0.0,0,0,0,0,0,21,1732250.0,device_time_ms_relative
+real_data/real_run/r1032c0_849aa7f8.dat.jsonl,6899,6899,6899,6899,0,0.0,0,0,0,0,0,45,1725998.0,device_time_ms_relative
+real_data/real_run/session_000001.jsonl,117,117,117,117,0,0.0,0,0,0,0,0,0,28999.0,elapsed_ms
+real_data/real_run/session_000002.jsonl,5781,5781,5781,5781,0,0.0,0,0,0,0,0,35,1446503.0,elapsed_ms
+real_data/real_run/session_000003.jsonl,1249,1249,1249,1249,0,0.0,0,0,0,0,0,7,312499.0,elapsed_ms
+real_data/real_run/session_000004.jsonl,3017,3017,3017,3017,0,0.0,0,0,0,0,0,8,755001.0,elapsed_ms
+real_data/real_run/session_000005.jsonl,7851,7851,7851,7851,0,0.0,0,0,0,0,0,14,1963997.0,elapsed_ms
+real_data/real_run/session_000006.jsonl,923,923,923,923,0,0.0,0,0,0,0,0,38,230750.0,elapsed_ms
+real_data/real_run/session_000007.jsonl,6389,6389,6389,6389,0,0.0,0,0,0,0,0,1,1598002.0,elapsed_ms

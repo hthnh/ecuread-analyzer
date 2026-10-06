@@ -1,0 +1,288 @@
+{
+  "profile_id": "honda_keihin_71_17_v0.1",
+  "input_files": [
+    "real_data/r0024d0_c93a5fb4.dat.jsonl",
+    "real_data/r1032c0_849aa7f8.dat.jsonl"
+  ],
+  "unsupported_inputs": [],
+  "totals": {
+    "records_seen": 13821,
+    "records_parsed": 13821,
+    "malformed_records": 0,
+    "normalized_24_frames": 13821,
+    "legacy_29_frames": 0,
+    "unsupported_frame_formats": 0,
+    "valid_frames": 13821,
+    "length_failures": 0,
+    "header_failures": 0,
+    "checksum_failures": 0,
+    "duplicate_frames": 66,
+    "consecutive_duplicate_frames": 5,
+    "missing_seq": 0,
+    "repeated_seq": 0,
+    "seq_gap_count": 0,
+    "missing_seq_values": 0,
+    "time_regressions": 0,
+    "large_time_gaps": 0,
+    "large_time_gap_threshold_ms": 5000.0,
+    "session_hash_changes": 0,
+    "checksum_failure_ratio": 0.0
+  },
+  "sessions": [
+    {
+      "source_file": "real_data/r0024d0_c93a5fb4.dat.jsonl",
+      "records_seen": 6922,
+      "records_parsed": 6922,
+      "malformed_records": 0,
+      "normalized_24_frames": 6922,
+      "legacy_29_frames": 0,
+      "unsupported_frame_formats": 0,
+      "valid_frames": 6922,
+      "length_failures": 0,
+      "header_failures": 0,
+      "checksum_failures": 0,
+      "checksum_failure_ratio": 0.0,
+      "duplicate_frames": 21,
+      "consecutive_duplicate_frames": 4,
+      "missing_seq": 0,
+      "repeated_seq": 0,
+      "seq_gap_count": 0,
+      "missing_seq_values": 0,
+      "time_regressions": 0,
+      "large_time_gaps": 0,
+      "large_time_gap_threshold_ms": 2500.0,
+      "session_hash_changes": 0,
+      "session_hashes": "c93a5fb4"
+    },
+    {
+      "source_file": "real_data/r1032c0_849aa7f8.dat.jsonl",
+      "records_seen": 6899,
+      "records_parsed": 6899,
+      "malformed_records": 0,
+      "normalized_24_frames": 6899,
+      "legacy_29_frames": 0,
+      "unsupported_frame_formats": 0,
+      "valid_frames": 6899,
+      "length_failures": 0,
+      "header_failures": 0,
+      "checksum_failures": 0,
+      "checksum_failure_ratio": 0.0,
+      "duplicate_frames": 45,
+      "consecutive_duplicate_frames": 1,
+      "missing_seq": 0,
+      "repeated_seq": 0,
+      "seq_gap_count": 0,
+      "missing_seq_values": 0,
+      "time_regressions": 0,
+      "large_time_gaps": 0,
+      "large_time_gap_threshold_ms": 2500.0,
+      "session_hash_changes": 0,
+      "session_hashes": "849aa7f8"
+    }
+  ],
+  "existing_decoder_mappings": [
+    {
+      "decoded_field": "rpm",
+      "best_raw_source": "bytes 4-5",
+      "best_transform": "big-endian word",
+      "exact_match_ratio": 1.0,
+      "mean_error": 0.0,
+      "maximum_error": 0.0,
+      "sample_count": 13821,
+      "interpretation": "explains_existing_decoder"
+    },
+    {
+      "decoded_field": "tps_voltage",
+      "best_raw_source": "byte 6",
+      "best_transform": "raw * 5 / 256",
+      "exact_match_ratio": 1.0,
+      "mean_error": 0.0002581058714999004,
+      "maximum_error": 0.000500000000000167,
+      "sample_count": 13821,
+      "interpretation": "explains_existing_decoder"
+    },
+    {
+      "decoded_field": "tps_percent",
+      "best_raw_source": "byte 7",
+      "best_transform": "raw * 100 / 255",
+      "exact_match_ratio": 1.0,
+      "mean_error": 0.0015191857800931163,
+      "maximum_error": 0.004901960784316373,
+      "sample_count": 13821,
+      "interpretation": "explains_existing_decoder"
+    },
+    {
+      "decoded_field": "iat_c",
+      "best_raw_source": "byte 12",
+      "best_transform": "raw - 40",
+      "exact_match_ratio": 1.0,
+      "mean_error": 0.0,
+      "maximum_error": 0.0,
+      "sample_count": 13821,
+      "interpretation": "offset_suspected: byte 12 is MAP voltage candidate in v0.1"
+    },
+    {
+      "decoded_field": "ect_c",
+      "best_raw_source": "byte 13",
+      "best_transform": "raw - 40",
+      "exact_match_ratio": 1.0,
+      "mean_error": 0.0,
+      "maximum_error": 0.0,
+      "sample_count": 13821,
+      "interpretation": "offset_suspected: byte 13 is MAP engineering raw candidate in v0.1"
+    },
+    {
+      "decoded_field": "battery_v",
+      "best_raw_source": "byte 14",
+      "best_transform": "raw / 10",
+      "exact_match_ratio": 1.0,
+      "mean_error": 0.0,
+      "maximum_error": 0.0,
+      "sample_count": 13821,
+      "interpretation": "explains_existing_decoder"
+    },
+    {
+      "decoded_field": "injector_raw",
+      "best_raw_source": "bytes 15-16",
+      "best_transform": "big-endian word",
+      "exact_match_ratio": 1.0,
+      "mean_error": 0.0,
+      "maximum_error": 0.0,
+      "sample_count": 13821,
+      "interpretation": "explains_existing_decoder"
+    },
+    {
+      "decoded_field": "injector_ms",
+      "best_raw_source": "bytes 15-16",
+      "best_transform": "big-endian word / 100",
+      "exact_match_ratio": 1.0,
+      "mean_error": 0.0,
+      "maximum_error": 0.0,
+      "sample_count": 13821,
+      "interpretation": "explains_existing_decoder"
+    },
+    {
+      "decoded_field": "fuel_cut_inferred",
+      "best_raw_source": "bytes 15-16",
+      "best_transform": "big-endian word == 0",
+      "exact_match_ratio": 1.0,
+      "mean_error": 0.0,
+      "maximum_error": 0.0,
+      "sample_count": 13821,
+      "interpretation": "explains_existing_decoder"
+    }
+  ],
+  "candidate_corrected_mappings": [
+    {
+      "field": "rpm",
+      "source_bytes": "4-5",
+      "formula": "big-endian unsigned integer",
+      "status": "high_confidence_candidate"
+    },
+    {
+      "field": "tps_voltage_candidate",
+      "source_bytes": "6",
+      "formula": "raw * 5 / 256",
+      "status": "high_confidence_candidate"
+    },
+    {
+      "field": "tps_position_raw_candidate",
+      "source_bytes": "7",
+      "formula": "raw preserved",
+      "status": "candidate"
+    },
+    {
+      "field": "ect",
+      "source_bytes": "8-9",
+      "formula": "FF/FF sentinel; otherwise voltage and raw-40 candidate",
+      "status": "unavailable"
+    },
+    {
+      "field": "iat_c_candidate",
+      "source_bytes": "10-11",
+      "formula": "byte 11 - 40, with byte 10 voltage candidate",
+      "status": "high_confidence_candidate"
+    },
+    {
+      "field": "map",
+      "source_bytes": "12-13",
+      "formula": "byte 12 voltage; byte 13 raw preserved",
+      "status": "scale_unverified"
+    },
+    {
+      "field": "battery_v_candidate",
+      "source_bytes": "14",
+      "formula": "raw / 10",
+      "status": "high_confidence_candidate"
+    },
+    {
+      "field": "injector_raw_candidate",
+      "source_bytes": "15-16",
+      "formula": "big-endian unsigned integer; ms scale unverified",
+      "status": "scale_unverified"
+    },
+    {
+      "field": "ignition_raw_candidate",
+      "source_bytes": "17",
+      "formula": "raw preserved",
+      "status": "unknown"
+    },
+    {
+      "field": "speed_or_signal_raw_candidate",
+      "source_bytes": "18",
+      "formula": "raw preserved; not speed without external reference",
+      "status": "candidate"
+    }
+  ],
+  "safe_ml_candidate_fields": [
+    "rpm",
+    "tps_voltage_candidate",
+    "iat_c_candidate",
+    "battery_v_candidate"
+  ],
+  "unresolved_fields": [
+    "ect",
+    "map_scale",
+    "injector_ms_scale",
+    "ignition_raw_candidate",
+    "speed_or_signal_raw_candidate",
+    "bytes_19_22",
+    "vehicle_scope_metadata"
+  ],
+  "plausibility_issues": [
+    {
+      "field": "ect",
+      "severity": "warning",
+      "message": "ECT candidate pair is FF/FF sentinel in records; channel is unavailable or unsupported in these logs",
+      "count": 13821
+    },
+    {
+      "field": "map",
+      "severity": "info",
+      "message": "MAP engineering byte is not assumed to be kPa; scale remains unverified",
+      "count": 13821
+    },
+    {
+      "field": "speed_or_signal",
+      "severity": "warning",
+      "message": "byte 18 remains non-zero at RPM near zero; do not call it speed without ground truth",
+      "count": 23
+    },
+    {
+      "field": "injector",
+      "severity": "info",
+      "message": "injector raw varies with operation, but ms scaling is unverified; raw p95=1405.0",
+      "count": 13821
+    }
+  ],
+  "readiness": {
+    "ready_for_ml": false,
+    "reasons": [
+      "existing iat_c is sourced from byte 12, which this profile treats as MAP voltage candidate",
+      "existing ect_c is sourced from byte 13, which this profile treats as MAP engineering raw candidate",
+      "vehicle/ECU identification metadata and ground-truth sensor references are missing",
+      "temperature and sensor offsets remain ambiguous until controlled validation",
+      "trusted feature fields for Isolation Forest have not been approved under the new profile"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "session_id": "sess_20260820T162014Z_382380be2ea5",
+  "vehicle_id": "honda_shmode_4v_001",
+  "device_id": "sim-esp-e2e-001",
+  "ecu_profile_id": "honda_keihin_legacy_29",
+  "decoder_id": "honda_keihin_legacy_29",
+  "decoder_version": "0.1.0",
+  "telemetry_schema_version": "canonical-telemetry-v1",
+  "sampling": {
+    "sample_interval_ms": 100.0,
+    "sampling_rate_hz": null
+  },
+  "signal_definitions": {
+    "rpm": {
+      "status": "high_confidence_candidate",
+      "unit": "rpm"
+    },
+    "tps_voltage": {
+      "status": "high_confidence_candidate",
+      "unit": "V"
+    },
+    "tps_raw_candidate": {
+      "status": "candidate",
+      "unit": "raw"
+    },
+    "battery_voltage": {
+      "status": "high_confidence_candidate",
+      "unit": "V"
+    },
+    "iat_c": {
+      "status": "high_confidence_candidate",
+      "unit": "degC"
+    },
+    "ect_c_candidate": {
+      "status": "candidate",
+      "unit": "degC"
+    },
+    "map_raw": {
+      "status": "candidate",
+      "unit": "raw"
+    }
+  },
+  "sample_count": 117,
+  "created_at": "2026-08-20T16:20:14.593332+00:00"
+}

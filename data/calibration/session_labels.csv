@@ -1,0 +1,36 @@
+session_id,label,label_source,notes
+ride-20260901-0715,too_short,derived_window_count_lt_10,Too few windows for stable session-level status; not a mechanical truth label.
+ride-20260902-1032,warmup_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=warmup_candidate
+ride-20260902-1050,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260903-1349,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260904-1623,battery_low_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260904-1810,known_abnormal,explicit_demo_seed_generation,synthetically injected high ECT session from demo seed generation
+ride-20260905-0840,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260905-0858,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260907-1157,battery_low_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=warmup_candidate;battery_low_candidate
+ride-20260908-1431,battery_low_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate
+ride-20260908-1449,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260909-0725,known_abnormal,explicit_demo_seed_generation,synthetically injected low battery session from demo seed generation
+ride-20260909-1748,battery_low_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=warmup_candidate;battery_low_candidate
+ride-20260910-0922,warmup_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=warmup_candidate
+ride-20260911-1239,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260911-1257,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260911-1316,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260911-1335,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260912-1556,battery_low_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate
+ride-20260913-0730,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260913-0748,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260913-0807,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260913-0826,unknown,no_explicit_operational_label,Needs human review before being used as normal or abnormal truth.
+ride-20260914-1047,battery_low_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260914-1935,known_abnormal,explicit_demo_seed_generation,synthetically injected high RPM/load session from demo seed generation
+ride-20260916-1321,too_short,derived_window_count_lt_10,Too few windows for stable session-level status; not a mechanical truth label.
+ride-20260917-1638,battery_low_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate
+ride-20260918-0815,known_abnormal,explicit_demo_seed_generation,synthetically injected high ECT session from demo seed generation
+ride-20260918-0855,battery_low_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate
+ride-20260919-1129,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260919-1147,high_rpm_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=high_rpm_candidate
+ride-20260919-1206,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260919-1225,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required
+ride-20260920-1446,battery_low_candidate,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate
+ride-20260920-1504,normal_ride,human_review,Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required

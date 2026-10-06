@@ -1,0 +1,175 @@
+{
+  "canonical_availability": {
+    "reference_session_count": 12,
+    "reference_session_ids": [
+      "ride-20260902-1050",
+      "ride-20260903-1349",
+      "ride-20260905-0840",
+      "ride-20260905-0858",
+      "ride-20260908-1449",
+      "ride-20260911-1335",
+      "ride-20260913-0748",
+      "ride-20260913-0807",
+      "ride-20260919-1129",
+      "ride-20260919-1206",
+      "ride-20260919-1225",
+      "ride-20260920-1504"
+    ],
+    "v2_session_count": 52,
+    "v2_sessions_with_required_verified_signals": 52
+  },
+  "capture_overlap": {
+    "duplicate_sample_groups": [
+      {
+        "samples_sha256": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f",
+        "session_ids": [
+          "calib-real-run-session-000004",
+          "ride-20260904-1623"
+        ]
+      },
+      {
+        "samples_sha256": "2a787990e4d11358fbd9869cca17b04dcce37e082135ac6fb7b6e0f7c2a354de",
+        "session_ids": [
+          "calib-real-run-session-000003",
+          "ride-20260903-1349"
+        ]
+      },
+      {
+        "samples_sha256": "2b589cfa9d8c24f11884095f0ac67fb8c1a120a1e8907cf3627dab52f7239466",
+        "session_ids": [
+          "calib-real-run-session-000001",
+          "ride-20260901-0715"
+        ]
+      },
+      {
+        "samples_sha256": "57a8e79726e12d7781b1229b5ccf96f8d229fc9ff93e5f428d971c5d5c0b59e2",
+        "session_ids": [
+          "calib-real-run-session-000006",
+          "ride-20260907-1157"
+        ]
+      },
+      {
+        "samples_sha256": "6fd28d87b0720c4c09704d609acdf43753db1b05fa92a52ba398f40bc2f6b914",
+        "session_ids": [
+          "ride-20260904-1810",
+          "ride-20260918-0815"
+        ]
+      }
+    ],
+    "evaluation_overlap_policy": "exclude reference session IDs and duplicate sample hashes from shadow evaluation"
+  },
+  "feasibility_reason": "Reference split has enough windows for idle, low-load and mid-load running contexts.",
+  "feasible": true,
+  "modeled_contexts": [
+    "idle_closed_throttle",
+    "low_load_running",
+    "mid_load_running"
+  ],
+  "reference_context_counts": {
+    "engine_off_or_transition": 3,
+    "high_load_running": 25,
+    "idle_closed_throttle": 337,
+    "low_load_running": 1139,
+    "mid_load_running": 2633,
+    "unmodeled": 18
+  },
+  "rpm_tps_time_alignment": {
+    "basis": "Canonical samples store RPM, TPS voltage and TPS raw in the same decoded sample row; window features are computed over identical row boundaries.",
+    "supported": true
+  },
+  "schema_version": "contextual-shadow-feasibility-audit-v1",
+  "supported_detector_scope": "narrow contextual statistical detection for verified battery-voltage deviations within RPM/TPS-defined operating contexts",
+  "unmodeled_context_policy": "skipped, not converted into normal predictions",
+  "unsupported_detector_scope": [
+    "general mechanical fault diagnosis",
+    "coolant or intake temperature contextual detection using only verified signals",
+    "RPM-from-TPS behavioral modeling"
+  ],
+  "verified_signal_decisions": {
+    "excluded_high_confidence_not_verified": [
+      "iat_c",
+      "ect_c"
+    ],
+    "rows": [
+      {
+        "calibration_evidence": "0 RPM in stationary engine-off sessions; non-zero and plausible after engine operation begins",
+        "identity_status": "VERIFIED",
+        "ml_approved": "True",
+        "ml_reason": "directly verified by controlled off/start states",
+        "recommended_ml_use": "use",
+        "scaling_status": "VERIFIED",
+        "signal": "RPM",
+        "v0.1_mapping_hypothesis": "bytes 4-5 big-endian unsigned integer"
+      },
+      {
+        "calibration_evidence": "TPS sweep byte6 25.0 to 225.0 (0.488 V to 4.395 V)",
+        "identity_status": "VERIFIED",
+        "ml_approved": "True",
+        "ml_reason": "responds monotonically to controlled throttle sweep",
+        "recommended_ml_use": "use",
+        "scaling_status": "VERIFIED",
+        "signal": "TPS voltage",
+        "v0.1_mapping_hypothesis": "byte6 * 5 / 256"
+      },
+      {
+        "calibration_evidence": "TPS sweep byte7 0.0 to 156.0, corr(byte6, byte7)=0.999978",
+        "identity_status": "VERIFIED",
+        "ml_approved": "True",
+        "ml_reason": "direct throttle sweep ground truth",
+        "recommended_ml_use": "use raw or calibrated percent",
+        "scaling_status": "VERIFIED_AS_RAW",
+        "signal": "TPS raw",
+        "v0.1_mapping_hypothesis": "byte7 raw/position candidate"
+      },
+      {
+        "calibration_evidence": "baseline byte11-40 is 36.00 C; ambient error 1.50 C; 15-min warm-up drift is small",
+        "identity_status": "HIGH_CONFIDENCE",
+        "ml_approved": "True",
+        "ml_reason": "close to ambient and does not follow coolant warm-up",
+        "recommended_ml_use": "use",
+        "scaling_status": "HIGH_CONFIDENCE",
+        "signal": "IAT",
+        "v0.1_mapping_hypothesis": "bytes10-11 as IAT pair; byte11 - 40"
+      },
+      {
+        "calibration_evidence": "bytes8-9 remain FF/FF; byte13-40 starts 36.00 C (ambient error 1.50 C) and reaches warm operating temperature",
+        "identity_status": "HIGH_CONFIDENCE",
+        "ml_approved": "True",
+        "ml_reason": "controlled cold-start/warm-up strongly identifies byte13 as engine temperature",
+        "recommended_ml_use": "use",
+        "scaling_status": "HIGH_CONFIDENCE",
+        "signal": "ECT",
+        "v0.1_mapping_hypothesis": "bytes8-9 generic ECT unavailable; byte13 was old ect_c source"
+      },
+      {
+        "calibration_evidence": "external VOM 12.75 V vs ECU mean 12.497 V",
+        "identity_status": "VERIFIED",
+        "ml_approved": "True",
+        "ml_reason": "external VOM agreement plus start/charging behavior",
+        "recommended_ml_use": "use",
+        "scaling_status": "VERIFIED",
+        "signal": "Battery",
+        "v0.1_mapping_hypothesis": "byte14 / 10"
+      }
+    ],
+    "source": "data/decoder-audit/reports/calibration_signal_decisions.csv",
+    "strictly_verified_signals": [
+      "rpm",
+      "tps_voltage",
+      "tps_raw",
+      "battery_voltage"
+    ]
+  },
+  "window_representation": {
+    "insufficient_for": "within-window transient waveform diagnosis or closed-loop causal modeling",
+    "required_features": [
+      "rpm_median",
+      "tps_raw_median",
+      "tps_voltage_median",
+      "battery_voltage_median",
+      "battery_voltage_mean",
+      "battery_voltage_min"
+    ],
+    "sufficient_for": "coarse context bins from per-window RPM/TPS medians and battery-voltage robust scoring"
+  }
+}

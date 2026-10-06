@@ -1,0 +1,198 @@
+{
+  "active_detector_ids": [
+    "isolation_forest",
+    "contextual_battery_voltage"
+  ],
+  "engine_version": "deterministic-rca-engine-v1",
+  "excluded_detector_ids": [
+    "temporal_battery_shift",
+    "temporal_rpm_stability"
+  ],
+  "hypothesis_statuses": [
+    "possible",
+    "supported",
+    "insufficient_evidence",
+    "contradicted"
+  ],
+  "observation_vs_hypothesis_boundary": {
+    "hypothesis": "A possible explanation for observations; not a physical fault finding.",
+    "observation": "Directly supported by telemetry or detector evidence."
+  },
+  "policy": {
+    "absolute_diagnosis_claims_allowed": false,
+    "agents_used": false,
+    "detector_predictions_modified": false,
+    "drive_safe_behavior_changed": false,
+    "llm_used": false,
+    "physical_fault_claims_allowed": false,
+    "production_behavior_changed": false,
+    "quantified_likelihood_allowed": false,
+    "score_fusion_used": false
+  },
+  "rule_catalog_version": "evidence-based-rca-rules-v1",
+  "rules": [
+    {
+      "applicability_conditions": [
+        "aggregate coverage status is none",
+        "aggregate evidence state is insufficient_coverage"
+      ],
+      "contradicting_evidence": [],
+      "description": "Stop causal hypothesis generation when no active detector produced applicable evidence.",
+      "optional_supporting_evidence": [
+        "missing_features",
+        "skipped_detector_reasons"
+      ],
+      "recommended_verification_step": "Re-run analysis with the required feature set or inspect upstream feature extraction before RCA.",
+      "required_detector_findings": [
+        "zero_applicable_active_detectors"
+      ],
+      "required_signals": [],
+      "resulting_hypothesis": null,
+      "rule_id": "rca.coverage.insufficient_evidence",
+      "version": "v1"
+    },
+    {
+      "applicability_conditions": [
+        "no positive active detector findings",
+        "at least one active detector applicable"
+      ],
+      "contradicting_evidence": [],
+      "description": "Do not generate RCA hypotheses when active detectors report no anomaly evidence.",
+      "optional_supporting_evidence": [
+        "detector-local negative scores"
+      ],
+      "recommended_verification_step": "Treat as no detector anomaly evidence, not as verified healthy ground truth.",
+      "required_detector_findings": [
+        "all_applicable_detectors_negative"
+      ],
+      "required_signals": [],
+      "resulting_hypothesis": null,
+      "rule_id": "rca.no_evidence.no_hypothesis",
+      "version": "v1"
+    },
+    {
+      "applicability_conditions": [
+        "contextual detector execution status is ok",
+        "top contextual deviation is available"
+      ],
+      "contradicting_evidence": [
+        "isolation_forest negative or unavailable for the same representative window"
+      ],
+      "description": "Generate an electrical-supply variation hypothesis from contextual battery-voltage deviation.",
+      "optional_supporting_evidence": [
+        "isolation_forest battery-related unusual features"
+      ],
+      "recommended_verification_step": "Measure battery/charging voltage externally and record electrical load state during a repeat capture.",
+      "required_detector_findings": [
+        "contextual_battery_voltage positive"
+      ],
+      "required_signals": [
+        "battery_voltage_median",
+        "battery_voltage_mean",
+        "battery_voltage_min",
+        "operating_context"
+      ],
+      "resulting_hypothesis": {
+        "hypothesis_id": "h.electrical_supply_variation",
+        "status": "supported"
+      },
+      "rule_id": "rca.electrical.contextual_voltage_deviation",
+      "version": "v1"
+    },
+    {
+      "applicability_conditions": [
+        "isolation forest execution status is ok",
+        "isolation forest anomaly flag is true"
+      ],
+      "contradicting_evidence": [
+        "contextual_battery_voltage negative for an electrical-specific explanation"
+      ],
+      "description": "Generate a broad multivariate-pattern hypothesis from Isolation Forest anomaly evidence.",
+      "optional_supporting_evidence": [
+        "RPM/TPS/battery telemetry",
+        "contextual detector finding"
+      ],
+      "recommended_verification_step": "Review the listed feature families and operating context against raw telemetry and operator notes.",
+      "required_detector_findings": [
+        "isolation_forest positive"
+      ],
+      "required_signals": [
+        "detector most_unusual_features"
+      ],
+      "resulting_hypothesis": {
+        "hypothesis_id": "h.multivariate_pattern_outside_reference",
+        "status": "possible"
+      },
+      "rule_id": "rca.iforest.multivariate_pattern",
+      "version": "v1"
+    },
+    {
+      "applicability_conditions": [
+        "IF unusual feature list includes rpm or tps"
+      ],
+      "contradicting_evidence": [
+        "missing TPS/RPM telemetry"
+      ],
+      "description": "Generate a throttle/operating-state hypothesis when IF evidence highlights RPM or TPS features.",
+      "optional_supporting_evidence": [
+        "operating_context"
+      ],
+      "recommended_verification_step": "Compare RPM/TPS timing with operator input and route/load notes; do not infer RPM solely from TPS.",
+      "required_detector_findings": [
+        "isolation_forest positive"
+      ],
+      "required_signals": [
+        "rpm_median",
+        "tps_raw_median or tps_voltage_median"
+      ],
+      "resulting_hypothesis": {
+        "hypothesis_id": "h.operating_state_or_throttle_input_variation",
+        "status": "possible"
+      },
+      "rule_id": "rca.operating_state.throttle_related_pattern",
+      "version": "v1"
+    },
+    {
+      "applicability_conditions": "IF unusual feature list contains constant_signal",
+      "contradicting_evidence": [
+        "stable operation notes or external corroboration, when available"
+      ],
+      "description": "Generate a possible acquisition/data-quality hypothesis for IF events involving constant-signal features.",
+      "optional_supporting_evidence": [
+        "feature names containing constant_signal"
+      ],
+      "recommended_verification_step": "Inspect raw frames for dropouts, repeated values, sensor saturation, or intentional stable operation.",
+      "required_detector_findings": [
+        "isolation_forest positive"
+      ],
+      "required_signals": [
+        "detector most_unusual_features"
+      ],
+      "resulting_hypothesis": {
+        "hypothesis_id": "h.possible_acquisition_or_constant_signal_artifact",
+        "status": "possible"
+      },
+      "rule_id": "rca.data_quality.constant_signal_pattern",
+      "version": "v1"
+    },
+    {
+      "applicability_conditions": "aggregate evidence state is detector_disagreement",
+      "contradicting_evidence": [],
+      "description": "Preserve detector disagreement without forcing a shared diagnosis.",
+      "optional_supporting_evidence": [
+        "detector-local scores",
+        "operating context"
+      ],
+      "recommended_verification_step": "Review each detector's phenomenon separately; do not merge scores or infer consensus.",
+      "required_detector_findings": [
+        "at least one positive detector",
+        "at least one negative detector"
+      ],
+      "required_signals": [],
+      "resulting_hypothesis": null,
+      "rule_id": "rca.detectors.disagreement_preservation",
+      "version": "v1"
+    }
+  ],
+  "schema_version": "root-cause-analysis-contract-v1"
+}

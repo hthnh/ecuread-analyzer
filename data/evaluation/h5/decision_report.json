@@ -1,0 +1,64 @@
+{
+  "answers": {
+    "both_applicable_agreement_windows": 9030,
+    "detector_disagreement_windows": 623,
+    "disagreement_states_interpretable": true,
+    "heterogeneous_outputs_represented_without_score_fusion": true,
+    "only_one_detector_applicable_windows": 290,
+    "provenance_sufficient_for_later_rca": true,
+    "suitable_for_future_drivesafe_shadow_metadata": true
+  },
+  "basis": {
+    "active_detector_ids": [
+      "isolation_forest",
+      "contextual_battery_voltage"
+    ],
+    "coverage_status_counts": {
+      "full": 9653,
+      "none": 2916,
+      "partial": 290
+    },
+    "detector_finding_counts": {
+      "contextual_battery_voltage": {
+        "negative": 9396,
+        "not_applicable": 61,
+        "positive": 257,
+        "unavailable": 3145
+      },
+      "isolation_forest": {
+        "negative": 8778,
+        "positive": 1165,
+        "unavailable": 2916
+      }
+    },
+    "drive_safe_behavior_changed": false,
+    "event_type_counts": {
+      "coverage_gap_region": 20,
+      "detector_specific_event": 15,
+      "disagreement_region": 149,
+      "overlapping_detector_event": 21
+    },
+    "evidence_state_counts": {
+      "detector_disagreement": 623,
+      "insufficient_coverage": 2916,
+      "multiple_detector_evidence": 255,
+      "no_evidence": 8776,
+      "single_detector_evidence": 289
+    },
+    "excluded_detector_ids": [
+      "temporal_battery_shift",
+      "temporal_rpm_stability"
+    ],
+    "failed_detector_result_count": 0,
+    "production_behavior_changed": false,
+    "supervised_accuracy_claims_made": false
+  },
+  "limitations": [
+    "`no_evidence` is an evidence state, not proof the vehicle is healthy.",
+    "Partial coverage means unavailable or inapplicable detectors are not counted as negative votes.",
+    "The representation is ready for a future additive DriveSafe contract, but this task intentionally does not change DriveSafe behavior.",
+    "No precision, recall, F1, confidence, RCA or score fusion is computed."
+  ],
+  "recommendation": "advance",
+  "schema_version": "multi-detector-evidence-aggregation-decision-v1"
+}

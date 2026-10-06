@@ -1,0 +1,211 @@
+{
+  "profile_id": "honda_keihin_71_17_v0.1",
+  "frame_length": 24,
+  "header": [
+    2,
+    24,
+    113,
+    23
+  ],
+  "checksum": {
+    "type": "twos_complement_sum",
+    "valid_condition": "sum(frame) % 256 == 0",
+    "expected_checksum_formula": "(-sum(frame[:23])) & 0xFF"
+  },
+  "fields": {
+    "rpm": {
+      "source_bytes": [
+        4,
+        5
+      ],
+      "formula": "big_endian_u16",
+      "status": "high_confidence_candidate"
+    },
+    "tps_voltage": {
+      "source_bytes": [
+        6
+      ],
+      "formula": "raw * 5 / 256",
+      "status": "high_confidence_candidate"
+    },
+    "tps_position_raw": {
+      "source_bytes": [
+        7
+      ],
+      "formula": "raw",
+      "status": "candidate"
+    },
+    "ect": {
+      "source_bytes": [
+        8,
+        9
+      ],
+      "formula": "voltage raw * 5 / 256; engineering byte - 40",
+      "status": "unavailable_when_ff_ff_else_candidate"
+    },
+    "iat": {
+      "source_bytes": [
+        10,
+        11
+      ],
+      "formula": "voltage raw * 5 / 256; engineering byte - 40",
+      "status": "high_confidence_candidate"
+    },
+    "map": {
+      "source_bytes": [
+        12,
+        13
+      ],
+      "formula": "voltage raw * 5 / 256; engineering raw preserved",
+      "status": "scale_unverified"
+    },
+    "battery": {
+      "source_bytes": [
+        14
+      ],
+      "formula": "raw / 10",
+      "status": "high_confidence_candidate"
+    },
+    "injector": {
+      "source_bytes": [
+        15,
+        16
+      ],
+      "formula": "big_endian_u16; ms scale unverified",
+      "status": "scale_unverified",
+      "candidate_scales": [
+        "raw / 100",
+        "raw / 250",
+        "raw / 256"
+      ]
+    },
+    "ignition_raw": {
+      "source_bytes": [
+        17
+      ],
+      "formula": "raw",
+      "status": "unknown"
+    },
+    "speed_or_signal_raw": {
+      "source_bytes": [
+        18
+      ],
+      "formula": "raw",
+      "status": "candidate"
+    },
+    "unknown_reserved": {
+      "source_bytes": [
+        19,
+        20,
+        21,
+        22
+      ],
+      "formula": "raw bytes",
+      "status": "unknown"
+    }
+  },
+  "verified_fields": [
+    "checksum"
+  ],
+  "candidate_fields": [
+    "rpm",
+    "tps_voltage",
+    "tps_position_raw",
+    "iat",
+    "battery",
+    "injector_raw",
+    "map",
+    "speed_or_signal_raw"
+  ],
+  "unknown_fields": [
+    "ignition_raw",
+    "unknown_reserved"
+  ],
+  "known_sentinels": {
+    "ff_ff_pair": "unavailable_or_unsupported",
+    "ect_ff_ff": {
+      "source_bytes": [
+        8,
+        9
+      ],
+      "meaning": "unavailable_or_unsupported"
+    }
+  },
+  "vehicle_scope": {
+    "vehicle_id": null,
+    "ecu_part_number": null,
+    "model": null,
+    "year": null,
+    "firmware_version": null,
+    "protocol_table": "0x71/0x17"
+  },
+  "evidence": [
+    {
+      "input_files": [
+        "real_data/r0024d0_c93a5fb4.dat.jsonl",
+        "real_data/r1032c0_849aa7f8.dat.jsonl"
+      ],
+      "records_parsed": 13821,
+      "valid_frames": 13821,
+      "checksum_failure_ratio": 0.0,
+      "existing_decoder_findings": [
+        {
+          "decoded_field": "rpm",
+          "best_raw_source": "bytes 4-5",
+          "best_transform": "big-endian word",
+          "exact_match_ratio": 1.0,
+          "mean_error": 0.0,
+          "maximum_error": 0.0,
+          "sample_count": 13821,
+          "interpretation": "explains_existing_decoder"
+        },
+        {
+          "decoded_field": "iat_c",
+          "best_raw_source": "byte 12",
+          "best_transform": "raw - 40",
+          "exact_match_ratio": 1.0,
+          "mean_error": 0.0,
+          "maximum_error": 0.0,
+          "sample_count": 13821,
+          "interpretation": "offset_suspected: byte 12 is MAP voltage candidate in v0.1"
+        },
+        {
+          "decoded_field": "ect_c",
+          "best_raw_source": "byte 13",
+          "best_transform": "raw - 40",
+          "exact_match_ratio": 1.0,
+          "mean_error": 0.0,
+          "maximum_error": 0.0,
+          "sample_count": 13821,
+          "interpretation": "offset_suspected: byte 13 is MAP engineering raw candidate in v0.1"
+        },
+        {
+          "decoded_field": "battery_v",
+          "best_raw_source": "byte 14",
+          "best_transform": "raw / 10",
+          "exact_match_ratio": 1.0,
+          "mean_error": 0.0,
+          "maximum_error": 0.0,
+          "sample_count": 13821,
+          "interpretation": "explains_existing_decoder"
+        },
+        {
+          "decoded_field": "injector_raw",
+          "best_raw_source": "bytes 15-16",
+          "best_transform": "big-endian word",
+          "exact_match_ratio": 1.0,
+          "mean_error": 0.0,
+          "maximum_error": 0.0,
+          "sample_count": 13821,
+          "interpretation": "explains_existing_decoder"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Not a universal Honda/Keihin profile.",
+    "Vehicle model, model year, ECU part number, ECM identification response, and firmware version are not present in the supplied logs.",
+    "Temperature, MAP, injector scale, and speed semantics require controlled ground-truth validation.",
+    "The supplied logs do not include external temperature, speed, multimeter, injector pulse, ECU ID, or ECU part-number references."
+  ]
+}

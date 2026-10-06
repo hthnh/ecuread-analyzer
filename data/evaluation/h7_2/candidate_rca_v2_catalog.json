@@ -1,0 +1,132 @@
+{
+  "activation_status": "candidate_only_not_registered",
+  "candidate_rules": [
+    {
+      "blocked_claims": [
+        "causal hypothesis",
+        "component failure"
+      ],
+      "maximum_claim_level": "observation",
+      "output": "Representative window is outside IF reference distribution.",
+      "output_type": "observation",
+      "recommended_checks": [
+        "Review unusual feature families, raw telemetry, and session/operator context."
+      ],
+      "required_evidence": [
+        "IF positive detector finding",
+        "IF unusual feature list"
+      ],
+      "rule_id": "rca.v2.iforest.detector_observation",
+      "supersedes_or_restricts": [
+        "rca.iforest.multivariate_pattern"
+      ],
+      "trigger": "Isolation Forest positive finding with unusual features."
+    },
+    {
+      "blocked_claims": [
+        "regulator failure",
+        "battery failure",
+        "stator failure"
+      ],
+      "maximum_claim_level": "symptom",
+      "output": "Observed contextual supply-voltage deviation.",
+      "output_type": "symptom",
+      "possible_hypotheses_requiring_additional_evidence": [
+        "charging-system variation",
+        "battery condition",
+        "electrical load variation",
+        "wiring or supply-path variation"
+      ],
+      "recommended_checks": [
+        "Measure external voltage.",
+        "Record electrical load state.",
+        "Check battery, charging system, wiring/ground and model-specific service procedures."
+      ],
+      "required_evidence": [
+        "contextual battery detector positive finding",
+        "top voltage deviation",
+        "operating context"
+      ],
+      "rule_id": "rca.v2.electrical.contextual_voltage_symptom",
+      "supersedes_or_restricts": [
+        "rca.electrical.contextual_voltage_deviation"
+      ],
+      "trigger": "Contextual battery detector positive with voltage top-deviation evidence."
+    },
+    {
+      "blocked_claims": [
+        "throttle fault",
+        "abnormal throttle behavior from RPM/TPS alone"
+      ],
+      "hypothesis_gate": "Generate possible operating-state hypothesis only if operator/context evidence is unexplained.",
+      "maximum_claim_level": "observation",
+      "output": "RPM/TPS features were involved in the detector observation.",
+      "output_type": "observation_or_possible_hypothesis",
+      "recommended_checks": [
+        "Compare RPM/TPS traces with operator input, route, load and expected operating state."
+      ],
+      "required_evidence": [
+        "IF positive detector finding",
+        "RPM or TPS feature in IF unusual feature list",
+        "RPM/TPS telemetry snapshot"
+      ],
+      "rule_id": "rca.v2.operating_state.rpm_tps_observation",
+      "supersedes_or_restricts": [
+        "rca.operating_state.throttle_related_pattern"
+      ],
+      "trigger": "IF positive and unusual features include RPM/TPS family."
+    },
+    {
+      "blocked_claims": [
+        "acquisition failure from constant signal alone"
+      ],
+      "hypothesis_gate": "Generate acquisition/data-quality hypothesis only when invalid timestamps, repeated raw frames, checksum/header failures, implausible saturation, missing expected response, or equivalent acquisition-integrity evidence exists.",
+      "maximum_claim_level": "observation",
+      "output": "Constant or low-variance signal observed.",
+      "output_type": "observation_with_integrity_gate",
+      "recommended_checks": [
+        "Inspect timestamps, raw frames, checksum/header outcomes, saturation and expected stimulus response."
+      ],
+      "required_evidence": [
+        "IF positive detector finding",
+        "constant_signal feature in IF unusual feature list",
+        "representative telemetry window"
+      ],
+      "rule_id": "rca.v2.data_quality.constant_signal_integrity_gate",
+      "supersedes_or_restricts": [
+        "rca.data_quality.constant_signal_pattern"
+      ],
+      "trigger": "IF positive and unusual features include constant_signal."
+    },
+    {
+      "maximum_claim_level": "observation",
+      "output": "Insufficient/no anomaly evidence; no causal RCA generated.",
+      "output_type": "evidence_limitation",
+      "recommended_checks": [
+        "Restore feature coverage or obtain independent validation before diagnosis."
+      ],
+      "rule_id": "rca.v2.evidence.coverage_boundary",
+      "supersedes_or_restricts": [
+        "rca.coverage.insufficient_evidence",
+        "rca.no_evidence.no_hypothesis"
+      ],
+      "trigger": "No applicable active detector evidence or all applicable detectors negative."
+    },
+    {
+      "maximum_claim_level": "observation",
+      "output": "Detector scope disagreement preserved without consensus diagnosis.",
+      "output_type": "evidence_relationship",
+      "recommended_checks": [
+        "Review each detector in its own score semantics and phenomenon scope."
+      ],
+      "rule_id": "rca.v2.detectors.disagreement_scope",
+      "supersedes_or_restricts": [
+        "rca.detectors.disagreement_preservation"
+      ],
+      "trigger": "At least one active detector positive and at least one negative."
+    }
+  ],
+  "replaces_h7_v1": false,
+  "schema_version": "candidate-rca-rule-catalog-v2",
+  "semantic_boundary": "Candidate v2 reduces causal claims but does not confirm physical root causes."
+}

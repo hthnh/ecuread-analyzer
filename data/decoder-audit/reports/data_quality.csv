@@ -1,0 +1,3 @@
+source_file,records_seen,records_parsed,malformed_records,normalized_24_frames,legacy_29_frames,unsupported_frame_formats,valid_frames,length_failures,header_failures,checksum_failures,checksum_failure_ratio,duplicate_frames,consecutive_duplicate_frames,missing_seq,repeated_seq,seq_gap_count,missing_seq_values,time_regressions,large_time_gaps,large_time_gap_threshold_ms,session_hash_changes,session_hashes
+real_data/r0024d0_c93a5fb4.dat.jsonl,6922,6922,0,6922,0,0,6922,0,0,0,0.0,21,4,0,0,0,0,0,0,2500.0,0,c93a5fb4
+real_data/r1032c0_849aa7f8.dat.jsonl,6899,6899,0,6899,0,0,6899,0,0,0,0.0,45,1,0,0,0,0,0,0,2500.0,0,849aa7f8

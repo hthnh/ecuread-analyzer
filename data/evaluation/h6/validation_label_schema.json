@@ -1,0 +1,34 @@
+{
+  "allowed_labels": [
+    "observed_normal_behavior",
+    "observed_unusual_behavior",
+    "controlled_condition",
+    "data_artifact",
+    "inconclusive"
+  ],
+  "evidence_sources": [
+    "controlled_operating_experiment",
+    "explicit_demo_seed_generation",
+    "independent_physical_observation",
+    "external_measurement",
+    "known_operator_action",
+    "expert_review",
+    "documented_acquisition_artifact",
+    "unavailable"
+  ],
+  "label_definitions": {
+    "controlled_condition": "A known controlled/synthetic operating condition was introduced independently of detector output.",
+    "data_artifact": "Documented acquisition or data-quality issue explains the reviewed region.",
+    "inconclusive": "Available evidence is insufficient for a validation label.",
+    "observed_normal_behavior": "Expert or independent evidence indicates normal operation for the reviewed region.",
+    "observed_unusual_behavior": "Expert or independent evidence indicates unusual observed behavior, without assigning root cause."
+  },
+  "policy": {
+    "detector_anomaly_as_label_source_allowed": false,
+    "detector_predictions_are_ground_truth": false,
+    "expert_only_labels_are_separated_from_controlled_cases": true,
+    "metrics_require_independent_or_controlled_labels": true,
+    "unlabeled_events_remain_unlabeled": true
+  },
+  "schema_version": "active-detector-validation-label-schema-v1"
+}

@@ -1,0 +1,27 @@
+{
+  "anomaly_context_counts": {
+    "idle_closed_throttle": 15,
+    "low_load_running": 241,
+    "mid_load_running": 1
+  },
+  "boundary_anomaly_context_counts": {
+    "idle_closed_throttle": 2,
+    "low_load_running": 2
+  },
+  "boundary_anomaly_enrichment": 0.122429,
+  "contextual_anomaly_rate_away_from_boundary": 0.029594,
+  "contextual_anomaly_rate_near_boundary": 0.003623,
+  "contextual_anomaly_windows": 257,
+  "contextual_anomaly_windows_near_boundary": 4,
+  "disagreement_windows": 623,
+  "disagreement_windows_near_boundary": 43,
+  "schema_version": "context-boundary-review-v1",
+  "scored_windows": 9653,
+  "scored_windows_near_boundary": 1104,
+  "transition_artifact_assessment": {
+    "context_boundaries_dominate_contextual_anomalies": false,
+    "reason": "Contextual anomalies are not dominated by context-boundary windows under the measured transition radius.",
+    "simple_transition_rule_justified": false
+  },
+  "transition_radius_windows": 1
+}

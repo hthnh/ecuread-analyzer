@@ -1,0 +1,65 @@
+model,monitor_ratio,attention_ratio,attention_health_lt,monitor_health_lt,is_current_policy,normal_holdout_count,normal_holdout_ok,normal_holdout_false_monitor,normal_holdout_false_attention,known_abnormal_attention,known_abnormal_monitor,known_abnormal_ok,warmup_distribution,battery_low_distribution,high_rpm_distribution
+old,0.02,0.1,50,80,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=2, monitor=5, ok=2",attention=1
+old,0.02,0.15,50,80,True,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=1, monitor=6, ok=2",attention=1
+old,0.02,0.2,50,80,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=6, ok=2",attention=1
+old,0.02,0.25,50,80,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=6, ok=2",monitor=1
+old,0.03,0.1,50,80,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=2, monitor=4, ok=3",attention=1
+old,0.03,0.15,50,80,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=1, monitor=5, ok=3",attention=1
+old,0.03,0.2,50,80,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=5, ok=3",attention=1
+old,0.03,0.25,50,80,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=5, ok=3",monitor=1
+old,0.05,0.1,50,80,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=2, monitor=3, ok=4",attention=1
+old,0.05,0.15,50,80,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=1, monitor=4, ok=4",attention=1
+old,0.05,0.2,50,80,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=4, ok=4",attention=1
+old,0.05,0.25,50,80,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=4, ok=4",monitor=1
+old,0.08,0.1,50,80,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=2, monitor=3, ok=4",attention=1
+old,0.08,0.15,50,80,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=1, monitor=4, ok=4",attention=1
+old,0.08,0.2,50,80,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=4, ok=4",attention=1
+old,0.08,0.25,50,80,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=4, ok=4",monitor=1
+old,0.02,0.1,40,70,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=2, monitor=4, ok=3",attention=1
+old,0.02,0.15,40,70,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=1, monitor=5, ok=3",attention=1
+old,0.02,0.2,40,70,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=5, ok=3",attention=1
+old,0.02,0.25,40,70,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=5, ok=3",monitor=1
+old,0.03,0.1,40,70,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=2, monitor=3, ok=4",attention=1
+old,0.03,0.15,40,70,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=1, monitor=4, ok=4",attention=1
+old,0.03,0.2,40,70,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=4, ok=4",attention=1
+old,0.03,0.25,40,70,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=4, ok=4",monitor=1
+old,0.05,0.1,40,70,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=2, monitor=2, ok=5",attention=1
+old,0.05,0.15,40,70,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=1, monitor=3, ok=5",attention=1
+old,0.05,0.2,40,70,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=3, ok=5",attention=1
+old,0.05,0.25,40,70,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=3, ok=5",monitor=1
+old,0.08,0.1,40,70,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=2, monitor=1, ok=6",attention=1
+old,0.08,0.15,40,70,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=1, monitor=2, ok=6",attention=1
+old,0.08,0.2,40,70,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",attention=1
+old,0.08,0.25,40,70,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",monitor=1
+candidate,0.02,0.1,50,80,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=3, monitor=4, ok=2",attention=1
+candidate,0.02,0.15,50,80,True,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=2, monitor=5, ok=2",attention=1
+candidate,0.02,0.2,50,80,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=6, ok=2",monitor=1
+candidate,0.02,0.25,50,80,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=6, ok=2",monitor=1
+candidate,0.03,0.1,50,80,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=3, monitor=2, ok=4",attention=1
+candidate,0.03,0.15,50,80,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=2, monitor=3, ok=4",attention=1
+candidate,0.03,0.2,50,80,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=4, ok=4",monitor=1
+candidate,0.03,0.25,50,80,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=4, ok=4",monitor=1
+candidate,0.05,0.1,50,80,False,4,3,1,0,4,0,0,"attention=1, ok=1","attention=3, ok=6",attention=1
+candidate,0.05,0.15,50,80,False,4,3,1,0,4,0,0,"attention=1, ok=1","attention=2, monitor=1, ok=6",attention=1
+candidate,0.05,0.2,50,80,False,4,3,1,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",monitor=1
+candidate,0.05,0.25,50,80,False,4,3,1,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",monitor=1
+candidate,0.08,0.1,50,80,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=3, ok=6",attention=1
+candidate,0.08,0.15,50,80,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=2, monitor=1, ok=6",attention=1
+candidate,0.08,0.2,50,80,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",monitor=1
+candidate,0.08,0.25,50,80,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",monitor=1
+candidate,0.02,0.1,40,70,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=3, monitor=4, ok=2",attention=1
+candidate,0.02,0.15,40,70,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=2, monitor=5, ok=2",attention=1
+candidate,0.02,0.2,40,70,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=6, ok=2",monitor=1
+candidate,0.02,0.25,40,70,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=6, ok=2",monitor=1
+candidate,0.03,0.1,40,70,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=3, monitor=2, ok=4",attention=1
+candidate,0.03,0.15,40,70,False,4,2,2,0,4,0,0,"attention=1, monitor=1","attention=2, monitor=3, ok=4",attention=1
+candidate,0.03,0.2,40,70,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=4, ok=4",monitor=1
+candidate,0.03,0.25,40,70,False,4,2,2,0,4,0,0,monitor=2,"attention=1, monitor=4, ok=4",monitor=1
+candidate,0.05,0.1,40,70,False,4,3,1,0,4,0,0,"attention=1, ok=1","attention=3, ok=6",attention=1
+candidate,0.05,0.15,40,70,False,4,3,1,0,4,0,0,"attention=1, ok=1","attention=2, monitor=1, ok=6",attention=1
+candidate,0.05,0.2,40,70,False,4,3,1,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",monitor=1
+candidate,0.05,0.25,40,70,False,4,3,1,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",monitor=1
+candidate,0.08,0.1,40,70,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=3, ok=6",attention=1
+candidate,0.08,0.15,40,70,False,4,4,0,0,4,0,0,"attention=1, ok=1","attention=2, monitor=1, ok=6",attention=1
+candidate,0.08,0.2,40,70,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",monitor=1
+candidate,0.08,0.25,40,70,False,4,4,0,0,4,0,0,"monitor=1, ok=1","attention=1, monitor=2, ok=6",monitor=1

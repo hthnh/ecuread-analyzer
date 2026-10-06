@@ -1,0 +1,24 @@
+{
+  "answers": {
+    "events_interpretable_from_existing_telemetry": true,
+    "materially_distinct_from_isolation_forest": true,
+    "reference_or_boundary_artifacts_dominate_results": false,
+    "stable_enough_to_remain_in_harness_research_path": true,
+    "valuable_physical_measurements": [
+      "direct battery/charging voltage trace synchronized to ECU samples",
+      "starter/engine-running state or alternator charging state",
+      "known accessory electrical load state",
+      "repeat captures for low-voltage candidate sessions",
+      "bench-confirmed TPS/RPM/battery calibration spot checks during context transitions"
+    ]
+  },
+  "basis": {
+    "boundary_dominated": false,
+    "contextual_event_count": 23,
+    "disagreement_windows": 623,
+    "reference_unstable": false,
+    "supervised_accuracy_claims_made": false
+  },
+  "recommendation": "advance",
+  "schema_version": "contextual-core2-review-decision-v1"
+}

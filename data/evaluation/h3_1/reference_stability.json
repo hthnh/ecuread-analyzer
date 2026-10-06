@@ -1,0 +1,1354 @@
+{
+  "baseline": {
+    "anomaly_window_count": 257,
+    "context_stats": {
+      "idle_closed_throttle": {
+        "features": {
+          "battery_voltage_mean": {
+            "median": 14.508,
+            "robust_scale": 0.35
+          },
+          "battery_voltage_median": {
+            "median": 14.5,
+            "robust_scale": 0.35
+          },
+          "battery_voltage_min": {
+            "median": 14.2,
+            "robust_scale": 0.35
+          }
+        },
+        "reference_session_count": 10,
+        "window_count": 337
+      },
+      "low_load_running": {
+        "features": {
+          "battery_voltage_mean": {
+            "median": 14.52,
+            "robust_scale": 0.35
+          },
+          "battery_voltage_median": {
+            "median": 14.5,
+            "robust_scale": 0.35
+          },
+          "battery_voltage_min": {
+            "median": 14.3,
+            "robust_scale": 0.35
+          }
+        },
+        "reference_session_count": 12,
+        "window_count": 1139
+      },
+      "mid_load_running": {
+        "features": {
+          "battery_voltage_mean": {
+            "median": 14.518,
+            "robust_scale": 0.35
+          },
+          "battery_voltage_median": {
+            "median": 14.5,
+            "robust_scale": 0.35
+          },
+          "battery_voltage_min": {
+            "median": 14.4,
+            "robust_scale": 0.35
+          }
+        },
+        "reference_session_count": 12,
+        "window_count": 2633
+      }
+    },
+    "event_count": 23,
+    "model_version": "contextual-battery-robust-v1-d80a160236f5",
+    "reference_session_count": 12
+  },
+  "baseline_event_persistence": [
+    {
+      "duration_ms": 14748.0,
+      "end_sequence": 59,
+      "end_window_index": 1,
+      "event_id": "calib-20260814-153329-812a3f:0:1",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "calib-20260814-153329-812a3f",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 2
+    },
+    {
+      "duration_ms": 12251.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "calib-real-run-r0024d0-c93a5fb4-part-01:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "calib-real-run-r0024d0-c93a5fb4-part-01",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12249.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "calib-real-run-r1032c0-849aa7f8-part-01:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "calib-real-run-r1032c0-849aa7f8-part-01",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12251.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "calib-real-run-session-000002-part-01:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "calib-real-run-session-000002-part-01",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12249.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "calib-real-run-session-000005-part-01:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "calib-real-run-session-000005-part-01",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12250.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "calib-real-run-session-000007-part-01:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "calib-real-run-session-000007-part-01",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12250.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260901-0715:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260901-0715",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12251.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260902-1032:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260902-1032",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12250.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260904-1623:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260904-1623",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 299750.0,
+      "end_sequence": 1199,
+      "end_window_index": 115,
+      "event_id": "ride-20260904-1810:0:115",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260904-1810",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 116
+    },
+    {
+      "duration_ms": 12250.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260907-1157:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260907-1157",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12250.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260908-1431:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260908-1431",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 299750.0,
+      "end_sequence": 1199,
+      "end_window_index": 115,
+      "event_id": "ride-20260909-0725:0:115",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260909-0725",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 116
+    },
+    {
+      "duration_ms": 12251.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260909-1748:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260909-1748",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12250.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260910-0922:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260910-0922",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12251.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260911-1239:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260911-1239",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12250.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260912-1556:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260912-1556",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12249.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260913-0730:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260913-0730",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 14750.0,
+      "end_sequence": 2169,
+      "end_window_index": 212,
+      "event_id": "ride-20260914-1047:211:212",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260914-1047",
+      "start_sequence": 2110,
+      "start_window_index": 211,
+      "variant_count": 12,
+      "window_count": 2
+    },
+    {
+      "duration_ms": 17250.0,
+      "end_sequence": 69,
+      "end_window_index": 2,
+      "event_id": "ride-20260916-1321:0:2",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260916-1321",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 3
+    },
+    {
+      "duration_ms": 12253.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260917-1638:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260917-1638",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12251.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260918-0855:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260918-0855",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    },
+    {
+      "duration_ms": 12249.0,
+      "end_sequence": 49,
+      "end_window_index": 0,
+      "event_id": "ride-20260920-1446:0:0",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 12,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260920-1446",
+      "start_sequence": 0,
+      "start_window_index": 0,
+      "variant_count": 12,
+      "window_count": 1
+    }
+  ],
+  "context_baseline_stability": {
+    "idle_closed_throttle": {
+      "battery_voltage_mean": {
+        "baseline_median": 14.508,
+        "baseline_robust_scale": 0.35,
+        "max_abs_median_delta": 0.005999999999998451,
+        "max_abs_robust_scale_delta": 0.0,
+        "variant_median_max": 14.512,
+        "variant_median_min": 14.502,
+        "variant_robust_scale_max": 0.35,
+        "variant_robust_scale_min": 0.35
+      },
+      "battery_voltage_median": {
+        "baseline_median": 14.5,
+        "baseline_robust_scale": 0.35,
+        "max_abs_median_delta": 0.0,
+        "max_abs_robust_scale_delta": 0.0,
+        "variant_median_max": 14.5,
+        "variant_median_min": 14.5,
+        "variant_robust_scale_max": 0.35,
+        "variant_robust_scale_min": 0.35
+      },
+      "battery_voltage_min": {
+        "baseline_median": 14.2,
+        "baseline_robust_scale": 0.35,
+        "max_abs_median_delta": 0.09999999999999964,
+        "max_abs_robust_scale_delta": 0.0,
+        "variant_median_max": 14.2,
+        "variant_median_min": 14.1,
+        "variant_robust_scale_max": 0.35,
+        "variant_robust_scale_min": 0.35
+      }
+    },
+    "low_load_running": {
+      "battery_voltage_mean": {
+        "baseline_median": 14.52,
+        "baseline_robust_scale": 0.35,
+        "max_abs_median_delta": 0.002000000000000668,
+        "max_abs_robust_scale_delta": 0.0,
+        "variant_median_max": 14.522,
+        "variant_median_min": 14.518,
+        "variant_robust_scale_max": 0.35,
+        "variant_robust_scale_min": 0.35
+      },
+      "battery_voltage_median": {
+        "baseline_median": 14.5,
+        "baseline_robust_scale": 0.35,
+        "max_abs_median_delta": 0.0,
+        "max_abs_robust_scale_delta": 0.0,
+        "variant_median_max": 14.5,
+        "variant_median_min": 14.5,
+        "variant_robust_scale_max": 0.35,
+        "variant_robust_scale_min": 0.35
+      },
+      "battery_voltage_min": {
+        "baseline_median": 14.3,
+        "baseline_robust_scale": 0.35,
+        "max_abs_median_delta": 0.0,
+        "max_abs_robust_scale_delta": 0.0,
+        "variant_median_max": 14.3,
+        "variant_median_min": 14.3,
+        "variant_robust_scale_max": 0.35,
+        "variant_robust_scale_min": 0.35
+      }
+    },
+    "mid_load_running": {
+      "battery_voltage_mean": {
+        "baseline_median": 14.518,
+        "baseline_robust_scale": 0.35,
+        "max_abs_median_delta": 0.002000000000000668,
+        "max_abs_robust_scale_delta": 0.0,
+        "variant_median_max": 14.518,
+        "variant_median_min": 14.516,
+        "variant_robust_scale_max": 0.35,
+        "variant_robust_scale_min": 0.35
+      },
+      "battery_voltage_median": {
+        "baseline_median": 14.5,
+        "baseline_robust_scale": 0.35,
+        "max_abs_median_delta": 0.0,
+        "max_abs_robust_scale_delta": 0.0,
+        "variant_median_max": 14.5,
+        "variant_median_min": 14.5,
+        "variant_robust_scale_max": 0.35,
+        "variant_robust_scale_min": 0.35
+      },
+      "battery_voltage_min": {
+        "baseline_median": 14.4,
+        "baseline_robust_scale": 0.35,
+        "max_abs_median_delta": 0.0,
+        "max_abs_robust_scale_delta": 0.0,
+        "variant_median_max": 14.4,
+        "variant_median_min": 14.4,
+        "variant_robust_scale_max": 0.35,
+        "variant_robust_scale_min": 0.35
+      }
+    }
+  },
+  "event_count_stability": {
+    "anomaly_window_max": 257,
+    "anomaly_window_median": 257.0,
+    "anomaly_window_min": 257,
+    "baseline_event_count": 23,
+    "relative_range_vs_baseline": 0.0,
+    "variant_max": 23,
+    "variant_median": 23.0,
+    "variant_min": 23
+  },
+  "low_persistence_event_count": 0,
+  "method": "leave-one-reference-session-out",
+  "schema_version": "contextual-reference-stability-v1",
+  "stability_interpretation": {
+    "reason": "Leave-one-reference-session-out variants preserve event counts and most baseline events.",
+    "unstable_under_leave_one_out": false
+  },
+  "threshold_stability": {
+    "baseline_threshold": 4.5,
+    "stable": true,
+    "threshold_policy": "fixed configuration, not refit from anomaly counts",
+    "variant_thresholds": [
+      4.5
+    ]
+  },
+  "variants": [
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.51,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 330
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.52,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 1033
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2624
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260902-1050",
+      "model_version": "contextual-battery-robust-v1-ed5832baa78f",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260902-1050"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.51,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 309
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.52,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 1112
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2568
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260903-1349",
+      "model_version": "contextual-battery-robust-v1-57d20141edeb",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260903-1349"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.508,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 298
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.52,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 929
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2436
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260905-0840",
+      "model_version": "contextual-battery-robust-v1-28190a788ee5",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260905-0840"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.51,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 324
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 863
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2591
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260905-0858",
+      "model_version": "contextual-battery-robust-v1-80922243539f",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260905-0858"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.508,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 10,
+          "window_count": 337
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.52,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 987
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2601
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260908-1449",
+      "model_version": "contextual-battery-robust-v1-44bb8ef22df7",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260908-1449"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.502,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.1,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 228
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.522,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 1024
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2420
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260911-1335",
+      "model_version": "contextual-battery-robust-v1-a76984e0ca18",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260911-1335"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.508,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 10,
+          "window_count": 337
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.52,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 1118
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2208
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260913-0748",
+      "model_version": "contextual-battery-robust-v1-ebed168b1398",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260913-0748"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.51,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 322
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.52,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 1112
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.516,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2237
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260913-0807",
+      "model_version": "contextual-battery-robust-v1-90587fcc62c8",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260913-0807"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.508,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 302
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.52,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 1118
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2263
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260919-1129",
+      "model_version": "contextual-battery-robust-v1-b22dfd0805b9",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260919-1129"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.51,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 302
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.52,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 1091
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2280
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260919-1206",
+      "model_version": "contextual-battery-robust-v1-9583564f77cd",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260919-1206"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.51,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 313
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.52,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 1115
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2283
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260919-1225",
+      "model_version": "contextual-battery-robust-v1-45da26cb0168",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260919-1225"
+    },
+    {
+      "anomaly_window_count": 257,
+      "context_stats": {
+        "idle_closed_throttle": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.512,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.2,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 9,
+          "window_count": 305
+        },
+        "low_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.522,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.3,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 1027
+        },
+        "mid_load_running": {
+          "features": {
+            "battery_voltage_mean": {
+              "median": 14.518,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_median": {
+              "median": 14.5,
+              "robust_scale": 0.35
+            },
+            "battery_voltage_min": {
+              "median": 14.4,
+              "robust_scale": 0.35
+            }
+          },
+          "reference_session_count": 11,
+          "window_count": 2452
+        }
+      },
+      "event_count": 23,
+      "left_out_reference_session_id": "ride-20260920-1504",
+      "model_version": "contextual-battery-robust-v1-55c2639ab223",
+      "modeled_contexts": [
+        "idle_closed_throttle",
+        "low_load_running",
+        "mid_load_running"
+      ],
+      "persisted_baseline_event_count": 23,
+      "reference_session_count": 11,
+      "variant_id": "leave_out::ride-20260920-1504"
+    }
+  ],
+  "window_split_policy": "whole reference sessions are left out; windows from a capture are never split across reference/evaluation subsets"
+}

@@ -1,0 +1,71 @@
+{
+  "candidate_v2_replaces_h7_v1": false,
+  "drive_safe_behavior_changed": false,
+  "expert_review_fields_modified": false,
+  "overall_recommendation": "revise",
+  "per_rule_decisions": {
+    "rca.coverage.insufficient_evidence": {
+      "decision": "provisionally_grounded",
+      "maximum_defensible_claim_level": "observation",
+      "reason": "Rule prevents hypotheses without active evidence."
+    },
+    "rca.data_quality.constant_signal_pattern": {
+      "decision": "revise",
+      "maximum_defensible_claim_level": "observation",
+      "reason": "Constant/low-variance signal alone is insufficient for acquisition-artifact RCA."
+    },
+    "rca.detectors.disagreement_preservation": {
+      "decision": "provisionally_grounded",
+      "maximum_defensible_claim_level": "observation",
+      "reason": "Rule is conservative and prevents unsupported fusion."
+    },
+    "rca.electrical.contextual_voltage_deviation": {
+      "decision": "grounded_with_limitations",
+      "maximum_defensible_claim_level": "symptom",
+      "reason": "Retain voltage symptom but split candidate causes and require follow-up checks."
+    },
+    "rca.iforest.multivariate_pattern": {
+      "decision": "revise",
+      "maximum_defensible_claim_level": "observation",
+      "reason": "Move outside-reference concept from hypothesis to observation/evidence."
+    },
+    "rca.no_evidence.no_hypothesis": {
+      "decision": "provisionally_grounded",
+      "maximum_defensible_claim_level": "observation",
+      "reason": "Rule is conservative and avoids unsupported causes."
+    },
+    "rca.operating_state.throttle_related_pattern": {
+      "decision": "revise",
+      "maximum_defensible_claim_level": "observation",
+      "reason": "Require context evidence that distinguishes normal operator demand from unexplained behavior."
+    }
+  },
+  "production_behavior_changed": false,
+  "schema_version": "rca-literature-grounded-surrogate-decision-v1",
+  "semantic_boundary": "Literature-grounded and internally consistent does not mean physically confirmed.",
+  "summary": {
+    "case_surrogate_claim_level_counts": {
+      "observation": 44,
+      "symptom": 8
+    },
+    "case_surrogate_hypothesis_count": 52,
+    "counterexample_counts": {
+      "rca.data_quality.constant_signal_pattern": 14,
+      "rca.detectors.disagreement_preservation": 10,
+      "rca.electrical.contextual_voltage_deviation": 8,
+      "rca.iforest.multivariate_pattern": 14,
+      "rca.operating_state.throttle_related_pattern": 12
+    },
+    "per_rule_decision_counts": {
+      "grounded_with_limitations": 1,
+      "provisionally_grounded": 3,
+      "revise": 3
+    },
+    "structural_blocking_error_count": 0
+  },
+  "unresolved": [
+    "No completed H7.1 expert judgments.",
+    "No independent physical validation for any RCA hypothesis.",
+    "No model-specific Honda service limits are encoded in RCA."
+  ]
+}

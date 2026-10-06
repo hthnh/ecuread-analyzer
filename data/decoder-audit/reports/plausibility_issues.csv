@@ -1,0 +1,5 @@
+field,severity,message,count
+ect,warning,ECT candidate pair is FF/FF sentinel in records; channel is unavailable or unsupported in these logs,13821
+map,info,MAP engineering byte is not assumed to be kPa; scale remains unverified,13821
+speed_or_signal,warning,byte 18 remains non-zero at RPM near zero; do not call it speed without ground truth,23
+injector,info,"injector raw varies with operation, but ms scaling is unverified; raw p95=1405.0",13821

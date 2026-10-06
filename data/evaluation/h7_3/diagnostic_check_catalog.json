@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "category": "multivariate_review",
+      "check_id": "check.v2.iforest_feature_review",
+      "description": "Inspect IF-listed feature families in raw telemetry and compare with operator/session notes.",
+      "trigger_evidence": [
+        "isolation_forest positive finding",
+        "most_unusual_features"
+      ]
+    },
+    {
+      "category": "electrical_voltage",
+      "check_id": "check.v2.voltage_context_compare",
+      "description": "Compare voltage behavior across similar RPM/TPS operating contexts and repeat captures.",
+      "trigger_evidence": [
+        "contextual battery-voltage deviation"
+      ]
+    },
+    {
+      "category": "electrical_voltage",
+      "check_id": "check.v2.external_supply_measurement",
+      "description": "Inspect charging/supply measurements and battery terminal/supply-path condition when physically appropriate.",
+      "trigger_evidence": [
+        "contextual supply-voltage symptom"
+      ]
+    },
+    {
+      "category": "operating_context",
+      "check_id": "check.v2.rpm_tps_reproduction",
+      "description": "Reproduce the same operating state and compare RPM response against throttle behavior.",
+      "trigger_evidence": [
+        "RPM/TPS feature involvement"
+      ]
+    },
+    {
+      "category": "operating_context",
+      "check_id": "check.v2.rpm_tps_repeatability",
+      "description": "Inspect whether the RPM/TPS pattern repeats across independent sessions.",
+      "trigger_evidence": [
+        "RPM/TPS feature involvement"
+      ]
+    },
+    {
+      "category": "data_quality",
+      "check_id": "check.v2.raw_frame_integrity",
+      "description": "Inspect raw frames, timestamp/frame continuity and checksum/header outcomes.",
+      "trigger_evidence": [
+        "constant-signal feature",
+        "missing or suspect acquisition integrity evidence"
+      ]
+    },
+    {
+      "category": "data_quality",
+      "check_id": "check.v2.known_stimulus_response",
+      "description": "Check whether the signal changes under a known stimulus before inferring acquisition failure.",
+      "trigger_evidence": [
+        "constant-signal feature"
+      ]
+    },
+    {
+      "category": "coverage",
+      "check_id": "check.v2.feature_coverage",
+      "description": "Restore required features or inspect preprocessing before causal interpretation.",
+      "trigger_evidence": [
+        "insufficient detector coverage"
+      ]
+    },
+    {
+      "category": "evidence_review",
+      "check_id": "check.v2.detector_scope_review",
+      "description": "Review each detector in its own score semantics and phenomenon scope.",
+      "trigger_evidence": [
+        "detector disagreement"
+      ]
+    },
+    {
+      "category": "validation_boundary",
+      "check_id": "check.v2.no_evidence_boundary",
+      "description": "Do not treat no detector anomaly evidence as verified healthy without independent validation.",
+      "trigger_evidence": [
+        "all applicable detectors negative"
+      ]
+    }
+  ],
+  "policy": {
+    "checks_are_follow_up_actions_not_fault_claims": true,
+    "checks_tied_to_observed_evidence": true,
+    "maintenance_knowledge_base_scope": "minimal"
+  },
+  "schema_version": "rca-v2-diagnostic-check-catalog-v1"
+}

@@ -1,0 +1,1084 @@
+{
+  "covered_scenarios": [
+    "contextual_only_evidence",
+    "detector_disagreement",
+    "history_prioritized_check",
+    "history_unavailable",
+    "if_only_evidence",
+    "insufficient_coverage",
+    "overlapping_detector_evidence",
+    "recurrent_history"
+  ],
+  "examples": {
+    "contextual_only_evidence": {
+      "aggregate": {
+        "counts": {
+          "negative_detector_count": 1,
+          "positive_detector_count": 1,
+          "unavailable_detector_count": 0
+        },
+        "coverage_status": "full",
+        "description": "At least one applicable active detector was positive and at least one was negative.",
+        "detector_disagreement": {
+          "negative_detector_ids": [
+            "isolation_forest"
+          ],
+          "positive_detector_ids": [
+            "contextual_battery_voltage"
+          ],
+          "present": true
+        },
+        "detector_ids": {
+          "negative": [
+            "isolation_forest"
+          ],
+          "positive": [
+            "contextual_battery_voltage"
+          ],
+          "unavailable": []
+        },
+        "event_provenance": {
+          "coverage_status": "full",
+          "duration_ms": 12250.0,
+          "end_frame_index": 49,
+          "end_time_ms": 12250.0,
+          "end_window_index": 0,
+          "end_window_number": 0,
+          "event_id": "calib-real-run-session-000007-part-01:finding-0001",
+          "event_type": "disagreement_region",
+          "evidence_state": "detector_disagreement",
+          "source_window_range": {
+            "end_window_number": 0,
+            "start_window_number": 0
+          },
+          "start_frame_index": 0,
+          "start_time_ms": 0.0,
+          "start_window_index": 0,
+          "start_window_number": 0,
+          "window_count": 1
+        },
+        "evidence_state": "detector_disagreement",
+        "no_evidence_is_verified_healthy": false,
+        "schema_version": "diagnostic-evidence-aggregate-v1",
+        "score_fusion_used": false
+      },
+      "history_summary": {
+        "comparable_prior_session_count": 45,
+        "occurrence_count": 49,
+        "recurrence_classification_counts": {
+          "rare_recurrence": 2,
+          "recurrent": 1
+        },
+        "trend_classification_counts": {
+          "insufficient_historical_data": 2,
+          "no_observable_trend": 1
+        }
+      },
+      "observation_ids": [
+        "obs.v2.aggregate_evidence",
+        "obs.v2.contextual_voltage_deviation",
+        "obs.v2.detector_disagreement"
+      ],
+      "possible_cause_count": 0,
+      "production_boundary": {
+        "alerting_changed": false,
+        "health_score_changed": false,
+        "predictive_maintenance_claim": false,
+        "production_anomaly_status_changed": false,
+        "research_evidence_can_change_alerts": false,
+        "root_cause_confirmed": false
+      },
+      "recommended_check_priorities": [
+        {
+          "check_id": "check.v2.voltage_context_compare",
+          "deterministic": true,
+          "family": "contextual_voltage_deviation",
+          "priority": "relevant",
+          "reason": "Check remains evidence-tied, but recurrence is not strong enough for priority.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00019",
+            "h8-comparison-00021"
+          ]
+        },
+        {
+          "check_id": "check.v2.external_supply_measurement",
+          "deterministic": true,
+          "family": "contextual_voltage_deviation",
+          "priority": "relevant",
+          "reason": "Check remains evidence-tied, but recurrence is not strong enough for priority.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00019",
+            "h8-comparison-00021"
+          ]
+        },
+        {
+          "check_id": "check.v2.detector_scope_review",
+          "deterministic": true,
+          "family": "detector_disagreement",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00020"
+          ]
+        }
+      ],
+      "scenario": "contextual_only_evidence",
+      "session_id": "calib-real-run-session-000007-part-01",
+      "source_case_id": "h7-1-expert-case-0007",
+      "source_event_id": "calib-real-run-session-000007-part-01:finding-0001",
+      "symptom_ids": [
+        "sym.v2.contextual_supply_voltage_deviation"
+      ]
+    },
+    "detector_disagreement": {
+      "aggregate": {
+        "counts": {
+          "negative_detector_count": 1,
+          "positive_detector_count": 1,
+          "unavailable_detector_count": 0
+        },
+        "coverage_status": "full",
+        "description": "At least one applicable active detector was positive and at least one was negative.",
+        "detector_disagreement": {
+          "negative_detector_ids": [
+            "contextual_battery_voltage"
+          ],
+          "positive_detector_ids": [
+            "isolation_forest"
+          ],
+          "present": true
+        },
+        "detector_ids": {
+          "negative": [
+            "contextual_battery_voltage"
+          ],
+          "positive": [
+            "isolation_forest"
+          ],
+          "unavailable": []
+        },
+        "event_provenance": {
+          "coverage_status": "full",
+          "duration_ms": 394752.0,
+          "end_frame_index": 1599,
+          "end_time_ms": 399750.0,
+          "end_window_index": 155,
+          "end_window_number": 155,
+          "event_id": "calib-20260814-153329-812a3f:finding-0002",
+          "event_type": "disagreement_region",
+          "evidence_state": "detector_disagreement",
+          "source_window_range": {
+            "end_window_number": 155,
+            "start_window_number": 2
+          },
+          "start_frame_index": 20,
+          "start_time_ms": 4998.0,
+          "start_window_index": 2,
+          "start_window_number": 2,
+          "window_count": 154
+        },
+        "evidence_state": "detector_disagreement",
+        "no_evidence_is_verified_healthy": false,
+        "schema_version": "diagnostic-evidence-aggregate-v1",
+        "score_fusion_used": false
+      },
+      "history_summary": {
+        "comparable_prior_session_count": 4,
+        "occurrence_count": 4,
+        "recurrence_classification_counts": {
+          "first_observed": 1,
+          "historical_comparison_unavailable": 2,
+          "recurrent": 1
+        },
+        "trend_classification_counts": {
+          "insufficient_historical_data": 3,
+          "possible_increasing_trend": 1
+        }
+      },
+      "observation_ids": [
+        "obs.v2.aggregate_evidence",
+        "obs.v2.iforest_outside_reference",
+        "obs.v2.rpm_tps_feature_involvement",
+        "obs.v2.constant_signal_feature",
+        "obs.v2.detector_disagreement"
+      ],
+      "possible_cause_count": 0,
+      "production_boundary": {
+        "alerting_changed": false,
+        "health_score_changed": false,
+        "predictive_maintenance_claim": false,
+        "production_anomaly_status_changed": false,
+        "research_evidence_can_change_alerts": false,
+        "root_cause_confirmed": false
+      },
+      "recommended_check_priorities": [
+        {
+          "check_id": "check.v2.iforest_feature_review",
+          "deterministic": true,
+          "family": "isolation_forest_positive",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00004"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_reproduction",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00005"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_repeatability",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00005"
+          ]
+        },
+        {
+          "check_id": "check.v2.raw_frame_integrity",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00006"
+          ]
+        },
+        {
+          "check_id": "check.v2.known_stimulus_response",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00006"
+          ]
+        },
+        {
+          "check_id": "check.v2.detector_scope_review",
+          "deterministic": true,
+          "family": "detector_disagreement",
+          "priority": "relevant",
+          "reason": "Check remains evidence-tied, but recurrence is not strong enough for priority.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00007"
+          ]
+        }
+      ],
+      "scenario": "detector_disagreement",
+      "session_id": "calib-20260814-153329-812a3f",
+      "source_case_id": "h7-1-expert-case-0002",
+      "source_event_id": "calib-20260814-153329-812a3f:finding-0002",
+      "symptom_ids": []
+    },
+    "history_prioritized_check": {
+      "aggregate": {
+        "counts": {
+          "negative_detector_count": 0,
+          "positive_detector_count": 1,
+          "unavailable_detector_count": 1
+        },
+        "coverage_status": "partial",
+        "description": "Exactly one applicable active detector produced anomaly evidence.",
+        "detector_disagreement": {
+          "negative_detector_ids": [],
+          "positive_detector_ids": [
+            "isolation_forest"
+          ],
+          "present": false
+        },
+        "detector_ids": {
+          "negative": [],
+          "positive": [
+            "isolation_forest"
+          ],
+          "unavailable": [
+            "contextual_battery_voltage"
+          ]
+        },
+        "event_provenance": {
+          "coverage_status": "partial",
+          "duration_ms": 299750.0,
+          "end_frame_index": 1199,
+          "end_time_ms": 299750.0,
+          "end_window_index": 115,
+          "end_window_number": 115,
+          "event_id": "ride-20260914-1935:finding-0001",
+          "event_type": "detector_specific_event",
+          "evidence_state": "single_detector_evidence",
+          "source_window_range": {
+            "end_window_number": 115,
+            "start_window_number": 0
+          },
+          "start_frame_index": 0,
+          "start_time_ms": 0.0,
+          "start_window_index": 0,
+          "start_window_number": 0,
+          "window_count": 116
+        },
+        "evidence_state": "single_detector_evidence",
+        "no_evidence_is_verified_healthy": false,
+        "schema_version": "diagnostic-evidence-aggregate-v1",
+        "score_fusion_used": false
+      },
+      "history_summary": {
+        "comparable_prior_session_count": 41,
+        "occurrence_count": 76,
+        "recurrence_classification_counts": {
+          "historical_comparison_unavailable": 2,
+          "persistent_across_sessions": 1
+        },
+        "trend_classification_counts": {
+          "insufficient_historical_data": 2,
+          "no_observable_trend": 1
+        }
+      },
+      "observation_ids": [
+        "obs.v2.aggregate_evidence",
+        "obs.v2.iforest_outside_reference",
+        "obs.v2.rpm_tps_feature_involvement",
+        "obs.v2.constant_signal_feature"
+      ],
+      "possible_cause_count": 0,
+      "production_boundary": {
+        "alerting_changed": false,
+        "health_score_changed": false,
+        "predictive_maintenance_claim": false,
+        "production_anomaly_status_changed": false,
+        "research_evidence_can_change_alerts": false,
+        "root_cause_confirmed": false
+      },
+      "recommended_check_priorities": [
+        {
+          "check_id": "check.v2.iforest_feature_review",
+          "deterministic": true,
+          "family": "isolation_forest_positive",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00001"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_reproduction",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00002"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_repeatability",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00002"
+          ]
+        },
+        {
+          "check_id": "check.v2.raw_frame_integrity",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00003"
+          ]
+        },
+        {
+          "check_id": "check.v2.known_stimulus_response",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00003"
+          ]
+        }
+      ],
+      "scenario": "history_prioritized_check",
+      "session_id": "ride-20260914-1935",
+      "source_case_id": "h7-1-expert-case-0001",
+      "source_event_id": "ride-20260914-1935:finding-0001",
+      "symptom_ids": []
+    },
+    "history_unavailable": {
+      "aggregate": {
+        "counts": {
+          "negative_detector_count": 0,
+          "positive_detector_count": 1,
+          "unavailable_detector_count": 1
+        },
+        "coverage_status": "partial",
+        "description": "Exactly one applicable active detector produced anomaly evidence.",
+        "detector_disagreement": {
+          "negative_detector_ids": [],
+          "positive_detector_ids": [
+            "isolation_forest"
+          ],
+          "present": false
+        },
+        "detector_ids": {
+          "negative": [],
+          "positive": [
+            "isolation_forest"
+          ],
+          "unavailable": [
+            "contextual_battery_voltage"
+          ]
+        },
+        "event_provenance": {
+          "coverage_status": "partial",
+          "duration_ms": 299750.0,
+          "end_frame_index": 1199,
+          "end_time_ms": 299750.0,
+          "end_window_index": 115,
+          "end_window_number": 115,
+          "event_id": "ride-20260914-1935:finding-0001",
+          "event_type": "detector_specific_event",
+          "evidence_state": "single_detector_evidence",
+          "source_window_range": {
+            "end_window_number": 115,
+            "start_window_number": 0
+          },
+          "start_frame_index": 0,
+          "start_time_ms": 0.0,
+          "start_window_index": 0,
+          "start_window_number": 0,
+          "window_count": 116
+        },
+        "evidence_state": "single_detector_evidence",
+        "no_evidence_is_verified_healthy": false,
+        "schema_version": "diagnostic-evidence-aggregate-v1",
+        "score_fusion_used": false
+      },
+      "history_summary": {
+        "comparable_prior_session_count": 41,
+        "occurrence_count": 76,
+        "recurrence_classification_counts": {
+          "historical_comparison_unavailable": 2,
+          "persistent_across_sessions": 1
+        },
+        "trend_classification_counts": {
+          "insufficient_historical_data": 2,
+          "no_observable_trend": 1
+        }
+      },
+      "observation_ids": [
+        "obs.v2.aggregate_evidence",
+        "obs.v2.iforest_outside_reference",
+        "obs.v2.rpm_tps_feature_involvement",
+        "obs.v2.constant_signal_feature"
+      ],
+      "possible_cause_count": 0,
+      "production_boundary": {
+        "alerting_changed": false,
+        "health_score_changed": false,
+        "predictive_maintenance_claim": false,
+        "production_anomaly_status_changed": false,
+        "research_evidence_can_change_alerts": false,
+        "root_cause_confirmed": false
+      },
+      "recommended_check_priorities": [
+        {
+          "check_id": "check.v2.iforest_feature_review",
+          "deterministic": true,
+          "family": "isolation_forest_positive",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00001"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_reproduction",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00002"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_repeatability",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00002"
+          ]
+        },
+        {
+          "check_id": "check.v2.raw_frame_integrity",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00003"
+          ]
+        },
+        {
+          "check_id": "check.v2.known_stimulus_response",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00003"
+          ]
+        }
+      ],
+      "scenario": "history_unavailable",
+      "session_id": "ride-20260914-1935",
+      "source_case_id": "h7-1-expert-case-0001",
+      "source_event_id": "ride-20260914-1935:finding-0001",
+      "symptom_ids": []
+    },
+    "if_only_evidence": {
+      "aggregate": {
+        "counts": {
+          "negative_detector_count": 0,
+          "positive_detector_count": 1,
+          "unavailable_detector_count": 1
+        },
+        "coverage_status": "partial",
+        "description": "Exactly one applicable active detector produced anomaly evidence.",
+        "detector_disagreement": {
+          "negative_detector_ids": [],
+          "positive_detector_ids": [
+            "isolation_forest"
+          ],
+          "present": false
+        },
+        "detector_ids": {
+          "negative": [],
+          "positive": [
+            "isolation_forest"
+          ],
+          "unavailable": [
+            "contextual_battery_voltage"
+          ]
+        },
+        "event_provenance": {
+          "coverage_status": "partial",
+          "duration_ms": 299750.0,
+          "end_frame_index": 1199,
+          "end_time_ms": 299750.0,
+          "end_window_index": 115,
+          "end_window_number": 115,
+          "event_id": "ride-20260914-1935:finding-0001",
+          "event_type": "detector_specific_event",
+          "evidence_state": "single_detector_evidence",
+          "source_window_range": {
+            "end_window_number": 115,
+            "start_window_number": 0
+          },
+          "start_frame_index": 0,
+          "start_time_ms": 0.0,
+          "start_window_index": 0,
+          "start_window_number": 0,
+          "window_count": 116
+        },
+        "evidence_state": "single_detector_evidence",
+        "no_evidence_is_verified_healthy": false,
+        "schema_version": "diagnostic-evidence-aggregate-v1",
+        "score_fusion_used": false
+      },
+      "history_summary": {
+        "comparable_prior_session_count": 41,
+        "occurrence_count": 76,
+        "recurrence_classification_counts": {
+          "historical_comparison_unavailable": 2,
+          "persistent_across_sessions": 1
+        },
+        "trend_classification_counts": {
+          "insufficient_historical_data": 2,
+          "no_observable_trend": 1
+        }
+      },
+      "observation_ids": [
+        "obs.v2.aggregate_evidence",
+        "obs.v2.iforest_outside_reference",
+        "obs.v2.rpm_tps_feature_involvement",
+        "obs.v2.constant_signal_feature"
+      ],
+      "possible_cause_count": 0,
+      "production_boundary": {
+        "alerting_changed": false,
+        "health_score_changed": false,
+        "predictive_maintenance_claim": false,
+        "production_anomaly_status_changed": false,
+        "research_evidence_can_change_alerts": false,
+        "root_cause_confirmed": false
+      },
+      "recommended_check_priorities": [
+        {
+          "check_id": "check.v2.iforest_feature_review",
+          "deterministic": true,
+          "family": "isolation_forest_positive",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00001"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_reproduction",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00002"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_repeatability",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00002"
+          ]
+        },
+        {
+          "check_id": "check.v2.raw_frame_integrity",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00003"
+          ]
+        },
+        {
+          "check_id": "check.v2.known_stimulus_response",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00003"
+          ]
+        }
+      ],
+      "scenario": "if_only_evidence",
+      "session_id": "ride-20260914-1935",
+      "source_case_id": "h7-1-expert-case-0001",
+      "source_event_id": "ride-20260914-1935:finding-0001",
+      "symptom_ids": []
+    },
+    "insufficient_coverage": {
+      "aggregate": {
+        "counts": {
+          "negative_detector_count": 0,
+          "positive_detector_count": 0,
+          "unavailable_detector_count": 2
+        },
+        "coverage_status": "none",
+        "description": "No active detector was applicable for this window.",
+        "detector_disagreement": {
+          "negative_detector_ids": [],
+          "positive_detector_ids": [],
+          "present": false
+        },
+        "detector_ids": {
+          "negative": [],
+          "positive": [],
+          "unavailable": [
+            "isolation_forest",
+            "contextual_battery_voltage"
+          ]
+        },
+        "event_provenance": {
+          "coverage_status": "none",
+          "duration_ms": 4494500.0,
+          "end_frame_index": 17969,
+          "end_time_ms": 4494500.0,
+          "end_window_index": 1792,
+          "end_window_number": 1792,
+          "event_id": "esp-real-session_000018-20260920144735:coverage-0001",
+          "event_type": "coverage_gap_region",
+          "evidence_state": "insufficient_coverage",
+          "source_window_range": {
+            "end_window_number": 1792,
+            "start_window_number": 0
+          },
+          "start_frame_index": 0,
+          "start_time_ms": 0.0,
+          "start_window_index": 0,
+          "start_window_number": 0,
+          "window_count": 1793
+        },
+        "evidence_state": "insufficient_coverage",
+        "no_evidence_is_verified_healthy": false,
+        "schema_version": "diagnostic-evidence-aggregate-v1",
+        "score_fusion_used": false
+      },
+      "history_summary": {
+        "comparable_prior_session_count": 0,
+        "occurrence_count": 0,
+        "recurrence_classification_counts": {
+          "historical_comparison_unavailable": 2
+        },
+        "trend_classification_counts": {
+          "insufficient_historical_data": 2
+        }
+      },
+      "observation_ids": [
+        "obs.v2.aggregate_evidence"
+      ],
+      "possible_cause_count": 0,
+      "production_boundary": {
+        "alerting_changed": false,
+        "health_score_changed": false,
+        "predictive_maintenance_claim": false,
+        "production_anomaly_status_changed": false,
+        "research_evidence_can_change_alerts": false,
+        "root_cause_confirmed": false
+      },
+      "recommended_check_priorities": [
+        {
+          "check_id": "check.v2.feature_coverage",
+          "deterministic": true,
+          "family": "insufficient_coverage",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00071",
+            "h8-comparison-00072"
+          ]
+        }
+      ],
+      "scenario": "insufficient_coverage",
+      "session_id": "esp-real-session_000018-20260920144735",
+      "source_case_id": "h7-1-expert-case-0021",
+      "source_event_id": "esp-real-session_000018-20260920144735:coverage-0001",
+      "symptom_ids": []
+    },
+    "overlapping_detector_evidence": {
+      "aggregate": {
+        "counts": {
+          "negative_detector_count": 0,
+          "positive_detector_count": 2,
+          "unavailable_detector_count": 0
+        },
+        "coverage_status": "full",
+        "description": "More than one applicable active detector produced anomaly evidence.",
+        "detector_disagreement": {
+          "negative_detector_ids": [],
+          "positive_detector_ids": [
+            "isolation_forest",
+            "contextual_battery_voltage"
+          ],
+          "present": false
+        },
+        "detector_ids": {
+          "negative": [],
+          "positive": [
+            "isolation_forest",
+            "contextual_battery_voltage"
+          ],
+          "unavailable": []
+        },
+        "event_provenance": {
+          "coverage_status": "full",
+          "duration_ms": 299750.0,
+          "end_frame_index": 1199,
+          "end_time_ms": 299750.0,
+          "end_window_index": 115,
+          "end_window_number": 115,
+          "event_id": "ride-20260904-1810:finding-0001",
+          "event_type": "overlapping_detector_event",
+          "evidence_state": "multiple_detector_evidence",
+          "source_window_range": {
+            "end_window_number": 115,
+            "start_window_number": 0
+          },
+          "start_frame_index": 0,
+          "start_time_ms": 0.0,
+          "start_window_index": 0,
+          "start_window_number": 0,
+          "window_count": 116
+        },
+        "evidence_state": "multiple_detector_evidence",
+        "no_evidence_is_verified_healthy": false,
+        "schema_version": "diagnostic-evidence-aggregate-v1",
+        "score_fusion_used": false
+      },
+      "history_summary": {
+        "comparable_prior_session_count": 66,
+        "occurrence_count": 51,
+        "recurrence_classification_counts": {
+          "historical_comparison_unavailable": 2,
+          "persistent_across_sessions": 1,
+          "recurrent": 2
+        },
+        "trend_classification_counts": {
+          "insufficient_historical_data": 2,
+          "no_observable_trend": 3
+        }
+      },
+      "observation_ids": [
+        "obs.v2.aggregate_evidence",
+        "obs.v2.iforest_outside_reference",
+        "obs.v2.rpm_tps_feature_involvement",
+        "obs.v2.constant_signal_feature",
+        "obs.v2.contextual_voltage_deviation"
+      ],
+      "possible_cause_count": 0,
+      "production_boundary": {
+        "alerting_changed": false,
+        "health_score_changed": false,
+        "predictive_maintenance_claim": false,
+        "production_anomaly_status_changed": false,
+        "research_evidence_can_change_alerts": false,
+        "root_cause_confirmed": false
+      },
+      "recommended_check_priorities": [
+        {
+          "check_id": "check.v2.iforest_feature_review",
+          "deterministic": true,
+          "family": "isolation_forest_positive",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00025"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_reproduction",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00026"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_repeatability",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00026"
+          ]
+        },
+        {
+          "check_id": "check.v2.raw_frame_integrity",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00027"
+          ]
+        },
+        {
+          "check_id": "check.v2.known_stimulus_response",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00027"
+          ]
+        },
+        {
+          "check_id": "check.v2.voltage_context_compare",
+          "deterministic": true,
+          "family": "contextual_voltage_deviation",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00028",
+            "h8-comparison-00029"
+          ]
+        },
+        {
+          "check_id": "check.v2.external_supply_measurement",
+          "deterministic": true,
+          "family": "contextual_voltage_deviation",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00028",
+            "h8-comparison-00029"
+          ]
+        }
+      ],
+      "scenario": "overlapping_detector_evidence",
+      "session_id": "ride-20260904-1810",
+      "source_case_id": "h7-1-expert-case-0009",
+      "source_event_id": "ride-20260904-1810:finding-0001",
+      "symptom_ids": [
+        "sym.v2.contextual_supply_voltage_deviation"
+      ]
+    },
+    "recurrent_history": {
+      "aggregate": {
+        "counts": {
+          "negative_detector_count": 0,
+          "positive_detector_count": 1,
+          "unavailable_detector_count": 1
+        },
+        "coverage_status": "partial",
+        "description": "Exactly one applicable active detector produced anomaly evidence.",
+        "detector_disagreement": {
+          "negative_detector_ids": [],
+          "positive_detector_ids": [
+            "isolation_forest"
+          ],
+          "present": false
+        },
+        "detector_ids": {
+          "negative": [],
+          "positive": [
+            "isolation_forest"
+          ],
+          "unavailable": [
+            "contextual_battery_voltage"
+          ]
+        },
+        "event_provenance": {
+          "coverage_status": "partial",
+          "duration_ms": 299750.0,
+          "end_frame_index": 1199,
+          "end_time_ms": 299750.0,
+          "end_window_index": 115,
+          "end_window_number": 115,
+          "event_id": "ride-20260914-1935:finding-0001",
+          "event_type": "detector_specific_event",
+          "evidence_state": "single_detector_evidence",
+          "source_window_range": {
+            "end_window_number": 115,
+            "start_window_number": 0
+          },
+          "start_frame_index": 0,
+          "start_time_ms": 0.0,
+          "start_window_index": 0,
+          "start_window_number": 0,
+          "window_count": 116
+        },
+        "evidence_state": "single_detector_evidence",
+        "no_evidence_is_verified_healthy": false,
+        "schema_version": "diagnostic-evidence-aggregate-v1",
+        "score_fusion_used": false
+      },
+      "history_summary": {
+        "comparable_prior_session_count": 41,
+        "occurrence_count": 76,
+        "recurrence_classification_counts": {
+          "historical_comparison_unavailable": 2,
+          "persistent_across_sessions": 1
+        },
+        "trend_classification_counts": {
+          "insufficient_historical_data": 2,
+          "no_observable_trend": 1
+        }
+      },
+      "observation_ids": [
+        "obs.v2.aggregate_evidence",
+        "obs.v2.iforest_outside_reference",
+        "obs.v2.rpm_tps_feature_involvement",
+        "obs.v2.constant_signal_feature"
+      ],
+      "possible_cause_count": 0,
+      "production_boundary": {
+        "alerting_changed": false,
+        "health_score_changed": false,
+        "predictive_maintenance_claim": false,
+        "production_anomaly_status_changed": false,
+        "research_evidence_can_change_alerts": false,
+        "root_cause_confirmed": false
+      },
+      "recommended_check_priorities": [
+        {
+          "check_id": "check.v2.iforest_feature_review",
+          "deterministic": true,
+          "family": "isolation_forest_positive",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00001"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_reproduction",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00002"
+          ]
+        },
+        {
+          "check_id": "check.v2.rpm_tps_repeatability",
+          "deterministic": true,
+          "family": "rpm_tps_pattern",
+          "priority": "priority",
+          "reason": "Comparable history shows recurrent or persistent evidence.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00002"
+          ]
+        },
+        {
+          "check_id": "check.v2.raw_frame_integrity",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00003"
+          ]
+        },
+        {
+          "check_id": "check.v2.known_stimulus_response",
+          "deterministic": true,
+          "family": "constant_signal_feature",
+          "priority": "insufficient_evidence",
+          "reason": "Compatible historical evidence is unavailable.",
+          "supporting_comparison_ids": [
+            "h8-comparison-00003"
+          ]
+        }
+      ],
+      "scenario": "recurrent_history",
+      "session_id": "ride-20260914-1935",
+      "source_case_id": "h7-1-expert-case-0001",
+      "source_event_id": "ride-20260914-1935:finding-0001",
+      "symptom_ids": []
+    }
+  },
+  "missing_scenarios": [],
+  "required_scenarios": [
+    "if_only_evidence",
+    "contextual_only_evidence",
+    "overlapping_detector_evidence",
+    "detector_disagreement",
+    "insufficient_coverage",
+    "history_unavailable",
+    "recurrent_history",
+    "history_prioritized_check"
+  ],
+  "schema_version": "h9-representative-session-examples-v1"
+}

@@ -1,0 +1,4 @@
+scale,minimum,median,p95,maximum,rpm_zero_median,cranking_median,correlation_rpm,correlation_tps_voltage,physical_plausibility
+raw / 100,0.0,5.94,14.05,20.64,5.94,13.195,0.31168674641740474,0.8562136959400437,range plausible but unverified; non-zero at RPM zero/cranking transitions needs review; raw / 100 not selected as verified
+raw / 250,0.0,2.376,5.62,8.256,2.376,5.278,0.31168674641740485,0.8562136959400438,range plausible but unverified; non-zero at RPM zero/cranking transitions needs review; raw / 250 not selected as verified
+raw / 256,0.0,2.3203125,5.48828125,8.0625,2.3203125,5.154296875,0.3116867464174048,0.8562136959400436,range plausible but unverified; non-zero at RPM zero/cranking transitions needs review; raw / 256 not selected as verified

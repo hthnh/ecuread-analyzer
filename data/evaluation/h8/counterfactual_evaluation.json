@@ -1,0 +1,396 @@
+{
+  "representative_cases": [
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "ride-20260914-1935",
+      "source_case_id": "h7-1-expert-case-0001",
+      "source_event_id": "ride-20260914-1935:finding-0001",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "historical_comparison_unavailable": 2,
+          "persistent_across_sessions": 1
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 3,
+          "priority": 2
+        },
+        "recommended_check_count": 5
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 5,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.rpm_tps_reproduction",
+          "check.v2.rpm_tps_repeatability",
+          "check.v2.raw_frame_integrity",
+          "check.v2.known_stimulus_response"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "calib-20260814-153329-812a3f",
+      "source_case_id": "h7-1-expert-case-0002",
+      "source_event_id": "calib-20260814-153329-812a3f:finding-0002",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "first_observed": 1,
+          "historical_comparison_unavailable": 2,
+          "recurrent": 1
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 3,
+          "priority": 2,
+          "relevant": 1
+        },
+        "recommended_check_count": 6
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 6,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.rpm_tps_reproduction",
+          "check.v2.rpm_tps_repeatability",
+          "check.v2.raw_frame_integrity",
+          "check.v2.known_stimulus_response",
+          "check.v2.detector_scope_review"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "ride-20260909-1748",
+      "source_case_id": "h7-1-expert-case-0003",
+      "source_event_id": "ride-20260909-1748:finding-0002",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "historical_comparison_unavailable": 2,
+          "recurrent": 1
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 3,
+          "priority": 1
+        },
+        "recommended_check_count": 4
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 4,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.raw_frame_integrity",
+          "check.v2.known_stimulus_response",
+          "check.v2.detector_scope_review"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "calib-real-run-session-000007-part-01",
+      "source_case_id": "h7-1-expert-case-0007",
+      "source_event_id": "calib-real-run-session-000007-part-01:finding-0001",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "rare_recurrence": 2,
+          "recurrent": 1
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "priority": 1,
+          "relevant": 2
+        },
+        "recommended_check_count": 3
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 3,
+        "recommended_check_ids": [
+          "check.v2.voltage_context_compare",
+          "check.v2.external_supply_measurement",
+          "check.v2.detector_scope_review"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "ride-20260908-1431",
+      "source_case_id": "h7-1-expert-case-0008",
+      "source_event_id": "ride-20260908-1431:finding-0001",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "recurrent": 3
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "priority": 3
+        },
+        "recommended_check_count": 3
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 3,
+        "recommended_check_ids": [
+          "check.v2.voltage_context_compare",
+          "check.v2.external_supply_measurement",
+          "check.v2.detector_scope_review"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "ride-20260904-1810",
+      "source_case_id": "h7-1-expert-case-0009",
+      "source_event_id": "ride-20260904-1810:finding-0001",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "historical_comparison_unavailable": 2,
+          "persistent_across_sessions": 1,
+          "recurrent": 2
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 3,
+          "priority": 4
+        },
+        "recommended_check_count": 7
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 7,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.rpm_tps_reproduction",
+          "check.v2.rpm_tps_repeatability",
+          "check.v2.raw_frame_integrity",
+          "check.v2.known_stimulus_response",
+          "check.v2.voltage_context_compare",
+          "check.v2.external_supply_measurement"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "ride-20260909-0725",
+      "source_case_id": "h7-1-expert-case-0010",
+      "source_event_id": "ride-20260909-0725:finding-0001",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "historical_comparison_unavailable": 1,
+          "persistent_across_sessions": 1,
+          "recurrent": 2
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 1,
+          "priority": 4
+        },
+        "recommended_check_count": 5
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 5,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.rpm_tps_reproduction",
+          "check.v2.rpm_tps_repeatability",
+          "check.v2.voltage_context_compare",
+          "check.v2.external_supply_measurement"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "ride-20260916-1321",
+      "source_case_id": "h7-1-expert-case-0011",
+      "source_event_id": "ride-20260916-1321:finding-0001",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "historical_comparison_unavailable": 1,
+          "recurrent": 2
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 1,
+          "priority": 2
+        },
+        "recommended_check_count": 3
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 3,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.voltage_context_compare",
+          "check.v2.external_supply_measurement"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "calib-20260814-153329-812a3f",
+      "source_case_id": "h7-1-expert-case-0012",
+      "source_event_id": "calib-20260814-153329-812a3f:finding-0001",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "first_observed": 2,
+          "historical_comparison_unavailable": 2,
+          "recurrent": 1
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 3,
+          "priority": 2,
+          "relevant": 2
+        },
+        "recommended_check_count": 7
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 7,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.rpm_tps_reproduction",
+          "check.v2.rpm_tps_repeatability",
+          "check.v2.raw_frame_integrity",
+          "check.v2.known_stimulus_response",
+          "check.v2.voltage_context_compare",
+          "check.v2.external_supply_measurement"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "ride-20260914-1047",
+      "source_case_id": "h7-1-expert-case-0013",
+      "source_event_id": "ride-20260914-1047:finding-0003",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "historical_comparison_unavailable": 2,
+          "recurrent": 2
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 3,
+          "priority": 2
+        },
+        "recommended_check_count": 5
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 5,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.raw_frame_integrity",
+          "check.v2.known_stimulus_response",
+          "check.v2.voltage_context_compare",
+          "check.v2.external_supply_measurement"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "calib-20260814-153329-812a3f",
+      "source_case_id": "h7-1-expert-case-0015",
+      "source_event_id": "calib-20260814-153329-812a3f:finding-0011",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "first_observed": 1,
+          "historical_comparison_unavailable": 2,
+          "recurrent": 1
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 3,
+          "priority": 2,
+          "relevant": 1
+        },
+        "recommended_check_count": 6
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 6,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.rpm_tps_reproduction",
+          "check.v2.rpm_tps_repeatability",
+          "check.v2.raw_frame_integrity",
+          "check.v2.known_stimulus_response",
+          "check.v2.detector_scope_review"
+        ]
+      }
+    },
+    {
+      "assessment": "changes_check_priority",
+      "causal_hypotheses_changed": false,
+      "checks_removed": false,
+      "session_id": "calib-20260814-153329-812a3f",
+      "source_case_id": "h7-1-expert-case-0016",
+      "source_event_id": "calib-20260814-153329-812a3f:finding-0005",
+      "with_history": {
+        "historical_recurrence_categories": {
+          "first_observed": 1,
+          "historical_comparison_unavailable": 2,
+          "recurrent": 1
+        },
+        "possible_cause_count": 0,
+        "priority_counts": {
+          "insufficient_evidence": 3,
+          "priority": 2,
+          "relevant": 1
+        },
+        "recommended_check_count": 6
+      },
+      "without_history": {
+        "possible_cause_count": 0,
+        "recommended_check_count": 6,
+        "recommended_check_ids": [
+          "check.v2.iforest_feature_review",
+          "check.v2.rpm_tps_reproduction",
+          "check.v2.rpm_tps_repeatability",
+          "check.v2.raw_frame_integrity",
+          "check.v2.known_stimulus_response",
+          "check.v2.detector_scope_review"
+        ]
+      }
+    }
+  ],
+  "schema_version": "historical-counterfactual-evaluation-v1",
+  "summary": {
+    "assessment_counts": {
+      "adds_meaningful_information": 3,
+      "adds_no_value": 8,
+      "changes_check_priority": 22
+    },
+    "case_count": 33,
+    "cases_with_causal_hypothesis_change": 0,
+    "cases_with_check_priority_change": 22,
+    "cases_with_checks_removed": 0
+  }
+}

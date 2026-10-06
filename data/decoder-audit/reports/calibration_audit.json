@@ -1,0 +1,2082 @@
+{
+  "profile_id": "honda_keihin_71_17_v0.1",
+  "phase2_profile_id": "honda_keihin_71_17_v0.2",
+  "sessions": [
+    {
+      "session_id": "cal_20260812_152832_2a54f0",
+      "scenario_id": "cal_02_tps_sweep",
+      "session_dir": "real_data/calibration/honda_shmode_4v_001/cal_20260812_152832_2a54f0",
+      "frame_count": 471,
+      "valid_frame_count": 471,
+      "checksum_failures": 0,
+      "header_failures": 0,
+      "length_failures": 0,
+      "malformed_records": 0,
+      "raw_frames_malformed_records": 0,
+      "summary_malformed_lines": 0,
+      "duration_ms": 117499.0,
+      "duration_seconds": 117.575,
+      "events_discovered": "capture_start;tps_closed_begin;tps_closed_end;tps_sweep_1_open_begin;tps_sweep_1_full;tps_sweep_1_close_begin;tps_sweep_1_end;tps_sweep_2_open_begin;tps_sweep_2_full;tps_sweep_2_close_begin;tps_sweep_2_end;tps_sweep_3_open_begin;tps_sweep_3_full;tps_sweep_3_close_begin;tps_sweep_3_end;tps_sweep_4_open_begin;tps_sweep_4_full;tps_sweep_4_close_begin;tps_sweep_4_end;tps_sweep_5_open_begin;tps_sweep_5_full;tps_sweep_5_close_begin;tps_sweep_5_end;tps_plateau_closed_begin;tps_plateau_closed_end;tps_plateau_25_begin;tps_plateau_25_end;tps_plateau_50_begin;tps_plateau_50_end;tps_plateau_75_begin;tps_plateau_75_end;tps_plateau_full_begin;tps_plateau_full_end;capture_end",
+      "ambient_reference_c": null,
+      "external_battery_reference_v": null
+    },
+    {
+      "session_id": "cal_20260814_152603_8fd9ed",
+      "scenario_id": "cal_01_cold_key_on",
+      "session_dir": "real_data/calibration/honda_shmode_4v_001/cal_20260814_152603_8fd9ed",
+      "frame_count": 741,
+      "valid_frame_count": 741,
+      "checksum_failures": 0,
+      "header_failures": 0,
+      "length_failures": 0,
+      "malformed_records": 1,
+      "raw_frames_malformed_records": 0,
+      "summary_malformed_lines": 1,
+      "duration_ms": 185510.0,
+      "duration_seconds": 186.212,
+      "events_discovered": "capture_start;key_on;capture_end",
+      "ambient_reference_c": 34.5,
+      "external_battery_reference_v": 12.75
+    },
+    {
+      "session_id": "cal_20260814_153329_812a3f",
+      "scenario_id": "cal_03_cold_start_warmup",
+      "session_dir": "real_data/calibration/honda_shmode_4v_001/cal_20260814_153329_812a3f",
+      "frame_count": 3629,
+      "valid_frame_count": 3629,
+      "checksum_failures": 0,
+      "header_failures": 0,
+      "length_failures": 0,
+      "malformed_records": 1,
+      "raw_frames_malformed_records": 0,
+      "summary_malformed_lines": 1,
+      "duration_ms": 907005.0,
+      "duration_seconds": 907.594,
+      "events_discovered": "capture_start;key_on;cranking_requested;engine_started;warmup_1min;warmup_3min;warmup_5min;warmup_10min;warmup_15min;capture_end",
+      "ambient_reference_c": 34.5,
+      "external_battery_reference_v": null
+    }
+  ],
+  "vehicle_metadata": {
+    "cooling_type": "liquid",
+    "ecu_protocol": "Honda/Keihin K-Line",
+    "expected_header_hex": "02187117",
+    "expected_raw_length": 24,
+    "generation": "4-valve",
+    "manufacturer": "Honda",
+    "model": "SH Mode",
+    "table": "0x17",
+    "vehicle_id": "honda_shmode_4v_001"
+  },
+  "scenario_results": {
+    "cold_key_on": {
+      "available": true,
+      "session_id": "cal_20260814_152603_8fd9ed",
+      "stable_frame_count": 719,
+      "stable_window_ms": [
+        5874,
+        186212
+      ],
+      "ambient_reference_c": 34.5,
+      "external_battery_reference_v": 12.75,
+      "byte_baseline": [
+        {
+          "byte_index": 4,
+          "count": 719,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 5,
+          "count": 719,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 6,
+          "count": 719,
+          "minimum": 25.0,
+          "maximum": 25.0,
+          "mean": 25.0,
+          "median": 25.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 7,
+          "count": 719,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 8,
+          "count": 719,
+          "minimum": 255.0,
+          "maximum": 255.0,
+          "mean": 255.0,
+          "median": 255.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 9,
+          "count": 719,
+          "minimum": 255.0,
+          "maximum": 255.0,
+          "mean": 255.0,
+          "median": 255.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 10,
+          "count": 719,
+          "minimum": 120.0,
+          "maximum": 121.0,
+          "mean": 120.81780250347705,
+          "median": 121.0,
+          "stddev": 0.3860072133830127,
+          "range": 1.0,
+          "unique_values": 2
+        },
+        {
+          "byte_index": 11,
+          "count": 719,
+          "minimum": 76.0,
+          "maximum": 77.0,
+          "mean": 76.18219749652295,
+          "median": 76.0,
+          "stddev": 0.3860072133830127,
+          "range": 1.0,
+          "unique_values": 2
+        },
+        {
+          "byte_index": 12,
+          "count": 719,
+          "minimum": 122.0,
+          "maximum": 122.0,
+          "mean": 122.0,
+          "median": 122.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 13,
+          "count": 719,
+          "minimum": 76.0,
+          "maximum": 76.0,
+          "mean": 76.0,
+          "median": 76.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 14,
+          "count": 719,
+          "minimum": 124.0,
+          "maximum": 125.0,
+          "mean": 124.96940194714882,
+          "median": 125.0,
+          "stddev": 0.1722260491705551,
+          "range": 1.0,
+          "unique_values": 2
+        },
+        {
+          "byte_index": 15,
+          "count": 719,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 16,
+          "count": 719,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 17,
+          "count": 719,
+          "minimum": 88.0,
+          "maximum": 88.0,
+          "mean": 88.0,
+          "median": 88.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 18,
+          "count": 719,
+          "minimum": 129.0,
+          "maximum": 129.0,
+          "mean": 129.0,
+          "median": 129.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 19,
+          "count": 719,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 20,
+          "count": 719,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 21,
+          "count": 719,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        },
+        {
+          "byte_index": 22,
+          "count": 719,
+          "minimum": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "stddev": 0.0,
+          "range": 0.0,
+          "unique_values": 1
+        }
+      ],
+      "rpm_stats": {
+        "count": 719,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "stddev": 0.0,
+        "range": 0.0,
+        "unique_values": 1
+      },
+      "byte18_stats": {
+        "count": 719,
+        "minimum": 129.0,
+        "maximum": 129.0,
+        "mean": 129.0,
+        "median": 129.0,
+        "stddev": 0.0,
+        "range": 0.0,
+        "unique_values": 1
+      },
+      "iat_c_stats": {
+        "count": 719,
+        "minimum": 36.0,
+        "maximum": 37.0,
+        "mean": 36.182197496522946,
+        "median": 36.0,
+        "stddev": 0.3860072133830127,
+        "range": 1.0,
+        "unique_values": 2
+      },
+      "iat_ambient_error_c": 1.6821974965229458,
+      "battery_v_stats": {
+        "count": 719,
+        "minimum": 12.4,
+        "maximum": 12.5,
+        "mean": 12.496940194714881,
+        "median": 12.5,
+        "stddev": 0.017222604917055448,
+        "range": 0.09999999999999964,
+        "unique_values": 2
+      },
+      "battery_external_difference_v": -0.25305980528511895,
+      "battery_external_difference_pct": -1.9847827865499525
+    },
+    "tps_sweep": {
+      "available": true,
+      "session_id": "cal_20260812_152832_2a54f0",
+      "frame_count": 471,
+      "rpm_stats": {
+        "count": 471,
+        "minimum": 0.0,
+        "maximum": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "stddev": 0.0,
+        "range": 0.0,
+        "unique_values": 1
+      },
+      "byte6_stats": {
+        "count": 471,
+        "minimum": 25.0,
+        "maximum": 225.0,
+        "mean": 125.20382165605096,
+        "median": 124.0,
+        "stddev": 79.28840142862131,
+        "range": 200.0,
+        "unique_values": 146
+      },
+      "byte7_stats": {
+        "count": 471,
+        "minimum": 0.0,
+        "maximum": 156.0,
+        "mean": 77.78980891719745,
+        "median": 77.0,
+        "stddev": 61.896705115941124,
+        "range": 156.0,
+        "unique_values": 124
+      },
+      "observed_closed_byte6": 25.0,
+      "observed_open_byte6": 225.0,
+      "observed_closed_byte7": 0.0,
+      "observed_open_byte7": 156.0,
+      "byte6_closed_voltage": 0.48828125,
+      "byte6_open_voltage": 4.39453125,
+      "opening_monotonicity": 1.0,
+      "closing_monotonicity": 1.0,
+      "byte6_byte7_correlation": 0.9999778546123019,
+      "repeatability_full_byte7_range": 12,
+      "strong_sweep_responders": [
+        {
+          "byte_index": 6,
+          "range": 200.0,
+          "correlation_with_byte6": 1.0,
+          "correlation_with_byte7": 0.9999778546123019
+        },
+        {
+          "byte_index": 7,
+          "range": 156.0,
+          "correlation_with_byte6": 0.9999778546123019,
+          "correlation_with_byte7": 1.0
+        }
+      ],
+      "old_formula": {
+        "closed_percent": 0.0,
+        "full_percent": 61.1764705882353
+      },
+      "calibrated_formula": {
+        "closed_percent": 0.0,
+        "full_percent": 100.0,
+        "formula": "(raw - observed_closed) / (observed_open - observed_closed) * 100"
+      },
+      "recommendation": "endpoint-calibrated scaling preferred"
+    },
+    "cold_start_warmup": {
+      "available": true,
+      "session_id": "cal_20260814_153329_812a3f",
+      "ambient_reference_c": 34.5,
+      "engine_cold_confirmed": true,
+      "engine_started_event_ms": 7530,
+      "first_nonzero_rpm_ms": 4626,
+      "start_marker_note": "first non-zero RPM precedes engine_started marker; actual RPM transition is used for start-response tests",
+      "baseline_frame_count": 17,
+      "iat_baseline_c": {
+        "count": 17,
+        "minimum": 36.0,
+        "maximum": 36.0,
+        "mean": 36.0,
+        "median": 36.0,
+        "stddev": 0.0,
+        "range": 0.0,
+        "unique_values": 1
+      },
+      "iat_ambient_error_c": 1.5,
+      "ect_baseline_c": {
+        "count": 17,
+        "minimum": 36.0,
+        "maximum": 36.0,
+        "mean": 36.0,
+        "median": 36.0,
+        "stddev": 0.0,
+        "range": 0.0,
+        "unique_values": 1
+      },
+      "ect_ambient_error_c": 1.5,
+      "engine_start_windows": {
+        "event_pre5s": {
+          "window_ms": [
+            2530,
+            7530
+          ],
+          "frame_count": 20,
+          "rpm": {
+            "count": 20,
+            "minimum": 0.0,
+            "maximum": 2035.0,
+            "mean": 1034.25,
+            "median": 1426.5,
+            "stddev": 955.8986282551095,
+            "range": 2035.0,
+            "unique_values": 12
+          },
+          "byte10": {
+            "count": 20,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte11": {
+            "count": 20,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "iat_c": {
+            "count": 20,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte12": {
+            "count": 20,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte13": {
+            "count": 20,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "v01_map_voltage": {
+            "count": 20,
+            "minimum": 2.3828125,
+            "maximum": 2.3828125,
+            "mean": 2.3828125,
+            "median": 2.3828125,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "ect_c": {
+            "count": 20,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "battery_v": {
+            "count": 20,
+            "minimum": 10.6,
+            "maximum": 14.6,
+            "mean": 13.12,
+            "median": 12.7,
+            "stddev": 1.2480384609458155,
+            "range": 4.0,
+            "unique_values": 11
+          },
+          "injector_raw": {
+            "count": 20,
+            "minimum": 0.0,
+            "maximum": 1654.0,
+            "mean": 668.1,
+            "median": 972.5,
+            "stddev": 574.9752951214513,
+            "range": 1654.0,
+            "unique_values": 13
+          },
+          "byte17": {
+            "count": 20,
+            "minimum": 88.0,
+            "maximum": 159.0,
+            "mean": 116.05,
+            "median": 126.5,
+            "stddev": 24.9529056424297,
+            "range": 71.0,
+            "unique_values": 7
+          },
+          "byte18": {
+            "count": 20,
+            "minimum": 106.0,
+            "maximum": 129.0,
+            "mean": 117.5,
+            "median": 117.5,
+            "stddev": 11.5,
+            "range": 23.0,
+            "unique_values": 2
+          }
+        },
+        "event_post0_2s": {
+          "window_ms": [
+            7530,
+            9530
+          ],
+          "frame_count": 8,
+          "rpm": {
+            "count": 8,
+            "minimum": 1184.0,
+            "maximum": 2059.0,
+            "mean": 1505.25,
+            "median": 1275.5,
+            "stddev": 365.5166719863815,
+            "range": 875.0,
+            "unique_values": 8
+          },
+          "byte10": {
+            "count": 8,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte11": {
+            "count": 8,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "iat_c": {
+            "count": 8,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte12": {
+            "count": 8,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte13": {
+            "count": 8,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "v01_map_voltage": {
+            "count": 8,
+            "minimum": 2.3828125,
+            "maximum": 2.3828125,
+            "mean": 2.3828125,
+            "median": 2.3828125,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "ect_c": {
+            "count": 8,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "battery_v": {
+            "count": 8,
+            "minimum": 13.6,
+            "maximum": 14.6,
+            "mean": 13.9875,
+            "median": 13.85,
+            "stddev": 0.39823830805184995,
+            "range": 1.0,
+            "unique_values": 6
+          },
+          "injector_raw": {
+            "count": 8,
+            "minimum": 504.0,
+            "maximum": 956.0,
+            "mean": 663.75,
+            "median": 660.5,
+            "stddev": 124.84865838285968,
+            "range": 452.0,
+            "unique_values": 8
+          },
+          "byte17": {
+            "count": 8,
+            "minimum": 126.0,
+            "maximum": 192.0,
+            "mean": 167.375,
+            "median": 168.0,
+            "stddev": 17.698428602562434,
+            "range": 66.0,
+            "unique_values": 4
+          },
+          "byte18": {
+            "count": 8,
+            "minimum": 106.0,
+            "maximum": 106.0,
+            "mean": 106.0,
+            "median": 106.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          }
+        },
+        "event_post2_10s": {
+          "window_ms": [
+            9530,
+            17530
+          ],
+          "frame_count": 32,
+          "rpm": {
+            "count": 32,
+            "minimum": 1150.0,
+            "maximum": 1269.0,
+            "mean": 1219.96875,
+            "median": 1229.0,
+            "stddev": 32.201983998466616,
+            "range": 119.0,
+            "unique_values": 26
+          },
+          "byte10": {
+            "count": 32,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte11": {
+            "count": 32,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "iat_c": {
+            "count": 32,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte12": {
+            "count": 32,
+            "minimum": 121.0,
+            "maximum": 122.0,
+            "mean": 121.71875,
+            "median": 122.0,
+            "stddev": 0.4496092053105675,
+            "range": 1.0,
+            "unique_values": 2
+          },
+          "byte13": {
+            "count": 32,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "v01_map_voltage": {
+            "count": 32,
+            "minimum": 2.36328125,
+            "maximum": 2.3828125,
+            "mean": 2.3773193359375,
+            "median": 2.3828125,
+            "stddev": 0.00878142979122202,
+            "range": 0.01953125,
+            "unique_values": 2
+          },
+          "ect_c": {
+            "count": 32,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "battery_v": {
+            "count": 32,
+            "minimum": 13.2,
+            "maximum": 14.2,
+            "mean": 13.81875,
+            "median": 13.9,
+            "stddev": 0.2429473965697101,
+            "range": 1.0,
+            "unique_values": 11
+          },
+          "injector_raw": {
+            "count": 32,
+            "minimum": 582.0,
+            "maximum": 662.0,
+            "mean": 614.4375,
+            "median": 607.5,
+            "stddev": 20.377588025818955,
+            "range": 80.0,
+            "unique_values": 27
+          },
+          "byte17": {
+            "count": 32,
+            "minimum": 168.0,
+            "maximum": 168.0,
+            "mean": 168.0,
+            "median": 168.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte18": {
+            "count": 32,
+            "minimum": 106.0,
+            "maximum": 106.0,
+            "mean": 106.0,
+            "median": 106.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          }
+        },
+        "event_post10_60s": {
+          "window_ms": [
+            17530,
+            67530
+          ],
+          "frame_count": 200,
+          "rpm": {
+            "count": 200,
+            "minimum": 1010.0,
+            "maximum": 1272.0,
+            "mean": 1174.055,
+            "median": 1183.5,
+            "stddev": 47.85814429122801,
+            "range": 262.0,
+            "unique_values": 119
+          },
+          "byte10": {
+            "count": 200,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte11": {
+            "count": 200,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "iat_c": {
+            "count": 200,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte12": {
+            "count": 200,
+            "minimum": 106.0,
+            "maximum": 121.0,
+            "mean": 113.52,
+            "median": 113.5,
+            "stddev": 4.36,
+            "range": 15.0,
+            "unique_values": 16
+          },
+          "byte13": {
+            "count": 200,
+            "minimum": 76.0,
+            "maximum": 83.0,
+            "mean": 79.43,
+            "median": 79.5,
+            "stddev": 1.826225615853638,
+            "range": 7.0,
+            "unique_values": 8
+          },
+          "v01_map_voltage": {
+            "count": 200,
+            "minimum": 2.0703125,
+            "maximum": 2.36328125,
+            "mean": 2.2171875,
+            "median": 2.216796875,
+            "stddev": 0.08515625,
+            "range": 0.29296875,
+            "unique_values": 16
+          },
+          "ect_c": {
+            "count": 200,
+            "minimum": 36.0,
+            "maximum": 43.0,
+            "mean": 39.43,
+            "median": 39.5,
+            "stddev": 1.826225615853638,
+            "range": 7.0,
+            "unique_values": 8
+          },
+          "battery_v": {
+            "count": 200,
+            "minimum": 13.0,
+            "maximum": 14.5,
+            "mean": 13.9255,
+            "median": 13.9,
+            "stddev": 0.2896545356109585,
+            "range": 1.5,
+            "unique_values": 16
+          },
+          "injector_raw": {
+            "count": 200,
+            "minimum": 549.0,
+            "maximum": 602.0,
+            "mean": 567.555,
+            "median": 565.0,
+            "stddev": 10.422426540878089,
+            "range": 53.0,
+            "unique_values": 45
+          },
+          "byte17": {
+            "count": 200,
+            "minimum": 165.0,
+            "maximum": 168.0,
+            "mean": 167.98,
+            "median": 168.0,
+            "stddev": 0.22271057451320087,
+            "range": 3.0,
+            "unique_values": 3
+          },
+          "byte18": {
+            "count": 200,
+            "minimum": 106.0,
+            "maximum": 106.0,
+            "mean": 106.0,
+            "median": 106.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          }
+        },
+        "actual_rpm_pre2s": {
+          "window_ms": [
+            2626,
+            4625
+          ],
+          "frame_count": 8,
+          "rpm": {
+            "count": 8,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte10": {
+            "count": 8,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte11": {
+            "count": 8,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "iat_c": {
+            "count": 8,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte12": {
+            "count": 8,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte13": {
+            "count": 8,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "v01_map_voltage": {
+            "count": 8,
+            "minimum": 2.3828125,
+            "maximum": 2.3828125,
+            "mean": 2.3828125,
+            "median": 2.3828125,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "ect_c": {
+            "count": 8,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "battery_v": {
+            "count": 8,
+            "minimum": 10.7,
+            "maximum": 12.5,
+            "mean": 12.2125,
+            "median": 12.4,
+            "stddev": 0.5754074643241955,
+            "range": 1.8000000000000007,
+            "unique_values": 4
+          },
+          "injector_raw": {
+            "count": 8,
+            "minimum": 0.0,
+            "maximum": 0.0,
+            "mean": 0.0,
+            "median": 0.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte17": {
+            "count": 8,
+            "minimum": 88.0,
+            "maximum": 88.0,
+            "mean": 88.0,
+            "median": 88.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte18": {
+            "count": 8,
+            "minimum": 129.0,
+            "maximum": 129.0,
+            "mean": 129.0,
+            "median": 129.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          }
+        },
+        "actual_rpm_post0_2s": {
+          "window_ms": [
+            4626,
+            6626
+          ],
+          "frame_count": 8,
+          "rpm": {
+            "count": 8,
+            "minimum": 20.0,
+            "maximum": 1979.0,
+            "mean": 1570.375,
+            "median": 1898.0,
+            "stddev": 656.4824707294171,
+            "range": 1959.0,
+            "unique_values": 8
+          },
+          "byte10": {
+            "count": 8,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte11": {
+            "count": 8,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "iat_c": {
+            "count": 8,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte12": {
+            "count": 8,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte13": {
+            "count": 8,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "v01_map_voltage": {
+            "count": 8,
+            "minimum": 2.3828125,
+            "maximum": 2.3828125,
+            "mean": 2.3828125,
+            "median": 2.3828125,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "ect_c": {
+            "count": 8,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "battery_v": {
+            "count": 8,
+            "minimum": 10.6,
+            "maximum": 14.6,
+            "mean": 13.325,
+            "median": 13.6,
+            "stddev": 1.3074306864992882,
+            "range": 4.0,
+            "unique_values": 7
+          },
+          "injector_raw": {
+            "count": 8,
+            "minimum": 995.0,
+            "maximum": 1654.0,
+            "mean": 1183.75,
+            "median": 1044.5,
+            "stddev": 260.2550431788018,
+            "range": 659.0,
+            "unique_values": 8
+          },
+          "byte17": {
+            "count": 8,
+            "minimum": 128.0,
+            "maximum": 159.0,
+            "mean": 138.875,
+            "median": 128.5,
+            "stddev": 13.932314057614406,
+            "range": 31.0,
+            "unique_values": 4
+          },
+          "byte18": {
+            "count": 8,
+            "minimum": 106.0,
+            "maximum": 129.0,
+            "mean": 111.75,
+            "median": 106.0,
+            "stddev": 9.959292143521045,
+            "range": 23.0,
+            "unique_values": 2
+          }
+        },
+        "actual_rpm_post2_10s": {
+          "window_ms": [
+            6626,
+            14626
+          ],
+          "frame_count": 33,
+          "rpm": {
+            "count": 33,
+            "minimum": 1163.0,
+            "maximum": 2059.0,
+            "mean": 1392.969696969697,
+            "median": 1238.0,
+            "stddev": 319.7838744440589,
+            "range": 896.0,
+            "unique_values": 28
+          },
+          "byte10": {
+            "count": 33,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte11": {
+            "count": 33,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "iat_c": {
+            "count": 33,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte12": {
+            "count": 33,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte13": {
+            "count": 33,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "v01_map_voltage": {
+            "count": 33,
+            "minimum": 2.3828125,
+            "maximum": 2.3828125,
+            "mean": 2.3828125,
+            "median": 2.3828125,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "ect_c": {
+            "count": 33,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "battery_v": {
+            "count": 33,
+            "minimum": 13.2,
+            "maximum": 14.6,
+            "mean": 13.942424242424243,
+            "median": 13.9,
+            "stddev": 0.3618389923460459,
+            "range": 1.4000000000000004,
+            "unique_values": 13
+          },
+          "injector_raw": {
+            "count": 33,
+            "minimum": 504.0,
+            "maximum": 983.0,
+            "mean": 675.8181818181819,
+            "median": 632.0,
+            "stddev": 128.3367857572894,
+            "range": 479.0,
+            "unique_values": 32
+          },
+          "byte17": {
+            "count": 33,
+            "minimum": 126.0,
+            "maximum": 192.0,
+            "mean": 162.8181818181818,
+            "median": 168.0,
+            "stddev": 16.06134932528274,
+            "range": 66.0,
+            "unique_values": 5
+          },
+          "byte18": {
+            "count": 33,
+            "minimum": 106.0,
+            "maximum": 106.0,
+            "mean": 106.0,
+            "median": 106.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          }
+        },
+        "actual_rpm_post10_60s": {
+          "window_ms": [
+            14626,
+            64626
+          ],
+          "frame_count": 199,
+          "rpm": {
+            "count": 199,
+            "minimum": 1010.0,
+            "maximum": 1272.0,
+            "mean": 1174.3316582914572,
+            "median": 1183.0,
+            "stddev": 47.700705859149764,
+            "range": 262.0,
+            "unique_values": 117
+          },
+          "byte10": {
+            "count": 199,
+            "minimum": 122.0,
+            "maximum": 122.0,
+            "mean": 122.0,
+            "median": 122.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte11": {
+            "count": 199,
+            "minimum": 76.0,
+            "maximum": 76.0,
+            "mean": 76.0,
+            "median": 76.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "iat_c": {
+            "count": 199,
+            "minimum": 36.0,
+            "maximum": 36.0,
+            "mean": 36.0,
+            "median": 36.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          },
+          "byte12": {
+            "count": 199,
+            "minimum": 107.0,
+            "maximum": 122.0,
+            "mean": 114.37185929648241,
+            "median": 114.0,
+            "stddev": 4.309905857767149,
+            "range": 15.0,
+            "unique_values": 16
+          },
+          "byte13": {
+            "count": 199,
+            "minimum": 76.0,
+            "maximum": 82.0,
+            "mean": 79.05025125628141,
+            "median": 79.0,
+            "stddev": 1.8010291410804642,
+            "range": 6.0,
+            "unique_values": 7
+          },
+          "v01_map_voltage": {
+            "count": 199,
+            "minimum": 2.08984375,
+            "maximum": 2.3828125,
+            "mean": 2.2338253768844223,
+            "median": 2.2265625,
+            "stddev": 0.08417784878451463,
+            "range": 0.29296875,
+            "unique_values": 16
+          },
+          "ect_c": {
+            "count": 199,
+            "minimum": 36.0,
+            "maximum": 42.0,
+            "mean": 39.050251256281406,
+            "median": 39.0,
+            "stddev": 1.8010291410804642,
+            "range": 6.0,
+            "unique_values": 7
+          },
+          "battery_v": {
+            "count": 199,
+            "minimum": 13.0,
+            "maximum": 14.5,
+            "mean": 13.904020100502512,
+            "median": 13.9,
+            "stddev": 0.2863457508733209,
+            "range": 1.5,
+            "unique_values": 16
+          },
+          "injector_raw": {
+            "count": 199,
+            "minimum": 549.0,
+            "maximum": 608.0,
+            "mean": 569.7437185929648,
+            "median": 566.0,
+            "stddev": 12.02633827491642,
+            "range": 59.0,
+            "unique_values": 50
+          },
+          "byte17": {
+            "count": 199,
+            "minimum": 165.0,
+            "maximum": 168.0,
+            "mean": 167.97989949748742,
+            "median": 168.0,
+            "stddev": 0.2232649235328951,
+            "range": 3.0,
+            "unique_values": 3
+          },
+          "byte18": {
+            "count": 199,
+            "minimum": 106.0,
+            "maximum": 106.0,
+            "mean": 106.0,
+            "median": 106.0,
+            "stddev": 0.0,
+            "range": 0.0,
+            "unique_values": 1
+          }
+        }
+      },
+      "warmup_markers": [
+        {
+          "marker": "key_on",
+          "event_elapsed_ms": 2467,
+          "frame_elapsed_ms": 2376,
+          "rpm": 0,
+          "byte10": 122,
+          "byte11": 76,
+          "iat_c": 36,
+          "byte12": 122,
+          "byte13": 76,
+          "ect_c": 36,
+          "v01_map_voltage": 2.3828125,
+          "battery_v": 12.5,
+          "injector_raw": 0,
+          "byte17": 88,
+          "byte18": 129
+        },
+        {
+          "marker": "engine_started",
+          "event_elapsed_ms": 7530,
+          "frame_elapsed_ms": 7625,
+          "rpm": 2059,
+          "byte10": 122,
+          "byte11": 76,
+          "iat_c": 36,
+          "byte12": 122,
+          "byte13": 76,
+          "ect_c": 36,
+          "v01_map_voltage": 2.3828125,
+          "battery_v": 14.5,
+          "injector_raw": 956,
+          "byte17": 126,
+          "byte18": 106
+        },
+        {
+          "marker": "warmup_1min",
+          "event_elapsed_ms": 67538,
+          "frame_elapsed_ms": 67627,
+          "rpm": 1107,
+          "byte10": 122,
+          "byte11": 76,
+          "iat_c": 36,
+          "byte12": 106,
+          "byte13": 83,
+          "ect_c": 43,
+          "v01_map_voltage": 2.0703125,
+          "battery_v": 14.0,
+          "injector_raw": 570,
+          "byte17": 168,
+          "byte18": 106
+        },
+        {
+          "marker": "warmup_3min",
+          "event_elapsed_ms": 187709,
+          "frame_elapsed_ms": 187630,
+          "rpm": 1285,
+          "byte10": 122,
+          "byte11": 76,
+          "iat_c": 36,
+          "byte12": 79,
+          "byte13": 95,
+          "ect_c": 55,
+          "v01_map_voltage": 1.54296875,
+          "battery_v": 14.7,
+          "injector_raw": 532,
+          "byte17": 168,
+          "byte18": 106
+        },
+        {
+          "marker": "warmup_5min",
+          "event_elapsed_ms": 307642,
+          "frame_elapsed_ms": 307641,
+          "rpm": 1310,
+          "byte10": 121,
+          "byte11": 76,
+          "iat_c": 36,
+          "byte12": 63,
+          "byte13": 104,
+          "ect_c": 64,
+          "v01_map_voltage": 1.23046875,
+          "battery_v": 14.6,
+          "injector_raw": 532,
+          "byte17": 168,
+          "byte18": 106
+        },
+        {
+          "marker": "warmup_10min",
+          "event_elapsed_ms": 607703,
+          "frame_elapsed_ms": 607638,
+          "rpm": 1372,
+          "byte10": 120,
+          "byte11": 77,
+          "iat_c": 37,
+          "byte12": 42,
+          "byte13": 119,
+          "ect_c": 79,
+          "v01_map_voltage": 0.8203125,
+          "battery_v": 14.4,
+          "injector_raw": 526,
+          "byte17": 158,
+          "byte18": 106
+        },
+        {
+          "marker": "warmup_15min",
+          "event_elapsed_ms": 907563,
+          "frame_elapsed_ms": 907383,
+          "rpm": 1403,
+          "byte10": 117,
+          "byte11": 78,
+          "iat_c": 38,
+          "byte12": 33,
+          "byte13": 129,
+          "ect_c": 89,
+          "v01_map_voltage": 0.64453125,
+          "battery_v": 14.6,
+          "injector_raw": 516,
+          "byte17": 158,
+          "byte18": 106
+        }
+      ],
+      "thermal_candidates": [
+        {
+          "byte_index": 16,
+          "start_value": 118.0,
+          "end_value": 4.0,
+          "total_change": -114.0,
+          "linear_trend_per_min": -2.5331814715510785,
+          "monotonic_increase_fraction": 0.5270008307947937,
+          "monotonic_decrease_fraction": 0.5270008307947937,
+          "short_term_noise_mean_abs_diff": 10.903350872334533,
+          "immediate_start_delta": 127.75,
+          "raw_minus_40_start": 78.0,
+          "raw_minus_40_end": -36.0
+        },
+        {
+          "byte_index": 12,
+          "start_value": 122.0,
+          "end_value": 33.0,
+          "total_change": -89.0,
+          "linear_trend_per_min": -5.218621863761458,
+          "monotonic_increase_fraction": 0.9745222929936306,
+          "monotonic_decrease_fraction": 0.999169205206314,
+          "short_term_noise_mean_abs_diff": 0.026308501800055388,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": 82.0,
+          "raw_minus_40_end": -7.0
+        },
+        {
+          "byte_index": 13,
+          "start_value": 76.0,
+          "end_value": 129.0,
+          "total_change": 53.0,
+          "linear_trend_per_min": 3.3609242045544745,
+          "monotonic_increase_fraction": 0.999169205206314,
+          "monotonic_decrease_fraction": 0.9850456937136527,
+          "short_term_noise_mean_abs_diff": 0.01633896427582387,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": 36.0,
+          "raw_minus_40_end": 89.0
+        },
+        {
+          "byte_index": 14,
+          "start_value": 106.0,
+          "end_value": 146.0,
+          "total_change": 40.0,
+          "linear_trend_per_min": 0.20751259956115647,
+          "monotonic_increase_fraction": 0.5483245638327333,
+          "monotonic_decrease_fraction": 0.6189421212960399,
+          "short_term_noise_mean_abs_diff": 2.0127388535031847,
+          "immediate_start_delta": 11.125,
+          "raw_minus_40_start": 66.0,
+          "raw_minus_40_end": 106.0
+        },
+        {
+          "byte_index": 18,
+          "start_value": 129.0,
+          "end_value": 106.0,
+          "total_change": -23.0,
+          "linear_trend_per_min": -0.00507437761869461,
+          "monotonic_increase_fraction": 0.9997230684021047,
+          "monotonic_decrease_fraction": 1.0,
+          "short_term_noise_mean_abs_diff": 0.006369426751592357,
+          "immediate_start_delta": -17.25,
+          "raw_minus_40_start": 89.0,
+          "raw_minus_40_end": 66.0
+        },
+        {
+          "byte_index": 10,
+          "start_value": 122.0,
+          "end_value": 117.0,
+          "total_change": -5.0,
+          "linear_trend_per_min": -0.30780466864160716,
+          "monotonic_increase_fraction": 0.985322625311548,
+          "monotonic_decrease_fraction": 0.9867072833010246,
+          "short_term_noise_mean_abs_diff": 0.027970091387427305,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": 82.0,
+          "raw_minus_40_end": 77.0
+        },
+        {
+          "byte_index": 15,
+          "start_value": 6.0,
+          "end_value": 2.0,
+          "total_change": -4.0,
+          "linear_trend_per_min": -0.0030573371864387063,
+          "monotonic_increase_fraction": 0.9878150096926059,
+          "monotonic_decrease_fraction": 0.9883688728883966,
+          "short_term_noise_mean_abs_diff": 0.024369980614788147,
+          "immediate_start_delta": 4.125,
+          "raw_minus_40_start": -34.0,
+          "raw_minus_40_end": -38.0
+        },
+        {
+          "byte_index": 11,
+          "start_value": 76.0,
+          "end_value": 78.0,
+          "total_change": 2.0,
+          "linear_trend_per_min": 0.11163844225623927,
+          "monotonic_increase_fraction": 0.9961229576294656,
+          "monotonic_decrease_fraction": 0.9955690944336749,
+          "short_term_noise_mean_abs_diff": 0.008307947936859596,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": 36.0,
+          "raw_minus_40_end": 38.0
+        },
+        {
+          "byte_index": 17,
+          "start_value": 159.0,
+          "end_value": 158.0,
+          "total_change": -1.0,
+          "linear_trend_per_min": -0.9461446692946578,
+          "monotonic_increase_fraction": 0.9133204098587648,
+          "monotonic_decrease_fraction": 0.9113818886734977,
+          "short_term_noise_mean_abs_diff": 0.2921628357795624,
+          "immediate_start_delta": 50.875,
+          "raw_minus_40_start": 119.0,
+          "raw_minus_40_end": 118.0
+        },
+        {
+          "byte_index": 8,
+          "start_value": 255.0,
+          "end_value": 255.0,
+          "total_change": 0.0,
+          "linear_trend_per_min": 0.0,
+          "monotonic_increase_fraction": 1.0,
+          "monotonic_decrease_fraction": 1.0,
+          "short_term_noise_mean_abs_diff": 0.0,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": 215.0,
+          "raw_minus_40_end": 215.0
+        },
+        {
+          "byte_index": 9,
+          "start_value": 255.0,
+          "end_value": 255.0,
+          "total_change": 0.0,
+          "linear_trend_per_min": 0.0,
+          "monotonic_increase_fraction": 1.0,
+          "monotonic_decrease_fraction": 1.0,
+          "short_term_noise_mean_abs_diff": 0.0,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": 215.0,
+          "raw_minus_40_end": 215.0
+        },
+        {
+          "byte_index": 19,
+          "start_value": 0.0,
+          "end_value": 0.0,
+          "total_change": 0.0,
+          "linear_trend_per_min": 0.0,
+          "monotonic_increase_fraction": 1.0,
+          "monotonic_decrease_fraction": 1.0,
+          "short_term_noise_mean_abs_diff": 0.0,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": -40.0,
+          "raw_minus_40_end": -40.0
+        },
+        {
+          "byte_index": 20,
+          "start_value": 0.0,
+          "end_value": 0.0,
+          "total_change": 0.0,
+          "linear_trend_per_min": 0.0,
+          "monotonic_increase_fraction": 1.0,
+          "monotonic_decrease_fraction": 1.0,
+          "short_term_noise_mean_abs_diff": 0.0,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": -40.0,
+          "raw_minus_40_end": -40.0
+        },
+        {
+          "byte_index": 21,
+          "start_value": 0.0,
+          "end_value": 0.0,
+          "total_change": 0.0,
+          "linear_trend_per_min": 0.0,
+          "monotonic_increase_fraction": 1.0,
+          "monotonic_decrease_fraction": 1.0,
+          "short_term_noise_mean_abs_diff": 0.0,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": -40.0,
+          "raw_minus_40_end": -40.0
+        },
+        {
+          "byte_index": 22,
+          "start_value": 0.0,
+          "end_value": 0.0,
+          "total_change": 0.0,
+          "linear_trend_per_min": 0.0,
+          "monotonic_increase_fraction": 1.0,
+          "monotonic_decrease_fraction": 1.0,
+          "short_term_noise_mean_abs_diff": 0.0,
+          "immediate_start_delta": 0.0,
+          "raw_minus_40_start": -40.0,
+          "raw_minus_40_end": -40.0
+        }
+      ],
+      "v01_map_hypothesis_test": {
+        "byte12_mean_before_start": 122.0,
+        "byte12_mean_2_10s_after_start": 122.0,
+        "byte12_delta": 0.0,
+        "byte12_percent_change": 0.0,
+        "byte13_mean_before_start": 76.0,
+        "byte13_mean_2_10s_after_start": 76.0,
+        "byte13_delta": 0.0,
+        "byte13_percent_change": 0.0,
+        "byte12_byte13_correlation": -0.9879851406277494
+      }
+    }
+  },
+  "ect_search": {
+    "byte8_unique_values": [
+      255
+    ],
+    "byte9_unique_values": [
+      255
+    ],
+    "bytes8_9_verdict": "UNAVAILABLE for this 0x17 response"
+  },
+  "battery": {
+    "external_vom_v": 12.75,
+    "ecu_byte14_mean_v": 12.496940194714881,
+    "absolute_difference_v": -0.25305980528511895,
+    "percentage_difference": -1.9847827865499525
+  },
+  "injector": {
+    "cold_key_on_engine_off": {
+      "count": 741,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "stddev": 0.0,
+      "range": 0.0,
+      "unique_values": 1
+    },
+    "tps_sweep_engine_off": {
+      "count": 471,
+      "minimum": 593.0,
+      "maximum": 593.0,
+      "mean": 593.0,
+      "median": 593.0,
+      "stddev": 0.0,
+      "range": 0.0,
+      "unique_values": 1
+    },
+    "actual_start_pre2s": {
+      "count": 8,
+      "minimum": 0.0,
+      "maximum": 0.0,
+      "mean": 0.0,
+      "median": 0.0,
+      "stddev": 0.0,
+      "range": 0.0,
+      "unique_values": 1
+    },
+    "actual_start_post0_2s": {
+      "count": 8,
+      "minimum": 995.0,
+      "maximum": 1654.0,
+      "mean": 1183.75,
+      "median": 1044.5,
+      "stddev": 260.2550431788018,
+      "range": 659.0,
+      "unique_values": 8
+    },
+    "actual_start_post10_60s": {
+      "count": 199,
+      "minimum": 549.0,
+      "maximum": 608.0,
+      "mean": 569.7437185929648,
+      "median": 566.0,
+      "stddev": 12.02633827491642,
+      "range": 59.0,
+      "unique_values": 50
+    },
+    "verdict": "HIGH_CONFIDENCE injector-related raw control signal; /100 milliseconds remains UNVERIFIED"
+  },
+  "byte17": {
+    "stats": {
+      "count": 4841,
+      "minimum": 88.0,
+      "maximum": 192.0,
+      "mean": 151.7000619706672,
+      "median": 161.0,
+      "stddev": 27.832267136994158,
+      "range": 104.0,
+      "unique_values": 25
+    },
+    "correlation_rpm": 0.6736376154819358,
+    "correlation_tps_raw": 0.14740374583406016,
+    "correlation_byte13_ect": 0.5359411844799328,
+    "correlation_injector_raw": 0.97038642369879,
+    "verdict": "UNVERIFIED; relationships are reported but no physical identity is assigned"
+  },
+  "byte18": {
+    "stats": {
+      "count": 4841,
+      "minimum": 106.0,
+      "maximum": 129.0,
+      "mean": 111.55670316050403,
+      "median": 106.0,
+      "stddev": 9.544086432223207,
+      "range": 23.0,
+      "unique_values": 3
+    },
+    "unique_values": [
+      106.0,
+      126.0,
+      129.0
+    ],
+    "verdict": "REJECTED as direct vehicle speed: all calibration scenarios were stationary while byte18 is non-zero and changes"
+  },
+  "field_decisions": {
+    "RPM": {
+      "v0.1_mapping_hypothesis": "bytes 4-5 big-endian unsigned integer",
+      "calibration_evidence": "0 RPM in stationary engine-off sessions; non-zero and plausible after engine operation begins",
+      "identity_status": "VERIFIED",
+      "scaling_status": "VERIFIED",
+      "recommended_ml_use": "use",
+      "ml_approved": true,
+      "ml_reason": "directly verified by controlled off/start states"
+    },
+    "TPS voltage": {
+      "v0.1_mapping_hypothesis": "byte6 * 5 / 256",
+      "calibration_evidence": "TPS sweep byte6 25.0 to 225.0 (0.488 V to 4.395 V)",
+      "identity_status": "VERIFIED",
+      "scaling_status": "VERIFIED",
+      "recommended_ml_use": "use",
+      "ml_approved": true,
+      "ml_reason": "responds monotonically to controlled throttle sweep"
+    },
+    "TPS raw": {
+      "v0.1_mapping_hypothesis": "byte7 raw/position candidate",
+      "calibration_evidence": "TPS sweep byte7 0.0 to 156.0, corr(byte6, byte7)=0.999978",
+      "identity_status": "VERIFIED",
+      "scaling_status": "VERIFIED_AS_RAW",
+      "recommended_ml_use": "use raw or calibrated percent",
+      "ml_approved": true,
+      "ml_reason": "direct throttle sweep ground truth"
+    },
+    "TPS percent": {
+      "v0.1_mapping_hypothesis": "byte7 * 100 / 255",
+      "calibration_evidence": "old formula gives full=61.18% at observed full raw=156.0; endpoint calibration gives 100%",
+      "identity_status": "VERIFIED",
+      "scaling_status": "REJECTED_OLD_FORMULA",
+      "recommended_ml_use": "use endpoint-calibrated percent, not raw*100/255",
+      "ml_approved": true,
+      "ml_reason": "approved only with calibrated closed/open endpoints"
+    },
+    "IAT": {
+      "v0.1_mapping_hypothesis": "bytes10-11 as IAT pair; byte11 - 40",
+      "calibration_evidence": "baseline byte11-40 is 36.00 C; ambient error 1.50 C; 15-min warm-up drift is small",
+      "identity_status": "HIGH_CONFIDENCE",
+      "scaling_status": "HIGH_CONFIDENCE",
+      "recommended_ml_use": "use",
+      "ml_approved": true,
+      "ml_reason": "close to ambient and does not follow coolant warm-up"
+    },
+    "ECT": {
+      "v0.1_mapping_hypothesis": "bytes8-9 generic ECT unavailable; byte13 was old ect_c source",
+      "calibration_evidence": "bytes8-9 remain FF/FF; byte13-40 starts 36.00 C (ambient error 1.50 C) and reaches warm operating temperature",
+      "identity_status": "HIGH_CONFIDENCE",
+      "scaling_status": "HIGH_CONFIDENCE",
+      "recommended_ml_use": "use",
+      "ml_approved": true,
+      "ml_reason": "controlled cold-start/warm-up strongly identifies byte13 as engine temperature"
+    },
+    "MAP voltage": {
+      "v0.1_mapping_hypothesis": "byte12 * 5 / 256 as MAP voltage",
+      "calibration_evidence": "byte12 does not show an immediate manifold-pressure transition; it slowly falls during warm-up with byte13 rising",
+      "identity_status": "REJECTED",
+      "scaling_status": "REJECTED_AS_MAP",
+      "recommended_ml_use": "exclude as MAP",
+      "ml_approved": false,
+      "ml_reason": "v0.1 MAP hypothesis failed controlled start/warm-up test"
+    },
+    "MAP engineering raw": {
+      "v0.1_mapping_hypothesis": "byte13 raw as MAP engineering value",
+      "calibration_evidence": "byte13 follows slow engine-temperature warm-up, not pressure dynamics",
+      "identity_status": "REJECTED",
+      "scaling_status": "REJECTED_AS_MAP",
+      "recommended_ml_use": "exclude as MAP",
+      "ml_approved": false,
+      "ml_reason": "byte13 is used as ECT/engine-temperature candidate instead"
+    },
+    "Battery": {
+      "v0.1_mapping_hypothesis": "byte14 / 10",
+      "calibration_evidence": "external VOM 12.75 V vs ECU mean 12.497 V",
+      "identity_status": "VERIFIED",
+      "scaling_status": "VERIFIED",
+      "recommended_ml_use": "use",
+      "ml_approved": true,
+      "ml_reason": "external VOM agreement plus start/charging behavior"
+    },
+    "Injector raw": {
+      "v0.1_mapping_hypothesis": "bytes15-16 big-endian raw",
+      "calibration_evidence": "HIGH_CONFIDENCE injector-related raw control signal; /100 milliseconds remains UNVERIFIED",
+      "identity_status": "HIGH_CONFIDENCE",
+      "scaling_status": "VERIFIED_AS_RAW",
+      "recommended_ml_use": "exclude from ML V1",
+      "ml_approved": false,
+      "ml_reason": "raw is injection-related, but engine-off nonzero TPS-sweep value and scale uncertainty make it unsuitable for V1"
+    },
+    "Injector ms": {
+      "v0.1_mapping_hypothesis": "bytes15-16 / 100 ms",
+      "calibration_evidence": "no oscilloscope or logic-analyzer pulse-width reference was provided",
+      "identity_status": "HIGH_CONFIDENCE",
+      "scaling_status": "UNVERIFIED",
+      "recommended_ml_use": "exclude",
+      "ml_approved": false,
+      "ml_reason": "milliseconds scale is not experimentally verified"
+    },
+    "Byte17": {
+      "v0.1_mapping_hypothesis": "unknown raw byte",
+      "calibration_evidence": "UNVERIFIED; relationships are reported but no physical identity is assigned",
+      "identity_status": "UNVERIFIED",
+      "scaling_status": "UNVERIFIED",
+      "recommended_ml_use": "exclude",
+      "ml_approved": false,
+      "ml_reason": "no controlled physical identity"
+    },
+    "Byte18 / speed": {
+      "v0.1_mapping_hypothesis": "speed_or_signal_raw_candidate",
+      "calibration_evidence": "REJECTED as direct vehicle speed: all calibration scenarios were stationary while byte18 is non-zero and changes",
+      "identity_status": "REJECTED",
+      "scaling_status": "REJECTED_AS_SPEED",
+      "recommended_ml_use": "exclude",
+      "ml_approved": false,
+      "ml_reason": "stationary calibration falsifies direct speed interpretation"
+    }
+  },
+  "v01_uncertainty_resolution": [
+    {
+      "v0.1_uncertainty": "RPM identity/scaling not grounded in controlled states",
+      "controlled_experiment": "engine-off/key-on + cold-start",
+      "result": "0 while off, non-zero when engine operates",
+      "new_confidence": "VERIFIED"
+    },
+    {
+      "v0.1_uncertainty": "TPS percent used raw*100/255 without endpoint validation",
+      "controlled_experiment": "engine-off TPS sweep",
+      "result": "byte6/byte7 verified as TPS-related; old percent full-scale is rejected",
+      "new_confidence": "VERIFIED"
+    },
+    {
+      "v0.1_uncertainty": "IAT location unresolved",
+      "controlled_experiment": "ambient cold baseline + warm-up",
+      "result": "bytes10-11 behave as IAT",
+      "new_confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "v0.1_uncertainty": "bytes12-13 were hypothesized as MAP",
+      "controlled_experiment": "engine-start response + 15-min warm-up",
+      "result": "MAP hypothesis rejected; bytes12-13 behave as engine-temperature thermistor pair",
+      "new_confidence": "HIGH_CONFIDENCE"
+    },
+    {
+      "v0.1_uncertainty": "battery scaling lacked external reference",
+      "controlled_experiment": "key-on VOM measurement",
+      "result": "byte14/10 agrees within a small offset",
+      "new_confidence": "VERIFIED"
+    }
+  ],
+  "old_mappings_rejected": [
+    "iat_c = byte12 - 40",
+    "MAP hypothesis for bytes12-13",
+    "speed_kmh/direct speed interpretation for byte18",
+    "tps_percent = byte7 * 100 / 255 as physical full-scale percent"
+  ],
+  "fields_promoted_verified": [
+    "RPM",
+    "TPS voltage",
+    "TPS raw",
+    "Battery"
+  ],
+  "fields_promoted_high_confidence": [
+    "TPS percent calibrated",
+    "IAT",
+    "ECT",
+    "Injector raw"
+  ],
+  "fields_unverified_unavailable": [
+    "MAP actual location",
+    "Injector ms",
+    "Byte17",
+    "Byte18 speed",
+    "bytes8-9 legacy ECT pair"
+  ],
+  "ml_readiness": {
+    "ready_for_ml": true,
+    "approved_fields": [
+      "RPM",
+      "TPS voltage",
+      "TPS raw",
+      "TPS percent",
+      "IAT",
+      "ECT",
+      "Battery"
+    ],
+    "reasons": [
+      "controlled calibration now supports a defensible non-anomaly-training signal set",
+      "use profile-derived v0.2 fields, not the old production iat_c field"
+    ]
+  },
+  "v02_profile_path": "data/decoder-audit/profiles/honda_keihin_71_17_v0.2.json"
+}

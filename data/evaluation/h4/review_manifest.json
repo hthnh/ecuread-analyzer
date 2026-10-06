@@ -1,0 +1,152 @@
+{
+  "annotation_policy": {
+    "allowed_annotations": [
+      "plausible operating variation",
+      "suspicious temporal voltage behavior",
+      "likely acquisition/data artifact",
+      "likely session-start or context-boundary artifact",
+      "insufficient evidence",
+      "requires physical verification"
+    ],
+    "detector_predictions_are_not_fault_labels": true,
+    "mechanical_causes_are_not_assigned": true
+  },
+  "items": [
+    {
+      "applicable_operating_context": {
+        "idle_closed_throttle": 329
+      },
+      "categories": [
+        "core1_core3_event"
+      ],
+      "event": {
+        "duration_ms": 832251.0,
+        "end_sequence": 3619,
+        "end_window_index": 357,
+        "start_sequence": 290,
+        "start_window_index": 29,
+        "window_count": 329
+      },
+      "event_index_within_session": 1,
+      "item_type": "temporal_event",
+      "overlap": {
+        "contextual_anomaly_window_count": 0,
+        "event_window_count": 329,
+        "iforest_anomaly_window_count": 160,
+        "temporal_anomaly_window_count": 329
+      },
+      "prediction_source": {
+        "configuration": {
+          "ewma_alpha": 0.3,
+          "max_start_frame_step": 15,
+          "min_persistence_windows": 4,
+          "min_warmup_windows": 8,
+          "modeled_contexts": [
+            "idle_closed_throttle",
+            "low_load_running",
+            "mid_load_running"
+          ],
+          "shift_threshold_volts": 0.4
+        },
+        "detector_id": "temporal_battery_shift",
+        "fault_label_assigned": false,
+        "model_version": "temporal-battery-ewma-v1-525b6bceb832"
+      },
+      "provenance": {
+        "artifacts": {
+          "metadata_sha256": "3c32ceb21e54fff2b8ae4723a9388a33d607ca8af9889987b05e5e7716ca5433",
+          "samples_sha256": "0f4bec5a42feee2dffd2619774317205655a8ccb326663e12accc72da98ff712"
+        },
+        "capture_provenance": {
+          "device_id": "esp32-shmode-calib",
+          "ecu_profile_id": "honda_keihin_71_17",
+          "source_type": "canonical",
+          "vehicle_id": "Honda SH Mode 125"
+        },
+        "decoder": {
+          "decoder_id": "honda_keihin_71_17",
+          "decoder_version": "1.0.0",
+          "decoder_version_key": "honda_keihin_71_17:1.0.0"
+        },
+        "path": "data/telemetry/calib-20260814-153329-812a3f",
+        "session_id": "calib-20260814-153329-812a3f",
+        "telemetry_schema_version": "canonical-telemetry-v2",
+        "training_evaluation_split": {
+          "ground_truth_available": false,
+          "label": null,
+          "label_source": null,
+          "metrics_reason": "not a verified binary normal/fault ground-truth label",
+          "notes": null,
+          "split": "unassigned",
+          "suitable_for_precision_recall_f1": false
+        }
+      },
+      "review_annotation": {
+        "fault_label_assigned": false,
+        "notes": null,
+        "reviewed_at": null,
+        "reviewer": null,
+        "selected": null
+      },
+      "review_item_id": "temporal-event-001",
+      "session_id": "calib-20260814-153329-812a3f",
+      "source_telemetry": {
+        "battery_voltage_median": {
+          "count": 329,
+          "max": 14.6,
+          "median": 14.5,
+          "min": 14.3
+        },
+        "battery_voltage_min": {
+          "count": 329,
+          "max": 14.3,
+          "median": 14.1,
+          "min": 13.6
+        },
+        "rpm_median": {
+          "count": 329,
+          "max": 1427.5,
+          "median": 1368.5,
+          "min": 1207.5
+        },
+        "tps_raw_median": {
+          "count": 329,
+          "max": 0.0,
+          "median": 0.0,
+          "min": 0.0
+        },
+        "tps_voltage_median": {
+          "count": 329,
+          "max": 0.488281,
+          "median": 0.488281,
+          "min": 0.488281
+        }
+      },
+      "temporal_event_statistics": {
+        "event_ids": [
+          "temporal-change-001"
+        ],
+        "max_abs_deviation": 0.7980084022,
+        "max_change_statistic": 1.9950210056,
+        "max_persistence_count": 332,
+        "threshold": 0.4
+      },
+      "temporal_state_before_event": {
+        "baseline": 13.8,
+        "change_statistic": 1.1536499087,
+        "context": "idle_closed_throttle",
+        "deviation": 0.4614599635,
+        "ewma": 14.2614599635,
+        "observed": 14.3,
+        "persistence_count": 3,
+        "temporal_status": "applicable",
+        "window_index": 28
+      }
+    }
+  ],
+  "representative_categories": {
+    "core1_core3_event": "temporal-event-001"
+  },
+  "schema_version": "temporal-review-manifest-v1",
+  "temporal_event_count": 1
+}

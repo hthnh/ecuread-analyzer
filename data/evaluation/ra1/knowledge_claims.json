@@ -1,0 +1,103 @@
+{
+  "claims": [
+    {
+      "claim": "Decoded RPM is valid enough for v2 ML context",
+      "evidence": "H3 feasibility verified signal audit",
+      "evidence_level": "internal controlled empirical evidence",
+      "support_status": "provisionally_supported",
+      "validation_needed": "Independent calibration spot checks would strengthen it."
+    },
+    {
+      "claim": "TPS voltage/raw are valid enough for v2 ML context",
+      "evidence": "H3 feasibility verified signal audit",
+      "evidence_level": "internal controlled empirical evidence",
+      "support_status": "provisionally_supported",
+      "validation_needed": "Continue to preserve raw provenance."
+    },
+    {
+      "claim": "Battery voltage is valid enough for contextual scoring",
+      "evidence": "H3 feasibility and external VOM comparison noted in calibration decisions",
+      "evidence_level": "internal controlled empirical evidence",
+      "support_status": "provisionally_supported",
+      "validation_needed": "Synchronized external voltage traces are still needed for fault validation."
+    },
+    {
+      "claim": "IAT and ECT can be used for contextual fault detection",
+      "evidence": "H3 explicitly excluded them from strict verified signal set",
+      "evidence_level": "internal observational evidence",
+      "support_status": "unsupported_for_current_contextual_detector",
+      "validation_needed": "Do not use until strict verification is established."
+    },
+    {
+      "claim": "Isolation Forest detects unusual multivariate patterns",
+      "evidence": "H2 parity and H6 sparse controlled-condition response",
+      "evidence_level": "internal controlled empirical evidence",
+      "support_status": "supported_with_limitations",
+      "validation_needed": "Not equivalent to fault diagnosis or universal accuracy."
+    },
+    {
+      "claim": "Contextual battery detector identifies context-conditioned voltage deviations",
+      "evidence": "H3/H3.1 events, stability and boundary review",
+      "evidence_level": "internal observational evidence",
+      "support_status": "provisionally_supported",
+      "validation_needed": "Manual/physical verification still needed."
+    },
+    {
+      "claim": "Temporal battery detector adds unique information",
+      "evidence": "H4/H4.1 overlap results",
+      "evidence_level": "internal observational evidence",
+      "support_status": "contradicted_for_current_data",
+      "validation_needed": "Reopen only with a temporal phenomenon current detectors miss."
+    },
+    {
+      "claim": "Temporal RPM detector should be Core 3",
+      "evidence": "H4.1 candidate selection",
+      "evidence_level": "internal observational evidence",
+      "support_status": "unsupported",
+      "validation_needed": "Low coverage and parameter sensitivity block promotion."
+    },
+    {
+      "claim": "RCA can determine root cause",
+      "evidence": "H7.3 possible cause count is zero",
+      "evidence_level": "internal + literature/surrogate review",
+      "support_status": "unsupported",
+      "validation_needed": "Requires physical/expert evidence-to-cause mappings."
+    },
+    {
+      "claim": "RCA v2 can organize evidence and checks",
+      "evidence": "H7.3 observations/symptoms/checks with no causes",
+      "evidence_level": "internal deterministic verification",
+      "support_status": "supported_with_limitations",
+      "validation_needed": "Better described as diagnostic evidence interpretation."
+    },
+    {
+      "claim": "Recurrence can prioritize checks",
+      "evidence": "H8 counterfactual: 22 cases changed check priority, 0 causal changes",
+      "evidence_level": "internal observational evidence",
+      "support_status": "provisionally_supported",
+      "validation_needed": "Prioritization is not failure probability."
+    },
+    {
+      "claim": "No detector evidence means the vehicle is healthy",
+      "evidence": "H5/H9 policy",
+      "evidence_level": "engineering policy + absence of ground truth",
+      "support_status": "unsupported",
+      "validation_needed": "No-evidence is a bounded detector result, not verified normality."
+    },
+    {
+      "claim": "DriveSafe can consume and display diagnostic research evidence without changing production analysis",
+      "evidence": "H9B DriveSafe ingestion, persistence, API and collapsed UI checks",
+      "evidence_level": "engineering integration evidence",
+      "support_status": "supported",
+      "validation_needed": "Does not validate detector accuracy, RCA causality or historical-evidence maturity."
+    },
+    {
+      "claim": "Persisted/displayed research evidence is scientifically validated",
+      "evidence": "H9B integration only",
+      "evidence_level": "engineering integration evidence",
+      "support_status": "unsupported",
+      "validation_needed": "Scientific promotion still requires physical, expert or independently validated evidence."
+    }
+  ],
+  "schema_version": "research-architecture-audit-v1.1"
+}

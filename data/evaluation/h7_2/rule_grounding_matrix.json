@@ -1,0 +1,883 @@
+{
+  "allowed_grounding_decisions": [
+    "retain",
+    "retain_with_restricted_claim",
+    "revise",
+    "remove",
+    "insufficient_grounding"
+  ],
+  "claim_levels": [
+    "observation",
+    "symptom",
+    "possible_hypothesis",
+    "supported_hypothesis",
+    "confirmed_cause"
+  ],
+  "policy": {
+    "confirmed_cause_allowed_in_this_run": false,
+    "confirmed_cause_requires_independent_physical_evidence": true,
+    "expert_judgments_populated": false,
+    "tier_d_cannot_independently_justify_strong_claim": true
+  },
+  "rules": [
+    {
+      "claim": "Unavailable/applicability gaps should return insufficient evidence instead of diagnosis.",
+      "claim_type": "evidence_limitation",
+      "contradicting_or_limiting_sources": [],
+      "counterexamples": [],
+      "decision_reason": "Rule prevents hypotheses without active evidence.",
+      "decomposed_claims": {
+        "causal_hypothesis": null,
+        "derived_symptom": "Evidence coverage is insufficient for RCA.",
+        "observed_fact": "No active detector or incomplete detector coverage is applicable.",
+        "recommended_diagnostic_check": "Restore missing features or inspect preprocessing.",
+        "required_reclassification": "none."
+      },
+      "h7_fire_count": 5,
+      "h7_rule_description": "Stop causal hypothesis generation when no active detector produced applicable evidence.",
+      "maximum_defensible_claim_level": "observation",
+      "provisional_decision": "retain",
+      "rule_id": "rca.coverage.insufficient_evidence",
+      "supporting_internal_cases": [
+        "H7 insufficient-coverage cases"
+      ],
+      "supporting_sources": [
+        "src.iso.13379-1-2025",
+        "src.knauf.2002.rule-validation",
+        "src.internal.h7-h71"
+      ]
+    },
+    {
+      "claim": "No active detector anomaly evidence should not become a healthy/faulty label or RCA.",
+      "claim_type": "evidence_limitation",
+      "contradicting_or_limiting_sources": [],
+      "counterexamples": [],
+      "decision_reason": "Rule is conservative and avoids unsupported causes.",
+      "decomposed_claims": {
+        "causal_hypothesis": null,
+        "derived_symptom": "No detector anomaly evidence in this representative region.",
+        "observed_fact": "Applicable active detectors are negative.",
+        "recommended_diagnostic_check": "Do not treat as verified healthy without independent validation.",
+        "required_reclassification": "none."
+      },
+      "h7_fire_count": 8,
+      "h7_rule_description": "Do not generate RCA hypotheses when active detectors report no anomaly evidence.",
+      "maximum_defensible_claim_level": "observation",
+      "provisional_decision": "retain",
+      "rule_id": "rca.no_evidence.no_hypothesis",
+      "supporting_internal_cases": [
+        "H7 no-anomaly-evidence cases"
+      ],
+      "supporting_sources": [
+        "src.iso.13379-1-2025",
+        "src.knauf.2002.rule-validation",
+        "src.internal.h7-h71"
+      ]
+    },
+    {
+      "claim": "Contextual battery-voltage deviation is a supported symptom; specific electrical causes remain possible hypotheses.",
+      "claim_type": "symptom_plus_possible_hypotheses",
+      "contradicting_or_limiting_sources": [
+        "src.honda.common-service-manual",
+        "src.denso.charging-diagnosis"
+      ],
+      "counterexamples": [
+        {
+          "case_id": "h7-1-expert-case-0007",
+          "observable_evidence": {
+            "battery_voltage_mean": 14.088,
+            "battery_voltage_min": 10.9,
+            "validation_label": "inconclusive"
+          },
+          "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+          "source_review_item_id": "h7-rca-review-0007",
+          "source_validation_region_type": "contextual_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0008",
+          "observable_evidence": {
+            "battery_voltage_mean": 14.088,
+            "battery_voltage_min": 10.9,
+            "validation_label": "observed_unusual_behavior"
+          },
+          "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+          "source_review_item_id": "h7-rca-review-0008",
+          "source_validation_region_type": "contextual_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0009",
+          "observable_evidence": {
+            "battery_voltage_mean": 12.5,
+            "battery_voltage_min": 12.5,
+            "validation_label": "controlled_condition"
+          },
+          "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+          "source_review_item_id": "h7-rca-review-0009",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0010",
+          "observable_evidence": {
+            "battery_voltage_mean": 10.8,
+            "battery_voltage_min": 10.7,
+            "validation_label": "controlled_condition"
+          },
+          "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+          "source_review_item_id": "h7-rca-review-0010",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0011",
+          "observable_evidence": {
+            "battery_voltage_mean": 13.954,
+            "battery_voltage_min": 10.6,
+            "validation_label": "inconclusive"
+          },
+          "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+          "source_review_item_id": "h7-rca-review-0011",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0012",
+          "observable_evidence": {
+            "battery_voltage_mean": 13.33,
+            "battery_voltage_min": 10.6,
+            "validation_label": "inconclusive"
+          },
+          "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+          "source_review_item_id": "h7-rca-review-0012",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0013",
+          "observable_evidence": {
+            "battery_voltage_mean": 14.262,
+            "battery_voltage_min": 11.9,
+            "validation_label": "observed_unusual_behavior"
+          },
+          "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+          "source_review_item_id": "h7-rca-review-0013",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0014",
+          "observable_evidence": {
+            "battery_voltage_mean": 13.992,
+            "battery_voltage_min": 10.5,
+            "validation_label": "inconclusive"
+          },
+          "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+          "source_review_item_id": "h7-rca-review-0014",
+          "source_validation_region_type": "overlapping_event"
+        }
+      ],
+      "decision_reason": "Retain voltage symptom but split candidate causes and require follow-up checks.",
+      "decomposed_claims": {
+        "causal_hypothesis": "Electrical supply variation remains broad; charging, battery, load, wiring and supply path are alternatives.",
+        "derived_symptom": "Battery/supply-voltage behavior differs from contextual reference statistics.",
+        "observed_fact": "Contextual battery detector positive with top voltage deviation and operating context.",
+        "recommended_diagnostic_check": "External voltage measurement, electrical load notes and service-manual charging checks.",
+        "required_reclassification": "separate symptom from candidate causes."
+      },
+      "h7_fire_count": 8,
+      "h7_rule_description": "Generate an electrical-supply variation hypothesis from contextual battery-voltage deviation.",
+      "maximum_defensible_claim_level": "symptom",
+      "provisional_decision": "retain_with_restricted_claim",
+      "rule_id": "rca.electrical.contextual_voltage_deviation",
+      "supporting_internal_cases": [
+        "H6 contextual-positive voltage cases",
+        "H7 contextual-only and overlapping events"
+      ],
+      "supporting_sources": [
+        "src.honda.common-service-manual",
+        "src.denso.charging-diagnosis",
+        "src.jardine.2006.cbm-review",
+        "src.internal.h6"
+      ]
+    },
+    {
+      "claim": "Isolation Forest outside-reference output indicates a detector observation, not a causal hypothesis.",
+      "claim_type": "detector_observation",
+      "contradicting_or_limiting_sources": [
+        "src.knauf.2002.rule-validation"
+      ],
+      "counterexamples": [
+        {
+          "case_id": "h7-1-expert-case-0001",
+          "observable_evidence": {
+            "region": "isolation_forest_only_event",
+            "source_label": "known_abnormal",
+            "validation_label": "controlled_condition"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0001",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0002",
+          "observable_evidence": {
+            "region": "isolation_forest_only_event",
+            "source_label": null,
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0002",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0004",
+          "observable_evidence": {
+            "region": "isolation_forest_only_event",
+            "source_label": null,
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0004",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0005",
+          "observable_evidence": {
+            "region": "isolation_forest_only_event",
+            "source_label": null,
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0005",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0006",
+          "observable_evidence": {
+            "region": "isolation_forest_only_event",
+            "source_label": null,
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0006",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0009",
+          "observable_evidence": {
+            "region": "overlapping_event",
+            "source_label": "known_abnormal",
+            "validation_label": "controlled_condition"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0009",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0010",
+          "observable_evidence": {
+            "region": "overlapping_event",
+            "source_label": "known_abnormal",
+            "validation_label": "controlled_condition"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0010",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0011",
+          "observable_evidence": {
+            "region": "overlapping_event",
+            "source_label": "too_short",
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0011",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0012",
+          "observable_evidence": {
+            "region": "overlapping_event",
+            "source_label": null,
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0012",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0014",
+          "observable_evidence": {
+            "region": "overlapping_event",
+            "source_label": null,
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0014",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0015",
+          "observable_evidence": {
+            "region": "disagreement_region",
+            "source_label": null,
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0015",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0016",
+          "observable_evidence": {
+            "region": "disagreement_region",
+            "source_label": null,
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0016",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0019",
+          "observable_evidence": {
+            "region": "disagreement_region",
+            "source_label": "unknown",
+            "validation_label": "inconclusive"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0019",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0020",
+          "observable_evidence": {
+            "region": "insufficient_coverage_region",
+            "source_label": "known_abnormal",
+            "validation_label": "controlled_condition"
+          },
+          "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+          "source_review_item_id": "h7-rca-review-0020",
+          "source_validation_region_type": "insufficient_coverage_region"
+        }
+      ],
+      "decision_reason": "Move outside-reference concept from hypothesis to observation/evidence.",
+      "decomposed_claims": {
+        "causal_hypothesis": null,
+        "derived_symptom": "Representative window is unusual relative to the IF reference model.",
+        "observed_fact": "Isolation Forest positive finding with detector-local score and unusual feature list.",
+        "recommended_diagnostic_check": "Review listed feature families against raw telemetry and operator/session notes.",
+        "required_reclassification": "outside-reference wording belongs to observation/evidence, not cause."
+      },
+      "h7_fire_count": 18,
+      "h7_rule_description": "Generate a broad multivariate-pattern hypothesis from Isolation Forest anomaly evidence.",
+      "maximum_defensible_claim_level": "observation",
+      "provisional_decision": "revise",
+      "rule_id": "rca.iforest.multivariate_pattern",
+      "supporting_internal_cases": [
+        "H7 IF-positive review items",
+        "H6 controlled high ECT/high RPM/load/low battery cases"
+      ],
+      "supporting_sources": [
+        "src.iso.13379-1-2025",
+        "src.jardine.2006.cbm-review",
+        "src.internal.h6"
+      ]
+    },
+    {
+      "claim": "RPM/TPS-related IF features can describe operating context, but do not independently imply abnormal throttle behavior.",
+      "claim_type": "operating_context_observation",
+      "contradicting_or_limiting_sources": [
+        "src.assumption.operating-context"
+      ],
+      "counterexamples": [
+        {
+          "case_id": "h7-1-expert-case-0001",
+          "observable_evidence": {
+            "rpm_median": 7915.0,
+            "source_label": "known_abnormal",
+            "tps_raw_median": 114.5,
+            "tps_voltage_median": 2.28515625
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0001",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0002",
+          "observable_evidence": {
+            "rpm_median": 1239.5,
+            "source_label": null,
+            "tps_raw_median": 0.0,
+            "tps_voltage_median": 0.48828125
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0002",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0004",
+          "observable_evidence": {
+            "rpm_median": 0.0,
+            "source_label": null,
+            "tps_raw_median": 0.0,
+            "tps_voltage_median": 0.48828125
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0004",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0005",
+          "observable_evidence": {
+            "rpm_median": 0.0,
+            "source_label": null,
+            "tps_raw_median": 0.0,
+            "tps_voltage_median": 0.48828125
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0005",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0009",
+          "observable_evidence": {
+            "rpm_median": 2921.0,
+            "source_label": "known_abnormal",
+            "tps_raw_median": 39.0,
+            "tps_voltage_median": 0.87890625
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0009",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0010",
+          "observable_evidence": {
+            "rpm_median": 2052.5,
+            "source_label": "known_abnormal",
+            "tps_raw_median": 27.0,
+            "tps_voltage_median": 0.625
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0010",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0012",
+          "observable_evidence": {
+            "rpm_median": 1216.0,
+            "source_label": null,
+            "tps_raw_median": 0.0,
+            "tps_voltage_median": 0.48828125
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0012",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0015",
+          "observable_evidence": {
+            "rpm_median": 1424.0,
+            "source_label": null,
+            "tps_raw_median": 0.0,
+            "tps_voltage_median": 0.48828125
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0015",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0016",
+          "observable_evidence": {
+            "rpm_median": 1383.5,
+            "source_label": null,
+            "tps_raw_median": 0.0,
+            "tps_voltage_median": 0.48828125
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0016",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0018",
+          "observable_evidence": {
+            "rpm_median": 6813.0,
+            "source_label": "high_rpm_candidate",
+            "tps_raw_median": 74.0,
+            "tps_voltage_median": 2.36328125
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0018",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0019",
+          "observable_evidence": {
+            "rpm_median": 6501.5,
+            "source_label": "unknown",
+            "tps_raw_median": 53.0,
+            "tps_voltage_median": 1.8359375
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0019",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0020",
+          "observable_evidence": {
+            "rpm_median": 7915.0,
+            "source_label": "known_abnormal",
+            "tps_raw_median": 114.5,
+            "tps_voltage_median": 2.28515625
+          },
+          "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+          "source_review_item_id": "h7-rca-review-0020",
+          "source_validation_region_type": "insufficient_coverage_region"
+        }
+      ],
+      "decision_reason": "Require context evidence that distinguishes normal operator demand from unexplained behavior.",
+      "decomposed_claims": {
+        "causal_hypothesis": "Only possible if evidence shows unexplained behavior rather than normal operator demand.",
+        "derived_symptom": "Operating-state variation may be present.",
+        "observed_fact": "IF unusual features include RPM/TPS family and telemetry snapshot.",
+        "recommended_diagnostic_check": "Compare RPM/TPS traces with operator input and operating conditions.",
+        "required_reclassification": "gate causal hypothesis on contextual/operator evidence."
+      },
+      "h7_fire_count": 12,
+      "h7_rule_description": "Generate a throttle/operating-state hypothesis when IF evidence highlights RPM or TPS features.",
+      "maximum_defensible_claim_level": "observation",
+      "provisional_decision": "revise",
+      "rule_id": "rca.operating_state.throttle_related_pattern",
+      "supporting_internal_cases": [
+        "H7 IF-positive events with RPM/TPS features"
+      ],
+      "supporting_sources": [
+        "src.iso.13379-1-2025",
+        "src.internal.h6",
+        "src.assumption.operating-context"
+      ]
+    },
+    {
+      "claim": "Constant-signal features are observations; acquisition/data-quality hypotheses require integrity evidence.",
+      "claim_type": "data_quality_observation",
+      "contradicting_or_limiting_sources": [
+        "src.sensor-fdd.stuck-signal"
+      ],
+      "counterexamples": [
+        {
+          "case_id": "h7-1-expert-case-0001",
+          "observable_evidence": {
+            "duration_ms": 299750.0,
+            "features": "tps_raw_min;battery_voltage_median;tps_voltage_min;battery_voltage_constant_signal;ect_c_delta",
+            "validation_label": "controlled_condition"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0001",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0002",
+          "observable_evidence": {
+            "duration_ms": 394752.0,
+            "features": "tps_raw_constant_signal;tps_voltage_constant_signal;battery_voltage_median;ect_c_first;ect_c_last",
+            "validation_label": "inconclusive"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0002",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0003",
+          "observable_evidence": {
+            "duration_ms": 292500.0,
+            "features": "ect_c_delta;iat_c_constant_signal;iat_c_delta;iat_c_max_absolute_diff;iat_c_range",
+            "validation_label": "observed_unusual_behavior"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0003",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0004",
+          "observable_evidence": {
+            "duration_ms": 185250.0,
+            "features": "battery_voltage_median;battery_voltage_constant_signal;rpm_constant_signal;tps_raw_constant_signal;tps_voltage_constant_signal",
+            "validation_label": "inconclusive"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0004",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0005",
+          "observable_evidence": {
+            "duration_ms": 117250.0,
+            "features": "battery_voltage_median;battery_voltage_constant_signal;rpm_constant_signal;tps_raw_constant_signal;tps_voltage_constant_signal",
+            "validation_label": "inconclusive"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0005",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0009",
+          "observable_evidence": {
+            "duration_ms": 299750.0,
+            "features": "tps_raw_min;ect_c_delta;battery_voltage_median;battery_voltage_constant_signal;iat_c_constant_signal",
+            "validation_label": "controlled_condition"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0009",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0012",
+          "observable_evidence": {
+            "duration_ms": 14748.0,
+            "features": "tps_raw_constant_signal;tps_voltage_constant_signal;battery_voltage_median;battery_voltage_mean;ect_c_first",
+            "validation_label": "inconclusive"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0012",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0013",
+          "observable_evidence": {
+            "duration_ms": 14750.0,
+            "features": "ect_c_delta;iat_c_constant_signal;iat_c_delta;iat_c_max_absolute_diff;iat_c_range",
+            "validation_label": "observed_unusual_behavior"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0013",
+          "source_validation_region_type": "overlapping_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0015",
+          "observable_evidence": {
+            "duration_ms": 37252.0,
+            "features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;tps_raw_constant_signal;tps_voltage_constant_signal",
+            "validation_label": "inconclusive"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0015",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0016",
+          "observable_evidence": {
+            "duration_ms": 34749.0,
+            "features": "ect_c_delta;tps_raw_constant_signal;tps_voltage_constant_signal;ect_c_slope;ect_c_first",
+            "validation_label": "inconclusive"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0016",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0017",
+          "observable_evidence": {
+            "duration_ms": 29753.0,
+            "features": "ect_c_delta;iat_c_constant_signal;iat_c_delta;iat_c_max_absolute_diff;iat_c_range",
+            "validation_label": "observed_unusual_behavior"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0017",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0018",
+          "observable_evidence": {
+            "duration_ms": 29752.0,
+            "features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;tps_raw_min;iat_c_std",
+            "validation_label": "observed_unusual_behavior"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0018",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0019",
+          "observable_evidence": {
+            "duration_ms": 29749.0,
+            "features": "tps_raw_min;iat_c_constant_signal;iat_c_delta;iat_c_max_absolute_diff;iat_c_range",
+            "validation_label": "inconclusive"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0019",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0020",
+          "observable_evidence": {
+            "duration_ms": 299750.0,
+            "features": "tps_raw_min;battery_voltage_median;tps_voltage_min;battery_voltage_constant_signal;ect_c_delta",
+            "validation_label": "controlled_condition"
+          },
+          "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+          "source_review_item_id": "h7-rca-review-0020",
+          "source_validation_region_type": "insufficient_coverage_region"
+        }
+      ],
+      "decision_reason": "Constant/low-variance signal alone is insufficient for acquisition-artifact RCA.",
+      "decomposed_claims": {
+        "causal_hypothesis": "Acquisition artifact only if additional integrity evidence is present.",
+        "derived_symptom": "A signal was low-variance or constant over the representative window.",
+        "observed_fact": "IF unusual features include constant_signal feature names.",
+        "recommended_diagnostic_check": "Check timestamps, raw-frame patterns, checksum/header failures and plausible stable-operation alternatives.",
+        "required_reclassification": "constant signal alone remains observed feature."
+      },
+      "h7_fire_count": 14,
+      "h7_rule_description": "Generate a possible acquisition/data-quality hypothesis for IF events involving constant-signal features.",
+      "maximum_defensible_claim_level": "observation",
+      "provisional_decision": "revise",
+      "rule_id": "rca.data_quality.constant_signal_pattern",
+      "supporting_internal_cases": [
+        "H7 IF events with constant_signal feature names"
+      ],
+      "supporting_sources": [
+        "src.sensor-fdd.stuck-signal",
+        "src.rulebased.vv.1994",
+        "src.internal.h6"
+      ]
+    },
+    {
+      "claim": "Detector disagreement should be preserved as scope difference/evidence relationship without forced consensus.",
+      "claim_type": "evidence_relationship",
+      "contradicting_or_limiting_sources": [],
+      "counterexamples": [
+        {
+          "case_id": "h7-1-expert-case-0002",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "isolation_forest_only_event"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0002",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0003",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "isolation_forest_only_event"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0003",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0006",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "isolation_forest_only_event"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0006",
+          "source_validation_region_type": "isolation_forest_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0007",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "contextual_only_event"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0007",
+          "source_validation_region_type": "contextual_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0008",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "contextual_only_event"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0008",
+          "source_validation_region_type": "contextual_only_event"
+        },
+        {
+          "case_id": "h7-1-expert-case-0015",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "disagreement_region"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0015",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0016",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "disagreement_region"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0016",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0017",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "disagreement_region"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0017",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0018",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "disagreement_region"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0018",
+          "source_validation_region_type": "disagreement_region"
+        },
+        {
+          "case_id": "h7-1-expert-case-0019",
+          "observable_evidence": {
+            "event_state": "detector_disagreement",
+            "region": "disagreement_region"
+          },
+          "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+          "source_review_item_id": "h7-rca-review-0019",
+          "source_validation_region_type": "disagreement_region"
+        }
+      ],
+      "decision_reason": "Rule is conservative and prevents unsupported fusion.",
+      "decomposed_claims": {
+        "causal_hypothesis": null,
+        "derived_symptom": "Detectors evaluate different phenomena/scopes.",
+        "observed_fact": "At least one active detector is positive and at least one is negative.",
+        "recommended_diagnostic_check": "Review each detector in its own score semantics.",
+        "required_reclassification": "none."
+      },
+      "h7_fire_count": 10,
+      "h7_rule_description": "Preserve detector disagreement without forcing a shared diagnosis.",
+      "maximum_defensible_claim_level": "observation",
+      "provisional_decision": "retain",
+      "rule_id": "rca.detectors.disagreement_preservation",
+      "supporting_internal_cases": [
+        "H7 detector disagreement cases"
+      ],
+      "supporting_sources": [
+        "src.iso.13379-1-2025",
+        "src.rulebased.vv.1994",
+        "src.internal.h7-h71"
+      ]
+    }
+  ],
+  "schema_version": "rca-rule-grounding-matrix-v1",
+  "summary": {
+    "decision_counts": {
+      "retain": 3,
+      "retain_with_restricted_claim": 1,
+      "revise": 3
+    },
+    "maximum_claim_level_counts": {
+      "observation": 6,
+      "symptom": 1
+    },
+    "rule_count": 7
+  }
+}

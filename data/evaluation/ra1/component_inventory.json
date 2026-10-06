@@ -1,0 +1,342 @@
+{
+  "components": [
+    {
+      "dependencies": [
+        "ECU decoder",
+        "canonical loaders"
+      ],
+      "downstream_consumers": [
+        "feature engineering",
+        "analysis API",
+        "evaluation manifests"
+      ],
+      "inputs": [
+        "decoded ECU samples",
+        "decoder metadata",
+        "signal definitions"
+      ],
+      "location": "app/domain/telemetry.py",
+      "maturity": "High for data shape; signal validity varies by signal and schema.",
+      "name": "Canonical telemetry schema",
+      "outputs": [
+        "CanonicalTelemetrySession",
+        "TelemetrySample"
+      ],
+      "responsibility": "Defines the signal contract and verified/provisional signal metadata used by downstream features.",
+      "state": "production",
+      "status": "stable_foundation"
+    },
+    {
+      "dependencies": [
+        "canonical telemetry",
+        "windowing"
+      ],
+      "downstream_consumers": [
+        "Isolation Forest",
+        "contextual detector",
+        "temporal candidates"
+      ],
+      "inputs": [
+        "canonical telemetry frame",
+        "window boundaries",
+        "schema signal columns"
+      ],
+      "location": "app/ml/features.py",
+      "maturity": "High for deterministic feature computation; not sufficient for waveform-level causal inference.",
+      "name": "Window feature engineering",
+      "outputs": [
+        "per-window statistical feature frame"
+      ],
+      "responsibility": "Computes fixed per-window statistical and relationship features used by detectors.",
+      "state": "production",
+      "status": "stable_foundation"
+    },
+    {
+      "dependencies": [
+        "detector contract",
+        "prepared features"
+      ],
+      "downstream_consumers": [
+        "production inference",
+        "offline benchmarks",
+        "evidence aggregation"
+      ],
+      "inputs": [
+        "prepared feature frame",
+        "registered detector instances",
+        "DetectorContext"
+      ],
+      "location": "app/ml/harness.py",
+      "maturity": "Engineering-validated; it does not train, vote, fuse scores, or choose root causes.",
+      "name": "Model Harness",
+      "outputs": [
+        "HarnessResult",
+        "DetectorResult summaries",
+        "per-window detector payloads"
+      ],
+      "responsibility": "Runs enabled detectors independently and preserves ok/skipped/failed states.",
+      "state": "production_infrastructure",
+      "status": "stable_foundation"
+    },
+    {
+      "dependencies": [
+        "model artifacts",
+        "scaler",
+        "feature schema"
+      ],
+      "downstream_consumers": [
+        "public analysis response",
+        "diagnostic evidence",
+        "offline benchmarks"
+      ],
+      "inputs": [
+        "prepared model feature columns",
+        "isolation forest artifact",
+        "robust scaler",
+        "model metadata"
+      ],
+      "location": "app/ml/iforest_detector.py",
+      "maturity": "Parity-validated against pre-H1 handoff; empirical evidence is controlled and sparse.",
+      "name": "Isolation Forest detector",
+      "outputs": [
+        "prediction",
+        "score_sample",
+        "decision_score",
+        "window_health_score",
+        "unusual features"
+      ],
+      "responsibility": "Production compatibility baseline for multivariate anomaly detection.",
+      "state": "production",
+      "status": "retain_with_limitations"
+    },
+    {
+      "dependencies": [
+        "verified signals",
+        "nominal/reference split"
+      ],
+      "downstream_consumers": [
+        "evidence aggregation",
+        "RCA v2 research",
+        "historical evidence"
+      ],
+      "inputs": [
+        "RPM median",
+        "TPS raw/voltage median",
+        "battery voltage window statistics",
+        "reference distribution"
+      ],
+      "location": "app/ml/contextual_detector.py",
+      "maturity": "Stable under H3.1 reference review, but not production-gating and not a fault detector.",
+      "name": "Contextual Battery detector",
+      "outputs": [
+        "contextual robust-z score",
+        "context",
+        "threshold",
+        "evidence"
+      ],
+      "responsibility": "Research detector for battery-voltage deviations within explicit RPM/TPS operating contexts.",
+      "state": "research_active_shadow",
+      "status": "retain_with_limitations"
+    },
+    {
+      "dependencies": [
+        "prepared features",
+        "context assignment"
+      ],
+      "downstream_consumers": [
+        "H4/H4.1 evaluation artifacts only"
+      ],
+      "inputs": [
+        "within-session battery voltage sequence",
+        "operating context"
+      ],
+      "location": "app/ml/temporal_detector.py",
+      "maturity": "Stable one-event behavior, but no unique event-level value beyond active detectors.",
+      "name": "Temporal Battery Shift detector",
+      "outputs": [
+        "EWMA shift statistic",
+        "temporal event evidence"
+      ],
+      "responsibility": "Offline candidate for sustained battery-voltage changes.",
+      "state": "rejected_research_candidate",
+      "status": "archive_for_reproducibility"
+    },
+    {
+      "dependencies": [
+        "prepared features"
+      ],
+      "downstream_consumers": [
+        "H4.1 evaluation artifacts only"
+      ],
+      "inputs": [
+        "closed-throttle RPM dispersion features",
+        "TPS features"
+      ],
+      "location": "app/ml/rpm_stability_detector.py",
+      "maturity": "Feasible but low-coverage, parameter-sensitive, and not justified as Core 3.",
+      "name": "Temporal RPM Stability detector",
+      "outputs": [
+        "RPM stability statistic",
+        "temporal event evidence"
+      ],
+      "responsibility": "Offline candidate for sustained RPM variability increases during closed-throttle running.",
+      "state": "rejected_research_candidate",
+      "status": "archive_for_reproducibility"
+    },
+    {
+      "dependencies": [
+        "Isolation Forest",
+        "Contextual Battery"
+      ],
+      "downstream_consumers": [
+        "RCA v2",
+        "historical evidence",
+        "diagnostic payload examples"
+      ],
+      "inputs": [
+        "active detector DetectorResults",
+        "window telemetry snapshot"
+      ],
+      "location": "app/ml/evidence_aggregation.py",
+      "maturity": "Useful for coverage/disagreement semantics; not a production decision-maker.",
+      "name": "Evidence Aggregator",
+      "outputs": [
+        "per-window aggregate state",
+        "coverage status",
+        "detector disagreement records"
+      ],
+      "responsibility": "Preserves heterogeneous detector findings without fusion or consensus diagnosis.",
+      "state": "research_active_shadow",
+      "status": "advance_research"
+    },
+    {
+      "dependencies": [
+        "evidence aggregation"
+      ],
+      "downstream_consumers": [
+        "H7 reproducibility artifacts"
+      ],
+      "inputs": [
+        "H5 aggregate events",
+        "detector evidence"
+      ],
+      "location": "app/ml/root_cause_analysis.py",
+      "maturity": "Preserved for reproducibility; causal language was not supported by evidence.",
+      "name": "RCA v1",
+      "outputs": [
+        "possible hypotheses",
+        "review manifest"
+      ],
+      "responsibility": "Initial deterministic diagnostic hypothesis prototype.",
+      "state": "superseded",
+      "status": "rejected_semantics"
+    },
+    {
+      "dependencies": [
+        "evidence aggregation",
+        "literature/surrogate rule review"
+      ],
+      "downstream_consumers": [
+        "historical evidence",
+        "diagnostic evidence payloads"
+      ],
+      "inputs": [
+        "H5/H6/H8 cases",
+        "RCA v2 rules",
+        "source registry"
+      ],
+      "location": "app/ml/root_cause_analysis_v2.py",
+      "maturity": "Research-worthy diagnostic interpretation; current possible-cause output count is zero.",
+      "name": "RCA v2",
+      "outputs": [
+        "observations",
+        "symptoms",
+        "possible causes",
+        "recommended checks",
+        "limitations"
+      ],
+      "responsibility": "Evidence-grounded interpretation engine that avoids unsupported causal claims.",
+      "state": "research_active_shadow",
+      "status": "promote_for_research"
+    },
+    {
+      "dependencies": [
+        "RCA v2",
+        "H5 aggregate events",
+        "evaluation manifest"
+      ],
+      "downstream_consumers": [
+        "H9 research payloads"
+      ],
+      "inputs": [
+        "prior structured observations",
+        "RCA v2 results",
+        "temporal cutoff"
+      ],
+      "location": "app/evaluation/historical_evidence.py",
+      "maturity": "Adds prioritization and recurrence context; does not create causes.",
+      "name": "Historical Evidence",
+      "outputs": [
+        "recurrence",
+        "persistence",
+        "trend",
+        "check-priority context"
+      ],
+      "responsibility": "Offline cross-session evidence layer with leakage prevention and provenance.",
+      "state": "research_active_shadow",
+      "status": "advance_research"
+    },
+    {
+      "dependencies": [
+        "production inference summaries",
+        "research payloads"
+      ],
+      "downstream_consumers": [
+        "analysis API",
+        "session processor",
+        "DriveSafe Diagnostic Evidence Consumer"
+      ],
+      "inputs": [
+        "detector summaries",
+        "optional research results",
+        "session provenance"
+      ],
+      "location": "app/integration/diagnostic_evidence.py",
+      "maturity": "Analyzer-side contract is additive and DriveSafe consumes it without changing production anomaly semantics.",
+      "name": "Diagnostic Evidence Contract",
+      "outputs": [
+        "versioned diagnostic_evidence JSON"
+      ],
+      "responsibility": "Backward-compatible analyzer-side packaging for DriveSafe-style consumers.",
+      "state": "integrated_contract",
+      "status": "integrated_with_drivesafe"
+    },
+    {
+      "dependencies": [
+        "Diagnostic Evidence Contract",
+        "DriveSafe AnalysisResult JSON persistence"
+      ],
+      "downstream_consumers": [
+        "DriveSafe session detail API",
+        "DriveSafe session-detail UI"
+      ],
+      "inputs": [
+        "nullable diagnostic_evidence JSON",
+        "stored AnalysisResult.result_summary",
+        "session analysis snapshot"
+      ],
+      "location": "DriveSafe Web App: services/analysis_submission.py, services/pi_sync.py, services/analysis.py, templates/session_detail.html",
+      "maturity": "Engineering integration is complete; it is not scientific validation of detector accuracy, RCA causes or historical maturity.",
+      "name": "DriveSafe Diagnostic Evidence Consumer",
+      "outputs": [
+        "raw diagnostic_evidence API field",
+        "diagnostic_evidence_view",
+        "collapsed research-evidence UI"
+      ],
+      "responsibility": "Ingests, persists, serializes and renders research evidence while preserving existing status/health behavior.",
+      "state": "integrated_research_presentation",
+      "status": "integrated_with_boundaries"
+    }
+  ],
+  "schema_version": "research-architecture-audit-v1.1"
+}

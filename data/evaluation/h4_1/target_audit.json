@@ -1,0 +1,171 @@
+{
+  "applicability_conditions": {
+    "closed_or_near_closed_tps_raw": "tps_raw_median <= 5.0",
+    "closed_or_near_closed_tps_voltage": "tps_voltage_median <= 0.65",
+    "engine_running": "rpm_median >= 500.0",
+    "max_start_frame_step": 15,
+    "minimum_run_windows": 12
+  },
+  "cadence": {
+    "window_start_frame_step": {
+      "count": 12819,
+      "max": 10.0,
+      "median": 10.0,
+      "min": 10.0
+    }
+  },
+  "candidate_id": "temporal_rpm_stability",
+  "closed_throttle_runs": {
+    "adequate_for_candidate": 50,
+    "contexts_by_session": {
+      "calib-20260814-153329-812a3f": 1,
+      "calib-real-run-r0024d0-c93a5fb4-part-01": 2,
+      "calib-real-run-r0024d0-c93a5fb4-part-02": 4,
+      "calib-real-run-r1032c0-849aa7f8-part-01": 4,
+      "calib-real-run-r1032c0-849aa7f8-part-02": 2,
+      "calib-real-run-session-000002-part-01": 3,
+      "calib-real-run-session-000005-part-01": 3,
+      "calib-real-run-session-000007-part-01": 1,
+      "ride-20260902-1032": 1,
+      "ride-20260904-1623": 4,
+      "ride-20260907-1157": 1,
+      "ride-20260908-1431": 1,
+      "ride-20260909-1748": 1,
+      "ride-20260910-0922": 1,
+      "ride-20260911-1239": 1,
+      "ride-20260911-1257": 5,
+      "ride-20260911-1316": 5,
+      "ride-20260912-1556": 1,
+      "ride-20260913-0730": 1,
+      "ride-20260913-0826": 1,
+      "ride-20260914-1047": 1,
+      "ride-20260919-1147": 2,
+      "ride-20260920-1446": 4
+    },
+    "run_length_windows": {
+      "count": 405,
+      "max": 358.0,
+      "median": 4.0,
+      "min": 1.0
+    },
+    "total": 405
+  },
+  "configuration": {
+    "closed_tps_raw_max": 5.0,
+    "closed_tps_voltage_max": 0.65,
+    "dispersion_scale_floor_rpm": 100.0,
+    "ewma_alpha": 0.3,
+    "max_start_frame_step": 15,
+    "min_dispersion_increase_rpm": 250.0,
+    "min_engine_running_rpm": 500.0,
+    "min_persistence_windows": 4,
+    "min_warmup_windows": 8,
+    "robust_z_threshold": 3.0
+  },
+  "data_availability": {
+    "evaluated_session_count": 40,
+    "excluded_sessions": [
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "calib-real-run-session-000001"
+      },
+      {
+        "reason": "duplicate_of_reference_capture",
+        "session_id": "calib-real-run-session-000003"
+      },
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "calib-real-run-session-000004"
+      },
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "calib-real-run-session-000006"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260902-1050"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260903-1349"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260905-0840"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260905-0858"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260908-1449"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260911-1335"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260913-0748"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260913-0807"
+      },
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "ride-20260918-0815"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260919-1129"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260919-1206"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260919-1225"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260920-1504"
+      }
+    ],
+    "feature_complete_session_count": 35,
+    "sessions_missing_required_features": {
+      "esp-fake-low-battery-20260920144735": [
+        "tps_raw_median"
+      ],
+      "esp-fake-overheat-20260920144735": [
+        "tps_raw_median"
+      ],
+      "esp-fake-rpm-spike-20260920144735": [
+        "tps_raw_median"
+      ],
+      "esp-real-session_000018-20260920144735": [
+        "tps_raw_median"
+      ],
+      "esp-real-session_000024-20260920144735": [
+        "tps_raw_median"
+      ]
+    },
+    "v2_sessions_with_verified_required_signals": 52
+  },
+  "feasibility_reason": "Closed-throttle running segments are long enough for warm-up plus persistence.",
+  "feasible": true,
+  "schema_version": "temporal-rpm-target-audit-v1",
+  "signals_not_used": {
+    "battery_voltage": "excluded from Candidate B target to remain distinct from Core 2 and Candidate A",
+    "ect_c": "not strictly verified",
+    "iat_c": "not strictly verified"
+  },
+  "target": "sustained RPM variability increase within closed-throttle running segments",
+  "verified_signals_used": [
+    "rpm",
+    "tps_voltage",
+    "tps_raw"
+  ]
+}

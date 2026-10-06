@@ -1,0 +1,26 @@
+services:
+  ecu-analyzer:
+    build: .
+    container_name: ecu-analyzer
+    restart: unless-stopped
+    expose:
+      - "8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      DATA_DIR: /app/data
+      MODEL_DIR: /app/data/models
+      MAX_UPLOAD_MB: 25
+      WINDOW_SIZE_SAMPLES: 50
+      WINDOW_STEP_SAMPLES: 10
+      ISOLATION_N_ESTIMATORS: 200
+      ISOLATION_CONTAMINATION: 0.03
+      ALLOW_MODEL_TRAINING_API: "false"
+    networks:
+      - default
+      - drisafe
+
+networks:
+  drisafe:
+    external: true
+    name: drisafe_default

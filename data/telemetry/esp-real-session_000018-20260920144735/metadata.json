@@ -1,0 +1,45 @@
+{
+  "session_id": "esp-real-session_000018-20260920144735",
+  "vehicle_id": "HTTP Sim Honda",
+  "device_id": "esp-demo-20260920144735",
+  "ecu_profile_id": "honda_keihin_legacy_29",
+  "decoder_id": "honda_keihin_legacy_29",
+  "decoder_version": "0.1.0",
+  "telemetry_schema_version": "canonical-telemetry-v1",
+  "sampling": {
+    "sample_interval_ms": 250.0,
+    "sampling_rate_hz": null
+  },
+  "signal_definitions": {
+    "rpm": {
+      "status": "high_confidence_candidate",
+      "unit": "rpm"
+    },
+    "tps_voltage": {
+      "status": "high_confidence_candidate",
+      "unit": "V"
+    },
+    "tps_raw_candidate": {
+      "status": "candidate",
+      "unit": "raw"
+    },
+    "battery_voltage": {
+      "status": "high_confidence_candidate",
+      "unit": "V"
+    },
+    "iat_c": {
+      "status": "high_confidence_candidate",
+      "unit": "degC"
+    },
+    "ect_c_candidate": {
+      "status": "candidate",
+      "unit": "degC"
+    },
+    "map_raw": {
+      "status": "candidate",
+      "unit": "raw"
+    }
+  },
+  "sample_count": 17976,
+  "created_at": "2026-09-20T15:37:35.666728+00:00"
+}

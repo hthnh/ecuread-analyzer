@@ -1,0 +1,40 @@
+{
+  "candidate_v2_anomalies": [],
+  "checks": {
+    "conflicting_rules_checked": true,
+    "cyclic_causal_reasoning_checked": true,
+    "duplicate_observation_cause_concepts_checked": true,
+    "hypotheses_without_contradiction_path_checked": true,
+    "hypotheses_without_evidence_checked": true,
+    "recommended_checks_related_to_triggering_evidence_checked": true,
+    "redundant_rules_checked": true,
+    "unreachable_rules_checked": true
+  },
+  "h7_v1_structural_anomalies_addressed_by_candidate_v2": [
+    {
+      "affected_rules": [
+        "rca.iforest.multivariate_pattern",
+        "rca.data_quality.constant_signal_pattern"
+      ],
+      "anomaly_id": "v1_duplicate_observation_cause_concepts",
+      "description": "H7 v1 IF and constant-signal hypotheses duplicate detector observations as causal hypotheses.",
+      "severity": "resolved_in_candidate_v2"
+    },
+    {
+      "affected_rules": [
+        "rca.operating_state.throttle_related_pattern",
+        "rca.data_quality.constant_signal_pattern"
+      ],
+      "anomaly_id": "v1_rules_without_strong_contradiction_gate",
+      "description": "H7 v1 operating-state and data-quality hypotheses can be generated without enough counterevidence gates.",
+      "severity": "resolved_in_candidate_v2"
+    }
+  ],
+  "schema_version": "rca-structural-verification-report-v1",
+  "summary": {
+    "blocking_error_count": 0,
+    "candidate_rule_count": 6,
+    "v1_anomaly_count": 2,
+    "warning_count": 0
+  }
+}

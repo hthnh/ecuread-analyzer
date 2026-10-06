@@ -1,0 +1,27 @@
+{
+  "id": "analysis_20260921T013212Z_c0de79b5debc",
+  "session_id": "ride-20260917-1638",
+  "model_version_id": "iforest-baseline-20260920T091709Z",
+  "telemetry_schema_version": "canonical-telemetry-v2",
+  "feature_schema_version": "ecu-window-features-v1",
+  "signal_columns": [
+    "rpm",
+    "tps_voltage",
+    "tps_raw",
+    "battery_voltage",
+    "iat_c",
+    "ect_c"
+  ],
+  "status": "completed",
+  "window_size_samples": 50,
+  "window_step_samples": 10,
+  "anomaly_window_count": 7,
+  "total_window_count": 352,
+  "anomaly_ratio": 0.019886,
+  "health_score": 79.18,
+  "overall_status": "monitor",
+  "warnings": [],
+  "started_at": "2026-09-21T01:32:08.191003+00:00",
+  "completed_at": "2026-09-21T01:32:12.127429+00:00",
+  "created_at": "2026-09-21T01:32:08.191003+00:00"
+}

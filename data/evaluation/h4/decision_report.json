@@ -1,0 +1,19 @@
+{
+  "answers": {
+    "detects_temporally_meaningful_phenomenon": true,
+    "events_stable_under_parameter_variation": true,
+    "provides_information_not_represented_by_core1_or_core2": false,
+    "results_dominated_by_start_transition_missing_data_or_artifacts": false,
+    "should_remain_part_of_research_harness": true
+  },
+  "basis": {
+    "artifact_category_event_count": 0,
+    "core3_only_event_count": 0,
+    "feasible": true,
+    "parameter_sensitive": false,
+    "supervised_accuracy_claims_made": false,
+    "temporal_event_count": 1
+  },
+  "recommendation": "revise",
+  "schema_version": "temporal-core3-decision-v1"
+}

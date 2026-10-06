@@ -1,0 +1,668 @@
+{
+  "by_rule": {
+    "rca.data_quality.constant_signal_pattern": [
+      {
+        "case_id": "h7-1-expert-case-0001",
+        "observable_evidence": {
+          "duration_ms": 299750.0,
+          "features": "tps_raw_min;battery_voltage_median;tps_voltage_min;battery_voltage_constant_signal;ect_c_delta",
+          "validation_label": "controlled_condition"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0001",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0002",
+        "observable_evidence": {
+          "duration_ms": 394752.0,
+          "features": "tps_raw_constant_signal;tps_voltage_constant_signal;battery_voltage_median;ect_c_first;ect_c_last",
+          "validation_label": "inconclusive"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0002",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0003",
+        "observable_evidence": {
+          "duration_ms": 292500.0,
+          "features": "ect_c_delta;iat_c_constant_signal;iat_c_delta;iat_c_max_absolute_diff;iat_c_range",
+          "validation_label": "observed_unusual_behavior"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0003",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0004",
+        "observable_evidence": {
+          "duration_ms": 185250.0,
+          "features": "battery_voltage_median;battery_voltage_constant_signal;rpm_constant_signal;tps_raw_constant_signal;tps_voltage_constant_signal",
+          "validation_label": "inconclusive"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0004",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0005",
+        "observable_evidence": {
+          "duration_ms": 117250.0,
+          "features": "battery_voltage_median;battery_voltage_constant_signal;rpm_constant_signal;tps_raw_constant_signal;tps_voltage_constant_signal",
+          "validation_label": "inconclusive"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0005",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0009",
+        "observable_evidence": {
+          "duration_ms": 299750.0,
+          "features": "tps_raw_min;ect_c_delta;battery_voltage_median;battery_voltage_constant_signal;iat_c_constant_signal",
+          "validation_label": "controlled_condition"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0009",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0012",
+        "observable_evidence": {
+          "duration_ms": 14748.0,
+          "features": "tps_raw_constant_signal;tps_voltage_constant_signal;battery_voltage_median;battery_voltage_mean;ect_c_first",
+          "validation_label": "inconclusive"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0012",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0013",
+        "observable_evidence": {
+          "duration_ms": 14750.0,
+          "features": "ect_c_delta;iat_c_constant_signal;iat_c_delta;iat_c_max_absolute_diff;iat_c_range",
+          "validation_label": "observed_unusual_behavior"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0013",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0015",
+        "observable_evidence": {
+          "duration_ms": 37252.0,
+          "features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;tps_raw_constant_signal;tps_voltage_constant_signal",
+          "validation_label": "inconclusive"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0015",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0016",
+        "observable_evidence": {
+          "duration_ms": 34749.0,
+          "features": "ect_c_delta;tps_raw_constant_signal;tps_voltage_constant_signal;ect_c_slope;ect_c_first",
+          "validation_label": "inconclusive"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0016",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0017",
+        "observable_evidence": {
+          "duration_ms": 29753.0,
+          "features": "ect_c_delta;iat_c_constant_signal;iat_c_delta;iat_c_max_absolute_diff;iat_c_range",
+          "validation_label": "observed_unusual_behavior"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0017",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0018",
+        "observable_evidence": {
+          "duration_ms": 29752.0,
+          "features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;tps_raw_min;iat_c_std",
+          "validation_label": "observed_unusual_behavior"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0018",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0019",
+        "observable_evidence": {
+          "duration_ms": 29749.0,
+          "features": "tps_raw_min;iat_c_constant_signal;iat_c_delta;iat_c_max_absolute_diff;iat_c_range",
+          "validation_label": "inconclusive"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0019",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0020",
+        "observable_evidence": {
+          "duration_ms": 299750.0,
+          "features": "tps_raw_min;battery_voltage_median;tps_voltage_min;battery_voltage_constant_signal;ect_c_delta",
+          "validation_label": "controlled_condition"
+        },
+        "reason": "Constant-signal feature appears without independent timestamp/checksum/header/raw-frame integrity evidence.",
+        "source_review_item_id": "h7-rca-review-0020",
+        "source_validation_region_type": "insufficient_coverage_region"
+      }
+    ],
+    "rca.detectors.disagreement_preservation": [
+      {
+        "case_id": "h7-1-expert-case-0002",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "isolation_forest_only_event"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0002",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0003",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "isolation_forest_only_event"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0003",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0006",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "isolation_forest_only_event"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0006",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0007",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "contextual_only_event"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0007",
+        "source_validation_region_type": "contextual_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0008",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "contextual_only_event"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0008",
+        "source_validation_region_type": "contextual_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0015",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "disagreement_region"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0015",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0016",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "disagreement_region"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0016",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0017",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "disagreement_region"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0017",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0018",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "disagreement_region"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0018",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0019",
+        "observable_evidence": {
+          "event_state": "detector_disagreement",
+          "region": "disagreement_region"
+        },
+        "reason": "Disagreement can arise from detector scope differences and should not imply one detector is wrong.",
+        "source_review_item_id": "h7-rca-review-0019",
+        "source_validation_region_type": "disagreement_region"
+      }
+    ],
+    "rca.electrical.contextual_voltage_deviation": [
+      {
+        "case_id": "h7-1-expert-case-0007",
+        "observable_evidence": {
+          "battery_voltage_mean": 14.088,
+          "battery_voltage_min": 10.9,
+          "validation_label": "inconclusive"
+        },
+        "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+        "source_review_item_id": "h7-rca-review-0007",
+        "source_validation_region_type": "contextual_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0008",
+        "observable_evidence": {
+          "battery_voltage_mean": 14.088,
+          "battery_voltage_min": 10.9,
+          "validation_label": "observed_unusual_behavior"
+        },
+        "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+        "source_review_item_id": "h7-rca-review-0008",
+        "source_validation_region_type": "contextual_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0009",
+        "observable_evidence": {
+          "battery_voltage_mean": 12.5,
+          "battery_voltage_min": 12.5,
+          "validation_label": "controlled_condition"
+        },
+        "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+        "source_review_item_id": "h7-rca-review-0009",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0010",
+        "observable_evidence": {
+          "battery_voltage_mean": 10.8,
+          "battery_voltage_min": 10.7,
+          "validation_label": "controlled_condition"
+        },
+        "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+        "source_review_item_id": "h7-rca-review-0010",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0011",
+        "observable_evidence": {
+          "battery_voltage_mean": 13.954,
+          "battery_voltage_min": 10.6,
+          "validation_label": "inconclusive"
+        },
+        "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+        "source_review_item_id": "h7-rca-review-0011",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0012",
+        "observable_evidence": {
+          "battery_voltage_mean": 13.33,
+          "battery_voltage_min": 10.6,
+          "validation_label": "inconclusive"
+        },
+        "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+        "source_review_item_id": "h7-rca-review-0012",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0013",
+        "observable_evidence": {
+          "battery_voltage_mean": 14.262,
+          "battery_voltage_min": 11.9,
+          "validation_label": "observed_unusual_behavior"
+        },
+        "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+        "source_review_item_id": "h7-rca-review-0013",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0014",
+        "observable_evidence": {
+          "battery_voltage_mean": 13.992,
+          "battery_voltage_min": 10.5,
+          "validation_label": "inconclusive"
+        },
+        "reason": "Voltage deviation has multiple possible electrical/load/wiring/charging explanations without external measurement.",
+        "source_review_item_id": "h7-rca-review-0014",
+        "source_validation_region_type": "overlapping_event"
+      }
+    ],
+    "rca.iforest.multivariate_pattern": [
+      {
+        "case_id": "h7-1-expert-case-0001",
+        "observable_evidence": {
+          "region": "isolation_forest_only_event",
+          "source_label": "known_abnormal",
+          "validation_label": "controlled_condition"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0001",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0002",
+        "observable_evidence": {
+          "region": "isolation_forest_only_event",
+          "source_label": null,
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0002",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0004",
+        "observable_evidence": {
+          "region": "isolation_forest_only_event",
+          "source_label": null,
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0004",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0005",
+        "observable_evidence": {
+          "region": "isolation_forest_only_event",
+          "source_label": null,
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0005",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0006",
+        "observable_evidence": {
+          "region": "isolation_forest_only_event",
+          "source_label": null,
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0006",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0009",
+        "observable_evidence": {
+          "region": "overlapping_event",
+          "source_label": "known_abnormal",
+          "validation_label": "controlled_condition"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0009",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0010",
+        "observable_evidence": {
+          "region": "overlapping_event",
+          "source_label": "known_abnormal",
+          "validation_label": "controlled_condition"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0010",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0011",
+        "observable_evidence": {
+          "region": "overlapping_event",
+          "source_label": "too_short",
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0011",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0012",
+        "observable_evidence": {
+          "region": "overlapping_event",
+          "source_label": null,
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0012",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0014",
+        "observable_evidence": {
+          "region": "overlapping_event",
+          "source_label": null,
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0014",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0015",
+        "observable_evidence": {
+          "region": "disagreement_region",
+          "source_label": null,
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0015",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0016",
+        "observable_evidence": {
+          "region": "disagreement_region",
+          "source_label": null,
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0016",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0019",
+        "observable_evidence": {
+          "region": "disagreement_region",
+          "source_label": "unknown",
+          "validation_label": "inconclusive"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0019",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0020",
+        "observable_evidence": {
+          "region": "insufficient_coverage_region",
+          "source_label": "known_abnormal",
+          "validation_label": "controlled_condition"
+        },
+        "reason": "IF-positive outside-reference evidence does not identify a physical cause.",
+        "source_review_item_id": "h7-rca-review-0020",
+        "source_validation_region_type": "insufficient_coverage_region"
+      }
+    ],
+    "rca.operating_state.throttle_related_pattern": [
+      {
+        "case_id": "h7-1-expert-case-0001",
+        "observable_evidence": {
+          "rpm_median": 7915.0,
+          "source_label": "known_abnormal",
+          "tps_raw_median": 114.5,
+          "tps_voltage_median": 2.28515625
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0001",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0002",
+        "observable_evidence": {
+          "rpm_median": 1239.5,
+          "source_label": null,
+          "tps_raw_median": 0.0,
+          "tps_voltage_median": 0.48828125
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0002",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0004",
+        "observable_evidence": {
+          "rpm_median": 0.0,
+          "source_label": null,
+          "tps_raw_median": 0.0,
+          "tps_voltage_median": 0.48828125
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0004",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0005",
+        "observable_evidence": {
+          "rpm_median": 0.0,
+          "source_label": null,
+          "tps_raw_median": 0.0,
+          "tps_voltage_median": 0.48828125
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0005",
+        "source_validation_region_type": "isolation_forest_only_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0009",
+        "observable_evidence": {
+          "rpm_median": 2921.0,
+          "source_label": "known_abnormal",
+          "tps_raw_median": 39.0,
+          "tps_voltage_median": 0.87890625
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0009",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0010",
+        "observable_evidence": {
+          "rpm_median": 2052.5,
+          "source_label": "known_abnormal",
+          "tps_raw_median": 27.0,
+          "tps_voltage_median": 0.625
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0010",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0012",
+        "observable_evidence": {
+          "rpm_median": 1216.0,
+          "source_label": null,
+          "tps_raw_median": 0.0,
+          "tps_voltage_median": 0.48828125
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0012",
+        "source_validation_region_type": "overlapping_event"
+      },
+      {
+        "case_id": "h7-1-expert-case-0015",
+        "observable_evidence": {
+          "rpm_median": 1424.0,
+          "source_label": null,
+          "tps_raw_median": 0.0,
+          "tps_voltage_median": 0.48828125
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0015",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0016",
+        "observable_evidence": {
+          "rpm_median": 1383.5,
+          "source_label": null,
+          "tps_raw_median": 0.0,
+          "tps_voltage_median": 0.48828125
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0016",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0018",
+        "observable_evidence": {
+          "rpm_median": 6813.0,
+          "source_label": "high_rpm_candidate",
+          "tps_raw_median": 74.0,
+          "tps_voltage_median": 2.36328125
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0018",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0019",
+        "observable_evidence": {
+          "rpm_median": 6501.5,
+          "source_label": "unknown",
+          "tps_raw_median": 53.0,
+          "tps_voltage_median": 1.8359375
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0019",
+        "source_validation_region_type": "disagreement_region"
+      },
+      {
+        "case_id": "h7-1-expert-case-0020",
+        "observable_evidence": {
+          "rpm_median": 7915.0,
+          "source_label": "known_abnormal",
+          "tps_raw_median": 114.5,
+          "tps_voltage_median": 2.28515625
+        },
+        "reason": "RPM/TPS features may reflect normal operator demand or operating state rather than abnormal throttle behavior.",
+        "source_review_item_id": "h7-rca-review-0020",
+        "source_validation_region_type": "insufficient_coverage_region"
+      }
+    ]
+  },
+  "policy": {
+    "counterexamples_do_not_confirm_absence_of_fault": true,
+    "counterexamples_used_to_restrict_claims": true
+  },
+  "schema_version": "rca-counterexample-report-v1",
+  "summary": {
+    "rule_counterexample_counts": {
+      "rca.data_quality.constant_signal_pattern": 14,
+      "rca.detectors.disagreement_preservation": 10,
+      "rca.electrical.contextual_voltage_deviation": 8,
+      "rca.iforest.multivariate_pattern": 14,
+      "rca.operating_state.throttle_related_pattern": 12
+    }
+  }
+}

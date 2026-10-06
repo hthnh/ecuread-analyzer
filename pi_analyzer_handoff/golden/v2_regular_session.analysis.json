@@ -1,0 +1,31 @@
+{
+  "anomaly_ratio": 0.003367,
+  "anomaly_window_count": 1,
+  "evidence_sufficient": true,
+  "evidence_window_count": 297,
+  "feature_schema_version": "ecu-window-features-v1",
+  "health_score": 93.8,
+  "minimum_windows_for_status": 10,
+  "model_loaded": true,
+  "model_version": "iforest-baseline-20260920T091709Z",
+  "most_unusual_features": [
+    "ect_c_delta",
+    "ect_c_slope",
+    "battery_voltage_max_absolute_diff",
+    "battery_voltage_delta",
+    "battery_voltage_first"
+  ],
+  "note": "Health score is an internal normalized score, not a failure probability.",
+  "overall_status": "ok",
+  "signal_columns": [
+    "rpm",
+    "tps_voltage",
+    "tps_raw",
+    "battery_voltage",
+    "iat_c",
+    "ect_c"
+  ],
+  "telemetry_schema_version": "canonical-telemetry-v2",
+  "warnings": [],
+  "window_count": 297
+}

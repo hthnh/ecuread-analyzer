@@ -1,0 +1,18 @@
+{
+  "id": "analysis_20260820T160004Z_3256aed012df",
+  "session_id": "sess_20260820T160002Z_bcbfee0858ff",
+  "model_version_id": null,
+  "feature_schema_version": "ecu-window-features-v1",
+  "status": "completed",
+  "window_size_samples": 20,
+  "window_step_samples": 5,
+  "anomaly_window_count": 0,
+  "total_window_count": 155,
+  "anomaly_ratio": 0.0,
+  "health_score": null,
+  "overall_status": "model_unavailable",
+  "warnings": [],
+  "started_at": "2026-08-20T16:00:02.602093+00:00",
+  "completed_at": "2026-08-20T16:00:04.421043+00:00",
+  "created_at": "2026-08-20T16:00:02.602093+00:00"
+}

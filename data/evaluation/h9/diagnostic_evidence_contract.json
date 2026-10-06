@@ -1,0 +1,57 @@
+{
+  "allowed_aggregate_states": [
+    "no_evidence",
+    "single_detector_evidence",
+    "multiple_detector_evidence",
+    "detector_disagreement",
+    "insufficient_coverage"
+  ],
+  "allowed_check_priorities": [
+    "priority",
+    "relevant",
+    "deferred",
+    "insufficient_evidence"
+  ],
+  "analysis_version": "h9-drive-safe-diagnostic-evidence-v1",
+  "capability_markers": {
+    "production_baseline": [
+      "isolation_forest"
+    ],
+    "research_evidence": [
+      "contextual_battery_voltage",
+      "evidence_aggregation",
+      "rca_v2",
+      "historical_evidence"
+    ]
+  },
+  "policy": {
+    "additive_backward_compatible": true,
+    "alerts_or_notifications_changed": false,
+    "check_priority_is_failure_probability": false,
+    "h7_v1_hypotheses_exposed_as_current_conclusions": false,
+    "health_score_changed": false,
+    "history_can_confirm_root_cause": false,
+    "no_evidence_is_verified_healthy": false,
+    "production_anomaly_status_changed": false,
+    "score_fusion_used": false,
+    "skipped_or_failed_detector_can_be_normal": false,
+    "universal_anomaly_score_defined": false
+  },
+  "schema_version": "analyzer-diagnostic-evidence-contract-v1",
+  "sections": {
+    "aggregate": "Evidence aggregation state; no score fusion and no healthy-ground-truth claim.",
+    "detectors": "Per-detector execution evidence and detector-local score semantics.",
+    "history": "Historical recurrence/trend context when explicitly computed.",
+    "interpretation": "RCA v2 observations, symptoms, possible causes, checks and limitations.",
+    "provenance": "Analyzer, detector, rule and historical cutoff provenance.",
+    "recommended_check_priorities": "Ordering guidance for checks, not component-failure probability."
+  },
+  "top_level_field": "diagnostic_evidence",
+  "unsafe_language": [
+    "confirmed fault",
+    "component failure",
+    "probability of failure",
+    "healthy vehicle",
+    "diagnosis confirmed"
+  ]
+}

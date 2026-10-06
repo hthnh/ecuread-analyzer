@@ -1,0 +1,70 @@
+{
+  "decoder_version_key": "honda_keihin_71_17:1.0.0",
+  "feature_count": 81,
+  "feature_schema_version": "ecu-window-features-v1",
+  "files": {
+    "README.md": "fe66741d4e894846f9467035bc0b4e75d81d8a696ae964850935c272ed84650e",
+    "fixtures/v2_regular_session.json": "60d6d9c84589e1ca694514510ab84d88667838fcf91a8a9331e6276f4ab7d1f4",
+    "fixtures/v2_short_or_limited.json": "30a41632f7e44ad5121709214f621408555a4e08a34c07f24423ae0ce5c68c1a",
+    "golden/v2_regular_session.analysis.json": "990ff368a206937e65c2c7b627b18d85a69535c20931e32ebc3741211e0d8921",
+    "golden/v2_regular_session.features.csv": "36d4e245127ff3cc37b11e8fe72110a74735058fe8c13ad13920b2f20c8c2eac",
+    "golden/v2_regular_session.windows.csv": "4b21fbe0f18e5470073874f962fa9dd8ae32e4fab2b4cba6b8aaade6ce01f91e",
+    "golden/v2_short_or_limited.analysis.json": "8a24632773977c2ee63b097dfbbd8f80c9f2e4058c5cfce7fe14edb5439f07f5",
+    "models/honda_keihin_71_17_v2/isolation_forest.joblib": "9f0ca2e687db31d4e5caabc220442f3884c4566c78bd321e67369be36c93abec",
+    "models/honda_keihin_71_17_v2/model_metadata.json": "0113ebd014374232b5e063f8ee3759a9c6aa732b7d30a8a99fb98f9f72de5945",
+    "models/honda_keihin_71_17_v2/robust_scaler.joblib": "38e50fb497fe4b7c4368c60932b913c24f4b35cb7a66030831d91e9487192f97",
+    "requirements-pi-inference.txt": "4b7dae0a896c180c63e066d4520111ae98a5302280efd6e28d5df4c35a8dcdce",
+    "scripts/verify_pi_analyzer_handoff.py": "c85edb1cb26c355f23febc4cbd2fd6436e7a15cbe0fd5875945d79380c92c162",
+    "source/app/__init__.py": "91ecba6e2a5be4d68aae925dd2b3d26c090f31875c4fd6b6ad351ff2040c0abd",
+    "source/app/config.py": "ad19ee65eb7628f0ae36ba0c81a1b1a120e2863299765ba274270dc8ff5fb569",
+    "source/app/domain/__init__.py": "3c78788ea0fb8b468bf16f215d385ccca713e31b0d6625da9c1c4e1f920e5b92",
+    "source/app/domain/model.py": "0f31892432b5785bbbec8770471ef0186911ff7c8f0f6ff34d3f32cd1d9f8f47",
+    "source/app/domain/telemetry.py": "a6ee5b5f89660b87b250e9363a4e03fddbb396c6f186e3b2141d4368e8762ee8",
+    "source/app/ml/__init__.py": "4666194f5238ca068875c321a0fc28acc404776695d946f45cad772716c36a64",
+    "source/app/ml/artifacts.py": "848417a9e3cef575014d53f86443f207b15eb2a84476f50d250fc605dc806235",
+    "source/app/ml/features.py": "ea5f3d2b4e39625cb6754cbfd83c9ee8f14a8b8742e442419e456d58cc81ea6e",
+    "source/app/ml/harness.py": "657253b8bfdaab6265c14142cc6220fed535fef6df2eadd5a37da1959644e699",
+    "source/app/ml/iforest_detector.py": "52dbe1546c67f99c6dba4cfe83bc43e5673f59b92ab7faa689e861d8254c1a84",
+    "source/app/ml/inference.py": "c322fd78d0aa3f650848b9b647ff912408ab7fe027a5b4dc954e742f30af4a59",
+    "source/app/ml/scoring.py": "277a04aeb58be2e68db9262097682be3adb385d3ee3be8217a36143e25e9625f",
+    "source/app/ml/training.py": "4fd2defafc7f915083dd9753766c6ce3211208dfc2d42b39cb06ae5c0bbb7d78",
+    "source/app/ml/validation.py": "faf9271c74283ef82271c06f4805401e5966470075675a546f5fc94f0e7cedb8",
+    "source/app/ml/windowing.py": "90e3c7a3dbf5fad76590243ed26e2dffa6b5270acc649f3135ed757317a23eb9",
+    "source/app/services/__init__.py": "58e6ba782a24ca1755faf0a8ce537477cfe1b05f99602e33162b0554cef7c09b",
+    "source/app/services/pi_analysis.py": "818f511377030472e32cee6b84003ca690f669ae0526ef71c008bb80030a1a7f"
+  },
+  "fixtures": {
+    "v2_regular_session": {
+      "overall_status": "ok",
+      "path": "fixtures/v2_regular_session.json",
+      "source_session_id": "ride-20260904-1623",
+      "window_count": 297
+    },
+    "v2_short_or_limited": {
+      "overall_status": "limited_data",
+      "path": "fixtures/v2_short_or_limited.json",
+      "source_session_id": "ride-20260901-0715",
+      "window_count": 7
+    }
+  },
+  "model_artifacts": {
+    "isolation_forest": "models/honda_keihin_71_17_v2/isolation_forest.joblib",
+    "metadata": "models/honda_keihin_71_17_v2/model_metadata.json",
+    "robust_scaler": "models/honda_keihin_71_17_v2/robust_scaler.joblib"
+  },
+  "model_version": "iforest-baseline-20260920T091709Z",
+  "numeric_tolerance": {
+    "float_atol": 1e-09,
+    "float_rtol": 1e-12
+  },
+  "python_version": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "runtime_dependencies": {
+    "joblib": "1.5.3",
+    "numpy": "2.5.1",
+    "pandas": "2.3.3",
+    "pydantic": "2.13.4",
+    "scikit-learn": "1.9.0"
+  },
+  "source_revision": "unavailable-no-git-repository",
+  "telemetry_schema_version": "canonical-telemetry-v2"
+}

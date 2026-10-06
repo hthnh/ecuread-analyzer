@@ -1,0 +1,341 @@
+{
+  "baseline_event_persistence": [
+    {
+      "duration_ms": 832251.0,
+      "end_sequence": 3619,
+      "end_window_index": 357,
+      "event_id": "calib-20260814-153329-812a3f:29:357",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 8,
+      "persistence_ratio": 1.0,
+      "session_id": "calib-20260814-153329-812a3f",
+      "start_sequence": 290,
+      "start_window_index": 29,
+      "variant_count": 8,
+      "window_count": 329
+    }
+  ],
+  "baseline_variant": "baseline",
+  "evaluations": [
+    {
+      "anomaly_window_count": 329,
+      "configuration": {
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "modeled_contexts": [
+          "idle_closed_throttle",
+          "low_load_running",
+          "mid_load_running"
+        ],
+        "shift_threshold_volts": 0.4
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 832251.0,
+          "end_sequence": 3619,
+          "end_window_index": 357,
+          "event_id": "calib-20260814-153329-812a3f:29:357",
+          "event_index_within_session": 1,
+          "session_id": "calib-20260814-153329-812a3f",
+          "start_sequence": 290,
+          "start_window_index": 29,
+          "window_count": 329
+        }
+      ],
+      "status_counts": {
+        "ok": 30,
+        "skipped": 10
+      },
+      "variant_id": "baseline"
+    },
+    {
+      "anomaly_window_count": 328,
+      "configuration": {
+        "ewma_alpha": 0.2,
+        "max_start_frame_step": 15,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "modeled_contexts": [
+          "idle_closed_throttle",
+          "low_load_running",
+          "mid_load_running"
+        ],
+        "shift_threshold_volts": 0.4
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 829751.0,
+          "end_sequence": 3619,
+          "end_window_index": 357,
+          "event_id": "calib-20260814-153329-812a3f:30:357",
+          "event_index_within_session": 1,
+          "session_id": "calib-20260814-153329-812a3f",
+          "start_sequence": 300,
+          "start_window_index": 30,
+          "window_count": 328
+        }
+      ],
+      "status_counts": {
+        "ok": 30,
+        "skipped": 10
+      },
+      "variant_id": "lower_ewma_alpha"
+    },
+    {
+      "anomaly_window_count": 330,
+      "configuration": {
+        "ewma_alpha": 0.5,
+        "max_start_frame_step": 15,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "modeled_contexts": [
+          "idle_closed_throttle",
+          "low_load_running",
+          "mid_load_running"
+        ],
+        "shift_threshold_volts": 0.4
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 834752.0,
+          "end_sequence": 3619,
+          "end_window_index": 357,
+          "event_id": "calib-20260814-153329-812a3f:28:357",
+          "event_index_within_session": 1,
+          "session_id": "calib-20260814-153329-812a3f",
+          "start_sequence": 280,
+          "start_window_index": 28,
+          "window_count": 330
+        }
+      ],
+      "status_counts": {
+        "ok": 30,
+        "skipped": 10
+      },
+      "variant_id": "higher_ewma_alpha"
+    },
+    {
+      "anomaly_window_count": 332,
+      "configuration": {
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "modeled_contexts": [
+          "idle_closed_throttle",
+          "low_load_running",
+          "mid_load_running"
+        ],
+        "shift_threshold_volts": 0.3
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 839750.0,
+          "end_sequence": 3619,
+          "end_window_index": 357,
+          "event_id": "calib-20260814-153329-812a3f:26:357",
+          "event_index_within_session": 1,
+          "session_id": "calib-20260814-153329-812a3f",
+          "start_sequence": 260,
+          "start_window_index": 26,
+          "window_count": 332
+        }
+      ],
+      "status_counts": {
+        "ok": 30,
+        "skipped": 10
+      },
+      "variant_id": "lower_shift_threshold"
+    },
+    {
+      "anomaly_window_count": 323,
+      "configuration": {
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "modeled_contexts": [
+          "idle_closed_throttle",
+          "low_load_running",
+          "mid_load_running"
+        ],
+        "shift_threshold_volts": 0.5
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 817252.0,
+          "end_sequence": 3619,
+          "end_window_index": 357,
+          "event_id": "calib-20260814-153329-812a3f:35:357",
+          "event_index_within_session": 1,
+          "session_id": "calib-20260814-153329-812a3f",
+          "start_sequence": 350,
+          "start_window_index": 35,
+          "window_count": 323
+        }
+      ],
+      "status_counts": {
+        "ok": 30,
+        "skipped": 10
+      },
+      "variant_id": "higher_shift_threshold"
+    },
+    {
+      "anomaly_window_count": 329,
+      "configuration": {
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 6,
+        "modeled_contexts": [
+          "idle_closed_throttle",
+          "low_load_running",
+          "mid_load_running"
+        ],
+        "shift_threshold_volts": 0.4
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 832251.0,
+          "end_sequence": 3619,
+          "end_window_index": 357,
+          "event_id": "calib-20260814-153329-812a3f:29:357",
+          "event_index_within_session": 1,
+          "session_id": "calib-20260814-153329-812a3f",
+          "start_sequence": 290,
+          "start_window_index": 29,
+          "window_count": 329
+        }
+      ],
+      "status_counts": {
+        "ok": 31,
+        "skipped": 9
+      },
+      "variant_id": "shorter_warmup"
+    },
+    {
+      "anomaly_window_count": 329,
+      "configuration": {
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 10,
+        "modeled_contexts": [
+          "idle_closed_throttle",
+          "low_load_running",
+          "mid_load_running"
+        ],
+        "shift_threshold_volts": 0.4
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 832251.0,
+          "end_sequence": 3619,
+          "end_window_index": 357,
+          "event_id": "calib-20260814-153329-812a3f:29:357",
+          "event_index_within_session": 1,
+          "session_id": "calib-20260814-153329-812a3f",
+          "start_sequence": 290,
+          "start_window_index": 29,
+          "window_count": 329
+        }
+      ],
+      "status_counts": {
+        "ok": 30,
+        "skipped": 10
+      },
+      "variant_id": "longer_warmup"
+    },
+    {
+      "anomaly_window_count": 330,
+      "configuration": {
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_persistence_windows": 3,
+        "min_warmup_windows": 8,
+        "modeled_contexts": [
+          "idle_closed_throttle",
+          "low_load_running",
+          "mid_load_running"
+        ],
+        "shift_threshold_volts": 0.4
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 834752.0,
+          "end_sequence": 3619,
+          "end_window_index": 357,
+          "event_id": "calib-20260814-153329-812a3f:28:357",
+          "event_index_within_session": 1,
+          "session_id": "calib-20260814-153329-812a3f",
+          "start_sequence": 280,
+          "start_window_index": 28,
+          "window_count": 330
+        }
+      ],
+      "status_counts": {
+        "ok": 30,
+        "skipped": 10
+      },
+      "variant_id": "shorter_persistence"
+    },
+    {
+      "anomaly_window_count": 328,
+      "configuration": {
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_persistence_windows": 5,
+        "min_warmup_windows": 8,
+        "modeled_contexts": [
+          "idle_closed_throttle",
+          "low_load_running",
+          "mid_load_running"
+        ],
+        "shift_threshold_volts": 0.4
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 829751.0,
+          "end_sequence": 3619,
+          "end_window_index": 357,
+          "event_id": "calib-20260814-153329-812a3f:30:357",
+          "event_index_within_session": 1,
+          "session_id": "calib-20260814-153329-812a3f",
+          "start_sequence": 300,
+          "start_window_index": 30,
+          "window_count": 328
+        }
+      ],
+      "status_counts": {
+        "ok": 30,
+        "skipped": 10
+      },
+      "variant_id": "longer_persistence"
+    }
+  ],
+  "event_count_stability": {
+    "baseline_event_count": 1,
+    "relative_range_vs_baseline": 0.0,
+    "variant_max": 1,
+    "variant_median": 1.0,
+    "variant_min": 1
+  },
+  "low_persistence_event_count": 0,
+  "method": "small predefined parameter neighborhood; no optimization against labels",
+  "schema_version": "temporal-parameter-sensitivity-v1",
+  "sensitivity_interpretation": {
+    "reason": "Most temporal conclusions persist across the predefined parameter neighborhood.",
+    "sensitive_to_reasonable_parameter_changes": false
+  }
+}

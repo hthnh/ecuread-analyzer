@@ -1,0 +1,3093 @@
+{
+  "calibration_datasets": [
+    {
+      "dataset_kind": "controlled_calibration",
+      "evaluation_note": "raw calibration artifact is cataloged for provenance; canonical telemetry sessions are evaluated separately",
+      "evaluation_ready": false,
+      "events_discovered": [
+        "capture_start",
+        "tps_closed_begin",
+        "tps_closed_end",
+        "tps_sweep_1_open_begin",
+        "tps_sweep_1_full",
+        "tps_sweep_1_close_begin",
+        "tps_sweep_1_end",
+        "tps_sweep_2_open_begin",
+        "tps_sweep_2_full",
+        "tps_sweep_2_close_begin",
+        "tps_sweep_2_end",
+        "tps_sweep_3_open_begin",
+        "tps_sweep_3_full",
+        "tps_sweep_3_close_begin",
+        "tps_sweep_3_end",
+        "tps_sweep_4_open_begin",
+        "tps_sweep_4_full",
+        "tps_sweep_4_close_begin",
+        "tps_sweep_4_end",
+        "tps_sweep_5_open_begin",
+        "tps_sweep_5_full",
+        "tps_sweep_5_close_begin",
+        "tps_sweep_5_end",
+        "tps_plateau_closed_begin",
+        "tps_plateau_closed_end",
+        "tps_plateau_25_begin",
+        "tps_plateau_25_end",
+        "tps_plateau_50_begin",
+        "tps_plateau_50_end",
+        "tps_plateau_75_begin",
+        "tps_plateau_75_end",
+        "tps_plateau_full_begin",
+        "tps_plateau_full_end",
+        "capture_end"
+      ],
+      "frame_count": 471,
+      "ground_truth_available": true,
+      "ground_truth_scope": "signal calibration events; not anomaly detector normal/fault labels",
+      "path": "real_data/calibration/honda_shmode_4v_001/cal_20260812_152832_2a54f0",
+      "recording_duration_ms": 117499.0,
+      "scenario_id": "cal_02_tps_sweep",
+      "session_id": "cal_20260812_152832_2a54f0",
+      "valid_frame_count": 471
+    },
+    {
+      "dataset_kind": "controlled_calibration",
+      "evaluation_note": "raw calibration artifact is cataloged for provenance; canonical telemetry sessions are evaluated separately",
+      "evaluation_ready": false,
+      "events_discovered": [
+        "capture_start",
+        "key_on",
+        "capture_end"
+      ],
+      "frame_count": 741,
+      "ground_truth_available": true,
+      "ground_truth_scope": "signal calibration events; not anomaly detector normal/fault labels",
+      "path": "real_data/calibration/honda_shmode_4v_001/cal_20260814_152603_8fd9ed",
+      "recording_duration_ms": 185510.0,
+      "scenario_id": "cal_01_cold_key_on",
+      "session_id": "cal_20260814_152603_8fd9ed",
+      "valid_frame_count": 741
+    },
+    {
+      "dataset_kind": "controlled_calibration",
+      "evaluation_note": "raw calibration artifact is cataloged for provenance; canonical telemetry sessions are evaluated separately",
+      "evaluation_ready": false,
+      "events_discovered": [
+        "capture_start",
+        "key_on",
+        "cranking_requested",
+        "engine_started",
+        "warmup_1min",
+        "warmup_3min",
+        "warmup_5min",
+        "warmup_10min",
+        "warmup_15min",
+        "capture_end"
+      ],
+      "frame_count": 3629,
+      "ground_truth_available": true,
+      "ground_truth_scope": "signal calibration events; not anomaly detector normal/fault labels",
+      "path": "real_data/calibration/honda_shmode_4v_001/cal_20260814_153329_812a3f",
+      "recording_duration_ms": 907005.0,
+      "scenario_id": "cal_03_cold_start_warmup",
+      "session_id": "cal_20260814_153329_812a3f",
+      "valid_frame_count": 3629
+    }
+  ],
+  "policy": {
+    "precision_recall_f1_requires_verified_binary_labels": true,
+    "temporal_order_preserved_by": "session_id ordering for canonical ride/session IDs; raw source filenames preserved separately",
+    "unlabeled_sessions_are_not_verified_normal_or_faulty": true
+  },
+  "provenance": {
+    "feature_schema_version": "ecu-window-features-v1",
+    "model_artifact_sha256": "9f0ca2e687db31d4e5caabc220442f3884c4566c78bd321e67369be36c93abec",
+    "model_dir": "data/models/honda_keihin_71_17_v2",
+    "model_metadata_sha256": "0113ebd014374232b5e063f8ee3759a9c6aa732b7d30a8a99fb98f9f72de5945",
+    "model_version": "iforest-baseline-20260920T091709Z",
+    "repo_root": "/home/hthnh/ecuread-analyzer",
+    "scaler_artifact_sha256": "38e50fb497fe4b7c4368c60932b913c24f4b35cb7a66030831d91e9487192f97",
+    "source_revision": "unavailable-no-git-repository",
+    "telemetry_schema_version": "canonical-telemetry-v2",
+    "training_sessions_from_model_metadata": [
+      "r0024d0_c93a5fb4.dat.jsonl",
+      "r1032c0_849aa7f8.dat.jsonl",
+      "session_000001.jsonl",
+      "session_000002.jsonl",
+      "session_000003.jsonl",
+      "session_000004.jsonl",
+      "session_000005.jsonl",
+      "session_000006.jsonl",
+      "session_000007.jsonl"
+    ]
+  },
+  "raw_real_run_sources": [
+    {
+      "dataset_kind": "raw_real_run_source",
+      "ground_truth_available": false,
+      "sha256": "26496e21b4f97e325eafe29afc92f73d508af15e96cbcc9f8f6a739778759277",
+      "source_file": "real_data/real_run/r0024d0_c93a5fb4.dat.jsonl",
+      "source_filename": "r0024d0_c93a5fb4.dat.jsonl",
+      "used_for_model_training": true
+    },
+    {
+      "dataset_kind": "raw_real_run_source",
+      "ground_truth_available": false,
+      "sha256": "2d4b11618033cb04661aa6488f8e36cc9890c2bf0100ff3de93232b690423bf0",
+      "source_file": "real_data/real_run/r1032c0_849aa7f8.dat.jsonl",
+      "source_filename": "r1032c0_849aa7f8.dat.jsonl",
+      "used_for_model_training": true
+    },
+    {
+      "dataset_kind": "raw_real_run_source",
+      "ground_truth_available": false,
+      "sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+      "source_file": "real_data/real_run/session_000001.jsonl",
+      "source_filename": "session_000001.jsonl",
+      "used_for_model_training": true
+    },
+    {
+      "dataset_kind": "raw_real_run_source",
+      "ground_truth_available": false,
+      "sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "source_file": "real_data/real_run/session_000002.jsonl",
+      "source_filename": "session_000002.jsonl",
+      "used_for_model_training": true
+    },
+    {
+      "dataset_kind": "raw_real_run_source",
+      "ground_truth_available": false,
+      "sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+      "source_file": "real_data/real_run/session_000003.jsonl",
+      "source_filename": "session_000003.jsonl",
+      "used_for_model_training": true
+    },
+    {
+      "dataset_kind": "raw_real_run_source",
+      "ground_truth_available": false,
+      "sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "source_file": "real_data/real_run/session_000004.jsonl",
+      "source_filename": "session_000004.jsonl",
+      "used_for_model_training": true
+    },
+    {
+      "dataset_kind": "raw_real_run_source",
+      "ground_truth_available": false,
+      "sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "source_file": "real_data/real_run/session_000005.jsonl",
+      "source_filename": "session_000005.jsonl",
+      "used_for_model_training": true
+    },
+    {
+      "dataset_kind": "raw_real_run_source",
+      "ground_truth_available": false,
+      "sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+      "source_file": "real_data/real_run/session_000006.jsonl",
+      "source_filename": "session_000006.jsonl",
+      "used_for_model_training": true
+    },
+    {
+      "dataset_kind": "raw_real_run_source",
+      "ground_truth_available": false,
+      "sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "source_file": "real_data/real_run/session_000007.jsonl",
+      "source_filename": "session_000007.jsonl",
+      "used_for_model_training": true
+    }
+  ],
+  "schema_version": "model-harness-evaluation-manifest-v1",
+  "sessions": [
+    {
+      "artifacts": {
+        "metadata_sha256": "e424704245f51b01b91a6c00d4099001926b8b63a552519f7a25bd69078ddd4d",
+        "samples_sha256": "4444b82cc2fce62d5e5068429854aa71e6c525b384ce1fd563b2a395ef663fc7"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-20260812-152832-2a54f0",
+      "recording_duration_ms": 117499.0,
+      "sample_count": 471,
+      "session_id": "calib-20260812-152832-2a54f0",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-20260812-152832-2a54f0",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 43
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "5bcbe8dabf118aaa8247cacfc82208b91ce92d0e2735dc9b758909b1d0ddadde",
+        "samples_sha256": "fbc9f79bad58f2272f9e48e19c2037e41cfe937c6d1fc99611c2ae542b290db9"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-20260814-152603-8fd9ed",
+      "recording_duration_ms": 185502.0,
+      "sample_count": 741,
+      "session_id": "calib-20260814-152603-8fd9ed",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-20260814-152603-8fd9ed",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 70
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "3c32ceb21e54fff2b8ae4723a9388a33d607ca8af9889987b05e5e7716ca5433",
+        "samples_sha256": "0f4bec5a42feee2dffd2619774317205655a8ccb326663e12accc72da98ff712"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-20260814-153329-812a3f",
+      "recording_duration_ms": 906998.0,
+      "sample_count": 3629,
+      "session_id": "calib-20260814-153329-812a3f",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-20260814-153329-812a3f",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 358
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "befe8dc155780f16e26a4893eaffe637d72b1597eb887eecd9c83cdd16fc1690",
+        "samples_sha256": "6ffe72ebc02065be25d981bdb7d15012de1b1b69b5e1a322886274ef173d5929"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-r0024d0-c93a5fb4-part-01",
+      "recording_duration_ms": 1251501.0,
+      "sample_count": 5000,
+      "session_id": "calib-real-run-r0024d0-c93a5fb4-part-01",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-r0024d0-c93a5fb4-part-01",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 496
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "86b686de2bfafb24333b6f80f1560338bdf029b30adb6bc08ddcceca9b135f57",
+        "samples_sha256": "614350a36deca313473bbbea18287ade506ef67c2e72a020937eba65932c2a61"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-r0024d0-c93a5fb4-part-02",
+      "recording_duration_ms": 480499.0,
+      "sample_count": 1922,
+      "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-r0024d0-c93a5fb4-part-02",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 188
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "1e13a0b95aa1d3cb1a042fc357deac6d9109147e6918e43b76f91290202f9fbf",
+        "samples_sha256": "78f94db3d397ee84ae03ad097c9d020a27c788aff5c84fd90f1ff5d597fa102c"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-r1032c0-849aa7f8-part-01",
+      "recording_duration_ms": 1250998.0,
+      "sample_count": 5000,
+      "session_id": "calib-real-run-r1032c0-849aa7f8-part-01",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-r1032c0-849aa7f8-part-01",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 496
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "d9f2888522bbc5c4e97098254b191793373596ba995081b2fbfc6e629c3635d4",
+        "samples_sha256": "6a8d3ffd7e0b95a3da79073fd221fc75df9eef907cd50e016c88a321fbdda8f7"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-r1032c0-849aa7f8-part-02",
+      "recording_duration_ms": 474749.0,
+      "sample_count": 1899,
+      "session_id": "calib-real-run-r1032c0-849aa7f8-part-02",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-r1032c0-849aa7f8-part-02",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 185
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "2c503145f827d067dde2ad60438a963c99f5618fb19614288b3ea97ad754e7f0",
+        "samples_sha256": "2b589cfa9d8c24f11884095f0ac67fb8c1a120a1e8907cf3627dab52f7239466"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000001",
+      "recording_duration_ms": 28999.0,
+      "sample_count": 117,
+      "session_id": "calib-real-run-session-000001",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000001",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 7
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "8a229281aed0fbcdf8bff52b14498375c96071cf6193576822fc22819a3df644",
+        "samples_sha256": "51cf1e162eb99f602663af04800ad5d7e522d2f1d7349e2ecbeabf79468adc4c"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000002-part-01",
+      "recording_duration_ms": 1251252.0,
+      "sample_count": 5000,
+      "session_id": "calib-real-run-session-000002-part-01",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000002-part-01",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 496
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "4b669a50d76e269ad1291fb4aaa002beb225bb9160aa2a732f963db4a752c01c",
+        "samples_sha256": "2ab150829c0545d358d0c711d6e9c9b4a2939c63baca092dc3e073f59560359f"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000002-part-02",
+      "recording_duration_ms": 195001.0,
+      "sample_count": 781,
+      "session_id": "calib-real-run-session-000002-part-02",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000002-part-02",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 74
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "11b1352e6c81ab7185bc97133dbd3a867f5d1130c26e2b98ef7d906b627aef9c",
+        "samples_sha256": "2a787990e4d11358fbd9869cca17b04dcce37e082135ac6fb7b6e0f7c2a354de"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000003",
+      "recording_duration_ms": 312499.0,
+      "sample_count": 1249,
+      "session_id": "calib-real-run-session-000003",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000003",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 120
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "861d6c92579909a889f02d7437376a3a7bd2081cbaa9384b1ffb689cbfb9ab69",
+        "samples_sha256": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000004",
+      "recording_duration_ms": 755001.0,
+      "sample_count": 3017,
+      "session_id": "calib-real-run-session-000004",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000004",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 297
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "b83dee24d6ec478318a8363cefdc47f691f57015c672e7e621a24cba5cb6e26c",
+        "samples_sha256": "fb14aee8f507243958b02af8de04d1bc15088818b32ec5c8b655f2f17eed4379"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000005-part-01",
+      "recording_duration_ms": 1250249.0,
+      "sample_count": 5000,
+      "session_id": "calib-real-run-session-000005-part-01",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000005-part-01",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 496
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "e5d5862a6b72417378880dc5923e68a63f1e62323eaf948412db333bff455ba9",
+        "samples_sha256": "10d7582f534288326ffe0861768e130455570073af17311762c4d49b60192402"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000005-part-02",
+      "recording_duration_ms": 713499.0,
+      "sample_count": 2851,
+      "session_id": "calib-real-run-session-000005-part-02",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000005-part-02",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 281
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "a2bad1f282530e485a53779b139f8b4141c62de0180433864130752f13927118",
+        "samples_sha256": "57a8e79726e12d7781b1229b5ccf96f8d229fc9ff93e5f428d971c5d5c0b59e2"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000006",
+      "recording_duration_ms": 230750.0,
+      "sample_count": 923,
+      "session_id": "calib-real-run-session-000006",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000006",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 88
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "c27a2040830564307adf54ea7b58383bca6640526a5f861cbacee411eb8a2c76",
+        "samples_sha256": "4c845e5e35cb5af6170a7149c03eaa8415732c40d931a6a6abdb01872e159f72"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000007-part-01",
+      "recording_duration_ms": 1250752.0,
+      "sample_count": 5000,
+      "session_id": "calib-real-run-session-000007-part-01",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000007-part-01",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 496
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "c1e283038e4fa37b1e7334a4c922eaba7e6a445f1f537a9caeb1052c3756625f",
+        "samples_sha256": "5bed833d89d2293e9d80f1b1afbf72cf3bea01e57063b5ed5068a1d1bebc0405"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-calib",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/calib-real-run-session-000007-part-02",
+      "recording_duration_ms": 347001.0,
+      "sample_count": 1389,
+      "session_id": "calib-real-run-session-000007-part-02",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "calib-real-run-session-000007-part-02",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 134
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "5ca228af9a52d4cad10e8cae2e9e8d341733f8f9fc1ff5c1010c717751a72f50",
+        "samples_sha256": "1b0b9efd861ee415c01c945c328cab1600d259ba8cb71128dbbbfc3ee77a9f41"
+      },
+      "capture_provenance": {
+        "device_id": "esp-demo-20260920144735",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "source_type": "canonical",
+        "vehicle_id": "HTTP Sim Honda"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "decoder_version_key": "honda_keihin_legacy_29:0.1.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/esp-fake-low-battery-20260920144735",
+      "recording_duration_ms": 299750.0,
+      "sample_count": 1200,
+      "session_id": "esp-fake-low-battery-20260920144735",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw_candidate",
+        "battery_voltage",
+        "iat_c",
+        "ect_c_candidate",
+        "map_raw"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v1",
+      "temporal_order_key": "esp-fake-low-battery-20260920144735",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [],
+      "window_count": 116
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "ee0ae489d44ddbe55c0bc0dba8c53a7526eb66ae132146cc56c0e3773bb30995",
+        "samples_sha256": "6789ca46a03a57564769aba13992c138ed888afda671067035bb06c3144c1738"
+      },
+      "capture_provenance": {
+        "device_id": "esp-demo-20260920144735",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "source_type": "canonical",
+        "vehicle_id": "HTTP Sim Honda"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "decoder_version_key": "honda_keihin_legacy_29:0.1.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/esp-fake-overheat-20260920144735",
+      "recording_duration_ms": 299750.0,
+      "sample_count": 1200,
+      "session_id": "esp-fake-overheat-20260920144735",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw_candidate",
+        "battery_voltage",
+        "iat_c",
+        "ect_c_candidate",
+        "map_raw"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v1",
+      "temporal_order_key": "esp-fake-overheat-20260920144735",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [],
+      "window_count": 116
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "388b888206e8a03a6d994c1b63e08d998bd4d24705f1bd7ea254a7aa2c305d6c",
+        "samples_sha256": "d9f0e63394b94d1c62ac0fab70cec509a1d75ff101207e92b9712c662df3c319"
+      },
+      "capture_provenance": {
+        "device_id": "esp-demo-20260920144735",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "source_type": "canonical",
+        "vehicle_id": "HTTP Sim Honda"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "decoder_version_key": "honda_keihin_legacy_29:0.1.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/esp-fake-rpm-spike-20260920144735",
+      "recording_duration_ms": 299750.0,
+      "sample_count": 1200,
+      "session_id": "esp-fake-rpm-spike-20260920144735",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw_candidate",
+        "battery_voltage",
+        "iat_c",
+        "ect_c_candidate",
+        "map_raw"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v1",
+      "temporal_order_key": "esp-fake-rpm-spike-20260920144735",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [],
+      "window_count": 116
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "7158b294421cab588bfe746d08ee3468bbd6b85d2e2edde7c02b2a6ac3b1af39",
+        "samples_sha256": "903edf0083f18c7cdfa9e5ac8c22f6a5975a7dd4a477141c7c91ecae4fe96692"
+      },
+      "capture_provenance": {
+        "device_id": "esp-demo-20260920144735",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "source_type": "canonical",
+        "vehicle_id": "HTTP Sim Honda"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "decoder_version_key": "honda_keihin_legacy_29:0.1.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/esp-real-session_000018-20260920144735",
+      "recording_duration_ms": 4496001.0,
+      "sample_count": 17976,
+      "session_id": "esp-real-session_000018-20260920144735",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw_candidate",
+        "battery_voltage",
+        "iat_c",
+        "ect_c_candidate",
+        "map_raw"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v1",
+      "temporal_order_key": "esp-real-session_000018-20260920144735",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [],
+      "window_count": 1793
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "d241807f0833dbf49ec767f2243ebd9fbc3953c2c15a905d137832517c03497f",
+        "samples_sha256": "1a19ab662a652d46d0017d7c423b8cd4ee47dd0ff59017dfa3d7b9b25e0250d8"
+      },
+      "capture_provenance": {
+        "device_id": "esp-demo-20260920144735",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "source_type": "canonical",
+        "vehicle_id": "HTTP Sim Honda"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "decoder_version_key": "honda_keihin_legacy_29:0.1.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/esp-real-session_000024-20260920144735",
+      "recording_duration_ms": 1948999.0,
+      "sample_count": 7790,
+      "session_id": "esp-real-session_000024-20260920144735",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw_candidate",
+        "battery_voltage",
+        "iat_c",
+        "ect_c_candidate",
+        "map_raw"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v1",
+      "temporal_order_key": "esp-real-session_000024-20260920144735",
+      "training_evaluation_split": {
+        "ground_truth_available": false,
+        "label": null,
+        "label_source": null,
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": null,
+        "split": "unassigned",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [],
+      "window_count": 775
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "d296dd31411c03c14e2253e6658d9a96793ffe395cc21969cb0cb2b4493a48ac",
+        "samples_sha256": "2b589cfa9d8c24f11884095f0ac67fb8c1a120a1e8907cf3627dab52f7239466"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260901-0715",
+      "recording_duration_ms": 28999.0,
+      "sample_count": 117,
+      "session_id": "ride-20260901-0715",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260901-0715",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "too_short",
+        "label_source": "derived_window_count_lt_10",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Too few windows for stable session-level status; not a mechanical truth label.",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 7
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "d477309c22d7713255c9745b131673c8d0f4eaa32c4b3b7060dbf3c095ac8abb",
+        "samples_sha256": "09887a182945b6ee6bb644eb9be070e280fad6e847082df833b2dc2ffe6bb051"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260902-1032",
+      "recording_duration_ms": 1126253.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260902-1032",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260902-1032",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "warmup_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=warmup_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "c2229b92b65fb5fc5709b9be8d6ec3b90eb2e3b19bdb1c29db14f49e6803963e",
+        "samples_sha256": "3c562111641fe705f927940de808483e57591d7c9e88f66aa586df73a38448be"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260902-1050",
+      "recording_duration_ms": 320001.0,
+      "sample_count": 1281,
+      "session_id": "ride-20260902-1050",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260902-1050",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 124
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "7611d51d391a56a1ac5a5f2473d52f075ec2531fbf9ad5e58e042e7bd5bb3fa5",
+        "samples_sha256": "2a787990e4d11358fbd9869cca17b04dcce37e082135ac6fb7b6e0f7c2a354de"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260903-1349",
+      "recording_duration_ms": 312499.0,
+      "sample_count": 1249,
+      "session_id": "ride-20260903-1349",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260903-1349",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 120
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "44c48bb8e1adf1c84b532c0a957656e22944aab64d8e4aa5a22f4c0f63338573",
+        "samples_sha256": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260904-1623",
+      "recording_duration_ms": 755001.0,
+      "sample_count": 3017,
+      "session_id": "ride-20260904-1623",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260904-1623",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "battery_low_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 297
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "45dd61789e97c45c23e452baf0873ea6d580a66370f3442a3b398b6fdfaf59e5",
+        "samples_sha256": "6fd28d87b0720c4c09704d609acdf43753db1b05fa92a52ba398f40bc2f6b914"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260904-1810",
+      "recording_duration_ms": 299750.0,
+      "sample_count": 1200,
+      "session_id": "ride-20260904-1810",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260904-1810",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "known_abnormal",
+        "label_source": "explicit_demo_seed_generation",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "synthetically injected high ECT session from demo seed generation",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 116
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "e4dac32830b9eff5458ac83f70e0a744dcb053957eda9a6090628ccbf842502f",
+        "samples_sha256": "056371457b79d660f1f2c749f7f35f9e55c53282181eb6b507c9c3dcdb725a41"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260905-0840",
+      "recording_duration_ms": 1125250.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260905-0840",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260905-0840",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "ab27f8306090d672e84b660d3b7760c103f14e370a517a46b111a502854e8947",
+        "samples_sha256": "d06eac8d55e5a8930aa195838f81425f92e58f415091ba73f9ab2d9348c71f20"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260905-0858",
+      "recording_duration_ms": 838498.0,
+      "sample_count": 3351,
+      "session_id": "ride-20260905-0858",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260905-0858",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 331
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "66004eff1614cf39c8e1ac457afbb66386eee62fbc3f21a1cb2cb06e5d01c6d2",
+        "samples_sha256": "57a8e79726e12d7781b1229b5ccf96f8d229fc9ff93e5f428d971c5d5c0b59e2"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260907-1157",
+      "recording_duration_ms": 230750.0,
+      "sample_count": 923,
+      "session_id": "ride-20260907-1157",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260907-1157",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "battery_low_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=warmup_candidate;battery_low_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 88
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "7613355ea1d5b0ff44a00da6e57fb106605a16a996f50a6fed4a28932f199ee3",
+        "samples_sha256": "33ba8bcd1c2131c9799dabd2fb8a90d967550d62bb42a76f3d7930c33df35e7f"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260908-1431",
+      "recording_duration_ms": 1125501.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260908-1431",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260908-1431",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "battery_low_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "f346755dbbbbf0b24119275e0a76e861edf89e9c56a8fbb7992c85650f3478de",
+        "samples_sha256": "f2ad4b328dc5c609504b50e8aefc54905f744aaa8f3717bc68623d2aec0490ec"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260908-1449",
+      "recording_duration_ms": 472252.0,
+      "sample_count": 1889,
+      "session_id": "ride-20260908-1449",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260908-1449",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 184
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "ea7a05852de075ea3152eeeadae80a084936d580dc4bb7cb09ad391f44221a88",
+        "samples_sha256": "1a363ee5662a14f1a567e798ac21f8f2aa44632df092b066bdc87119a2dd89fa"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260909-0725",
+      "recording_duration_ms": 299750.0,
+      "sample_count": 1200,
+      "session_id": "ride-20260909-0725",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260909-0725",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "known_abnormal",
+        "label_source": "explicit_demo_seed_generation",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "synthetically injected low battery session from demo seed generation",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 116
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "0796d99e98549e442045b82d38cedc23a45f9649e2b8cd752405fb0bb4bcd7a9",
+        "samples_sha256": "c46bd9d513ddec0bb5440ed3cd7a6516b78c152977bcaa0a12a881e26cf2834e"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260909-1748",
+      "recording_duration_ms": 300500.0,
+      "sample_count": 1202,
+      "session_id": "ride-20260909-1748",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260909-1748",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "battery_low_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=warmup_candidate;battery_low_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 116
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "b192f9cfe39522fb0a57cd3756c6b85e94ad1e3672e8c5d0b25b0ab4d3e4d18a",
+        "samples_sha256": "b76f4528b0415f6f48d7f3af9cedff138501be9d5ae0b72660f86e8602e60db6"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260910-0922",
+      "recording_duration_ms": 132501.0,
+      "sample_count": 531,
+      "session_id": "ride-20260910-0922",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260910-0922",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "warmup_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=warmup_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 49
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "a5718a97d6815cc1c186b481de1b641e6d74aea1f1eeef8d3bc43207bcc5da9e",
+        "samples_sha256": "0377843e6bed74b268027e77b1b7fe27db9350470384d3342e2d0ba63c474757"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260911-1239",
+      "recording_duration_ms": 1125500.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260911-1239",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260911-1239",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_holdout",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "3263801856fa4fcf6f744ef4ca90dd9a44075d01ffe6f741e2db8e14e28ac5b5",
+        "samples_sha256": "f63e5f335414d4e67b9ec75c2f94efb2de172af19e701f94d8101a51207fd9c4"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260911-1257",
+      "recording_duration_ms": 1125250.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260911-1257",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260911-1257",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_holdout",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "2acbc5af58282c869e9f814176d6c72d0cf08f19dd208f09193e9e96d493c019",
+        "samples_sha256": "706b54ff8235e1733cf6d30b353649c549414e5f6da4c29d8a767c4530a47922"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260911-1316",
+      "recording_duration_ms": 1125000.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260911-1316",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260911-1316",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_holdout",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "43afd80d70270049dd9d085084122a594170c8a0a00d38ada74f48872ed2dd74",
+        "samples_sha256": "53eb9c402304b1878be13423d001d0f0d419ab4af5461035e755b55a35ad8987"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260911-1335",
+      "recording_duration_ms": 1118001.0,
+      "sample_count": 4465,
+      "session_id": "ride-20260911-1335",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260911-1335",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 442
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "21226f003655be3ff8799661af3e6096d3c4e1e69fd1b901033c414370d0e298",
+        "samples_sha256": "dae07817f3df8978e340d33cb2f0833bba63144a51929df5298de90250c12849"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260912-1556",
+      "recording_duration_ms": 873500.0,
+      "sample_count": 3492,
+      "session_id": "ride-20260912-1556",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260912-1556",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "battery_low_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 345
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "706a300c86e9438783298ba84dc9c8e735ff9754e073fe3eb38b136b8a1ff6cf",
+        "samples_sha256": "c9fb98808906fdfef2749b53948017c3baee044af505717daf2f687faa417543"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260913-0730",
+      "recording_duration_ms": 1125750.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260913-0730",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260913-0730",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_holdout",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "7d101324d4239abc0225d32085dfac41fda27cf761d46594376255180efd994b",
+        "samples_sha256": "bb819534c233e35f4f1385dd6cecfb72bcd2c06e1336984734bf453355f8fe61"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260913-0748",
+      "recording_duration_ms": 1125000.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260913-0748",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260913-0748",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "e41e0deaad77d28e5c67da236b30fc6ebbcc42411543ed495542d59807249570",
+        "samples_sha256": "463c4720d7f63ab89fd942a1a666c7a93beb9718af5c8a39ec785f48ffad0da8"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260913-0807",
+      "recording_duration_ms": 1125248.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260913-0807",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260913-0807",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "ab19007a0e048b912369eb5868e9714a8309c6396d6b92168266eec5caf7e04b",
+        "samples_sha256": "490eecb8857c48f34513c8d4960dec3eaf9b8e5ec9cc3fdbfc4f8532c6865efd"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260913-0826",
+      "recording_duration_ms": 1119250.0,
+      "sample_count": 4476,
+      "session_id": "ride-20260913-0826",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260913-0826",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "unknown",
+        "label_source": "no_explicit_operational_label",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Needs human review before being used as normal or abnormal truth.",
+        "split": "excluded_unresolved",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 443
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "79e7c3e29cdfd6d9ccea349731e5abf0df8bd157b00607b30cad810cf2a98698",
+        "samples_sha256": "72ca609af7106aba2bc1d5191637c5ae076c93b37d9a94a423f695b6737d1dcb"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260914-1047",
+      "recording_duration_ms": 548670.0,
+      "sample_count": 2194,
+      "session_id": "ride-20260914-1047",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260914-1047",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "battery_low_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 215
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "fb7c87e017e9809e464ff69680827d54f9ebf6190aafd2e1a2bec023c367f41a",
+        "samples_sha256": "f0d63894340e9a34184d02ce8418101f24de65a2ebbf2dadaa6585adb21f339d"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260914-1935",
+      "recording_duration_ms": 299750.0,
+      "sample_count": 1200,
+      "session_id": "ride-20260914-1935",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260914-1935",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "known_abnormal",
+        "label_source": "explicit_demo_seed_generation",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "synthetically injected high RPM/load session from demo seed generation",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 116
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "724f2ab29ee46a7bc758c45c9c800f38d6ecdb0bf0487a988e44970a5e1caaa4",
+        "samples_sha256": "e822cf0987255e565a88b534516a999e90ebfeb24e8b36418775e99fba8570b5"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260916-1321",
+      "recording_duration_ms": 21501.0,
+      "sample_count": 87,
+      "session_id": "ride-20260916-1321",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260916-1321",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "too_short",
+        "label_source": "derived_window_count_lt_10",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Too few windows for stable session-level status; not a mechanical truth label.",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 4
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "9a86332b367dcefb58b4814fdee28aa7ced7ea4bb3337c90132b0c9dbb44fc9b",
+        "samples_sha256": "3925a5a7ee7ebf8da1166df33d9b33f420e44fdfec487e6f1701aa9f27ed3e01"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260917-1638",
+      "recording_duration_ms": 891250.0,
+      "sample_count": 3564,
+      "session_id": "ride-20260917-1638",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260917-1638",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "battery_low_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 352
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "c681f460a238cf981352e32393a29f02ecb3bb6b9b01b2efbcdf68689a41ba19",
+        "samples_sha256": "6fd28d87b0720c4c09704d609acdf43753db1b05fa92a52ba398f40bc2f6b914"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260918-0815",
+      "recording_duration_ms": 299750.0,
+      "sample_count": 1200,
+      "session_id": "ride-20260918-0815",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260918-0815",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "known_abnormal",
+        "label_source": "explicit_demo_seed_generation",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "synthetically injected high ECT session from demo seed generation",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 116
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "9b9bcc020346354fabe44d83decfbfc6976b687d0fbbebd62d0409a3e53eb12e",
+        "samples_sha256": "4e50dc82a502820b2d9649d613d2ea488d6c4b4cad4bb4bd22e1e8cb3bdffeb2"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260918-0855",
+      "recording_duration_ms": 755001.0,
+      "sample_count": 3021,
+      "session_id": "ride-20260918-0855",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260918-0855",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "battery_low_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 298
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "edd64cf1991b8a43834511d3a641ed5f85b073d5464ca02ded97a4fe0fdd8ba6",
+        "samples_sha256": "8b621bb76b6017ed102fe9adc0d27ba9ec53a3189c66dd4bacaf61878cae9025"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260919-1129",
+      "recording_duration_ms": 1125171.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260919-1129",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260919-1129",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "22011d088ba16bf6a33d4312ef46f14900c2d3b53441a950d74cea2da7b7dcba",
+        "samples_sha256": "9ff0da53f00f275bd0f59b87f6a3bc80b2c56598106651da509f045fa97a7295"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260919-1147",
+      "recording_duration_ms": 1125250.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260919-1147",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260919-1147",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "high_rpm_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=high_rpm_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "3e1c4868887188946c920ce605c2a8329d138d819fc74f529f42df7b7f730da9",
+        "samples_sha256": "0a9f918c2cade234e2ad9baa81df3211adad1ed725a7482a9c8b4c797e53f27b"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260919-1206",
+      "recording_duration_ms": 1125748.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260919-1206",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260919-1206",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "2e86711293b19859cd02f660018c3bb2ea2ac054e21c82835036c7a05c22ed3f",
+        "samples_sha256": "e83adaaf1bb7ad204d8fcb5e22226f887a458bab25be3b26b8ad61ef1bf1cebb"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260919-1225",
+      "recording_duration_ms": 1014249.0,
+      "sample_count": 4039,
+      "session_id": "ride-20260919-1225",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260919-1225",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 399
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "9dd642b7242933bf2750a0fb2e524c893313a3040d237034f45165375a82cc44",
+        "samples_sha256": "3324a4f803512e5eb7aae06e931c240aa90f47f97c5d8ee89f2d649d6448edd8"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260920-1446",
+      "recording_duration_ms": 1126249.0,
+      "sample_count": 4500,
+      "session_id": "ride-20260920-1446",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260920-1446",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "battery_low_candidate",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=battery_low_candidate",
+        "split": "evaluation_only",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "artifacts": {
+        "metadata_sha256": "d85859c28622cf2d35c6eeb909690f2af919fe3a2bbf88342e53d212dfc40433",
+        "samples_sha256": "d70b12977742af3286f9761463be0d8ba747be724c031a98dba1e078770e691e"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "dataset_kind": "canonical_telemetry",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "evaluation_error": null,
+      "evaluation_ready": true,
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "path": "data/telemetry/ride-20260920-1504",
+      "recording_duration_ms": 822502.0,
+      "sample_count": 3290,
+      "session_id": "ride-20260920-1504",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "temporal_order_key": "ride-20260920-1504",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 325
+    }
+  ],
+  "summary": {
+    "calibration_dataset_count": 3,
+    "canonical_session_count": 57,
+    "evaluation_ready_canonical_session_count": 57,
+    "raw_real_run_source_count": 9
+  }
+}

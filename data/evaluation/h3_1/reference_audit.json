@@ -1,0 +1,715 @@
+{
+  "overlap_audit": {
+    "alternate_reference_capture_representations": [
+      {
+        "samples_sha256": "2a787990e4d11358fbd9869cca17b04dcce37e082135ac6fb7b6e0f7c2a354de",
+        "session_ids": [
+          "calib-real-run-session-000003",
+          "ride-20260903-1349"
+        ]
+      }
+    ],
+    "h3_excluded_sessions": [
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "calib-real-run-session-000001"
+      },
+      {
+        "reason": "duplicate_of_reference_capture",
+        "session_id": "calib-real-run-session-000003"
+      },
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "calib-real-run-session-000004"
+      },
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "calib-real-run-session-000006"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260902-1050"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260903-1349"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260905-0840"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260905-0858"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260908-1449"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260911-1335"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260913-0748"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260913-0807"
+      },
+      {
+        "reason": "duplicate_evaluation_capture",
+        "session_id": "ride-20260918-0815"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260919-1129"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260919-1206"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260919-1225"
+      },
+      {
+        "reason": "reference_session",
+        "session_id": "ride-20260920-1504"
+      }
+    ],
+    "overlapping_sample_hashes": [],
+    "policy": "Reference session IDs and alternate representations sharing a reference sample hash are excluded from H3/H3.1 evaluation.",
+    "reference_and_evaluation_sample_hash_overlap": false
+  },
+  "provenance": {
+    "calibration_signal_decisions": "data/decoder-audit/reports/calibration_signal_decisions.csv",
+    "calibration_signal_decisions_sha256": "2a12a1bcd97341af6bb9e9e2c1e7afcb37b9ea291f19171018642708807ce5f6",
+    "decoder_versions": [
+      "honda_keihin_71_17:1.0.0"
+    ],
+    "feature_schema_version": "ecu-window-features-v1",
+    "reference_session_count": 12,
+    "reference_session_ids": [
+      "ride-20260902-1050",
+      "ride-20260903-1349",
+      "ride-20260905-0840",
+      "ride-20260905-0858",
+      "ride-20260908-1449",
+      "ride-20260911-1335",
+      "ride-20260913-0748",
+      "ride-20260913-0807",
+      "ride-20260919-1129",
+      "ride-20260919-1206",
+      "ride-20260919-1225",
+      "ride-20260920-1504"
+    ],
+    "reference_split": "normal_train",
+    "telemetry_schema_version": "canonical-telemetry-v2",
+    "training_outside_harness": true,
+    "verified_signal_policy": "strictly verified or verified_as_raw calibration decisions only"
+  },
+  "reference_configuration": {
+    "battery_voltage_scale_floor": 0.35,
+    "context_features": [
+      "rpm_median",
+      "tps_raw_median",
+      "tps_voltage_median"
+    ],
+    "context_policy": "RPM, TPS raw and TPS voltage define operating context; battery voltage is scored against the matched context. RPM is not inferred from TPS.",
+    "min_context_windows": 50,
+    "modeled_contexts": [
+      "idle_closed_throttle",
+      "low_load_running",
+      "mid_load_running"
+    ],
+    "required_features": [
+      "rpm_median",
+      "tps_raw_median",
+      "tps_voltage_median",
+      "battery_voltage_median",
+      "battery_voltage_mean",
+      "battery_voltage_min"
+    ],
+    "robust_z_threshold": 4.5,
+    "scored_features": [
+      "battery_voltage_median",
+      "battery_voltage_mean",
+      "battery_voltage_min"
+    ]
+  },
+  "reference_context_counts": {
+    "engine_off_or_transition": 3,
+    "high_load_running": 25,
+    "idle_closed_throttle": 337,
+    "low_load_running": 1139,
+    "mid_load_running": 2633,
+    "unmodeled": 18
+  },
+  "reference_model_version": "contextual-battery-robust-v1-d80a160236f5",
+  "reference_session_count": 12,
+  "reference_sessions": [
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260902-1050",
+      "artifacts": {
+        "metadata_sha256": "c2229b92b65fb5fc5709b9be8d6ec3b90eb2e3b19bdb1c29db14f49e6803963e",
+        "samples_sha256": "3c562111641fe705f927940de808483e57591d7c9e88f66aa586df73a38448be"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260902-1050",
+      "recording_duration_ms": 320001.0,
+      "session_id": "ride-20260902-1050",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 124
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260903-1349",
+      "artifacts": {
+        "metadata_sha256": "7611d51d391a56a1ac5a5f2473d52f075ec2531fbf9ad5e58e042e7bd5bb3fa5",
+        "samples_sha256": "2a787990e4d11358fbd9869cca17b04dcce37e082135ac6fb7b6e0f7c2a354de"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260903-1349",
+      "recording_duration_ms": 312499.0,
+      "session_id": "ride-20260903-1349",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 120
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260905-0840",
+      "artifacts": {
+        "metadata_sha256": "e4dac32830b9eff5458ac83f70e0a744dcb053957eda9a6090628ccbf842502f",
+        "samples_sha256": "056371457b79d660f1f2c749f7f35f9e55c53282181eb6b507c9c3dcdb725a41"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260905-0840",
+      "recording_duration_ms": 1125250.0,
+      "session_id": "ride-20260905-0840",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260905-0858",
+      "artifacts": {
+        "metadata_sha256": "ab27f8306090d672e84b660d3b7760c103f14e370a517a46b111a502854e8947",
+        "samples_sha256": "d06eac8d55e5a8930aa195838f81425f92e58f415091ba73f9ab2d9348c71f20"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260905-0858",
+      "recording_duration_ms": 838498.0,
+      "session_id": "ride-20260905-0858",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 331
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260908-1449",
+      "artifacts": {
+        "metadata_sha256": "f346755dbbbbf0b24119275e0a76e861edf89e9c56a8fbb7992c85650f3478de",
+        "samples_sha256": "f2ad4b328dc5c609504b50e8aefc54905f744aaa8f3717bc68623d2aec0490ec"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260908-1449",
+      "recording_duration_ms": 472252.0,
+      "session_id": "ride-20260908-1449",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 184
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260911-1335",
+      "artifacts": {
+        "metadata_sha256": "43afd80d70270049dd9d085084122a594170c8a0a00d38ada74f48872ed2dd74",
+        "samples_sha256": "53eb9c402304b1878be13423d001d0f0d419ab4af5461035e755b55a35ad8987"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260911-1335",
+      "recording_duration_ms": 1118001.0,
+      "session_id": "ride-20260911-1335",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 442
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260913-0748",
+      "artifacts": {
+        "metadata_sha256": "7d101324d4239abc0225d32085dfac41fda27cf761d46594376255180efd994b",
+        "samples_sha256": "bb819534c233e35f4f1385dd6cecfb72bcd2c06e1336984734bf453355f8fe61"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260913-0748",
+      "recording_duration_ms": 1125000.0,
+      "session_id": "ride-20260913-0748",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260913-0807",
+      "artifacts": {
+        "metadata_sha256": "e41e0deaad77d28e5c67da236b30fc6ebbcc42411543ed495542d59807249570",
+        "samples_sha256": "463c4720d7f63ab89fd942a1a666c7a93beb9718af5c8a39ec785f48ffad0da8"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260913-0807",
+      "recording_duration_ms": 1125248.0,
+      "session_id": "ride-20260913-0807",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260919-1129",
+      "artifacts": {
+        "metadata_sha256": "edd64cf1991b8a43834511d3a641ed5f85b073d5464ca02ded97a4fe0fdd8ba6",
+        "samples_sha256": "8b621bb76b6017ed102fe9adc0d27ba9ec53a3189c66dd4bacaf61878cae9025"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260919-1129",
+      "recording_duration_ms": 1125171.0,
+      "session_id": "ride-20260919-1129",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260919-1206",
+      "artifacts": {
+        "metadata_sha256": "3e1c4868887188946c920ce605c2a8329d138d819fc74f529f42df7b7f730da9",
+        "samples_sha256": "0a9f918c2cade234e2ad9baa81df3211adad1ed725a7482a9c8b4c797e53f27b"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260919-1206",
+      "recording_duration_ms": 1125748.0,
+      "session_id": "ride-20260919-1206",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 446
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260919-1225",
+      "artifacts": {
+        "metadata_sha256": "2e86711293b19859cd02f660018c3bb2ea2ac054e21c82835036c7a05c22ed3f",
+        "samples_sha256": "e83adaaf1bb7ad204d8fcb5e22226f887a458bab25be3b26b8ad61ef1bf1cebb"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260919-1225",
+      "recording_duration_ms": 1014249.0,
+      "session_id": "ride-20260919-1225",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 399
+    },
+    {
+      "absolute_path": "/home/hthnh/ecuread-analyzer/data/telemetry/ride-20260920-1504",
+      "artifacts": {
+        "metadata_sha256": "d85859c28622cf2d35c6eeb909690f2af919fe3a2bbf88342e53d212dfc40433",
+        "samples_sha256": "d70b12977742af3286f9761463be0d8ba747be724c031a98dba1e078770e691e"
+      },
+      "capture_provenance": {
+        "device_id": "esp32-shmode-01",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "source_type": "canonical",
+        "vehicle_id": "Honda SH Mode 125"
+      },
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "path": "data/telemetry/ride-20260920-1504",
+      "recording_duration_ms": 822502.0,
+      "session_id": "ride-20260920-1504",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "training_evaluation_split": {
+        "ground_truth_available": true,
+        "label": "normal_ride",
+        "label_source": "human_review",
+        "metrics_reason": "not a verified binary normal/fault ground-truth label",
+        "notes": "Human review label from SESSION_LABEL_REVIEW.csv; suggested_context=review_required",
+        "split": "normal_train",
+        "suitable_for_precision_recall_f1": false
+      },
+      "verified_signals": [
+        "battery_voltage",
+        "rpm",
+        "tps_raw",
+        "tps_voltage"
+      ],
+      "window_count": 325
+    }
+  ],
+  "reference_window_trace_output": "reference_windows.jsonl",
+  "schema_version": "contextual-detector-reference-audit-v1",
+  "terminology": {
+    "baseline_term": "nominal/reference baseline",
+    "historical_labels_preserved": true,
+    "normal_train_is_verified_healthy_ground_truth": false,
+    "reason": "`normal_train` sessions are human-review nominal/reference sessions used to fit a baseline; they are not independent verified healthy ground truth or proof of absence of faults.",
+    "source_split_name": "normal_train"
+  }
+}

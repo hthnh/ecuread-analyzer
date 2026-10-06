@@ -1,0 +1,7 @@
+{
+  "agreement_measures_physical_ground_truth": false,
+  "computed": false,
+  "overlapping_hypothesis_count": 0,
+  "reason": "fewer than 3 overlapping hypothesis reviews",
+  "schema_version": "rca-expert-inter-expert-agreement-v1"
+}

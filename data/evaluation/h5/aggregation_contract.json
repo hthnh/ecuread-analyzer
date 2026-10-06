@@ -1,0 +1,51 @@
+{
+  "active_detector_ids": [
+    "isolation_forest",
+    "contextual_battery_voltage"
+  ],
+  "aggregate_fields": [
+    "available detector count",
+    "applicable detector count",
+    "positive finding count",
+    "negative finding count",
+    "unavailable detector count",
+    "detector findings",
+    "detector disagreements",
+    "coverage summary",
+    "aggregate evidence status"
+  ],
+  "evidence_state_descriptions": {
+    "detector_disagreement": "At least one applicable active detector was positive and at least one was negative.",
+    "insufficient_coverage": "No active detector was applicable for this window.",
+    "multiple_detector_evidence": "More than one applicable active detector produced anomaly evidence.",
+    "no_evidence": "At least one active detector was applicable and no active detector produced anomaly evidence; this is not a verified-healthy label.",
+    "single_detector_evidence": "Exactly one applicable active detector produced anomaly evidence."
+  },
+  "excluded_detector_ids": [
+    "temporal_battery_shift",
+    "temporal_rpm_stability"
+  ],
+  "policy": {
+    "detector_ids": [
+      "isolation_forest",
+      "contextual_battery_voltage"
+    ],
+    "insufficient_coverage_rule": "zero_applicable_active_detectors",
+    "no_evidence_is_verified_healthy": false,
+    "score_fusion_used": false
+  },
+  "schema_version": "multi-detector-evidence-aggregation-contract-v1",
+  "score_policy": "Detector-local scores are preserved with their own semantics; no universal score is defined.",
+  "window_detector_finding_fields": [
+    "analysis/window identity",
+    "detector id",
+    "detector version",
+    "execution status",
+    "applicability",
+    "prediction when available",
+    "detector-local score",
+    "detector-local threshold when available",
+    "evidence",
+    "reason for skipped/failed/unavailable state"
+  ]
+}

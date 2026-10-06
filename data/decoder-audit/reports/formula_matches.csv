@@ -1,0 +1,10 @@
+decoded_field,best_raw_source,best_transform,exact_match_ratio,mean_error,maximum_error,sample_count,interpretation
+rpm,bytes 4-5,big-endian word,1.0,0.0,0.0,13821,explains_existing_decoder
+tps_voltage,byte 6,raw * 5 / 256,1.0,0.0002581058714999004,0.000500000000000167,13821,explains_existing_decoder
+tps_percent,byte 7,raw * 100 / 255,1.0,0.0015191857800931163,0.004901960784316373,13821,explains_existing_decoder
+iat_c,byte 12,raw - 40,1.0,0.0,0.0,13821,offset_suspected: byte 12 is MAP voltage candidate in v0.1
+ect_c,byte 13,raw - 40,1.0,0.0,0.0,13821,offset_suspected: byte 13 is MAP engineering raw candidate in v0.1
+battery_v,byte 14,raw / 10,1.0,0.0,0.0,13821,explains_existing_decoder
+injector_raw,bytes 15-16,big-endian word,1.0,0.0,0.0,13821,explains_existing_decoder
+injector_ms,bytes 15-16,big-endian word / 100,1.0,0.0,0.0,13821,explains_existing_decoder
+fuel_cut_inferred,bytes 15-16,big-endian word == 0,1.0,0.0,0.0,13821,explains_existing_decoder

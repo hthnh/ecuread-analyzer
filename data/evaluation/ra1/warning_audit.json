@@ -1,0 +1,63 @@
+{
+  "analyzer": {
+    "categories": [
+      {
+        "action_in_ra1_1": "record_only",
+        "behavior_affecting": false,
+        "category": "dependency deprecation",
+        "count": 1,
+        "example": "StarletteDeprecationWarning: Using httpx with starlette.testclient is deprecated; install httpx2 instead.",
+        "project_code": false,
+        "source": "fastapi/starlette TestClient import"
+      },
+      {
+        "action_in_ra1_1": "record_only",
+        "behavior_affecting": false,
+        "category": "dependency deprecation",
+        "count": 4527,
+        "example": "DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.",
+        "project_code": false,
+        "source": "joblib loading NumPy arrays under NumPy 2.5"
+      }
+    ],
+    "command": ".venv/bin/python -m pytest -q",
+    "result": {
+      "passed": 173,
+      "status": "passed",
+      "warnings": 4528
+    },
+    "summary": {
+      "behavior_affecting_warnings_observed": false,
+      "dependency_deprecations": true,
+      "project_code_deprecations": false,
+      "resource_leaks": false
+    }
+  },
+  "drivesafe": {
+    "categories": [
+      {
+        "action_in_ra1_1": "record_only",
+        "behavior_affecting": false,
+        "category": "resource warning",
+        "count": "multiple",
+        "example": "ResourceWarning: unclosed database in <sqlite3.Connection object ...>",
+        "project_code": "undetermined in RA1.1",
+        "source": "test-process SQLite connections surfaced through Werkzeug/SQLAlchemy/Jinja stack frames"
+      }
+    ],
+    "command": ".venv/bin/python -m unittest tests.test_app",
+    "result": {
+      "status": "passed",
+      "tests": 64,
+      "warnings": "existing SQLite ResourceWarning messages"
+    },
+    "summary": {
+      "behavior_affecting_warnings_observed": false,
+      "dependency_deprecations": false,
+      "project_code_deprecations": false,
+      "resource_leaks": true
+    }
+  },
+  "schema_version": "research-architecture-audit-v1.1",
+  "scope": "RA1.1 warning classification only; no dependency upgrades or cleanup performed."
+}

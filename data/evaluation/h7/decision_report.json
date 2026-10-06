@@ -1,0 +1,37 @@
+{
+  "answers": {
+    "detector_disagreement_preserved": true,
+    "detector_disagreement_preserved_count": 10,
+    "detector_disagreement_source_count": 10,
+    "events_returning_insufficient_evidence": 5,
+    "events_with_hypotheses": 20,
+    "every_hypothesis_traceable": true,
+    "most_frequent_rules": {
+      "rca.coverage.insufficient_evidence": 5,
+      "rca.data_quality.constant_signal_pattern": 14,
+      "rca.detectors.disagreement_preservation": 10,
+      "rca.electrical.contextual_voltage_deviation": 8,
+      "rca.iforest.multivariate_pattern": 18,
+      "rca.no_evidence.no_hypothesis": 8,
+      "rca.operating_state.throttle_related_pattern": 12
+    },
+    "outputs_requiring_expert_or_physical_validation": "all generated hypotheses",
+    "weak_or_ambiguous_rule_outputs": {
+      "rca.data_quality.constant_signal_pattern": 14,
+      "rca.iforest.multivariate_pattern": 18,
+      "rca.operating_state.throttle_related_pattern": 12
+    }
+  },
+  "drive_safe_behavior_changed": false,
+  "engine_version": "deterministic-rca-engine-v1",
+  "production_behavior_changed": false,
+  "recommendation": "advance_to_expert_validation",
+  "risks_and_limitations": [
+    "RCA hypotheses are deterministic explanations of observed evidence, not mechanical fault findings.",
+    "Possible-status hypotheses intentionally include weak or ambiguous evidence that needs expert review.",
+    "No event-level physical ground truth is available for validating RCA correctness.",
+    "Coverage-gap events can limit causal interpretation even when one detector fired."
+  ],
+  "rule_catalog_version": "evidence-based-rca-rules-v1",
+  "schema_version": "evidence-based-rca-decision-v1"
+}

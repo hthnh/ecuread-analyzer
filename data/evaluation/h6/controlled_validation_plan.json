@@ -1,0 +1,68 @@
+{
+  "experiments": [
+    {
+      "experiment_id": "stable-idle-reference",
+      "procedure": "Warm engine normally, hold stable idle, avoid accessory toggles, record at least 5 minutes.",
+      "purpose": "Verify no-evidence/low-alert behavior during stable idle/reference operation.",
+      "required_provenance": [
+        "vehicle",
+        "ECU profile",
+        "ambient conditions",
+        "start/end time",
+        "operator notes"
+      ],
+      "target_detectors": [
+        "isolation_forest",
+        "contextual_battery_voltage"
+      ]
+    },
+    {
+      "experiment_id": "controlled-throttle-transitions",
+      "procedure": "Run several gentle throttle transitions from closed to low/mid load in a safe stationary or controlled setting.",
+      "purpose": "Check IF response to repeatable operating-state transitions without treating them as faults.",
+      "required_provenance": [
+        "operator action timestamps",
+        "RPM/TPS traces",
+        "capture hash"
+      ],
+      "target_detectors": [
+        "isolation_forest"
+      ]
+    },
+    {
+      "experiment_id": "safe-electrical-load-toggle",
+      "procedure": "Toggle safe factory electrical loads where appropriate and record external voltage if available.",
+      "purpose": "Check contextual battery detector response to independently observed voltage changes.",
+      "required_provenance": [
+        "load state timestamps",
+        "external voltage measurement if available",
+        "battery/charging notes"
+      ],
+      "target_detectors": [
+        "contextual_battery_voltage"
+      ]
+    },
+    {
+      "experiment_id": "repeated-nominal-runs",
+      "procedure": "Repeat the same route/idle protocol across sessions under similar conditions.",
+      "purpose": "Estimate repeatability and normal operating variation without using detector output as truth.",
+      "required_provenance": [
+        "route/protocol",
+        "operator",
+        "ambient conditions",
+        "capture hashes"
+      ],
+      "target_detectors": [
+        "isolation_forest",
+        "contextual_battery_voltage"
+      ]
+    }
+  ],
+  "safety_policy": [
+    "Do not introduce unsafe mechanical or electrical faults.",
+    "Prefer reversible operating changes and repeated nominal baselines.",
+    "Record raw capture, ECU profile, environmental notes, operator action and timestamps."
+  ],
+  "schema_version": "controlled-validation-plan-v1",
+  "status": "proposed_not_executed"
+}

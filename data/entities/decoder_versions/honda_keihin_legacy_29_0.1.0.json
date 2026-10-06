@@ -1,0 +1,12 @@
+{
+  "id": "honda_keihin_legacy_29_0.1.0",
+  "ecu_profile_id": "honda_keihin_legacy_29",
+  "decoder_id": "honda_keihin_legacy_29",
+  "version": "0.1.0",
+  "decoder_hash": null,
+  "schema_version": "canonical-telemetry-v1",
+  "status": "development",
+  "notes": "Registered from canonical telemetry provenance.",
+  "created_at": "2026-09-20T15:33:31.925120+00:00",
+  "updated_at": "2026-09-21T01:18:52.006870+00:00"
+}

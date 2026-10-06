@@ -1,0 +1,33 @@
+{
+  "analyzer_side_ready": true,
+  "answers": {
+    "backward_compatibility_behavior": "Existing anomaly/health fields remain unchanged and consumers may ignore diagnostic_evidence.",
+    "contract_changes": "Added additive diagnostic_evidence JSON contract to analyzer summaries and persisted analysis_run.json.",
+    "database_changes": "Analyzer file-backed analysis records now include nullable diagnostic_evidence JSON; no database migration or new service.",
+    "migration_requirements": "Store diagnostic_evidence as nullable versioned JSON on the existing analysis/session review record.",
+    "research_production_boundary": {
+      "additive_backward_compatible": true,
+      "alerts_or_notifications_changed": false,
+      "check_priority_is_failure_probability": false,
+      "h7_v1_hypotheses_exposed_as_current_conclusions": false,
+      "health_score_changed": false,
+      "history_can_confirm_root_cause": false,
+      "no_evidence_is_verified_healthy": false,
+      "production_anomaly_status_changed": false,
+      "score_fusion_used": false,
+      "skipped_or_failed_detector_can_be_normal": false,
+      "universal_anomaly_score_defined": false
+    },
+    "ui_changes": "Not applied because DriveSafe Web App repository was unavailable."
+  },
+  "drive_safe_behavior_changed": false,
+  "drivesafe_repo_available": false,
+  "limitations": [
+    "DriveSafe Web App persistence and UI were not modified because the repository was not available in this workspace.",
+    "Live production analysis exposes detector and aggregate evidence; RCA v2/history remain unavailable unless research artifacts are explicitly attached.",
+    "H9 payloads from H8 are retrospective research examples with temporal cutoff metadata, not alerting inputs."
+  ],
+  "production_behavior_changed": false,
+  "recommendation": "revise",
+  "schema_version": "h9-diagnostic-integration-decision-v1"
+}

@@ -1,0 +1,31 @@
+{
+  "anomaly_ratio": 1.0,
+  "anomaly_window_count": 7,
+  "evidence_sufficient": false,
+  "evidence_window_count": 7,
+  "feature_schema_version": "ecu-window-features-v1",
+  "health_score": 15.45,
+  "minimum_windows_for_status": 10,
+  "model_loaded": true,
+  "model_version": "iforest-baseline-20260920T091709Z",
+  "most_unusual_features": [
+    "ect_c_delta",
+    "battery_voltage_median",
+    "ect_c_slope",
+    "ect_c_first",
+    "iat_c_constant_signal"
+  ],
+  "note": "Limited data: only 7 scored windows; at least 10 are required for a strong session-level status. Raw anomaly metrics and per-window scores are preserved.",
+  "overall_status": "limited_data",
+  "signal_columns": [
+    "rpm",
+    "tps_voltage",
+    "tps_raw",
+    "battery_voltage",
+    "iat_c",
+    "ect_c"
+  ],
+  "telemetry_schema_version": "canonical-telemetry-v2",
+  "warnings": [],
+  "window_count": 7
+}

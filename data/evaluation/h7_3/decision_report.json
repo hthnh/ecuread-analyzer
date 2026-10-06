@@ -1,0 +1,22 @@
+{
+  "answers": {
+    "all_33_cases_evaluated": true,
+    "insufficient_evidence_handling_changed": false,
+    "observation_symptom_cause_sections_distinct": true,
+    "possible_cause_lists_can_be_empty": true,
+    "recommended_checks_without_causes_supported": true,
+    "unsupported_causal_claims_removed": true
+  },
+  "drive_safe_behavior_changed": false,
+  "expert_fields_synthesized": false,
+  "h7_v1_remains_available_for_historical_reproducibility": true,
+  "limitations": [
+    "RCA v2 is an offline research interpretation layer only.",
+    "RCA v2 does not confirm physical root causes.",
+    "H7.1 expert validation remains unpopulated."
+  ],
+  "production_behavior_changed": false,
+  "recommendation": "promote_v2_for_research",
+  "replace_h7_v1_as_default_offline_research_interpretation": true,
+  "schema_version": "rca-v2-semantic-promotion-decision-v1"
+}

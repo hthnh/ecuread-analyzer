@@ -1,0 +1,195 @@
+{
+  "distinct_information_observed": true,
+  "manual_review_candidates": [
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 299750.0,
+        "end_sequence": 1199,
+        "end_window_index": 115,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 116
+      },
+      "label": "known_abnormal",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260904-1810"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 299750.0,
+        "end_sequence": 1199,
+        "end_window_index": 115,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 116
+      },
+      "label": "known_abnormal",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260909-0725"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 14750.0,
+        "end_sequence": 2169,
+        "end_window_index": 212,
+        "start_sequence": 2110,
+        "start_window_index": 211,
+        "window_count": 2
+      },
+      "label": "battery_low_candidate",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260914-1047"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 12250.0,
+        "end_sequence": 49,
+        "end_window_index": 0,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 1
+      },
+      "label": "battery_low_candidate",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260904-1623"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 12250.0,
+        "end_sequence": 49,
+        "end_window_index": 0,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 1
+      },
+      "label": "battery_low_candidate",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260907-1157"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 12250.0,
+        "end_sequence": 49,
+        "end_window_index": 0,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 1
+      },
+      "label": "battery_low_candidate",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260908-1431"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 12251.0,
+        "end_sequence": 49,
+        "end_window_index": 0,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 1
+      },
+      "label": "battery_low_candidate",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260909-1748"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 12250.0,
+        "end_sequence": 49,
+        "end_window_index": 0,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 1
+      },
+      "label": "battery_low_candidate",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260912-1556"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 12253.0,
+        "end_sequence": 49,
+        "end_window_index": 0,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 1
+      },
+      "label": "battery_low_candidate",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260917-1638"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 12251.0,
+        "end_sequence": 49,
+        "end_window_index": 0,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 1
+      },
+      "label": "battery_low_candidate",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260918-0855"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 12249.0,
+        "end_sequence": 49,
+        "end_window_index": 0,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 1
+      },
+      "label": "battery_low_candidate",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260920-1446"
+    },
+    {
+      "detector_id": "contextual_battery_voltage",
+      "event": {
+        "duration_ms": 17250.0,
+        "end_sequence": 69,
+        "end_window_index": 2,
+        "start_sequence": 0,
+        "start_window_index": 0,
+        "window_count": 3
+      },
+      "label": "too_short",
+      "label_is_verified_truth": false,
+      "review_reason": "contextual battery-voltage statistical deviation",
+      "session_id": "ride-20260916-1321"
+    }
+  ],
+  "recommendation": "advance_for_offline_shadow_revision_not_production",
+  "recommendation_reason": "Core 2 is feasible as a narrow battery-voltage contextual shadow detector; keep it offline until manual review validates events.",
+  "reference_model_version": "contextual-battery-robust-v1-d80a160236f5",
+  "remaining_limitations": [
+    "Only verified RPM, TPS raw, TPS voltage and battery voltage are used.",
+    "IAT/ECT contextual thermal behavior remains excluded until those signals are verified.",
+    "No supervised accuracy metrics are computed because verified binary normal/fault labels are unavailable.",
+    "Contextual anomalies indicate statistical deviation only."
+  ],
+  "telemetry_supports_contextual_detection": true
+}

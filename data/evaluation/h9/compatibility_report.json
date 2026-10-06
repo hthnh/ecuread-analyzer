@@ -1,0 +1,64 @@
+{
+  "analyzer_contract": {
+    "additive": true,
+    "field": "diagnostic_evidence",
+    "persisted_in_analysis_run_json": true,
+    "returned_by_canonical_analysis_api": true,
+    "returned_by_raw_decode_analysis_api": true,
+    "returned_by_upload_session_as_top_level_field": true
+  },
+  "backward_compatibility": {
+    "existing_public_fields_replaced": false,
+    "payload_required_for_existing_consumers": false,
+    "production_anomaly_fields_changed": false,
+    "works_when_diagnostic_evidence_absent": true
+  },
+  "drivesafe_web_app": {
+    "limitation": "DriveSafe Web App repository was not present in this workspace, so UI and web-app persistence changes were not applied.",
+    "path": null,
+    "persistence_schema_modified": false,
+    "repo_available": false,
+    "ui_modified": false
+  },
+  "end_to_end_coverage": {
+    "all_representative_scenarios_covered": true,
+    "covered_scenarios": [
+      "contextual_only_evidence",
+      "detector_disagreement",
+      "history_prioritized_check",
+      "history_unavailable",
+      "if_only_evidence",
+      "insufficient_coverage",
+      "overlapping_detector_evidence",
+      "recurrent_history"
+    ],
+    "missing_scenarios": [],
+    "required_scenarios": [
+      "if_only_evidence",
+      "contextual_only_evidence",
+      "overlapping_detector_evidence",
+      "detector_disagreement",
+      "insufficient_coverage",
+      "history_unavailable",
+      "recurrent_history",
+      "history_prioritized_check"
+    ]
+  },
+  "migration": {
+    "analyzer_database_migration_required": false,
+    "historical_cutoff_fields": [
+      "diagnostic_evidence.provenance.historical_comparison_cutoff",
+      "diagnostic_evidence.history.mode",
+      "diagnostic_evidence.history.future_sessions_allowed"
+    ],
+    "recommended_drivesafe_storage": "Store diagnostic_evidence as nullable versioned JSON on the existing analysis/session review record."
+  },
+  "research_production_boundary": {
+    "check_priority_is_failure_probability": false,
+    "h7_v1_hypotheses_exposed": false,
+    "history_changes_alerting": false,
+    "possible_cause_count": 0,
+    "unsafe_language_payload_ids": []
+  },
+  "schema_version": "h9-diagnostic-integration-compatibility-v1"
+}

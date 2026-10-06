@@ -1,0 +1,144 @@
+{
+  "policy": {
+    "fault_probability_values_computed": false,
+    "minimum_samples_for_rule_decision": 3,
+    "rules_with_too_few_samples_remain_inconclusive": true
+  },
+  "rules": [
+    {
+      "decision": "insufficient_expert_evidence",
+      "decision_reason": "fewer than 3 completed expert hypothesis judgments",
+      "evaluated_count": 0,
+      "evidence_insufficient_count": 0,
+      "hypothesis_too_broad_count": 0,
+      "hypothesis_too_specific_count": 0,
+      "inappropriate_recommended_check_count": 0,
+      "missing_cause_feedback_count": 0,
+      "rating_counts": {
+        "insufficient_evidence": 0,
+        "partially_reasonable": 0,
+        "reasonable": 0,
+        "unsupported": 0
+      },
+      "rule_description": "Stop causal hypothesis generation when no active detector produced applicable evidence.",
+      "rule_id": "rca.coverage.insufficient_evidence"
+    },
+    {
+      "decision": "insufficient_expert_evidence",
+      "decision_reason": "fewer than 3 completed expert hypothesis judgments",
+      "evaluated_count": 0,
+      "evidence_insufficient_count": 0,
+      "hypothesis_too_broad_count": 0,
+      "hypothesis_too_specific_count": 0,
+      "inappropriate_recommended_check_count": 0,
+      "missing_cause_feedback_count": 0,
+      "rating_counts": {
+        "insufficient_evidence": 0,
+        "partially_reasonable": 0,
+        "reasonable": 0,
+        "unsupported": 0
+      },
+      "rule_description": "Do not generate RCA hypotheses when active detectors report no anomaly evidence.",
+      "rule_id": "rca.no_evidence.no_hypothesis"
+    },
+    {
+      "decision": "insufficient_expert_evidence",
+      "decision_reason": "fewer than 3 completed expert hypothesis judgments",
+      "evaluated_count": 0,
+      "evidence_insufficient_count": 0,
+      "hypothesis_too_broad_count": 0,
+      "hypothesis_too_specific_count": 0,
+      "inappropriate_recommended_check_count": 0,
+      "missing_cause_feedback_count": 0,
+      "rating_counts": {
+        "insufficient_evidence": 0,
+        "partially_reasonable": 0,
+        "reasonable": 0,
+        "unsupported": 0
+      },
+      "rule_description": "Generate an electrical-supply variation hypothesis from contextual battery-voltage deviation.",
+      "rule_id": "rca.electrical.contextual_voltage_deviation"
+    },
+    {
+      "decision": "insufficient_expert_evidence",
+      "decision_reason": "fewer than 3 completed expert hypothesis judgments",
+      "evaluated_count": 0,
+      "evidence_insufficient_count": 0,
+      "hypothesis_too_broad_count": 0,
+      "hypothesis_too_specific_count": 0,
+      "inappropriate_recommended_check_count": 0,
+      "missing_cause_feedback_count": 0,
+      "rating_counts": {
+        "insufficient_evidence": 0,
+        "partially_reasonable": 0,
+        "reasonable": 0,
+        "unsupported": 0
+      },
+      "rule_description": "Generate a broad multivariate-pattern hypothesis from Isolation Forest anomaly evidence.",
+      "rule_id": "rca.iforest.multivariate_pattern"
+    },
+    {
+      "decision": "insufficient_expert_evidence",
+      "decision_reason": "fewer than 3 completed expert hypothesis judgments",
+      "evaluated_count": 0,
+      "evidence_insufficient_count": 0,
+      "hypothesis_too_broad_count": 0,
+      "hypothesis_too_specific_count": 0,
+      "inappropriate_recommended_check_count": 0,
+      "missing_cause_feedback_count": 0,
+      "rating_counts": {
+        "insufficient_evidence": 0,
+        "partially_reasonable": 0,
+        "reasonable": 0,
+        "unsupported": 0
+      },
+      "rule_description": "Generate a throttle/operating-state hypothesis when IF evidence highlights RPM or TPS features.",
+      "rule_id": "rca.operating_state.throttle_related_pattern"
+    },
+    {
+      "decision": "insufficient_expert_evidence",
+      "decision_reason": "fewer than 3 completed expert hypothesis judgments",
+      "evaluated_count": 0,
+      "evidence_insufficient_count": 0,
+      "hypothesis_too_broad_count": 0,
+      "hypothesis_too_specific_count": 0,
+      "inappropriate_recommended_check_count": 0,
+      "missing_cause_feedback_count": 0,
+      "rating_counts": {
+        "insufficient_evidence": 0,
+        "partially_reasonable": 0,
+        "reasonable": 0,
+        "unsupported": 0
+      },
+      "rule_description": "Generate a possible acquisition/data-quality hypothesis for IF events involving constant-signal features.",
+      "rule_id": "rca.data_quality.constant_signal_pattern"
+    },
+    {
+      "decision": "insufficient_expert_evidence",
+      "decision_reason": "fewer than 3 completed expert hypothesis judgments",
+      "evaluated_count": 0,
+      "evidence_insufficient_count": 0,
+      "hypothesis_too_broad_count": 0,
+      "hypothesis_too_specific_count": 0,
+      "inappropriate_recommended_check_count": 0,
+      "missing_cause_feedback_count": 0,
+      "rating_counts": {
+        "insufficient_evidence": 0,
+        "partially_reasonable": 0,
+        "reasonable": 0,
+        "unsupported": 0
+      },
+      "rule_description": "Preserve detector disagreement without forcing a shared diagnosis.",
+      "rule_id": "rca.detectors.disagreement_preservation"
+    }
+  ],
+  "schema_version": "rca-expert-rule-level-evaluation-v1",
+  "summary": {
+    "invalid_or_unmapped_judgment_count": 0,
+    "rule_count": 7,
+    "rule_decision_counts": {
+      "insufficient_expert_evidence": 7
+    },
+    "total_completed_hypothesis_judgments": 0
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "profile_id": "honda_keihin_71_17_v0.2",
+  "frame_length": 24,
+  "header": [
+    2,
+    24,
+    113,
+    23
+  ],
+  "checksum": {
+    "type": "twos_complement_sum",
+    "valid_condition": "sum(frame) % 256 == 0",
+    "expected_checksum_formula": "(-sum(frame[:23])) & 0xFF"
+  },
+  "fields": {
+    "rpm": {
+      "source_bytes": [
+        4,
+        5
+      ],
+      "formula": "big_endian_u16",
+      "identity_status": "VERIFIED",
+      "scaling_status": "VERIFIED",
+      "ml_approved": true
+    },
+    "tps_voltage": {
+      "source_bytes": [
+        6
+      ],
+      "formula": "raw * 5 / 256",
+      "identity_status": "VERIFIED",
+      "scaling_status": "VERIFIED",
+      "ml_approved": true
+    },
+    "tps_raw": {
+      "source_bytes": [
+        7
+      ],
+      "formula": "raw",
+      "identity_status": "VERIFIED",
+      "scaling_status": "VERIFIED_AS_RAW",
+      "ml_approved": true
+    },
+    "tps_percent_calibrated": {
+      "source_bytes": [
+        7
+      ],
+      "formula": "(raw - observed_closed) / (observed_open - observed_closed) * 100",
+      "observed_closed": 0,
+      "observed_open": 156,
+      "identity_status": "VERIFIED",
+      "scaling_status": "HIGH_CONFIDENCE",
+      "ml_approved": true
+    },
+    "iat": {
+      "source_bytes": [
+        10,
+        11
+      ],
+      "formula": "byte11 - 40; byte10 thermistor-voltage candidate",
+      "identity_status": "HIGH_CONFIDENCE",
+      "scaling_status": "HIGH_CONFIDENCE",
+      "ml_approved": true
+    },
+    "ect": {
+      "source_bytes": [
+        12,
+        13
+      ],
+      "formula": "byte13 - 40; byte12 thermistor-voltage candidate",
+      "identity_status": "HIGH_CONFIDENCE",
+      "scaling_status": "HIGH_CONFIDENCE",
+      "ml_approved": true
+    },
+    "ect_legacy_8_9": {
+      "source_bytes": [
+        8,
+        9
+      ],
+      "formula": "FF/FF sentinel",
+      "identity_status": "UNAVAILABLE",
+      "scaling_status": "UNAVAILABLE",
+      "ml_approved": false
+    },
+    "map_v01_hypothesis": {
+      "source_bytes": [
+        12,
+        13
+      ],
+      "formula": "byte12 voltage; byte13 raw",
+      "identity_status": "REJECTED",
+      "scaling_status": "REJECTED",
+      "ml_approved": false
+    },
+    "battery": {
+      "source_bytes": [
+        14
+      ],
+      "formula": "raw / 10",
+      "identity_status": "VERIFIED",
+      "scaling_status": "VERIFIED",
+      "ml_approved": true
+    },
+    "injector_raw": {
+      "source_bytes": [
+        15,
+        16
+      ],
+      "formula": "big_endian_u16",
+      "identity_status": "HIGH_CONFIDENCE",
+      "scaling_status": "VERIFIED_AS_RAW",
+      "ml_approved": false
+    },
+    "injector_ms": {
+      "source_bytes": [
+        15,
+        16
+      ],
+      "formula": "raw / 100",
+      "identity_status": "HIGH_CONFIDENCE",
+      "scaling_status": "UNVERIFIED",
+      "ml_approved": false
+    },
+    "byte17": {
+      "source_bytes": [
+        17
+      ],
+      "formula": "raw",
+      "identity_status": "UNVERIFIED",
+      "scaling_status": "UNVERIFIED",
+      "ml_approved": false
+    },
+    "byte18_speed": {
+      "source_bytes": [
+        18
+      ],
+      "formula": "raw",
+      "identity_status": "REJECTED",
+      "scaling_status": "REJECTED_AS_SPEED",
+      "ml_approved": false
+    }
+  },
+  "verified_fields": [
+    "rpm",
+    "tps_voltage",
+    "tps_raw",
+    "battery",
+    "checksum"
+  ],
+  "candidate_fields": [
+    "iat",
+    "ect",
+    "tps_percent_calibrated",
+    "injector_raw"
+  ],
+  "unknown_fields": [
+    "map_actual_location",
+    "byte17",
+    "bytes_19_22"
+  ],
+  "known_sentinels": {
+    "ff_ff_pair": "unavailable_or_unsupported",
+    "bytes_8_9": "FF/FF in road and calibration captures; unavailable in this 0x17 response"
+  },
+  "vehicle_scope": {
+    "vehicle_id": "honda_shmode_4v_001",
+    "ecu_part_number": null,
+    "manufacturer": "Honda",
+    "model": "SH Mode",
+    "generation": "4-valve",
+    "cooling": "liquid",
+    "year": null,
+    "firmware_version": null,
+    "protocol_family": "Honda/Keihin K-Line",
+    "protocol_table": "0x71/0x17"
+  },
+  "evidence": [
+    {
+      "phase": "phase_2_controlled_calibration",
+      "session_quality": [
+        {
+          "session_id": "cal_20260812_152832_2a54f0",
+          "scenario_id": "cal_02_tps_sweep",
+          "session_dir": "real_data/calibration/honda_shmode_4v_001/cal_20260812_152832_2a54f0",
+          "frame_count": 471,
+          "valid_frame_count": 471,
+          "checksum_failures": 0,
+          "header_failures": 0,
+          "length_failures": 0,
+          "malformed_records": 0,
+          "raw_frames_malformed_records": 0,
+          "summary_malformed_lines": 0,
+          "duration_ms": 117499.0,
+          "duration_seconds": 117.575,
+          "events_discovered": "capture_start;tps_closed_begin;tps_closed_end;tps_sweep_1_open_begin;tps_sweep_1_full;tps_sweep_1_close_begin;tps_sweep_1_end;tps_sweep_2_open_begin;tps_sweep_2_full;tps_sweep_2_close_begin;tps_sweep_2_end;tps_sweep_3_open_begin;tps_sweep_3_full;tps_sweep_3_close_begin;tps_sweep_3_end;tps_sweep_4_open_begin;tps_sweep_4_full;tps_sweep_4_close_begin;tps_sweep_4_end;tps_sweep_5_open_begin;tps_sweep_5_full;tps_sweep_5_close_begin;tps_sweep_5_end;tps_plateau_closed_begin;tps_plateau_closed_end;tps_plateau_25_begin;tps_plateau_25_end;tps_plateau_50_begin;tps_plateau_50_end;tps_plateau_75_begin;tps_plateau_75_end;tps_plateau_full_begin;tps_plateau_full_end;capture_end",
+          "ambient_reference_c": null,
+          "external_battery_reference_v": null
+        },
+        {
+          "session_id": "cal_20260814_152603_8fd9ed",
+          "scenario_id": "cal_01_cold_key_on",
+          "session_dir": "real_data/calibration/honda_shmode_4v_001/cal_20260814_152603_8fd9ed",
+          "frame_count": 741,
+          "valid_frame_count": 741,
+          "checksum_failures": 0,
+          "header_failures": 0,
+          "length_failures": 0,
+          "malformed_records": 1,
+          "raw_frames_malformed_records": 0,
+          "summary_malformed_lines": 1,
+          "duration_ms": 185510.0,
+          "duration_seconds": 186.212,
+          "events_discovered": "capture_start;key_on;capture_end",
+          "ambient_reference_c": 34.5,
+          "external_battery_reference_v": 12.75
+        },
+        {
+          "session_id": "cal_20260814_153329_812a3f",
+          "scenario_id": "cal_03_cold_start_warmup",
+          "session_dir": "real_data/calibration/honda_shmode_4v_001/cal_20260814_153329_812a3f",
+          "frame_count": 3629,
+          "valid_frame_count": 3629,
+          "checksum_failures": 0,
+          "header_failures": 0,
+          "length_failures": 0,
+          "malformed_records": 1,
+          "raw_frames_malformed_records": 0,
+          "summary_malformed_lines": 1,
+          "duration_ms": 907005.0,
+          "duration_seconds": 907.594,
+          "events_discovered": "capture_start;key_on;cranking_requested;engine_started;warmup_1min;warmup_3min;warmup_5min;warmup_10min;warmup_15min;capture_end",
+          "ambient_reference_c": 34.5,
+          "external_battery_reference_v": null
+        }
+      ],
+      "field_decisions": {
+        "RPM": {
+          "v0.1_mapping_hypothesis": "bytes 4-5 big-endian unsigned integer",
+          "calibration_evidence": "0 RPM in stationary engine-off sessions; non-zero and plausible after engine operation begins",
+          "identity_status": "VERIFIED",
+          "scaling_status": "VERIFIED",
+          "recommended_ml_use": "use",
+          "ml_approved": true,
+          "ml_reason": "directly verified by controlled off/start states"
+        },
+        "TPS voltage": {
+          "v0.1_mapping_hypothesis": "byte6 * 5 / 256",
+          "calibration_evidence": "TPS sweep byte6 25.0 to 225.0 (0.488 V to 4.395 V)",
+          "identity_status": "VERIFIED",
+          "scaling_status": "VERIFIED",
+          "recommended_ml_use": "use",
+          "ml_approved": true,
+          "ml_reason": "responds monotonically to controlled throttle sweep"
+        },
+        "TPS raw": {
+          "v0.1_mapping_hypothesis": "byte7 raw/position candidate",
+          "calibration_evidence": "TPS sweep byte7 0.0 to 156.0, corr(byte6, byte7)=0.999978",
+          "identity_status": "VERIFIED",
+          "scaling_status": "VERIFIED_AS_RAW",
+          "recommended_ml_use": "use raw or calibrated percent",
+          "ml_approved": true,
+          "ml_reason": "direct throttle sweep ground truth"
+        },
+        "TPS percent": {
+          "v0.1_mapping_hypothesis": "byte7 * 100 / 255",
+          "calibration_evidence": "old formula gives full=61.18% at observed full raw=156.0; endpoint calibration gives 100%",
+          "identity_status": "VERIFIED",
+          "scaling_status": "REJECTED_OLD_FORMULA",
+          "recommended_ml_use": "use endpoint-calibrated percent, not raw*100/255",
+          "ml_approved": true,
+          "ml_reason": "approved only with calibrated closed/open endpoints"
+        },
+        "IAT": {
+          "v0.1_mapping_hypothesis": "bytes10-11 as IAT pair; byte11 - 40",
+          "calibration_evidence": "baseline byte11-40 is 36.00 C; ambient error 1.50 C; 15-min warm-up drift is small",
+          "identity_status": "HIGH_CONFIDENCE",
+          "scaling_status": "HIGH_CONFIDENCE",
+          "recommended_ml_use": "use",
+          "ml_approved": true,
+          "ml_reason": "close to ambient and does not follow coolant warm-up"
+        },
+        "ECT": {
+          "v0.1_mapping_hypothesis": "bytes8-9 generic ECT unavailable; byte13 was old ect_c source",
+          "calibration_evidence": "bytes8-9 remain FF/FF; byte13-40 starts 36.00 C (ambient error 1.50 C) and reaches warm operating temperature",
+          "identity_status": "HIGH_CONFIDENCE",
+          "scaling_status": "HIGH_CONFIDENCE",
+          "recommended_ml_use": "use",
+          "ml_approved": true,
+          "ml_reason": "controlled cold-start/warm-up strongly identifies byte13 as engine temperature"
+        },
+        "MAP voltage": {
+          "v0.1_mapping_hypothesis": "byte12 * 5 / 256 as MAP voltage",
+          "calibration_evidence": "byte12 does not show an immediate manifold-pressure transition; it slowly falls during warm-up with byte13 rising",
+          "identity_status": "REJECTED",
+          "scaling_status": "REJECTED_AS_MAP",
+          "recommended_ml_use": "exclude as MAP",
+          "ml_approved": false,
+          "ml_reason": "v0.1 MAP hypothesis failed controlled start/warm-up test"
+        },
+        "MAP engineering raw": {
+          "v0.1_mapping_hypothesis": "byte13 raw as MAP engineering value",
+          "calibration_evidence": "byte13 follows slow engine-temperature warm-up, not pressure dynamics",
+          "identity_status": "REJECTED",
+          "scaling_status": "REJECTED_AS_MAP",
+          "recommended_ml_use": "exclude as MAP",
+          "ml_approved": false,
+          "ml_reason": "byte13 is used as ECT/engine-temperature candidate instead"
+        },
+        "Battery": {
+          "v0.1_mapping_hypothesis": "byte14 / 10",
+          "calibration_evidence": "external VOM 12.75 V vs ECU mean 12.497 V",
+          "identity_status": "VERIFIED",
+          "scaling_status": "VERIFIED",
+          "recommended_ml_use": "use",
+          "ml_approved": true,
+          "ml_reason": "external VOM agreement plus start/charging behavior"
+        },
+        "Injector raw": {
+          "v0.1_mapping_hypothesis": "bytes15-16 big-endian raw",
+          "calibration_evidence": "HIGH_CONFIDENCE injector-related raw control signal; /100 milliseconds remains UNVERIFIED",
+          "identity_status": "HIGH_CONFIDENCE",
+          "scaling_status": "VERIFIED_AS_RAW",
+          "recommended_ml_use": "exclude from ML V1",
+          "ml_approved": false,
+          "ml_reason": "raw is injection-related, but engine-off nonzero TPS-sweep value and scale uncertainty make it unsuitable for V1"
+        },
+        "Injector ms": {
+          "v0.1_mapping_hypothesis": "bytes15-16 / 100 ms",
+          "calibration_evidence": "no oscilloscope or logic-analyzer pulse-width reference was provided",
+          "identity_status": "HIGH_CONFIDENCE",
+          "scaling_status": "UNVERIFIED",
+          "recommended_ml_use": "exclude",
+          "ml_approved": false,
+          "ml_reason": "milliseconds scale is not experimentally verified"
+        },
+        "Byte17": {
+          "v0.1_mapping_hypothesis": "unknown raw byte",
+          "calibration_evidence": "UNVERIFIED; relationships are reported but no physical identity is assigned",
+          "identity_status": "UNVERIFIED",
+          "scaling_status": "UNVERIFIED",
+          "recommended_ml_use": "exclude",
+          "ml_approved": false,
+          "ml_reason": "no controlled physical identity"
+        },
+        "Byte18 / speed": {
+          "v0.1_mapping_hypothesis": "speed_or_signal_raw_candidate",
+          "calibration_evidence": "REJECTED as direct vehicle speed: all calibration scenarios were stationary while byte18 is non-zero and changes",
+          "identity_status": "REJECTED",
+          "scaling_status": "REJECTED_AS_SPEED",
+          "recommended_ml_use": "exclude",
+          "ml_approved": false,
+          "ml_reason": "stationary calibration falsifies direct speed interpretation"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Not a universal Honda/Keihin profile.",
+    "ECU part number, firmware version, and ECM identification response are still not captured.",
+    "MAP signal location is unresolved in this 24-byte 0x17 response.",
+    "Injector milliseconds scale requires oscilloscope or logic-analyzer ground truth."
+  ]
+}

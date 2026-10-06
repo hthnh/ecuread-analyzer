@@ -1,0 +1,46 @@
+{
+  "session_id": "sess_20260820T160000Z_7ec57faea521",
+  "analysis_run_id": "analysis_20260820T160002Z_751be178cb30",
+  "created_at": "2026-08-20T16:00:02.437429+00:00",
+  "status": "processed",
+  "input": {
+    "filename": "serial_log_20251105_204330.txt",
+    "device_id": "sim-esp-e2e-001",
+    "vehicle_id": "honda_shmode_4v_001",
+    "sample_interval_ms": 100.0,
+    "sampling_rate_hz": null,
+    "session_note": "server e2e simulated legacy upload first attempt",
+    "firmware_version": "sim-fw-server-e2e-0.1",
+    "time_basis": "relative_time_ms"
+  },
+  "statistics": {
+    "total_lines": 1597,
+    "frames_found": 791,
+    "frames_parsed": 791,
+    "frame_errors": 0,
+    "checksum_valid_frames": 791,
+    "checksum_invalid_frames": 0,
+    "decoded_valid_frames": 791,
+    "decoded_invalid_frames": 0,
+    "windows_generated": 155,
+    "anomaly_windows": 0
+  },
+  "result": {
+    "overall_status": "model_unavailable",
+    "health_score": null,
+    "anomaly_ratio": 0.0,
+    "most_unusual_features": [],
+    "model_loaded": false,
+    "model_version": null,
+    "feature_schema_version": "ecu-window-features-v1",
+    "warnings": [],
+    "note": "No trained model was available; run the CLI training script first."
+  },
+  "artifacts": {
+    "raw": "data/e2e-server-check/run_20260820T160000Z/raw/sess_20260820T160000Z_7ec57faea521/original.txt",
+    "frames": "data/e2e-server-check/run_20260820T160000Z/processed/sess_20260820T160000Z_7ec57faea521/frames.csv",
+    "windows": "data/e2e-server-check/run_20260820T160000Z/processed/sess_20260820T160000Z_7ec57faea521/windows.csv",
+    "result": "data/e2e-server-check/run_20260820T160000Z/results/sess_20260820T160000Z_7ec57faea521/result.json"
+  },
+  "processing_duration_seconds": 2.0341
+}

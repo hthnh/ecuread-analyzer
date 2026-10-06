@@ -1,0 +1,430 @@
+{
+  "baseline_event_persistence": [
+    {
+      "duration_ms": 24748.0,
+      "end_sequence": 309,
+      "end_window_index": 26,
+      "event_id": "ride-20260912-1556:21:26",
+      "event_index_within_session": 1,
+      "persisted_variant_count": 10,
+      "persistence_ratio": 1.0,
+      "session_id": "ride-20260912-1556",
+      "start_sequence": 210,
+      "start_window_index": 21,
+      "variant_count": 10,
+      "window_count": 6
+    }
+  ],
+  "evaluations": [
+    {
+      "anomaly_window_count": 6,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 250.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "robust_z_threshold": 3.0
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 24748.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:21:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 210,
+          "start_window_index": 21,
+          "window_count": 6
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "baseline"
+    },
+    {
+      "anomaly_window_count": 5,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.2,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 250.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "robust_z_threshold": 3.0
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 22250.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:22:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 220,
+          "start_window_index": 22,
+          "window_count": 5
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "lower_ewma_alpha"
+    },
+    {
+      "anomaly_window_count": 8,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.5,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 250.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "robust_z_threshold": 3.0
+      },
+      "event_count": 2,
+      "events": [
+        {
+          "duration_ms": 12252.0,
+          "end_sequence": 329,
+          "end_window_index": 28,
+          "event_id": "calib-real-run-r1032c0-849aa7f8-part-02:28:28",
+          "event_index_within_session": 1,
+          "session_id": "calib-real-run-r1032c0-849aa7f8-part-02",
+          "start_sequence": 280,
+          "start_window_index": 28,
+          "window_count": 1
+        },
+        {
+          "duration_ms": 27249.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:20:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 200,
+          "start_window_index": 20,
+          "window_count": 7
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "higher_ewma_alpha"
+    },
+    {
+      "anomaly_window_count": 6,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 250.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "robust_z_threshold": 2.5
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 24748.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:21:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 210,
+          "start_window_index": 21,
+          "window_count": 6
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "lower_threshold"
+    },
+    {
+      "anomaly_window_count": 6,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 250.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "robust_z_threshold": 3.5
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 24748.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:21:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 210,
+          "start_window_index": 21,
+          "window_count": 6
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "higher_threshold"
+    },
+    {
+      "anomaly_window_count": 6,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 250.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 6,
+        "robust_z_threshold": 3.0
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 24748.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:21:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 210,
+          "start_window_index": 21,
+          "window_count": 6
+        }
+      ],
+      "status_counts": {
+        "ok": 26,
+        "skipped": 14
+      },
+      "variant_id": "shorter_warmup"
+    },
+    {
+      "anomaly_window_count": 7,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 250.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 10,
+        "robust_z_threshold": 3.0
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 27249.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:20:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 200,
+          "start_window_index": 20,
+          "window_count": 7
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "longer_warmup"
+    },
+    {
+      "anomaly_window_count": 8,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 250.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 3,
+        "min_warmup_windows": 8,
+        "robust_z_threshold": 3.0
+      },
+      "event_count": 2,
+      "events": [
+        {
+          "duration_ms": 12252.0,
+          "end_sequence": 329,
+          "end_window_index": 28,
+          "event_id": "calib-real-run-r1032c0-849aa7f8-part-02:28:28",
+          "event_index_within_session": 1,
+          "session_id": "calib-real-run-r1032c0-849aa7f8-part-02",
+          "start_sequence": 280,
+          "start_window_index": 28,
+          "window_count": 1
+        },
+        {
+          "duration_ms": 27249.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:20:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 200,
+          "start_window_index": 20,
+          "window_count": 7
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "shorter_persistence"
+    },
+    {
+      "anomaly_window_count": 5,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 250.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 5,
+        "min_warmup_windows": 8,
+        "robust_z_threshold": 3.0
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 22250.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:22:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 220,
+          "start_window_index": 22,
+          "window_count": 5
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "longer_persistence"
+    },
+    {
+      "anomaly_window_count": 6,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 200.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "robust_z_threshold": 3.0
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 24748.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:21:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 210,
+          "start_window_index": 21,
+          "window_count": 6
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "lower_min_increase"
+    },
+    {
+      "anomaly_window_count": 6,
+      "configuration": {
+        "closed_tps_raw_max": 5.0,
+        "closed_tps_voltage_max": 0.65,
+        "dispersion_scale_floor_rpm": 100.0,
+        "ewma_alpha": 0.3,
+        "max_start_frame_step": 15,
+        "min_dispersion_increase_rpm": 300.0,
+        "min_engine_running_rpm": 500.0,
+        "min_persistence_windows": 4,
+        "min_warmup_windows": 8,
+        "robust_z_threshold": 3.0
+      },
+      "event_count": 1,
+      "events": [
+        {
+          "duration_ms": 24748.0,
+          "end_sequence": 309,
+          "end_window_index": 26,
+          "event_id": "ride-20260912-1556:21:26",
+          "event_index_within_session": 1,
+          "session_id": "ride-20260912-1556",
+          "start_sequence": 210,
+          "start_window_index": 21,
+          "window_count": 6
+        }
+      ],
+      "status_counts": {
+        "ok": 23,
+        "skipped": 17
+      },
+      "variant_id": "higher_min_increase"
+    }
+  ],
+  "event_count_stability": {
+    "baseline_event_count": 1,
+    "relative_range_vs_baseline": 1.0,
+    "variant_max": 2,
+    "variant_median": 1.0,
+    "variant_min": 1
+  },
+  "low_persistence_event_count": 0,
+  "method": "small predefined parameter neighborhood; no tuning against labels",
+  "schema_version": "rpm-temporal-parameter-sensitivity-v1",
+  "sensitivity_interpretation": {
+    "reason": "RPM event conclusions changed substantially across the predefined parameter neighborhood.",
+    "sensitive_to_reasonable_parameter_changes": true
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "id": "artifact_20260820T160002Z_1539fc522bd1",
+  "session_id": "sess_20260820T160000Z_7ec57faea521",
+  "artifact_type": "ecu_raw_log",
+  "storage_path": "data/e2e-server-check/run_20260820T160000Z/raw/sess_20260820T160000Z_7ec57faea521/original.txt",
+  "sha256": "364e852a47ce265545ec7ad5d50e81072e672fba8df94fc34ee5a29c915f2d1d",
+  "size_bytes": 151594,
+  "created_at": "2026-08-20T16:00:02.409758+00:00"
+}
