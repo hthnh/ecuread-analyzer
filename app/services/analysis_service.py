@@ -16,6 +16,7 @@ from app.ml.inference import InferenceOutput, run_inference
 from app.ml.validation import MLInputValidationError, validate_canonical_session_for_ml
 from app.ml.windowing import create_windows
 from app.repositories.file_repository import FileBackedRepository
+from app.services.research_harness import run_research_harness
 from app.utils.ids import new_analysis_run_id, new_session_id
 
 
@@ -158,16 +159,40 @@ class AnalysisService:
 
         analysis_run_id = new_analysis_run_id()
         model_version_id = model_metadata.get("model_version_id") or model_metadata.get("version")
-        diagnostic_evidence = build_diagnostic_evidence(
-            analysis_run_id=analysis_run_id,
-            session=session,
-            model_version=model_version_id,
-            telemetry_schema_version=session.telemetry_schema_version,
-            feature_schema_version=FEATURE_SCHEMA_VERSION,
-            signal_columns=signal_columns,
-            detector_results=inference.detector_results,
-            warnings=warnings,
-        )
+        analysis_windows = inference.windows
+        try:
+            live_research = run_research_harness(
+                analysis_run_id=analysis_run_id,
+                session=session,
+                settings=self.settings,
+                frame_data=frame_data,
+                feature_frame=feature_frame,
+                production_detector_results=inference.detector_result_objects,
+                model_version=model_version_id,
+                telemetry_schema_version=session.telemetry_schema_version,
+                signal_columns=signal_columns,
+                warnings=warnings,
+                created_at=started_at,
+            )
+            diagnostic_evidence = live_research.diagnostic_evidence
+            analysis_windows = live_research.windows
+        except Exception as exc:  # noqa: BLE001 - research evidence must not fail production analysis.
+            research_warning = f"research diagnostic evidence failed: {type(exc).__name__}: {exc}"
+            diagnostic_evidence = build_diagnostic_evidence(
+                analysis_run_id=analysis_run_id,
+                session=session,
+                model_version=model_version_id,
+                telemetry_schema_version=session.telemetry_schema_version,
+                feature_schema_version=FEATURE_SCHEMA_VERSION,
+                signal_columns=signal_columns,
+                detector_results=inference.detector_results,
+                warnings=[*warnings, research_warning],
+            )
+            diagnostic_evidence["status"] = "error"
+            diagnostic_evidence.setdefault("capability_status", {})["component_status"] = {
+                "overall_status": "error",
+                "research_harness": "failed",
+            }
         summary = {
             "analysis_run_id": analysis_run_id,
             "session_id": session.session_id,
@@ -185,11 +210,11 @@ class AnalysisService:
             "evidence_sufficient": inference.evidence_sufficient,
             "most_unusual_features": inference.most_unusual_features,
             "model_loaded": inference.model_loaded,
-            "detectors": inference.detector_results,
-            "diagnostic_evidence": diagnostic_evidence,
-            "warnings": warnings,
-            "note": inference.note,
-        }
+                "detectors": inference.detector_results,
+                "diagnostic_evidence": diagnostic_evidence,
+                "warnings": warnings,
+                "note": inference.note,
+            }
 
         if persist and self.repository is not None:
             completed_at = datetime.now(UTC).isoformat()
@@ -237,14 +262,14 @@ class AnalysisService:
                 "created_at": started_at,
             }
             self.repository.write_analysis_run(analysis_run)
-            self.repository.write_analysis_windows(analysis_run_id, inference.windows)
+            self.repository.write_analysis_windows(analysis_run_id, analysis_windows)
 
         return AnalysisServiceOutput(
             analysis_run_id=analysis_run_id,
             session_id=session.session_id or "",
             frame_data=frame_data,
             feature_frame=feature_frame,
-            windows=inference.windows,
+            windows=analysis_windows,
             summary=summary,
             warnings=warnings,
         )

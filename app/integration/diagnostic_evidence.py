@@ -126,6 +126,7 @@ def normalize_detector(detector: dict[str, Any]) -> dict[str, Any]:
     finding = detector_session_finding(detector)
     status = detector.get("status")
     applicable = status == "ok" and detector.get("scored_window_count", 0) > 0
+    metadata = detector.get("metadata") if isinstance(detector.get("metadata"), dict) else {}
     return {
         "detector_id": detector_id,
         "capability_status": "production_baseline" if detector_id == ISOLATION_FOREST_DETECTOR_ID else "research_evidence",
@@ -146,6 +147,7 @@ def normalize_detector(detector: dict[str, Any]) -> dict[str, Any]:
         "anomaly_ratio": detector.get("anomaly_ratio"),
         "detector_local_score": {
             **(detector.get("anomaly_score") or {}),
+            "summary": detector.get("detector_local_score"),
             "value_scope": "per_window",
             "universal_score": False,
         },
@@ -153,6 +155,7 @@ def normalize_detector(detector: dict[str, Any]) -> dict[str, Any]:
         "evidence": {
             "available_columns": detector.get("available_evidence", []),
             "per_window_values_available_in_analysis_windows": True,
+            "metadata": metadata,
         },
         "skip_or_failure_reason": None if status == "ok" else detector.get("reason"),
         "error": detector.get("error"),
@@ -180,6 +183,14 @@ def detector_threshold(detector: dict[str, Any]) -> dict[str, Any] | None:
             "value": 0.0,
             "source": "isolation_forest_decision_function",
             "rule": "prediction=-1 when decision_score < 0",
+        }
+    metadata = detector.get("metadata") if isinstance(detector.get("metadata"), dict) else {}
+    if detector.get("detector_id") == "contextual_battery_voltage" and metadata.get("threshold") is not None:
+        return {
+            "column": "contextual_anomaly_score",
+            "value": metadata.get("threshold"),
+            "source": "contextual_reference",
+            "rule": "robust_z >= threshold maps to contextual anomaly",
         }
     return None
 
