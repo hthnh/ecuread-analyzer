@@ -1,0 +1,1746 @@
+{
+  "completed_at": "2026-10-24T07:52:41.034157+00:00",
+  "verdict": "P3 successfully deployed; read-only acceptance passed",
+  "preflight": {
+    "started_at": "20261024T074257Z",
+    "candidate": "sha256:7bfe65816c9ed399833f59117fab67d0a7542fc3ea3777ff04a4c09bb4493dca",
+    "candidate_tag": "ecuread-p3-20261024t022127z-candidate:drivesafe",
+    "rollback": "sha256:c19e057b332a5dd821d0f88ecc7670a86459885518583757bc84a0b497bd9125",
+    "analyzer": "sha256:9d682df1aa2c24e8197f853a75ffee3ca48accc36f1a4005bce2bddd0830d010",
+    "containers": {
+      "drisafe-web": {
+        "id": "48795bbad3c98a955ae74bf978c487e01b07ee2d948711ba6cfc2ae3cd88777f",
+        "image": "sha256:c19e057b332a5dd821d0f88ecc7670a86459885518583757bc84a0b497bd9125",
+        "restarts": 0,
+        "oom": false,
+        "networks": [
+          "drisafe_default",
+          "npm-proxy"
+        ]
+      },
+      "ecu-analyzer": {
+        "id": "db15985c6ad2ce86df24ed5d8cc3f82267c9391009ab92b19733c378ef43fd75",
+        "image": "sha256:9d682df1aa2c24e8197f853a75ffee3ca48accc36f1a4005bce2bddd0830d010",
+        "restarts": 0,
+        "oom": false,
+        "networks": [
+          "drisafe_default",
+          "ecuread-analyzer_default"
+        ]
+      },
+      "drisafe-db-1": {
+        "id": "88793bab81a17a578c62596cf972e5364f69b4a390b866808938bcdf9515de0e",
+        "image": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+        "restarts": 0,
+        "oom": false,
+        "networks": [
+          "drisafe_default"
+        ]
+      },
+      "drisafe-redis-1": {
+        "id": "12d66a3e02214347668ea03e06647e5557dc8ff94c95a7c518bbe83574a9e8ec",
+        "image": "sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99",
+        "restarts": 0,
+        "oom": false,
+        "networks": [
+          "drisafe_default"
+        ]
+      }
+    },
+    "database": {
+      "schema": "b7f2c9a4d610",
+      "sessions": 59,
+      "results": 69,
+      "pending": 0,
+      "selected_242": "analysis_20261024T020849Z_9324ea85a0c5",
+      "records_242": 12625,
+      "history_242": [
+        80,
+        84,
+        85,
+        86
+      ]
+    },
+    "bundle": {
+      "bundle_id": "native-full18-20261011T135838Z",
+      "manifest": "models/bundles/native-full18-20261011T135838Z/manifest.json",
+      "scope": "local",
+      "sha256": "e84a8350aae4708a9e429a313e90f8ee1a625209705a6df48141133f1a8bd5ae"
+    },
+    "models_unchanged": true,
+    "configuration_matches_live": true,
+    "disk_free_bytes": 13335814144,
+    "memory_available_bytes": 4841181184,
+    "protected_backup_directory": "/home/hthnh/p3-rollout/20261024T074257Z"
+  },
+  "deployment": {
+    "image": "sha256:7bfe65816c9ed399833f59117fab67d0a7542fc3ea3777ff04a4c09bb4493dca",
+    "container": "5d2bc49e7715e8be1b2f0cda583d6c5f510ddc8673c9587b0f996b25b9e923dc",
+    "seconds_to_health": 10.122800350189209,
+    "health": {
+      "database": "ok",
+      "redis": "ok",
+      "status": "ok"
+    },
+    "analyzer_container_unchanged": true,
+    "database_and_redis_containers_unchanged": true,
+    "web_environment_unchanged": true,
+    "networks_and_mounts_unchanged": true,
+    "deployment_epoch": 1792828013.7256734
+  },
+  "backups": {
+    "drivesafe.dump": {
+      "bytes": 21027181,
+      "sha256": "9ea478046c1cbe50f71a3f535c75d97c1c7a051de68cbabbe7687677d40f0039"
+    },
+    "analyzer-data.tar.gz": {
+      "bytes": 68007566,
+      "sha256": "643333fcc35fdd72109370e2d4385c9fe3391e42c1e211380e6cce8f48cee617"
+    }
+  },
+  "runtime": {
+    "drisafe-web": {
+      "id": "5d2bc49e7715e8be1b2f0cda583d6c5f510ddc8673c9587b0f996b25b9e923dc",
+      "image": "sha256:7bfe65816c9ed399833f59117fab67d0a7542fc3ea3777ff04a4c09bb4493dca",
+      "running": true,
+      "restarts": 0,
+      "oom": false,
+      "started_at": "2026-10-24T07:47:01.236808607Z"
+    },
+    "ecu-analyzer": {
+      "id": "db15985c6ad2ce86df24ed5d8cc3f82267c9391009ab92b19733c378ef43fd75",
+      "image": "sha256:9d682df1aa2c24e8197f853a75ffee3ca48accc36f1a4005bce2bddd0830d010",
+      "running": true,
+      "restarts": 0,
+      "oom": false,
+      "started_at": "2026-10-24T01:38:20.731030379Z"
+    },
+    "drisafe-db-1": {
+      "id": "88793bab81a17a578c62596cf972e5364f69b4a390b866808938bcdf9515de0e",
+      "image": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+      "running": true,
+      "restarts": 0,
+      "oom": false,
+      "started_at": "2026-10-18T05:57:19.616051468Z"
+    },
+    "drisafe-redis-1": {
+      "id": "12d66a3e02214347668ea03e06647e5557dc8ff94c95a7c518bbe83574a9e8ec",
+      "image": "sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99",
+      "running": true,
+      "restarts": 0,
+      "oom": false,
+      "started_at": "2026-10-18T05:57:25.520981836Z"
+    }
+  },
+  "models": {
+    "model_metadata.json": "e20ef54bf6bac222f1b05c7a199c6c4ede431e5557d765aa30d3a5bf98c620fa",
+    ".gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "robust_scaler.joblib": "69a7038a48485bb60ad40531152b766efee491dc5730269854ef85c3922962e6",
+    "isolation_forest.joblib": "1ea86e35976d6eed610724b43ab9ac6c7a87ca148335cd841938d8953ab4d85c",
+    "active_bundle.json": "7ba8de08f62b40b9021feb860ca74121e0da174bd4018b70507e99beaf00f813",
+    "honda_keihin_71_17_v2_candidate_human_normal/model_metadata.json": "6ab8ecd23eb97adaeacca2564ef156734e25f5e7c0f1d4364e7d15654f2541f8",
+    "honda_keihin_71_17_v2_candidate_human_normal/robust_scaler.joblib": "d6a3489ae26aa79ee691dbb9ab543d2bab7006b6d867de7efadc001e428ba33b",
+    "honda_keihin_71_17_v2_candidate_human_normal/isolation_forest.joblib": "20b12dcbc2e4f9d52e75d4e3d8e44c36a0a8e2dccccd6e0625a0c3af92a2a024",
+    "honda_keihin_71_17_v2/model_metadata.json": "0113ebd014374232b5e063f8ee3759a9c6aa732b7d30a8a99fb98f9f72de5945",
+    "honda_keihin_71_17_v2/robust_scaler.joblib": "38e50fb497fe4b7c4368c60932b913c24f4b35cb7a66030831d91e9487192f97",
+    "honda_keihin_71_17_v2/isolation_forest.joblib": "9f0ca2e687db31d4e5caabc220442f3884c4566c78bd321e67369be36c93abec",
+    "honda_keihin_71_17_v0.2_real_run/model_metadata.json": "1fb96a0e04a5340fc29fcca705cc9359333dd483f60c172c410b7efb0454eabf",
+    "honda_keihin_71_17_v0.2_real_run/robust_scaler.joblib": "95077ac62f3f8425b30045e3354c4019d3da63b770dfb1085f7d143a08e15b0b",
+    "honda_keihin_71_17_v0.2_real_run/isolation_forest.joblib": "c5dac13b880fea68821cd1e3f52bd1bf004866d0a2c983e185a756a3fbb4572c",
+    "bundles/native-full18-20261011T135838Z/battery_reference.json": "6b0cebd6d7038b124a3eb94bbebf7d2a3f6c25b5393bf2331999423de3bcbecf",
+    "bundles/native-full18-20261011T135838Z/training_authorization.json": "55df5565f93066e9145246b5998548fffeeca48a6f274764be5893c2397c5460",
+    "bundles/native-full18-20261011T135838Z/manifest.json": "e84a8350aae4708a9e429a313e90f8ee1a625209705a6df48141133f1a8bd5ae",
+    "bundles/native-full18-20261011T135838Z/speed_reference.json": "3aec3788f91ab07ce6286c4d606c428a4ac5413e57ac8695516dff34ad1b0348",
+    "bundles/native-pre-full18/manifest.json": "844b3462a66cbc1be3f8cb3e044ef1267ce76b2367d1109f7adb5fbfa7a9e650",
+    "bundles/native-full18-20261011T135838Z/iforest/model_metadata.json": "b0f9f6e13255d69e14af8f7b8a0af6e6887c7b01f52ad342937e489382d0ea35",
+    "bundles/native-full18-20261011T135838Z/iforest/robust_scaler.joblib": "2b780a9635327789aeb6a26ca8a7531d42512207fffe0dc152eccb0a1a971dfc",
+    "bundles/native-full18-20261011T135838Z/iforest/isolation_forest.joblib": "ca902dd40e828c2b668f4cddb5ed244a6f387804049c2f10f9fd5f5e8bf44085"
+  },
+  "database_fingerprints_before": {
+    "telemetry_records": {
+      "sha256": "a8000d79465b245fed1b67fec39fc4072d6f09db00912e66dd77c46753a9dcb9",
+      "bytes": 365478573
+    },
+    "analysis_results": {
+      "sha256": "a0af972f55a1966ba65fc688c33f55bbbf0c582565e2a4a7d4f91a69ccf296cc",
+      "bytes": 54403750
+    },
+    "ride_sessions": {
+      "sha256": "9421e8ceafb86930496b6a9c37a9dd0895927c88a5a993c2dc237bfa012d1a5d",
+      "bytes": 65062
+    },
+    "sync_batches": {
+      "sha256": "e1773f529a5bb5495ceb4e095b17fda3d334a8ce313c288ad320bd48b02705d4",
+      "bytes": 64049
+    },
+    "raw_artifacts": {
+      "sha256": "469a19c315b5b8ff101c21414477777c137cd4aa199a4199d820401a77363e0b",
+      "bytes": 48091
+    }
+  },
+  "database_fingerprints_after": {
+    "telemetry_records": {
+      "sha256": "a8000d79465b245fed1b67fec39fc4072d6f09db00912e66dd77c46753a9dcb9",
+      "bytes": 365478573
+    },
+    "analysis_results": {
+      "sha256": "a0af972f55a1966ba65fc688c33f55bbbf0c582565e2a4a7d4f91a69ccf296cc",
+      "bytes": 54403750
+    },
+    "ride_sessions": {
+      "sha256": "9421e8ceafb86930496b6a9c37a9dd0895927c88a5a993c2dc237bfa012d1a5d",
+      "bytes": 65062
+    },
+    "sync_batches": {
+      "sha256": "e1773f529a5bb5495ceb4e095b17fda3d334a8ce313c288ad320bd48b02705d4",
+      "bytes": 64049
+    },
+    "raw_artifacts": {
+      "sha256": "469a19c315b5b8ff101c21414477777c137cd4aa199a4199d820401a77363e0b",
+      "bytes": 48091
+    }
+  },
+  "all_historical_data_equal": true,
+  "selected_analysis_242_unchanged": true,
+  "all_existing_analysis_fields_equal": true,
+  "browser": {
+    "phase": "production",
+    "guest_http": 200,
+    "guest_rerun_actions": 0,
+    "login_http": 200,
+    "anonymous_analysis_api": 401,
+    "home_and_recent_rides_http": 200,
+    "rerun_clicked": false,
+    "views": [
+      {
+        "navigation": {
+          "name": "https://drivesafe.top/sessions/242",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 1967.5999999642372,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 1.5,
+          "domainLookupStart": 1.5,
+          "domainLookupEnd": 1.5,
+          "connectStart": 1.5,
+          "secureConnectionStart": 1.5,
+          "connectEnd": 1.5,
+          "requestStart": 1.5,
+          "responseStart": 1511.7999999523163,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 0,
+          "responseEnd": 1511.7999999523163,
+          "transferSize": 270731,
+          "encodedBodySize": 270431,
+          "decodedBodySize": 270431,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 0,
+          "unloadEventEnd": 0,
+          "domInteractive": 1663.699999988079,
+          "domContentLoadedEventStart": 1963.699999988079,
+          "domContentLoadedEventEnd": 1965,
+          "domComplete": 1967.199999988079,
+          "loadEventStart": 1967.5999999642372,
+          "loadEventEnd": 1967.5999999642372,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "resources": [
+          {
+            "name": "https://drivesafe.top/static/css/dashboard.css",
+            "duration": 37.69999998807907,
+            "transferSize": 32874,
+            "decodedBodySize": 32574,
+            "initiatorType": "link"
+          },
+          {
+            "name": "https://drivesafe.top/static/js/i18n.js",
+            "duration": 43.5,
+            "transferSize": 7980,
+            "decodedBodySize": 7680,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js",
+            "duration": 418,
+            "transferSize": 71245,
+            "decodedBodySize": 205889,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.2.0/dist/chartjs-plugin-zoom.min.js",
+            "duration": 418.69999998807907,
+            "transferSize": 6080,
+            "decodedBodySize": 15203,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://drivesafe.top/static/js/dashboardApi.js",
+            "duration": 39.39999997615814,
+            "transferSize": 2932,
+            "decodedBodySize": 2632,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://drivesafe.top/static/js/sessionDetail.js",
+            "duration": 47.80000001192093,
+            "transferSize": 26393,
+            "decodedBodySize": 26093,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://drivesafe.top/favicon.ico",
+            "duration": 3.599999964237213,
+            "transferSize": 0,
+            "decodedBodySize": 0,
+            "initiatorType": "other"
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 1611.5999999642372,
+            "duration": 51
+          }
+        ],
+        "domNodes": 2325,
+        "chartCanvases": 0,
+        "evidenceOpen": false,
+        "workbenchOpen": false,
+        "button": {
+          "count": 1,
+          "visible": true,
+          "label": "Re-run Harness Analysis",
+          "disabled": false
+        },
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 525232.920114
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 4
+          },
+          {
+            "name": "Frames",
+            "value": 4
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 54
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 1121
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 5791
+          },
+          {
+            "name": "Resources",
+            "value": 7
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 100
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 4
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 4
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 2
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 0
+          },
+          {
+            "name": "LayoutCount",
+            "value": 1
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 3
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.040006
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 0.005005
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 0.059485
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.036017
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0.000219
+          },
+          {
+            "name": "TaskDuration",
+            "value": 0.201485
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 0.060753
+          },
+          {
+            "name": "ThreadTime",
+            "value": 0.177299
+          },
+          {
+            "name": "ProcessTime",
+            "value": 0.35
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 3999324
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 6885376
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 525232.011923
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 525232.2673
+          },
+          {
+            "name": "NavigationStart",
+            "value": 525230.303646
+          }
+        ],
+        "requests": [
+          {
+            "path": "/sessions/242",
+            "method": "GET"
+          },
+          {
+            "path": "/static/css/dashboard.css",
+            "method": "GET"
+          },
+          {
+            "path": "/static/js/i18n.js",
+            "method": "GET"
+          },
+          {
+            "path": "/static/js/dashboardApi.js",
+            "method": "GET"
+          },
+          {
+            "path": "/static/js/sessionDetail.js",
+            "method": "GET"
+          }
+        ]
+      },
+      {
+        "navigation": {
+          "name": "https://drivesafe.top/sessions/242",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 1740.800000011921,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 1,
+          "domainLookupStart": 1,
+          "domainLookupEnd": 1,
+          "connectStart": 1,
+          "secureConnectionStart": 1,
+          "connectEnd": 1,
+          "requestStart": 1,
+          "responseStart": 1528.6000000238419,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 0,
+          "responseEnd": 1528.6000000238419,
+          "transferSize": 270731,
+          "encodedBodySize": 270431,
+          "decodedBodySize": 270431,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 1536.4000000357628,
+          "unloadEventEnd": 1536.4000000357628,
+          "domInteractive": 1645.6000000238419,
+          "domContentLoadedEventStart": 1739.4000000357628,
+          "domContentLoadedEventEnd": 1739.699999988079,
+          "domComplete": 1740.5,
+          "loadEventStart": 1740.699999988079,
+          "loadEventEnd": 1740.800000011921,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "low"
+          }
+        },
+        "resources": [
+          {
+            "name": "https://drivesafe.top/static/css/dashboard.css",
+            "duration": 24.899999976158142,
+            "transferSize": 32874,
+            "decodedBodySize": 32574,
+            "initiatorType": "link"
+          },
+          {
+            "name": "https://drivesafe.top/static/js/i18n.js",
+            "duration": 37.69999998807907,
+            "transferSize": 7980,
+            "decodedBodySize": 7680,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js",
+            "duration": 175.19999998807907,
+            "transferSize": 71245,
+            "decodedBodySize": 205889,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.2.0/dist/chartjs-plugin-zoom.min.js",
+            "duration": 177.10000002384186,
+            "transferSize": 6080,
+            "decodedBodySize": 15203,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://drivesafe.top/static/js/dashboardApi.js",
+            "duration": 36.200000047683716,
+            "transferSize": 2932,
+            "decodedBodySize": 2632,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://drivesafe.top/static/js/sessionDetail.js",
+            "duration": 40,
+            "transferSize": 26393,
+            "decodedBodySize": 26093,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://drivesafe.top/favicon.ico",
+            "duration": 1.5,
+            "transferSize": 0,
+            "decodedBodySize": 0,
+            "initiatorType": "other"
+          }
+        ],
+        "longTasks": [],
+        "domNodes": 2325,
+        "chartCanvases": 0,
+        "evidenceOpen": false,
+        "workbenchOpen": false,
+        "button": {
+          "count": 1,
+          "visible": true,
+          "label": "Re-run Harness Analysis",
+          "disabled": false
+        },
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 525235.272347
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 6
+          },
+          {
+            "name": "Frames",
+            "value": 7
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 108
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 2240
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 11574
+          },
+          {
+            "name": "Resources",
+            "value": 14
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 196
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 6
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 6
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 4
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 0
+          },
+          {
+            "name": "LayoutCount",
+            "value": 2
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 3
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.012983
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 0.006943
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 0.053731
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.024551
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0.000131
+          },
+          {
+            "name": "TaskDuration",
+            "value": 0.172143
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 0.073804
+          },
+          {
+            "name": "ThreadTime",
+            "value": 0.156167
+          },
+          {
+            "name": "ProcessTime",
+            "value": 0.6
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 5990340
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 10362880
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 525234.596395
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 525234.665567
+          },
+          {
+            "name": "NavigationStart",
+            "value": 525232.926253
+          }
+        ],
+        "requests": [
+          {
+            "path": "/sessions/242",
+            "method": "GET"
+          },
+          {
+            "path": "/static/css/dashboard.css",
+            "method": "GET"
+          },
+          {
+            "path": "/static/js/i18n.js",
+            "method": "GET"
+          },
+          {
+            "path": "/static/js/dashboardApi.js",
+            "method": "GET"
+          },
+          {
+            "path": "/static/js/sessionDetail.js",
+            "method": "GET"
+          }
+        ]
+      },
+      {
+        "navigation": {
+          "name": "https://drivesafe.top/sessions/242",
+          "entryType": "navigation",
+          "startTime": 0,
+          "duration": 1682,
+          "initiatorType": "navigation",
+          "deliveryType": "",
+          "nextHopProtocol": "",
+          "renderBlockingStatus": "non-blocking",
+          "contentType": "text/html",
+          "contentEncoding": "",
+          "workerStart": 0,
+          "workerRouterEvaluationStart": 0,
+          "workerCacheLookupStart": 0,
+          "workerMatchedSourceType": "",
+          "workerFinalSourceType": "",
+          "redirectStart": 0,
+          "redirectEnd": 0,
+          "fetchStart": 0.8999999761581421,
+          "domainLookupStart": 0.8999999761581421,
+          "domainLookupEnd": 0.8999999761581421,
+          "connectStart": 0.8999999761581421,
+          "secureConnectionStart": 0.8999999761581421,
+          "connectEnd": 0.8999999761581421,
+          "requestStart": 0.8999999761581421,
+          "responseStart": 1473.699999988079,
+          "firstInterimResponseStart": 0,
+          "finalResponseHeadersStart": 0,
+          "responseEnd": 1473.699999988079,
+          "transferSize": 270731,
+          "encodedBodySize": 270431,
+          "decodedBodySize": 270431,
+          "responseStatus": 200,
+          "serverTiming": [],
+          "unloadEventStart": 1486.5,
+          "unloadEventEnd": 1486.5,
+          "domInteractive": 1569,
+          "domContentLoadedEventStart": 1680.8999999761581,
+          "domContentLoadedEventEnd": 1681.199999988079,
+          "domComplete": 1681.800000011921,
+          "loadEventStart": 1682,
+          "loadEventEnd": 1682,
+          "type": "navigate",
+          "redirectCount": 0,
+          "activationStart": 0,
+          "criticalCHRestart": 0,
+          "notRestoredReasons": null,
+          "confidence": {
+            "randomizedTriggerRate": 0.4994798,
+            "value": "high"
+          }
+        },
+        "resources": [
+          {
+            "name": "https://drivesafe.top/static/css/dashboard.css",
+            "duration": 24.600000023841858,
+            "transferSize": 32874,
+            "decodedBodySize": 32574,
+            "initiatorType": "link"
+          },
+          {
+            "name": "https://drivesafe.top/static/js/i18n.js",
+            "duration": 25.600000023841858,
+            "transferSize": 7980,
+            "decodedBodySize": 7680,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js",
+            "duration": 177.29999995231628,
+            "transferSize": 71245,
+            "decodedBodySize": 205889,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.2.0/dist/chartjs-plugin-zoom.min.js",
+            "duration": 125.10000002384186,
+            "transferSize": 6080,
+            "decodedBodySize": 15203,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://drivesafe.top/static/js/dashboardApi.js",
+            "duration": 27.600000023841858,
+            "transferSize": 2932,
+            "decodedBodySize": 2632,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://drivesafe.top/static/js/sessionDetail.js",
+            "duration": 36.80000001192093,
+            "transferSize": 26393,
+            "decodedBodySize": 26093,
+            "initiatorType": "script"
+          },
+          {
+            "name": "https://drivesafe.top/favicon.ico",
+            "duration": 1.5,
+            "transferSize": 0,
+            "decodedBodySize": 0,
+            "initiatorType": "other"
+          }
+        ],
+        "longTasks": [],
+        "domNodes": 2325,
+        "chartCanvases": 0,
+        "evidenceOpen": false,
+        "workbenchOpen": false,
+        "button": {
+          "count": 1,
+          "visible": true,
+          "label": "Re-run Harness Analysis",
+          "disabled": false
+        },
+        "metrics": [
+          {
+            "name": "Timestamp",
+            "value": 525237.552865
+          },
+          {
+            "name": "AudioHandlers",
+            "value": 0
+          },
+          {
+            "name": "AudioWorkletProcessors",
+            "value": 0
+          },
+          {
+            "name": "Documents",
+            "value": 8
+          },
+          {
+            "name": "Frames",
+            "value": 10
+          },
+          {
+            "name": "JSEventListeners",
+            "value": 162
+          },
+          {
+            "name": "LayoutObjects",
+            "value": 3361
+          },
+          {
+            "name": "MediaKeySessions",
+            "value": 0
+          },
+          {
+            "name": "MediaKeys",
+            "value": 0
+          },
+          {
+            "name": "Nodes",
+            "value": 17357
+          },
+          {
+            "name": "Resources",
+            "value": 21
+          },
+          {
+            "name": "ContextLifecycleStateObservers",
+            "value": 292
+          },
+          {
+            "name": "V8PerContextDatas",
+            "value": 8
+          },
+          {
+            "name": "WorkerGlobalScopes",
+            "value": 0
+          },
+          {
+            "name": "UACSSResources",
+            "value": 0
+          },
+          {
+            "name": "RTCPeerConnections",
+            "value": 0
+          },
+          {
+            "name": "ResourceFetchers",
+            "value": 8
+          },
+          {
+            "name": "AdSubframes",
+            "value": 0
+          },
+          {
+            "name": "DetachedScriptStates",
+            "value": 6
+          },
+          {
+            "name": "ArrayBufferContents",
+            "value": 0
+          },
+          {
+            "name": "LayoutCount",
+            "value": 1
+          },
+          {
+            "name": "RecalcStyleCount",
+            "value": 2
+          },
+          {
+            "name": "LayoutDuration",
+            "value": 0.007983
+          },
+          {
+            "name": "RecalcStyleDuration",
+            "value": 0.004108
+          },
+          {
+            "name": "DevToolsCommandDuration",
+            "value": 0.050223
+          },
+          {
+            "name": "ScriptDuration",
+            "value": 0.019656
+          },
+          {
+            "name": "V8CompileDuration",
+            "value": 0.000152
+          },
+          {
+            "name": "TaskDuration",
+            "value": 0.140391
+          },
+          {
+            "name": "TaskOtherDuration",
+            "value": 0.058269
+          },
+          {
+            "name": "ThreadTime",
+            "value": 0.137804
+          },
+          {
+            "name": "ProcessTime",
+            "value": 0.82
+          },
+          {
+            "name": "JSHeapUsedSize",
+            "value": 9116012
+          },
+          {
+            "name": "JSHeapTotalSize",
+            "value": 12791808
+          },
+          {
+            "name": "FirstMeaningfulPaint",
+            "value": 525236.8832
+          },
+          {
+            "name": "DomContentLoaded",
+            "value": 525236.959703
+          },
+          {
+            "name": "NavigationStart",
+            "value": 525235.278838
+          }
+        ],
+        "requests": [
+          {
+            "path": "/sessions/242",
+            "method": "GET"
+          },
+          {
+            "path": "/static/css/dashboard.css",
+            "method": "GET"
+          },
+          {
+            "path": "/static/js/i18n.js",
+            "method": "GET"
+          },
+          {
+            "path": "/static/js/dashboardApi.js",
+            "method": "GET"
+          },
+          {
+            "path": "/static/js/sessionDetail.js",
+            "method": "GET"
+          }
+        ]
+      }
+    ],
+    "expanded_requests": [
+      {
+        "path": "/api/sessions/242/samples",
+        "method": "GET"
+      },
+      {
+        "path": "/sessions/242",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/dashboardApi.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/sessionDetail.js",
+        "method": "GET"
+      },
+      {
+        "path": "/api/sessions/242/samples",
+        "method": "GET"
+      },
+      {
+        "path": "/",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/sessions",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/dashboardApi.js",
+        "method": "GET"
+      },
+      {
+        "path": "/sessions/900101",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/dashboardApi.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/sessionDetail.js",
+        "method": "GET"
+      },
+      {
+        "path": "/sessions/900101",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/dashboardApi.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/sessionDetail.js",
+        "method": "GET"
+      },
+      {
+        "path": "/auth/login",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/auth/login",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/api/sessions/242/analysis",
+        "method": "GET"
+      }
+    ],
+    "technical_initially_collapsed": true,
+    "chart_canvases_after_open": 4,
+    "event_link_works": true,
+    "locale_after_switch": "vi",
+    "errors": [],
+    "browser": "149.0.7827.55",
+    "analysis_posts": 0
+  },
+  "latency": {
+    "/": {
+      "before": {
+        "n": 5,
+        "median_seconds": 11.687359,
+        "max_seconds": 36.12344,
+        "median_ttfb": 11.685211,
+        "transferred_bytes": 44862
+      },
+      "after": {
+        "n": 5,
+        "median_seconds": 3.402363,
+        "max_seconds": 3.538412,
+        "median_ttfb": 3.401193,
+        "transferred_bytes": 45723
+      },
+      "p3_staging_median_seconds": 3.348335
+    },
+    "/sessions": {
+      "before": {
+        "n": 5,
+        "median_seconds": 1.073897,
+        "max_seconds": 4.355087,
+        "median_ttfb": 1.072223,
+        "transferred_bytes": 44986
+      },
+      "after": {
+        "n": 5,
+        "median_seconds": 0.1443,
+        "max_seconds": 0.269217,
+        "median_ttfb": 0.142058,
+        "transferred_bytes": 45868
+      },
+      "p3_staging_median_seconds": 0.139066
+    },
+    "/sessions/242": {
+      "before": {
+        "n": 5,
+        "median_seconds": 4.085134,
+        "max_seconds": 8.147793,
+        "median_ttfb": 4.081949,
+        "transferred_bytes": 55016
+      },
+      "after": {
+        "n": 5,
+        "median_seconds": 1.450717,
+        "max_seconds": 1.592603,
+        "median_ttfb": 1.448778,
+        "transferred_bytes": 56919
+      },
+      "p3_staging_median_seconds": 1.377188
+    },
+    "/api/sessions/242/analysis": {
+      "before": {
+        "n": 5,
+        "median_seconds": 5.236972,
+        "max_seconds": 11.590462,
+        "median_ttfb": 5.21982,
+        "transferred_bytes": 719083
+      },
+      "after": {
+        "n": 5,
+        "median_seconds": 2.720104,
+        "max_seconds": 2.748208,
+        "median_ttfb": 2.716473,
+        "transferred_bytes": 719152
+      },
+      "p3_staging_median_seconds": 2.783685
+    }
+  },
+  "raw_latency": {
+    "before": [
+      {
+        "round": 1,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 3.5e-05,
+        "time_connect": 0.000221,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 36.122185,
+        "time_total": 36.12344,
+        "size_download": 44867
+      },
+      {
+        "round": 1,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.5e-05,
+        "time_connect": 0.000171,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 4.353329,
+        "time_total": 4.355087,
+        "size_download": 44983
+      },
+      {
+        "round": 1,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 3.9e-05,
+        "time_connect": 0.000215,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 8.144611,
+        "time_total": 8.147793,
+        "size_download": 55024
+      },
+      {
+        "round": 1,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 3.7e-05,
+        "time_connect": 0.000203,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 11.588243,
+        "time_total": 11.590462,
+        "size_download": 719083
+      },
+      {
+        "round": 2,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.5e-05,
+        "time_connect": 0.000165,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 13.80098,
+        "time_total": 13.801753,
+        "size_download": 44870
+      },
+      {
+        "round": 2,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.1e-05,
+        "time_connect": 0.000165,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.072438,
+        "time_total": 1.074535,
+        "size_download": 44984
+      },
+      {
+        "round": 2,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 3e-05,
+        "time_connect": 0.000199,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 4.089603,
+        "time_total": 4.091431,
+        "size_download": 55015
+      },
+      {
+        "round": 2,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.7e-05,
+        "time_connect": 0.000245,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 5.455965,
+        "time_total": 5.461722,
+        "size_download": 719083
+      },
+      {
+        "round": 3,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 3.7e-05,
+        "time_connect": 0.000184,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 11.382517,
+        "time_total": 11.383655,
+        "size_download": 44832
+      },
+      {
+        "round": 3,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 3.4e-05,
+        "time_connect": 0.000217,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.045212,
+        "time_total": 1.046925,
+        "size_download": 44981
+      },
+      {
+        "round": 3,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 2.4e-05,
+        "time_connect": 0.0002,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.927164,
+        "time_total": 3.930386,
+        "size_download": 55014
+      },
+      {
+        "round": 3,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000188,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 5.18391,
+        "time_total": 5.186441,
+        "size_download": 719083
+      },
+      {
+        "round": 4,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000158,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 11.685211,
+        "time_total": 11.687359,
+        "size_download": 44866
+      },
+      {
+        "round": 4,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000195,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.072223,
+        "time_total": 1.073897,
+        "size_download": 44979
+      },
+      {
+        "round": 4,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000175,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.831073,
+        "time_total": 3.833068,
+        "size_download": 55012
+      },
+      {
+        "round": 4,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.1e-05,
+        "time_connect": 0.000169,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 5.21982,
+        "time_total": 5.222284,
+        "size_download": 719083
+      },
+      {
+        "round": 5,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.9e-05,
+        "time_connect": 0.000191,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 11.366777,
+        "time_total": 11.367698,
+        "size_download": 44862
+      },
+      {
+        "round": 5,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 3e-05,
+        "time_connect": 0.000191,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.001423,
+        "time_total": 1.002517,
+        "size_download": 44986
+      },
+      {
+        "round": 5,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 3.2e-05,
+        "time_connect": 0.000207,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 4.081949,
+        "time_total": 4.085134,
+        "size_download": 55016
+      },
+      {
+        "round": 5,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.4e-05,
+        "time_connect": 0.0002,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 5.192095,
+        "time_total": 5.236972,
+        "size_download": 719083
+      }
+    ],
+    "after": [
+      {
+        "round": 1,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.4e-05,
+        "time_connect": 0.000164,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.517923,
+        "time_total": 3.519061,
+        "size_download": 45721
+      },
+      {
+        "round": 1,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.7e-05,
+        "time_connect": 0.000189,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.268101,
+        "time_total": 0.269217,
+        "size_download": 45867
+      },
+      {
+        "round": 1,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 2.4e-05,
+        "time_connect": 0.000171,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.590072,
+        "time_total": 1.592603,
+        "size_download": 56920
+      },
+      {
+        "round": 1,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 4.9e-05,
+        "time_connect": 0.000221,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.688941,
+        "time_total": 2.691625,
+        "size_download": 719152
+      },
+      {
+        "round": 2,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.3e-05,
+        "time_connect": 0.000173,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.401193,
+        "time_total": 3.402363,
+        "size_download": 45722
+      },
+      {
+        "round": 2,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.5e-05,
+        "time_connect": 0.000169,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.19838,
+        "time_total": 0.199425,
+        "size_download": 45866
+      },
+      {
+        "round": 2,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 2.9e-05,
+        "time_connect": 0.00019,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.441297,
+        "time_total": 1.443294,
+        "size_download": 56929
+      },
+      {
+        "round": 2,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 3e-05,
+        "time_connect": 0.000198,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.746,
+        "time_total": 2.748208,
+        "size_download": 719152
+      },
+      {
+        "round": 3,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 3e-05,
+        "time_connect": 0.000176,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.153174,
+        "time_total": 3.154226,
+        "size_download": 45715
+      },
+      {
+        "round": 3,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000171,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.098746,
+        "time_total": 0.100187,
+        "size_download": 45869
+      },
+      {
+        "round": 3,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 4.3e-05,
+        "time_connect": 0.000281,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.448778,
+        "time_total": 1.450717,
+        "size_download": 56927
+      },
+      {
+        "round": 3,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.9e-05,
+        "time_connect": 0.000183,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.562574,
+        "time_total": 2.578876,
+        "size_download": 719152
+      },
+      {
+        "round": 4,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 3.1e-05,
+        "time_connect": 0.000195,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.537123,
+        "time_total": 3.538412,
+        "size_download": 45721
+      },
+      {
+        "round": 4,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2e-05,
+        "time_connect": 0.000216,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.142058,
+        "time_total": 0.1443,
+        "size_download": 45866
+      },
+      {
+        "round": 4,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 4e-05,
+        "time_connect": 0.000227,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.383509,
+        "time_total": 1.385216,
+        "size_download": 56920
+      },
+      {
+        "round": 4,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000177,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.716473,
+        "time_total": 2.732914,
+        "size_download": 719152
+      },
+      {
+        "round": 5,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.8e-05,
+        "time_connect": 0.000163,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.270879,
+        "time_total": 3.2719,
+        "size_download": 45723
+      },
+      {
+        "round": 5,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.8e-05,
+        "time_connect": 0.000193,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.101153,
+        "time_total": 0.102034,
+        "size_download": 45868
+      },
+      {
+        "round": 5,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000174,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.558325,
+        "time_total": 1.560895,
+        "size_download": 56919
+      },
+      {
+        "round": 5,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 3.3e-05,
+        "time_connect": 0.000212,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.717567,
+        "time_total": 2.720104,
+        "size_download": 719152
+      }
+    ]
+  },
+  "logs": {
+    "drisafe-web": {
+      "analysis_post_count": 0,
+      "error_count": 0,
+      "worker_boots": 2
+    },
+    "ecu-analyzer": {
+      "analysis_post_count": 0,
+      "error_count": 0,
+      "worker_boots": 0
+    }
+  },
+  "public_path": {
+    "http_code": 200,
+    "time_namelookup": 0.072807,
+    "time_connect": 0.135074,
+    "time_appconnect": 0.212592,
+    "time_starttransfer": 0.415825,
+    "time_total": 0.501998
+  },
+  "production_analyses_executed": 0,
+  "rollback_executed": false,
+  "p31_deployed": false
+}

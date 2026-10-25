@@ -1,0 +1,2228 @@
+{
+  "id": "analysis_20261006T152308Z_4654328dc05c",
+  "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+  "model_version_id": "iforest-baseline-20260920T091709Z",
+  "telemetry_schema_version": "canonical-telemetry-v2",
+  "feature_schema_version": "ecu-window-features-v1",
+  "signal_columns": [
+    "rpm",
+    "tps_voltage",
+    "tps_raw",
+    "battery_voltage",
+    "iat_c",
+    "ect_c"
+  ],
+  "status": "completed",
+  "window_size_samples": 50,
+  "window_step_samples": 10,
+  "anomaly_window_count": 0,
+  "total_window_count": 188,
+  "anomaly_ratio": 0.0,
+  "health_score": 93.47,
+  "overall_status": "ok",
+  "evidence_window_count": 188,
+  "minimum_windows_for_status": 10,
+  "evidence_sufficient": true,
+  "detectors": [
+    {
+      "detector_id": "isolation_forest",
+      "model_name": "ecu-anomaly-baseline",
+      "model_family": "IsolationForest",
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "enabled": true,
+      "status": "ok",
+      "reason": null,
+      "required_features": [
+        "rpm_mean",
+        "rpm_std",
+        "rpm_min",
+        "rpm_max",
+        "rpm_range",
+        "rpm_median",
+        "rpm_first",
+        "rpm_last",
+        "rpm_delta",
+        "rpm_slope",
+        "rpm_mean_absolute_diff",
+        "rpm_max_absolute_diff",
+        "rpm_constant_signal",
+        "tps_voltage_mean",
+        "tps_voltage_std",
+        "tps_voltage_min",
+        "tps_voltage_max",
+        "tps_voltage_range",
+        "tps_voltage_median",
+        "tps_voltage_first",
+        "tps_voltage_last",
+        "tps_voltage_delta",
+        "tps_voltage_slope",
+        "tps_voltage_mean_absolute_diff",
+        "tps_voltage_max_absolute_diff",
+        "tps_voltage_constant_signal",
+        "tps_raw_mean",
+        "tps_raw_std",
+        "tps_raw_min",
+        "tps_raw_max",
+        "tps_raw_range",
+        "tps_raw_median",
+        "tps_raw_first",
+        "tps_raw_last",
+        "tps_raw_delta",
+        "tps_raw_slope",
+        "tps_raw_mean_absolute_diff",
+        "tps_raw_max_absolute_diff",
+        "tps_raw_constant_signal",
+        "battery_voltage_mean",
+        "battery_voltage_std",
+        "battery_voltage_min",
+        "battery_voltage_max",
+        "battery_voltage_range",
+        "battery_voltage_median",
+        "battery_voltage_first",
+        "battery_voltage_last",
+        "battery_voltage_delta",
+        "battery_voltage_slope",
+        "battery_voltage_mean_absolute_diff",
+        "battery_voltage_max_absolute_diff",
+        "battery_voltage_constant_signal",
+        "iat_c_mean",
+        "iat_c_std",
+        "iat_c_min",
+        "iat_c_max",
+        "iat_c_range",
+        "iat_c_median",
+        "iat_c_first",
+        "iat_c_last",
+        "iat_c_delta",
+        "iat_c_slope",
+        "iat_c_mean_absolute_diff",
+        "iat_c_max_absolute_diff",
+        "iat_c_constant_signal",
+        "ect_c_mean",
+        "ect_c_std",
+        "ect_c_min",
+        "ect_c_max",
+        "ect_c_range",
+        "ect_c_median",
+        "ect_c_first",
+        "ect_c_last",
+        "ect_c_delta",
+        "ect_c_slope",
+        "ect_c_mean_absolute_diff",
+        "ect_c_max_absolute_diff",
+        "ect_c_constant_signal",
+        "corr_rpm_tps_voltage",
+        "corr_rpm_tps_raw",
+        "rpm_per_tps_voltage"
+      ],
+      "missing_features": [],
+      "scored_window_count": 188,
+      "anomaly_window_count": 0,
+      "anomaly_ratio": 0.0,
+      "anomaly_score": {
+        "column": "score_sample",
+        "direction": "lower_is_more_anomalous"
+      },
+      "prediction": {
+        "column": "prediction",
+        "is_anomaly_column": "is_anomaly"
+      },
+      "available_evidence": [
+        "score_sample",
+        "decision_score",
+        "window_health_score",
+        "most_unusual_features"
+      ],
+      "detector_local_score": {
+        "column": "score_sample",
+        "direction": "lower_is_more_anomalous",
+        "min": -0.5349279409735027,
+        "max": -0.35697378857917955,
+        "mean": -0.4215742937704613,
+        "most_anomalous": -0.5349279409735027,
+        "scored_window_count": 188
+      },
+      "metadata": {
+        "health_score": 93.47,
+        "overall_status": "ok",
+        "most_unusual_features": [
+          "ect_c_delta",
+          "ect_c_slope",
+          "tps_raw_delta",
+          "corr_rpm_tps_voltage",
+          "rpm_per_tps_voltage"
+        ],
+        "note": "Health score is an internal normalized score, not a failure probability.",
+        "harness_latency_ms": 174.112521
+      },
+      "warnings": []
+    }
+  ],
+  "diagnostic_evidence": {
+    "aggregate": {
+      "agreement": {
+        "full_coverage_agreement_window_count": 188,
+        "no_score_fusion_or_voting": true
+      },
+      "counts": {
+        "applicable_detector_count": 2,
+        "detector_count": 2,
+        "negative_detector_count": 2,
+        "not_applicable_detector_count": 0,
+        "positive_detector_count": 0,
+        "unavailable_detector_count": 0
+      },
+      "coverage_status": "full",
+      "description": "At least one active detector was applicable and no active detector produced anomaly evidence; this is not a verified-healthy label.",
+      "detector_disagreement": {
+        "disagreement_window_count": 0,
+        "negative_detector_ids": [
+          "isolation_forest",
+          "contextual_battery_voltage"
+        ],
+        "positive_detector_ids": [],
+        "present": false
+      },
+      "detector_ids": {
+        "negative": [
+          "isolation_forest",
+          "contextual_battery_voltage"
+        ],
+        "not_applicable": [],
+        "positive": [],
+        "unavailable": []
+      },
+      "event_provenance": null,
+      "evidence_state": "no_evidence",
+      "no_evidence_is_verified_healthy": false,
+      "schema_version": "diagnostic-evidence-aggregate-v1",
+      "score_fusion_used": false,
+      "window_summary": {
+        "applicable_detector_count_distribution": {
+          "2": 188
+        },
+        "both_applicable_agreement_windows": 188,
+        "contextual_only_finding_windows": 0,
+        "coverage_status_counts": {
+          "full": 188
+        },
+        "detector_finding_counts": {
+          "contextual_battery_voltage": {
+            "negative": 188
+          },
+          "isolation_forest": {
+            "negative": 188
+          }
+        },
+        "disagreement_windows": 0,
+        "evidence_state_counts": {
+          "no_evidence": 188
+        },
+        "if_only_finding_windows": 0,
+        "insufficient_coverage_windows": 0,
+        "no_evidence_is_verified_healthy": false,
+        "no_evidence_windows": 188,
+        "only_one_detector_applicable_windows": 0,
+        "overlapping_finding_windows": 0,
+        "score_fusion_used": false,
+        "window_count": 188
+      }
+    },
+    "analysis_version": "h9-drive-safe-diagnostic-evidence-v1",
+    "capability_status": {
+      "component_status": {
+        "contextual_battery_voltage": "ok",
+        "evidence_aggregation": "available",
+        "historical_evidence": "available",
+        "isolation_forest": "ok",
+        "overall_status": "available",
+        "rca_v2": "available"
+      },
+      "production_baseline": [
+        "isolation_forest"
+      ],
+      "research_evidence_available": true,
+      "research_evidence_not_production_gating": true,
+      "research_evidence_sections": [
+        "contextual_battery_voltage",
+        "aggregate",
+        "rca_v2",
+        "historical_evidence"
+      ]
+    },
+    "detectors": {
+      "contextual_battery_voltage": {
+        "anomaly_ratio": 0.0,
+        "anomaly_window_count": 0,
+        "applicability": {
+          "applicable": true,
+          "missing_features": [],
+          "reason": null
+        },
+        "capability_status": "research_evidence",
+        "detector_id": "contextual_battery_voltage",
+        "detector_local_score": {
+          "column": "contextual_anomaly_score",
+          "direction": "higher_is_more_anomalous",
+          "summary": {
+            "column": "contextual_anomaly_score",
+            "direction": "higher_is_more_anomalous",
+            "max": 2.5714285714,
+            "mean": 0.2759270516585107,
+            "min": 0.0,
+            "most_anomalous": 2.5714285714,
+            "scored_window_count": 188
+          },
+          "universal_score": false,
+          "value_scope": "per_window"
+        },
+        "detector_local_threshold": {
+          "column": "contextual_anomaly_score",
+          "rule": "robust_z >= threshold maps to contextual anomaly",
+          "source": "contextual_reference",
+          "value": 4.5
+        },
+        "enabled": true,
+        "error": null,
+        "evidence": {
+          "available_columns": [
+            "operating_context",
+            "contextual_status",
+            "contextual_applicable",
+            "contextual_threshold",
+            "contextual_top_feature",
+            "contextual_evidence"
+          ],
+          "metadata": {
+            "applicable_window_count": 188,
+            "harness_latency_ms": 19.164417,
+            "modeled_contexts": [
+              "idle_closed_throttle",
+              "low_load_running",
+              "mid_load_running"
+            ],
+            "skipped_window_count": 0,
+            "statistical_interpretation": "Contextual score is max robust z-score across verified battery-voltage features. Anomalies are statistical deviations for manual review, not confirmed failures.",
+            "threshold": 4.5
+          },
+          "per_window_values_available_in_analysis_windows": true
+        },
+        "execution_status": "ok",
+        "finding": "negative",
+        "finding_semantics": "session positive when one or more applicable detector windows are anomalous",
+        "model_family": "RobustContextualStats",
+        "model_name": "contextual-battery-voltage",
+        "model_version": "contextual-battery-robust-v1-d80a160236f5",
+        "scored_window_count": 188,
+        "skip_or_failure_reason": null,
+        "warnings": []
+      },
+      "isolation_forest": {
+        "anomaly_ratio": 0.0,
+        "anomaly_window_count": 0,
+        "applicability": {
+          "applicable": true,
+          "missing_features": [],
+          "reason": null
+        },
+        "capability_status": "production_baseline",
+        "detector_id": "isolation_forest",
+        "detector_local_score": {
+          "column": "score_sample",
+          "direction": "lower_is_more_anomalous",
+          "summary": {
+            "column": "score_sample",
+            "direction": "lower_is_more_anomalous",
+            "max": -0.35697378857917955,
+            "mean": -0.4215742937704613,
+            "min": -0.5349279409735027,
+            "most_anomalous": -0.5349279409735027,
+            "scored_window_count": 188
+          },
+          "universal_score": false,
+          "value_scope": "per_window"
+        },
+        "detector_local_threshold": {
+          "column": "decision_score",
+          "rule": "prediction=-1 when decision_score < 0",
+          "source": "isolation_forest_decision_function",
+          "value": 0.0
+        },
+        "enabled": true,
+        "error": null,
+        "evidence": {
+          "available_columns": [
+            "score_sample",
+            "decision_score",
+            "window_health_score",
+            "most_unusual_features"
+          ],
+          "metadata": {
+            "harness_latency_ms": 174.112521,
+            "health_score": 93.47,
+            "most_unusual_features": [
+              "ect_c_delta",
+              "ect_c_slope",
+              "tps_raw_delta",
+              "corr_rpm_tps_voltage",
+              "rpm_per_tps_voltage"
+            ],
+            "note": "Health score is an internal normalized score, not a failure probability.",
+            "overall_status": "ok"
+          },
+          "per_window_values_available_in_analysis_windows": true
+        },
+        "execution_status": "ok",
+        "finding": "negative",
+        "finding_semantics": "session positive when one or more applicable detector windows are anomalous",
+        "model_family": "IsolationForest",
+        "model_name": "ecu-anomaly-baseline",
+        "model_version": "iforest-baseline-20260920T091709Z",
+        "scored_window_count": 188,
+        "skip_or_failure_reason": null,
+        "warnings": []
+      }
+    },
+    "events": {
+      "bounded": true,
+      "coverage_gap_region_count": 0,
+      "finding_event_count": 0,
+      "items": [],
+      "max_items": 15,
+      "schema_version": "diagnostic-evidence-events-v1"
+    },
+    "history": {
+      "can_create_root_cause": false,
+      "comparison_ids": [
+        "h8-comparison-00001",
+        "h8-comparison-00002"
+      ],
+      "comparisons": [
+        {
+          "comparison_id": "h8-comparison-00001",
+          "comparison_limitations": [],
+          "compatibility": {
+            "comparable_session_count": 38,
+            "comparable_session_ids": [
+              "calib-20260812-152832-2a54f0",
+              "calib-20260814-152603-8fd9ed",
+              "calib-20260814-153329-812a3f",
+              "ride-20260901-0715",
+              "ride-20260902-1032",
+              "ride-20260902-1050",
+              "ride-20260903-1349",
+              "ride-20260904-1623",
+              "ride-20260904-1810",
+              "ride-20260905-0840",
+              "ride-20260905-0858",
+              "ride-20260907-1157",
+              "ride-20260908-1431",
+              "ride-20260908-1449",
+              "ride-20260909-0725",
+              "ride-20260909-1748",
+              "ride-20260910-0922",
+              "ride-20260911-1239",
+              "ride-20260911-1257",
+              "ride-20260911-1316",
+              "ride-20260911-1335",
+              "ride-20260912-1556",
+              "ride-20260913-0730",
+              "ride-20260913-0748",
+              "ride-20260913-0807",
+              "ride-20260913-0826",
+              "ride-20260914-1047",
+              "ride-20260914-1935",
+              "ride-20260916-1321",
+              "ride-20260917-1638",
+              "ride-20260918-0815",
+              "ride-20260918-0855",
+              "ride-20260919-1129",
+              "ride-20260919-1147",
+              "ride-20260919-1206",
+              "ride-20260919-1225",
+              "ride-20260920-1446",
+              "ride-20260920-1504"
+            ],
+            "excluded_session_reason_counts": {
+              "decoder_mismatch": 5,
+              "not_prior_session": 14,
+              "same_session": 1,
+              "vehicle_mismatch": 5
+            },
+            "policy_version": "historical-evidence-compatibility-v1",
+            "required_signals": [],
+            "same_decoder_required": true,
+            "same_vehicle_required": true
+          },
+          "current": {
+            "capture_timestamp": "20261006152308",
+            "decoder": {
+              "decoder_id": "honda_keihin_71_17",
+              "decoder_version": "1.0.0",
+              "decoder_version_key": "honda_keihin_71_17:1.0.0"
+            },
+            "detector_versions": {
+              "contextual_battery_voltage": "contextual-battery-robust-v1-d80a160236f5",
+              "isolation_forest": "iforest-baseline-20260920T091709Z"
+            },
+            "event": {
+              "coverage_status": "full",
+              "duration_ms": 12249.0,
+              "end_time_ms": 12249.0,
+              "end_window_index": 0,
+              "event_id": "calib-real-run-r0024d0-c93a5fb4-part-02:session-summary",
+              "event_type": "session_summary",
+              "evidence_state": "no_evidence",
+              "start_time_ms": 0.0,
+              "start_window_index": 0,
+              "window_count": 1
+            },
+            "event_magnitude": {
+              "direction": "higher_is_longer_event",
+              "source": "event_duration",
+              "unit": "ms",
+              "value": 12249.0
+            },
+            "features": [],
+            "observation_family": "no_anomaly_evidence",
+            "observation_type": "aggregate_evidence",
+            "operating_context": null,
+            "record_id": "h8-historical-record-00001",
+            "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+            "signals": [],
+            "source_case_id": "h9c-live-case-0001"
+          },
+          "historical_occurrences": {
+            "first_observed": {
+              "capture_timestamp": "20260904162300",
+              "event_id": "ride-20260904-1623:no-evidence-0072",
+              "record_id": "h8-historical-record-00709",
+              "session_id": "ride-20260904-1623"
+            },
+            "most_recent_prior_occurrence": {
+              "capture_timestamp": "20260917163800",
+              "event_id": "ride-20260917-1638:no-evidence-0129",
+              "record_id": "h8-historical-record-00713",
+              "session_id": "ride-20260917-1638"
+            },
+            "occurrence_count": 5,
+            "occurrence_rate": 0.131579,
+            "occurrence_session_count": 5,
+            "occurrence_session_ids": [
+              "ride-20260904-1623",
+              "ride-20260908-1431",
+              "ride-20260911-1257",
+              "ride-20260911-1316",
+              "ride-20260917-1638"
+            ],
+            "occurrences": [
+              {
+                "capture_timestamp": "20260904162300",
+                "event_duration_ms": 750749.0,
+                "event_id": "ride-20260904-1623:no-evidence-0072",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 750749.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "44c48bb8e1adf1c84b532c0a957656e22944aab64d8e4aa5a22f4c0f63338573",
+                    "samples_sha256": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f"
+                  },
+                  "path": "data/telemetry/ride-20260904-1623"
+                },
+                "record_id": "h8-historical-record-00709",
+                "session_id": "ride-20260904-1623",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0030",
+                "temporal_leakage": false
+              },
+              {
+                "capture_timestamp": "20260908143100",
+                "event_duration_ms": 805249.0,
+                "event_id": "ride-20260908-1431:no-evidence-0076",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 805249.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "7613355ea1d5b0ff44a00da6e57fb106605a16a996f50a6fed4a28932f199ee3",
+                    "samples_sha256": "33ba8bcd1c2131c9799dabd2fb8a90d967550d62bb42a76f3d7930c33df35e7f"
+                  },
+                  "path": "data/telemetry/ride-20260908-1431"
+                },
+                "record_id": "h8-historical-record-00707",
+                "session_id": "ride-20260908-1431",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0029",
+                "temporal_leakage": false
+              },
+              {
+                "capture_timestamp": "20260911125700",
+                "event_duration_ms": 972500.0,
+                "event_id": "ride-20260911-1257:no-evidence-0094",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 972500.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "3263801856fa4fcf6f744ef4ca90dd9a44075d01ffe6f741e2db8e14e28ac5b5",
+                    "samples_sha256": "f63e5f335414d4e67b9ec75c2f94efb2de172af19e701f94d8101a51207fd9c4"
+                  },
+                  "path": "data/telemetry/ride-20260911-1257"
+                },
+                "record_id": "h8-historical-record-00703",
+                "session_id": "ride-20260911-1257",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0027",
+                "temporal_leakage": false
+              },
+              {
+                "capture_timestamp": "20260911131600",
+                "event_duration_ms": 1125000.0,
+                "event_id": "ride-20260911-1316:no-evidence-0097",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 1125000.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "2acbc5af58282c869e9f814176d6c72d0cf08f19dd208f09193e9e96d493c019",
+                    "samples_sha256": "706b54ff8235e1733cf6d30b353649c549414e5f6da4c29d8a767c4530a47922"
+                  },
+                  "path": "data/telemetry/ride-20260911-1316"
+                },
+                "record_id": "h8-historical-record-00701",
+                "session_id": "ride-20260911-1316",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0026",
+                "temporal_leakage": false
+              },
+              {
+                "capture_timestamp": "20260917163800",
+                "event_duration_ms": 722500.0,
+                "event_id": "ride-20260917-1638:no-evidence-0129",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 722500.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "9a86332b367dcefb58b4814fdee28aa7ced7ea4bb3337c90132b0c9dbb44fc9b",
+                    "samples_sha256": "3925a5a7ee7ebf8da1166df33d9b33f420e44fdfec487e6f1701aa9f27ed3e01"
+                  },
+                  "path": "data/telemetry/ride-20260917-1638"
+                },
+                "record_id": "h8-historical-record-00713",
+                "session_id": "ride-20260917-1638",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0032",
+                "temporal_leakage": false
+              }
+            ]
+          },
+          "recurrence": {
+            "category": "recurrent",
+            "category_semantics": "A materially similar observation occurred in at least two prior comparable sessions.",
+            "persistence": "intermittent_across_comparable_prior_sessions",
+            "schema_version": "historical-recurrence-v1"
+          },
+          "schema_version": "historical-comparison-v1",
+          "trend": {
+            "method": "monotonic detector-local severity sequence; no regression or predictive-maintenance claim",
+            "point_count": 6,
+            "points": [
+              {
+                "capture_timestamp": "20260904162300",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 750749.0
+                },
+                "record_id": "h8-historical-record-00709",
+                "session_id": "ride-20260904-1623",
+                "severity_value": 750749.0
+              },
+              {
+                "capture_timestamp": "20260908143100",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 805249.0
+                },
+                "record_id": "h8-historical-record-00707",
+                "session_id": "ride-20260908-1431",
+                "severity_value": 805249.0
+              },
+              {
+                "capture_timestamp": "20260911125700",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 972500.0
+                },
+                "record_id": "h8-historical-record-00703",
+                "session_id": "ride-20260911-1257",
+                "severity_value": 972500.0
+              },
+              {
+                "capture_timestamp": "20260911131600",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 1125000.0
+                },
+                "record_id": "h8-historical-record-00701",
+                "session_id": "ride-20260911-1316",
+                "severity_value": 1125000.0
+              },
+              {
+                "capture_timestamp": "20260917163800",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 722500.0
+                },
+                "record_id": "h8-historical-record-00713",
+                "session_id": "ride-20260917-1638",
+                "severity_value": 722500.0
+              },
+              {
+                "capture_timestamp": "20261006152308",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 12249.0
+                },
+                "record_id": "h8-historical-record-00001",
+                "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+                "severity_value": 12249.0
+              }
+            ],
+            "schema_version": "historical-trend-v1",
+            "semantics": "Numeric occurrence points are not monotonically increasing or decreasing.",
+            "trend_status": "no_observable_trend"
+          }
+        },
+        {
+          "comparison_id": "h8-comparison-00002",
+          "comparison_limitations": [],
+          "compatibility": {
+            "comparable_session_count": 38,
+            "comparable_session_ids": [
+              "calib-20260812-152832-2a54f0",
+              "calib-20260814-152603-8fd9ed",
+              "calib-20260814-153329-812a3f",
+              "ride-20260901-0715",
+              "ride-20260902-1032",
+              "ride-20260902-1050",
+              "ride-20260903-1349",
+              "ride-20260904-1623",
+              "ride-20260904-1810",
+              "ride-20260905-0840",
+              "ride-20260905-0858",
+              "ride-20260907-1157",
+              "ride-20260908-1431",
+              "ride-20260908-1449",
+              "ride-20260909-0725",
+              "ride-20260909-1748",
+              "ride-20260910-0922",
+              "ride-20260911-1239",
+              "ride-20260911-1257",
+              "ride-20260911-1316",
+              "ride-20260911-1335",
+              "ride-20260912-1556",
+              "ride-20260913-0730",
+              "ride-20260913-0748",
+              "ride-20260913-0807",
+              "ride-20260913-0826",
+              "ride-20260914-1047",
+              "ride-20260914-1935",
+              "ride-20260916-1321",
+              "ride-20260917-1638",
+              "ride-20260918-0815",
+              "ride-20260918-0855",
+              "ride-20260919-1129",
+              "ride-20260919-1147",
+              "ride-20260919-1206",
+              "ride-20260919-1225",
+              "ride-20260920-1446",
+              "ride-20260920-1504"
+            ],
+            "excluded_session_reason_counts": {
+              "decoder_mismatch": 5,
+              "not_prior_session": 14,
+              "same_session": 1,
+              "vehicle_mismatch": 5
+            },
+            "policy_version": "historical-evidence-compatibility-v1",
+            "required_signals": [],
+            "same_decoder_required": true,
+            "same_vehicle_required": true
+          },
+          "current": {
+            "capture_timestamp": "20261006152308",
+            "decoder": {
+              "decoder_id": "honda_keihin_71_17",
+              "decoder_version": "1.0.0",
+              "decoder_version_key": "honda_keihin_71_17:1.0.0"
+            },
+            "detector_versions": {
+              "contextual_battery_voltage": "contextual-battery-robust-v1-d80a160236f5",
+              "isolation_forest": "iforest-baseline-20260920T091709Z"
+            },
+            "event": {
+              "coverage_status": "full",
+              "duration_ms": 12249.0,
+              "end_time_ms": 12249.0,
+              "end_window_index": 0,
+              "event_id": "calib-real-run-r0024d0-c93a5fb4-part-02:session-summary",
+              "event_type": "session_summary",
+              "evidence_state": "no_evidence",
+              "start_time_ms": 0.0,
+              "start_window_index": 0,
+              "window_count": 1
+            },
+            "event_magnitude": {
+              "direction": "higher_is_longer_event",
+              "source": "event_duration",
+              "unit": "ms",
+              "value": 12249.0
+            },
+            "features": [],
+            "observation_family": "no_anomaly_evidence",
+            "observation_type": "evidence_limitation",
+            "operating_context": null,
+            "record_id": "h8-historical-record-00002",
+            "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+            "signals": [],
+            "source_case_id": "h9c-live-case-0001"
+          },
+          "historical_occurrences": {
+            "first_observed": {
+              "capture_timestamp": "20260904162300",
+              "event_id": "ride-20260904-1623:no-evidence-0072",
+              "record_id": "h8-historical-record-00709",
+              "session_id": "ride-20260904-1623"
+            },
+            "most_recent_prior_occurrence": {
+              "capture_timestamp": "20260917163800",
+              "event_id": "ride-20260917-1638:no-evidence-0129",
+              "record_id": "h8-historical-record-00713",
+              "session_id": "ride-20260917-1638"
+            },
+            "occurrence_count": 5,
+            "occurrence_rate": 0.131579,
+            "occurrence_session_count": 5,
+            "occurrence_session_ids": [
+              "ride-20260904-1623",
+              "ride-20260908-1431",
+              "ride-20260911-1257",
+              "ride-20260911-1316",
+              "ride-20260917-1638"
+            ],
+            "occurrences": [
+              {
+                "capture_timestamp": "20260904162300",
+                "event_duration_ms": 750749.0,
+                "event_id": "ride-20260904-1623:no-evidence-0072",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 750749.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "44c48bb8e1adf1c84b532c0a957656e22944aab64d8e4aa5a22f4c0f63338573",
+                    "samples_sha256": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f"
+                  },
+                  "path": "data/telemetry/ride-20260904-1623"
+                },
+                "record_id": "h8-historical-record-00709",
+                "session_id": "ride-20260904-1623",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0030",
+                "temporal_leakage": false
+              },
+              {
+                "capture_timestamp": "20260908143100",
+                "event_duration_ms": 805249.0,
+                "event_id": "ride-20260908-1431:no-evidence-0076",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 805249.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "7613355ea1d5b0ff44a00da6e57fb106605a16a996f50a6fed4a28932f199ee3",
+                    "samples_sha256": "33ba8bcd1c2131c9799dabd2fb8a90d967550d62bb42a76f3d7930c33df35e7f"
+                  },
+                  "path": "data/telemetry/ride-20260908-1431"
+                },
+                "record_id": "h8-historical-record-00707",
+                "session_id": "ride-20260908-1431",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0029",
+                "temporal_leakage": false
+              },
+              {
+                "capture_timestamp": "20260911125700",
+                "event_duration_ms": 972500.0,
+                "event_id": "ride-20260911-1257:no-evidence-0094",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 972500.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "3263801856fa4fcf6f744ef4ca90dd9a44075d01ffe6f741e2db8e14e28ac5b5",
+                    "samples_sha256": "f63e5f335414d4e67b9ec75c2f94efb2de172af19e701f94d8101a51207fd9c4"
+                  },
+                  "path": "data/telemetry/ride-20260911-1257"
+                },
+                "record_id": "h8-historical-record-00703",
+                "session_id": "ride-20260911-1257",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0027",
+                "temporal_leakage": false
+              },
+              {
+                "capture_timestamp": "20260911131600",
+                "event_duration_ms": 1125000.0,
+                "event_id": "ride-20260911-1316:no-evidence-0097",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 1125000.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "2acbc5af58282c869e9f814176d6c72d0cf08f19dd208f09193e9e96d493c019",
+                    "samples_sha256": "706b54ff8235e1733cf6d30b353649c549414e5f6da4c29d8a767c4530a47922"
+                  },
+                  "path": "data/telemetry/ride-20260911-1316"
+                },
+                "record_id": "h8-historical-record-00701",
+                "session_id": "ride-20260911-1316",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0026",
+                "temporal_leakage": false
+              },
+              {
+                "capture_timestamp": "20260917163800",
+                "event_duration_ms": 722500.0,
+                "event_id": "ride-20260917-1638:no-evidence-0129",
+                "event_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 722500.0
+                },
+                "provenance": {
+                  "artifacts": {
+                    "metadata_sha256": "9a86332b367dcefb58b4814fdee28aa7ced7ea4bb3337c90132b0c9dbb44fc9b",
+                    "samples_sha256": "3925a5a7ee7ebf8da1166df33d9b33f420e44fdfec487e6f1701aa9f27ed3e01"
+                  },
+                  "path": "data/telemetry/ride-20260917-1638"
+                },
+                "record_id": "h8-historical-record-00713",
+                "session_id": "ride-20260917-1638",
+                "source_artifact": "h7_3_rca_v2_results",
+                "source_record_id": "h7-1-expert-case-0032",
+                "temporal_leakage": false
+              }
+            ]
+          },
+          "recurrence": {
+            "category": "recurrent",
+            "category_semantics": "A materially similar observation occurred in at least two prior comparable sessions.",
+            "persistence": "intermittent_across_comparable_prior_sessions",
+            "schema_version": "historical-recurrence-v1"
+          },
+          "schema_version": "historical-comparison-v1",
+          "trend": {
+            "method": "monotonic detector-local severity sequence; no regression or predictive-maintenance claim",
+            "point_count": 6,
+            "points": [
+              {
+                "capture_timestamp": "20260904162300",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 750749.0
+                },
+                "record_id": "h8-historical-record-00709",
+                "session_id": "ride-20260904-1623",
+                "severity_value": 750749.0
+              },
+              {
+                "capture_timestamp": "20260908143100",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 805249.0
+                },
+                "record_id": "h8-historical-record-00707",
+                "session_id": "ride-20260908-1431",
+                "severity_value": 805249.0
+              },
+              {
+                "capture_timestamp": "20260911125700",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 972500.0
+                },
+                "record_id": "h8-historical-record-00703",
+                "session_id": "ride-20260911-1257",
+                "severity_value": 972500.0
+              },
+              {
+                "capture_timestamp": "20260911131600",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 1125000.0
+                },
+                "record_id": "h8-historical-record-00701",
+                "session_id": "ride-20260911-1316",
+                "severity_value": 1125000.0
+              },
+              {
+                "capture_timestamp": "20260917163800",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 722500.0
+                },
+                "record_id": "h8-historical-record-00713",
+                "session_id": "ride-20260917-1638",
+                "severity_value": 722500.0
+              },
+              {
+                "capture_timestamp": "20261006152308",
+                "raw_magnitude": {
+                  "direction": "higher_is_longer_event",
+                  "source": "event_duration",
+                  "unit": "ms",
+                  "value": 12249.0
+                },
+                "record_id": "h8-historical-record-00002",
+                "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+                "severity_value": 12249.0
+              }
+            ],
+            "schema_version": "historical-trend-v1",
+            "semantics": "Numeric occurrence points are not monotonically increasing or decreasing.",
+            "trend_status": "no_observable_trend"
+          }
+        }
+      ],
+      "future_sessions_allowed": false,
+      "history_can_create_root_cause": false,
+      "limitations": [
+        "Historical evidence is descriptive only and cannot confirm root cause."
+      ],
+      "mode": "live_research_analysis",
+      "schema_version": "root-cause-analysis-v2-history-extension-v1",
+      "status": "available",
+      "summary": {
+        "comparison_count": 2,
+        "history_can_create_root_cause": false,
+        "observation_families": [
+          "no_anomaly_evidence"
+        ],
+        "prior_occurrence_count": 10,
+        "recurrence_category_counts": {
+          "recurrent": 2
+        },
+        "trend_status_counts": {
+          "no_observable_trend": 2
+        }
+      }
+    },
+    "interpretation": {
+      "h7_v1_hypotheses_exposed": false,
+      "limitations": [
+        {
+          "limitation_id": "limit.v2.no_anomaly_evidence",
+          "provenance": {
+            "source_case_id": "h9c-live-case-0001",
+            "source_event": {
+              "coverage_status": "full",
+              "detector_versions": {
+                "contextual_battery_voltage": "contextual-battery-robust-v1-d80a160236f5",
+                "isolation_forest": "iforest-baseline-20260920T091709Z"
+              },
+              "duration_ms": 12249.0,
+              "end_frame_index": 49,
+              "end_time_ms": 12249.0,
+              "end_window_index": 0,
+              "end_window_number": 0,
+              "event_id": "calib-real-run-r0024d0-c93a5fb4-part-02:session-summary",
+              "event_type": "session_summary",
+              "evidence_state": "no_evidence",
+              "interpretation": "aggregate evidence relationship only; not a diagnostic root-cause claim",
+              "negative_detector_ids": [
+                "isolation_forest",
+                "contextual_battery_voltage"
+              ],
+              "not_applicable_detector_ids": [],
+              "positive_detector_ids": [],
+              "representative_window": {
+                "active_detector_ids": [
+                  "isolation_forest",
+                  "contextual_battery_voltage"
+                ],
+                "aggregate_evidence_status": {
+                  "description": "At least one active detector was applicable and no active detector produced anomaly evidence; this is not a verified-healthy label.",
+                  "no_evidence_is_verified_healthy": false,
+                  "score_fusion_used": false,
+                  "state": "no_evidence"
+                },
+                "counts": {
+                  "applicable_detector_count": 2,
+                  "available_detector_count": 2,
+                  "negative_finding_count": 2,
+                  "not_applicable_detector_count": 0,
+                  "positive_finding_count": 0,
+                  "unavailable_detector_count": 0
+                },
+                "coverage": {
+                  "applicable_ratio": 1.0,
+                  "full_detector_count": 2,
+                  "status": "full"
+                },
+                "detector_disagreements": [],
+                "detector_findings": [
+                  {
+                    "applicability_reason": null,
+                    "applicable": true,
+                    "available": true,
+                    "detector_id": "isolation_forest",
+                    "detector_local_score": {
+                      "column": "score_sample",
+                      "direction": "lower_is_more_anomalous",
+                      "value": -0.4777965264228112
+                    },
+                    "detector_local_threshold": {
+                      "column": "decision_score",
+                      "rule": "prediction=-1 when decision_score < 0",
+                      "source": "isolation_forest_decision_function",
+                      "value": 0.0
+                    },
+                    "error": null,
+                    "evidence": {
+                      "decision_score": 0.06627734272997682,
+                      "most_unusual_features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;iat_c_std;iat_c_mean_absolute_diff",
+                      "score_sample": -0.4777965264228112,
+                      "window_health_score": 76.24472588282404
+                    },
+                    "execution_status": "ok",
+                    "finding": "negative",
+                    "is_anomaly": false,
+                    "missing_features": [],
+                    "model_version": "iforest-baseline-20260920T091709Z",
+                    "prediction": 1
+                  },
+                  {
+                    "applicability_reason": null,
+                    "applicable": true,
+                    "available": true,
+                    "detector_id": "contextual_battery_voltage",
+                    "detector_local_score": {
+                      "column": "contextual_anomaly_score",
+                      "direction": "higher_is_more_anomalous",
+                      "value": 0.0057142857
+                    },
+                    "detector_local_threshold": {
+                      "column": "contextual_threshold",
+                      "source": "detector_evidence",
+                      "value": 4.5
+                    },
+                    "error": null,
+                    "evidence": {
+                      "contextual_applicable": true,
+                      "contextual_evidence": {
+                        "applicable": true,
+                        "feature_scores": [
+                          {
+                            "direction": "matched",
+                            "feature": "battery_voltage_median",
+                            "observed": 14.5,
+                            "reference_median": 14.5,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0,
+                            "signed_delta": 0.0
+                          },
+                          {
+                            "direction": "lower",
+                            "feature": "battery_voltage_mean",
+                            "observed": 14.516,
+                            "reference_median": 14.518,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0057142857,
+                            "signed_delta": -0.002
+                          },
+                          {
+                            "direction": "matched",
+                            "feature": "battery_voltage_min",
+                            "observed": 14.4,
+                            "reference_median": 14.4,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0,
+                            "signed_delta": 0.0
+                          }
+                        ],
+                        "interpretation": "statistical deviation; not a confirmed mechanical failure",
+                        "operating_context": "mid_load_running",
+                        "status": "ok",
+                        "threshold": 4.5,
+                        "top_deviation": {
+                          "direction": "lower",
+                          "feature": "battery_voltage_mean",
+                          "observed": 14.516,
+                          "reference_median": 14.518,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0057142857,
+                          "signed_delta": -0.002
+                        }
+                      },
+                      "contextual_status": "ok",
+                      "contextual_threshold": 4.5,
+                      "contextual_top_feature": "battery_voltage_mean",
+                      "operating_context": "mid_load_running"
+                    },
+                    "execution_status": "ok",
+                    "finding": "negative",
+                    "is_anomaly": false,
+                    "missing_features": [],
+                    "model_version": "contextual-battery-robust-v1-d80a160236f5",
+                    "prediction": 1
+                  }
+                ],
+                "detector_ids": {
+                  "negative": [
+                    "isolation_forest",
+                    "contextual_battery_voltage"
+                  ],
+                  "not_applicable": [],
+                  "positive": [],
+                  "unavailable": []
+                },
+                "duration_ms": 12249.0,
+                "end_frame_index": 49,
+                "end_time_ms": 12249.0,
+                "schema_version": "multi-detector-window-aggregation-v1",
+                "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+                "start_frame_index": 0,
+                "start_time_ms": 0.0,
+                "telemetry": {
+                  "battery_voltage_mean": 14.516,
+                  "battery_voltage_median": 14.5,
+                  "battery_voltage_min": 14.4,
+                  "rpm_median": 6212.5,
+                  "tps_raw_median": 25.0,
+                  "tps_voltage_median": 1.1328125
+                },
+                "window_index": 0,
+                "window_number": 0
+              },
+              "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+              "source_window_range": {
+                "end_window_number": 0,
+                "start_window_number": 0
+              },
+              "start_frame_index": 0,
+              "start_time_ms": 0.0,
+              "start_window_index": 0,
+              "start_window_number": 0,
+              "unavailable_detector_ids": [],
+              "window_count": 1
+            }
+          },
+          "statement": "No active detector anomaly evidence is not verified healthy ground truth."
+        },
+        {
+          "limitation_id": "limit.v2.no_possible_cause",
+          "provenance": {
+            "source_case_id": "h9c-live-case-0001",
+            "source_event": {
+              "coverage_status": "full",
+              "detector_versions": {
+                "contextual_battery_voltage": "contextual-battery-robust-v1-d80a160236f5",
+                "isolation_forest": "iforest-baseline-20260920T091709Z"
+              },
+              "duration_ms": 12249.0,
+              "end_frame_index": 49,
+              "end_time_ms": 12249.0,
+              "end_window_index": 0,
+              "end_window_number": 0,
+              "event_id": "calib-real-run-r0024d0-c93a5fb4-part-02:session-summary",
+              "event_type": "session_summary",
+              "evidence_state": "no_evidence",
+              "interpretation": "aggregate evidence relationship only; not a diagnostic root-cause claim",
+              "negative_detector_ids": [
+                "isolation_forest",
+                "contextual_battery_voltage"
+              ],
+              "not_applicable_detector_ids": [],
+              "positive_detector_ids": [],
+              "representative_window": {
+                "active_detector_ids": [
+                  "isolation_forest",
+                  "contextual_battery_voltage"
+                ],
+                "aggregate_evidence_status": {
+                  "description": "At least one active detector was applicable and no active detector produced anomaly evidence; this is not a verified-healthy label.",
+                  "no_evidence_is_verified_healthy": false,
+                  "score_fusion_used": false,
+                  "state": "no_evidence"
+                },
+                "counts": {
+                  "applicable_detector_count": 2,
+                  "available_detector_count": 2,
+                  "negative_finding_count": 2,
+                  "not_applicable_detector_count": 0,
+                  "positive_finding_count": 0,
+                  "unavailable_detector_count": 0
+                },
+                "coverage": {
+                  "applicable_ratio": 1.0,
+                  "full_detector_count": 2,
+                  "status": "full"
+                },
+                "detector_disagreements": [],
+                "detector_findings": [
+                  {
+                    "applicability_reason": null,
+                    "applicable": true,
+                    "available": true,
+                    "detector_id": "isolation_forest",
+                    "detector_local_score": {
+                      "column": "score_sample",
+                      "direction": "lower_is_more_anomalous",
+                      "value": -0.4777965264228112
+                    },
+                    "detector_local_threshold": {
+                      "column": "decision_score",
+                      "rule": "prediction=-1 when decision_score < 0",
+                      "source": "isolation_forest_decision_function",
+                      "value": 0.0
+                    },
+                    "error": null,
+                    "evidence": {
+                      "decision_score": 0.06627734272997682,
+                      "most_unusual_features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;iat_c_std;iat_c_mean_absolute_diff",
+                      "score_sample": -0.4777965264228112,
+                      "window_health_score": 76.24472588282404
+                    },
+                    "execution_status": "ok",
+                    "finding": "negative",
+                    "is_anomaly": false,
+                    "missing_features": [],
+                    "model_version": "iforest-baseline-20260920T091709Z",
+                    "prediction": 1
+                  },
+                  {
+                    "applicability_reason": null,
+                    "applicable": true,
+                    "available": true,
+                    "detector_id": "contextual_battery_voltage",
+                    "detector_local_score": {
+                      "column": "contextual_anomaly_score",
+                      "direction": "higher_is_more_anomalous",
+                      "value": 0.0057142857
+                    },
+                    "detector_local_threshold": {
+                      "column": "contextual_threshold",
+                      "source": "detector_evidence",
+                      "value": 4.5
+                    },
+                    "error": null,
+                    "evidence": {
+                      "contextual_applicable": true,
+                      "contextual_evidence": {
+                        "applicable": true,
+                        "feature_scores": [
+                          {
+                            "direction": "matched",
+                            "feature": "battery_voltage_median",
+                            "observed": 14.5,
+                            "reference_median": 14.5,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0,
+                            "signed_delta": 0.0
+                          },
+                          {
+                            "direction": "lower",
+                            "feature": "battery_voltage_mean",
+                            "observed": 14.516,
+                            "reference_median": 14.518,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0057142857,
+                            "signed_delta": -0.002
+                          },
+                          {
+                            "direction": "matched",
+                            "feature": "battery_voltage_min",
+                            "observed": 14.4,
+                            "reference_median": 14.4,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0,
+                            "signed_delta": 0.0
+                          }
+                        ],
+                        "interpretation": "statistical deviation; not a confirmed mechanical failure",
+                        "operating_context": "mid_load_running",
+                        "status": "ok",
+                        "threshold": 4.5,
+                        "top_deviation": {
+                          "direction": "lower",
+                          "feature": "battery_voltage_mean",
+                          "observed": 14.516,
+                          "reference_median": 14.518,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0057142857,
+                          "signed_delta": -0.002
+                        }
+                      },
+                      "contextual_status": "ok",
+                      "contextual_threshold": 4.5,
+                      "contextual_top_feature": "battery_voltage_mean",
+                      "operating_context": "mid_load_running"
+                    },
+                    "execution_status": "ok",
+                    "finding": "negative",
+                    "is_anomaly": false,
+                    "missing_features": [],
+                    "model_version": "contextual-battery-robust-v1-d80a160236f5",
+                    "prediction": 1
+                  }
+                ],
+                "detector_ids": {
+                  "negative": [
+                    "isolation_forest",
+                    "contextual_battery_voltage"
+                  ],
+                  "not_applicable": [],
+                  "positive": [],
+                  "unavailable": []
+                },
+                "duration_ms": 12249.0,
+                "end_frame_index": 49,
+                "end_time_ms": 12249.0,
+                "schema_version": "multi-detector-window-aggregation-v1",
+                "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+                "start_frame_index": 0,
+                "start_time_ms": 0.0,
+                "telemetry": {
+                  "battery_voltage_mean": 14.516,
+                  "battery_voltage_median": 14.5,
+                  "battery_voltage_min": 14.4,
+                  "rpm_median": 6212.5,
+                  "tps_raw_median": 25.0,
+                  "tps_voltage_median": 1.1328125
+                },
+                "window_index": 0,
+                "window_number": 0
+              },
+              "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+              "source_window_range": {
+                "end_window_number": 0,
+                "start_window_number": 0
+              },
+              "start_frame_index": 0,
+              "start_time_ms": 0.0,
+              "start_window_index": 0,
+              "start_window_number": 0,
+              "unavailable_detector_ids": [],
+              "window_count": 1
+            }
+          },
+          "statement": "Available evidence does not justify a causal hypothesis under RCA v2 gates."
+        }
+      ],
+      "observations": [
+        {
+          "claim_level": "observation",
+          "evidence": {
+            "coverage_status": "full",
+            "evidence_state": "no_evidence",
+            "negative_detector_ids": [
+              "isolation_forest",
+              "contextual_battery_voltage"
+            ],
+            "positive_detector_ids": [],
+            "unavailable_detector_ids": []
+          },
+          "observation_id": "obs.v2.aggregate_evidence",
+          "observation_type": "aggregate_evidence",
+          "provenance": {
+            "detector_output": {
+              "by_detector": {
+                "contextual_battery_voltage": {
+                  "applicability_reason": null,
+                  "applicable": true,
+                  "available": true,
+                  "detector_id": "contextual_battery_voltage",
+                  "detector_local_score": {
+                    "column": "contextual_anomaly_score",
+                    "direction": "higher_is_more_anomalous",
+                    "value": 0.0057142857
+                  },
+                  "detector_local_threshold": {
+                    "column": "contextual_threshold",
+                    "source": "detector_evidence",
+                    "value": 4.5
+                  },
+                  "error": null,
+                  "evidence": {
+                    "contextual_applicable": true,
+                    "contextual_evidence": {
+                      "applicable": true,
+                      "feature_scores": [
+                        {
+                          "direction": "matched",
+                          "feature": "battery_voltage_median",
+                          "observed": 14.5,
+                          "reference_median": 14.5,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0,
+                          "signed_delta": 0.0
+                        },
+                        {
+                          "direction": "lower",
+                          "feature": "battery_voltage_mean",
+                          "observed": 14.516,
+                          "reference_median": 14.518,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0057142857,
+                          "signed_delta": -0.002
+                        },
+                        {
+                          "direction": "matched",
+                          "feature": "battery_voltage_min",
+                          "observed": 14.4,
+                          "reference_median": 14.4,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0,
+                          "signed_delta": 0.0
+                        }
+                      ],
+                      "interpretation": "statistical deviation; not a confirmed mechanical failure",
+                      "operating_context": "mid_load_running",
+                      "status": "ok",
+                      "threshold": 4.5,
+                      "top_deviation": {
+                        "direction": "lower",
+                        "feature": "battery_voltage_mean",
+                        "observed": 14.516,
+                        "reference_median": 14.518,
+                        "robust_scale": 0.35,
+                        "robust_z": 0.0057142857,
+                        "signed_delta": -0.002
+                      }
+                    },
+                    "contextual_status": "ok",
+                    "contextual_threshold": 4.5,
+                    "contextual_top_feature": "battery_voltage_mean",
+                    "operating_context": "mid_load_running"
+                  },
+                  "execution_status": "ok",
+                  "finding": "negative",
+                  "is_anomaly": false,
+                  "missing_features": [],
+                  "model_version": "contextual-battery-robust-v1-d80a160236f5",
+                  "prediction": 1
+                },
+                "isolation_forest": {
+                  "applicability_reason": null,
+                  "applicable": true,
+                  "available": true,
+                  "detector_id": "isolation_forest",
+                  "detector_local_score": {
+                    "column": "score_sample",
+                    "direction": "lower_is_more_anomalous",
+                    "value": -0.4777965264228112
+                  },
+                  "detector_local_threshold": {
+                    "column": "decision_score",
+                    "rule": "prediction=-1 when decision_score < 0",
+                    "source": "isolation_forest_decision_function",
+                    "value": 0.0
+                  },
+                  "error": null,
+                  "evidence": {
+                    "decision_score": 0.06627734272997682,
+                    "most_unusual_features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;iat_c_std;iat_c_mean_absolute_diff",
+                    "score_sample": -0.4777965264228112,
+                    "window_health_score": 76.24472588282404
+                  },
+                  "execution_status": "ok",
+                  "finding": "negative",
+                  "is_anomaly": false,
+                  "missing_features": [],
+                  "model_version": "iforest-baseline-20260920T091709Z",
+                  "prediction": 1
+                }
+              },
+              "negative_detector_ids": [
+                "isolation_forest",
+                "contextual_battery_voltage"
+              ],
+              "not_applicable_detector_ids": [],
+              "positive_detector_ids": [],
+              "unavailable_detector_ids": []
+            },
+            "grounding_source_ids": [],
+            "h7_v1_rule_id": null,
+            "rule_version": "evidence-grounded-rca-v2",
+            "source_event": {
+              "coverage_status": "full",
+              "detector_versions": {
+                "contextual_battery_voltage": "contextual-battery-robust-v1-d80a160236f5",
+                "isolation_forest": "iforest-baseline-20260920T091709Z"
+              },
+              "duration_ms": 12249.0,
+              "end_frame_index": 49,
+              "end_time_ms": 12249.0,
+              "end_window_index": 0,
+              "end_window_number": 0,
+              "event_id": "calib-real-run-r0024d0-c93a5fb4-part-02:session-summary",
+              "event_type": "session_summary",
+              "evidence_state": "no_evidence",
+              "interpretation": "aggregate evidence relationship only; not a diagnostic root-cause claim",
+              "negative_detector_ids": [
+                "isolation_forest",
+                "contextual_battery_voltage"
+              ],
+              "not_applicable_detector_ids": [],
+              "positive_detector_ids": [],
+              "representative_window": {
+                "active_detector_ids": [
+                  "isolation_forest",
+                  "contextual_battery_voltage"
+                ],
+                "aggregate_evidence_status": {
+                  "description": "At least one active detector was applicable and no active detector produced anomaly evidence; this is not a verified-healthy label.",
+                  "no_evidence_is_verified_healthy": false,
+                  "score_fusion_used": false,
+                  "state": "no_evidence"
+                },
+                "counts": {
+                  "applicable_detector_count": 2,
+                  "available_detector_count": 2,
+                  "negative_finding_count": 2,
+                  "not_applicable_detector_count": 0,
+                  "positive_finding_count": 0,
+                  "unavailable_detector_count": 0
+                },
+                "coverage": {
+                  "applicable_ratio": 1.0,
+                  "full_detector_count": 2,
+                  "status": "full"
+                },
+                "detector_disagreements": [],
+                "detector_findings": [
+                  {
+                    "applicability_reason": null,
+                    "applicable": true,
+                    "available": true,
+                    "detector_id": "isolation_forest",
+                    "detector_local_score": {
+                      "column": "score_sample",
+                      "direction": "lower_is_more_anomalous",
+                      "value": -0.4777965264228112
+                    },
+                    "detector_local_threshold": {
+                      "column": "decision_score",
+                      "rule": "prediction=-1 when decision_score < 0",
+                      "source": "isolation_forest_decision_function",
+                      "value": 0.0
+                    },
+                    "error": null,
+                    "evidence": {
+                      "decision_score": 0.06627734272997682,
+                      "most_unusual_features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;iat_c_std;iat_c_mean_absolute_diff",
+                      "score_sample": -0.4777965264228112,
+                      "window_health_score": 76.24472588282404
+                    },
+                    "execution_status": "ok",
+                    "finding": "negative",
+                    "is_anomaly": false,
+                    "missing_features": [],
+                    "model_version": "iforest-baseline-20260920T091709Z",
+                    "prediction": 1
+                  },
+                  {
+                    "applicability_reason": null,
+                    "applicable": true,
+                    "available": true,
+                    "detector_id": "contextual_battery_voltage",
+                    "detector_local_score": {
+                      "column": "contextual_anomaly_score",
+                      "direction": "higher_is_more_anomalous",
+                      "value": 0.0057142857
+                    },
+                    "detector_local_threshold": {
+                      "column": "contextual_threshold",
+                      "source": "detector_evidence",
+                      "value": 4.5
+                    },
+                    "error": null,
+                    "evidence": {
+                      "contextual_applicable": true,
+                      "contextual_evidence": {
+                        "applicable": true,
+                        "feature_scores": [
+                          {
+                            "direction": "matched",
+                            "feature": "battery_voltage_median",
+                            "observed": 14.5,
+                            "reference_median": 14.5,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0,
+                            "signed_delta": 0.0
+                          },
+                          {
+                            "direction": "lower",
+                            "feature": "battery_voltage_mean",
+                            "observed": 14.516,
+                            "reference_median": 14.518,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0057142857,
+                            "signed_delta": -0.002
+                          },
+                          {
+                            "direction": "matched",
+                            "feature": "battery_voltage_min",
+                            "observed": 14.4,
+                            "reference_median": 14.4,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0,
+                            "signed_delta": 0.0
+                          }
+                        ],
+                        "interpretation": "statistical deviation; not a confirmed mechanical failure",
+                        "operating_context": "mid_load_running",
+                        "status": "ok",
+                        "threshold": 4.5,
+                        "top_deviation": {
+                          "direction": "lower",
+                          "feature": "battery_voltage_mean",
+                          "observed": 14.516,
+                          "reference_median": 14.518,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0057142857,
+                          "signed_delta": -0.002
+                        }
+                      },
+                      "contextual_status": "ok",
+                      "contextual_threshold": 4.5,
+                      "contextual_top_feature": "battery_voltage_mean",
+                      "operating_context": "mid_load_running"
+                    },
+                    "execution_status": "ok",
+                    "finding": "negative",
+                    "is_anomaly": false,
+                    "missing_features": [],
+                    "model_version": "contextual-battery-robust-v1-d80a160236f5",
+                    "prediction": 1
+                  }
+                ],
+                "detector_ids": {
+                  "negative": [
+                    "isolation_forest",
+                    "contextual_battery_voltage"
+                  ],
+                  "not_applicable": [],
+                  "positive": [],
+                  "unavailable": []
+                },
+                "duration_ms": 12249.0,
+                "end_frame_index": 49,
+                "end_time_ms": 12249.0,
+                "schema_version": "multi-detector-window-aggregation-v1",
+                "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+                "start_frame_index": 0,
+                "start_time_ms": 0.0,
+                "telemetry": {
+                  "battery_voltage_mean": 14.516,
+                  "battery_voltage_median": 14.5,
+                  "battery_voltage_min": 14.4,
+                  "rpm_median": 6212.5,
+                  "tps_raw_median": 25.0,
+                  "tps_voltage_median": 1.1328125
+                },
+                "window_index": 0,
+                "window_number": 0
+              },
+              "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+              "source_window_range": {
+                "end_window_number": 0,
+                "start_window_number": 0
+              },
+              "start_frame_index": 0,
+              "start_time_ms": 0.0,
+              "start_window_index": 0,
+              "start_window_number": 0,
+              "unavailable_detector_ids": [],
+              "window_count": 1
+            },
+            "source_rule_id": "rca.v2.evidence.coverage_boundary",
+            "telemetry": {
+              "battery_voltage_mean": 14.516,
+              "battery_voltage_median": 14.5,
+              "battery_voltage_min": 14.4,
+              "rpm_median": 6212.5,
+              "tps_raw_median": 25.0,
+              "tps_voltage_median": 1.1328125
+            }
+          },
+          "statement": "Aggregate detector evidence state preserved."
+        }
+      ],
+      "possible_causes": [],
+      "recommended_checks": [
+        {
+          "category": "validation_boundary",
+          "check_id": "check.v2.no_evidence_boundary",
+          "description": "Do not treat no detector anomaly evidence as verified healthy without independent validation.",
+          "provenance": {
+            "detector_output": {
+              "by_detector": {
+                "contextual_battery_voltage": {
+                  "applicability_reason": null,
+                  "applicable": true,
+                  "available": true,
+                  "detector_id": "contextual_battery_voltage",
+                  "detector_local_score": {
+                    "column": "contextual_anomaly_score",
+                    "direction": "higher_is_more_anomalous",
+                    "value": 0.0057142857
+                  },
+                  "detector_local_threshold": {
+                    "column": "contextual_threshold",
+                    "source": "detector_evidence",
+                    "value": 4.5
+                  },
+                  "error": null,
+                  "evidence": {
+                    "contextual_applicable": true,
+                    "contextual_evidence": {
+                      "applicable": true,
+                      "feature_scores": [
+                        {
+                          "direction": "matched",
+                          "feature": "battery_voltage_median",
+                          "observed": 14.5,
+                          "reference_median": 14.5,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0,
+                          "signed_delta": 0.0
+                        },
+                        {
+                          "direction": "lower",
+                          "feature": "battery_voltage_mean",
+                          "observed": 14.516,
+                          "reference_median": 14.518,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0057142857,
+                          "signed_delta": -0.002
+                        },
+                        {
+                          "direction": "matched",
+                          "feature": "battery_voltage_min",
+                          "observed": 14.4,
+                          "reference_median": 14.4,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0,
+                          "signed_delta": 0.0
+                        }
+                      ],
+                      "interpretation": "statistical deviation; not a confirmed mechanical failure",
+                      "operating_context": "mid_load_running",
+                      "status": "ok",
+                      "threshold": 4.5,
+                      "top_deviation": {
+                        "direction": "lower",
+                        "feature": "battery_voltage_mean",
+                        "observed": 14.516,
+                        "reference_median": 14.518,
+                        "robust_scale": 0.35,
+                        "robust_z": 0.0057142857,
+                        "signed_delta": -0.002
+                      }
+                    },
+                    "contextual_status": "ok",
+                    "contextual_threshold": 4.5,
+                    "contextual_top_feature": "battery_voltage_mean",
+                    "operating_context": "mid_load_running"
+                  },
+                  "execution_status": "ok",
+                  "finding": "negative",
+                  "is_anomaly": false,
+                  "missing_features": [],
+                  "model_version": "contextual-battery-robust-v1-d80a160236f5",
+                  "prediction": 1
+                },
+                "isolation_forest": {
+                  "applicability_reason": null,
+                  "applicable": true,
+                  "available": true,
+                  "detector_id": "isolation_forest",
+                  "detector_local_score": {
+                    "column": "score_sample",
+                    "direction": "lower_is_more_anomalous",
+                    "value": -0.4777965264228112
+                  },
+                  "detector_local_threshold": {
+                    "column": "decision_score",
+                    "rule": "prediction=-1 when decision_score < 0",
+                    "source": "isolation_forest_decision_function",
+                    "value": 0.0
+                  },
+                  "error": null,
+                  "evidence": {
+                    "decision_score": 0.06627734272997682,
+                    "most_unusual_features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;iat_c_std;iat_c_mean_absolute_diff",
+                    "score_sample": -0.4777965264228112,
+                    "window_health_score": 76.24472588282404
+                  },
+                  "execution_status": "ok",
+                  "finding": "negative",
+                  "is_anomaly": false,
+                  "missing_features": [],
+                  "model_version": "iforest-baseline-20260920T091709Z",
+                  "prediction": 1
+                }
+              },
+              "negative_detector_ids": [
+                "isolation_forest",
+                "contextual_battery_voltage"
+              ],
+              "not_applicable_detector_ids": [],
+              "positive_detector_ids": [],
+              "unavailable_detector_ids": []
+            },
+            "grounding_source_ids": [],
+            "h7_v1_rule_id": null,
+            "rule_version": "evidence-grounded-rca-v2",
+            "source_event": {
+              "coverage_status": "full",
+              "detector_versions": {
+                "contextual_battery_voltage": "contextual-battery-robust-v1-d80a160236f5",
+                "isolation_forest": "iforest-baseline-20260920T091709Z"
+              },
+              "duration_ms": 12249.0,
+              "end_frame_index": 49,
+              "end_time_ms": 12249.0,
+              "end_window_index": 0,
+              "end_window_number": 0,
+              "event_id": "calib-real-run-r0024d0-c93a5fb4-part-02:session-summary",
+              "event_type": "session_summary",
+              "evidence_state": "no_evidence",
+              "interpretation": "aggregate evidence relationship only; not a diagnostic root-cause claim",
+              "negative_detector_ids": [
+                "isolation_forest",
+                "contextual_battery_voltage"
+              ],
+              "not_applicable_detector_ids": [],
+              "positive_detector_ids": [],
+              "representative_window": {
+                "active_detector_ids": [
+                  "isolation_forest",
+                  "contextual_battery_voltage"
+                ],
+                "aggregate_evidence_status": {
+                  "description": "At least one active detector was applicable and no active detector produced anomaly evidence; this is not a verified-healthy label.",
+                  "no_evidence_is_verified_healthy": false,
+                  "score_fusion_used": false,
+                  "state": "no_evidence"
+                },
+                "counts": {
+                  "applicable_detector_count": 2,
+                  "available_detector_count": 2,
+                  "negative_finding_count": 2,
+                  "not_applicable_detector_count": 0,
+                  "positive_finding_count": 0,
+                  "unavailable_detector_count": 0
+                },
+                "coverage": {
+                  "applicable_ratio": 1.0,
+                  "full_detector_count": 2,
+                  "status": "full"
+                },
+                "detector_disagreements": [],
+                "detector_findings": [
+                  {
+                    "applicability_reason": null,
+                    "applicable": true,
+                    "available": true,
+                    "detector_id": "isolation_forest",
+                    "detector_local_score": {
+                      "column": "score_sample",
+                      "direction": "lower_is_more_anomalous",
+                      "value": -0.4777965264228112
+                    },
+                    "detector_local_threshold": {
+                      "column": "decision_score",
+                      "rule": "prediction=-1 when decision_score < 0",
+                      "source": "isolation_forest_decision_function",
+                      "value": 0.0
+                    },
+                    "error": null,
+                    "evidence": {
+                      "decision_score": 0.06627734272997682,
+                      "most_unusual_features": "iat_c_constant_signal;iat_c_max_absolute_diff;iat_c_range;iat_c_std;iat_c_mean_absolute_diff",
+                      "score_sample": -0.4777965264228112,
+                      "window_health_score": 76.24472588282404
+                    },
+                    "execution_status": "ok",
+                    "finding": "negative",
+                    "is_anomaly": false,
+                    "missing_features": [],
+                    "model_version": "iforest-baseline-20260920T091709Z",
+                    "prediction": 1
+                  },
+                  {
+                    "applicability_reason": null,
+                    "applicable": true,
+                    "available": true,
+                    "detector_id": "contextual_battery_voltage",
+                    "detector_local_score": {
+                      "column": "contextual_anomaly_score",
+                      "direction": "higher_is_more_anomalous",
+                      "value": 0.0057142857
+                    },
+                    "detector_local_threshold": {
+                      "column": "contextual_threshold",
+                      "source": "detector_evidence",
+                      "value": 4.5
+                    },
+                    "error": null,
+                    "evidence": {
+                      "contextual_applicable": true,
+                      "contextual_evidence": {
+                        "applicable": true,
+                        "feature_scores": [
+                          {
+                            "direction": "matched",
+                            "feature": "battery_voltage_median",
+                            "observed": 14.5,
+                            "reference_median": 14.5,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0,
+                            "signed_delta": 0.0
+                          },
+                          {
+                            "direction": "lower",
+                            "feature": "battery_voltage_mean",
+                            "observed": 14.516,
+                            "reference_median": 14.518,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0057142857,
+                            "signed_delta": -0.002
+                          },
+                          {
+                            "direction": "matched",
+                            "feature": "battery_voltage_min",
+                            "observed": 14.4,
+                            "reference_median": 14.4,
+                            "robust_scale": 0.35,
+                            "robust_z": 0.0,
+                            "signed_delta": 0.0
+                          }
+                        ],
+                        "interpretation": "statistical deviation; not a confirmed mechanical failure",
+                        "operating_context": "mid_load_running",
+                        "status": "ok",
+                        "threshold": 4.5,
+                        "top_deviation": {
+                          "direction": "lower",
+                          "feature": "battery_voltage_mean",
+                          "observed": 14.516,
+                          "reference_median": 14.518,
+                          "robust_scale": 0.35,
+                          "robust_z": 0.0057142857,
+                          "signed_delta": -0.002
+                        }
+                      },
+                      "contextual_status": "ok",
+                      "contextual_threshold": 4.5,
+                      "contextual_top_feature": "battery_voltage_mean",
+                      "operating_context": "mid_load_running"
+                    },
+                    "execution_status": "ok",
+                    "finding": "negative",
+                    "is_anomaly": false,
+                    "missing_features": [],
+                    "model_version": "contextual-battery-robust-v1-d80a160236f5",
+                    "prediction": 1
+                  }
+                ],
+                "detector_ids": {
+                  "negative": [
+                    "isolation_forest",
+                    "contextual_battery_voltage"
+                  ],
+                  "not_applicable": [],
+                  "positive": [],
+                  "unavailable": []
+                },
+                "duration_ms": 12249.0,
+                "end_frame_index": 49,
+                "end_time_ms": 12249.0,
+                "schema_version": "multi-detector-window-aggregation-v1",
+                "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+                "start_frame_index": 0,
+                "start_time_ms": 0.0,
+                "telemetry": {
+                  "battery_voltage_mean": 14.516,
+                  "battery_voltage_median": 14.5,
+                  "battery_voltage_min": 14.4,
+                  "rpm_median": 6212.5,
+                  "tps_raw_median": 25.0,
+                  "tps_voltage_median": 1.1328125
+                },
+                "window_index": 0,
+                "window_number": 0
+              },
+              "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+              "source_window_range": {
+                "end_window_number": 0,
+                "start_window_number": 0
+              },
+              "start_frame_index": 0,
+              "start_time_ms": 0.0,
+              "start_window_index": 0,
+              "start_window_number": 0,
+              "unavailable_detector_ids": [],
+              "window_count": 1
+            },
+            "source_rule_id": "rca.v2.evidence.coverage_boundary",
+            "telemetry": {
+              "battery_voltage_mean": 14.516,
+              "battery_voltage_median": 14.5,
+              "battery_voltage_min": 14.4,
+              "rpm_median": 6212.5,
+              "tps_raw_median": 25.0,
+              "tps_voltage_median": 1.1328125
+            }
+          },
+          "trigger_evidence": [
+            "all applicable detectors negative"
+          ]
+        }
+      ],
+      "schema_version": "diagnostic-evidence-rca-v2-interpretation-v1",
+      "sections_distinct": true,
+      "status": "available",
+      "symptoms": []
+    },
+    "live_research_analysis_version": "h9c-live-research-harness-v1",
+    "production_boundary": {
+      "alerting_changed": false,
+      "health_score_changed": false,
+      "predictive_maintenance_claim": false,
+      "production_anomaly_status_changed": false,
+      "research_evidence_can_change_alerts": false,
+      "root_cause_confirmed": false
+    },
+    "provenance": {
+      "analysis_run_id": "analysis_20261006T152308Z_4654328dc05c",
+      "contextual_reference_schema_version": "contextual-battery-reference-v1",
+      "contextual_reference_version": "contextual-battery-robust-v1-d80a160236f5",
+      "created_at": "2026-10-06T15:23:06.789406+00:00",
+      "decoder": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "decoder_version_key": "honda_keihin_71_17:1.0.0"
+      },
+      "detector_versions": {
+        "contextual_battery_voltage": "contextual-battery-robust-v1-d80a160236f5",
+        "isolation_forest": "iforest-baseline-20260920T091709Z"
+      },
+      "device_id": "esp32-shmode-calib",
+      "feature_schema_version": "ecu-window-features-v1",
+      "historical_comparison_cutoff": {
+        "analysis_run_id": "analysis_20261006T152308Z_4654328dc05c",
+        "future_sessions_allowed": false,
+        "mode": "live_research_analysis",
+        "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02"
+      },
+      "model_version": "iforest-baseline-20260920T091709Z",
+      "rca_engine_version": "deterministic-rca-engine-v2",
+      "rca_rule_version": "evidence-grounded-rca-v2",
+      "runtime_ms": {
+        "aggregation_ms": 186.695198,
+        "contextual_detector_ms": 19.400035,
+        "history_lookup_ms": 25.206626,
+        "production_if_inference_ms": 174.112521,
+        "rca_ms": 0.098053,
+        "total_research_shadow_ms": 232.23973
+      },
+      "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+      "signal_columns": [
+        "rpm",
+        "tps_voltage",
+        "tps_raw",
+        "battery_voltage",
+        "iat_c",
+        "ect_c"
+      ],
+      "telemetry_schema_version": "canonical-telemetry-v2",
+      "vehicle_id": "Honda SH Mode 125",
+      "warnings": []
+    },
+    "recommended_check_priorities": [
+      {
+        "check_id": "check.v2.no_evidence_boundary",
+        "deterministic": true,
+        "family": "no_anomaly_evidence",
+        "priority": "priority",
+        "reason": "Comparable history shows recurrent or persistent evidence.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00001",
+          "h8-comparison-00002"
+        ]
+      }
+    ],
+    "schema_version": "analyzer-diagnostic-evidence-v1",
+    "status": "available"
+  },
+  "warnings": [],
+  "started_at": "2026-10-06T15:23:06.789406+00:00",
+  "completed_at": "2026-10-06T15:23:09.203286+00:00",
+  "created_at": "2026-10-06T15:23:06.789406+00:00"
+}

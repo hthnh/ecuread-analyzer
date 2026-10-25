@@ -76,3 +76,4 @@ class ModelInfo(BaseModel):
     model_loaded: bool
     model_dir: str
     metadata: dict[str, Any] | None = None
+    model_bundle: dict[str, Any] | None = None

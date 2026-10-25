@@ -81,7 +81,8 @@ def test_real_jsonl_upload_generates_canonical_artifacts_and_preserves_raw(setti
 
     assert response.status_code == 200
     body = response.json()
-    assert body["statistics"]["source_format"] == "esp_jsonl"
+    assert body["statistics"]["source_format"] == "native_honda_0x17"
+    assert body["input"]["telemetry_schema_version"] == "canonical-telemetry-v2"
     assert body["statistics"]["frames_found"] > 0
     assert body["statistics"]["frames_parsed"] > 0
     assert body["statistics"]["frame_errors"] == 0

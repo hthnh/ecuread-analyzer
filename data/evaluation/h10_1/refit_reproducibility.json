@@ -1,0 +1,136 @@
+{
+  "folds": [
+    {
+      "fold_id": "logo-session_000001",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000001"
+    },
+    {
+      "fold_id": "logo-session_000002",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000002"
+    },
+    {
+      "fold_id": "logo-session_000003",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000003"
+    },
+    {
+      "fold_id": "logo-session_000004",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000004"
+    },
+    {
+      "fold_id": "logo-session_000005",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000005"
+    },
+    {
+      "fold_id": "logo-session_000006",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000006"
+    },
+    {
+      "fold_id": "logo-session_000007",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000007"
+    },
+    {
+      "fold_id": "logo-session_000014",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000014"
+    },
+    {
+      "fold_id": "logo-session_000015",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000015"
+    },
+    {
+      "fold_id": "logo-session_000016",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000016"
+    },
+    {
+      "fold_id": "logo-session_000017",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000017"
+    },
+    {
+      "fold_id": "logo-session_000018",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000018"
+    },
+    {
+      "fold_id": "logo-session_000019",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000019"
+    },
+    {
+      "fold_id": "logo-session_000020",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000020"
+    },
+    {
+      "fold_id": "logo-session_000021",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000021"
+    },
+    {
+      "fold_id": "logo-session_000022",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000022"
+    },
+    {
+      "fold_id": "logo-session_000023",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000023"
+    },
+    {
+      "fold_id": "logo-session_000024",
+      "held_out_poison_fit_invariant": true,
+      "held_out_scores_predictions_bit_identical": true,
+      "model_scaler_byte_identical": true,
+      "repeat_artifact_dir": "/tmp/ecuread-h10-1-repeat-hc_enrai/logo-session_000024"
+    }
+  ],
+  "note": "Model/scaler bytes and predictions reproducible. Metadata creation timestamp/training runtime intentionally vary; no claim of identical volatile metadata.",
+  "protected_inputs": {
+    "changed_files": [],
+    "new_unpinned_files": [],
+    "pinned_files_checked": 837
+  }
+}

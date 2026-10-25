@@ -1,0 +1,428 @@
+{
+  "approaches": {
+    "A": {
+      "complexity": "200 trees, 81 features; linear inference in windows times tree traversal",
+      "current_artifact": "descriptive only, contaminated and historically selected",
+      "future": "Refit SAME algorithm/feature contract on the identical training groups used for every comparator; temporary artifacts only",
+      "interpretability": "feature deviations, not causal diagnosis",
+      "method": "Native-v2 IF"
+    },
+    "B": {
+      "calibration": "Any later calibration on train/calibration groups exclusively, separate from outer test",
+      "complexity": "same IF plus context lookup",
+      "feasibility": "smallest next experiment: stratification first, no new estimator",
+      "interpretability": "conditional score/flag burden, not fault accuracy",
+      "method": "Same IF, context-stratified analysis; optional train-only calibration"
+    },
+    "C": {
+      "complexity": "one IF per supported context; sparse cells increase variance",
+      "coverage": {
+        "joint_known:moving_episode|stable": {
+          "capture_groups": 14,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 978.4989999999999,
+            "session_000003": 219.248,
+            "session_000004": 323.99500000000006,
+            "session_000005": 1480.2420000000002,
+            "session_000006": 72.25,
+            "session_000007": 1244.5,
+            "session_000016": 2575.9950000000003,
+            "session_000017": 435.249,
+            "session_000018": 2362.9949999999985,
+            "session_000019": 265.74699999999996,
+            "session_000021": 324.4939999999999,
+            "session_000022": 224.002,
+            "session_000023": 1845.7509999999984,
+            "session_000024": 951.2520000000001
+          },
+          "largest_capture_share": 0.20065481758652948,
+          "windows": 4276,
+          "windows_by_capture": {
+            "session_000002": 344,
+            "session_000003": 76,
+            "session_000004": 102,
+            "session_000005": 537,
+            "session_000006": 25,
+            "session_000007": 439,
+            "session_000016": 858,
+            "session_000017": 131,
+            "session_000018": 703,
+            "session_000019": 75,
+            "session_000021": 79,
+            "session_000022": 74,
+            "session_000023": 519,
+            "session_000024": 314
+          }
+        },
+        "joint_known:moving_episode|warming": {
+          "capture_groups": 7,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 144.501,
+            "session_000006": 70.001,
+            "session_000015": 66.74799999999999,
+            "session_000016": 52.25,
+            "session_000017": 27.251000000000005,
+            "session_000023": 19.75,
+            "session_000024": 32.252
+          },
+          "largest_capture_share": 0.3968253968253968,
+          "windows": 126,
+          "windows_by_capture": {
+            "session_000002": 50,
+            "session_000006": 24,
+            "session_000015": 15,
+            "session_000016": 17,
+            "session_000017": 7,
+            "session_000023": 4,
+            "session_000024": 9
+          }
+        },
+        "joint_known:moving_steady|stable": {
+          "capture_groups": 10,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000007": 17.250999999999976,
+            "session_000016": 14.750999999999749,
+            "session_000017": 93.75299999999993,
+            "session_000018": 762.4930000000006,
+            "session_000019": 46.99800000000002,
+            "session_000021": 289.7459999999999,
+            "session_000022": 320.74699999999996,
+            "session_000023": 798.4980000000002,
+            "session_000024": 44.500999999999976
+          },
+          "largest_capture_share": 0.3480392156862745,
+          "windows": 612,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000007": 3,
+            "session_000016": 2,
+            "session_000017": 18,
+            "session_000018": 180,
+            "session_000019": 11,
+            "session_000021": 73,
+            "session_000022": 101,
+            "session_000023": 213,
+            "session_000024": 10
+          }
+        },
+        "joint_known:moving_steady|warming": {
+          "capture_groups": 1,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000024": 12.251999999999953
+          },
+          "largest_capture_share": 1.0,
+          "windows": 1,
+          "windows_by_capture": {
+            "session_000024": 1
+          }
+        },
+        "joint_known:stationary_running|stable": {
+          "capture_groups": 8,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000003": 70.249,
+            "session_000005": 12.249000000000024,
+            "session_000016": 242.9959999999994,
+            "session_000018": 59.001000000000204,
+            "session_000019": 12.248999999999967,
+            "session_000023": 135.99400000000082,
+            "session_000024": 138.75100000000003
+          },
+          "largest_capture_share": 0.39285714285714285,
+          "windows": 168,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000003": 24,
+            "session_000005": 1,
+            "session_000016": 66,
+            "session_000018": 8,
+            "session_000019": 1,
+            "session_000023": 31,
+            "session_000024": 36
+          }
+        },
+        "joint_known:stationary_running|warming": {
+          "capture_groups": 8,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000001": 12.25,
+            "session_000005": 27.247999999999934,
+            "session_000006": 29.749000000000002,
+            "session_000014": 292.251,
+            "session_000015": 29.751,
+            "session_000016": 315.2479999999996,
+            "session_000023": 22.25,
+            "session_000024": 69.749
+          },
+          "largest_capture_share": 0.459915611814346,
+          "windows": 237,
+          "windows_by_capture": {
+            "session_000001": 1,
+            "session_000005": 7,
+            "session_000006": 8,
+            "session_000014": 109,
+            "session_000015": 8,
+            "session_000016": 79,
+            "session_000023": 5,
+            "session_000024": 20
+          }
+        },
+        "operating:moving_episode": {
+          "capture_groups": 15,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 1252.753,
+            "session_000003": 221.748,
+            "session_000004": 581.245,
+            "session_000005": 1672.75,
+            "session_000006": 142.251,
+            "session_000007": 1344.25,
+            "session_000015": 66.74799999999999,
+            "session_000016": 3182.241,
+            "session_000017": 522.4990000000001,
+            "session_000018": 2612.2369999999987,
+            "session_000019": 355.499,
+            "session_000021": 389.2459999999999,
+            "session_000022": 276.00100000000003,
+            "session_000023": 2556.748999999998,
+            "session_000024": 1429.751
+          },
+          "largest_capture_share": 0.19501999272991638,
+          "windows": 5502,
+          "windows_by_capture": {
+            "session_000002": 442,
+            "session_000003": 77,
+            "session_000004": 197,
+            "session_000005": 614,
+            "session_000006": 49,
+            "session_000007": 475,
+            "session_000015": 15,
+            "session_000016": 1073,
+            "session_000017": 162,
+            "session_000018": 791,
+            "session_000019": 107,
+            "session_000021": 101,
+            "session_000022": 87,
+            "session_000023": 803,
+            "session_000024": 509
+          }
+        },
+        "operating:moving_steady": {
+          "capture_groups": 10,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000007": 17.250999999999976,
+            "session_000016": 14.750999999999749,
+            "session_000017": 93.75299999999993,
+            "session_000018": 831.7430000000006,
+            "session_000019": 46.99800000000002,
+            "session_000021": 289.7459999999999,
+            "session_000022": 338.24699999999996,
+            "session_000023": 845.2490000000004,
+            "session_000024": 66.75099999999998
+          },
+          "largest_capture_share": 0.3400309119010819,
+          "windows": 647,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000007": 3,
+            "session_000016": 2,
+            "session_000017": 18,
+            "session_000018": 196,
+            "session_000019": 11,
+            "session_000021": 73,
+            "session_000022": 108,
+            "session_000023": 220,
+            "session_000024": 15
+          }
+        },
+        "operating:stationary_running": {
+          "capture_groups": 15,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000001": 12.25,
+            "session_000002": 12.25,
+            "session_000003": 70.249,
+            "session_000004": 86.49800000000005,
+            "session_000005": 111.50200000000001,
+            "session_000006": 44.499,
+            "session_000007": 42.00299999999993,
+            "session_000014": 297.501,
+            "session_000015": 29.751,
+            "session_000016": 730.9970000000001,
+            "session_000017": 69.74700000000004,
+            "session_000018": 74.25200000000041,
+            "session_000019": 52.0,
+            "session_000023": 243.24800000000096,
+            "session_000024": 323.74800000000005
+          },
+          "largest_capture_share": 0.3318112633181126,
+          "windows": 657,
+          "windows_by_capture": {
+            "session_000001": 1,
+            "session_000002": 1,
+            "session_000003": 24,
+            "session_000004": 19,
+            "session_000005": 29,
+            "session_000006": 10,
+            "session_000007": 9,
+            "session_000014": 115,
+            "session_000015": 8,
+            "session_000016": 218,
+            "session_000017": 20,
+            "session_000018": 18,
+            "session_000019": 13,
+            "session_000023": 70,
+            "session_000024": 102
+          }
+        },
+        "thermal:stable": {
+          "capture_groups": 14,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 1135.503,
+            "session_000003": 307.748,
+            "session_000004": 356.99700000000007,
+            "session_000005": 1637.496,
+            "session_000006": 84.75,
+            "session_000007": 1445.25,
+            "session_000016": 3270.494,
+            "session_000017": 709.7539999999999,
+            "session_000018": 4050.0,
+            "session_000019": 397.0,
+            "session_000021": 790.0,
+            "session_000022": 681.749,
+            "session_000023": 3437.248000000001,
+            "session_000024": 1228.9990000000003
+          },
+          "largest_capture_share": 0.21479778168537805,
+          "windows": 7393,
+          "windows_by_capture": {
+            "session_000002": 438,
+            "session_000003": 119,
+            "session_000004": 123,
+            "session_000005": 631,
+            "session_000006": 30,
+            "session_000007": 566,
+            "session_000016": 1202,
+            "session_000017": 272,
+            "session_000018": 1588,
+            "session_000019": 147,
+            "session_000021": 308,
+            "session_000022": 261,
+            "session_000023": 1279,
+            "session_000024": 429
+          }
+        },
+        "thermal:unknown": {
+          "capture_groups": 14,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 101.50099999999998,
+            "session_000004": 376.74800000000005,
+            "session_000005": 258.75200000000007,
+            "session_000006": 14.75,
+            "session_000007": 116.74900000000002,
+            "session_000016": 608.5010000000002,
+            "session_000017": 79.249,
+            "session_000018": 398.2520000000001,
+            "session_000019": 134.1690000000001,
+            "session_000020": 19.751,
+            "session_000021": 92.00000000000003,
+            "session_000022": 61.753000000000036,
+            "session_000023": 748.6729999999997,
+            "session_000024": 455.50099999999986
+          },
+          "largest_capture_share": 0.21428571428571427,
+          "windows": 1050,
+          "windows_by_capture": {
+            "session_000002": 25,
+            "session_000004": 135,
+            "session_000005": 84,
+            "session_000006": 2,
+            "session_000007": 35,
+            "session_000016": 177,
+            "session_000017": 16,
+            "session_000018": 128,
+            "session_000019": 38,
+            "session_000020": 4,
+            "session_000021": 29,
+            "session_000022": 13,
+            "session_000023": 225,
+            "session_000024": 139
+          }
+        },
+        "thermal:warming": {
+          "capture_groups": 11,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000001": 27.249,
+            "session_000002": 179.751,
+            "session_000005": 32.24899999999991,
+            "session_000006": 127.501,
+            "session_000007": 22.250999999999976,
+            "session_000014": 294.751,
+            "session_000015": 132.249,
+            "session_000016": 407.75199999999955,
+            "session_000017": 64.751,
+            "session_000023": 42.0,
+            "session_000024": 139.75199999999995
+          },
+          "largest_capture_share": 0.23236514522821577,
+          "windows": 482,
+          "windows_by_capture": {
+            "session_000001": 7,
+            "session_000002": 68,
+            "session_000005": 9,
+            "session_000006": 47,
+            "session_000007": 5,
+            "session_000014": 110,
+            "session_000015": 49,
+            "session_000016": 112,
+            "session_000017": 22,
+            "session_000023": 9,
+            "session_000024": 44
+          }
+        }
+      },
+      "feasibility": "conditional on sufficient training AND outer-test groups in each fold; aggregate macro motion initially, abstain otherwise",
+      "interpretability": "context-specific deviations; same signals define context and score",
+      "method": "Context-conditioned IF"
+    },
+    "D": {
+      "complexity": "linear projection; correlated 81-feature window statistics may suit a simple sensitivity comparator",
+      "feasibility": "defer; no audited residual advantage or independent fault labels justifies another fitted family yet",
+      "future": "If justified, fit scaler/PCA/components/thresholds using training/calibration groups only and identical outer folds",
+      "interpretability": "reconstruction contributions, not fault causes",
+      "method": "PCA reconstruction residual"
+    }
+  },
+  "export_content_sha256": "5fd672ff45b69681e310efff7661cc8313989cfc10191047dc476e8161e156c1",
+  "human_boundary_validation": "pending",
+  "independence_policy": "operator_attested_capture_groups_v1; 18 collector-attested groups, machine verification null; strict machine-verified policy unchanged",
+  "leakage_summary": {
+    "candidate_fit_and_reference_captures": 8,
+    "candidate_train_holdout_correlated_capture_groups": 2,
+    "native_fit_overlap_captures": 7,
+    "previous_selection_exposed_captures": 18
+  },
+  "limitations": [
+    "18 groups do not establish population-level motorcycle generalization; physical independence rests on operator declaration.",
+    "50-row windows step 10 share 40 samples (80% overlap); nominal 9989 is not independent N.",
+    "Bulk operator endorsement is not individually verified boundaries or fault ground truth; manual time/boundary checks remain pending.",
+    "CTX2 labels derive speed/RPM/TPS/ECT; IF shares RPM/TPS/ECT/IAT/battery. Stratified differences and context recognition can be circular, not independent detector validation.",
+    "Context recognition, anomaly scores, normal-looking riding burden and real-fault sensitivity are distinct tasks.",
+    "IF/RCA predictions never become ground truth. Synthetic perturbations are sensitivity tests only, not real-world recall.",
+    "Historical source SHA absence remains disclosed even when complete frame sequences and scaler statistics match."
+  ],
+  "schema_version": "h10-benchmark-design-v1",
+  "smallest_next_experiment": {
+    "claims": "Context-conditioned score behavior/alert burden feasibility only; no precision, recall, diagnostic accuracy or false-positive rate without verified normal/fault labels.",
+    "eligibility": "Homogeneous known axis labels only for conditional metrics; crossing/unknown windows retained in denominators and separate strata, never majority-voted.",
+    "execution_now": "none; no model fitting or threshold calibration performed in H10",
+    "labels": "Obtain independent boundary review, prioritizing 002/004/005/007/018; blind reviewer to IF flags. Macro and fine stay separate.",
+    "metrics": "Paired per-capture score distributions and union-time/event burden; equal-weight capture summaries and capture-level bootstrap uncertainty. No window-random split or independent-window significance tests. Treat folds as dependent training experiments.",
+    "selection": "Pre-register contrasts, no tuning on outer folds. Existing corpus has prior selection exposure; reserve genuinely new captures for final confirmatory claims.",
+    "sparse_context_policy": "Proposed protocol gate, not a production threshold: require >=3 training capture groups and >=1 eligible outer-test group per context; otherwise report unsupported and use pooled baseline without claiming conditioned comparison. Inspect per-group time, not just overlapping window totals.",
+    "split": "Pre-register deterministic leave-one-capture-group-out outer folds (18); choose calibration groups only within the other 17, identically for A/B and any later candidates. Publish group/hash manifests before fitting.",
+    "training_scope": "Without independently verified normal-only data, fit representative training captures as unlabeled data; do not rename context labels normal.",
+    "unit": "whole operator-attested physical capture group; aliases, historical splits, replay and derivatives inherit parent; unresolved/synthetic excluded"
+  },
+  "verdict": "descriptive_analysis_only",
+  "verified_physical_fault_labels": 0
+}

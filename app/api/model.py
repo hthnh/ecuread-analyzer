@@ -5,6 +5,7 @@ import json
 from fastapi import APIRouter, File, Form, HTTPException, Request, UploadFile
 
 from app.ml.training import METADATA_FILENAME, model_artifacts_exist
+from app.ml.active_bundle import resolve_active_bundle
 from app.schemas import ModelInfo
 from app.ingestion.raw_ecu.adapter import import_raw_text
 from app.services.training_service import train_from_canonical_sessions
@@ -16,12 +17,15 @@ router = APIRouter(prefix="/api/v1", tags=["model"])
 @router.get("/model", response_model=ModelInfo)
 def model_info(request: Request) -> ModelInfo:
     settings = request.app.state.settings
-    metadata_path = settings.model_dir / METADATA_FILENAME
+    bundle = resolve_active_bundle(settings)
+    directory = bundle.model_dir if bundle else settings.model_dir
+    metadata_path = directory / METADATA_FILENAME
     metadata = json.loads(metadata_path.read_text(encoding="utf-8")) if metadata_path.exists() else None
     return ModelInfo(
-        model_loaded=model_artifacts_exist(settings.model_dir),
-        model_dir=str(settings.model_dir),
+        model_loaded=model_artifacts_exist(directory),
+        model_dir=str(directory),
         metadata=metadata,
+        model_bundle=bundle.provenance() if bundle else None,
     )
 
 

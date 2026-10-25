@@ -110,6 +110,8 @@ class TelemetrySample(BaseModel):
     ect_c: float | None = None
     ect_c_candidate: float | None = None
     map_raw: float | None = None
+    vehicle_speed_kmh: float | None = Field(default=None, ge=0, le=255, allow_inf_nan=False)
+    speed_provenance: dict[str, Any] = Field(default_factory=dict)
     frame_valid: bool = True
     checksum_valid: bool = True
     quality_flags: dict[str, Any] = Field(default_factory=dict)

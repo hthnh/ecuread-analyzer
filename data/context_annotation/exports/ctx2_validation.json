@@ -1,0 +1,596 @@
+{
+  "accuracy_estimate": null,
+  "all_source_hashes_match": true,
+  "all_suggestions_nonoverlapping": true,
+  "batch_summary": {
+    "corpus_manifest_sha256": "538bf38dfc395084f7f08cdd342d9bbf8ac10d757c298623ca8cb80cb6e1c61e",
+    "failed_processing": 0,
+    "generated_at": "2026-10-09T13:38:36.344970+00:00",
+    "partial_evidence": 56,
+    "pending_human_review": 5035,
+    "rule_version": "ctx2-rules-v1",
+    "schema_version": "context-batch-preview-v2",
+    "successful_processing": 57,
+    "total_corpus_entries": 57,
+    "unavailable_speed": 30,
+    "verified_coverage_added_s": 0.0
+  },
+  "browser_review_verification": {
+    "accepted": true,
+    "accepted_correction_preserves_confirmation_history": true,
+    "after_sha256": {
+      "canonical": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f",
+      "existingHumanAnnotation": "2f28c3a72193a2665dbbd8a99779ba8c41a55001d8343c37e58efe0dbbebfdc8",
+      "raw": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7"
+    },
+    "auto_segmented": true,
+    "before_sha256": {
+      "canonical": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f",
+      "existingHumanAnnotation": "2f28c3a72193a2665dbbd8a99779ba8c41a55001d8343c37e58efe0dbbebfdc8",
+      "raw": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7"
+    },
+    "browser_errors": [],
+    "campaign_review_added": false,
+    "canvas_signal_pixels": 3795,
+    "desktop_viewport": [
+      1440,
+      1100
+    ],
+    "isolated_verification_only": true,
+    "loaded": true,
+    "manually_corrected": true,
+    "mobile_overflow": false,
+    "mobile_viewport": [
+      390,
+      844
+    ],
+    "persisted_and_reloaded": true,
+    "source_and_existing_annotation_hashes_unchanged": true,
+    "source_session_id": "calib-real-run-session-000004",
+    "timeline_framing": {
+      "canvasPlotLeft": 216,
+      "canvasPlotRight": 1411,
+      "lanePlotLeft": 215,
+      "lanePlotRight": 1412
+    },
+    "verified_at": "2026-10-09T13:40:22.999Z",
+    "visualized": true
+  },
+  "case_studies": [
+    {
+      "invalid_frames": 0,
+      "metrics": {
+        "duration_distribution_s": {
+          "max": 32.00049999999999,
+          "median": 5.750999999999976,
+          "min": 0.75,
+          "p90": 12.89919999999998
+        },
+        "duration_s": 1446.503,
+        "event_count": 84,
+        "event_counts": {
+          "engine_stop": 1,
+          "throttle_burst": 83
+        },
+        "fragmentation_per_minute": 8.420307458747061,
+        "operating_duration_s": {
+          "engine_off": 10.375999999999976,
+          "moving_accelerating": 267.50850000000025,
+          "moving_decelerating": 289.7475000000001,
+          "moving_steady": 63.000000000000114,
+          "moving_variable": 760.4914999999993,
+          "stationary_running": 31.999000000000024,
+          "unknown": 23.38050000000017
+        },
+        "partial_evidence": true,
+        "pending_human_review": 287,
+        "rule_conflicting_samples": 0,
+        "segment_count": 203,
+        "short_segment_count": 13,
+        "speed_available_count": 5781,
+        "speed_outliers_rejected": 0,
+        "speed_spread_by_context_kmh": {
+          "moving_steady": 2.0,
+          "moving_variable": 5.5
+        },
+        "stationary_interval_count": 3,
+        "stationary_interval_durations_s": [
+          8.75,
+          14.75,
+          8.499000000000024
+        ],
+        "thermal_duration_s": {
+          "stable": 1148.502,
+          "unknown": 117.375,
+          "warming": 180.626
+        },
+        "unknown_coverage": 0.016163464576292044,
+        "unknown_operating_duration_s": 23.38050000000017,
+        "verified_stationary_interval_count": 3
+      },
+      "nonoverlapping_segments": true,
+      "session_id": "session_000002",
+      "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "speed_distribution_kmh": {
+        "max": 79.0,
+        "median": 22.0,
+        "min": 0.0,
+        "near_zero_fraction": 0.043591074208614425,
+        "p95": 48.0
+      },
+      "stationary_segments_use_near_zero_speed": true,
+      "tps_bursts_meet_measured_rules": true,
+      "valid_frames": 5781
+    },
+    {
+      "invalid_frames": 0,
+      "metrics": {
+        "duration_distribution_s": {
+          "max": 31.750499999999988,
+          "median": 4.999000000000024,
+          "min": 0.125,
+          "p90": 13.02505
+        },
+        "duration_s": 755.001,
+        "event_count": 64,
+        "event_counts": {
+          "repeated_stop_go": 1,
+          "throttle_burst": 63
+        },
+        "fragmentation_per_minute": 8.741710275880429,
+        "operating_duration_s": {
+          "moving_accelerating": 128.00099999999998,
+          "moving_decelerating": 154.49499999999998,
+          "moving_steady": 15.00049999999996,
+          "moving_variable": 333.7500000000001,
+          "stationary_running": 116.50349999999992,
+          "unknown": 7.251000000000035
+        },
+        "partial_evidence": true,
+        "pending_human_review": 174,
+        "rule_conflicting_samples": 0,
+        "segment_count": 110,
+        "short_segment_count": 10,
+        "speed_available_count": 3017,
+        "speed_outliers_rejected": 0,
+        "speed_spread_by_context_kmh": {
+          "moving_steady": 2.3499999999999996,
+          "moving_variable": 7.600000000000005
+        },
+        "stationary_interval_count": 8,
+        "stationary_interval_durations_s": [
+          7.25,
+          31.750499999999988,
+          4.25,
+          7.000499999999988,
+          18.500499999999988,
+          22.750999999999976,
+          25.000999999999976
+        ],
+        "thermal_duration_s": {
+          "stable": 369.25149999999996,
+          "unknown": 385.7495,
+          "warming": 0
+        },
+        "unknown_coverage": 0.009603960789455955,
+        "unknown_operating_duration_s": 7.251000000000035,
+        "verified_stationary_interval_count": 7
+      },
+      "nonoverlapping_segments": true,
+      "session_id": "session_000004",
+      "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "speed_distribution_kmh": {
+        "max": 64.0,
+        "median": 23.0,
+        "min": 0.0,
+        "near_zero_fraction": 0.16241299303944315,
+        "p95": 51.0
+      },
+      "stationary_segments_use_near_zero_speed": true,
+      "tps_bursts_meet_measured_rules": true,
+      "valid_frames": 3017
+    },
+    {
+      "invalid_frames": 0,
+      "metrics": {
+        "duration_distribution_s": {
+          "max": 44.749500000000126,
+          "median": 5.5004999999998745,
+          "min": 0.2504999999998745,
+          "p90": 14.651199999999982
+        },
+        "duration_s": 1963.997,
+        "event_count": 138,
+        "event_counts": {
+          "throttle_burst": 138
+        },
+        "fragmentation_per_minute": 7.79023593213228,
+        "operating_duration_s": {
+          "moving_accelerating": 333.7634999999995,
+          "moving_decelerating": 332.2340000000005,
+          "moving_steady": 81.99949999999947,
+          "moving_variable": 1075.5005000000006,
+          "stationary_running": 120.25000000000011,
+          "unknown": 20.24950000000001
+        },
+        "partial_evidence": true,
+        "pending_human_review": 393,
+        "rule_conflicting_samples": 0,
+        "segment_count": 255,
+        "short_segment_count": 12,
+        "speed_available_count": 7851,
+        "speed_outliers_rejected": 0,
+        "speed_spread_by_context_kmh": {
+          "moving_steady": 2.0,
+          "moving_variable": 6.5
+        },
+        "stationary_interval_count": 5,
+        "stationary_interval_durations_s": [
+          24.75,
+          45.75100000000009,
+          26.749000000000024,
+          23.0
+        ],
+        "thermal_duration_s": {
+          "stable": 1651.3695000000002,
+          "unknown": 276.6279999999999,
+          "warming": 35.99950000000001
+        },
+        "unknown_coverage": 0.010310351797889715,
+        "unknown_operating_duration_s": 20.24950000000001,
+        "verified_stationary_interval_count": 4
+      },
+      "nonoverlapping_segments": true,
+      "session_id": "session_000005",
+      "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "speed_distribution_kmh": {
+        "max": 62.0,
+        "median": 24.0,
+        "min": 0.0,
+        "near_zero_fraction": 0.06980002547446185,
+        "p95": 48.0
+      },
+      "stationary_segments_use_near_zero_speed": true,
+      "tps_bursts_meet_measured_rules": true,
+      "valid_frames": 7851
+    },
+    {
+      "invalid_frames": 0,
+      "metrics": {
+        "duration_distribution_s": {
+          "max": 28.5,
+          "median": 5.999249999999961,
+          "min": 0.5004999999999882,
+          "p90": 13.374249999999961
+        },
+        "duration_s": 1598.002,
+        "event_count": 65,
+        "event_counts": {
+          "repeated_stop_go": 1,
+          "throttle_burst": 64
+        },
+        "fragmentation_per_minute": 8.110127521742776,
+        "operating_duration_s": {
+          "moving_accelerating": 272.00500000000005,
+          "moving_decelerating": 291.2415,
+          "moving_steady": 114.50050000000016,
+          "moving_variable": 854.502,
+          "stationary_running": 51.74950000000001,
+          "unknown": 14.003499999999812
+        },
+        "partial_evidence": true,
+        "pending_human_review": 281,
+        "rule_conflicting_samples": 0,
+        "segment_count": 216,
+        "short_segment_count": 4,
+        "speed_available_count": 6389,
+        "speed_outliers_rejected": 0,
+        "speed_spread_by_context_kmh": {
+          "moving_steady": 1.5500000000000007,
+          "moving_variable": 5.5
+        },
+        "stationary_interval_count": 4,
+        "stationary_interval_durations_s": [
+          22.000499999999988,
+          5.75,
+          23.999000000000024
+        ],
+        "thermal_duration_s": {
+          "stable": 1449.875,
+          "unknown": 123.3789999999999,
+          "warming": 24.748000000000047
+        },
+        "unknown_coverage": 0.00876313045916076,
+        "unknown_operating_duration_s": 14.003499999999812,
+        "verified_stationary_interval_count": 3
+      },
+      "nonoverlapping_segments": true,
+      "session_id": "session_000007",
+      "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "speed_distribution_kmh": {
+        "max": 66.0,
+        "median": 22.0,
+        "min": 0.0,
+        "near_zero_fraction": 0.039755830333385506,
+        "p95": 41.0
+      },
+      "stationary_segments_use_near_zero_speed": true,
+      "tps_bursts_meet_measured_rules": true,
+      "valid_frames": 6389
+    }
+  ],
+  "decision": "auto_label_review_ready",
+  "existing_annotation_sha256": {
+    "data/context_annotation/annotations/ride-20260920-1504.context.json": "2f28c3a72193a2665dbbd8a99779ba8c41a55001d8343c37e58efe0dbbebfdc8"
+  },
+  "generated_at": "2026-10-09T13:44:13.052795+00:00",
+  "independent_captures_verified": null,
+  "rule_version": "ctx2-rules-v1",
+  "source_hash_audit": [
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-20260812-152832-2a54f0"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-20260814-152603-8fd9ed"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-20260814-153329-812a3f"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-r0024d0-c93a5fb4-part-01"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-r0024d0-c93a5fb4-part-02"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-r1032c0-849aa7f8-part-01"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-r1032c0-849aa7f8-part-02"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000001"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000002-part-01"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000002-part-02"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000003"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000004"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000005-part-01"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000005-part-02"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000006"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000007-part-01"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "calib-real-run-session-000007-part-02"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "esp-fake-low-battery-20260920144735"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "esp-fake-overheat-20260920144735"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "esp-fake-rpm-spike-20260920144735"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "esp-real-session_000018-20260920144735"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "esp-real-session_000024-20260920144735"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260901-0715"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260902-1032"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260902-1050"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260903-1349"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260904-1623"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260904-1810"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260905-0840"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260905-0858"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260907-1157"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260908-1431"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260908-1449"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260909-0725"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260909-1748"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260910-0922"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260911-1239"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260911-1257"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260911-1316"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260911-1335"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260912-1556"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260913-0730"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260913-0748"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260913-0807"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260913-0826"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260914-1047"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260914-1935"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260916-1321"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260917-1638"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260918-0815"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260918-0855"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260919-1129"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260919-1147"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260919-1206"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260919-1225"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260920-1446"
+    },
+    {
+      "matches_pinned_sha256": true,
+      "session_id": "ride-20260920-1504"
+    }
+  ],
+  "thresholds": {
+    "acceleration_kmh_s": 0.7,
+    "engine_persistence_s": 3.0,
+    "engine_running_rpm": 400.0,
+    "gap_interval_multiplier": 8.0,
+    "gap_min_s": 3.0,
+    "idle_region_high_rpm": 2200.0,
+    "idle_region_low_rpm": 1000.0,
+    "maximum_speed_rate_kmh_s": 35.0,
+    "minimum_segment_s": 4.0,
+    "moving_enter_kmh": 3.0,
+    "smoothing_s": 1.0,
+    "speed_trend_delta_kmh": 3.0,
+    "speed_trend_window_s": 6.0,
+    "stable_rate_c_s": 0.03,
+    "stable_spread_c": 3.0,
+    "stationary_speed_kmh": 1.0,
+    "steady_spread_kmh": 3.0,
+    "steady_window_s": 8.0,
+    "stop_go_cycles": 3,
+    "stop_go_window_s": 180.0,
+    "thermal_minimum_window_s": 20.0,
+    "thermal_persistence_s": 20.0,
+    "thermal_window_s": 60.0,
+    "tps_burst_above_baseline_raw": 25.0,
+    "tps_burst_above_baseline_v": 0.4,
+    "tps_burst_delta_raw": 20.0,
+    "tps_burst_delta_v": 0.3,
+    "tps_burst_hold_s": 0.5,
+    "tps_burst_rate_raw_s": 20.0,
+    "tps_burst_rate_v_s": 0.35,
+    "tps_event_cooldown_s": 3.0,
+    "tps_opening_window_s": 2.0,
+    "warming_delta_c": 2.0,
+    "warming_rate_c_s": 0.05
+  },
+  "verified_coverage_added_s": 0.0
+}

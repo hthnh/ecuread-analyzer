@@ -1,0 +1,5582 @@
+{
+  "detailed_content_sha256": "d108ce60d5563bacbb64f5064c690eb38d5fca54e41711b59956ac4389490972",
+  "episodes": [
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_4e17eeef3e8b83c1e1f6"
+      ],
+      "end_s": 4.377,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 0.0,
+            "ect_c": 90.0,
+            "rpm": 681.0,
+            "sample_elapsed_s": 0.0,
+            "sequence": 0,
+            "timestamp_ms": 0.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 0.0
+          },
+          {
+            "boundary_s": 4.377,
+            "ect_c": 90.0,
+            "rpm": 3923.0,
+            "sample_elapsed_s": 4.251,
+            "sequence": 17,
+            "timestamp_ms": 4251.0,
+            "tps_voltage": 1.07421875,
+            "vehicle_speed_kmh": 3.0
+          }
+        ],
+        "sample_count": 18,
+        "signals": {
+          "ect_c": {
+            "available_count": 18,
+            "end": 90.0,
+            "max": 90.0,
+            "min": 90.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 18,
+            "end": 3923.0,
+            "max": 4017.0,
+            "min": 681.0,
+            "start": 681.0
+          },
+          "tps_raw": {
+            "available_count": 18,
+            "end": 23.0,
+            "max": 27.0,
+            "min": 0.0,
+            "start": 0.0
+          },
+          "tps_voltage": {
+            "available_count": 18,
+            "end": 1.07421875,
+            "max": 1.19140625,
+            "min": 0.48828125,
+            "start": 0.48828125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 18,
+            "end": 3.0,
+            "max": 3.0,
+            "min": 0.0,
+            "start": 0.0
+          }
+        }
+      },
+      "id": "macro-e25dda76eb296a77df43a47a",
+      "label": "unknown",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_4e17eeef3e8b83c1e1f6"
+        ],
+        "end_s": 4.377,
+        "label": "unknown",
+        "start_s": 0.0
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 0.0
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_b8ef7548d1f5f56918ff",
+        "suggest_ddc68781bd894a7271ec",
+        "suggest_4e061b599b1e898eaa80",
+        "suggest_d3059929532b607a287f",
+        "suggest_8a0da34d811de2eac4e8",
+        "suggest_7b9cbebafaf48c8ec532"
+      ],
+      "end_s": 48.3765,
+      "event_ids": [
+        "suggest_ca4b0bc3460fbca73319",
+        "suggest_cf463b95562dbc6e64f7",
+        "suggest_5dc6cab6dbc3444ada0a",
+        "suggest_c012a13c8243a4e6dda2",
+        "suggest_43e16095bcc5618cd10d"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 4.377,
+            "ect_c": 90.0,
+            "rpm": 3923.0,
+            "sample_elapsed_s": 4.251,
+            "sequence": 17,
+            "timestamp_ms": 4251.0,
+            "tps_voltage": 1.07421875,
+            "vehicle_speed_kmh": 3.0
+          },
+          {
+            "boundary_s": 48.3765,
+            "ect_c": 89.0,
+            "rpm": 6550.0,
+            "sample_elapsed_s": 48.501,
+            "sequence": 194,
+            "timestamp_ms": 48501.0,
+            "tps_voltage": 1.03515625,
+            "vehicle_speed_kmh": 62.0
+          }
+        ],
+        "sample_count": 176,
+        "signals": {
+          "ect_c": {
+            "available_count": 176,
+            "end": 89.0,
+            "max": 90.0,
+            "min": 88.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 176,
+            "end": 6662.0,
+            "max": 6911.0,
+            "min": 1680.0,
+            "start": 3575.0
+          },
+          "tps_raw": {
+            "available_count": 176,
+            "end": 22.0,
+            "max": 79.0,
+            "min": 0.0,
+            "start": 0.0
+          },
+          "tps_voltage": {
+            "available_count": 176,
+            "end": 1.0546875,
+            "max": 2.48046875,
+            "min": 0.48828125,
+            "start": 0.48828125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 176,
+            "end": 61.0,
+            "max": 63.0,
+            "min": 4.0,
+            "start": 4.0
+          }
+        }
+      },
+      "id": "macro-ba7903e3ab41607325f31a06",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_b8ef7548d1f5f56918ff",
+          "suggest_ddc68781bd894a7271ec",
+          "suggest_4e061b599b1e898eaa80",
+          "suggest_d3059929532b607a287f",
+          "suggest_8a0da34d811de2eac4e8",
+          "suggest_7b9cbebafaf48c8ec532"
+        ],
+        "end_s": 48.3765,
+        "label": "moving_episode",
+        "start_s": 4.377
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 4.377
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_f9bd1581668630951f00"
+      ],
+      "end_s": 56.6265,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 48.3765,
+            "ect_c": 89.0,
+            "rpm": 6550.0,
+            "sample_elapsed_s": 48.501,
+            "sequence": 194,
+            "timestamp_ms": 48501.0,
+            "tps_voltage": 1.03515625,
+            "vehicle_speed_kmh": 62.0
+          },
+          {
+            "boundary_s": 56.6265,
+            "ect_c": 89.0,
+            "rpm": 6544.0,
+            "sample_elapsed_s": 56.503,
+            "sequence": 226,
+            "timestamp_ms": 56503.0,
+            "tps_voltage": 1.25,
+            "vehicle_speed_kmh": 60.0
+          }
+        ],
+        "sample_count": 33,
+        "signals": {
+          "ect_c": {
+            "available_count": 33,
+            "end": 89.0,
+            "max": 89.0,
+            "min": 89.0,
+            "start": 89.0
+          },
+          "rpm": {
+            "available_count": 33,
+            "end": 6544.0,
+            "max": 6554.0,
+            "min": 6401.0,
+            "start": 6550.0
+          },
+          "tps_raw": {
+            "available_count": 33,
+            "end": 30.0,
+            "max": 30.0,
+            "min": 20.0,
+            "start": 21.0
+          },
+          "tps_voltage": {
+            "available_count": 33,
+            "end": 1.25,
+            "max": 1.25,
+            "min": 1.015625,
+            "start": 1.03515625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 33,
+            "end": 60.0,
+            "max": 62.0,
+            "min": 59.0,
+            "start": 62.0
+          }
+        }
+      },
+      "id": "macro-4a3883905c2ca6dd9fdef253",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_f9bd1581668630951f00"
+        ],
+        "end_s": 56.6265,
+        "label": "moving_steady",
+        "start_s": 48.3765
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 48.3765
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_0685513e468a2b876ea5",
+        "suggest_03b9484fb3313c4fba81",
+        "suggest_5e0f2baeff07d2388cf5",
+        "suggest_cd944f50473876de3dd9",
+        "suggest_8f9422812151f3406f9e",
+        "suggest_46bacab8e0605050b545",
+        "suggest_9a404d5469d64ec30066"
+      ],
+      "end_s": 93.6265,
+      "event_ids": [
+        "suggest_ca7a0e3aeef12fd61bd0",
+        "suggest_10cc80877cb844f31672"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 56.6265,
+            "ect_c": 89.0,
+            "rpm": 6544.0,
+            "sample_elapsed_s": 56.503,
+            "sequence": 226,
+            "timestamp_ms": 56503.0,
+            "tps_voltage": 1.25,
+            "vehicle_speed_kmh": 60.0
+          },
+          {
+            "boundary_s": 93.6265,
+            "ect_c": 89.0,
+            "rpm": 6722.0,
+            "sample_elapsed_s": 93.501,
+            "sequence": 374,
+            "timestamp_ms": 93501.0,
+            "tps_voltage": 1.2109375,
+            "vehicle_speed_kmh": 63.0
+          }
+        ],
+        "sample_count": 148,
+        "signals": {
+          "ect_c": {
+            "available_count": 148,
+            "end": 89.0,
+            "max": 89.0,
+            "min": 89.0,
+            "start": 89.0
+          },
+          "rpm": {
+            "available_count": 148,
+            "end": 6722.0,
+            "max": 6818.0,
+            "min": 5247.0,
+            "start": 6604.0
+          },
+          "tps_raw": {
+            "available_count": 148,
+            "end": 28.0,
+            "max": 42.0,
+            "min": 0.0,
+            "start": 32.0
+          },
+          "tps_voltage": {
+            "available_count": 148,
+            "end": 1.2109375,
+            "max": 1.54296875,
+            "min": 0.48828125,
+            "start": 1.30859375
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 148,
+            "end": 63.0,
+            "max": 64.0,
+            "min": 45.0,
+            "start": 60.0
+          }
+        }
+      },
+      "id": "macro-76b99f5fbca286e8a9385a0f",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_0685513e468a2b876ea5",
+          "suggest_03b9484fb3313c4fba81",
+          "suggest_5e0f2baeff07d2388cf5",
+          "suggest_cd944f50473876de3dd9",
+          "suggest_8f9422812151f3406f9e",
+          "suggest_46bacab8e0605050b545",
+          "suggest_9a404d5469d64ec30066"
+        ],
+        "end_s": 93.6265,
+        "label": "moving_episode",
+        "start_s": 56.6265
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 56.6265
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_33c5f0afe74e72808135"
+      ],
+      "end_s": 105.3765,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 93.6265,
+            "ect_c": 89.0,
+            "rpm": 6722.0,
+            "sample_elapsed_s": 93.501,
+            "sequence": 374,
+            "timestamp_ms": 93501.0,
+            "tps_voltage": 1.2109375,
+            "vehicle_speed_kmh": 63.0
+          },
+          {
+            "boundary_s": 105.3765,
+            "ect_c": 90.0,
+            "rpm": 6697.0,
+            "sample_elapsed_s": 105.252,
+            "sequence": 421,
+            "timestamp_ms": 105252.0,
+            "tps_voltage": 1.23046875,
+            "vehicle_speed_kmh": 64.0
+          }
+        ],
+        "sample_count": 47,
+        "signals": {
+          "ect_c": {
+            "available_count": 47,
+            "end": 90.0,
+            "max": 90.0,
+            "min": 89.0,
+            "start": 89.0
+          },
+          "rpm": {
+            "available_count": 47,
+            "end": 6697.0,
+            "max": 6832.0,
+            "min": 6590.0,
+            "start": 6750.0
+          },
+          "tps_raw": {
+            "available_count": 47,
+            "end": 29.0,
+            "max": 32.0,
+            "min": 17.0,
+            "start": 29.0
+          },
+          "tps_voltage": {
+            "available_count": 47,
+            "end": 1.23046875,
+            "max": 1.30859375,
+            "min": 0.9375,
+            "start": 1.23046875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 47,
+            "end": 64.0,
+            "max": 66.0,
+            "min": 63.0,
+            "start": 64.0
+          }
+        }
+      },
+      "id": "macro-51993c4b391d431d7b7aba46",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_33c5f0afe74e72808135"
+        ],
+        "end_s": 105.3765,
+        "label": "moving_steady",
+        "start_s": 93.6265
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 93.6265
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_39c1bc469ed6d0e4e739",
+        "suggest_3687bb03439640a75d14",
+        "suggest_a439b2bc9885abe2c20b"
+      ],
+      "end_s": 120.877,
+      "event_ids": [
+        "suggest_078469fbc239b4a03bce",
+        "suggest_21152f0fe5cb4579be8a"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 105.3765,
+            "ect_c": 90.0,
+            "rpm": 6697.0,
+            "sample_elapsed_s": 105.252,
+            "sequence": 421,
+            "timestamp_ms": 105252.0,
+            "tps_voltage": 1.23046875,
+            "vehicle_speed_kmh": 64.0
+          },
+          {
+            "boundary_s": 120.877,
+            "ect_c": 90.0,
+            "rpm": 6601.0,
+            "sample_elapsed_s": 121.002,
+            "sequence": 484,
+            "timestamp_ms": 121002.0,
+            "tps_voltage": 1.07421875,
+            "vehicle_speed_kmh": 65.0
+          }
+        ],
+        "sample_count": 62,
+        "signals": {
+          "ect_c": {
+            "available_count": 62,
+            "end": 90.0,
+            "max": 90.0,
+            "min": 90.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 62,
+            "end": 6576.0,
+            "max": 6930.0,
+            "min": 5953.0,
+            "start": 6710.0
+          },
+          "tps_raw": {
+            "available_count": 62,
+            "end": 22.0,
+            "max": 45.0,
+            "min": 6.0,
+            "start": 26.0
+          },
+          "tps_voltage": {
+            "available_count": 62,
+            "end": 1.07421875,
+            "max": 1.640625,
+            "min": 0.6640625,
+            "start": 1.171875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 62,
+            "end": 65.0,
+            "max": 67.0,
+            "min": 59.0,
+            "start": 64.0
+          }
+        }
+      },
+      "id": "macro-26e218850363d672ca94093a",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_39c1bc469ed6d0e4e739",
+          "suggest_3687bb03439640a75d14",
+          "suggest_a439b2bc9885abe2c20b"
+        ],
+        "end_s": 120.877,
+        "label": "moving_episode",
+        "start_s": 105.3765
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 105.3765
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_dd48343136d5e747ffdd"
+      ],
+      "end_s": 131.877,
+      "event_ids": [
+        "suggest_21152f0fe5cb4579be8a"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 120.877,
+            "ect_c": 90.0,
+            "rpm": 6601.0,
+            "sample_elapsed_s": 121.002,
+            "sequence": 484,
+            "timestamp_ms": 121002.0,
+            "tps_voltage": 1.07421875,
+            "vehicle_speed_kmh": 65.0
+          },
+          {
+            "boundary_s": 131.877,
+            "ect_c": 90.0,
+            "rpm": 6731.0,
+            "sample_elapsed_s": 131.753,
+            "sequence": 527,
+            "timestamp_ms": 131753.0,
+            "tps_voltage": 1.2890625,
+            "vehicle_speed_kmh": 63.0
+          }
+        ],
+        "sample_count": 44,
+        "signals": {
+          "ect_c": {
+            "available_count": 44,
+            "end": 90.0,
+            "max": 90.0,
+            "min": 90.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 44,
+            "end": 6731.0,
+            "max": 6731.0,
+            "min": 6573.0,
+            "start": 6601.0
+          },
+          "tps_raw": {
+            "available_count": 44,
+            "end": 31.0,
+            "max": 32.0,
+            "min": 22.0,
+            "start": 23.0
+          },
+          "tps_voltage": {
+            "available_count": 44,
+            "end": 1.2890625,
+            "max": 1.30859375,
+            "min": 1.0546875,
+            "start": 1.07421875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 44,
+            "end": 63.0,
+            "max": 65.0,
+            "min": 62.0,
+            "start": 65.0
+          }
+        }
+      },
+      "id": "macro-ed51ed3da9f368f778d05f82",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_dd48343136d5e747ffdd"
+        ],
+        "end_s": 131.877,
+        "label": "moving_steady",
+        "start_s": 120.877
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 120.877
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_ea2828ea2c67d963d180",
+        "suggest_4e2f592d4f290d51da26",
+        "suggest_a2bd6d89b542d8c61528",
+        "suggest_35e4916924923d9fcaa5",
+        "suggest_2fcf6262a7d0b72243b2"
+      ],
+      "end_s": 159.127,
+      "event_ids": [
+        "suggest_d6b63bbfdedc38d39725"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 131.877,
+            "ect_c": 90.0,
+            "rpm": 6731.0,
+            "sample_elapsed_s": 131.753,
+            "sequence": 527,
+            "timestamp_ms": 131753.0,
+            "tps_voltage": 1.2890625,
+            "vehicle_speed_kmh": 63.0
+          },
+          {
+            "boundary_s": 159.127,
+            "ect_c": 90.0,
+            "rpm": 6800.0,
+            "sample_elapsed_s": 159.251,
+            "sequence": 636,
+            "timestamp_ms": 159251.0,
+            "tps_voltage": 1.38671875,
+            "vehicle_speed_kmh": 62.0
+          }
+        ],
+        "sample_count": 108,
+        "signals": {
+          "ect_c": {
+            "available_count": 108,
+            "end": 90.0,
+            "max": 90.0,
+            "min": 89.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 108,
+            "end": 6813.0,
+            "max": 6813.0,
+            "min": 4738.0,
+            "start": 6735.0
+          },
+          "tps_raw": {
+            "available_count": 108,
+            "end": 39.0,
+            "max": 58.0,
+            "min": 0.0,
+            "start": 31.0
+          },
+          "tps_voltage": {
+            "available_count": 108,
+            "end": 1.46484375,
+            "max": 1.953125,
+            "min": 0.48828125,
+            "start": 1.26953125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 108,
+            "end": 62.0,
+            "max": 64.0,
+            "min": 40.0,
+            "start": 64.0
+          }
+        }
+      },
+      "id": "macro-dd93d30f49147d455d27206b",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_ea2828ea2c67d963d180",
+          "suggest_4e2f592d4f290d51da26",
+          "suggest_a2bd6d89b542d8c61528",
+          "suggest_35e4916924923d9fcaa5",
+          "suggest_2fcf6262a7d0b72243b2"
+        ],
+        "end_s": 159.127,
+        "label": "moving_episode",
+        "start_s": 131.877
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 131.877
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_aeda192eee26950c2859"
+      ],
+      "end_s": 172.126,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 159.127,
+            "ect_c": 90.0,
+            "rpm": 6800.0,
+            "sample_elapsed_s": 159.251,
+            "sequence": 636,
+            "timestamp_ms": 159251.0,
+            "tps_voltage": 1.38671875,
+            "vehicle_speed_kmh": 62.0
+          },
+          {
+            "boundary_s": 172.126,
+            "ect_c": 90.0,
+            "rpm": 6641.0,
+            "sample_elapsed_s": 172.251,
+            "sequence": 688,
+            "timestamp_ms": 172251.0,
+            "tps_voltage": 1.2109375,
+            "vehicle_speed_kmh": 61.0
+          }
+        ],
+        "sample_count": 52,
+        "signals": {
+          "ect_c": {
+            "available_count": 52,
+            "end": 90.0,
+            "max": 90.0,
+            "min": 90.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 52,
+            "end": 6653.0,
+            "max": 6800.0,
+            "min": 6653.0,
+            "start": 6800.0
+          },
+          "tps_raw": {
+            "available_count": 52,
+            "end": 28.0,
+            "max": 36.0,
+            "min": 28.0,
+            "start": 35.0
+          },
+          "tps_voltage": {
+            "available_count": 52,
+            "end": 1.2109375,
+            "max": 1.40625,
+            "min": 1.2109375,
+            "start": 1.38671875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 52,
+            "end": 62.0,
+            "max": 63.0,
+            "min": 61.0,
+            "start": 62.0
+          }
+        }
+      },
+      "id": "macro-0774f4da6cee63f5ab8440c2",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_aeda192eee26950c2859"
+        ],
+        "end_s": 172.126,
+        "label": "moving_steady",
+        "start_s": 159.127
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 159.127
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_b0c6bbf534dcfc370e9a"
+      ],
+      "end_s": 176.127,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 172.126,
+            "ect_c": 90.0,
+            "rpm": 6641.0,
+            "sample_elapsed_s": 172.251,
+            "sequence": 688,
+            "timestamp_ms": 172251.0,
+            "tps_voltage": 1.2109375,
+            "vehicle_speed_kmh": 61.0
+          },
+          {
+            "boundary_s": 176.127,
+            "ect_c": 90.0,
+            "rpm": 6377.0,
+            "sample_elapsed_s": 176.252,
+            "sequence": 704,
+            "timestamp_ms": 176252.0,
+            "tps_voltage": 1.1328125,
+            "vehicle_speed_kmh": 58.0
+          }
+        ],
+        "sample_count": 16,
+        "signals": {
+          "ect_c": {
+            "available_count": 16,
+            "end": 90.0,
+            "max": 90.0,
+            "min": 90.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 16,
+            "end": 6407.0,
+            "max": 6641.0,
+            "min": 6402.0,
+            "start": 6641.0
+          },
+          "tps_raw": {
+            "available_count": 16,
+            "end": 25.0,
+            "max": 28.0,
+            "min": 22.0,
+            "start": 28.0
+          },
+          "tps_voltage": {
+            "available_count": 16,
+            "end": 1.1328125,
+            "max": 1.2109375,
+            "min": 1.0546875,
+            "start": 1.2109375
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 16,
+            "end": 58.0,
+            "max": 61.0,
+            "min": 58.0,
+            "start": 61.0
+          }
+        }
+      },
+      "id": "macro-41df9c849df76fd304d208bb",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_b0c6bbf534dcfc370e9a"
+        ],
+        "end_s": 176.127,
+        "label": "moving_episode",
+        "start_s": 172.126
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 172.126
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_0f417880b0b282f523f5"
+      ],
+      "end_s": 184.1265,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 176.127,
+            "ect_c": 90.0,
+            "rpm": 6377.0,
+            "sample_elapsed_s": 176.252,
+            "sequence": 704,
+            "timestamp_ms": 176252.0,
+            "tps_voltage": 1.1328125,
+            "vehicle_speed_kmh": 58.0
+          },
+          {
+            "boundary_s": 184.1265,
+            "ect_c": 92.0,
+            "rpm": 6656.0,
+            "sample_elapsed_s": 184.002,
+            "sequence": 735,
+            "timestamp_ms": 184002.0,
+            "tps_voltage": 1.3671875,
+            "vehicle_speed_kmh": 59.0
+          }
+        ],
+        "sample_count": 32,
+        "signals": {
+          "ect_c": {
+            "available_count": 32,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 90.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 32,
+            "end": 6656.0,
+            "max": 6656.0,
+            "min": 6374.0,
+            "start": 6377.0
+          },
+          "tps_raw": {
+            "available_count": 32,
+            "end": 34.0,
+            "max": 37.0,
+            "min": 25.0,
+            "start": 25.0
+          },
+          "tps_voltage": {
+            "available_count": 32,
+            "end": 1.3671875,
+            "max": 1.42578125,
+            "min": 1.1328125,
+            "start": 1.1328125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 32,
+            "end": 59.0,
+            "max": 60.0,
+            "min": 57.0,
+            "start": 58.0
+          }
+        }
+      },
+      "id": "macro-529c8030a167c1e74a565681",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_0f417880b0b282f523f5"
+        ],
+        "end_s": 184.1265,
+        "label": "moving_steady",
+        "start_s": 176.127
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 176.127
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_f615ca037369edf215f3",
+        "suggest_e28326425239540f2219",
+        "suggest_aceb4f15106d07146fe6",
+        "suggest_3a407ca7b3c242765cf1",
+        "suggest_44aeeaf2d2ebf83b6ffd",
+        "suggest_fdb7884f5fd8502d3330",
+        "suggest_57c7fef414d0180ae1c5",
+        "suggest_36fca5402378bff1086f",
+        "suggest_66ca1e6ea3fe5166236b"
+      ],
+      "end_s": 233.628,
+      "event_ids": [
+        "suggest_90cf9105ef45204999e2",
+        "suggest_bbb9b69f1b525752cad6",
+        "suggest_431384afb3f3da90e595",
+        "suggest_56a5f27472bff25e8ac0",
+        "suggest_f24619e2b5944b86d9c9"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 184.1265,
+            "ect_c": 92.0,
+            "rpm": 6656.0,
+            "sample_elapsed_s": 184.002,
+            "sequence": 735,
+            "timestamp_ms": 184002.0,
+            "tps_voltage": 1.3671875,
+            "vehicle_speed_kmh": 59.0
+          },
+          {
+            "boundary_s": 233.628,
+            "ect_c": 92.0,
+            "rpm": 6581.0,
+            "sample_elapsed_s": 233.751,
+            "sequence": 934,
+            "timestamp_ms": 233751.0,
+            "tps_voltage": 1.23046875,
+            "vehicle_speed_kmh": 61.0
+          }
+        ],
+        "sample_count": 198,
+        "signals": {
+          "ect_c": {
+            "available_count": 198,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 90.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 198,
+            "end": 6577.0,
+            "max": 6949.0,
+            "min": 4356.0,
+            "start": 6655.0
+          },
+          "tps_raw": {
+            "available_count": 198,
+            "end": 26.0,
+            "max": 73.0,
+            "min": 0.0,
+            "start": 34.0
+          },
+          "tps_voltage": {
+            "available_count": 198,
+            "end": 1.15234375,
+            "max": 2.34375,
+            "min": 0.48828125,
+            "start": 1.34765625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 198,
+            "end": 61.0,
+            "max": 62.0,
+            "min": 36.0,
+            "start": 60.0
+          }
+        }
+      },
+      "id": "macro-081715cd1377908c1ecd7075",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_f615ca037369edf215f3",
+          "suggest_e28326425239540f2219",
+          "suggest_aceb4f15106d07146fe6",
+          "suggest_3a407ca7b3c242765cf1",
+          "suggest_44aeeaf2d2ebf83b6ffd",
+          "suggest_fdb7884f5fd8502d3330",
+          "suggest_57c7fef414d0180ae1c5",
+          "suggest_36fca5402378bff1086f",
+          "suggest_66ca1e6ea3fe5166236b"
+        ],
+        "end_s": 233.628,
+        "label": "moving_episode",
+        "start_s": 184.1265
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 184.1265
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_53a459f8944d72c71798"
+      ],
+      "end_s": 252.126,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 233.628,
+            "ect_c": 92.0,
+            "rpm": 6581.0,
+            "sample_elapsed_s": 233.751,
+            "sequence": 934,
+            "timestamp_ms": 233751.0,
+            "tps_voltage": 1.23046875,
+            "vehicle_speed_kmh": 61.0
+          },
+          {
+            "boundary_s": 252.126,
+            "ect_c": 92.0,
+            "rpm": 6582.0,
+            "sample_elapsed_s": 252.003,
+            "sequence": 1007,
+            "timestamp_ms": 252003.0,
+            "tps_voltage": 1.25,
+            "vehicle_speed_kmh": 60.0
+          }
+        ],
+        "sample_count": 74,
+        "signals": {
+          "ect_c": {
+            "available_count": 74,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 74,
+            "end": 6582.0,
+            "max": 6670.0,
+            "min": 6498.0,
+            "start": 6581.0
+          },
+          "tps_raw": {
+            "available_count": 74,
+            "end": 30.0,
+            "max": 31.0,
+            "min": 22.0,
+            "start": 29.0
+          },
+          "tps_voltage": {
+            "available_count": 74,
+            "end": 1.25,
+            "max": 1.2890625,
+            "min": 1.0546875,
+            "start": 1.23046875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 74,
+            "end": 60.0,
+            "max": 62.0,
+            "min": 60.0,
+            "start": 61.0
+          }
+        }
+      },
+      "id": "macro-86d0f49439d9628ef5733907",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_53a459f8944d72c71798"
+        ],
+        "end_s": 252.126,
+        "label": "moving_steady",
+        "start_s": 233.628
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 233.628
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_46b8f5bc1f01ac3f2002",
+        "suggest_9f9fda369ded74c76706",
+        "suggest_a9dbb1d0a72f614fc70b"
+      ],
+      "end_s": 272.127,
+      "event_ids": [
+        "suggest_5bf65ca004199850dc3b"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 252.126,
+            "ect_c": 92.0,
+            "rpm": 6582.0,
+            "sample_elapsed_s": 252.003,
+            "sequence": 1007,
+            "timestamp_ms": 252003.0,
+            "tps_voltage": 1.25,
+            "vehicle_speed_kmh": 60.0
+          },
+          {
+            "boundary_s": 272.127,
+            "ect_c": 92.0,
+            "rpm": 6852.0,
+            "sample_elapsed_s": 272.252,
+            "sequence": 1088,
+            "timestamp_ms": 272252.0,
+            "tps_voltage": 1.5234375,
+            "vehicle_speed_kmh": 63.0
+          }
+        ],
+        "sample_count": 80,
+        "signals": {
+          "ect_c": {
+            "available_count": 80,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 80,
+            "end": 6857.0,
+            "max": 6860.0,
+            "min": 5476.0,
+            "start": 6575.0
+          },
+          "tps_raw": {
+            "available_count": 80,
+            "end": 43.0,
+            "max": 48.0,
+            "min": 0.0,
+            "start": 29.0
+          },
+          "tps_voltage": {
+            "available_count": 80,
+            "end": 1.58203125,
+            "max": 1.69921875,
+            "min": 0.48828125,
+            "start": 1.25
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 80,
+            "end": 63.0,
+            "max": 63.0,
+            "min": 50.0,
+            "start": 60.0
+          }
+        }
+      },
+      "id": "macro-831be5c674f72dfc349c3a97",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_46b8f5bc1f01ac3f2002",
+          "suggest_9f9fda369ded74c76706",
+          "suggest_a9dbb1d0a72f614fc70b"
+        ],
+        "end_s": 272.127,
+        "label": "moving_episode",
+        "start_s": 252.126
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 252.126
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_e336d413f37288d8a433"
+      ],
+      "end_s": 277.1265,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 272.127,
+            "ect_c": 92.0,
+            "rpm": 6852.0,
+            "sample_elapsed_s": 272.252,
+            "sequence": 1088,
+            "timestamp_ms": 272252.0,
+            "tps_voltage": 1.5234375,
+            "vehicle_speed_kmh": 63.0
+          },
+          {
+            "boundary_s": 277.1265,
+            "ect_c": 92.0,
+            "rpm": 6880.0,
+            "sample_elapsed_s": 277.252,
+            "sequence": 1108,
+            "timestamp_ms": 277252.0,
+            "tps_voltage": 1.5234375,
+            "vehicle_speed_kmh": 63.0
+          }
+        ],
+        "sample_count": 20,
+        "signals": {
+          "ect_c": {
+            "available_count": 20,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 20,
+            "end": 6862.0,
+            "max": 6862.0,
+            "min": 6639.0,
+            "start": 6852.0
+          },
+          "tps_raw": {
+            "available_count": 20,
+            "end": 40.0,
+            "max": 41.0,
+            "min": 25.0,
+            "start": 41.0
+          },
+          "tps_voltage": {
+            "available_count": 20,
+            "end": 1.50390625,
+            "max": 1.5234375,
+            "min": 1.1328125,
+            "start": 1.5234375
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 20,
+            "end": 64.0,
+            "max": 64.0,
+            "min": 62.0,
+            "start": 63.0
+          }
+        }
+      },
+      "id": "macro-0a946560eefeb49bf8ef3111",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_e336d413f37288d8a433"
+        ],
+        "end_s": 277.1265,
+        "label": "moving_steady",
+        "start_s": 272.127
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 272.127
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_6647287b7c940124765d"
+      ],
+      "end_s": 283.3775,
+      "event_ids": [
+        "suggest_c78cfc3d4bdf0ed1eee5"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 277.1265,
+            "ect_c": 92.0,
+            "rpm": 6880.0,
+            "sample_elapsed_s": 277.252,
+            "sequence": 1108,
+            "timestamp_ms": 277252.0,
+            "tps_voltage": 1.5234375,
+            "vehicle_speed_kmh": 63.0
+          },
+          {
+            "boundary_s": 283.3775,
+            "ect_c": 92.0,
+            "rpm": 6475.0,
+            "sample_elapsed_s": 283.502,
+            "sequence": 1133,
+            "timestamp_ms": 283502.0,
+            "tps_voltage": 1.11328125,
+            "vehicle_speed_kmh": 60.0
+          }
+        ],
+        "sample_count": 25,
+        "signals": {
+          "ect_c": {
+            "available_count": 25,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 25,
+            "end": 6462.0,
+            "max": 6898.0,
+            "min": 6002.0,
+            "start": 6880.0
+          },
+          "tps_raw": {
+            "available_count": 25,
+            "end": 24.0,
+            "max": 41.0,
+            "min": 7.0,
+            "start": 40.0
+          },
+          "tps_voltage": {
+            "available_count": 25,
+            "end": 1.11328125,
+            "max": 1.5234375,
+            "min": 0.68359375,
+            "start": 1.5234375
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 25,
+            "end": 59.0,
+            "max": 65.0,
+            "min": 59.0,
+            "start": 63.0
+          }
+        }
+      },
+      "id": "macro-c5107947fac1afb66b927dfc",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_6647287b7c940124765d"
+        ],
+        "end_s": 283.3775,
+        "label": "moving_episode",
+        "start_s": 277.1265
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 277.1265
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_94f19ee206ba25b4517a"
+      ],
+      "end_s": 293.628,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 283.3775,
+            "ect_c": 92.0,
+            "rpm": 6475.0,
+            "sample_elapsed_s": 283.502,
+            "sequence": 1133,
+            "timestamp_ms": 283502.0,
+            "tps_voltage": 1.11328125,
+            "vehicle_speed_kmh": 60.0
+          },
+          {
+            "boundary_s": 293.628,
+            "ect_c": 92.0,
+            "rpm": 6358.0,
+            "sample_elapsed_s": 293.504,
+            "sequence": 1173,
+            "timestamp_ms": 293504.0,
+            "tps_voltage": 0.95703125,
+            "vehicle_speed_kmh": 59.0
+          }
+        ],
+        "sample_count": 41,
+        "signals": {
+          "ect_c": {
+            "available_count": 41,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 41,
+            "end": 6358.0,
+            "max": 6598.0,
+            "min": 6288.0,
+            "start": 6475.0
+          },
+          "tps_raw": {
+            "available_count": 41,
+            "end": 18.0,
+            "max": 33.0,
+            "min": 15.0,
+            "start": 24.0
+          },
+          "tps_voltage": {
+            "available_count": 41,
+            "end": 0.95703125,
+            "max": 1.34765625,
+            "min": 0.87890625,
+            "start": 1.11328125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 41,
+            "end": 59.0,
+            "max": 60.0,
+            "min": 57.0,
+            "start": 60.0
+          }
+        }
+      },
+      "id": "macro-74eea4ffe6a77fd1a4162560",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_94f19ee206ba25b4517a"
+        ],
+        "end_s": 293.628,
+        "label": "moving_steady",
+        "start_s": 283.3775
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 283.3775
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_a3b38ca8923e71c510f6"
+      ],
+      "end_s": 305.627,
+      "event_ids": [
+        "suggest_a408e654d23e2996b0bf"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 293.628,
+            "ect_c": 92.0,
+            "rpm": 6358.0,
+            "sample_elapsed_s": 293.504,
+            "sequence": 1173,
+            "timestamp_ms": 293504.0,
+            "tps_voltage": 0.95703125,
+            "vehicle_speed_kmh": 59.0
+          },
+          {
+            "boundary_s": 305.627,
+            "ect_c": 92.0,
+            "rpm": 6471.0,
+            "sample_elapsed_s": 305.753,
+            "sequence": 1222,
+            "timestamp_ms": 305753.0,
+            "tps_voltage": 1.3671875,
+            "vehicle_speed_kmh": 57.0
+          }
+        ],
+        "sample_count": 48,
+        "signals": {
+          "ect_c": {
+            "available_count": 48,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 48,
+            "end": 6430.0,
+            "max": 6439.0,
+            "min": 5580.0,
+            "start": 6334.0
+          },
+          "tps_raw": {
+            "available_count": 48,
+            "end": 34.0,
+            "max": 34.0,
+            "min": 0.0,
+            "start": 18.0
+          },
+          "tps_voltage": {
+            "available_count": 48,
+            "end": 1.34765625,
+            "max": 1.34765625,
+            "min": 0.5078125,
+            "start": 0.95703125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 48,
+            "end": 57.0,
+            "max": 59.0,
+            "min": 53.0,
+            "start": 58.0
+          }
+        }
+      },
+      "id": "macro-d105958a25362c058ec4e0e7",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_a3b38ca8923e71c510f6"
+        ],
+        "end_s": 305.627,
+        "label": "moving_episode",
+        "start_s": 293.628
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 293.628
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_723a28447a2a3e3f407b"
+      ],
+      "end_s": 338.6265,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 305.627,
+            "ect_c": 92.0,
+            "rpm": 6471.0,
+            "sample_elapsed_s": 305.753,
+            "sequence": 1222,
+            "timestamp_ms": 305753.0,
+            "tps_voltage": 1.3671875,
+            "vehicle_speed_kmh": 57.0
+          },
+          {
+            "boundary_s": 338.6265,
+            "ect_c": 92.0,
+            "rpm": 6525.0,
+            "sample_elapsed_s": 338.503,
+            "sequence": 1353,
+            "timestamp_ms": 338503.0,
+            "tps_voltage": 1.15234375,
+            "vehicle_speed_kmh": 60.0
+          }
+        ],
+        "sample_count": 132,
+        "signals": {
+          "ect_c": {
+            "available_count": 132,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 132,
+            "end": 6525.0,
+            "max": 6657.0,
+            "min": 6401.0,
+            "start": 6471.0
+          },
+          "tps_raw": {
+            "available_count": 132,
+            "end": 26.0,
+            "max": 35.0,
+            "min": 17.0,
+            "start": 34.0
+          },
+          "tps_voltage": {
+            "available_count": 132,
+            "end": 1.15234375,
+            "max": 1.3671875,
+            "min": 0.9375,
+            "start": 1.3671875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 132,
+            "end": 60.0,
+            "max": 61.0,
+            "min": 57.0,
+            "start": 57.0
+          }
+        }
+      },
+      "id": "macro-edfe3e0dd524d4ff4e0e9fb5",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_723a28447a2a3e3f407b"
+        ],
+        "end_s": 338.6265,
+        "label": "moving_steady",
+        "start_s": 305.627
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 305.627
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_f3b1ae90273330a19294",
+        "suggest_d379af213e6bf0dec862",
+        "suggest_8881d2badd624afbc806",
+        "suggest_05ae148982bb04876d0f",
+        "suggest_4e7fa6c953773f132670",
+        "suggest_9494c61fd80727b21fef",
+        "suggest_6b588ef1645a6957efee"
+      ],
+      "end_s": 383.127,
+      "event_ids": [
+        "suggest_5b2f2d5c1cdbadf136fa",
+        "suggest_843b0a32d2e52ba308fe"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 338.6265,
+            "ect_c": 92.0,
+            "rpm": 6525.0,
+            "sample_elapsed_s": 338.503,
+            "sequence": 1353,
+            "timestamp_ms": 338503.0,
+            "tps_voltage": 1.15234375,
+            "vehicle_speed_kmh": 60.0
+          },
+          {
+            "boundary_s": 383.127,
+            "ect_c": 93.0,
+            "rpm": 6870.0,
+            "sample_elapsed_s": 383.252,
+            "sequence": 1532,
+            "timestamp_ms": 383252.0,
+            "tps_voltage": 1.46484375,
+            "vehicle_speed_kmh": 64.0
+          }
+        ],
+        "sample_count": 178,
+        "signals": {
+          "ect_c": {
+            "available_count": 178,
+            "end": 93.0,
+            "max": 93.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 178,
+            "end": 6862.0,
+            "max": 6866.0,
+            "min": 1629.0,
+            "start": 6498.0
+          },
+          "tps_raw": {
+            "available_count": 178,
+            "end": 38.0,
+            "max": 58.0,
+            "min": 0.0,
+            "start": 23.0
+          },
+          "tps_voltage": {
+            "available_count": 178,
+            "end": 1.46484375,
+            "max": 1.97265625,
+            "min": 0.48828125,
+            "start": 1.07421875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 178,
+            "end": 63.0,
+            "max": 63.0,
+            "min": 3.0,
+            "start": 60.0
+          }
+        }
+      },
+      "id": "macro-010450ec6e6f74243cbd4c27",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_f3b1ae90273330a19294",
+          "suggest_d379af213e6bf0dec862",
+          "suggest_8881d2badd624afbc806",
+          "suggest_05ae148982bb04876d0f",
+          "suggest_4e7fa6c953773f132670",
+          "suggest_9494c61fd80727b21fef",
+          "suggest_6b588ef1645a6957efee"
+        ],
+        "end_s": 383.127,
+        "label": "moving_episode",
+        "start_s": 338.6265
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 338.6265
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_f3c619fd94b914ad6319"
+      ],
+      "end_s": 412.377,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 383.127,
+            "ect_c": 93.0,
+            "rpm": 6870.0,
+            "sample_elapsed_s": 383.252,
+            "sequence": 1532,
+            "timestamp_ms": 383252.0,
+            "tps_voltage": 1.46484375,
+            "vehicle_speed_kmh": 64.0
+          },
+          {
+            "boundary_s": 412.377,
+            "ect_c": 93.0,
+            "rpm": 6724.0,
+            "sample_elapsed_s": 412.253,
+            "sequence": 1648,
+            "timestamp_ms": 412253.0,
+            "tps_voltage": 1.3671875,
+            "vehicle_speed_kmh": 61.0
+          }
+        ],
+        "sample_count": 117,
+        "signals": {
+          "ect_c": {
+            "available_count": 117,
+            "end": 93.0,
+            "max": 93.0,
+            "min": 93.0,
+            "start": 93.0
+          },
+          "rpm": {
+            "available_count": 117,
+            "end": 6724.0,
+            "max": 6887.0,
+            "min": 6631.0,
+            "start": 6870.0
+          },
+          "tps_raw": {
+            "available_count": 117,
+            "end": 34.0,
+            "max": 39.0,
+            "min": 25.0,
+            "start": 38.0
+          },
+          "tps_voltage": {
+            "available_count": 117,
+            "end": 1.3671875,
+            "max": 1.46484375,
+            "min": 1.1328125,
+            "start": 1.46484375
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 117,
+            "end": 61.0,
+            "max": 65.0,
+            "min": 61.0,
+            "start": 64.0
+          }
+        }
+      },
+      "id": "macro-22649f469b052d7d0f41d5cc",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_f3c619fd94b914ad6319"
+        ],
+        "end_s": 412.377,
+        "label": "moving_steady",
+        "start_s": 383.127
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 383.127
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_567e5032693368146397"
+      ],
+      "end_s": 416.377,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 412.377,
+            "ect_c": 93.0,
+            "rpm": 6724.0,
+            "sample_elapsed_s": 412.253,
+            "sequence": 1648,
+            "timestamp_ms": 412253.0,
+            "tps_voltage": 1.3671875,
+            "vehicle_speed_kmh": 61.0
+          },
+          {
+            "boundary_s": 416.377,
+            "ect_c": 93.0,
+            "rpm": 6447.0,
+            "sample_elapsed_s": 416.503,
+            "sequence": 1665,
+            "timestamp_ms": 416503.0,
+            "tps_voltage": 1.171875,
+            "vehicle_speed_kmh": 59.0
+          }
+        ],
+        "sample_count": 16,
+        "signals": {
+          "ect_c": {
+            "available_count": 16,
+            "end": 93.0,
+            "max": 93.0,
+            "min": 93.0,
+            "start": 93.0
+          },
+          "rpm": {
+            "available_count": 16,
+            "end": 6460.0,
+            "max": 6700.0,
+            "min": 6448.0,
+            "start": 6700.0
+          },
+          "tps_raw": {
+            "available_count": 16,
+            "end": 25.0,
+            "max": 32.0,
+            "min": 19.0,
+            "start": 32.0
+          },
+          "tps_voltage": {
+            "available_count": 16,
+            "end": 1.1328125,
+            "max": 1.30859375,
+            "min": 0.99609375,
+            "start": 1.30859375
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 16,
+            "end": 59.0,
+            "max": 62.0,
+            "min": 59.0,
+            "start": 62.0
+          }
+        }
+      },
+      "id": "macro-174bf9a6fe1d1a7c1f02ecb9",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_567e5032693368146397"
+        ],
+        "end_s": 416.377,
+        "label": "moving_episode",
+        "start_s": 412.377
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 412.377
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_d90ab872eede4e1c24b5"
+      ],
+      "end_s": 421.8765,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 416.377,
+            "ect_c": 93.0,
+            "rpm": 6447.0,
+            "sample_elapsed_s": 416.503,
+            "sequence": 1665,
+            "timestamp_ms": 416503.0,
+            "tps_voltage": 1.171875,
+            "vehicle_speed_kmh": 59.0
+          },
+          {
+            "boundary_s": 421.8765,
+            "ect_c": 93.0,
+            "rpm": 6470.0,
+            "sample_elapsed_s": 421.752,
+            "sequence": 1686,
+            "timestamp_ms": 421752.0,
+            "tps_voltage": 1.19140625,
+            "vehicle_speed_kmh": 58.0
+          }
+        ],
+        "sample_count": 22,
+        "signals": {
+          "ect_c": {
+            "available_count": 22,
+            "end": 93.0,
+            "max": 93.0,
+            "min": 93.0,
+            "start": 93.0
+          },
+          "rpm": {
+            "available_count": 22,
+            "end": 6470.0,
+            "max": 6480.0,
+            "min": 6383.0,
+            "start": 6447.0
+          },
+          "tps_raw": {
+            "available_count": 22,
+            "end": 28.0,
+            "max": 28.0,
+            "min": 21.0,
+            "start": 26.0
+          },
+          "tps_voltage": {
+            "available_count": 22,
+            "end": 1.19140625,
+            "max": 1.19140625,
+            "min": 1.015625,
+            "start": 1.171875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 22,
+            "end": 58.0,
+            "max": 59.0,
+            "min": 58.0,
+            "start": 59.0
+          }
+        }
+      },
+      "id": "macro-be5d345cfa85e5a2da162796",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_d90ab872eede4e1c24b5"
+        ],
+        "end_s": 421.8765,
+        "label": "moving_steady",
+        "start_s": 416.377
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 416.377
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_21b4cd51e8cd4e20ef4c",
+        "suggest_ef5362255c0f10e00faf",
+        "suggest_99990f7e679e95f4dc75",
+        "suggest_b12d24d56c66951e6592",
+        "suggest_4a810e4620621611133f"
+      ],
+      "end_s": 453.3775,
+      "event_ids": [
+        "suggest_0c60f5db673cb2787b3e"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 421.8765,
+            "ect_c": 93.0,
+            "rpm": 6470.0,
+            "sample_elapsed_s": 421.752,
+            "sequence": 1686,
+            "timestamp_ms": 421752.0,
+            "tps_voltage": 1.19140625,
+            "vehicle_speed_kmh": 58.0
+          },
+          {
+            "boundary_s": 453.3775,
+            "ect_c": 93.0,
+            "rpm": 6381.0,
+            "sample_elapsed_s": 453.501,
+            "sequence": 1813,
+            "timestamp_ms": 453501.0,
+            "tps_voltage": 1.1328125,
+            "vehicle_speed_kmh": 58.0
+          }
+        ],
+        "sample_count": 126,
+        "signals": {
+          "ect_c": {
+            "available_count": 126,
+            "end": 93.0,
+            "max": 93.0,
+            "min": 93.0,
+            "start": 93.0
+          },
+          "rpm": {
+            "available_count": 126,
+            "end": 6392.0,
+            "max": 6716.0,
+            "min": 2985.0,
+            "start": 6494.0
+          },
+          "tps_raw": {
+            "available_count": 126,
+            "end": 25.0,
+            "max": 55.0,
+            "min": 1.0,
+            "start": 28.0
+          },
+          "tps_voltage": {
+            "available_count": 126,
+            "end": 1.1328125,
+            "max": 1.875,
+            "min": 0.52734375,
+            "start": 1.19140625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 126,
+            "end": 58.0,
+            "max": 60.0,
+            "min": 17.0,
+            "start": 59.0
+          }
+        }
+      },
+      "id": "macro-4eca81c78a455f292e933381",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_21b4cd51e8cd4e20ef4c",
+          "suggest_ef5362255c0f10e00faf",
+          "suggest_99990f7e679e95f4dc75",
+          "suggest_b12d24d56c66951e6592",
+          "suggest_4a810e4620621611133f"
+        ],
+        "end_s": 453.3775,
+        "label": "moving_episode",
+        "start_s": 421.8765
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 421.8765
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_f9b13909a034578c1503"
+      ],
+      "end_s": 469.377,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 453.3775,
+            "ect_c": 93.0,
+            "rpm": 6381.0,
+            "sample_elapsed_s": 453.501,
+            "sequence": 1813,
+            "timestamp_ms": 453501.0,
+            "tps_voltage": 1.1328125,
+            "vehicle_speed_kmh": 58.0
+          },
+          {
+            "boundary_s": 469.377,
+            "ect_c": 93.0,
+            "rpm": 6675.0,
+            "sample_elapsed_s": 469.253,
+            "sequence": 1876,
+            "timestamp_ms": 469253.0,
+            "tps_voltage": 1.2890625,
+            "vehicle_speed_kmh": 60.0
+          }
+        ],
+        "sample_count": 64,
+        "signals": {
+          "ect_c": {
+            "available_count": 64,
+            "end": 93.0,
+            "max": 93.0,
+            "min": 93.0,
+            "start": 93.0
+          },
+          "rpm": {
+            "available_count": 64,
+            "end": 6675.0,
+            "max": 6715.0,
+            "min": 6381.0,
+            "start": 6381.0
+          },
+          "tps_raw": {
+            "available_count": 64,
+            "end": 32.0,
+            "max": 39.0,
+            "min": 17.0,
+            "start": 25.0
+          },
+          "tps_voltage": {
+            "available_count": 64,
+            "end": 1.2890625,
+            "max": 1.484375,
+            "min": 0.9375,
+            "start": 1.1328125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 64,
+            "end": 60.0,
+            "max": 61.0,
+            "min": 58.0,
+            "start": 58.0
+          }
+        }
+      },
+      "id": "macro-42556c25c37b4e90db1ff757",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_f9b13909a034578c1503"
+        ],
+        "end_s": 469.377,
+        "label": "moving_steady",
+        "start_s": 453.3775
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 453.3775
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_f79e67b19dae63a26f35",
+        "suggest_237492827afa9f89415b",
+        "suggest_387f373c73d9d2a52a6b"
+      ],
+      "end_s": 487.877,
+      "event_ids": [
+        "suggest_58a6ecc4c8d5ca9eee58"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 469.377,
+            "ect_c": 93.0,
+            "rpm": 6675.0,
+            "sample_elapsed_s": 469.253,
+            "sequence": 1876,
+            "timestamp_ms": 469253.0,
+            "tps_voltage": 1.2890625,
+            "vehicle_speed_kmh": 60.0
+          },
+          {
+            "boundary_s": 487.877,
+            "ect_c": 92.0,
+            "rpm": 6317.0,
+            "sample_elapsed_s": 488.001,
+            "sequence": 1951,
+            "timestamp_ms": 488001.0,
+            "tps_voltage": 1.19140625,
+            "vehicle_speed_kmh": 55.0
+          }
+        ],
+        "sample_count": 74,
+        "signals": {
+          "ect_c": {
+            "available_count": 74,
+            "end": 92.0,
+            "max": 93.0,
+            "min": 92.0,
+            "start": 93.0
+          },
+          "rpm": {
+            "available_count": 74,
+            "end": 6319.0,
+            "max": 6692.0,
+            "min": 5503.0,
+            "start": 6692.0
+          },
+          "tps_raw": {
+            "available_count": 74,
+            "end": 27.0,
+            "max": 38.0,
+            "min": 0.0,
+            "start": 32.0
+          },
+          "tps_voltage": {
+            "available_count": 74,
+            "end": 1.19140625,
+            "max": 1.4453125,
+            "min": 0.5078125,
+            "start": 1.2890625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 74,
+            "end": 55.0,
+            "max": 61.0,
+            "min": 51.0,
+            "start": 61.0
+          }
+        }
+      },
+      "id": "macro-91d40f5ccbe00216d428f5a2",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_f79e67b19dae63a26f35",
+          "suggest_237492827afa9f89415b",
+          "suggest_387f373c73d9d2a52a6b"
+        ],
+        "end_s": 487.877,
+        "label": "moving_episode",
+        "start_s": 469.377
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 469.377
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_3fa4af9942754562d134"
+      ],
+      "end_s": 504.6265,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 487.877,
+            "ect_c": 92.0,
+            "rpm": 6317.0,
+            "sample_elapsed_s": 488.001,
+            "sequence": 1951,
+            "timestamp_ms": 488001.0,
+            "tps_voltage": 1.19140625,
+            "vehicle_speed_kmh": 55.0
+          },
+          {
+            "boundary_s": 504.6265,
+            "ect_c": 92.0,
+            "rpm": 6324.0,
+            "sample_elapsed_s": 504.752,
+            "sequence": 2018,
+            "timestamp_ms": 504752.0,
+            "tps_voltage": 0.9765625,
+            "vehicle_speed_kmh": 58.0
+          }
+        ],
+        "sample_count": 67,
+        "signals": {
+          "ect_c": {
+            "available_count": 67,
+            "end": 93.0,
+            "max": 93.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 67,
+            "end": 6343.0,
+            "max": 6574.0,
+            "min": 6317.0,
+            "start": 6317.0
+          },
+          "tps_raw": {
+            "available_count": 67,
+            "end": 19.0,
+            "max": 31.0,
+            "min": 19.0,
+            "start": 27.0
+          },
+          "tps_voltage": {
+            "available_count": 67,
+            "end": 0.9765625,
+            "max": 1.2890625,
+            "min": 0.9765625,
+            "start": 1.19140625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 67,
+            "end": 58.0,
+            "max": 60.0,
+            "min": 55.0,
+            "start": 55.0
+          }
+        }
+      },
+      "id": "macro-c7ac837c92511c4b5db18645",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_3fa4af9942754562d134"
+        ],
+        "end_s": 504.6265,
+        "label": "moving_steady",
+        "start_s": 487.877
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 487.877
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_3397f5ad2689aabd86a6",
+        "suggest_634f027d8627017424f9",
+        "suggest_e74af3d446640f02180e",
+        "suggest_6c4ddc8ca63e6f60bdf6",
+        "suggest_43b819eaad6d66844014"
+      ],
+      "end_s": 549.877,
+      "event_ids": [
+        "suggest_e0724912e5b3535a6f8a",
+        "suggest_ab8c7f344d7242f81f14"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 504.6265,
+            "ect_c": 92.0,
+            "rpm": 6324.0,
+            "sample_elapsed_s": 504.752,
+            "sequence": 2018,
+            "timestamp_ms": 504752.0,
+            "tps_voltage": 0.9765625,
+            "vehicle_speed_kmh": 58.0
+          },
+          {
+            "boundary_s": 549.877,
+            "ect_c": 92.0,
+            "rpm": 6060.0,
+            "sample_elapsed_s": 550.002,
+            "sequence": 2199,
+            "timestamp_ms": 550002.0,
+            "tps_voltage": 1.1328125,
+            "vehicle_speed_kmh": 52.0
+          }
+        ],
+        "sample_count": 181,
+        "signals": {
+          "ect_c": {
+            "available_count": 181,
+            "end": 92.0,
+            "max": 93.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 181,
+            "end": 6045.0,
+            "max": 6406.0,
+            "min": 4956.0,
+            "start": 6324.0
+          },
+          "tps_raw": {
+            "available_count": 181,
+            "end": 25.0,
+            "max": 41.0,
+            "min": 0.0,
+            "start": 19.0
+          },
+          "tps_voltage": {
+            "available_count": 181,
+            "end": 1.1328125,
+            "max": 1.5234375,
+            "min": 0.48828125,
+            "start": 0.9765625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 181,
+            "end": 52.0,
+            "max": 58.0,
+            "min": 42.0,
+            "start": 58.0
+          }
+        }
+      },
+      "id": "macro-f083216962604e58afbeb88a",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_3397f5ad2689aabd86a6",
+          "suggest_634f027d8627017424f9",
+          "suggest_e74af3d446640f02180e",
+          "suggest_6c4ddc8ca63e6f60bdf6",
+          "suggest_43b819eaad6d66844014"
+        ],
+        "end_s": 549.877,
+        "label": "moving_episode",
+        "start_s": 504.6265
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 504.6265
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_41b11318d81af8cf6cdb"
+      ],
+      "end_s": 563.6275,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 549.877,
+            "ect_c": 92.0,
+            "rpm": 6060.0,
+            "sample_elapsed_s": 550.002,
+            "sequence": 2199,
+            "timestamp_ms": 550002.0,
+            "tps_voltage": 1.1328125,
+            "vehicle_speed_kmh": 52.0
+          },
+          {
+            "boundary_s": 563.6275,
+            "ect_c": 92.0,
+            "rpm": 6289.0,
+            "sample_elapsed_s": 563.752,
+            "sequence": 2254,
+            "timestamp_ms": 563752.0,
+            "tps_voltage": 1.11328125,
+            "vehicle_speed_kmh": 56.0
+          }
+        ],
+        "sample_count": 55,
+        "signals": {
+          "ect_c": {
+            "available_count": 55,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 55,
+            "end": 6288.0,
+            "max": 6315.0,
+            "min": 6060.0,
+            "start": 6060.0
+          },
+          "tps_raw": {
+            "available_count": 55,
+            "end": 23.0,
+            "max": 27.0,
+            "min": 22.0,
+            "start": 25.0
+          },
+          "tps_voltage": {
+            "available_count": 55,
+            "end": 1.09375,
+            "max": 1.19140625,
+            "min": 1.07421875,
+            "start": 1.1328125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 55,
+            "end": 56.0,
+            "max": 56.0,
+            "min": 52.0,
+            "start": 52.0
+          }
+        }
+      },
+      "id": "macro-cb838c7ae365a4b83be69d6b",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_41b11318d81af8cf6cdb"
+        ],
+        "end_s": 563.6275,
+        "label": "moving_steady",
+        "start_s": 549.877
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 549.877
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_0dda847d5196b3c96262",
+        "suggest_e7934967f27719692552",
+        "suggest_df3002359de0224af3d6"
+      ],
+      "end_s": 586.626,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 563.6275,
+            "ect_c": 92.0,
+            "rpm": 6289.0,
+            "sample_elapsed_s": 563.752,
+            "sequence": 2254,
+            "timestamp_ms": 563752.0,
+            "tps_voltage": 1.11328125,
+            "vehicle_speed_kmh": 56.0
+          },
+          {
+            "boundary_s": 586.626,
+            "ect_c": 92.0,
+            "rpm": 6395.0,
+            "sample_elapsed_s": 586.751,
+            "sequence": 2346,
+            "timestamp_ms": 586751.0,
+            "tps_voltage": 1.328125,
+            "vehicle_speed_kmh": 55.0
+          }
+        ],
+        "sample_count": 92,
+        "signals": {
+          "ect_c": {
+            "available_count": 92,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 92,
+            "end": 6391.0,
+            "max": 6406.0,
+            "min": 5367.0,
+            "start": 6289.0
+          },
+          "tps_raw": {
+            "available_count": 92,
+            "end": 33.0,
+            "max": 38.0,
+            "min": 0.0,
+            "start": 24.0
+          },
+          "tps_voltage": {
+            "available_count": 92,
+            "end": 1.328125,
+            "max": 1.4453125,
+            "min": 0.5078125,
+            "start": 1.11328125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 92,
+            "end": 55.0,
+            "max": 57.0,
+            "min": 49.0,
+            "start": 56.0
+          }
+        }
+      },
+      "id": "macro-b0bf7c802203418adf63e980",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_0dda847d5196b3c96262",
+          "suggest_e7934967f27719692552",
+          "suggest_df3002359de0224af3d6"
+        ],
+        "end_s": 586.626,
+        "label": "moving_episode",
+        "start_s": 563.6275
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 563.6275
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_ce0ec5905a86cf408f6e"
+      ],
+      "end_s": 610.8765,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 586.626,
+            "ect_c": 92.0,
+            "rpm": 6395.0,
+            "sample_elapsed_s": 586.751,
+            "sequence": 2346,
+            "timestamp_ms": 586751.0,
+            "tps_voltage": 1.328125,
+            "vehicle_speed_kmh": 55.0
+          },
+          {
+            "boundary_s": 610.8765,
+            "ect_c": 92.0,
+            "rpm": 6437.0,
+            "sample_elapsed_s": 611.001,
+            "sequence": 2443,
+            "timestamp_ms": 611001.0,
+            "tps_voltage": 1.07421875,
+            "vehicle_speed_kmh": 59.0
+          }
+        ],
+        "sample_count": 97,
+        "signals": {
+          "ect_c": {
+            "available_count": 97,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 97,
+            "end": 6449.0,
+            "max": 6661.0,
+            "min": 6343.0,
+            "start": 6395.0
+          },
+          "tps_raw": {
+            "available_count": 97,
+            "end": 24.0,
+            "max": 40.0,
+            "min": 23.0,
+            "start": 33.0
+          },
+          "tps_voltage": {
+            "available_count": 97,
+            "end": 1.11328125,
+            "max": 1.50390625,
+            "min": 1.09375,
+            "start": 1.328125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 97,
+            "end": 59.0,
+            "max": 60.0,
+            "min": 55.0,
+            "start": 55.0
+          }
+        }
+      },
+      "id": "macro-3ea837e8a1c2300f9568585a",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_ce0ec5905a86cf408f6e"
+        ],
+        "end_s": 610.8765,
+        "label": "moving_steady",
+        "start_s": 586.626
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 586.626
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_ba6129c93161b87cde47"
+      ],
+      "end_s": 614.8765,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 610.8765,
+            "ect_c": 92.0,
+            "rpm": 6437.0,
+            "sample_elapsed_s": 611.001,
+            "sequence": 2443,
+            "timestamp_ms": 611001.0,
+            "tps_voltage": 1.07421875,
+            "vehicle_speed_kmh": 59.0
+          },
+          {
+            "boundary_s": 614.8765,
+            "ect_c": 92.0,
+            "rpm": 6332.0,
+            "sample_elapsed_s": 615.001,
+            "sequence": 2459,
+            "timestamp_ms": 615001.0,
+            "tps_voltage": 1.07421875,
+            "vehicle_speed_kmh": 57.0
+          }
+        ],
+        "sample_count": 16,
+        "signals": {
+          "ect_c": {
+            "available_count": 16,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 16,
+            "end": 6343.0,
+            "max": 6437.0,
+            "min": 6232.0,
+            "start": 6437.0
+          },
+          "tps_raw": {
+            "available_count": 16,
+            "end": 24.0,
+            "max": 26.0,
+            "min": 16.0,
+            "start": 23.0
+          },
+          "tps_voltage": {
+            "available_count": 16,
+            "end": 1.09375,
+            "max": 1.15234375,
+            "min": 0.91796875,
+            "start": 1.07421875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 16,
+            "end": 57.0,
+            "max": 59.0,
+            "min": 57.0,
+            "start": 59.0
+          }
+        }
+      },
+      "id": "macro-201298df35b72d0ab3ad4464",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_ba6129c93161b87cde47"
+        ],
+        "end_s": 614.8765,
+        "label": "moving_episode",
+        "start_s": 610.8765
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 610.8765
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_27af41d7c408671c0b6e"
+      ],
+      "end_s": 663.627,
+      "event_ids": [
+        "suggest_467be4ef5b29b39094e2"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 614.8765,
+            "ect_c": 92.0,
+            "rpm": 6332.0,
+            "sample_elapsed_s": 615.001,
+            "sequence": 2459,
+            "timestamp_ms": 615001.0,
+            "tps_voltage": 1.07421875,
+            "vehicle_speed_kmh": 57.0
+          },
+          {
+            "boundary_s": 663.627,
+            "ect_c": 92.0,
+            "rpm": 6262.0,
+            "sample_elapsed_s": 663.751,
+            "sequence": 2654,
+            "timestamp_ms": 663751.0,
+            "tps_voltage": 1.19140625,
+            "vehicle_speed_kmh": 55.0
+          }
+        ],
+        "sample_count": 195,
+        "signals": {
+          "ect_c": {
+            "available_count": 195,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 195,
+            "end": 6258.0,
+            "max": 6510.0,
+            "min": 6147.0,
+            "start": 6332.0
+          },
+          "tps_raw": {
+            "available_count": 195,
+            "end": 27.0,
+            "max": 40.0,
+            "min": 16.0,
+            "start": 22.0
+          },
+          "tps_voltage": {
+            "available_count": 195,
+            "end": 1.19140625,
+            "max": 1.50390625,
+            "min": 0.91796875,
+            "start": 1.07421875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 195,
+            "end": 55.0,
+            "max": 58.0,
+            "min": 54.0,
+            "start": 57.0
+          }
+        }
+      },
+      "id": "macro-647d30ac00cfc9ab32c798a5",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_27af41d7c408671c0b6e"
+        ],
+        "end_s": 663.627,
+        "label": "moving_steady",
+        "start_s": 614.8765
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 614.8765
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_8beda96bbfb38b9e49d3"
+      ],
+      "end_s": 667.627,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 663.627,
+            "ect_c": 92.0,
+            "rpm": 6262.0,
+            "sample_elapsed_s": 663.751,
+            "sequence": 2654,
+            "timestamp_ms": 663751.0,
+            "tps_voltage": 1.19140625,
+            "vehicle_speed_kmh": 55.0
+          },
+          {
+            "boundary_s": 667.627,
+            "ect_c": 92.0,
+            "rpm": 6414.0,
+            "sample_elapsed_s": 667.752,
+            "sequence": 2670,
+            "timestamp_ms": 667752.0,
+            "tps_voltage": 1.328125,
+            "vehicle_speed_kmh": 57.0
+          }
+        ],
+        "sample_count": 16,
+        "signals": {
+          "ect_c": {
+            "available_count": 16,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 16,
+            "end": 6423.0,
+            "max": 6423.0,
+            "min": 6243.0,
+            "start": 6262.0
+          },
+          "tps_raw": {
+            "available_count": 16,
+            "end": 33.0,
+            "max": 35.0,
+            "min": 26.0,
+            "start": 27.0
+          },
+          "tps_voltage": {
+            "available_count": 16,
+            "end": 1.328125,
+            "max": 1.38671875,
+            "min": 1.15234375,
+            "start": 1.19140625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 16,
+            "end": 56.0,
+            "max": 57.0,
+            "min": 55.0,
+            "start": 55.0
+          }
+        }
+      },
+      "id": "macro-01351ffd273b6cd89cd67dcf",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_8beda96bbfb38b9e49d3"
+        ],
+        "end_s": 667.627,
+        "label": "moving_episode",
+        "start_s": 663.627
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 663.627
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_bee81630c01da3fc74ae"
+      ],
+      "end_s": 702.127,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 667.627,
+            "ect_c": 92.0,
+            "rpm": 6414.0,
+            "sample_elapsed_s": 667.752,
+            "sequence": 2670,
+            "timestamp_ms": 667752.0,
+            "tps_voltage": 1.328125,
+            "vehicle_speed_kmh": 57.0
+          },
+          {
+            "boundary_s": 702.127,
+            "ect_c": 92.0,
+            "rpm": 6304.0,
+            "sample_elapsed_s": 702.003,
+            "sequence": 2807,
+            "timestamp_ms": 702003.0,
+            "tps_voltage": 1.09375,
+            "vehicle_speed_kmh": 57.0
+          }
+        ],
+        "sample_count": 138,
+        "signals": {
+          "ect_c": {
+            "available_count": 138,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 138,
+            "end": 6304.0,
+            "max": 6597.0,
+            "min": 6258.0,
+            "start": 6414.0
+          },
+          "tps_raw": {
+            "available_count": 138,
+            "end": 24.0,
+            "max": 34.0,
+            "min": 16.0,
+            "start": 33.0
+          },
+          "tps_voltage": {
+            "available_count": 138,
+            "end": 1.09375,
+            "max": 1.3671875,
+            "min": 0.91796875,
+            "start": 1.328125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 138,
+            "end": 57.0,
+            "max": 60.0,
+            "min": 56.0,
+            "start": 57.0
+          }
+        }
+      },
+      "id": "macro-f5fdd0e3e3e8326ece5b1708",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_bee81630c01da3fc74ae"
+        ],
+        "end_s": 702.127,
+        "label": "moving_steady",
+        "start_s": 667.627
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 667.627
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_4e59b73f15bedbda5146"
+      ],
+      "end_s": 706.127,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 702.127,
+            "ect_c": 92.0,
+            "rpm": 6304.0,
+            "sample_elapsed_s": 702.003,
+            "sequence": 2807,
+            "timestamp_ms": 702003.0,
+            "tps_voltage": 1.09375,
+            "vehicle_speed_kmh": 57.0
+          },
+          {
+            "boundary_s": 706.127,
+            "ect_c": 92.0,
+            "rpm": 6128.0,
+            "sample_elapsed_s": 706.001,
+            "sequence": 2823,
+            "timestamp_ms": 706001.0,
+            "tps_voltage": 1.03515625,
+            "vehicle_speed_kmh": 55.0
+          }
+        ],
+        "sample_count": 16,
+        "signals": {
+          "ect_c": {
+            "available_count": 16,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 16,
+            "end": 6128.0,
+            "max": 6312.0,
+            "min": 5816.0,
+            "start": 6312.0
+          },
+          "tps_raw": {
+            "available_count": 16,
+            "end": 21.0,
+            "max": 24.0,
+            "min": 10.0,
+            "start": 24.0
+          },
+          "tps_voltage": {
+            "available_count": 16,
+            "end": 1.03515625,
+            "max": 1.11328125,
+            "min": 0.7421875,
+            "start": 1.11328125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 16,
+            "end": 55.0,
+            "max": 57.0,
+            "min": 55.0,
+            "start": 57.0
+          }
+        }
+      },
+      "id": "macro-35edf4b731270cdbc0239c6b",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_4e59b73f15bedbda5146"
+        ],
+        "end_s": 706.127,
+        "label": "moving_episode",
+        "start_s": 702.127
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 702.127
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_16da3c6355189ebd25dd"
+      ],
+      "end_s": 716.627,
+      "event_ids": [
+        "suggest_0e09d94523bd1fb7f065"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 706.127,
+            "ect_c": 92.0,
+            "rpm": 6128.0,
+            "sample_elapsed_s": 706.001,
+            "sequence": 2823,
+            "timestamp_ms": 706001.0,
+            "tps_voltage": 1.03515625,
+            "vehicle_speed_kmh": 55.0
+          },
+          {
+            "boundary_s": 716.627,
+            "ect_c": 92.0,
+            "rpm": 6229.0,
+            "sample_elapsed_s": 716.501,
+            "sequence": 2865,
+            "timestamp_ms": 716501.0,
+            "tps_voltage": 1.23046875,
+            "vehicle_speed_kmh": 54.0
+          }
+        ],
+        "sample_count": 42,
+        "signals": {
+          "ect_c": {
+            "available_count": 42,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 42,
+            "end": 6229.0,
+            "max": 6243.0,
+            "min": 5789.0,
+            "start": 6147.0
+          },
+          "tps_raw": {
+            "available_count": 42,
+            "end": 29.0,
+            "max": 29.0,
+            "min": 8.0,
+            "start": 21.0
+          },
+          "tps_voltage": {
+            "available_count": 42,
+            "end": 1.23046875,
+            "max": 1.23046875,
+            "min": 0.703125,
+            "start": 1.03515625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 42,
+            "end": 54.0,
+            "max": 55.0,
+            "min": 53.0,
+            "start": 54.0
+          }
+        }
+      },
+      "id": "macro-e861deac1964d0ef63ba2072",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_16da3c6355189ebd25dd"
+        ],
+        "end_s": 716.627,
+        "label": "moving_steady",
+        "start_s": 706.127
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 706.127
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_836566bb72464d4f4ebb"
+      ],
+      "end_s": 721.128,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 716.627,
+            "ect_c": 92.0,
+            "rpm": 6229.0,
+            "sample_elapsed_s": 716.501,
+            "sequence": 2865,
+            "timestamp_ms": 716501.0,
+            "tps_voltage": 1.23046875,
+            "vehicle_speed_kmh": 54.0
+          },
+          {
+            "boundary_s": 721.128,
+            "ect_c": 92.0,
+            "rpm": 6447.0,
+            "sample_elapsed_s": 721.253,
+            "sequence": 2884,
+            "timestamp_ms": 721253.0,
+            "tps_voltage": 1.25,
+            "vehicle_speed_kmh": 58.0
+          }
+        ],
+        "sample_count": 18,
+        "signals": {
+          "ect_c": {
+            "available_count": 18,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 18,
+            "end": 6449.0,
+            "max": 6449.0,
+            "min": 6353.0,
+            "start": 6353.0
+          },
+          "tps_raw": {
+            "available_count": 18,
+            "end": 30.0,
+            "max": 35.0,
+            "min": 28.0,
+            "start": 35.0
+          },
+          "tps_voltage": {
+            "available_count": 18,
+            "end": 1.25,
+            "max": 1.38671875,
+            "min": 1.19140625,
+            "start": 1.38671875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 18,
+            "end": 58.0,
+            "max": 58.0,
+            "min": 55.0,
+            "start": 55.0
+          }
+        }
+      },
+      "id": "macro-74413eea28b23a272ca74d13",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_836566bb72464d4f4ebb"
+        ],
+        "end_s": 721.128,
+        "label": "moving_episode",
+        "start_s": 716.627
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 716.627
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_8a5c0a8e345e22ce6051"
+      ],
+      "end_s": 763.8775,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 721.128,
+            "ect_c": 92.0,
+            "rpm": 6447.0,
+            "sample_elapsed_s": 721.253,
+            "sequence": 2884,
+            "timestamp_ms": 721253.0,
+            "tps_voltage": 1.25,
+            "vehicle_speed_kmh": 58.0
+          },
+          {
+            "boundary_s": 763.8775,
+            "ect_c": 93.0,
+            "rpm": 6452.0,
+            "sample_elapsed_s": 764.002,
+            "sequence": 3054,
+            "timestamp_ms": 764002.0,
+            "tps_voltage": 1.2109375,
+            "vehicle_speed_kmh": 58.0
+          }
+        ],
+        "sample_count": 170,
+        "signals": {
+          "ect_c": {
+            "available_count": 170,
+            "end": 93.0,
+            "max": 93.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 170,
+            "end": 6456.0,
+            "max": 6685.0,
+            "min": 6170.0,
+            "start": 6447.0
+          },
+          "tps_raw": {
+            "available_count": 170,
+            "end": 28.0,
+            "max": 38.0,
+            "min": 13.0,
+            "start": 30.0
+          },
+          "tps_voltage": {
+            "available_count": 170,
+            "end": 1.2109375,
+            "max": 1.4453125,
+            "min": 0.8203125,
+            "start": 1.25
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 170,
+            "end": 59.0,
+            "max": 62.0,
+            "min": 58.0,
+            "start": 58.0
+          }
+        }
+      },
+      "id": "macro-f8bb0ac1f8117ddb75bc8d60",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_8a5c0a8e345e22ce6051"
+        ],
+        "end_s": 763.8775,
+        "label": "moving_steady",
+        "start_s": 721.128
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 721.128
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_326af37a241d9a742f94",
+        "suggest_372b6f33d18c1ef46ce4",
+        "suggest_67d5872cfae6fea7290c",
+        "suggest_ddcc3f06a965a0069afb"
+      ],
+      "end_s": 792.627,
+      "event_ids": [
+        "suggest_cbb2de5d43e52dbd469d",
+        "suggest_94c5495df307fbfd8656"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 763.8775,
+            "ect_c": 93.0,
+            "rpm": 6452.0,
+            "sample_elapsed_s": 764.002,
+            "sequence": 3054,
+            "timestamp_ms": 764002.0,
+            "tps_voltage": 1.2109375,
+            "vehicle_speed_kmh": 58.0
+          },
+          {
+            "boundary_s": 792.627,
+            "ect_c": 92.0,
+            "rpm": 1364.0,
+            "sample_elapsed_s": 792.501,
+            "sequence": 3168,
+            "timestamp_ms": 792501.0,
+            "tps_voltage": 0.52734375,
+            "vehicle_speed_kmh": 7.0
+          }
+        ],
+        "sample_count": 115,
+        "signals": {
+          "ect_c": {
+            "available_count": 115,
+            "end": 92.0,
+            "max": 93.0,
+            "min": 92.0,
+            "start": 93.0
+          },
+          "rpm": {
+            "available_count": 115,
+            "end": 1364.0,
+            "max": 6523.0,
+            "min": 1364.0,
+            "start": 6452.0
+          },
+          "tps_raw": {
+            "available_count": 115,
+            "end": 1.0,
+            "max": 35.0,
+            "min": 0.0,
+            "start": 28.0
+          },
+          "tps_voltage": {
+            "available_count": 115,
+            "end": 0.52734375,
+            "max": 1.38671875,
+            "min": 0.48828125,
+            "start": 1.2109375
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 115,
+            "end": 7.0,
+            "max": 60.0,
+            "min": 7.0,
+            "start": 58.0
+          }
+        }
+      },
+      "id": "macro-d2a856b4d40cff3acdda7f89",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_326af37a241d9a742f94",
+          "suggest_372b6f33d18c1ef46ce4",
+          "suggest_67d5872cfae6fea7290c",
+          "suggest_ddcc3f06a965a0069afb"
+        ],
+        "end_s": 792.627,
+        "label": "moving_episode",
+        "start_s": 763.8775
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 763.8775
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_a9ecab1b5c80bdad39d1",
+        "suggest_3a127833753bf8bc6fe9"
+      ],
+      "end_s": 807.6265,
+      "event_ids": [
+        "suggest_94c5495df307fbfd8656"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 792.627,
+            "ect_c": 92.0,
+            "rpm": 1364.0,
+            "sample_elapsed_s": 792.501,
+            "sequence": 3168,
+            "timestamp_ms": 792501.0,
+            "tps_voltage": 0.52734375,
+            "vehicle_speed_kmh": 7.0
+          },
+          {
+            "boundary_s": 807.6265,
+            "ect_c": 92.0,
+            "rpm": 6523.0,
+            "sample_elapsed_s": 807.503,
+            "sequence": 3228,
+            "timestamp_ms": 807503.0,
+            "tps_voltage": 1.2109375,
+            "vehicle_speed_kmh": 59.0
+          }
+        ],
+        "sample_count": 60,
+        "signals": {
+          "ect_c": {
+            "available_count": 60,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 60,
+            "end": 6523.0,
+            "max": 6674.0,
+            "min": 1545.0,
+            "start": 1545.0
+          },
+          "tps_raw": {
+            "available_count": 60,
+            "end": 28.0,
+            "max": 84.0,
+            "min": 6.0,
+            "start": 10.0
+          },
+          "tps_voltage": {
+            "available_count": 60,
+            "end": 1.2109375,
+            "max": 2.59765625,
+            "min": 0.6640625,
+            "start": 0.76171875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 60,
+            "end": 59.0,
+            "max": 59.0,
+            "min": 6.0,
+            "start": 6.0
+          }
+        }
+      },
+      "id": "macro-35af5ef354d30e8943616803",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_a9ecab1b5c80bdad39d1",
+          "suggest_3a127833753bf8bc6fe9"
+        ],
+        "end_s": 807.6265,
+        "label": "moving_episode",
+        "start_s": 792.627
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 792.627
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_788a8cf9fb2e4f12d58f"
+      ],
+      "end_s": 851.1265,
+      "event_ids": [],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 807.6265,
+            "ect_c": 92.0,
+            "rpm": 6523.0,
+            "sample_elapsed_s": 807.503,
+            "sequence": 3228,
+            "timestamp_ms": 807503.0,
+            "tps_voltage": 1.2109375,
+            "vehicle_speed_kmh": 59.0
+          },
+          {
+            "boundary_s": 851.1265,
+            "ect_c": 92.0,
+            "rpm": 6525.0,
+            "sample_elapsed_s": 851.251,
+            "sequence": 3403,
+            "timestamp_ms": 851251.0,
+            "tps_voltage": 1.19140625,
+            "vehicle_speed_kmh": 59.0
+          }
+        ],
+        "sample_count": 174,
+        "signals": {
+          "ect_c": {
+            "available_count": 174,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 174,
+            "end": 6534.0,
+            "max": 6687.0,
+            "min": 6364.0,
+            "start": 6536.0
+          },
+          "tps_raw": {
+            "available_count": 174,
+            "end": 27.0,
+            "max": 34.0,
+            "min": 15.0,
+            "start": 28.0
+          },
+          "tps_voltage": {
+            "available_count": 174,
+            "end": 1.19140625,
+            "max": 1.34765625,
+            "min": 0.8984375,
+            "start": 1.19140625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 174,
+            "end": 59.0,
+            "max": 61.0,
+            "min": 58.0,
+            "start": 59.0
+          }
+        }
+      },
+      "id": "macro-861e3292dfba3dd8d5d52d40",
+      "label": "moving_steady",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_788a8cf9fb2e4f12d58f"
+        ],
+        "end_s": 851.1265,
+        "label": "moving_steady",
+        "start_s": 807.6265
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 807.6265
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_c7fdc3e864888a876348",
+        "suggest_d300681fddda68cbcdf5"
+      ],
+      "end_s": 876.376,
+      "event_ids": [
+        "suggest_e95a48ca665533f0e2cd"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 851.1265,
+            "ect_c": 92.0,
+            "rpm": 6525.0,
+            "sample_elapsed_s": 851.251,
+            "sequence": 3403,
+            "timestamp_ms": 851251.0,
+            "tps_voltage": 1.19140625,
+            "vehicle_speed_kmh": 59.0
+          },
+          {
+            "boundary_s": 876.376,
+            "ect_c": 92.0,
+            "rpm": 1417.0,
+            "sample_elapsed_s": 876.501,
+            "sequence": 3504,
+            "timestamp_ms": 876501.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 1.0
+          }
+        ],
+        "sample_count": 101,
+        "signals": {
+          "ect_c": {
+            "available_count": 101,
+            "end": 92.0,
+            "max": 93.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 101,
+            "end": 1457.0,
+            "max": 6528.0,
+            "min": 1457.0,
+            "start": 6525.0
+          },
+          "tps_raw": {
+            "available_count": 101,
+            "end": 0.0,
+            "max": 34.0,
+            "min": 0.0,
+            "start": 27.0
+          },
+          "tps_voltage": {
+            "available_count": 101,
+            "end": 0.48828125,
+            "max": 1.34765625,
+            "min": 0.48828125,
+            "start": 1.19140625
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 101,
+            "end": 3.0,
+            "max": 60.0,
+            "min": 3.0,
+            "start": 59.0
+          }
+        }
+      },
+      "id": "macro-64b42d86d4f4038563c6ba00",
+      "label": "moving_episode",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_c7fdc3e864888a876348",
+          "suggest_d300681fddda68cbcdf5"
+        ],
+        "end_s": 876.376,
+        "label": "moving_episode",
+        "start_s": 851.1265
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 851.1265
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_31a0e4e11afb9f1d22ba"
+      ],
+      "end_s": 879.8765,
+      "event_ids": [
+        "suggest_55b8043300b6ee3ddb4b"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 876.376,
+            "ect_c": 92.0,
+            "rpm": 1417.0,
+            "sample_elapsed_s": 876.501,
+            "sequence": 3504,
+            "timestamp_ms": 876501.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 1.0
+          },
+          {
+            "boundary_s": 879.8765,
+            "ect_c": 92.0,
+            "rpm": 1440.0,
+            "sample_elapsed_s": 880.001,
+            "sequence": 3518,
+            "timestamp_ms": 880001.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 0.0
+          }
+        ],
+        "sample_count": 14,
+        "signals": {
+          "ect_c": {
+            "available_count": 14,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 14,
+            "end": 1374.0,
+            "max": 1449.0,
+            "min": 1351.0,
+            "start": 1417.0
+          },
+          "tps_raw": {
+            "available_count": 14,
+            "end": 0.0,
+            "max": 0.0,
+            "min": 0.0,
+            "start": 0.0
+          },
+          "tps_voltage": {
+            "available_count": 14,
+            "end": 0.48828125,
+            "max": 0.48828125,
+            "min": 0.48828125,
+            "start": 0.48828125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 14,
+            "end": 0.0,
+            "max": 1.0,
+            "min": 0.0,
+            "start": 1.0
+          }
+        }
+      },
+      "id": "macro-9bd999e0e94b9676ec8a332a",
+      "label": "stationary_running",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_31a0e4e11afb9f1d22ba"
+        ],
+        "end_s": 879.8765,
+        "label": "stationary_running",
+        "start_s": 876.376
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 876.376
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_31a0e4e11afb9f1d22ba"
+      ],
+      "end_s": 880.8765,
+      "event_ids": [
+        "suggest_55b8043300b6ee3ddb4b"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 879.8765,
+            "ect_c": 92.0,
+            "rpm": 1440.0,
+            "sample_elapsed_s": 880.001,
+            "sequence": 3518,
+            "timestamp_ms": 880001.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 0.0
+          },
+          {
+            "boundary_s": 880.8765,
+            "ect_c": 92.0,
+            "rpm": 867.0,
+            "sample_elapsed_s": 880.75,
+            "sequence": 3521,
+            "timestamp_ms": 880750.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 0.0
+          }
+        ],
+        "sample_count": 4,
+        "signals": {
+          "ect_c": {
+            "available_count": 4,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 4,
+            "end": 867.0,
+            "max": 1440.0,
+            "min": 867.0,
+            "start": 1440.0
+          },
+          "tps_raw": {
+            "available_count": 4,
+            "end": 0.0,
+            "max": 0.0,
+            "min": 0.0,
+            "start": 0.0
+          },
+          "tps_voltage": {
+            "available_count": 4,
+            "end": 0.48828125,
+            "max": 0.48828125,
+            "min": 0.48828125,
+            "start": 0.48828125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 4,
+            "end": 0.0,
+            "max": 0.0,
+            "min": 0.0,
+            "start": 0.0
+          }
+        }
+      },
+      "id": "macro-08e417e0ce047b5118993320",
+      "label": "stationary_running",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_31a0e4e11afb9f1d22ba"
+        ],
+        "end_s": 880.8765,
+        "label": "stationary_running",
+        "start_s": 879.8765
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 879.8765
+    },
+    {
+      "axis": "operating",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_7fd80e3994b753d2e317"
+      ],
+      "end_s": 891.25,
+      "event_ids": [
+        "suggest_55b8043300b6ee3ddb4b"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 880.8765,
+            "ect_c": 92.0,
+            "rpm": 867.0,
+            "sample_elapsed_s": 880.75,
+            "sequence": 3521,
+            "timestamp_ms": 880750.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 0.0
+          },
+          {
+            "boundary_s": 891.25,
+            "ect_c": 92.0,
+            "rpm": 0.0,
+            "sample_elapsed_s": 891.25,
+            "sequence": 3563,
+            "timestamp_ms": 891250.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 0.0
+          }
+        ],
+        "sample_count": 42,
+        "signals": {
+          "ect_c": {
+            "available_count": 42,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 42,
+            "end": 0.0,
+            "max": 0.0,
+            "min": 0.0,
+            "start": 0.0
+          },
+          "tps_raw": {
+            "available_count": 42,
+            "end": 0.0,
+            "max": 0.0,
+            "min": 0.0,
+            "start": 0.0
+          },
+          "tps_voltage": {
+            "available_count": 42,
+            "end": 0.48828125,
+            "max": 0.48828125,
+            "min": 0.48828125,
+            "start": 0.48828125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 42,
+            "end": 0.0,
+            "max": 0.0,
+            "min": 0.0,
+            "start": 0.0
+          }
+        }
+      },
+      "id": "macro-1d743aab6ae602d274c035ae",
+      "label": "engine_off",
+      "notes": "",
+      "original_proposal": {
+        "axis": "operating",
+        "child_ids": [
+          "suggest_7fd80e3994b753d2e317"
+        ],
+        "end_s": 891.25,
+        "label": "engine_off",
+        "start_s": 880.8765
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 880.8765
+    },
+    {
+      "axis": "thermal",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_4e17eeef3e8b83c1e1f6",
+        "suggest_b8ef7548d1f5f56918ff"
+      ],
+      "end_s": 21.127,
+      "event_ids": [
+        "suggest_ca4b0bc3460fbca73319",
+        "suggest_cf463b95562dbc6e64f7",
+        "suggest_5dc6cab6dbc3444ada0a"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 0.0,
+            "ect_c": 90.0,
+            "rpm": 681.0,
+            "sample_elapsed_s": 0.0,
+            "sequence": 0,
+            "timestamp_ms": 0.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 0.0
+          },
+          {
+            "boundary_s": 21.127,
+            "ect_c": 88.0,
+            "rpm": 6686.0,
+            "sample_elapsed_s": 21.003,
+            "sequence": 84,
+            "timestamp_ms": 21003.0,
+            "tps_voltage": 1.62109375,
+            "vehicle_speed_kmh": 58.0
+          }
+        ],
+        "sample_count": 85,
+        "signals": {
+          "ect_c": {
+            "available_count": 85,
+            "end": 88.0,
+            "max": 90.0,
+            "min": 88.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 85,
+            "end": 6686.0,
+            "max": 6686.0,
+            "min": 681.0,
+            "start": 681.0
+          },
+          "tps_raw": {
+            "available_count": 85,
+            "end": 44.0,
+            "max": 79.0,
+            "min": 0.0,
+            "start": 0.0
+          },
+          "tps_voltage": {
+            "available_count": 85,
+            "end": 1.62109375,
+            "max": 2.48046875,
+            "min": 0.48828125,
+            "start": 0.48828125
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 85,
+            "end": 58.0,
+            "max": 58.0,
+            "min": 0.0,
+            "start": 0.0
+          }
+        }
+      },
+      "id": "macro-3a0b0499bc2047637f02d618",
+      "label": "unknown",
+      "notes": "",
+      "original_proposal": {
+        "axis": "thermal",
+        "child_ids": [
+          "suggest_4e17eeef3e8b83c1e1f6",
+          "suggest_b8ef7548d1f5f56918ff"
+        ],
+        "end_s": 21.127,
+        "label": "unknown",
+        "start_s": 0.0
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 0.0
+    },
+    {
+      "axis": "thermal",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_ddc68781bd894a7271ec",
+        "suggest_4e061b599b1e898eaa80",
+        "suggest_d3059929532b607a287f",
+        "suggest_8a0da34d811de2eac4e8",
+        "suggest_7b9cbebafaf48c8ec532",
+        "suggest_f9bd1581668630951f00",
+        "suggest_0685513e468a2b876ea5",
+        "suggest_03b9484fb3313c4fba81",
+        "suggest_5e0f2baeff07d2388cf5",
+        "suggest_cd944f50473876de3dd9",
+        "suggest_8f9422812151f3406f9e",
+        "suggest_46bacab8e0605050b545",
+        "suggest_9a404d5469d64ec30066",
+        "suggest_33c5f0afe74e72808135",
+        "suggest_39c1bc469ed6d0e4e739",
+        "suggest_3687bb03439640a75d14",
+        "suggest_a439b2bc9885abe2c20b",
+        "suggest_dd48343136d5e747ffdd",
+        "suggest_ea2828ea2c67d963d180",
+        "suggest_4e2f592d4f290d51da26",
+        "suggest_a2bd6d89b542d8c61528",
+        "suggest_35e4916924923d9fcaa5",
+        "suggest_2fcf6262a7d0b72243b2"
+      ],
+      "end_s": 159.127,
+      "event_ids": [
+        "suggest_c012a13c8243a4e6dda2",
+        "suggest_43e16095bcc5618cd10d",
+        "suggest_ca7a0e3aeef12fd61bd0",
+        "suggest_10cc80877cb844f31672",
+        "suggest_078469fbc239b4a03bce",
+        "suggest_21152f0fe5cb4579be8a",
+        "suggest_d6b63bbfdedc38d39725"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 21.127,
+            "ect_c": 88.0,
+            "rpm": 6686.0,
+            "sample_elapsed_s": 21.003,
+            "sequence": 84,
+            "timestamp_ms": 21003.0,
+            "tps_voltage": 1.62109375,
+            "vehicle_speed_kmh": 58.0
+          },
+          {
+            "boundary_s": 159.127,
+            "ect_c": 90.0,
+            "rpm": 6800.0,
+            "sample_elapsed_s": 159.251,
+            "sequence": 636,
+            "timestamp_ms": 159251.0,
+            "tps_voltage": 1.38671875,
+            "vehicle_speed_kmh": 62.0
+          }
+        ],
+        "sample_count": 551,
+        "signals": {
+          "ect_c": {
+            "available_count": 551,
+            "end": 90.0,
+            "max": 90.0,
+            "min": 88.0,
+            "start": 88.0
+          },
+          "rpm": {
+            "available_count": 551,
+            "end": 6813.0,
+            "max": 6930.0,
+            "min": 4566.0,
+            "start": 6725.0
+          },
+          "tps_raw": {
+            "available_count": 551,
+            "end": 39.0,
+            "max": 58.0,
+            "min": 0.0,
+            "start": 44.0
+          },
+          "tps_voltage": {
+            "available_count": 551,
+            "end": 1.46484375,
+            "max": 1.953125,
+            "min": 0.48828125,
+            "start": 1.62109375
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 551,
+            "end": 62.0,
+            "max": 67.0,
+            "min": 40.0,
+            "start": 58.0
+          }
+        }
+      },
+      "id": "macro-38bc4c83c851b2a341f0b11a",
+      "label": "stable",
+      "notes": "",
+      "original_proposal": {
+        "axis": "thermal",
+        "child_ids": [
+          "suggest_ddc68781bd894a7271ec",
+          "suggest_4e061b599b1e898eaa80",
+          "suggest_d3059929532b607a287f",
+          "suggest_8a0da34d811de2eac4e8",
+          "suggest_7b9cbebafaf48c8ec532",
+          "suggest_f9bd1581668630951f00",
+          "suggest_0685513e468a2b876ea5",
+          "suggest_03b9484fb3313c4fba81",
+          "suggest_5e0f2baeff07d2388cf5",
+          "suggest_cd944f50473876de3dd9",
+          "suggest_8f9422812151f3406f9e",
+          "suggest_46bacab8e0605050b545",
+          "suggest_9a404d5469d64ec30066",
+          "suggest_33c5f0afe74e72808135",
+          "suggest_39c1bc469ed6d0e4e739",
+          "suggest_3687bb03439640a75d14",
+          "suggest_a439b2bc9885abe2c20b",
+          "suggest_dd48343136d5e747ffdd",
+          "suggest_ea2828ea2c67d963d180",
+          "suggest_4e2f592d4f290d51da26",
+          "suggest_a2bd6d89b542d8c61528",
+          "suggest_35e4916924923d9fcaa5",
+          "suggest_2fcf6262a7d0b72243b2"
+        ],
+        "end_s": 159.127,
+        "label": "stable",
+        "start_s": 21.127
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 21.127
+    },
+    {
+      "axis": "thermal",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_aeda192eee26950c2859",
+        "suggest_b0c6bbf534dcfc370e9a",
+        "suggest_0f417880b0b282f523f5",
+        "suggest_f615ca037369edf215f3",
+        "suggest_e28326425239540f2219",
+        "suggest_aceb4f15106d07146fe6",
+        "suggest_3a407ca7b3c242765cf1",
+        "suggest_44aeeaf2d2ebf83b6ffd",
+        "suggest_fdb7884f5fd8502d3330",
+        "suggest_57c7fef414d0180ae1c5",
+        "suggest_36fca5402378bff1086f",
+        "suggest_66ca1e6ea3fe5166236b"
+      ],
+      "end_s": 233.628,
+      "event_ids": [
+        "suggest_90cf9105ef45204999e2",
+        "suggest_bbb9b69f1b525752cad6",
+        "suggest_431384afb3f3da90e595",
+        "suggest_56a5f27472bff25e8ac0",
+        "suggest_f24619e2b5944b86d9c9"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 159.127,
+            "ect_c": 90.0,
+            "rpm": 6800.0,
+            "sample_elapsed_s": 159.251,
+            "sequence": 636,
+            "timestamp_ms": 159251.0,
+            "tps_voltage": 1.38671875,
+            "vehicle_speed_kmh": 62.0
+          },
+          {
+            "boundary_s": 233.628,
+            "ect_c": 92.0,
+            "rpm": 6581.0,
+            "sample_elapsed_s": 233.751,
+            "sequence": 934,
+            "timestamp_ms": 233751.0,
+            "tps_voltage": 1.23046875,
+            "vehicle_speed_kmh": 61.0
+          }
+        ],
+        "sample_count": 298,
+        "signals": {
+          "ect_c": {
+            "available_count": 298,
+            "end": 92.0,
+            "max": 92.0,
+            "min": 90.0,
+            "start": 90.0
+          },
+          "rpm": {
+            "available_count": 298,
+            "end": 6577.0,
+            "max": 6949.0,
+            "min": 4356.0,
+            "start": 6800.0
+          },
+          "tps_raw": {
+            "available_count": 298,
+            "end": 26.0,
+            "max": 73.0,
+            "min": 0.0,
+            "start": 35.0
+          },
+          "tps_voltage": {
+            "available_count": 298,
+            "end": 1.15234375,
+            "max": 2.34375,
+            "min": 0.48828125,
+            "start": 1.38671875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 298,
+            "end": 61.0,
+            "max": 63.0,
+            "min": 36.0,
+            "start": 62.0
+          }
+        }
+      },
+      "id": "macro-626a719b96021d3b4dc6e9c5",
+      "label": "unknown",
+      "notes": "",
+      "original_proposal": {
+        "axis": "thermal",
+        "child_ids": [
+          "suggest_aeda192eee26950c2859",
+          "suggest_b0c6bbf534dcfc370e9a",
+          "suggest_0f417880b0b282f523f5",
+          "suggest_f615ca037369edf215f3",
+          "suggest_e28326425239540f2219",
+          "suggest_aceb4f15106d07146fe6",
+          "suggest_3a407ca7b3c242765cf1",
+          "suggest_44aeeaf2d2ebf83b6ffd",
+          "suggest_fdb7884f5fd8502d3330",
+          "suggest_57c7fef414d0180ae1c5",
+          "suggest_36fca5402378bff1086f",
+          "suggest_66ca1e6ea3fe5166236b"
+        ],
+        "end_s": 233.628,
+        "label": "unknown",
+        "start_s": 159.127
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 159.127
+    },
+    {
+      "axis": "thermal",
+      "bulk_endorsement": {
+        "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+        "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+        "approval_source": "data_collector",
+        "approval_type": "bulk_operator_endorsement",
+        "individual_interval_review": false,
+        "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+      },
+      "child_ids": [
+        "suggest_53a459f8944d72c71798",
+        "suggest_46b8f5bc1f01ac3f2002",
+        "suggest_9f9fda369ded74c76706",
+        "suggest_a9dbb1d0a72f614fc70b",
+        "suggest_e336d413f37288d8a433",
+        "suggest_6647287b7c940124765d",
+        "suggest_94f19ee206ba25b4517a",
+        "suggest_a3b38ca8923e71c510f6",
+        "suggest_723a28447a2a3e3f407b",
+        "suggest_f3b1ae90273330a19294",
+        "suggest_d379af213e6bf0dec862",
+        "suggest_8881d2badd624afbc806",
+        "suggest_05ae148982bb04876d0f",
+        "suggest_4e7fa6c953773f132670",
+        "suggest_9494c61fd80727b21fef",
+        "suggest_6b588ef1645a6957efee",
+        "suggest_f3c619fd94b914ad6319",
+        "suggest_567e5032693368146397",
+        "suggest_d90ab872eede4e1c24b5",
+        "suggest_21b4cd51e8cd4e20ef4c",
+        "suggest_ef5362255c0f10e00faf",
+        "suggest_99990f7e679e95f4dc75",
+        "suggest_b12d24d56c66951e6592",
+        "suggest_4a810e4620621611133f",
+        "suggest_f9b13909a034578c1503",
+        "suggest_f79e67b19dae63a26f35",
+        "suggest_237492827afa9f89415b",
+        "suggest_387f373c73d9d2a52a6b",
+        "suggest_3fa4af9942754562d134",
+        "suggest_3397f5ad2689aabd86a6",
+        "suggest_634f027d8627017424f9",
+        "suggest_e74af3d446640f02180e",
+        "suggest_6c4ddc8ca63e6f60bdf6",
+        "suggest_43b819eaad6d66844014",
+        "suggest_41b11318d81af8cf6cdb",
+        "suggest_0dda847d5196b3c96262",
+        "suggest_e7934967f27719692552",
+        "suggest_df3002359de0224af3d6",
+        "suggest_ce0ec5905a86cf408f6e",
+        "suggest_ba6129c93161b87cde47",
+        "suggest_27af41d7c408671c0b6e",
+        "suggest_8beda96bbfb38b9e49d3",
+        "suggest_bee81630c01da3fc74ae",
+        "suggest_4e59b73f15bedbda5146",
+        "suggest_16da3c6355189ebd25dd",
+        "suggest_836566bb72464d4f4ebb",
+        "suggest_8a5c0a8e345e22ce6051",
+        "suggest_326af37a241d9a742f94",
+        "suggest_372b6f33d18c1ef46ce4",
+        "suggest_67d5872cfae6fea7290c",
+        "suggest_ddcc3f06a965a0069afb",
+        "suggest_a9ecab1b5c80bdad39d1",
+        "suggest_3a127833753bf8bc6fe9",
+        "suggest_788a8cf9fb2e4f12d58f",
+        "suggest_c7fdc3e864888a876348",
+        "suggest_d300681fddda68cbcdf5",
+        "suggest_31a0e4e11afb9f1d22ba",
+        "suggest_7fd80e3994b753d2e317"
+      ],
+      "end_s": 891.25,
+      "event_ids": [
+        "suggest_5bf65ca004199850dc3b",
+        "suggest_c78cfc3d4bdf0ed1eee5",
+        "suggest_a408e654d23e2996b0bf",
+        "suggest_5b2f2d5c1cdbadf136fa",
+        "suggest_843b0a32d2e52ba308fe",
+        "suggest_0c60f5db673cb2787b3e",
+        "suggest_58a6ecc4c8d5ca9eee58",
+        "suggest_e0724912e5b3535a6f8a",
+        "suggest_ab8c7f344d7242f81f14",
+        "suggest_467be4ef5b29b39094e2",
+        "suggest_0e09d94523bd1fb7f065",
+        "suggest_cbb2de5d43e52dbd469d",
+        "suggest_94c5495df307fbfd8656",
+        "suggest_e95a48ca665533f0e2cd",
+        "suggest_55b8043300b6ee3ddb4b"
+      ],
+      "evidence": {
+        "boundary_samples": [
+          {
+            "boundary_s": 233.628,
+            "ect_c": 92.0,
+            "rpm": 6581.0,
+            "sample_elapsed_s": 233.751,
+            "sequence": 934,
+            "timestamp_ms": 233751.0,
+            "tps_voltage": 1.23046875,
+            "vehicle_speed_kmh": 61.0
+          },
+          {
+            "boundary_s": 891.25,
+            "ect_c": 92.0,
+            "rpm": 0.0,
+            "sample_elapsed_s": 891.25,
+            "sequence": 3563,
+            "timestamp_ms": 891250.0,
+            "tps_voltage": 0.48828125,
+            "vehicle_speed_kmh": 0.0
+          }
+        ],
+        "sample_count": 2630,
+        "signals": {
+          "ect_c": {
+            "available_count": 2630,
+            "end": 92.0,
+            "max": 93.0,
+            "min": 92.0,
+            "start": 92.0
+          },
+          "rpm": {
+            "available_count": 2630,
+            "end": 0.0,
+            "max": 6898.0,
+            "min": 0.0,
+            "start": 6581.0
+          },
+          "tps_raw": {
+            "available_count": 2630,
+            "end": 0.0,
+            "max": 84.0,
+            "min": 0.0,
+            "start": 29.0
+          },
+          "tps_voltage": {
+            "available_count": 2630,
+            "end": 0.48828125,
+            "max": 2.59765625,
+            "min": 0.48828125,
+            "start": 1.23046875
+          },
+          "vehicle_speed_kmh": {
+            "available_count": 2630,
+            "end": 0.0,
+            "max": 65.0,
+            "min": 0.0,
+            "start": 61.0
+          }
+        }
+      },
+      "id": "macro-1069b9edc13fa67301dd875f",
+      "label": "stable",
+      "notes": "",
+      "original_proposal": {
+        "axis": "thermal",
+        "child_ids": [
+          "suggest_53a459f8944d72c71798",
+          "suggest_46b8f5bc1f01ac3f2002",
+          "suggest_9f9fda369ded74c76706",
+          "suggest_a9dbb1d0a72f614fc70b",
+          "suggest_e336d413f37288d8a433",
+          "suggest_6647287b7c940124765d",
+          "suggest_94f19ee206ba25b4517a",
+          "suggest_a3b38ca8923e71c510f6",
+          "suggest_723a28447a2a3e3f407b",
+          "suggest_f3b1ae90273330a19294",
+          "suggest_d379af213e6bf0dec862",
+          "suggest_8881d2badd624afbc806",
+          "suggest_05ae148982bb04876d0f",
+          "suggest_4e7fa6c953773f132670",
+          "suggest_9494c61fd80727b21fef",
+          "suggest_6b588ef1645a6957efee",
+          "suggest_f3c619fd94b914ad6319",
+          "suggest_567e5032693368146397",
+          "suggest_d90ab872eede4e1c24b5",
+          "suggest_21b4cd51e8cd4e20ef4c",
+          "suggest_ef5362255c0f10e00faf",
+          "suggest_99990f7e679e95f4dc75",
+          "suggest_b12d24d56c66951e6592",
+          "suggest_4a810e4620621611133f",
+          "suggest_f9b13909a034578c1503",
+          "suggest_f79e67b19dae63a26f35",
+          "suggest_237492827afa9f89415b",
+          "suggest_387f373c73d9d2a52a6b",
+          "suggest_3fa4af9942754562d134",
+          "suggest_3397f5ad2689aabd86a6",
+          "suggest_634f027d8627017424f9",
+          "suggest_e74af3d446640f02180e",
+          "suggest_6c4ddc8ca63e6f60bdf6",
+          "suggest_43b819eaad6d66844014",
+          "suggest_41b11318d81af8cf6cdb",
+          "suggest_0dda847d5196b3c96262",
+          "suggest_e7934967f27719692552",
+          "suggest_df3002359de0224af3d6",
+          "suggest_ce0ec5905a86cf408f6e",
+          "suggest_ba6129c93161b87cde47",
+          "suggest_27af41d7c408671c0b6e",
+          "suggest_8beda96bbfb38b9e49d3",
+          "suggest_bee81630c01da3fc74ae",
+          "suggest_4e59b73f15bedbda5146",
+          "suggest_16da3c6355189ebd25dd",
+          "suggest_836566bb72464d4f4ebb",
+          "suggest_8a5c0a8e345e22ce6051",
+          "suggest_326af37a241d9a742f94",
+          "suggest_372b6f33d18c1ef46ce4",
+          "suggest_67d5872cfae6fea7290c",
+          "suggest_ddcc3f06a965a0069afb",
+          "suggest_a9ecab1b5c80bdad39d1",
+          "suggest_3a127833753bf8bc6fe9",
+          "suggest_788a8cf9fb2e4f12d58f",
+          "suggest_c7fdc3e864888a876348",
+          "suggest_d300681fddda68cbcdf5",
+          "suggest_31a0e4e11afb9f1d22ba",
+          "suggest_7fd80e3994b753d2e317"
+        ],
+        "end_s": 891.25,
+        "label": "stable",
+        "start_s": 233.628
+      },
+      "review_history": [
+        {
+          "action": "bulk_endorse",
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+          "time_basis": "not_measured"
+        }
+      ],
+      "review_status": "accepted",
+      "start_s": 233.628
+    }
+  ],
+  "generated_at": "2026-10-11T08:14:29.575157+00:00",
+  "retained_reviews": [],
+  "rule_version": "ctx24-macro-v1",
+  "schema_version": "context-macro-review-v1",
+  "session_id": "session_000021",
+  "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d"
+}

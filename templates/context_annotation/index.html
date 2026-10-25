@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="/context-annotation/static/context_annotation.css" />
+  </head>
+  <body data-page="index">
+    <header class="topbar">
+      <div>
+        <h1>ECU Context Annotation Studio</h1>
+        <p class="muted">Offline operating-context annotation for research telemetry sessions.</p>
+      </div>
+      <div class="topbar-actions">
+        <button id="exportManifestBtn" class="button secondary">Export manifest</button>
+        <button id="exportCampaignBtn" class="button secondary">Campaign status</button>
+        <button id="exportRecordsBtn" class="button secondary">Export records</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="summary-strip" id="summaryStrip" aria-label="Corpus summary"></section>
+
+      <section class="toolbar" aria-label="Session filters">
+        <div class="segmented" id="statusFilters">
+          <button data-filter="all" class="active">All</button>
+          <button data-filter="unstarted">Unstarted</button>
+          <button data-filter="partial">Partial</button>
+          <button data-filter="complete">Complete</button>
+          <button data-filter="error">Error</button>
+        </div>
+        <label class="select-label">
+          Sort
+          <select id="sortSelect">
+            <option value="filename">Filename</option>
+            <option value="duration">Duration</option>
+            <option value="progress">Progress</option>
+            <option value="capture_time">Capture time</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="table-wrap" aria-label="Input sessions">
+        <table class="session-table">
+          <thead>
+            <tr>
+              <th>Session</th>
+              <th>Status</th>
+              <th>Progress</th>
+              <th>Duration</th>
+              <th>Frames</th>
+              <th>Signals</th>
+            </tr>
+          </thead>
+          <tbody id="sessionTableBody">
+            <tr>
+              <td colspan="6" class="muted">Loading sessions...</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="/context-annotation/static/context_annotation.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "verified_at": "2026-10-11T03:23:05.451Z",
+  "studio_url": "http://127.0.0.1:8767",
+  "visible_sessions": 18,
+  "legacy_sessions_visible": 0,
+  "all_sources_from_requested_raw_folder": true,
+  "long_session_samples": 17976,
+  "long_session_duration_s": 4496.001,
+  "full_speed_coverage": true,
+  "review_evidence_visible": true,
+  "campaign_labels_accepted": 0,
+  "nonblank_canvas_pixels": 439,
+  "mobile_overflow": false,
+  "browser_errors": []
+}

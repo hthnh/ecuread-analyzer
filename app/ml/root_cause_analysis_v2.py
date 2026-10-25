@@ -2,10 +2,11 @@ from __future__ import annotations
 
 from collections import Counter
 from typing import Any
+from app.ml.diagnostic_interpretation import enrich_findings
 
 
-RCA_V2_ENGINE_VERSION = "deterministic-rca-engine-v2"
-RCA_V2_RULE_CATALOG_VERSION = "evidence-grounded-rca-v2"
+RCA_V2_ENGINE_VERSION = "deterministic-rca-engine-v2-speed-v1"
+RCA_V2_RULE_CATALOG_VERSION = "evidence-grounded-rca-v2-speed-v1"
 V2_TO_H7_RULE_IDS = {
     "rca.v2.iforest.detector_observation": ["rca.iforest.multivariate_pattern"],
     "rca.v2.electrical.contextual_voltage_symptom": ["rca.electrical.contextual_voltage_deviation"],
@@ -234,6 +235,24 @@ class RootCauseAnalyzerV2:
                 if cause is not None:
                     possible_causes.append(cause)
 
+        speed = finding_for(case, "contextual_speed")
+        if speed.get("finding") == "positive" and speed.get("execution_status") == "ok" and speed.get("applicable") is True:
+            speed_evidence = (speed.get("evidence") or {}).get("speed_evidence") or {}
+            overlapping = (next((o for o in observations if o["observation_id"] == "obs.v2.rpm_tps_feature_involvement"), None)
+                           if speed_evidence.get("reason") == "unusual_speed_engine_relationship" else None)
+            if overlapping is not None:
+                overlapping["evidence"]["supporting_speed_finding"] = speed
+                overlapping["evidence"]["duplicate_operating_finding_suppressed"] = True
+            else:
+                observations.append(self.observation(case, "obs.v2.contextual_speed_deviation", "operating_pattern_observation",
+                    "Speed/engine operation differs from the observed operating reference; monitor repeatability.",
+                    {"detector_finding": speed, "telemetry": telemetry(case)},
+                    source_rule_id="rca.v2.operating_state.contextual_speed_observation"))
+            limitations.append(self.limitation("limit.v2.speed_not_fault", "Speed evidence does not identify a component failure or a road speed-limit violation.", case))
+            checks.append(self.check("check.v2.speed_context_review", case, "rca.v2.operating_state.contextual_speed_observation"))
+            checks[-1]["description"] = "Review recorded speed, RPM, throttle and timestamp continuity; corroborate speed independently before attributing a fault."
+            checks[-1]["category"] = "operating_context"
+
         if contextual_positive(case) and contextual_top_deviation(case):
             top = contextual_top_deviation(case)
             observations.append(
@@ -293,6 +312,7 @@ class RootCauseAnalyzerV2:
         if not possible_causes:
             limitations.append(self.limitation("limit.v2.no_possible_cause", "Available evidence does not justify a causal hypothesis under RCA v2 gates.", case))
 
+        enrich_findings(case, observations, symptoms, checks)
         return {
             "schema_version": "root-cause-analysis-v2-result-v1",
             "rca_v2_result_id": f"h7-3-rca-v2:{source_event_id or case.get('case_id')}",
@@ -400,8 +420,11 @@ class RootCauseAnalyzerV2:
         }
 
     def provenance(self, case: dict[str, Any], source_rule_id: str, h7_rule_id: str | None = None) -> dict[str, Any]:
+        event = case.get("provenance", {}).get("source_event")
         return {
-            "source_event": case.get("provenance", {}).get("source_event"),
+            # Witnesses remain in the event block and per-window artifact; avoid copying
+            # every detector's witness into every observation and recommendation.
+            "source_event": {key: value for key, value in event.items() if key != "detector_representatives"} if isinstance(event, dict) else event,
             "detector_output": observable_evidence(case).get("detector_findings"),
             "telemetry": telemetry(case),
             "grounding_source_ids": self.source_ids_for(source_rule_id, h7_rule_id),

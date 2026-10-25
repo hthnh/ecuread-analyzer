@@ -1,0 +1,186 @@
+{
+  "completed_at": "2026-10-24T07:58:19.793977+00:00",
+  "status": "implemented_verified_not_deployed",
+  "runtime_files_changed": [
+    "services/analysis_submission.py",
+    "services/analysis.py",
+    "templates/session_detail.html",
+    "static/locales/messages.json"
+  ],
+  "source_hashes": {
+    "services/analysis_submission.py": {
+      "before": "43848fa95cb3df41bdd7db8e0fe201f582d264211ce1837b01c3bb5adca7fcf0",
+      "after": "dea086cd151ea5bb82eb80ee86d7e8adb0638f3ec76c490a0a1c2484e8427268"
+    },
+    "services/analysis.py": {
+      "before": "60dcf8efbc3858026bbe032226c1f05edfc7d869b84d1088a53b2d02ebae4cfb",
+      "after": "39c945187d0c2464405038da43d8cde5f9615da0e3748c9dd20104ede84d5ce8"
+    },
+    "templates/session_detail.html": {
+      "before": "058a33759cf5d24c4a8b0be36e70ce8ddcf9b38e3b5516026499d48012794b36",
+      "after": "fd08eedc6b289ef6f169694517ab790594179e38b721bd32801fca1cf32a38fe"
+    },
+    "static/locales/messages.json": {
+      "before": "ac0b1b535002bc2970df184e8db817ed1be88dac16f7a3f992c83f9a624fffd9",
+      "after": "26e2c0f496f085deb73872d7990a179dacbbd5219f4eb758f9067bceacba9352"
+    },
+    "tests/test_p3_rerun_recovery.py": {
+      "before": "bdac5656299c5b7188b84395d1614d7364e55f7cc801a0848ab9154e26cc4c4a",
+      "after": "2eb64f57fb59292cf63cb9324b74e9b4a34c2964ccfd56aafd9d47042f551af3"
+    },
+    "tests/test_app.py": {
+      "before": "28cb35a6b9379a40cbe58a4e151d2a5a75ce0e0c8ea45f877d65f64ddc766d0c",
+      "after": "8d0c491ed520d4f130830e15a2e6de9261f0dc89c493c3d9ec24aa9f77511579"
+    },
+    "tests/test_p3_1_interrupted_capture.py": {
+      "before": null,
+      "after": "913749bdb61d92d25cc37f7d83d381fa6673512e8438767d17ee25d3ec993097"
+    }
+  },
+  "copied_session_eligibility": [
+    {
+      "id": 246,
+      "records": 3352,
+      "capture_status": "interrupted",
+      "termination_reason": "unclean_runtime_shutdown",
+      "sync_status": "complete",
+      "eligible": true,
+      "input_sha256": "5c63be91855bf1fb328f091b8a6ce4a5f925a09369fcbe36a0000cef667dac68",
+      "last_sequence": 3351,
+      "last_timestamp_ms": 837749.580846,
+      "history_ids": [
+        78
+      ],
+      "request_bytes": 380642,
+      "production_inference": false
+    },
+    {
+      "id": 248,
+      "records": 12211,
+      "capture_status": "interrupted",
+      "termination_reason": "unclean_runtime_shutdown",
+      "sync_status": "complete",
+      "eligible": true,
+      "input_sha256": "8ee311773658d67d67a1258ab4f4ca473bf285575b91a5b6de7f826978c613b0",
+      "last_sequence": 12210,
+      "last_timestamp_ms": 3113226.776997,
+      "history_ids": [
+        82
+      ],
+      "request_bytes": 1399998,
+      "production_inference": false
+    },
+    {
+      "id": 249,
+      "records": 9917,
+      "capture_status": "interrupted",
+      "termination_reason": "unclean_runtime_shutdown",
+      "sync_status": "complete",
+      "eligible": true,
+      "input_sha256": "7d129c28d436f375a6ecf3241262895d9b2123e0946565a8ee64b51689f570da",
+      "last_sequence": 9916,
+      "last_timestamp_ms": 2576343.155591,
+      "history_ids": [
+        79,
+        83
+      ],
+      "request_bytes": 1134396,
+      "production_inference": false
+    }
+  ],
+  "copied_raw_schema_decoder_validation": [
+    {
+      "id": 246,
+      "raw_schema_valid": true,
+      "canonical_samples": 3352,
+      "frame_valid_count": 3352,
+      "checksum_valid_count": 3352,
+      "terminal_sample_retained": true,
+      "last_sequence": 3351,
+      "last_timestamp_ms": 837749.580846,
+      "analyzer_inference_executed": false
+    },
+    {
+      "id": 248,
+      "raw_schema_valid": true,
+      "canonical_samples": 12211,
+      "frame_valid_count": 12211,
+      "checksum_valid_count": 12211,
+      "terminal_sample_retained": true,
+      "last_sequence": 12210,
+      "last_timestamp_ms": 3113226.776997,
+      "analyzer_inference_executed": false
+    },
+    {
+      "id": 249,
+      "raw_schema_valid": true,
+      "canonical_samples": 9917,
+      "frame_valid_count": 9917,
+      "checksum_valid_count": 9917,
+      "terminal_sample_retained": true,
+      "last_sequence": 9916,
+      "last_timestamp_ms": 2576343.155591,
+      "analyzer_inference_executed": false
+    }
+  ],
+  "tests": {
+    "drivesafe_passed": 124,
+    "drivesafe_seconds": 85.529,
+    "new_p31_cases": 8,
+    "analyzer_passed": 26,
+    "warnings": [
+      "Existing SQLite fixture unclosed connection ResourceWarning",
+      "Existing Starlette/httpx deprecation"
+    ]
+  },
+  "production_state": {
+    "schema": "b7f2c9a4d610",
+    "sessions": 59,
+    "results": 69,
+    "pending": 0,
+    "selected_242": "analysis_20261024T020849Z_9324ea85a0c5",
+    "affected": [
+      {
+        "id": 246,
+        "capture_status": "interrupted",
+        "termination_reason": "unclean_runtime_shutdown",
+        "sync_status": "complete",
+        "record_count": 3352
+      },
+      {
+        "id": 248,
+        "capture_status": "interrupted",
+        "termination_reason": "unclean_runtime_shutdown",
+        "sync_status": "complete",
+        "record_count": 12211
+      },
+      {
+        "id": 249,
+        "capture_status": "interrupted",
+        "termination_reason": "unclean_runtime_shutdown",
+        "sync_status": "complete",
+        "record_count": 9917
+      }
+    ]
+  },
+  "production_runtime": {
+    "drisafe-web": {
+      "id": "5d2bc49e7715e8be1b2f0cda583d6c5f510ddc8673c9587b0f996b25b9e923dc",
+      "image": "sha256:7bfe65816c9ed399833f59117fab67d0a7542fc3ea3777ff04a4c09bb4493dca",
+      "restarts": 0
+    },
+    "ecu-analyzer": {
+      "id": "db15985c6ad2ce86df24ed5d8cc3f82267c9391009ab92b19733c378ef43fd75",
+      "image": "sha256:9d682df1aa2c24e8197f853a75ffee3ca48accc36f1a4005bce2bddd0830d010",
+      "restarts": 0
+    }
+  },
+  "production_analysis_requests": 0,
+  "p31_deployments": 0,
+  "models_changed": false,
+  "schema_changed": false,
+  "input_contract_changed": false,
+  "automatic_analysis_added": false,
+  "verification_directory": "/tmp/ecuread-p3-1-20261024T074743Z",
+  "protected_copied_data": "/home/hthnh/p3-rollout/20261024T074257Z/p31-copied-sessions.private.json"
+}

@@ -1,0 +1,170 @@
+{
+  "bounded_concurrency": {
+    "input_frames": [
+      117,
+      87
+    ],
+    "large_concurrent_uploads_tested": false,
+    "seconds": 0.8459911909885705,
+    "separate_complete_sessions": true,
+    "simultaneous_clients": 2
+  },
+  "byte_guard": {
+    "file_bytes": 26214401,
+    "no_session_created": true,
+    "status_code": 413
+  },
+  "concurrent_identical_retries": {
+    "reused_original": true,
+    "total_sessions": 3
+  },
+  "created_at": "2026-10-11T01:31:07.606557+00:00",
+  "deployment_limits_changed": false,
+  "final_peak_rss_mib": 355.5703125,
+  "full_upload": {
+    "canonical_samples": 17976,
+    "detectors": {
+      "contextual_battery_voltage": {
+        "anomaly_ratio": 0.00056,
+        "anomaly_window_count": 1,
+        "applicability": {
+          "applicable": true,
+          "missing_features": [],
+          "reason": null
+        },
+        "capability_status": "research_evidence",
+        "detector_id": "contextual_battery_voltage",
+        "detector_local_score": {
+          "column": "contextual_anomaly_score",
+          "direction": "higher_is_more_anomalous",
+          "summary": {
+            "column": "contextual_anomaly_score",
+            "direction": "higher_is_more_anomalous",
+            "max": 5.1428571429,
+            "mean": 0.0880896358477871,
+            "min": 0.0,
+            "most_anomalous": 5.1428571429,
+            "scored_window_count": 1785
+          },
+          "universal_score": false,
+          "value_scope": "per_window"
+        },
+        "detector_local_threshold": {
+          "column": "contextual_anomaly_score",
+          "rule": "robust_z >= threshold maps to contextual anomaly",
+          "source": "contextual_reference",
+          "value": 4.5
+        },
+        "enabled": true,
+        "error": null,
+        "evidence": {
+          "available_columns": [
+            "operating_context",
+            "contextual_status",
+            "contextual_applicable",
+            "contextual_threshold",
+            "contextual_top_feature",
+            "contextual_evidence"
+          ],
+          "metadata": {
+            "applicable_window_count": 1785,
+            "harness_latency_ms": 278.803605,
+            "modeled_contexts": [
+              "idle_closed_throttle",
+              "low_load_running",
+              "mid_load_running"
+            ],
+            "skipped_window_count": 8,
+            "statistical_interpretation": "Contextual score is max robust z-score across verified battery-voltage features. Anomalies are statistical deviations for manual review, not confirmed failures.",
+            "threshold": 4.5
+          },
+          "per_window_values_available_in_analysis_windows": true
+        },
+        "execution_status": "ok",
+        "finding": "positive",
+        "finding_semantics": "session positive when one or more applicable detector windows are anomalous",
+        "model_family": "RobustContextualStats",
+        "model_name": "contextual-battery-voltage",
+        "model_version": "contextual-battery-robust-v1-d80a160236f5",
+        "scored_window_count": 1785,
+        "skip_or_failure_reason": null,
+        "warnings": []
+      },
+      "isolation_forest": {
+        "anomaly_ratio": 0.070273,
+        "anomaly_window_count": 126,
+        "applicability": {
+          "applicable": true,
+          "missing_features": [],
+          "reason": null
+        },
+        "capability_status": "production_baseline",
+        "detector_id": "isolation_forest",
+        "detector_local_score": {
+          "column": "score_sample",
+          "direction": "lower_is_more_anomalous",
+          "summary": {
+            "column": "score_sample",
+            "direction": "lower_is_more_anomalous",
+            "max": -0.364364246952694,
+            "mean": -0.4787633473428256,
+            "min": -0.6273844580938776,
+            "most_anomalous": -0.6273844580938776,
+            "scored_window_count": 1793
+          },
+          "universal_score": false,
+          "value_scope": "per_window"
+        },
+        "detector_local_threshold": {
+          "column": "decision_score",
+          "rule": "prediction=-1 when decision_score < 0",
+          "source": "isolation_forest_decision_function",
+          "value": 0.0
+        },
+        "enabled": true,
+        "error": null,
+        "evidence": {
+          "available_columns": [
+            "score_sample",
+            "decision_score",
+            "window_health_score",
+            "most_unusual_features"
+          ],
+          "metadata": {
+            "harness_latency_ms": 1096.38719,
+            "health_score": 74.76,
+            "most_unusual_features": [
+              "tps_raw_min",
+              "iat_c_constant_signal",
+              "iat_c_max_absolute_diff",
+              "iat_c_range",
+              "iat_c_delta"
+            ],
+            "note": "Health score is an internal normalized score, not a failure probability.",
+            "overall_status": "monitor"
+          },
+          "per_window_values_available_in_analysis_windows": true
+        },
+        "execution_status": "ok",
+        "finding": "positive",
+        "finding_semantics": "session positive when one or more applicable detector windows are anomalous",
+        "model_family": "IsolationForest",
+        "model_name": "ecu-anomaly-baseline",
+        "model_version": "iforest-baseline-20260920T091709Z",
+        "scored_window_count": 1793,
+        "skip_or_failure_reason": null,
+        "warnings": []
+      }
+    },
+    "generated_windows": 1793,
+    "http_seconds": 32.36509394599125,
+    "input_frames": 17976,
+    "peak_rss_mib": 355.5703125
+  },
+  "schema_version": "raw1-bounded-resource-probe-v1",
+  "scope": "One loopback single-worker server; one full 17976-frame upload, two concurrent tiny uploads, two concurrent retries, one 25MiB+1 guard request. Not production capacity certification.",
+  "upload_limit_mib": 25,
+  "verdict": "PASS",
+  "window_size_samples": 50,
+  "window_step_samples": 10
+}

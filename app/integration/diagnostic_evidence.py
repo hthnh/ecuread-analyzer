@@ -185,9 +185,9 @@ def detector_threshold(detector: dict[str, Any]) -> dict[str, Any] | None:
             "rule": "prediction=-1 when decision_score < 0",
         }
     metadata = detector.get("metadata") if isinstance(detector.get("metadata"), dict) else {}
-    if detector.get("detector_id") == "contextual_battery_voltage" and metadata.get("threshold") is not None:
+    if detector.get("detector_id") in {"contextual_battery_voltage", "contextual_speed"} and metadata.get("threshold") is not None:
         return {
-            "column": "contextual_anomaly_score",
+            "column": "speed_anomaly_score" if detector.get("detector_id") == "contextual_speed" else "contextual_anomaly_score",
             "value": metadata.get("threshold"),
             "source": "contextual_reference",
             "rule": "robust_z >= threshold maps to contextual anomaly",
@@ -195,7 +195,10 @@ def detector_threshold(detector: dict[str, Any]) -> dict[str, Any] | None:
     return None
 
 
-def aggregate_from_detectors(detectors: dict[str, dict[str, Any]]) -> dict[str, Any]:
+def aggregate_from_detectors(
+    detectors: dict[str, dict[str, Any]],
+    window_summary: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     applicable = [
         detector
         for detector in detectors.values()
@@ -209,8 +212,11 @@ def aggregate_from_detectors(detectors: dict[str, dict[str, Any]]) -> dict[str, 
     not_applicable = [detector for detector in detectors.values() if detector["finding"] == "not_applicable"]
     state = evidence_state_for(len(applicable), len(positive), len(negative))
     coverage = coverage_status_for(len(applicable), len(detectors))
-    return {
+    aggregate = {
         "schema_version": "diagnostic-evidence-aggregate-v1",
+        "evidence_scope": "session_detector_findings",
+        "coverage_scope": "detectors_applicable_in_at_least_one_window",
+        "counts_scope": "session_detector_findings",
         "evidence_state": state,
         "description": EVIDENCE_STATE_DESCRIPTIONS[state],
         "coverage_status": coverage,
@@ -218,6 +224,9 @@ def aggregate_from_detectors(detectors: dict[str, dict[str, Any]]) -> dict[str, 
         "score_fusion_used": False,
         "counts": {
             "detector_count": len(detectors),
+            "executed_detector_count": sum(detector["execution_status"] == "ok" for detector in detectors.values()),
+            "skipped_detector_count": sum(detector["execution_status"] == "skipped" for detector in detectors.values()),
+            "failed_detector_count": sum(detector["execution_status"] == "failed" for detector in detectors.values()),
             "applicable_detector_count": len(applicable),
             "positive_detector_count": len(positive),
             "negative_detector_count": len(negative),
@@ -231,12 +240,61 @@ def aggregate_from_detectors(detectors: dict[str, dict[str, Any]]) -> dict[str, 
             "unavailable": [detector["detector_id"] for detector in unavailable],
         },
         "detector_disagreement": {
+            "scope": "session_detector_findings",
             "present": state == "detector_disagreement",
             "positive_detector_ids": [detector["detector_id"] for detector in positive],
             "negative_detector_ids": [detector["detector_id"] for detector in negative],
         },
         "event_provenance": None,
     }
+    if window_summary is None:
+        return aggregate
+
+    # Session detector findings mean "positive anywhere". They cannot describe
+    # simultaneous window disagreement: the same detector may be positive and
+    # negative in different windows. Retain that summary with an explicit scope.
+    aggregate["session_detector_summary"] = {
+        key: aggregate[key]
+        for key in ("evidence_scope", "coverage_scope", "evidence_state", "coverage_status", "counts", "detector_ids", "detector_disagreement")
+    }
+    states = window_summary.get("evidence_state_counts") or {}
+    state = next((key for key in (
+        "detector_disagreement", "multiple_detector_evidence", "single_detector_evidence", "no_evidence",
+    ) if int(states.get(key, 0) or 0) > 0), "insufficient_coverage")
+    coverage_counts = window_summary.get("coverage_status_counts") or {}
+    full, partial, none = (int(coverage_counts.get(key, 0) or 0) for key in ("full", "partial", "none"))
+    total = int(window_summary.get("window_count", full + partial + none) or 0)
+    coverage = "full" if total > 0 and full == total else "partial" if full + partial > 0 else "none"
+    disagreement_count = int(states.get("detector_disagreement", window_summary.get("disagreement_windows", 0)) or 0)
+    disagreement_ids = window_summary.get("disagreement_detector_ids") or {}
+    aggregate.update({
+        "evidence_scope": "window_presence_within_session",
+        "evidence_state_policy": "disagreement_then_multiple_then_single_then_no_evidence_then_insufficient_coverage",
+        "evidence_state": state,
+        "description": f"Session contains windows with state {state}; see window_summary for all window counts.",
+        "coverage_scope": "all_configured_detectors_across_all_windows",
+        "coverage_status": coverage,
+        "window_summary": window_summary,
+        "window_coverage": {"window_count": total, "full": full, "partial": partial, "none": none},
+        "detector_disagreement": {
+            "scope": "window_presence_within_session",
+            "present": disagreement_count > 0,
+            "disagreement_window_count": disagreement_count,
+            # Unions of participants in disagreement windows, not a claim that
+            # these detectors disagree in every window or in the same direction.
+            "positive_detector_ids": disagreement_ids.get("positive", []),
+            "negative_detector_ids": disagreement_ids.get("negative", []),
+            "participant_ids_available": bool(disagreement_ids),
+        },
+        "agreement": {
+            "scope": "full_coverage_windows",
+            "full_coverage_agreement_window_count": int(window_summary.get(
+                "all_applicable_agreement_windows", window_summary.get("both_applicable_agreement_windows", 0)
+            ) or 0),
+            "no_score_fusion_or_voting": True,
+        },
+    })
+    return aggregate
 
 
 def unavailable_interpretation(reason: str) -> dict[str, Any]:

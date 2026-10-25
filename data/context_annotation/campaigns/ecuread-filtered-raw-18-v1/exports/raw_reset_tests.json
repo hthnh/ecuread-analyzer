@@ -1,0 +1,10 @@
+{
+  "command": ".venv/bin/pytest -q --junitxml=/tmp/context-raw-reset-tests.xml",
+  "errors": 0,
+  "failures": 0,
+  "generated_at": "2026-10-11T03:22:58.913649+00:00",
+  "passed": 312,
+  "skipped": 0,
+  "tests": 312,
+  "time_s": 51.431
+}

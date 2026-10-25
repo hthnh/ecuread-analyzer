@@ -1,0 +1,962 @@
+--- a/ecuread-analyzer/app/api/analysis.py
++++ b/ecuread-analyzer/app/api/analysis.py
+@@ -1,23 +1,65 @@
+ from __future__ import annotations
++
++import hashlib
++import json
++import re
++from time import monotonic
+ 
+ from fastapi import APIRouter, HTTPException, Query, Request
+ 
+ from app.domain.telemetry import CanonicalTelemetrySession
+ from app.schemas import PaginatedRecords
+-from app.services.analysis_service import AnalysisService
++from app.services.analysis_service import AnalysisService, AnalysisTimeoutError
++from app.api.raw import BoundedRawRoute
++from app.utils.ids import new_analysis_run_id
+ 
+ 
+ router = APIRouter(prefix="/api/v1", tags=["analysis"])
+ 
+ 
+-@router.post("/analysis")
++class BoundedCanonicalRoute(BoundedRawRoute):
++    body_limit_setting = "max_upload_bytes"
++
++
++canonical_router = APIRouter(prefix="/api/v1", tags=["analysis"], route_class=BoundedCanonicalRoute)
++
++
++@canonical_router.post("/analysis")
+ def analyze_canonical_session(request: Request, payload: CanonicalTelemetrySession) -> dict:
+     settings = request.app.state.settings
+     repository = request.app.state.repository
++    key = request.headers.get("Idempotency-Key")
++    cache_path = None
++    reserved = None
++    fingerprint = None
++    if key:
++        if not re.fullmatch(r"[A-Za-z0-9_-]{1,128}", key):
++            raise HTTPException(422, detail="Invalid idempotency key")
++        identity = json.dumps([payload.device_id, payload.session_id, key])
++        cache_path = settings.data_dir / "canonical_request_idempotency" / (hashlib.sha256(identity.encode()).hexdigest()+".json")
++        fingerprint = hashlib.sha256(json.dumps(payload.model_dump(mode="json"), sort_keys=True).encode()).hexdigest()
++        if cache_path.exists():
++            cached = json.loads(cache_path.read_text())
++            if cached["input_sha256"] != fingerprint:
++                raise HTTPException(409, detail={"code":"RAW_IDEMPOTENCY_CONFLICT"})
++            if cached.get("response"):
++                return cached["response"]
++            reserved = cached["analysis_run_id"]
++            completed = repository.read_analysis(reserved)
++            if completed and completed.get("request_summary"):
++                return completed["request_summary"]
++        else:
++            reserved = new_analysis_run_id()
++            repository._write_json(cache_path, {"input_sha256":fingerprint,"analysis_run_id":reserved})
+     try:
+-        output = AnalysisService(settings, repository=repository).analyze(payload, process_with_model=True, persist=True)
++        output = AnalysisService(settings, repository=repository).analyze(payload, process_with_model=True, persist=True,
++            deadline=monotonic()+settings.raw_analysis_timeout_seconds, analysis_run_id=reserved)
++    except AnalysisTimeoutError as exc:
++        raise HTTPException(504, detail={"code":"RAW_ANALYSIS_TIMEOUT","budget_seconds":settings.raw_analysis_timeout_seconds}) from exc
+     except ValueError as exc:
+         raise HTTPException(status_code=422, detail=str(exc)) from exc
++    if cache_path:
++        repository._write_json(cache_path, {"input_sha256":fingerprint,"analysis_run_id":reserved,"response":output.summary})
+     return output.summary
+ 
+ 
+--- a/ecuread-analyzer/app/api/raw.py
++++ b/ecuread-analyzer/app/api/raw.py
+@@ -42,11 +42,13 @@
+ 
+ 
+ class BoundedRawRoute(APIRoute):
++    body_limit_setting = "raw_request_max_bytes"
+     def get_route_handler(self):
+         handler = super().get_route_handler()
+ 
+         async def bounded(request: Request):
+             settings = request.app.state.settings
++            max_bytes = getattr(settings, self.body_limit_setting)
+             with raw_request_slot(settings.data_dir):
+                 length = request.headers.get("content-length")
+                 if length is not None:
+@@ -55,14 +57,14 @@
+                             raise ValueError
+                     except ValueError as exc:
+                         raise HTTPException(400, detail="Invalid Content-Length") from exc
+-                    if int(length) > settings.raw_request_max_bytes:
+-                        raise HTTPException(413, detail={"code": "RAW_REQUEST_TOO_LARGE", "max_bytes": settings.raw_request_max_bytes})
++                    if int(length) > max_bytes:
++                        raise HTTPException(413, detail={"code": "RAW_REQUEST_TOO_LARGE", "max_bytes": max_bytes})
+                 body = bytearray()
+                 try:
+                     async with asyncio.timeout(settings.raw_body_timeout_seconds):
+                         async for chunk in request.stream():
+-                            if len(body) + len(chunk) > settings.raw_request_max_bytes:
+-                                raise HTTPException(413, detail={"code": "RAW_REQUEST_TOO_LARGE", "max_bytes": settings.raw_request_max_bytes})
++                            if len(body) + len(chunk) > max_bytes:
++                                raise HTTPException(413, detail={"code": "RAW_REQUEST_TOO_LARGE", "max_bytes": max_bytes})
+                             body.extend(chunk)
+                 except TimeoutError as exc:
+                     raise HTTPException(408, detail={"code": "RAW_BODY_TIMEOUT", "message": "RAW request body did not arrive within the upload time budget."}) from exc
+--- a/ecuread-analyzer/app/config.py
++++ b/ecuread-analyzer/app/config.py
+@@ -1,6 +1,7 @@
+ from __future__ import annotations
+ 
+ import os
++import math
+ from dataclasses import dataclass, field
+ from pathlib import Path
+ 
+@@ -66,7 +67,7 @@
+     max_upload_mb: int = field(default_factory=lambda: _env_int("MAX_UPLOAD_MB", 25))
+     raw_request_max_bytes: int = 8 * 1024 * 1024
+     raw_body_timeout_seconds: float = 10.0
+-    raw_analysis_timeout_seconds: float = 45.0
++    raw_analysis_timeout_seconds: float = field(default_factory=lambda: _env_float("RAW_ANALYSIS_TIMEOUT_SECONDS", 300.0))
+     window_size_samples: int = field(default_factory=lambda: _env_int("WINDOW_SIZE_SAMPLES", 50))
+     window_step_samples: int = field(default_factory=lambda: _env_int("WINDOW_STEP_SAMPLES", 10))
+     max_window_checksum_error_ratio: float = field(
+@@ -86,6 +87,10 @@
+         default_factory=lambda: _env_list("CORS_ORIGINS", ["http://localhost:3000", "http://localhost:5173"])
+     )
+     validation_limits: SignalLimits = field(default_factory=SignalLimits)
++
++    def __post_init__(self):
++        if not math.isfinite(self.raw_analysis_timeout_seconds) or self.raw_analysis_timeout_seconds <= 0:
++            raise ValueError("RAW_ANALYSIS_TIMEOUT_SECONDS must be finite and positive")
+ 
+     @property
+     def max_upload_bytes(self) -> int:
+--- a/ecuread-analyzer/app/main.py
++++ b/ecuread-analyzer/app/main.py
+@@ -43,6 +43,7 @@
+     app.include_router(uploads.router)
+     app.include_router(sessions.router)
+     app.include_router(analysis.router)
++    app.include_router(analysis.canonical_router)
+     app.include_router(raw.router)
+     app.include_router(model.router)
+     return app
+--- a/ecuread-analyzer/docker-compose.yml
++++ b/ecuread-analyzer/docker-compose.yml
+@@ -11,6 +11,7 @@
+       DATA_DIR: /app/data
+       MODEL_DIR: /app/data/models
+       MAX_UPLOAD_MB: 25
++      RAW_ANALYSIS_TIMEOUT_SECONDS: ${RAW_ANALYSIS_TIMEOUT_SECONDS:-300}
+       WINDOW_SIZE_SAMPLES: 50
+       WINDOW_STEP_SAMPLES: 10
+       ISOLATION_N_ESTIMATORS: 200
+--- /dev/null
++++ b/ecuread-analyzer/tests/test_p3_2_execution_budget.py
+@@ -0,0 +1,41 @@
++from dataclasses import replace
++from unittest.mock import patch
++import pytest
++from fastapi.testclient import TestClient
++from app.main import create_app
++from app.config import Settings
++from app.services.analysis_service import AnalysisService
++from tests.test_canonical_pipeline import make_canonical_session
++
++
++def test_execution_budget_is_configurable_and_not_45_seconds(monkeypatch):
++    monkeypatch.setenv('RAW_ANALYSIS_TIMEOUT_SECONDS','321')
++    assert Settings().raw_analysis_timeout_seconds==321
++
++
++def test_canonical_attempt_is_idempotent_after_app_restart_and_shares_admission(settings):
++    payload=make_canonical_session().model_dump(mode='json');headers={'Idempotency-Key':'same-canonical'}
++    with TestClient(create_app(settings)) as client:
++        first=client.post('/api/v1/analysis',json=payload,headers=headers)
++    assert first.status_code==200
++    with TestClient(create_app(settings)) as client,patch.object(AnalysisService,'analyze',side_effect=AssertionError('must recover completed analysis')):
++        assert client.post('/api/v1/analysis',json=payload,headers=headers).json()==first.json()
++        changed={**payload,'vehicle_id':'changed'}
++        assert client.post('/api/v1/analysis',json=changed,headers=headers).status_code==409
++
++
++def test_canonical_budget_and_input_limits_remain_enforced(settings):
++    app=create_app(replace(settings,raw_analysis_timeout_seconds=1e-9))
++    with TestClient(app) as client:
++        response=client.post('/api/v1/analysis',json=make_canonical_session().model_dump(mode='json'))
++    assert response.status_code==504
++
++
++def test_elapsed_60_seconds_is_accepted_by_new_budget_but_rejected_by_old_budget(settings):
++    # Advance only the deadline clock, never model inputs or detector outputs.
++    from tests.test_raw_request_limits import payload
++    for budget,expected in [(45,504),(300,200)]:
++        app=create_app(replace(settings,data_dir=settings.data_dir/str(budget),raw_analysis_timeout_seconds=budget))
++        with TestClient(app) as client,patch('app.api.raw.monotonic',return_value=1000),patch('app.services.analysis_service.monotonic',return_value=1060):
++            response=client.post('/api/v1/raw/decode-analyze',json=payload())
++        assert response.status_code==expected
+--- a/drisafe/.env.example
++++ b/drisafe/.env.example
+@@ -18,7 +18,12 @@
+ LIVE_RAW_FRAME_MAX_CHARS=256
+ CONTROL_POLL_STALE_SECONDS=10
+ ML_API_BASE_URL=
+-ML_API_TIMEOUT_SECONDS=60
++ML_API_TIMEOUT_SECONDS=360
++HARNESS_ASYNC_ENABLED=true
++HARNESS_STATE_DIR=/app/instance/manual-analysis
++HARNESS_MAX_PENDING=2
++HARNESS_CLAIM_LEASE_SECONDS=420
++GUNICORN_TIMEOUT_SECONDS=420
+ ML_MODEL_NAME=Isolation Forest
+ ML_MODEL_VERSION=
+ ML_TRAINING_DATA_VERSION=
+--- a/drisafe/Dockerfile
++++ b/drisafe/Dockerfile
+@@ -11,4 +11,4 @@
+ USER app
+ 
+ EXPOSE 5000
+-CMD ["sh", "-c", "flask --app app db upgrade && gunicorn --bind 0.0.0.0:5000 --worker-class gthread --workers ${GUNICORN_WORKERS:-2} --threads ${GUNICORN_THREADS:-8} --timeout 120 --graceful-timeout 30 --keep-alive 5 --access-logfile - 'app:create_app()'"]
++CMD ["sh", "-c", "exec gunicorn --bind 0.0.0.0:5000 --worker-class gthread --workers ${GUNICORN_WORKERS:-2} --threads ${GUNICORN_THREADS:-8} --timeout ${GUNICORN_TIMEOUT_SECONDS:-420} --graceful-timeout 30 --keep-alive 5 --access-logfile - 'app:create_app()'"]
+--- a/drisafe/app.py
++++ b/drisafe/app.py
+@@ -59,6 +59,8 @@
+     register_cli(app)
+     register_errors(app)
+     init_localization(app)
++    from services.manual_analysis import init_worker
++    init_worker(app)
+ 
+     @app.context_processor
+     def inject_demo_mode():
+--- a/drisafe/config.py
++++ b/drisafe/config.py
+@@ -68,7 +68,12 @@
+     LIVE_RAW_FRAME_MAX_CHARS = int(os.getenv("LIVE_RAW_FRAME_MAX_CHARS", 256))
+     CONTROL_POLL_STALE_SECONDS = int(os.getenv("CONTROL_POLL_STALE_SECONDS", 10))
+     ML_API_BASE_URL = os.getenv("ML_API_BASE_URL", "").rstrip("/")
+-    ML_API_TIMEOUT_SECONDS = float(os.getenv("ML_API_TIMEOUT_SECONDS", "60"))
++    ML_API_TIMEOUT_SECONDS = float(os.getenv("ML_API_TIMEOUT_SECONDS", "360"))
++    HARNESS_ASYNC_ENABLED = _bool_env("HARNESS_ASYNC_ENABLED", True)
++    HARNESS_STATE_DIR = os.getenv("HARNESS_STATE_DIR")
++    HARNESS_WORKER_ENABLED = _bool_env("HARNESS_WORKER_ENABLED", True)
++    HARNESS_MAX_PENDING = int(os.getenv("HARNESS_MAX_PENDING", "2"))
++    HARNESS_CLAIM_LEASE_SECONDS = float(os.getenv("HARNESS_CLAIM_LEASE_SECONDS", str(ML_API_TIMEOUT_SECONDS + 60)))
+     ML_MODEL_NAME = os.getenv("ML_MODEL_NAME", "Isolation Forest")
+     ML_MODEL_VERSION = os.getenv("ML_MODEL_VERSION", "")
+     ML_TRAINING_DATA_VERSION = os.getenv("ML_TRAINING_DATA_VERSION", "")
+@@ -88,6 +93,10 @@
+ 
+     @classmethod
+     def validate(cls) -> None:
++        if cls.ENV_NAME == "production" and cls.HARNESS_ASYNC_ENABLED and not cls.HARNESS_STATE_DIR:
++            raise RuntimeError("HARNESS_STATE_DIR must name a persistent shared directory in production")
++        if cls.ML_API_TIMEOUT_SECONDS <= 0 or cls.HARNESS_CLAIM_LEASE_SECONDS <= cls.ML_API_TIMEOUT_SECONDS or cls.HARNESS_MAX_PENDING < 1:
++            raise RuntimeError("Harness timeout, claim lease and admission bounds are incompatible")
+         if cls.ENV_NAME == "production" and not os.getenv("SECRET_KEY"):
+             raise RuntimeError("SECRET_KEY must be set when APP_ENV=production")
+         if cls.ENV_NAME == "production" and cls.SQLALCHEMY_DATABASE_URI.startswith("sqlite:"):
+--- a/drisafe/deploy/drisafe.nginx.conf
++++ b/drisafe/deploy/drisafe.nginx.conf
+@@ -17,6 +17,8 @@
+     ssl_certificate_key /etc/letsencrypt/live/drisafe.haithinh.top/privkey.pem;
+ 
+     client_max_body_size 2m;
++    proxy_read_timeout 420s;
++    proxy_send_timeout 420s;
+ 
+     location ~ ^/api/devices/[^/]+/live/stream$ {
+         proxy_pass http://drisafe-web:5000;
+--- a/drisafe/deploy/npm-advanced.conf
++++ b/drisafe/deploy/npm-advanced.conf
+@@ -5,6 +5,8 @@
+ # NPM for this host, and let Cloudflare provide the browser-facing HTTPS scheme.
+ 
+ client_max_body_size 2m;
++proxy_read_timeout 420s;
++proxy_send_timeout 420s;
+ 
+ # Optional technical diagnostic stream. The main cloud dashboard is historical,
+ # but this keeps the existing device-specific Live Preview SSE endpoint healthy
+--- a/drisafe/docker-compose.yml
++++ b/drisafe/docker-compose.yml
+@@ -53,7 +53,12 @@
+       LIVE_RAW_FRAME_MAX_CHARS: ${LIVE_RAW_FRAME_MAX_CHARS:-256}
+       CONTROL_POLL_STALE_SECONDS: ${CONTROL_POLL_STALE_SECONDS:-10}
+       ML_API_BASE_URL: ${ML_API_BASE_URL:-}
+-      ML_API_TIMEOUT_SECONDS: ${ML_API_TIMEOUT_SECONDS:-60}
++      ML_API_TIMEOUT_SECONDS: ${ML_API_TIMEOUT_SECONDS:-360}
++      HARNESS_ASYNC_ENABLED: ${HARNESS_ASYNC_ENABLED:-true}
++      HARNESS_STATE_DIR: /app/instance/manual-analysis
++      HARNESS_MAX_PENDING: ${HARNESS_MAX_PENDING:-2}
++      HARNESS_CLAIM_LEASE_SECONDS: ${HARNESS_CLAIM_LEASE_SECONDS:-420}
++      GUNICORN_TIMEOUT_SECONDS: ${GUNICORN_TIMEOUT_SECONDS:-420}
+       ML_MODEL_NAME: ${ML_MODEL_NAME:-Isolation Forest}
+       ML_MODEL_VERSION: ${ML_MODEL_VERSION:-}
+       ML_TRAINING_DATA_VERSION: ${ML_TRAINING_DATA_VERSION:-}
+@@ -75,6 +80,8 @@
+       GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+       GUNICORN_WORKERS: ${GUNICORN_WORKERS:-2}
+       GUNICORN_THREADS: ${GUNICORN_THREADS:-8}
++    volumes:
++      - ./instance/manual-analysis:/app/instance/manual-analysis
+     depends_on:
+       db:
+         condition: service_healthy
+--- a/drisafe/integrations/analyzer_client.py
++++ b/drisafe/integrations/analyzer_client.py
+@@ -30,7 +30,7 @@
+ 
+         started = time.perf_counter()
+         try:
+-            response = requests.get(f"{self.base_url}/health", timeout=self.timeout_seconds)
++            response = requests.get(f"{self.base_url}/health", timeout=min(self.timeout_seconds, 3))
+             latency_ms = round((time.perf_counter() - started) * 1000)
+             response.raise_for_status()
+             payload = response.json() if response.headers.get("content-type", "").startswith("application/json") else {}
+@@ -53,23 +53,24 @@
+             **payload,
+         }
+ 
+-    def analyze_session(self, canonical_session) -> dict[str, Any]:
++    def analyze_session(self, canonical_session, *, idempotency_key=None) -> dict[str, Any]:
+         if not self.configured:
+             raise AnalyzerClientError("ML API is not configured.")
+         payload = canonical_session.to_dict() if hasattr(canonical_session, "to_dict") else canonical_session
+-        return self._post_json("/api/v1/analysis", payload)
++        return self._post_json("/api/v1/analysis", payload, idempotency_key=idempotency_key) if idempotency_key else self._post_json("/api/v1/analysis", payload)
+ 
+     def decode_analyze_raw_session(self, raw_session: dict[str, Any]) -> dict[str, Any]:
+         if not self.configured:
+             raise AnalyzerClientError("ML API is not configured.")
+         return self._post_json("/api/v1/raw/decode-analyze", raw_session)
+ 
+-    def _post_json(self, path: str, payload: dict[str, Any]) -> dict[str, Any]:
++    def _post_json(self, path: str, payload: dict[str, Any], *, idempotency_key=None) -> dict[str, Any]:
+         try:
+             response = requests.post(
+                 f"{self.base_url}{path}",
+                 json=payload,
+                 timeout=self.timeout_seconds,
++                **({'headers':{'Idempotency-Key':idempotency_key}} if idempotency_key else {}),
+             )
+             response.raise_for_status()
+         except requests.HTTPError as exc:
+@@ -88,7 +89,7 @@
+             retry_after = min(180, max(1, int(retry_after))) if retry_after and retry_after.isdigit() else None
+             raise AnalyzerClientError(f"analysis request failed: HTTP {response.status_code}{detail}",
+                 status_code=response.status_code, code=code, retry_after=retry_after,
+-                retryable=response.status_code in (408, 429, 502, 503, 504)) from exc
++                retryable=response.status_code in (408, 429, 500, 502, 503, 504)) from exc
+         except requests.Timeout as exc:
+             raise AnalyzerClientError(
+                 f"Analyzer timed out after {self.timeout_seconds:g} seconds. "
+@@ -96,8 +97,8 @@
+                 code="ANALYZER_TIMEOUT", retryable=True,
+             ) from exc
+         except requests.RequestException as exc:
+-            raise AnalyzerClientError(f"analysis request failed: {exc.__class__.__name__}") from exc
++            raise AnalyzerClientError(f"analysis request failed: {exc.__class__.__name__}", code="ANALYZER_CONNECTION", retryable=True) from exc
+         try:
+             return response.json()
+         except ValueError as exc:
+-            raise AnalyzerClientError("analysis response was not valid JSON") from exc
++            raise AnalyzerClientError("analysis response was not valid JSON", code="ANALYZER_RESPONSE", retryable=True) from exc
+--- a/drisafe/routes/dashboard.py
++++ b/drisafe/routes/dashboard.py
+@@ -613,11 +613,15 @@
+     if is_demo_mode():
+         return _demo_forbidden("Demo analysis is prerecorded. Sign in to re-run analysis on your own sessions.")
+     ride_session = _session_by_pk(session_pk)
+-    snapshot = analysis_snapshot(ride_session)
+     payload = request.get_json(silent=True) or {}
+     submission_key = payload.get("request_id") if isinstance(payload, dict) else None
+     if submission_key is not None and (not isinstance(submission_key, str) or not 1 <= len(submission_key) <= 128 or not all(c.isascii() and (c.isalnum() or c in "-_") for c in submission_key)):
+         return jsonify({"state": "failed", "error": "request_id must be 1-128 ASCII letters, digits, hyphens or underscores."}), 400
++    if current_app.config.get('HARNESS_ASYNC_ENABLED'):
++        from services.manual_analysis import enqueue
++        result, status_code = enqueue(ride_session, submission_key)
++        return jsonify(result), status_code
++    snapshot = analysis_snapshot(ride_session)
+     result = submit_session_to_analyzer(ride_session.id, force=True, submission_key=submission_key)
+     if result["state"] != "completed":
+         response = jsonify({
+@@ -643,6 +647,16 @@
+     })
+ 
+ 
++@dashboard_bp.get("/api/sessions/<int:session_pk>/analysis/re-run/status")
++@demo_or_login_required
++def rerun_analysis_status_api(session_pk):
++    if is_demo_mode():
++        return _demo_forbidden("Demo Mode is read-only.")
++    ride_session = _session_by_pk(session_pk)
++    from services.manual_analysis import status
++    return _no_store_json(status(ride_session))
++
++
+ @dashboard_bp.get("/analysis")
+ @demo_or_login_required
+ def analysis():
+--- a/drisafe/services/analysis_submission.py
++++ b/drisafe/services/analysis_submission.py
+@@ -6,7 +6,7 @@
+ from datetime import timedelta
+ from sqlalchemy import or_
+ 
+-from flask import current_app
++from flask import current_app, has_app_context
+ 
+ from extensions import db
+ from integrations.analyzer_client import AnalyzerClient, AnalyzerClientError
+@@ -21,6 +21,10 @@
+     """Capture termination and synchronization are separate from input validity."""
+     return (ride_session.capture_status in TERMINAL_ANALYSIS_CAPTURE_STATES
+             and ride_session.sync_status == "complete")
++
++
++def analysis_claim_lease_seconds() -> float:
++    return float(current_app.config.get("HARNESS_CLAIM_LEASE_SECONDS", 420)) if has_app_context() else 420
+ 
+ 
+ def analyzer_client_from_config() -> AnalyzerClient:
+@@ -217,7 +221,7 @@
+     if updated is not None and updated.tzinfo is None:
+         updated = updated.replace(tzinfo=timezone.utc)
+     processing = ride_session.analysis_status in ("pending", "submitted") and (
+-        updated is None or updated >= utc_now() - timedelta(seconds=180)
++        updated is None or updated >= utc_now() - timedelta(seconds=analysis_claim_lease_seconds())
+     )
+     return {"eligible": reason is None, "processing": processing,
+             "message": reason or ("rerun.processing" if processing else "rerun.ready")}
+@@ -492,7 +496,9 @@
+     }
+ 
+ 
+-def _submit_canonical_session_to_analyzer(ride_session: RideSession, client: AnalyzerClient) -> dict:
++def _submit_canonical_session_to_analyzer(ride_session: RideSession, client: AnalyzerClient, *, submission_key=None) -> dict:
++    previous_status = ride_session.analysis_status
++    previous_updated_at = ride_session.updated_at
+     if not client.configured:
+         ride_session.analysis_status = "failed"
+         ride_session.updated_at = utc_now()
+@@ -514,7 +520,7 @@
+         for name in ("ecu_profile_id", "decoder_id", "decoder_version", "telemetry_schema_version"):
+             if not getattr(ride_session, name):
+                 raise AnalyzerClientError(f"Historical session lacks {name}; cannot select a deterministic decoder.")
+-        response = client.analyze_session(request)
++        response = client.analyze_session(request, idempotency_key=submission_key) if submission_key else client.analyze_session(request)
+         analysis = _validate_canonical_analysis_response(response)
+         _validate_selected_model(analysis)
+         for name in ("decoder_id", "decoder_version", "ecu_profile_id", "telemetry_schema_version"):
+@@ -522,10 +528,10 @@
+                 raise AnalyzerClientError(f"analysis.{name} conflicts with stored canonical provenance")
+     except AnalyzerClientError as exc:
+         ride_session = db.session.get(RideSession, ride_session.id)
+-        ride_session.analysis_status = "failed"
+-        ride_session.updated_at = utc_now()
++        ride_session.analysis_status = previous_status if exc.retryable else "failed"
++        ride_session.updated_at = previous_updated_at if exc.retryable else utc_now()
+         db.session.commit()
+-        return {"state": "failed", "error": str(exc)}
++        return {"state": "busy" if exc.status_code == 429 else "failed", "error": str(exc), "retryable":exc.retryable}
+ 
+     ride_session = db.session.get(RideSession, ride_session.id)
+     summary = dict(analysis)
+@@ -534,6 +540,7 @@
+     summary.setdefault("decoder_id", ride_session.decoder_id)
+     summary.setdefault("decoder_version", ride_session.decoder_version)
+     summary["reanalysis"] = _run_provenance(ride_session, request, source="stored_canonical", canonical=request)
++    summary["reanalysis"]["manual_request_id"] = submission_key
+     _store_analysis_success(ride_session, summary, canonical=request)
+     db.session.commit()
+     return {
+@@ -544,7 +551,7 @@
+     }
+ 
+ 
+-def submit_session_to_analyzer(ride_session_id: int, *, force: bool = False, submission_key: str | None = None) -> dict:
++def submit_session_to_analyzer(ride_session_id: int, *, force: bool = False, submission_key: str | None = None, recover_claim: bool = False) -> dict:
+     ride_session = db.session.get(RideSession, ride_session_id)
+     if ride_session is None:
+         raise AnalyzerClientError(f"session {ride_session_id} was not found")
+@@ -568,7 +575,7 @@
+     if ride_session.source_type == PI_SOURCE_TYPE:
+         evidence = reanalysis_evidence(ride_session)
+         if not evidence["raw_reconstructible"]:
+-            return _submit_canonical_session_to_analyzer(ride_session, client)
++            return _submit_canonical_session_to_analyzer(ride_session, client, submission_key=submission_key)
+     elif ride_session.source_type != "esp_raw" or ride_session.raw_representation != "legacy29_ff5":
+         ride_session.analysis_status = "failed" if force else ride_session.analysis_status
+         ride_session.updated_at = utc_now()
+@@ -592,7 +599,8 @@
+     previous_run_id = ride_session.analysis_run_id
+     claimed = RideSession.query.filter(
+         RideSession.id == ride_session_id,
+-        or_(RideSession.analysis_status.notin_(("pending", "submitted")), RideSession.updated_at < lease_start - timedelta(seconds=180)),
++        or_(RideSession.analysis_status.notin_(("pending", "submitted")), RideSession.updated_at < lease_start - timedelta(seconds=analysis_claim_lease_seconds()),
++            RideSession.analysis_run_id == previous_run_id if recover_claim else False),
+     ).update({RideSession.analysis_status: "pending", RideSession.updated_at: lease_start}, synchronize_session=False)
+     db.session.commit()
+     if not claimed:
+@@ -619,11 +627,12 @@
+         ride_session = db.session.get(RideSession, ride_session_id)
+         # A late failure must not overwrite another completed result.
+         busy = exc.status_code == 429 and exc.code == "RAW_ANALYSIS_BUSY"
++        restore = busy or exc.retryable
+         current_app.logger.warning("Harness rerun session=%s upstream_status=%s code=%s retryable=%s",
+                                    ride_session_id, exc.status_code, exc.code, exc.retryable)
+         RideSession.query.filter_by(id=ride_session_id, analysis_status="submitted", analysis_run_id=previous_run_id).update(
+-            {RideSession.analysis_status: previous_status if busy else "failed",
+-             RideSession.updated_at: previous_updated_at if busy else utc_now()}, synchronize_session=False)
++            {RideSession.analysis_status: previous_status if restore else "failed",
++             RideSession.updated_at: previous_updated_at if restore else utc_now()}, synchronize_session=False)
+         db.session.commit()
+         return {"state": "busy" if busy else "failed", "error": str(exc),
+                 "error_code": exc.code, "upstream_status": exc.status_code,
+--- a/drisafe/static/js/dashboardApi.js
++++ b/drisafe/static/js/dashboardApi.js
+@@ -23,6 +23,7 @@
+             error.status = response.status;
+             error.retryAfter = payload.retry_after;
+             error.retryable = payload.retryable;
++            error.messageKey = payload.message_key;
+             throw error;
+         }
+         return payload;
+@@ -55,6 +56,9 @@
+         devices() {
+             return request("/api/devices");
+         },
++        rerunStatus(sessionId) {
++            return request(`/api/sessions/${sessionId}/analysis/re-run/status`);
++        },
+         rerunAnalysis(sessionId, requestId) {
+             return request(`/api/sessions/${sessionId}/analysis/re-run`, {
+                 method: "POST",
+--- a/drisafe/static/js/sessionDetail.js
++++ b/drisafe/static/js/sessionDetail.js
+@@ -9,30 +9,48 @@
+     }));
+     document.querySelectorAll(".js-session-rerun").forEach((button) => {
+         const state = button.parentElement.querySelector(".js-session-rerun-state");
++        const storageKey = `drisafe.rerun.${button.dataset.session}`;
++        let timer = null;
++        function render(payload) {
++            if (timer) clearTimeout(timer);
++            timer = null;
++            const active = ["queued", "running"].includes(payload.state);
++            button.disabled = active;
++            if (state) { state.textContent = t(payload.message_key || "harness.retryable"); state.removeAttribute('title'); }
++            if (payload.request_id && payload.state !== 'completed') sessionStorage.setItem(storageKey, payload.request_id);
++            if (payload.state === 'completed') {
++                sessionStorage.removeItem(storageKey);
++                if (payload.analysis_run_id && payload.analysis_run_id !== button.dataset.selectedRun) {
++                    window.location.reload(); return;
++                }
++            }
++            if (active) timer = setTimeout(refresh, 2000);
++            if (payload.state === 'busy') {
++                button.disabled = true;
++                timer = setTimeout(() => { button.disabled = false; }, (payload.retry_after || 5)*1000);
++            }
++        }
++        async function refresh() {
++            try { render(await window.drisafeApi.rerunStatus(button.dataset.session)); }
++            catch (_) {
++                // GET polling can retry safely; it never launches inference.
++                if (state) state.textContent = t('harness.reconnecting');
++                timer = setTimeout(refresh, 5000);
++            }
++        }
+         button.addEventListener("click", async () => {
+             button.disabled = true;
+-            if (state) state.textContent = t("Re-analysis running");
+-            try {
+-                const storageKey = `drisafe.rerun.${button.dataset.session}`;
+-                const requestId = sessionStorage.getItem(storageKey) || crypto.randomUUID();
+-                sessionStorage.setItem(storageKey, requestId);
+-                const payload = await window.drisafeApi.rerunAnalysis(button.dataset.session, requestId);
+-                if (payload.state === "completed") sessionStorage.removeItem(storageKey);
+-                if (state) state.textContent = t(payload.state === "completed" ? "Completed. Refreshing..." : payload.state);
+-                window.location.reload();
+-            } catch (error) {
+-                if (state) {
+-                    state.textContent = t(error.state === "busy" ? "rerun.busy" : error.state === "running" ? "rerun.processing"
+-                        : error.code === "ANALYZER_TIMEOUT" ? "Result unconfirmed. Retry safely."
+-                        : error.state === "failed" ? "Re-analysis failed"
+-                        : "Result unconfirmed. Retry safely.");
+-                    state.title = t(error.message);
+-                }
+-                if (error.state === "running") button.disabled = true;
+-                else if (error.state === "busy") setTimeout(() => { button.disabled = false; }, (error.retryAfter || 5) * 1000);
+-                else button.disabled = false;
+-            }
+-        });
++            if (state) state.textContent = t('harness.queued');
++            const requestId = sessionStorage.getItem(storageKey) || crypto.randomUUID();
++            sessionStorage.setItem(storageKey, requestId);
++            try { render(await window.drisafeApi.rerunAnalysis(button.dataset.session, requestId)); }
++            catch (error) {
++                if (error.messageKey) render({state:error.state, message_key:error.messageKey,
++                    retry_after:error.retryAfter, request_id:requestId});
++                else { if (state) state.textContent = t('harness.reconnecting'); timer=setTimeout(refresh,1000); }
++            }
++        });
++        refresh();
+     });
+ 
+     const root = document.getElementById("session-workbench");
+--- a/drisafe/static/locales/messages.json
++++ b/drisafe/static/locales/messages.json
+@@ -3815,6 +3815,38 @@
+     "capture.interrupted_context": {
+       "en": "Recording can end abruptly when ignition or power is switched off. Saved data can still be analyzed once synchronization and input checks pass. Events near the end remain visible; an abrupt ending alone does not establish a component fault.",
+       "vi": "Việc ghi dữ liệu có thể kết thúc đột ngột khi tắt khóa điện hoặc nguồn. Dữ liệu đã lưu vẫn có thể được phân tích sau khi đồng bộ đầy đủ và đáp ứng kiểm tra đầu vào. Các sự kiện gần cuối phiên vẫn được giữ lại; chỉ riêng việc kết thúc đột ngột không đủ để kết luận bộ phận bị hỏng."
++    },
++    "harness.idle": {
++      "en": "Ready for manual Harness analysis.",
++      "vi": "Sẵn sàng phân tích Harness thủ công."
++    },
++    "harness.queued": {
++      "en": "Harness analysis is queued. You may leave this page.",
++      "vi": "Phân tích Harness đang chờ xử lý. Bạn có thể rời trang này."
++    },
++    "harness.running": {
++      "en": "Harness analysis is running. You may leave or reload this page.",
++      "vi": "Harness đang phân tích. Bạn có thể rời hoặc tải lại trang này."
++    },
++    "harness.completed": {
++      "en": "Harness analysis completed.",
++      "vi": "Phân tích Harness đã hoàn tất."
++    },
++    "harness.retryable": {
++      "en": "Analysis was interrupted. Retry safely to recover the same attempt; the previous result is preserved.",
++      "vi": "Phân tích bị gián đoạn. Thử lại an toàn để khôi phục cùng yêu cầu; kết quả trước vẫn được giữ lại."
++    },
++    "harness.invalid": {
++      "en": "Stored input could not be analyzed. Review synchronization and input validity before retrying.",
++      "vi": "Không thể phân tích dữ liệu đã lưu. Hãy kiểm tra đồng bộ và tính hợp lệ của đầu vào trước khi thử lại."
++    },
++    "harness.busy": {
++      "en": "The Analyzer is busy. Wait, then retry the same request.",
++      "vi": "Analyzer đang bận. Vui lòng chờ rồi thử lại cùng yêu cầu."
++    },
++    "harness.reconnecting": {
++      "en": "Reconnecting to the analysis status. No new analysis is being submitted.",
++      "vi": "Đang kết nối lại để kiểm tra trạng thái. Hệ thống không gửi yêu cầu phân tích mới."
+     }
+   },
+   "aliases": {
+--- a/drisafe/templates/session_detail.html
++++ b/drisafe/templates/session_detail.html
+@@ -20,7 +20,7 @@
+ {% if not demo_mode %}
+ <div class="button-row harness-rerun-action">
+     {% if analysis.can_rerun %}
+-    <button class="secondary js-session-rerun" type="button" data-session="{{ session.id }}" {% if analysis.rerun.processing %}disabled{% endif %}>{{ _('rerun.action') }}</button>
++    <button class="secondary js-session-rerun" type="button" data-session="{{ session.id }}" data-selected-run="{{ analysis.analysis_run_id_external or '' }}" {% if analysis.rerun.processing %}disabled{% endif %}>{{ _('rerun.action') }}</button>
+     {% endif %}
+     <span class="muted js-session-rerun-state" aria-live="polite">{{ _(analysis.rerun.message) }}</span>
+ </div>
+--- a/drisafe/tests/test_app.py
++++ b/drisafe/tests/test_app.py
+@@ -39,6 +39,9 @@
+     def setUp(self):
+         self.app = create_app({
+             "TESTING": True,
++            "HARNESS_ASYNC_ENABLED": False,
++            "HARNESS_WORKER_ENABLED": False,
++            "HARNESS_CLAIM_LEASE_SECONDS": 180,
+             "SQLALCHEMY_DATABASE_URI": "sqlite://",
+             "WTF_CSRF_ENABLED": False,
+             "SECRET_KEY": "test-only-secret",
+--- /dev/null
++++ b/drisafe/services/manual_analysis.py
+@@ -0,0 +1,166 @@
++"""Durable bounded manual attempts executed inside existing Gunicorn workers.
++
++A shared persistent directory is authoritative; threads are only executors.
++No RAW/canonical body is copied here. Only explicit manual attempts are read.
++"""
++from contextlib import contextmanager
++import fcntl
++import json
++import os
++from pathlib import Path
++import tempfile
++import threading
++import time
++import uuid
++
++from flask import current_app
++from extensions import db
++from models import AnalysisResult, RideSession
++from services.analysis_submission import manual_rerun_state, _stored_records, submit_session_to_analyzer
++
++ACTIVE = {'queued', 'running'}
++KEYS = {'idle':'harness.idle', 'queued':'harness.queued', 'running':'harness.running',
++        'completed':'harness.completed', 'retryable':'harness.retryable', 'invalid':'harness.invalid',
++        'busy':'harness.busy'}
++
++
++def directory():
++    path = Path(current_app.config.get('HARNESS_STATE_DIR') or Path(current_app.instance_path)/'manual-analysis')
++    path.mkdir(parents=True, exist_ok=True, mode=0o700)
++    return path
++
++
++@contextmanager
++def lock(name, *, blocking=True):
++    with (directory()/name).open('a') as handle:
++        acquired=False
++        try:
++            try:
++                fcntl.flock(handle,fcntl.LOCK_EX | (0 if blocking else fcntl.LOCK_NB));acquired=True
++            except BlockingIOError:
++                pass
++            yield acquired
++        finally:
++            if acquired:fcntl.flock(handle,fcntl.LOCK_UN)
++
++
++def read(pk):
++    try:return json.loads((directory()/f'{int(pk)}.json').read_text())
++    except FileNotFoundError:return None
++
++
++def write(job):
++    # Atomic replace + fsync; a killed process cannot expose half-written state.
++    path=directory()/f"{job['session_pk']}.json"
++    fd,name=tempfile.mkstemp(prefix='.attempt-',dir=path.parent)
++    try:
++        with os.fdopen(fd,'w') as dest:
++            json.dump(job,dest);dest.flush();os.fsync(dest.fileno())
++        os.replace(name,path)
++        parent=os.open(path.parent,os.O_RDONLY)
++        try:os.fsync(parent)
++        finally:os.close(parent)
++    finally:
++        if os.path.exists(name):os.unlink(name)
++
++
++def view(job):
++    if job is None:return {'state':'idle','message_key':KEYS['idle'],'retryable':False}
++    return {key:job[key] for key in ('request_id','state','analysis_run_id','updated_at') if key in job} | {
++        'message_key':KEYS[job['state']], 'retryable':job['state'] in ('retryable','busy'),
++        'retry_after':5 if job['state'] in ACTIVE or job['state']=='busy' else None}
++
++
++def status(ride):
++    job=read(ride.id)
++    # A deleted/reimported numeric PK must not reveal/recover another capture.
++    if job and job['session_id']!=ride.session_id:return view(None)
++    return view(job)
++
++
++def enqueue(ride, request_id=None):
++    if not current_app.config.get('ML_API_BASE_URL'):
++        return {'state':'retryable','request_id':request_id,'message_key':KEYS['retryable'],'retryable':True},503
++    # Reuse the existing durable successful-result identity before queueing.
++    if request_id:
++        for result in AnalysisResult.query.filter_by(ride_session_id=ride.id).all():
++            if ((result.result_summary or {}).get('reanalysis') or {}).get('manual_request_id')==request_id:
++                return {'state':'completed','request_id':request_id,'analysis_run_id':result.analysis_run_id,
++                        'message_key':KEYS['completed'],'retryable':False},200
++    with lock('.queue.lock'):
++        job=read(ride.id)
++        if job and job['session_id']==ride.session_id:
++            if job['state'] in ACTIVE:return view(job),202
++            if job['request_id']==request_id and job['state']=='completed':return view(job),200
++            if job['state']=='retryable' and job['request_id']!=request_id:
++                # An unconfirmed old attempt must be recovered before a new one.
++                return view(job),200
++        state=manual_rerun_state(ride,_stored_records(ride))
++        if not state['eligible']:
++            return {'state':'invalid','message_key':state['message'],'retryable':False},409
++        pending=sum(json.loads(p.read_text())['state'] in ACTIVE for p in directory().glob('*.json'))
++        if pending>=int(current_app.config.get('HARNESS_MAX_PENDING',2)):
++            return {'state':'busy','request_id':request_id,'message_key':KEYS['busy'],'retryable':True,'retry_after':5},429
++        retry=job and job['session_id']==ride.session_id and job['request_id']==request_id
++        job={'session_pk':ride.id,'session_id':ride.session_id,'request_id':request_id or str(uuid.uuid4()),
++             'state':'queued','created_at':job['created_at'] if retry else time.time(),
++             'updated_at':time.time(),'next_try':0,'recover_claim':bool(retry),
++             'previous_run_id':job['previous_run_id'] if retry else ride.analysis_run_id}
++        write(job)
++    return view(job),202
++
++
++def run_one():
++    """One global execution slot across processes; returns immediately if busy."""
++    with lock('.worker.lock',blocking=False) as owned:
++        if not owned:return False
++        with lock('.queue.lock'):
++            jobs=[json.loads(p.read_text()) for p in directory().glob('*.json')]
++            jobs=[j for j in jobs if j['state'] in ACTIVE and j.get('next_try',0)<=time.time()]
++            if not jobs:return False
++            job=min(jobs,key=lambda j:j['created_at'])
++            recovery=job.get('recover_claim',False) or job['state']=='running'
++            job.update(state='running',updated_at=time.time(),recover_claim=True);write(job)
++        try:
++            ride=db.session.get(RideSession,job['session_pk'])
++            if ride is None or ride.session_id!=job['session_id']:
++                result={'state':'ineligible'}
++            else:
++                # Only this durable attempt, under the process-wide file lock,
++                # may reclaim a fresh DB lease after executor/process loss.
++                recovery=recovery and ride.analysis_run_id==job['previous_run_id']
++                result=submit_session_to_analyzer(ride.id,force=True,submission_key=job['request_id'],recover_claim=recovery)
++            if result['state']=='completed':
++                job.update(state='completed',analysis_run_id=result['analysis']['analysis_run_id'])
++            elif result['state'] in ('busy','running'):
++                job.update(state='queued',next_try=time.time()+5)
++            elif result['state']=='ineligible' or not result.get('retryable',False):
++                job.update(state='invalid')
++            else:job.update(state='retryable')
++        except Exception:
++            db.session.rollback()
++            current_app.logger.exception('Manual Harness attempt interrupted: session=%s request=%s',job['session_pk'],job['request_id'])
++            job.update(state='retryable')
++        finally:
++            db.session.remove()
++        with lock('.queue.lock'):
++            current=read(job['session_pk'])
++            if current and current['request_id']==job['request_id']:
++                job['updated_at']=time.time();write(job)
++        return True
++
++
++def init_worker(app):
++    if not app.config.get('HARNESS_ASYNC_ENABLED'):return
++    with app.app_context():directory()
++    if not app.config.get('HARNESS_WORKER_ENABLED',True):return
++    stop=threading.Event()
++    def loop():
++        while not stop.is_set():
++            try:
++                with app.app_context():run_one()
++            except Exception:
++                app.logger.exception('Manual Harness executor unavailable')
++            stop.wait(1)
++    thread=threading.Thread(target=loop,name='manual-harness',daemon=True)
++    thread.start();app.extensions['manual_harness_worker']={'thread':thread,'stop':stop}
+--- /dev/null
++++ b/drisafe/tests/test_p3_2_manual_worker.py
+@@ -0,0 +1,113 @@
++from copy import deepcopy
++from pathlib import Path
++import tempfile
++import unittest
++from unittest.mock import patch
++from extensions import db
++from models import AnalysisResult, utc_now
++from integrations.analyzer_client import AnalyzerClient, AnalyzerClientError
++from services.manual_analysis import read, write, run_one, lock
++from tests import test_app as fixtures
++
++
++class ManualWorkerTests(unittest.TestCase):
++    def setUp(self):
++        self.c=fixtures.DashboardTestCase('runTest');self.c.setUp();self.addCleanup(self.c.tearDown)
++        self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
++        self.c.app.config.update(HARNESS_ASYNC_ENABLED=True,HARNESS_STATE_DIR=self.tmp.name,
++                                 HARNESS_WORKER_ENABLED=False,HARNESS_CLAIM_LEASE_SECONDS=420,ML_API_BASE_URL='http://analyzer.example')
++        self.c.login();self.ride=self.c.post_pi_v2_session('p32-primary')
++        self.url=f'/api/sessions/{self.ride.id}/analysis/re-run'
++    def post(self,key='same-attempt'):return self.c.client.post(self.url,json={'request_id':key})
++    def status(self):return self.c.client.get(self.url+'/status')
++    def work(self):
++        with self.c.app.app_context():return run_one()
++    def success(self,payload):return self.c.raw_analyzer_response(payload,run_id='p32-server')
++    def test_accepts_promptly_status_only_get_and_same_key_reuses_completed_run(self):
++        old=self.ride.analysis_run_id
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=self.success) as infer:
++            self.assertEqual(self.post().status_code,202);infer.assert_not_called()
++            self.assertEqual(self.post().json['state'],'queued')
++            with patch('services.manual_analysis._stored_records',side_effect=AssertionError('status must be small')):
++                self.assertEqual(self.status().json['state'],'queued')
++            self.assertEqual(self.ride.analysis_run_id,old);self.work()
++            self.assertEqual(self.status().json['state'],'completed');self.assertEqual(self.post().status_code,200)
++            self.assertEqual(infer.call_count,1)
++        self.assertEqual(AnalysisResult.query.filter_by(ride_session_id=self.ride.id).count(),2)
++        self.assertEqual(self.ride.capture_status,'completed')
++    def test_bounded_queue_and_cross_worker_execution_lock(self):
++        self.assertEqual(self.post().status_code,202)
++        second=self.c.post_pi_v2_session('p32-second');third=self.c.post_pi_v2_session('p32-third')
++        self.assertEqual(self.c.client.post(f'/api/sessions/{second.id}/analysis/re-run',json={'request_id':'second'}).status_code,202)
++        self.assertEqual(self.c.client.post(f'/api/sessions/{third.id}/analysis/re-run',json={'request_id':'third'}).status_code,429)
++        self.assertEqual(third.analysis_status,'completed')
++        with lock('.worker.lock'),patch.object(AnalyzerClient,'decode_analyze_raw_session') as infer:
++            self.assertFalse(self.work());infer.assert_not_called()
++    def test_busy_restores_previous_result_and_retries_only_the_same_identity(self):
++        self.post();old=self.ride.analysis_run_id;calls=[]
++        def analyze(p):
++            calls.append(deepcopy(p))
++            if len(calls)==1:raise AnalyzerClientError('private detail',status_code=429,code='RAW_ANALYSIS_BUSY',retryable=True)
++            return self.success(p)
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=analyze):
++            self.work();self.assertEqual(self.status().json['state'],'queued');db.session.refresh(self.ride)
++            self.assertEqual(self.ride.analysis_run_id,old);self.assertEqual(self.ride.analysis_status,'completed')
++            j=read(self.ride.id);j['next_try']=0;write(j);self.work()
++        self.assertEqual(calls[0],calls[1]);self.assertEqual(self.status().json['state'],'completed')
++    def test_retryable_timeout_keeps_attempt_and_previous_result(self):
++        self.post();old=self.ride.analysis_run_id
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=AnalyzerClientError('secret exception',code='ANALYZER_TIMEOUT',retryable=True)):
++            self.work()
++        db.session.refresh(self.ride);self.assertEqual(self.ride.analysis_status,'completed');self.assertEqual(self.ride.analysis_run_id,old)
++        self.assertEqual(self.status().json['state'],'retryable');self.assertNotIn('secret',str(self.status().json))
++        self.assertEqual(self.post('new-independent-key').json['request_id'],'same-attempt')
++        self.assertEqual(self.post().status_code,202)
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=self.success):self.work()
++        self.assertEqual(self.status().json['state'],'completed')
++    def test_restart_after_success_before_state_write_recovers_without_inference(self):
++        self.post()
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=self.success):self.work()
++        j=read(self.ride.id);j['state']='running';write(j)
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=AssertionError('completed run must not execute again')):
++            self.work()
++        self.assertEqual(self.status().json['state'],'completed')
++        self.assertEqual(AnalysisResult.query.filter_by(ride_session_id=self.ride.id).count(),2)
++    def test_orphaned_fresh_claim_can_be_recovered_under_the_executor_lock(self):
++        self.post();j=read(self.ride.id);j['state']='running';write(j)
++        self.ride.analysis_status='submitted';self.ride.updated_at=utc_now();db.session.commit()
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=self.success) as infer:
++            self.work();infer.assert_called_once()
++        self.assertEqual(self.status().json['state'],'completed')
++    def test_invalid_active_or_unsynced_input_never_enters_queue(self):
++        for capture,sync in [('capturing','complete'),('interrupted','partial')]:
++            self.ride.capture_status=capture;self.ride.sync_status=sync;db.session.commit()
++            self.assertEqual(self.post().status_code,409);self.assertIsNone(read(self.ride.id))
++        self.ride.capture_status='interrupted';self.ride.sync_status='complete';self.ride.telemetry_records[0].raw_hex='invalid';db.session.commit()
++        self.assertEqual(self.post().status_code,409)
++    def test_status_ownership_guest_and_csrf(self):
++        self.c.app.config['WTF_CSRF_ENABLED']=True;self.assertEqual(self.post().status_code,400)
++        self.c.app.config['WTF_CSRF_ENABLED']=False;self.post()
++        self.c.client.post('/auth/logout');self.c.login(self.c.user_b.email);self.assertEqual(self.status().status_code,404)
++        self.c.client.post('/auth/logout')
++        with self.c.client.session_transaction() as state:state.clear();state['demo_mode']=True
++        self.assertEqual(self.status().status_code,403)
++    def test_truncated_success_response_is_retryable_not_input_failure(self):
++        import requests
++        response=requests.Response();response.status_code=200;response._content=b'{truncated'
++        with patch('integrations.analyzer_client.requests.post',return_value=response):
++            with self.assertRaises(AnalyzerClientError) as caught:
++                AnalyzerClient(base_url='http://isolated',timeout_seconds=360).decode_analyze_raw_session({})
++        self.assertTrue(caught.exception.retryable);self.assertEqual(caught.exception.code,'ANALYZER_RESPONSE')
++    def test_canonical_http_retry_identity_and_analysis_timeout_are_sent(self):
++        import requests
++        response=requests.Response();response.status_code=200;response._content=b'{"analysis_run_id":"canonical"}'
++        with patch('integrations.analyzer_client.requests.post',return_value=response) as post:
++            AnalyzerClient(base_url='http://isolated',timeout_seconds=360).analyze_session({},idempotency_key='same-canonical')
++        self.assertEqual(post.call_args.kwargs['headers']['Idempotency-Key'],'same-canonical')
++        self.assertEqual(post.call_args.kwargs['timeout'],360)
++    def test_health_check_does_not_inherit_long_analysis_timeout(self):
++        import requests
++        response=requests.Response();response.status_code=200;response._content=b'{}'
++        with patch('integrations.analyzer_client.requests.get',return_value=response) as get:
++            AnalyzerClient(base_url='http://isolated',timeout_seconds=360).health()
++        self.assertEqual(get.call_args.kwargs['timeout'],3)

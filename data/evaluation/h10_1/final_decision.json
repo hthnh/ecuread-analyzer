@@ -1,0 +1,9 @@
+{
+  "architecture_decision": "Keep production IF/thresholds unchanged. Do not train conditioned IF or PCA in H10.1. Prefer a later preregistered same-IF calibration study after real boundary adjudication.",
+  "decision_rule": "Positive paired macro stationary or warming flag contrast with >=3 common-support captures, positive mean after every single-capture deletion, and positive direction in both preregistered sensitivities. Descriptive judgement, not significance or fault accuracy.",
+  "manual_boundary_adjudication": "pending",
+  "rationale": "Exploratory group-paired context dependence warrants a train/calibration-group-only calibration pilot, not promotion or fault-accuracy claims.",
+  "study_type": "EXPLORATORY",
+  "verdict": "context_experiment_justified",
+  "verified_fault_sensitivity": "not evaluated"
+}

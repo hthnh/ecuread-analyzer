@@ -1,0 +1,162 @@
+{
+  "accepted_annotation_sha256": {
+    "session_000001.context.json": "150a0f5df71499c6a26de93bffb88fb617b1e743582ec50e0083fdd27edff846",
+    "session_000002.context.json": "977ed05af0b835bb58e8712d48092cea634f500d380491e828ba2e8950262137"
+  },
+  "accepted_annotations_unchanged": true,
+  "annotation_campaign_status": {
+    "complete": 2,
+    "partial": 0,
+    "total_curated_sessions": 18,
+    "unstarted": 16
+  },
+  "browser_verification_sha256": "e4ce6cd4bd7624b44138f145d009aa3ad1a4eb37fb6d3d456542d0189120c8df",
+  "campaign_acceptances_added_by_automation": 0,
+  "canonical_samples": 100688,
+  "engineering_readiness": "ready_for_operator_pilot",
+  "final_decision": "pending_human_validation",
+  "human_validation_readiness": "pending",
+  "input_frames": 100688,
+  "macro_to_micro_traceability": "pass",
+  "manual_gates": {
+    "important_context_loss": "pending",
+    "large_scale_labeling_approval": "pending",
+    "manual_boundary_quality": "pending",
+    "timed_human_review": "pending"
+  },
+  "original_proposals_and_events_preserved": "pass",
+  "protected_historical_source_model_files": {
+    "changed": [],
+    "protected_file_count": 431,
+    "unchanged": true
+  },
+  "quality_audit_sha256": "32cff34707d2a6d335213f8f85b95a00b0a6226a3d971055fda26ac16e3f1801",
+  "regeneration_protected_files": {
+    "changed": [],
+    "protected_file_count": 439,
+    "unchanged": true
+  },
+  "schema_version": "ctx24-engineering-verification-v1",
+  "sessions": [
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000001",
+      "stored_macro_sha256": "d0a17a8a18e83d5a225440a124fdeb0f7ea86afb52c2d37ee67110c26995a34a"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000002",
+      "stored_macro_sha256": "ad423e91eefec5f445a572645e1e1d625173a80727253886d56c460648185849"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000003",
+      "stored_macro_sha256": "5cc50589ffbb79fe148b94b5ca6ccce3fa168181daa48c01f747c25061eacacd"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000004",
+      "stored_macro_sha256": "de653bd7d8b9422d27b10dffdf294e623c71e85cc531f09bec3f518ed56eb3a7"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000005",
+      "stored_macro_sha256": "b9b5c3f13331852f2dd8b0abc14995d7f531a64b990846a5a9f3789bb0ed149e"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000006",
+      "stored_macro_sha256": "cfc2e4a076bc647e2af27448b0e071d06340e5cbca097978bda00538c551dd43"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000007",
+      "stored_macro_sha256": "cb3e45b9c8d0b5dc4ea0c4fa8f82d485f2b9b7fd7be24ab4b6a2d155cd7b8561"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000014",
+      "stored_macro_sha256": "3db55aa451100fcb5dc3872e3b5c8a614b0bd17c98500d6773186d31a1af20b8"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000015",
+      "stored_macro_sha256": "f30cd8495e42845552cca0131de4ec674e7fb639940aac0df5af6cd5111a460e"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000016",
+      "stored_macro_sha256": "db79227b9b0d2244443232b6a96c422a1cb0410a243df87c799466debddd82d5"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000017",
+      "stored_macro_sha256": "0619fc31987cc93f624b239573d24a9644b773853eb533a3fa942920172cfa44"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000018",
+      "stored_macro_sha256": "dcb77e121edfc61cbe32f0a5b33d7de49bb4867a204dc1f8dda0e2fb1c05f57c"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000019",
+      "stored_macro_sha256": "5966e2bf988673c4355ad7093c898f4a68282d73a3a60b219588b69bc9880761"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000020",
+      "stored_macro_sha256": "2ec9ea863d77ab5b2332d9ef765e653421026728d3ab4d6513c7b7b8db65482f"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000021",
+      "stored_macro_sha256": "f110880aecdaf9ccf1155a7f373092e03fbf22159aa1510d7f411de7c1a62635"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000022",
+      "stored_macro_sha256": "d5d40ab9a79357758f1c596cbae950707d98292d381671f68b170909b163663a"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000023",
+      "stored_macro_sha256": "b67e9a28f13a7cc919f113fbcee1b628482d8a0a6b38555f61246cf5bea20d2e"
+    },
+    {
+      "macro_content_reproducible": true,
+      "original_detailed_proposals_exactly_preserved": true,
+      "session_id": "session_000024",
+      "stored_macro_sha256": "7fce4280b6ba1c6ef20150d0b6fca6b19f9eb98814125d224cff9ab4fb81b36c"
+    }
+  ],
+  "source_count": 18,
+  "stationary_unknown_engine_steady_preservation": "pass",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "junit_sha256": "fe85e38f3fd31fb1ec5beb3ac0c690a061e63ba918261fb1172a44ee9f001525",
+    "passed": 322,
+    "runtime_s": 62.49,
+    "skipped": 0,
+    "tests": 322
+  },
+  "verified_at": "2026-10-11T08:36:10.415272+00:00"
+}

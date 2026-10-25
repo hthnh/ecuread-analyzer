@@ -1,0 +1,744 @@
+{
+  "approval": {
+    "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+    "approval_method": "inspected_auto_label_results",
+    "approval_scope": "all_18_pinned_sessions",
+    "approval_source": "data_collector",
+    "approval_type": "bulk_operator_endorsement",
+    "approved_rule_versions": {
+      "session_000001": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000002": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000003": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000004": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000005": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000006": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000007": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000014": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000015": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000016": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000017": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000018": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000019": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000020": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000021": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000022": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000023": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      "session_000024": {
+        "macro_rule_version": "ctx24-macro-v1",
+        "macro_schema": "context-macro-review-v1",
+        "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+        "rule_version": "ctx2-rules-v1",
+        "suggestion_schema": "context-suggestions-v2",
+        "taxonomy_version": "context-taxonomy-v2"
+      }
+    },
+    "approved_suggestion_hashes": {
+      "session_000001": {
+        "macro_sha256": "d0a17a8a18e83d5a225440a124fdeb0f7ea86afb52c2d37ee67110c26995a34a",
+        "suggestion_sha256": "8c738838021fdcb2396f25a60c3534f0a0b2b7b5d2c2f0121602af3633e057e1"
+      },
+      "session_000002": {
+        "macro_sha256": "ad423e91eefec5f445a572645e1e1d625173a80727253886d56c460648185849",
+        "suggestion_sha256": "ed9efcf4c350bf1cb9a604a2767e313f528ec28048320e4a203c8cc64637b204"
+      },
+      "session_000003": {
+        "macro_sha256": "2eee5b4ca03dbcc412455edc4bc2790a9b24bf1e3ffa7732716aad82bf81ec4d",
+        "suggestion_sha256": "9d3bef981ed85756328b5bc78129c3790ade5b90cef3b667b9e290347141f910"
+      },
+      "session_000004": {
+        "macro_sha256": "de653bd7d8b9422d27b10dffdf294e623c71e85cc531f09bec3f518ed56eb3a7",
+        "suggestion_sha256": "a60aa4344875a751a6ce129129b88d1873a0c15aa6762033c83df7af42bf768b"
+      },
+      "session_000005": {
+        "macro_sha256": "b9b5c3f13331852f2dd8b0abc14995d7f531a64b990846a5a9f3789bb0ed149e",
+        "suggestion_sha256": "29fb6cbadea2aa7319e539b6f740bb1fb8a3e3e8b1eafef202d0622f812602d7"
+      },
+      "session_000006": {
+        "macro_sha256": "cfc2e4a076bc647e2af27448b0e071d06340e5cbca097978bda00538c551dd43",
+        "suggestion_sha256": "3eb83320b9f370ca2d529c4cec4a5f19de3cb0be26855ed32b2c8dc7433d00a5"
+      },
+      "session_000007": {
+        "macro_sha256": "cb3e45b9c8d0b5dc4ea0c4fa8f82d485f2b9b7fd7be24ab4b6a2d155cd7b8561",
+        "suggestion_sha256": "9d18f31284e0a713ad9829edd07c66633458792b7cabe88caee7dd3d0225285c"
+      },
+      "session_000014": {
+        "macro_sha256": "3db55aa451100fcb5dc3872e3b5c8a614b0bd17c98500d6773186d31a1af20b8",
+        "suggestion_sha256": "1b178e7c76ab2b77421f88830317e0f872b72da73abef9f060814cda595eb76c"
+      },
+      "session_000015": {
+        "macro_sha256": "f30cd8495e42845552cca0131de4ec674e7fb639940aac0df5af6cd5111a460e",
+        "suggestion_sha256": "7fb7f7bc76f776a3687cab19876cf2043a7deca53e969ceea01052ad2424947b"
+      },
+      "session_000016": {
+        "macro_sha256": "db79227b9b0d2244443232b6a96c422a1cb0410a243df87c799466debddd82d5",
+        "suggestion_sha256": "2d21fb48dd5d1008f8c247f9e60ab4e11d657e35a7634939ae3f4e73a950601b"
+      },
+      "session_000017": {
+        "macro_sha256": "0619fc31987cc93f624b239573d24a9644b773853eb533a3fa942920172cfa44",
+        "suggestion_sha256": "00732d2104880da37cb420a9a831b366ac7c4277b0e7dd3b372441c21199f28e"
+      },
+      "session_000018": {
+        "macro_sha256": "dcb77e121edfc61cbe32f0a5b33d7de49bb4867a204dc1f8dda0e2fb1c05f57c",
+        "suggestion_sha256": "1c2039aef60fe5bb85fdb978087eb8e1a92cbbd177689cdfcf6e507939fab331"
+      },
+      "session_000019": {
+        "macro_sha256": "5966e2bf988673c4355ad7093c898f4a68282d73a3a60b219588b69bc9880761",
+        "suggestion_sha256": "58f4d59de64b97c676d96854492fc94b979135608e07f97e9941149813146756"
+      },
+      "session_000020": {
+        "macro_sha256": "2ec9ea863d77ab5b2332d9ef765e653421026728d3ab4d6513c7b7b8db65482f",
+        "suggestion_sha256": "bda76ea9b1b8839fe4a796e33c957578a77f12e9ed5b8bfb717195db5cea70c3"
+      },
+      "session_000021": {
+        "macro_sha256": "f110880aecdaf9ccf1155a7f373092e03fbf22159aa1510d7f411de7c1a62635",
+        "suggestion_sha256": "31e075eca39e195256c846004d979c1935085520ca5af1948d73930a1049e4f7"
+      },
+      "session_000022": {
+        "macro_sha256": "d5d40ab9a79357758f1c596cbae950707d98292d381671f68b170909b163663a",
+        "suggestion_sha256": "47e95c8bcdc2476518b4d157a40d131028de8ae768f06c684998fe552a88f31a"
+      },
+      "session_000023": {
+        "macro_sha256": "b67e9a28f13a7cc919f113fbcee1b628482d8a0a6b38555f61246cf5bea20d2e",
+        "suggestion_sha256": "8ea004aba6c9425a55ec4977a7cb47f4e7d0e1a419bfc63cc9dc233fe4373813"
+      },
+      "session_000024": {
+        "macro_sha256": "7fce4280b6ba1c6ef20150d0b6fca6b19f9eb98814125d224cff9ab4fb81b36c",
+        "suggestion_sha256": "df2028ba9ff8b773d7cd5ebe192d18050f00b1076c69f581ca3057525dae816a"
+      }
+    },
+    "corpus_manifest_sha256": "ce8a6c3e57ab7c3b037349e372f5736d6cf8e604f555e8ef1c9049ef28315e4b",
+    "dataset_id": "ecuread-filtered-raw-18-v1",
+    "declaration": "The original data collector inspected Studio auto-label results and explicitly endorsed the current suggestions across all 18 pinned captures as sufficiently plausible for intended context-label research.",
+    "individual_interval_review": false,
+    "input_source_hashes": {
+      "session_000001": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+      "session_000002": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "session_000003": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+      "session_000004": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "session_000005": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "session_000006": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+      "session_000007": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "session_000014": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "session_000015": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+      "session_000016": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "session_000017": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+      "session_000018": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "session_000019": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+      "session_000020": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+      "session_000021": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+      "session_000022": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+      "session_000023": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "session_000024": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547"
+    },
+    "limitations": [
+      "Not individual interval/boundary verification",
+      "Not independent expert validation",
+      "No measured segmentation accuracy",
+      "Not confirmed fault diagnosis"
+    ],
+    "recovery_directory": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/provenance/bulk_endorsement.v1",
+    "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+    "schema_version": "context-operator-approval-v1"
+  },
+  "backups": [
+    {
+      "path": "before/session_000001.context.json",
+      "sha256": "150a0f5df71499c6a26de93bffb88fb617b1e743582ec50e0083fdd27edff846"
+    },
+    {
+      "path": "before/session_000001.suggestions.json",
+      "sha256": "8c738838021fdcb2396f25a60c3534f0a0b2b7b5d2c2f0121602af3633e057e1"
+    },
+    {
+      "path": "before/session_000001.macro.json",
+      "sha256": "d0a17a8a18e83d5a225440a124fdeb0f7ea86afb52c2d37ee67110c26995a34a"
+    },
+    {
+      "path": "before/session_000002.context.json",
+      "sha256": "977ed05af0b835bb58e8712d48092cea634f500d380491e828ba2e8950262137"
+    },
+    {
+      "path": "before/session_000002.suggestions.json",
+      "sha256": "ed9efcf4c350bf1cb9a604a2767e313f528ec28048320e4a203c8cc64637b204"
+    },
+    {
+      "path": "before/session_000002.macro.json",
+      "sha256": "ad423e91eefec5f445a572645e1e1d625173a80727253886d56c460648185849"
+    },
+    {
+      "path": "before/session_000003.suggestions.json",
+      "sha256": "9d3bef981ed85756328b5bc78129c3790ade5b90cef3b667b9e290347141f910"
+    },
+    {
+      "path": "before/session_000003.macro.json",
+      "sha256": "2eee5b4ca03dbcc412455edc4bc2790a9b24bf1e3ffa7732716aad82bf81ec4d"
+    },
+    {
+      "path": "before/session_000004.suggestions.json",
+      "sha256": "a60aa4344875a751a6ce129129b88d1873a0c15aa6762033c83df7af42bf768b"
+    },
+    {
+      "path": "before/session_000004.macro.json",
+      "sha256": "de653bd7d8b9422d27b10dffdf294e623c71e85cc531f09bec3f518ed56eb3a7"
+    },
+    {
+      "path": "before/session_000005.suggestions.json",
+      "sha256": "29fb6cbadea2aa7319e539b6f740bb1fb8a3e3e8b1eafef202d0622f812602d7"
+    },
+    {
+      "path": "before/session_000005.macro.json",
+      "sha256": "b9b5c3f13331852f2dd8b0abc14995d7f531a64b990846a5a9f3789bb0ed149e"
+    },
+    {
+      "path": "before/session_000006.suggestions.json",
+      "sha256": "3eb83320b9f370ca2d529c4cec4a5f19de3cb0be26855ed32b2c8dc7433d00a5"
+    },
+    {
+      "path": "before/session_000006.macro.json",
+      "sha256": "cfc2e4a076bc647e2af27448b0e071d06340e5cbca097978bda00538c551dd43"
+    },
+    {
+      "path": "before/session_000007.suggestions.json",
+      "sha256": "9d18f31284e0a713ad9829edd07c66633458792b7cabe88caee7dd3d0225285c"
+    },
+    {
+      "path": "before/session_000007.macro.json",
+      "sha256": "cb3e45b9c8d0b5dc4ea0c4fa8f82d485f2b9b7fd7be24ab4b6a2d155cd7b8561"
+    },
+    {
+      "path": "before/session_000014.suggestions.json",
+      "sha256": "1b178e7c76ab2b77421f88830317e0f872b72da73abef9f060814cda595eb76c"
+    },
+    {
+      "path": "before/session_000014.macro.json",
+      "sha256": "3db55aa451100fcb5dc3872e3b5c8a614b0bd17c98500d6773186d31a1af20b8"
+    },
+    {
+      "path": "before/session_000015.suggestions.json",
+      "sha256": "7fb7f7bc76f776a3687cab19876cf2043a7deca53e969ceea01052ad2424947b"
+    },
+    {
+      "path": "before/session_000015.macro.json",
+      "sha256": "f30cd8495e42845552cca0131de4ec674e7fb639940aac0df5af6cd5111a460e"
+    },
+    {
+      "path": "before/session_000016.suggestions.json",
+      "sha256": "2d21fb48dd5d1008f8c247f9e60ab4e11d657e35a7634939ae3f4e73a950601b"
+    },
+    {
+      "path": "before/session_000016.macro.json",
+      "sha256": "db79227b9b0d2244443232b6a96c422a1cb0410a243df87c799466debddd82d5"
+    },
+    {
+      "path": "before/session_000017.suggestions.json",
+      "sha256": "00732d2104880da37cb420a9a831b366ac7c4277b0e7dd3b372441c21199f28e"
+    },
+    {
+      "path": "before/session_000017.macro.json",
+      "sha256": "0619fc31987cc93f624b239573d24a9644b773853eb533a3fa942920172cfa44"
+    },
+    {
+      "path": "before/session_000018.suggestions.json",
+      "sha256": "1c2039aef60fe5bb85fdb978087eb8e1a92cbbd177689cdfcf6e507939fab331"
+    },
+    {
+      "path": "before/session_000018.macro.json",
+      "sha256": "dcb77e121edfc61cbe32f0a5b33d7de49bb4867a204dc1f8dda0e2fb1c05f57c"
+    },
+    {
+      "path": "before/session_000019.suggestions.json",
+      "sha256": "58f4d59de64b97c676d96854492fc94b979135608e07f97e9941149813146756"
+    },
+    {
+      "path": "before/session_000019.macro.json",
+      "sha256": "5966e2bf988673c4355ad7093c898f4a68282d73a3a60b219588b69bc9880761"
+    },
+    {
+      "path": "before/session_000020.suggestions.json",
+      "sha256": "bda76ea9b1b8839fe4a796e33c957578a77f12e9ed5b8bfb717195db5cea70c3"
+    },
+    {
+      "path": "before/session_000020.macro.json",
+      "sha256": "2ec9ea863d77ab5b2332d9ef765e653421026728d3ab4d6513c7b7b8db65482f"
+    },
+    {
+      "path": "before/session_000021.suggestions.json",
+      "sha256": "31e075eca39e195256c846004d979c1935085520ca5af1948d73930a1049e4f7"
+    },
+    {
+      "path": "before/session_000021.macro.json",
+      "sha256": "f110880aecdaf9ccf1155a7f373092e03fbf22159aa1510d7f411de7c1a62635"
+    },
+    {
+      "path": "before/session_000022.suggestions.json",
+      "sha256": "47e95c8bcdc2476518b4d157a40d131028de8ae768f06c684998fe552a88f31a"
+    },
+    {
+      "path": "before/session_000022.macro.json",
+      "sha256": "d5d40ab9a79357758f1c596cbae950707d98292d381671f68b170909b163663a"
+    },
+    {
+      "path": "before/session_000023.suggestions.json",
+      "sha256": "8ea004aba6c9425a55ec4977a7cb47f4e7d0e1a419bfc63cc9dc233fe4373813"
+    },
+    {
+      "path": "before/session_000023.macro.json",
+      "sha256": "b67e9a28f13a7cc919f113fbcee1b628482d8a0a6b38555f61246cf5bea20d2e"
+    },
+    {
+      "path": "before/session_000024.suggestions.json",
+      "sha256": "df2028ba9ff8b773d7cd5ebe192d18050f00b1076c69f581ca3057525dae816a"
+    },
+    {
+      "path": "before/session_000024.macro.json",
+      "sha256": "7fce4280b6ba1c6ef20150d0b6fca6b19f9eb98814125d224cff9ab4fb81b36c"
+    }
+  ],
+  "schema_version": "context-bulk-transaction-v1",
+  "targets": [
+    {
+      "after_sha256": "150a0f5df71499c6a26de93bffb88fb617b1e743582ec50e0083fdd27edff846",
+      "before_sha256": "150a0f5df71499c6a26de93bffb88fb617b1e743582ec50e0083fdd27edff846",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000001.context.json",
+      "staged_path": "after/session_000001.context.json"
+    },
+    {
+      "after_sha256": "8c738838021fdcb2396f25a60c3534f0a0b2b7b5d2c2f0121602af3633e057e1",
+      "before_sha256": "8c738838021fdcb2396f25a60c3534f0a0b2b7b5d2c2f0121602af3633e057e1",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000001.suggestions.json",
+      "staged_path": "after/session_000001.suggestions.json"
+    },
+    {
+      "after_sha256": "e94fd9f9f26bc18af6bbde8b67f3eb2fefbd7081dc16fa4b69ae40d20d371cf1",
+      "before_sha256": "d0a17a8a18e83d5a225440a124fdeb0f7ea86afb52c2d37ee67110c26995a34a",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000001.macro.json",
+      "staged_path": "after/session_000001.macro.json"
+    },
+    {
+      "after_sha256": "977ed05af0b835bb58e8712d48092cea634f500d380491e828ba2e8950262137",
+      "before_sha256": "977ed05af0b835bb58e8712d48092cea634f500d380491e828ba2e8950262137",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000002.context.json",
+      "staged_path": "after/session_000002.context.json"
+    },
+    {
+      "after_sha256": "ed9efcf4c350bf1cb9a604a2767e313f528ec28048320e4a203c8cc64637b204",
+      "before_sha256": "ed9efcf4c350bf1cb9a604a2767e313f528ec28048320e4a203c8cc64637b204",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000002.suggestions.json",
+      "staged_path": "after/session_000002.suggestions.json"
+    },
+    {
+      "after_sha256": "9ae9aa4033cfa54c61d569e0be22e31be6390a7c0af7235a13b9393bb33b7053",
+      "before_sha256": "ad423e91eefec5f445a572645e1e1d625173a80727253886d56c460648185849",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000002.macro.json",
+      "staged_path": "after/session_000002.macro.json"
+    },
+    {
+      "after_sha256": "cbe1a4046f4b91f3b5122ba067676f44d6681662d10de4e2e72e880d0abbff2a",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000003.context.json",
+      "staged_path": "after/session_000003.context.json"
+    },
+    {
+      "after_sha256": "39a25bc7786c675c073b48304a41ff9e1f3f10347c0212686f880b2eac575184",
+      "before_sha256": "9d3bef981ed85756328b5bc78129c3790ade5b90cef3b667b9e290347141f910",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000003.suggestions.json",
+      "staged_path": "after/session_000003.suggestions.json"
+    },
+    {
+      "after_sha256": "6b4bd5b45f0ca9873b6afc6493928f6474a76c1b56ab33aa03c8980f51891758",
+      "before_sha256": "2eee5b4ca03dbcc412455edc4bc2790a9b24bf1e3ffa7732716aad82bf81ec4d",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000003.macro.json",
+      "staged_path": "after/session_000003.macro.json"
+    },
+    {
+      "after_sha256": "fa440cb16ceb352cfd06eb57f9001957bf64a09368edde8fc866f66c77909b87",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000004.context.json",
+      "staged_path": "after/session_000004.context.json"
+    },
+    {
+      "after_sha256": "434ef8510bdc41b3b83ddef1e33f30504811d99154a9c21c55d35680e3649c6b",
+      "before_sha256": "a60aa4344875a751a6ce129129b88d1873a0c15aa6762033c83df7af42bf768b",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000004.suggestions.json",
+      "staged_path": "after/session_000004.suggestions.json"
+    },
+    {
+      "after_sha256": "9d83bbfa00392731e844ad1d6531d455b7dd3102458941e533bf6a5054ed2b79",
+      "before_sha256": "de653bd7d8b9422d27b10dffdf294e623c71e85cc531f09bec3f518ed56eb3a7",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000004.macro.json",
+      "staged_path": "after/session_000004.macro.json"
+    },
+    {
+      "after_sha256": "6b4f5262da99e408de53f7ca8fe0241c56f188b3d14d0de64aeb0e88581b478b",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000005.context.json",
+      "staged_path": "after/session_000005.context.json"
+    },
+    {
+      "after_sha256": "a7ae89ca85eb01ef1ddda3e4bc043666e48e3e5ec979d3674c82648997cc7e9e",
+      "before_sha256": "29fb6cbadea2aa7319e539b6f740bb1fb8a3e3e8b1eafef202d0622f812602d7",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000005.suggestions.json",
+      "staged_path": "after/session_000005.suggestions.json"
+    },
+    {
+      "after_sha256": "3dfd6163d94c010626e16ccf87ffd75fa7f924c6eede394f58ec7b3df1a28414",
+      "before_sha256": "b9b5c3f13331852f2dd8b0abc14995d7f531a64b990846a5a9f3789bb0ed149e",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000005.macro.json",
+      "staged_path": "after/session_000005.macro.json"
+    },
+    {
+      "after_sha256": "f76aef117aeff1b918cb2f9cf139cf70464a0cf9f54d3cd2f5bb95288cc62ee2",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000006.context.json",
+      "staged_path": "after/session_000006.context.json"
+    },
+    {
+      "after_sha256": "c5b668675320a78a6c8deeddb7b9aca2a13523055db125ad6a82acd31c56ff5c",
+      "before_sha256": "3eb83320b9f370ca2d529c4cec4a5f19de3cb0be26855ed32b2c8dc7433d00a5",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000006.suggestions.json",
+      "staged_path": "after/session_000006.suggestions.json"
+    },
+    {
+      "after_sha256": "36c18c6b336c47e1466afd116cb4053c3bc2b223ebd81e43d04b5b952b5144c2",
+      "before_sha256": "cfc2e4a076bc647e2af27448b0e071d06340e5cbca097978bda00538c551dd43",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000006.macro.json",
+      "staged_path": "after/session_000006.macro.json"
+    },
+    {
+      "after_sha256": "1d6687561b190d9effa43183a96d29cc4a38d9764728157a56082fc546c92632",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000007.context.json",
+      "staged_path": "after/session_000007.context.json"
+    },
+    {
+      "after_sha256": "99a596c676bf0d6864ec3c4946233d28af37fcf2fadbfb6faa2f1d39deb8de74",
+      "before_sha256": "9d18f31284e0a713ad9829edd07c66633458792b7cabe88caee7dd3d0225285c",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000007.suggestions.json",
+      "staged_path": "after/session_000007.suggestions.json"
+    },
+    {
+      "after_sha256": "ce89c3de92e5ecbfa9c57729f43ba308e686ec1f3ae3396d7802679adc49cc5b",
+      "before_sha256": "cb3e45b9c8d0b5dc4ea0c4fa8f82d485f2b9b7fd7be24ab4b6a2d155cd7b8561",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000007.macro.json",
+      "staged_path": "after/session_000007.macro.json"
+    },
+    {
+      "after_sha256": "5f3ee1e08673c0919b174edc5068a861c32c7c9127f9da85ef46bbc2db02b57a",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000014.context.json",
+      "staged_path": "after/session_000014.context.json"
+    },
+    {
+      "after_sha256": "8f304cc829d447e868a6824d404c04d8e099d34d3ca53c7c2560d86a7e80184d",
+      "before_sha256": "1b178e7c76ab2b77421f88830317e0f872b72da73abef9f060814cda595eb76c",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000014.suggestions.json",
+      "staged_path": "after/session_000014.suggestions.json"
+    },
+    {
+      "after_sha256": "21b24e26052d3be529743a6d0f5b25dab828459d1750a1027c23ad89d2619d5f",
+      "before_sha256": "3db55aa451100fcb5dc3872e3b5c8a614b0bd17c98500d6773186d31a1af20b8",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000014.macro.json",
+      "staged_path": "after/session_000014.macro.json"
+    },
+    {
+      "after_sha256": "99436b8311180baaacf688cd345d875be808a41e9f5f47a81665e269aa17b7ea",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000015.context.json",
+      "staged_path": "after/session_000015.context.json"
+    },
+    {
+      "after_sha256": "e1d9908e05415e0960425715cf487445675bf8604f802994cd4ef20380e818e7",
+      "before_sha256": "7fb7f7bc76f776a3687cab19876cf2043a7deca53e969ceea01052ad2424947b",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000015.suggestions.json",
+      "staged_path": "after/session_000015.suggestions.json"
+    },
+    {
+      "after_sha256": "cf95b64fc15c393015ca9eb8bdebdf62f40e4f021207cbd5f2724dfc11be8859",
+      "before_sha256": "f30cd8495e42845552cca0131de4ec674e7fb639940aac0df5af6cd5111a460e",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000015.macro.json",
+      "staged_path": "after/session_000015.macro.json"
+    },
+    {
+      "after_sha256": "aa481f1633ee83469dcd93e294be9b172c82b6ac42fdd2ac230c1e91d7b04226",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000016.context.json",
+      "staged_path": "after/session_000016.context.json"
+    },
+    {
+      "after_sha256": "eece0c4f9b9f041ba61e32eb4b79de030d3a3fa7e30735bdf8b3f709dc04b0cc",
+      "before_sha256": "2d21fb48dd5d1008f8c247f9e60ab4e11d657e35a7634939ae3f4e73a950601b",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000016.suggestions.json",
+      "staged_path": "after/session_000016.suggestions.json"
+    },
+    {
+      "after_sha256": "e83e7180eda902d54163c71b4c3a7432cce5fe59b3384e3bb2a52b02c9b28593",
+      "before_sha256": "db79227b9b0d2244443232b6a96c422a1cb0410a243df87c799466debddd82d5",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000016.macro.json",
+      "staged_path": "after/session_000016.macro.json"
+    },
+    {
+      "after_sha256": "72fb237211a792c449fc9920a457ecfb04a4fa8444b9093444de158059e8d595",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000017.context.json",
+      "staged_path": "after/session_000017.context.json"
+    },
+    {
+      "after_sha256": "4f0b55e2ed96f956e9662aa3dc46c992b63f31c7a32e242064e1b06ee71637a2",
+      "before_sha256": "00732d2104880da37cb420a9a831b366ac7c4277b0e7dd3b372441c21199f28e",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000017.suggestions.json",
+      "staged_path": "after/session_000017.suggestions.json"
+    },
+    {
+      "after_sha256": "25f8976caab214c4fae470806b70bac29d65ea372b665a49b5da63689ebb9e39",
+      "before_sha256": "0619fc31987cc93f624b239573d24a9644b773853eb533a3fa942920172cfa44",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000017.macro.json",
+      "staged_path": "after/session_000017.macro.json"
+    },
+    {
+      "after_sha256": "283c1c552d76441fe34608c43fd4ee470cfa49f7de03d4e1935e0d7dd73ac89b",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000018.context.json",
+      "staged_path": "after/session_000018.context.json"
+    },
+    {
+      "after_sha256": "866da4e7104bbde9d14a26defe4317e94d3e1407812db3e655529b262f19ee4a",
+      "before_sha256": "1c2039aef60fe5bb85fdb978087eb8e1a92cbbd177689cdfcf6e507939fab331",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000018.suggestions.json",
+      "staged_path": "after/session_000018.suggestions.json"
+    },
+    {
+      "after_sha256": "d3349e5d37df80e40b2bbe2b6f969c69be5c2226436041025535caeedf4552cf",
+      "before_sha256": "dcb77e121edfc61cbe32f0a5b33d7de49bb4867a204dc1f8dda0e2fb1c05f57c",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000018.macro.json",
+      "staged_path": "after/session_000018.macro.json"
+    },
+    {
+      "after_sha256": "1784b4cde11380fbc9cd76054cc7a0d5f6d1f4ecc992971a0fc719f18fa94f3f",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000019.context.json",
+      "staged_path": "after/session_000019.context.json"
+    },
+    {
+      "after_sha256": "87c31e5a4602e51fda35a83e2581d3b6c5b3ad0a43c5aca7cfa88ace274e249b",
+      "before_sha256": "58f4d59de64b97c676d96854492fc94b979135608e07f97e9941149813146756",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000019.suggestions.json",
+      "staged_path": "after/session_000019.suggestions.json"
+    },
+    {
+      "after_sha256": "d1ba6e3835d85a837fc2b5bb2dd23399a747d9b0895eabc3d20701242a570e9b",
+      "before_sha256": "5966e2bf988673c4355ad7093c898f4a68282d73a3a60b219588b69bc9880761",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000019.macro.json",
+      "staged_path": "after/session_000019.macro.json"
+    },
+    {
+      "after_sha256": "24c322358e022a26a82f0601a46ea3ed62f3bd94002d1e3af0a267328f66367a",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000020.context.json",
+      "staged_path": "after/session_000020.context.json"
+    },
+    {
+      "after_sha256": "0d07262d586004327bfa3aeb9727ff550fc0a988109c0ec482c01f327c7fc1a3",
+      "before_sha256": "bda76ea9b1b8839fe4a796e33c957578a77f12e9ed5b8bfb717195db5cea70c3",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000020.suggestions.json",
+      "staged_path": "after/session_000020.suggestions.json"
+    },
+    {
+      "after_sha256": "362bf58721885e47baa301c98d814d2a4303c6d19ad42be622cd88b78f157c53",
+      "before_sha256": "2ec9ea863d77ab5b2332d9ef765e653421026728d3ab4d6513c7b7b8db65482f",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000020.macro.json",
+      "staged_path": "after/session_000020.macro.json"
+    },
+    {
+      "after_sha256": "56e0b40d345a2aaa69f29b8f1c01903f8c06ea47da30088667965e305df4ea14",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000021.context.json",
+      "staged_path": "after/session_000021.context.json"
+    },
+    {
+      "after_sha256": "2819da7beee4cd09e5bfd112ebd17f95e93b9e3933513126163a4de47a2449af",
+      "before_sha256": "31e075eca39e195256c846004d979c1935085520ca5af1948d73930a1049e4f7",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000021.suggestions.json",
+      "staged_path": "after/session_000021.suggestions.json"
+    },
+    {
+      "after_sha256": "269b91dfd6d165d442497b3a2eb0c223cea4c58010741a9cc2601d165d397ce2",
+      "before_sha256": "f110880aecdaf9ccf1155a7f373092e03fbf22159aa1510d7f411de7c1a62635",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000021.macro.json",
+      "staged_path": "after/session_000021.macro.json"
+    },
+    {
+      "after_sha256": "e783670a514917f09cb510d557a4674033b1593a0f978527384750adcbf84c68",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000022.context.json",
+      "staged_path": "after/session_000022.context.json"
+    },
+    {
+      "after_sha256": "3e4c0fd446608dd8c558c92eebe18dfca48d0dc5a844e86248a5c320c3d15089",
+      "before_sha256": "47e95c8bcdc2476518b4d157a40d131028de8ae768f06c684998fe552a88f31a",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000022.suggestions.json",
+      "staged_path": "after/session_000022.suggestions.json"
+    },
+    {
+      "after_sha256": "a681cd5ba18889b63750881e34205703db56c9aad859d576db5de452a94dd0b6",
+      "before_sha256": "d5d40ab9a79357758f1c596cbae950707d98292d381671f68b170909b163663a",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000022.macro.json",
+      "staged_path": "after/session_000022.macro.json"
+    },
+    {
+      "after_sha256": "0de989bd9dc8650c007df2d839f40c186354e70bf9b1bcd99292c69437b9bcb8",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000023.context.json",
+      "staged_path": "after/session_000023.context.json"
+    },
+    {
+      "after_sha256": "344627ab1871a0e24d73ebfc49b2e016ba6c117d28eddb92f3d6741bf931fe61",
+      "before_sha256": "8ea004aba6c9425a55ec4977a7cb47f4e7d0e1a419bfc63cc9dc233fe4373813",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000023.suggestions.json",
+      "staged_path": "after/session_000023.suggestions.json"
+    },
+    {
+      "after_sha256": "f2f90c9c372abc9bc2a53a325d62fae17c95e35ccc93ef55cf360c5b95467674",
+      "before_sha256": "b67e9a28f13a7cc919f113fbcee1b628482d8a0a6b38555f61246cf5bea20d2e",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000023.macro.json",
+      "staged_path": "after/session_000023.macro.json"
+    },
+    {
+      "after_sha256": "a496444ca269264085b507dcd5577435b3913f85894fdcc6426e79ce0f18e185",
+      "before_sha256": null,
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/annotations/session_000024.context.json",
+      "staged_path": "after/session_000024.context.json"
+    },
+    {
+      "after_sha256": "dd395e9abe10d6648918ade02e11b1356f6d1936443204566b975a2ed49c7a1d",
+      "before_sha256": "df2028ba9ff8b773d7cd5ebe192d18050f00b1076c69f581ca3057525dae816a",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000024.suggestions.json",
+      "staged_path": "after/session_000024.suggestions.json"
+    },
+    {
+      "after_sha256": "49e76a607b5665dc078acb59197e61b258282fad29138a0dbe66fd3a9401cdbc",
+      "before_sha256": "7fce4280b6ba1c6ef20150d0b6fca6b19f9eb98814125d224cff9ab4fb81b36c",
+      "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/macro_suggestions/session_000024.macro.json",
+      "staged_path": "after/session_000024.macro.json"
+    }
+  ],
+  "unresolved": []
+}

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import math
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -64,6 +65,9 @@ class Settings:
     data_dir: Path = Path(os.getenv("DATA_DIR", "data"))
     model_dir: Path = Path(os.getenv("MODEL_DIR", os.getenv("DATA_DIR", "data") + "/models"))
     max_upload_mb: int = field(default_factory=lambda: _env_int("MAX_UPLOAD_MB", 25))
+    raw_request_max_bytes: int = 8 * 1024 * 1024
+    raw_body_timeout_seconds: float = 10.0
+    raw_analysis_timeout_seconds: float = field(default_factory=lambda: _env_float("RAW_ANALYSIS_TIMEOUT_SECONDS", 300.0))
     window_size_samples: int = field(default_factory=lambda: _env_int("WINDOW_SIZE_SAMPLES", 50))
     window_step_samples: int = field(default_factory=lambda: _env_int("WINDOW_STEP_SAMPLES", 10))
     max_window_checksum_error_ratio: float = field(
@@ -83,6 +87,10 @@ class Settings:
         default_factory=lambda: _env_list("CORS_ORIGINS", ["http://localhost:3000", "http://localhost:5173"])
     )
     validation_limits: SignalLimits = field(default_factory=SignalLimits)
+
+    def __post_init__(self):
+        if not math.isfinite(self.raw_analysis_timeout_seconds) or self.raw_analysis_timeout_seconds <= 0:
+            raise ValueError("RAW_ANALYSIS_TIMEOUT_SECONDS must be finite and positive")
 
     @property
     def max_upload_bytes(self) -> int:

@@ -1,0 +1,56 @@
+{
+  "schema_version": "ctx25-browser-verification-v1",
+  "verified_at": "2026-10-11T10:32:36.433Z",
+  "isolated_temporary_sidecars_only": true,
+  "sessions": [
+    {
+      "session_id": "session_000002",
+      "canonical_samples": 5781,
+      "original_children_inspected": 14,
+      "bulk_provenance_visible": true,
+      "accepted_labels_protected": true,
+      "reload_persists": true,
+      "measured_canvases_nonblank": 4
+    },
+    {
+      "session_id": "session_000004",
+      "canonical_samples": 3017,
+      "original_children_inspected": 5,
+      "bulk_provenance_visible": true,
+      "accepted_labels_protected": true,
+      "reload_persists": true,
+      "measured_canvases_nonblank": 4
+    },
+    {
+      "session_id": "session_000005",
+      "canonical_samples": 7851,
+      "original_children_inspected": 25,
+      "bulk_provenance_visible": true,
+      "accepted_labels_protected": true,
+      "reload_persists": true,
+      "measured_canvases_nonblank": 4
+    },
+    {
+      "session_id": "session_000007",
+      "canonical_samples": 6389,
+      "original_children_inspected": 9,
+      "bulk_provenance_visible": true,
+      "accepted_labels_protected": true,
+      "reload_persists": true,
+      "measured_canvases_nonblank": 4
+    },
+    {
+      "session_id": "session_000018",
+      "canonical_samples": 17976,
+      "original_children_inspected": 6,
+      "bulk_provenance_visible": true,
+      "accepted_labels_protected": true,
+      "reload_persists": true,
+      "measured_canvases_nonblank": 4
+    }
+  ],
+  "source_and_live_annotation_sha_unchanged": true,
+  "desktop_mobile_layout_verified": true,
+  "javascript_errors": [],
+  "individual_human_boundary_validation": "not_performed"
+}

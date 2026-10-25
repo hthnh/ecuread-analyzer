@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="/context-annotation/static/context_annotation.css" />
+  </head>
+  <body data-page="session">
+    <header class="topbar compact">
+      <div>
+        <a class="back-link" href="/context-annotation">Sessions</a>
+        <h1 id="sessionTitle">Session</h1>
+        <p class="muted" id="sessionMeta">Loading telemetry...</p>
+      </div>
+      <nav class="topbar-actions">
+        <a id="previousSession" class="button ghost disabled" href="#">Previous</a>
+        <a id="nextSession" class="button ghost disabled" href="#">Next</a>
+        <button id="undoBtn" class="button secondary" disabled>Undo</button>
+        <button id="resetZoomBtn" class="button secondary">Reset zoom</button>
+        <button id="autoLabelBtn" class="button primary">Auto-label</button>
+      </nav>
+    </header>
+
+    <main class="session-layout">
+      <section id="sourceChangedBanner" class="banner danger hidden">SOURCE CHANGED</section>
+      <div id="sessionError" class="banner danger hidden" role="alert"></div>
+
+      <details id="captureProvenance" class="session-metadata hidden">
+        <summary>Collector Attestation</summary>
+        <dl id="captureProvenanceFields" class="capture-provenance-fields"></dl>
+      </details>
+
+      <details class="session-metadata">
+      <summary>Session metadata</summary>
+      <section class="session-labels">
+        <label>
+          Capture type
+          <select id="captureTypeSelect"></select>
+        </label>
+        <label>
+          Start thermal
+          <select id="startThermalSelect"></select>
+        </label>
+        <label class="notes-field">
+          Session notes
+          <textarea id="sessionNotes" rows="2"></textarea>
+        </label>
+        <button id="saveSessionLabelsBtn" class="button primary">Save</button>
+        <label>Route type <input id="routeType" type="text" /></label>
+        <label>Known traffic conditions <input id="trafficConditions" type="text" /></label>
+        <label class="notes-field">Route notes <textarea id="routeNotes" rows="2"></textarea></label>
+      </section>
+      </details>
+
+      <div id="speedStatus" class="muted signal-provenance"></div>
+      <div id="legacyStatus" class="muted"></div>
+
+      <section class="signal-toggle-row" id="signalToggles" aria-label="Signal visibility"></section>
+
+      <section class="chart-stack" id="chartStack" aria-label="Synchronized ECU timelines"></section>
+
+      <section class="inspect-row">
+        <div id="cursorReadout" class="readout"></div>
+        <div id="selectionReadout" class="readout"></div>
+      </section>
+
+      <section class="annotation-overlay">
+        <h2>Context Timeline</h2>
+        <div id="annotationLanes"></div>
+      </section>
+
+      <section class="macro-section" aria-label="Macro context review">
+        <div class="review-heading"><h2>Macro Episodes</h2><label>Reviewer <input id="reviewerName" type="text" autocomplete="name" /></label></div>
+        <div class="review-controls">
+          <div class="segmented" role="tablist" aria-label="Review axis">
+            <button id="macroOperating" class="active" role="tab" aria-selected="true">Operating</button>
+            <button id="macroThermal" role="tab" aria-selected="false">Thermal</button>
+          </div>
+          <label>Status <select id="macroFilter"><option value="pending">Pending</option><option value="uncertain">Uncertain</option><option value="accepted">Accepted</option><option value="rejected">Rejected</option><option value="all">All</option></select></label>
+          <button id="macroNextPending" class="button secondary"><img src="/context-annotation/static/icons/chevron-right.svg" width="16" height="16" alt="" /> Next pending</button>
+          <button id="macroGenerate" class="button secondary">Refresh grouping</button>
+          <label><input id="showEventMarkers" type="checkbox" /> Event markers</label>
+          <label><input id="showRapidMarkers" type="checkbox" /> Detailed transitions</label>
+        </div>
+        <div id="macroProgress" class="review-progress" role="status"></div>
+        <div id="macroWarning" class="banner warning hidden">Grouping is stale. Review is locked until regeneration.</div>
+        <div class="suggestion-table-wrap"><table class="suggestion-table"><thead><tr><th>Range (s)</th><th>Episode</th><th>Original intervals</th><th>Markers</th><th>Status</th><th></th></tr></thead><tbody id="macroRows"></tbody></table></div>
+        <div class="review-pagination"><button id="macroPrev" class="icon-button" title="Previous episodes" aria-label="Previous episodes"><img src="/context-annotation/static/icons/chevron-left.svg" alt="" /></button><output id="macroPage"></output><button id="macroNext" class="icon-button" title="Next episodes" aria-label="Next episodes"><img src="/context-annotation/static/icons/chevron-right.svg" alt="" /></button></div>
+        <details id="retainedMacroReviews" class="hidden"><summary>Retained historical macro decisions</summary><pre id="retainedMacroEvidence"></pre></details>
+      </section>
+
+      <details id="detailedReview" class="detailed-review">
+      <summary>Detailed Intervals &amp; Events <output id="detailedProgress"></output></summary>
+      <section class="review-section" aria-label="Suggestion review">
+        <div class="review-heading">
+          <h2>Suggestions <span id="pendingCount" class="muted"></span></h2>
+          <button id="nextPendingBtn" class="button secondary"><img src="/context-annotation/static/icons/chevron-right.svg" width="16" height="16" alt="" /> Next pending</button>
+          <button id="addEventBtn" class="button secondary">Add event</button>
+        </div>
+        <div class="review-controls">
+          <label>Status <select id="reviewFilter"><option value="pending">Pending</option><option value="uncertain">Uncertain</option><option value="accepted">Accepted</option><option value="rejected">Rejected</option><option value="all">All</option></select></label>
+          <label>Kind <select id="reviewKind"><option value="all">All</option><option value="operating">Operating</option><option value="events">Events</option><option value="throttle_burst">Throttle bursts</option></select></label>
+          <button id="acceptSelectedBtn" class="button primary">Accept selected</button>
+          <button id="rejectSelectedBtn" class="button danger">Reject selected</button>
+        </div>
+        <div class="review-controls">
+          <label>Range start (s) <input id="reviewStart" type="number" min="0" step="0.001" /></label>
+          <label>Range end (s) <input id="reviewEnd" type="number" min="0" step="0.001" /></label>
+          <button id="acceptRangeBtn" class="button secondary">Accept range</button>
+          <output id="reviewOutcome" role="status"></output>
+        </div>
+        <div class="suggestion-table-wrap">
+          <table class="suggestion-table">
+            <thead><tr><th><input id="selectPage" type="checkbox" aria-label="Select pending suggestions on this page" /></th><th>Range (s)</th><th>Operating / Event</th><th>Thermal</th><th>Evidence</th><th>Status</th><th></th></tr></thead>
+            <tbody id="suggestionRows"></tbody>
+          </table>
+        </div>
+        <div class="review-pagination"><button id="suggestionPrev" class="icon-button" title="Previous suggestions" aria-label="Previous suggestions"><img src="/context-annotation/static/icons/chevron-left.svg" alt="" /></button><output id="suggestionPage"></output><button id="suggestionNext" class="icon-button" title="Next suggestions" aria-label="Next suggestions"><img src="/context-annotation/static/icons/chevron-right.svg" alt="" /></button></div>
+      </section>
+      </details>
+    </main>
+
+    <dialog id="macroDialog" class="annotation-dialog macro-dialog">
+      <form id="macroForm">
+        <header><h2 id="macroDialogTitle">Review episode</h2><button id="macroClose" type="button" class="icon-button" title="Close" aria-label="Close"><img src="/context-annotation/static/icons/x.svg" alt="" /></button></header>
+        <div class="time-grid"><label>Start (s)<input id="macroStart" type="number" min="0" step="0.000001" required /></label><label>End (s)<input id="macroEnd" type="number" min="0" step="0.000001" required /></label></div>
+        <label>Context <select id="macroLabel"></select></label>
+        <label>Notes <textarea id="macroNotes" rows="2"></textarea></label>
+        <div id="macroSignalPlots"></div>
+        <details open><summary>Original intervals <output id="macroChildCount"></output></summary><div id="macroChildren" class="macro-children"></div></details>
+        <details><summary>Events &amp; transitions</summary><pre id="macroMarkers"></pre></details>
+        <details><summary>Measured evidence &amp; provenance</summary><pre id="macroEvidence"></pre></details>
+        <div id="macroError" class="banner danger hidden" role="alert"></div>
+        <footer><button id="macroReject" type="button" class="button danger">Reject</button><button id="macroUncertain" type="button" class="button secondary">Uncertain</button><button id="macroCorrect" type="submit" class="button secondary">Save correction</button><button id="macroAccept" type="button" class="button primary">Accept episode</button></footer>
+      </form>
+    </dialog>
+
+    <dialog id="annotationDialog" class="annotation-dialog">
+      <form method="dialog" id="annotationForm">
+        <header>
+          <h2 id="dialogTitle">Context segment</h2>
+          <button type="button" id="closeDialogBtn" class="icon-button" title="Close" aria-label="Close"><img src="/context-annotation/static/icons/x.svg" alt="" /></button>
+        </header>
+        <div class="time-grid">
+          <label>
+            Start (s)
+            <input id="segmentStart" type="number" min="0" step="0.000001" required />
+          </label>
+          <label>
+            End (s)
+            <input id="segmentEnd" type="number" min="0" step="0.000001" required />
+          </label>
+        </div>
+        <div class="label-grid" id="operatingSelectors">
+          <label>Operating context <select id="operatingSelect"></select></label>
+          <label>Thermal phase <select id="thermalPhaseSelect"></select></label>
+        </div>
+        <div class="label-grid hidden" id="eventSelectors"><label>Event <select id="eventSelect"></select></label></div>
+        <div class="label-grid hidden" id="legacySelectors">
+          <label>Engine <select id="engineSelect"></select></label>
+          <label>Throttle <select id="throttleSelect"></select></label>
+          <label>Dynamics <select id="dynamicsSelect"></select></label>
+          <label>Thermal <select id="thermalSelect"></select></label>
+        </div>
+        <label class="notes-field">
+          Notes
+          <textarea id="segmentNotes" rows="3"></textarea>
+        </label>
+        <details id="suggestionEvidence" class="hidden" open><summary>Rule evidence</summary><p id="suggestionReason"></p><pre id="evidenceDetails"></pre></details>
+        <div id="dialogError" class="banner danger hidden" role="alert"></div>
+        <div id="overlapNotice" class="banner warning hidden">
+          This range overlaps an existing context segment. Choose Replace to trim or split the overlapping area.
+        </div>
+        <footer>
+          <button type="button" id="repeatLabelsBtn" class="button secondary">Repeat labels</button>
+          <button type="button" id="deleteSegmentBtn" class="button danger hidden">Delete</button>
+          <button type="button" id="cancelSegmentBtn" class="button secondary">Cancel</button>
+          <button type="button" id="replaceSegmentBtn" class="button secondary hidden">Replace overlap</button>
+          <button type="button" id="rejectSuggestionBtn" class="button danger hidden">Reject</button>
+          <button type="button" id="uncertainSuggestionBtn" class="button secondary hidden">Uncertain</button>
+          <button type="button" id="acceptSuggestionBtn" class="button primary hidden">Accept</button>
+          <button type="submit" id="saveSegmentBtn" class="button primary">Save segment</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <script>
+      window.__CTX_SOURCE_ID__ = {{ source_id_json }};
+    </script>
+    <script src="/context-annotation/static/context_annotation.js"></script>
+  </body>
+</html>

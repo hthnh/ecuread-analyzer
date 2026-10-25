@@ -1,0 +1,9 @@
+{
+  "corpus_manifest": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/corpus_manifest.json",
+  "corpus_manifest_sha256": "ce8a6c3e57ab7c3b037349e372f5736d6cf8e604f555e8ef1c9049ef28315e4b",
+  "dataset_id": "ecuread-filtered-raw-18-v1",
+  "input_dir": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean",
+  "legacy_campaign_retired": true,
+  "schema_version": "context-active-campaign-v1",
+  "source_count": 18
+}

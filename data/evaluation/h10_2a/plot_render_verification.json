@@ -1,0 +1,411 @@
+{
+  "schema_version": "h10.2a-plot-render-verification-v1",
+  "regions_checked": 40,
+  "four_measured_signals_nonblank": true,
+  "desktop_mobile_framing_verified": true,
+  "javascript_errors": [],
+  "human_boundary_quality": "not assessed",
+  "human_review_time": "not measured",
+  "checks": [
+    {
+      "region_id": "review-ecdf4a72b316cc5a",
+      "measured_signal_pixel_counts": [
+        2035,
+        2329,
+        2035,
+        1285
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-b145cb9ed5720579",
+      "measured_signal_pixel_counts": [
+        1099,
+        1353,
+        1173,
+        2098
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-9c8d1be35320c570",
+      "measured_signal_pixel_counts": [
+        1212,
+        1321,
+        1759,
+        2036
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-55e708928648e069",
+      "measured_signal_pixel_counts": [
+        1616,
+        1529,
+        2129,
+        2160
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-d39d0fc302d785ee",
+      "measured_signal_pixel_counts": [
+        1375,
+        1282,
+        1662,
+        1101
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-fbe8f1a185598a43",
+      "measured_signal_pixel_counts": [
+        1606,
+        1601,
+        1847,
+        2038
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-471eead27b3d5173",
+      "measured_signal_pixel_counts": [
+        1567,
+        1127,
+        1171,
+        1101
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-d877d29270026221",
+      "measured_signal_pixel_counts": [
+        1898,
+        1255,
+        1442,
+        1093
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-3e761464f6ba6088",
+      "measured_signal_pixel_counts": [
+        1221,
+        1359,
+        1766,
+        1461
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-0c487f71621b8788",
+      "measured_signal_pixel_counts": [
+        1178,
+        1253,
+        1428,
+        1279
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-85eaf4d810a95620",
+      "measured_signal_pixel_counts": [
+        1268,
+        1247,
+        1620,
+        1850
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-caa3b7ef3a040c22",
+      "measured_signal_pixel_counts": [
+        1129,
+        1197,
+        1546,
+        1100
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-75c21fcff9874f70",
+      "measured_signal_pixel_counts": [
+        1450,
+        1391,
+        1944,
+        1100
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-c82effcc6e221012",
+      "measured_signal_pixel_counts": [
+        2038,
+        1828,
+        2038,
+        1101
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-6c6b9b46b830677d",
+      "measured_signal_pixel_counts": [
+        1233,
+        1295,
+        1389,
+        2038
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-971e1e48c7f63cef",
+      "measured_signal_pixel_counts": [
+        2018,
+        1258,
+        1448,
+        2035
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-2f23d6a693e395d2",
+      "measured_signal_pixel_counts": [
+        1115,
+        1195,
+        1514,
+        1411
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-89da4ee6ec5daff2",
+      "measured_signal_pixel_counts": [
+        1364,
+        1220,
+        1598,
+        2038
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-2a2dc9e63d3529fd",
+      "measured_signal_pixel_counts": [
+        1210,
+        1242,
+        1753,
+        1738
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-2fb214d237a8bb15",
+      "measured_signal_pixel_counts": [
+        1447,
+        1193,
+        1183,
+        2038
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-36b48001c2f6f5b6",
+      "measured_signal_pixel_counts": [
+        1420,
+        1409,
+        1619,
+        2035
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-50d12ede234818d5",
+      "measured_signal_pixel_counts": [
+        1230,
+        1177,
+        1216,
+        2038
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-3c990da378d902ec",
+      "measured_signal_pixel_counts": [
+        1167,
+        1179,
+        1613,
+        2131
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-827a22e605f331bc",
+      "measured_signal_pixel_counts": [
+        1232,
+        1282,
+        1658,
+        1272
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-2472f2fbdb60230a",
+      "measured_signal_pixel_counts": [
+        1167,
+        1167,
+        1677,
+        1458
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-4fe8dcd97ccf7c0f",
+      "measured_signal_pixel_counts": [
+        1188,
+        1187,
+        1434,
+        1260
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-cac81d7fdc8c1b9d",
+      "measured_signal_pixel_counts": [
+        1284,
+        1253,
+        1283,
+        1690
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-1944e3749a6a4ab7",
+      "measured_signal_pixel_counts": [
+        1593,
+        1243,
+        1494,
+        1101
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-5bd28cd5324bd1f9",
+      "measured_signal_pixel_counts": [
+        1249,
+        1302,
+        1517,
+        1234
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-e8c496f27edf8394",
+      "measured_signal_pixel_counts": [
+        2035,
+        1984,
+        2034,
+        1446
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-4b2cf56307579505",
+      "measured_signal_pixel_counts": [
+        1874,
+        1205,
+        1194,
+        2036
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-d2df057b441e7945",
+      "measured_signal_pixel_counts": [
+        1483,
+        1357,
+        1321,
+        1423
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-30c11f6815894889",
+      "measured_signal_pixel_counts": [
+        1132,
+        1176,
+        1221,
+        1102
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-b259ed0b4509be3b",
+      "measured_signal_pixel_counts": [
+        1524,
+        1272,
+        1331,
+        2038
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-447b5b655f8dfc97",
+      "measured_signal_pixel_counts": [
+        1532,
+        1155,
+        1465,
+        1740
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-87666c3c24075d4d",
+      "measured_signal_pixel_counts": [
+        1277,
+        1264,
+        1735,
+        1592
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-26255331dc21df3e",
+      "measured_signal_pixel_counts": [
+        1667,
+        1323,
+        2135,
+        2109
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-646f1f213cb1d1a0",
+      "measured_signal_pixel_counts": [
+        1358,
+        1532,
+        1858,
+        1300
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-420b1357a2620ee6",
+      "measured_signal_pixel_counts": [
+        2036,
+        1275,
+        2036,
+        1650
+      ],
+      "text_within_plot": true
+    },
+    {
+      "region_id": "review-e948df3893483383",
+      "measured_signal_pixel_counts": [
+        1725,
+        1184,
+        1255,
+        1750
+      ],
+      "text_within_plot": true
+    }
+  ]
+}

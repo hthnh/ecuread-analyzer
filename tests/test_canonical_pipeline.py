@@ -117,8 +117,14 @@ def test_feature_schema_mismatch_is_rejected(settings, fixture_204330) -> None:
     metadata_path.write_text(json.dumps(metadata), encoding="utf-8")
 
     session = import_raw_file(fixture_204330, settings, session_id="sess_schema", sample_interval_ms=100).canonical_session
-    with pytest.raises(ValueError, match="feature schema mismatch"):
-        AnalysisService(settings).analyze(session, process_with_model=True, persist=False)
+    output = AnalysisService(settings).analyze(session, process_with_model=True, persist=False)
+    assert output.summary["overall_status"] == "model_unavailable"
+    assert output.summary["health_score"] is None
+    assert output.summary["detectors"][0]["status"] == "skipped"
+    assert output.summary["detectors"][0]["reason"] == "model_incompatible"
+    assert output.summary["detectors"][0]["scored_window_count"] == 0
+    assert any("feature schema mismatch" in warning for warning in output.summary["warnings"])
+    assert "prediction" not in output.windows
 
 
 def test_decoder_provenance_is_recorded(settings, fixture_204330) -> None:

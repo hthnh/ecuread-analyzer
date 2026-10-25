@@ -1,0 +1,151 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "route": "/sessions/1",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "route": "/sessions/2",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "route": "/analysis",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "language": "vi",
+      "status": "passed"
+    },
+    {
+      "route": "/sessions/1",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "language": "vi",
+      "status": "passed"
+    },
+    {
+      "route": "/sessions/2",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "language": "vi",
+      "status": "passed"
+    },
+    {
+      "route": "/analysis",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "language": "vi",
+      "status": "passed"
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "route": "/sessions/1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "route": "/sessions/2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "route": "/analysis",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "en",
+      "status": "passed"
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "vi",
+      "status": "passed"
+    },
+    {
+      "route": "/sessions/1",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "vi",
+      "status": "passed"
+    },
+    {
+      "route": "/sessions/2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "vi",
+      "status": "passed"
+    },
+    {
+      "route": "/analysis",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "language": "vi",
+      "status": "passed"
+    }
+  ],
+  "page_errors": [],
+  "data": "actual refreshed results for native captures 001 and 003; disposable SQLite only"
+}

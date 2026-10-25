@@ -1,0 +1,3835 @@
+{
+  "classification_counts": {
+    "alias": 4,
+    "full": 11,
+    "outside_selected_corpus": 7,
+    "replay": 2,
+    "split": 26,
+    "synthetic/demo": 7
+  },
+  "excluded_old_entry_ids": [
+    "calib-20260812-152832-2a54f0",
+    "calib-20260814-152603-8fd9ed",
+    "calib-20260814-153329-812a3f",
+    "calib-real-run-r0024d0-c93a5fb4-part-01",
+    "calib-real-run-r0024d0-c93a5fb4-part-02",
+    "calib-real-run-r1032c0-849aa7f8-part-01",
+    "calib-real-run-r1032c0-849aa7f8-part-02",
+    "esp-fake-low-battery-20260920144735",
+    "esp-fake-overheat-20260920144735",
+    "esp-fake-rpm-spike-20260920144735",
+    "ride-20260904-1810",
+    "ride-20260909-0725",
+    "ride-20260914-1935",
+    "ride-20260918-0815"
+  ],
+  "generated_at": "2026-10-11T01:37:22.562282+00:00",
+  "linked_entries": 43,
+  "new_manifest_sha256": "53ab889ba73308ac7669c8e2b67254af2558e76b52f07deb9348b0a971b85b0b",
+  "old_entry_count": 57,
+  "old_manifest_sha256": "538bf38dfc395084f7f08cdd342d9bbf8ac10d757c298623ca8cb80cb6e1c61e",
+  "prior_lineage_sha256": "6542516bc7dba46a30cb0f74e775f026a4dc51d2088a3bcf8d47b698dc1397ba",
+  "schema_version": "ctx22-old-to-raw-lineage-v1",
+  "sessions": [
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "outside_selected_corpus",
+      "correlation_group_id": "capture:c586513b52952705fb56be8917c5cdc55de4fddb98b28e5d2ce2d500c815ccbb",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-20260812-152832-2a54f0",
+      "old_source_sha256": "dbb38c7b903603e32ec6b944edea1a806a24feceddafb7df83aa37ff83343759",
+      "previous_classification": "independent real capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Not uniquely linked to one of the selected 18 originals; prior quarantine/selection retained.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "outside_selected_corpus",
+      "correlation_group_id": "capture:2df35bac03ec0ed0a15fd5b43476482350c076f42bb34f34ffb0618c59ad0292",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-20260814-152603-8fd9ed",
+      "old_source_sha256": "2dbdd656c66123952ab67248a829910be58dd33ffd94622386f2cce16fed2ed0",
+      "previous_classification": "independent real capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Not uniquely linked to one of the selected 18 originals; prior quarantine/selection retained.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "outside_selected_corpus",
+      "correlation_group_id": "capture:306318c047301ea47ce7075a32cd6002313f44c242316bb40acc8bac6447eef3",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-20260814-153329-812a3f",
+      "old_source_sha256": "5ce73701871b4874ad36fea78371c62ea79796e7953d64a38aa1baf83b2c38e3",
+      "previous_classification": "independent real capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Not uniquely linked to one of the selected 18 originals; prior quarantine/selection retained.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "outside_selected_corpus",
+      "correlation_group_id": "capture:26496e21b4f97e325eafe29afc92f73d508af15e96cbcc9f8f6a739778759277",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-r0024d0-c93a5fb4-part-01",
+      "old_source_sha256": "db4172896862fa2344ab9fa5002d2d7993e3d87842c56ffceba5814e25841808",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Not uniquely linked to one of the selected 18 originals; prior quarantine/selection retained.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "outside_selected_corpus",
+      "correlation_group_id": "capture:26496e21b4f97e325eafe29afc92f73d508af15e96cbcc9f8f6a739778759277",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-r0024d0-c93a5fb4-part-02",
+      "old_source_sha256": "0e548060f38ac4c6508f41c20dd21e38dd75f5fdc864ecff79926e584264afc2",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Not uniquely linked to one of the selected 18 originals; prior quarantine/selection retained.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "outside_selected_corpus",
+      "correlation_group_id": "capture:2d4b11618033cb04661aa6488f8e36cc9890c2bf0100ff3de93232b690423bf0",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-r1032c0-849aa7f8-part-01",
+      "old_source_sha256": "bad546f4f2d92555357b46cda09aa18b8d681dbb170cbb3a15c8a60c7a0904cd",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Not uniquely linked to one of the selected 18 originals; prior quarantine/selection retained.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "outside_selected_corpus",
+      "correlation_group_id": "capture:2d4b11618033cb04661aa6488f8e36cc9890c2bf0100ff3de93232b690423bf0",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-r1032c0-849aa7f8-part-02",
+      "old_source_sha256": "5cafda68ee5f17e058f91c947d302382a12e59fdbe33c2ffb0a0dfddb4dc3faa",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Not uniquely linked to one of the selected 18 originals; prior quarantine/selection retained.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 28.999,
+          "new_session_id": "session_000001",
+          "new_source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 117,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000001",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000001",
+      "old_source_sha256": "4fa95c0f9cc671f5ecd1016f8598ae02d296913e246ff2f0f7d25f32fa19073e",
+      "previous_classification": "independent real capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1251.252,
+          "new_session_id": "session_000002",
+          "new_source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 5000,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000002",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000002-part-01",
+      "old_source_sha256": "37f4a988845a56c95622fc4895fc311fd54458bdd763d08881751ddeecdb7b61",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1446.503,
+          "new_session_id": "session_000002",
+          "new_source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 781,
+          "sample_offset": 5000,
+          "time_offset_s": 1251.502
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000002",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000002-part-02",
+      "old_source_sha256": "5df4d117ef11c449e2411512943b244d2cf0cdebaa6a135d7b184b7cc84e433e",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 312.499,
+          "new_session_id": "session_000003",
+          "new_source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 1249,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000003",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000003",
+      "old_source_sha256": "f6a9339e8ece16af993f5696df90583909cbe133adff945a83ce75d69b8c34b8",
+      "previous_classification": "independent real capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 755.001,
+          "new_session_id": "session_000004",
+          "new_source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 3017,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000004",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000004",
+      "old_source_sha256": "8ed824ff69fd45dff5b1f0c9caa346f69dcf5c03d4f7387630e8374e3c5d7ddc",
+      "previous_classification": "independent real capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1250.249,
+          "new_session_id": "session_000005",
+          "new_source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 5000,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000005",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000005-part-01",
+      "old_source_sha256": "b25c85c7ba74a0fa9885d74f60b6eb23e79e75586c38f5699185273bef0a0c22",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1963.997,
+          "new_session_id": "session_000005",
+          "new_source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 2851,
+          "sample_offset": 5000,
+          "time_offset_s": 1250.498
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000005",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000005-part-02",
+      "old_source_sha256": "1aa448e04f7681fbd36f6547f6b780b042242f9cc576f96dfbcacb99f020d4c1",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 230.75,
+          "new_session_id": "session_000006",
+          "new_source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 923,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000006",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000006",
+      "old_source_sha256": "54d9471b315a294292c7749d13b81d7cb2867641f86511ce50322162c2892673",
+      "previous_classification": "independent real capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1250.752,
+          "new_session_id": "session_000007",
+          "new_source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 5000,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000007",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000007-part-01",
+      "old_source_sha256": "f648eac8e49bf3b2946df6961a5785140432775c45c85b591e5efde9f20d3a99",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1598.002,
+          "new_session_id": "session_000007",
+          "new_source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 1389,
+          "sample_offset": 5000,
+          "time_offset_s": 1251.001
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000007",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "calib-real-run-session-000007-part-02",
+      "old_source_sha256": "fad53f55b5d420d128dcdb91a4c84c5da907144e66d4e9758d78c62d58706811",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "synthetic/demo",
+      "correlation_group_id": "content-group:esp-fake-low-battery-20260920144735",
+      "decoder_contract_equivalent": false,
+      "decoder_contract_mismatch_samples": {
+        "battery_voltage": 270,
+        "ect_c": 1200
+      },
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          },
+          "ect_c_candidate": {
+            "status": "candidate",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "high_confidence_candidate",
+            "unit": "degC"
+          },
+          "map_raw": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "rpm": {
+            "status": "high_confidence_candidate",
+            "unit": "rpm"
+          },
+          "tps_raw_candidate": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v1"
+      },
+      "old_session_id": "esp-fake-low-battery-20260920144735",
+      "old_source_sha256": "0c7f6d9484d31bbe597f089ea80b1c1e594f21d1d9c6976da6cf71dc01d91f4a",
+      "previous_classification": "synthetic/derived",
+      "previous_evaluation_eligible": false,
+      "reason": "Synthetic/demo excluded.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "synthetic/demo",
+      "correlation_group_id": "content-group:esp-fake-low-battery-20260920144735",
+      "decoder_contract_equivalent": false,
+      "decoder_contract_mismatch_samples": {
+        "ect_c": 1200
+      },
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          },
+          "ect_c_candidate": {
+            "status": "candidate",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "high_confidence_candidate",
+            "unit": "degC"
+          },
+          "map_raw": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "rpm": {
+            "status": "high_confidence_candidate",
+            "unit": "rpm"
+          },
+          "tps_raw_candidate": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v1"
+      },
+      "old_session_id": "esp-fake-overheat-20260920144735",
+      "old_source_sha256": "9a6a7a8ff32f159f27790ca72e583112e7ab6f554a9286579e623e5c9f32785e",
+      "previous_classification": "synthetic/derived",
+      "previous_evaluation_eligible": false,
+      "reason": "Synthetic/demo excluded.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "synthetic/demo",
+      "correlation_group_id": "content-group:esp-fake-rpm-spike-20260920144735",
+      "decoder_contract_equivalent": false,
+      "decoder_contract_mismatch_samples": {
+        "ect_c": 1200
+      },
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          },
+          "ect_c_candidate": {
+            "status": "candidate",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "high_confidence_candidate",
+            "unit": "degC"
+          },
+          "map_raw": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "rpm": {
+            "status": "high_confidence_candidate",
+            "unit": "rpm"
+          },
+          "tps_raw_candidate": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v1"
+      },
+      "old_session_id": "esp-fake-rpm-spike-20260920144735",
+      "old_source_sha256": "0c6f5c534680533ad7704c2eb7b971de834d8b3b4412b3181b108aaf08c42de5",
+      "previous_classification": "synthetic/derived",
+      "previous_evaluation_eligible": false,
+      "reason": "Synthetic/demo excluded.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "replay",
+      "correlation_group_id": "raw-source:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "decoder_contract_equivalent": false,
+      "decoder_contract_mismatch_samples": {
+        "battery_voltage": 17976,
+        "ect_c": 17976
+      },
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": true,
+          "end_time_offset_s": 4496.001,
+          "new_session_id": "session_000018",
+          "new_source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 17976,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000018",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          },
+          "ect_c_candidate": {
+            "status": "candidate",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "high_confidence_candidate",
+            "unit": "degC"
+          },
+          "map_raw": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "rpm": {
+            "status": "high_confidence_candidate",
+            "unit": "rpm"
+          },
+          "tps_raw_candidate": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v1"
+      },
+      "old_session_id": "esp-real-session_000018-20260920144735",
+      "old_source_sha256": "17597cd13d303869cd857bcc735922154c0ad1b2422047bf42a2914297d7d594",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "replay",
+      "correlation_group_id": "raw-source:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+      "decoder_contract_equivalent": false,
+      "decoder_contract_mismatch_samples": {
+        "battery_voltage": 7790,
+        "ect_c": 7790
+      },
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": true,
+          "end_time_offset_s": 1948.999,
+          "new_session_id": "session_000024",
+          "new_source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 7790,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000024",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_legacy_29",
+        "decoder_version": "0.1.0",
+        "ecu_profile_id": "honda_keihin_legacy_29",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          },
+          "ect_c_candidate": {
+            "status": "candidate",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "high_confidence_candidate",
+            "unit": "degC"
+          },
+          "map_raw": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "rpm": {
+            "status": "high_confidence_candidate",
+            "unit": "rpm"
+          },
+          "tps_raw_candidate": {
+            "status": "candidate",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "high_confidence_candidate",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v1"
+      },
+      "old_session_id": "esp-real-session_000024-20260920144735",
+      "old_source_sha256": "4dd5c8768c2c3399b8580fe6320687279d4068f9aebad3d6a89f24501ecd2121",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "alias",
+      "correlation_group_id": "raw-source:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 28.999,
+          "new_session_id": "session_000001",
+          "new_source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 117,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000001",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260901-0715",
+      "old_source_sha256": "bd5122fa0b2fdf17b7a9a7124751226d85228dbc383d119e70df5b782bc40b7e",
+      "previous_classification": "alias",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1126.253,
+          "new_session_id": "session_000002",
+          "new_source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000002",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260902-1032",
+      "old_source_sha256": "464338bde825ede8e7dfd919b0fe40cd1745fdd529fabe6f9aeeb9e6229f0685",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1446.503,
+          "new_session_id": "session_000002",
+          "new_source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 1281,
+          "sample_offset": 4500,
+          "time_offset_s": 1126.502
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000002",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260902-1050",
+      "old_source_sha256": "010acb831e1de9adaca11744964fcd485668dae2820500dac3fcbabdc5b45f04",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "alias",
+      "correlation_group_id": "raw-source:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 312.499,
+          "new_session_id": "session_000003",
+          "new_source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 1249,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000003",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260903-1349",
+      "old_source_sha256": "d81e43669c7ae9e10ad4fd0d289ee02aca9d9471462759c9f98caf2fdc379559",
+      "previous_classification": "alias",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "alias",
+      "correlation_group_id": "raw-source:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 755.001,
+          "new_session_id": "session_000004",
+          "new_source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 3017,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000004",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260904-1623",
+      "old_source_sha256": "304c99c95932a3924c5868ce1f0fc46ae350c13f4357836a9278449b5741fe09",
+      "previous_classification": "alias",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "synthetic/demo",
+      "correlation_group_id": "content-group:ride-20260904-1810",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260904-1810",
+      "old_source_sha256": "cc4888b2420b94bf47339932dcbbcd49513730a5b42828794feccd36174a12c8",
+      "previous_classification": "synthetic/derived",
+      "previous_evaluation_eligible": false,
+      "reason": "Synthetic/demo excluded.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1125.25,
+          "new_session_id": "session_000005",
+          "new_source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000005",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260905-0840",
+      "old_source_sha256": "e00cd8d5a224c7d121a0829568fd5ac30e1d4639b2c8fc08e01075278dcf41cd",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1963.997,
+          "new_session_id": "session_000005",
+          "new_source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 3351,
+          "sample_offset": 4500,
+          "time_offset_s": 1125.499
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000005",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260905-0858",
+      "old_source_sha256": "fbe802aad7b083866b42ee2e619d93683d1a5867cf2a9038bb2f6e811cf2fb3e",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "alias",
+      "correlation_group_id": "raw-source:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 230.75,
+          "new_session_id": "session_000006",
+          "new_source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 923,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000006",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260907-1157",
+      "old_source_sha256": "a7efdd87210c20fcadd2792bfdb2c43a612b1374512fee7d9629e24df9b28ce5",
+      "previous_classification": "alias",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1125.501,
+          "new_session_id": "session_000007",
+          "new_source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000007",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260908-1431",
+      "old_source_sha256": "9f176851827e0a60b063b778b1d8a4ee6082d67e99008fd3e263ca45c34112ea",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1598.002,
+          "new_session_id": "session_000007",
+          "new_source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 1889,
+          "sample_offset": 4500,
+          "time_offset_s": 1125.75
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000007",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260908-1449",
+      "old_source_sha256": "eddf386500bcac57bd363bffe3b23369071d476fc9df4850efa7382f2066d9df",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": true,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "synthetic/demo",
+      "correlation_group_id": "content-group:ride-20260909-0725",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260909-0725",
+      "old_source_sha256": "8b2d8902421a5e0a4c581f157f24d3eacf05e6e5f2b79782131dddb0b08b3b10",
+      "previous_classification": "synthetic/derived",
+      "previous_evaluation_eligible": false,
+      "reason": "Synthetic/demo excluded.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 300.5,
+          "new_session_id": "session_000014",
+          "new_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 1202,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000014",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260909-1748",
+      "old_source_sha256": "c730beaefbc8fc95ba2dafe7d9cd18fa109e71ecb411103afdd0c455f9304a4a",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 132.501,
+          "new_session_id": "session_000015",
+          "new_source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 531,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000015",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260910-0922",
+      "old_source_sha256": "dd28f580c27bbdf0978b802380182ea6ba95a382d3c466b1d13506f5b9bf5d29",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1125.5,
+          "new_session_id": "session_000016",
+          "new_source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000016",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260911-1239",
+      "old_source_sha256": "4c711ec2543e0711fa93dabdaa2fa672cbdfe386a1c5bafb29db0c15e65d659d",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 2251.001,
+          "new_session_id": "session_000016",
+          "new_source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 4500,
+          "time_offset_s": 1125.751
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000016",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260911-1257",
+      "old_source_sha256": "274a922a6442df91e46f6302fa1d41e116fcc2a33e36d0329e57aca74218e371",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 3376.25,
+          "new_session_id": "session_000016",
+          "new_source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 9000,
+          "time_offset_s": 2251.25
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000016",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260911-1316",
+      "old_source_sha256": "f8ee9e3ed77932504a5e646a2cbafd242fccc301bd574160be27928f76293626",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 4494.502,
+          "new_session_id": "session_000016",
+          "new_source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4465,
+          "sample_offset": 13500,
+          "time_offset_s": 3376.501
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000016",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260911-1335",
+      "old_source_sha256": "d743f091fdaf0092f232c7984e203792088680213901b6c428fe3c0a69fa1254",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 873.5,
+          "new_session_id": "session_000017",
+          "new_source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 3492,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000017",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260912-1556",
+      "old_source_sha256": "c7390f6adf7dc30af9d763aa0905dfd823242ee5d5627c6afd8ed382b4f7a63a",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1125.75,
+          "new_session_id": "session_000018",
+          "new_source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000018",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260913-0730",
+      "old_source_sha256": "a1ae22defe6e148404bb9d9d6b4d02fc7e7610db596f12a21a17f39b687d4883",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 2250.999,
+          "new_session_id": "session_000018",
+          "new_source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 4500,
+          "time_offset_s": 1125.999
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000018",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260913-0748",
+      "old_source_sha256": "1731b3de2058c177282876986eb77e23e19f879ccbe17a57919aef4716aac1c2",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 3376.5,
+          "new_session_id": "session_000018",
+          "new_source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 9000,
+          "time_offset_s": 2251.252
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000018",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260913-0807",
+      "old_source_sha256": "02893f5a99baffd04ce1061d5616401591d023215d98f7cfc2184a2f79c839c0",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 4496.001,
+          "new_session_id": "session_000018",
+          "new_source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4476,
+          "sample_offset": 13500,
+          "time_offset_s": 3376.751
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000018",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260913-0826",
+      "old_source_sha256": "a9e7cb1c2e32d0770ef5febe6cd06d5c0353720804aebd64a660b09974ab225d",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 548.67,
+          "new_session_id": "session_000019",
+          "new_source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 2194,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000019",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260914-1047",
+      "old_source_sha256": "db84af522e85d32c54f0edc15aec0be9e366ac73a2bbc4914ab2470e30c45342",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "synthetic/demo",
+      "correlation_group_id": "content-group:ride-20260914-1935",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260914-1935",
+      "old_source_sha256": "01b092405eccdcf7901e05ecf3250306788284c8b07b8b60e4d2c5291d4859fc",
+      "previous_classification": "synthetic/derived",
+      "previous_evaluation_eligible": false,
+      "reason": "Synthetic/demo excluded.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 21.501,
+          "new_session_id": "session_000020",
+          "new_source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 87,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000020",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260916-1321",
+      "old_source_sha256": "efd4f706eb45af450ad38aecb63781b6f864f110c950751767a4e2dd1235867a",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 891.25,
+          "new_session_id": "session_000021",
+          "new_source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 3564,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000021",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260917-1638",
+      "old_source_sha256": "6dfb114100185e7dcae3f63b1ca4ebc0fe704092b17ddf1ea2d537bfc50aba17",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "synthetic/demo",
+      "correlation_group_id": "content-group:ride-20260904-1810",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": null,
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260918-0815",
+      "old_source_sha256": "d2941ce54304517792002074da7564cab41fed74f2a04569164293673934f497",
+      "previous_classification": "synthetic/derived",
+      "previous_evaluation_eligible": false,
+      "reason": "Synthetic/demo excluded.",
+      "source_link_verified": false
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "full",
+      "correlation_group_id": "raw-source:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 755.001,
+          "new_session_id": "session_000022",
+          "new_source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 3021,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000022",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260918-0855",
+      "old_source_sha256": "c46c10e8741bd88dc80b183e7dcb06ff4ec63869ccca6e797bdb5ff67d74c537",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1125.171,
+          "new_session_id": "session_000023",
+          "new_source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000023",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260919-1129",
+      "old_source_sha256": "32f8c3dc302325e668d8a4aceff2b1bf75a0d873fe62370dbc5913ec83f55202",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 2250.671,
+          "new_session_id": "session_000023",
+          "new_source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 4500,
+          "time_offset_s": 1125.421
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000023",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260919-1147",
+      "old_source_sha256": "aa8c5e7c386e7ac8ddc798d914913e59537ac6ddd5f62c9541a5dd95818e7c55",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 3376.671,
+          "new_session_id": "session_000023",
+          "new_source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 9000,
+          "time_offset_s": 2250.923
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000023",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260919-1206",
+      "old_source_sha256": "3565e97403079f906e93a31d34e6b7eb9f6b537db97b8d3c7c350e09e29a4ff1",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 4391.172,
+          "new_session_id": "session_000023",
+          "new_source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4039,
+          "sample_offset": 13500,
+          "time_offset_s": 3376.923
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000023",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260919-1225",
+      "old_source_sha256": "99bd9373d4c609c67578b1be4dabf477a5e5aba3fc5b902730d1ca2961c68e80",
+      "previous_classification": "unresolved provenance",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": false,
+      "annotation_present": false,
+      "annotation_sha256": null,
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1126.249,
+          "new_session_id": "session_000024",
+          "new_source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 4500,
+          "sample_offset": 0,
+          "time_offset_s": 0.0
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000024",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260920-1446",
+      "old_source_sha256": "09a4a3daf5f7a474f74cad9a3af307d17e52edd3b7f776a2711b13c41227775d",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    },
+    {
+      "annotation_migration_candidate": true,
+      "annotation_present": true,
+      "annotation_sha256": "2f28c3a72193a2665dbbd8a99779ba8c41a55001d8343c37e58efe0dbbebfdc8",
+      "annotations_migrated": false,
+      "classification": "split",
+      "correlation_group_id": "raw-source:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+      "decoder_contract_equivalent": true,
+      "decoder_contract_mismatch_samples": {},
+      "matches": [
+        {
+          "basis": "Complete six synchronized production signals, four reserved bytes, and every relative timestamp; embedded RAW independently redecoded and all 24 bytes matched where available.",
+          "complete_embedded_raw_byte_match": null,
+          "end_time_offset_s": 1948.999,
+          "new_session_id": "session_000024",
+          "new_source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "relative_timestamp_max_error_s": 0.0,
+          "sample_count": 3290,
+          "sample_offset": 4500,
+          "time_offset_s": 1126.497
+        }
+      ],
+      "new_campaign_evaluation_eligible": false,
+      "new_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "new_session_id": "session_000024",
+      "old_decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "canonical_samples_jsonl",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "old_session_id": "ride-20260920-1504",
+      "old_source_sha256": "a866a59ef0229461976414eb33a6425581dc75bf5048564f8c6a74e3de5fe8d0",
+      "previous_classification": "split capture",
+      "previous_evaluation_eligible": false,
+      "reason": "Technical source linkage proved; capture independence remains unverified. Legacy values/outputs remain unchanged.",
+      "source_link_verified": true
+    }
+  ],
+  "unresolved_old_entry_ids": [],
+  "verified_independent_physical_captures": null
+}

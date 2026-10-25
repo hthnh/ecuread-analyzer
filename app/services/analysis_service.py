@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import UTC, datetime
 from pathlib import Path
+from time import monotonic
 from typing import Any
 
 import pandas as pd
@@ -13,11 +14,38 @@ from app.domain.telemetry import CanonicalTelemetrySession, get_required_signal_
 from app.integration.diagnostic_evidence import build_diagnostic_evidence
 from app.ml.features import extract_window_features
 from app.ml.inference import InferenceOutput, run_inference
+from app.ml.model_selection import model_dir_for_schema
+from app.ml.active_bundle import resolve_active_bundle
 from app.ml.validation import MLInputValidationError, validate_canonical_session_for_ml
 from app.ml.windowing import create_windows
 from app.repositories.file_repository import FileBackedRepository
 from app.services.research_harness import run_research_harness
 from app.utils.ids import new_analysis_run_id, new_session_id
+
+
+class AnalysisTimeoutError(TimeoutError):
+    """The bounded request budget expired before persistence."""
+
+
+def check_analysis_deadline(deadline: float | None, stage: str) -> None:
+    if deadline is not None and monotonic() >= deadline:
+        raise AnalysisTimeoutError(f"Analysis time budget exceeded after {stage}; no result was persisted. Retry the same request key.")
+
+
+def primary_anomaly_timeline(inference: InferenceOutput, session: CanonicalTelemetrySession, run_id: str) -> dict[str, Any]:
+    """Export every positive primary IF window without rescoring or RCA sampling."""
+    times = {sample.sequence: sample.timestamp_ms for sample in session.samples}
+    items = []
+    if inference.model_loaded and "is_anomaly" in inference.windows:
+        for row in inference.windows.loc[inference.windows["is_anomaly"] == True].to_dict(orient="records"):
+            start, end = int(row["start_frame_index"]), int(row["end_frame_index"])
+            items.append({"start_sequence": start, "end_sequence": end,
+                          "start_time_ms": times.get(start), "end_time_ms": times.get(end),
+                          "decision_score": float(row["decision_score"]),
+                          "most_unusual_features": str(row.get("most_unusual_features") or "")})
+    return {"schema_version": "primary-if-anomaly-timeline-v1", "analysis_run_id": run_id,
+            "detector_id": "isolation_forest", "status": "available" if inference.model_loaded else "unavailable",
+            "scope": "all_positive_primary_detector_windows", "window_count": len(inference.windows), "items": items}
 
 
 def canonical_session_to_frame_data(
@@ -34,6 +62,7 @@ def canonical_session_to_frame_data(
             "checksum_valid": sample.checksum_valid,
             "is_valid": sample.frame_valid,
             "ml_eligible": bool(sample.frame_valid and sample.checksum_valid),
+            "vehicle_speed_kmh": sample.vehicle_speed_kmh,
         }
         for column in columns_for_schema:
             row[column] = getattr(sample, column)
@@ -46,6 +75,7 @@ def canonical_session_to_frame_data(
         "checksum_valid",
         "is_valid",
         "ml_eligible",
+        "vehicle_speed_kmh",
         *columns_for_schema,
     ]
     return pd.DataFrame(rows, columns=columns)
@@ -105,7 +135,7 @@ class AnalysisService:
     ):
         self.settings = settings
         self.repository = repository
-        self.model_dir = Path(model_dir or settings.model_dir)
+        self.model_dir = Path(model_dir) if model_dir is not None else None
 
     def analyze(
         self,
@@ -114,6 +144,8 @@ class AnalysisService:
         process_with_model: bool = True,
         persist: bool = True,
         allow_empty_analysis: bool = False,
+        deadline: float | None = None,
+        analysis_run_id: str | None = None,
     ) -> AnalysisServiceOutput:
         started_at = datetime.now(UTC).isoformat()
         session = canonical_session
@@ -129,11 +161,16 @@ class AnalysisService:
                 raise
             validation_warnings = exc.errors
         frame_data = canonical_session_to_frame_data(session, signal_columns)
+        check_analysis_deadline(deadline, "input validation")
         feature_frame = build_feature_frame(frame_data, self.settings, signal_columns)
+        check_analysis_deadline(deadline, "feature extraction")
+        bundle = (resolve_active_bundle(self.settings) if self.model_dir is None
+                  and session.telemetry_schema_version == "canonical-telemetry-v2" else None)
+        active_model_dir = self.model_dir or (bundle.model_dir if bundle else model_dir_for_schema(self.settings, session.telemetry_schema_version))
         if process_with_model:
             inference = run_inference(
                 feature_frame,
-                self.model_dir,
+                active_model_dir,
                 expected_telemetry_schema_version=session.telemetry_schema_version,
                 expected_signal_columns=signal_columns,
                 minimum_windows_for_status=self.settings.min_session_windows_for_status,
@@ -146,6 +183,7 @@ class AnalysisService:
                 self.settings.min_session_windows_for_status,
             )
 
+        check_analysis_deadline(deadline, "primary inference")
         warnings = [*validation_warnings, *inference.warnings]
         model_metadata = inference.model_metadata or {}
         training_decoder_versions = model_metadata.get("training_decoder_versions")
@@ -157,9 +195,11 @@ class AnalysisService:
                     f"telemetry decoder {session.decoder_version_key!r} was not present in model training provenance"
                 )
 
-        analysis_run_id = new_analysis_run_id()
+        reserved_run_id = analysis_run_id
+        analysis_run_id = analysis_run_id or new_analysis_run_id()
         model_version_id = model_metadata.get("model_version_id") or model_metadata.get("version")
         analysis_windows = inference.windows
+        detector_summaries = inference.detector_results
         try:
             live_research = run_research_harness(
                 analysis_run_id=analysis_run_id,
@@ -173,9 +213,11 @@ class AnalysisService:
                 signal_columns=signal_columns,
                 warnings=warnings,
                 created_at=started_at,
+                bundle=bundle,
             )
             diagnostic_evidence = live_research.diagnostic_evidence
             analysis_windows = live_research.windows
+            detector_summaries = live_research.detector_results
         except Exception as exc:  # noqa: BLE001 - research evidence must not fail production analysis.
             research_warning = f"research diagnostic evidence failed: {type(exc).__name__}: {exc}"
             diagnostic_evidence = build_diagnostic_evidence(
@@ -197,6 +239,7 @@ class AnalysisService:
             "analysis_run_id": analysis_run_id,
             "session_id": session.session_id,
             "model_version": model_version_id,
+            "model_bundle": bundle.provenance() if bundle else None,
             "telemetry_schema_version": session.telemetry_schema_version,
             "feature_schema_version": FEATURE_SCHEMA_VERSION,
             "signal_columns": signal_columns,
@@ -210,12 +253,14 @@ class AnalysisService:
             "evidence_sufficient": inference.evidence_sufficient,
             "most_unusual_features": inference.most_unusual_features,
             "model_loaded": inference.model_loaded,
-                "detectors": inference.detector_results,
+            "anomaly_timeline": primary_anomaly_timeline(inference, session, analysis_run_id),
+                "detectors": detector_summaries,
                 "diagnostic_evidence": diagnostic_evidence,
                 "warnings": warnings,
                 "note": inference.note,
             }
 
+        check_analysis_deadline(deadline, "diagnostic evidence generation")
         if persist and self.repository is not None:
             completed_at = datetime.now(UTC).isoformat()
             valid_frame_count = sum(1 for sample in session.samples if sample.frame_valid)
@@ -226,7 +271,7 @@ class AnalysisService:
                 processing_status="completed",
                 raw_frame_count=(
                     len(session.samples)
-                    if session.source_type in {"raw_compatibility_adapter", "raw_decode_analyze"}
+                    if session.source_type in {"raw_compatibility_adapter", "raw_decode_analyze", "native_honda_0x17"}
                     else 0
                 ),
                 valid_frame_count=valid_frame_count,
@@ -234,12 +279,18 @@ class AnalysisService:
                 checksum_error_count=checksum_error_count,
             )
             self.repository.write_telemetry(session)
+            model_record = None
             if inference.model_loaded and model_metadata:
-                self.repository.write_model_version(model_metadata)
+                model_record = self.repository.write_model_version(model_metadata, model_dir=active_model_dir)
             analysis_run = {
                 "id": analysis_run_id,
                 "session_id": session.session_id,
                 "model_version_id": model_version_id,
+                "model_bundle": bundle.provenance() if bundle else None,
+                "model_artifact_provenance": {
+                    key: model_record[key] for key in
+                    ("artifact_path", "artifact_sha256", "scaler_artifact_path", "scaler_artifact_sha256")
+                } if model_record else None,
                 "telemetry_schema_version": session.telemetry_schema_version,
                 "feature_schema_version": FEATURE_SCHEMA_VERSION,
                 "signal_columns": signal_columns,
@@ -254,15 +305,21 @@ class AnalysisService:
                 "evidence_window_count": inference.evidence_window_count,
                 "minimum_windows_for_status": inference.minimum_windows_for_status,
                 "evidence_sufficient": inference.evidence_sufficient,
-                "detectors": inference.detector_results,
+                "detectors": summary["detectors"],
                 "diagnostic_evidence": diagnostic_evidence,
+                "anomaly_timeline": summary["anomaly_timeline"],
                 "warnings": warnings,
                 "started_at": started_at,
                 "completed_at": completed_at,
                 "created_at": started_at,
             }
-            self.repository.write_analysis_run(analysis_run)
+            if reserved_run_id is not None:
+                # A keyed RAW attempt can recover its exact summary after a
+                # restart between the completed run and response-cache writes.
+                analysis_run["request_summary"] = summary
             self.repository.write_analysis_windows(analysis_run_id, analysis_windows)
+            # The run record is the completion marker, after every window file.
+            self.repository.write_analysis_run(analysis_run)
 
         return AnalysisServiceOutput(
             analysis_run_id=analysis_run_id,

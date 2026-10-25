@@ -8,6 +8,7 @@ from typing import Any
 import pandas as pd
 
 from app.ml.harness import DetectorContext, DetectorIdentity, DetectorResult
+from app.ml.robust_reference import capture_balanced_stats
 
 
 CONTEXTUAL_BATTERY_DETECTOR_ID = "contextual_battery_voltage"
@@ -63,6 +64,8 @@ def build_contextual_battery_reference(
     provenance: dict[str, Any],
     min_context_windows: int = DEFAULT_MIN_CONTEXT_WINDOWS,
     robust_z_threshold: float = DEFAULT_ROBUST_Z_THRESHOLD,
+    capture_balanced: bool = False,
+    min_context_captures: int = 1,
 ) -> dict[str, Any]:
     rows: list[pd.DataFrame] = []
     observed_context_counts: dict[str, int] = {}
@@ -78,11 +81,12 @@ def build_contextual_battery_reference(
     contexts: dict[str, Any] = {}
     for context_name in MODELED_CONTEXTS:
         chunk = combined[combined["operating_context"] == context_name] if not combined.empty else pd.DataFrame()
-        if len(chunk) < min_context_windows:
+        if len(chunk) < min_context_windows or chunk["reference_session_id"].nunique() < min_context_captures:
             continue
         features: dict[str, Any] = {}
         for feature in SCORED_FEATURES:
-            features[feature] = _robust_stats(chunk[feature], scale_floor=BATTERY_VOLTAGE_SCALE_FLOOR)
+            features[feature] = (capture_balanced_stats(chunk, feature, BATTERY_VOLTAGE_SCALE_FLOOR)
+                                 if capture_balanced else _robust_stats(chunk[feature], scale_floor=BATTERY_VOLTAGE_SCALE_FLOOR))
         contexts[context_name] = {
             "window_count": int(len(chunk)),
             "reference_session_count": int(chunk["reference_session_id"].nunique()),
@@ -101,6 +105,8 @@ def build_contextual_battery_reference(
             "required_features": list(CONTEXTUAL_REQUIRED_FEATURES),
             "modeled_contexts": list(MODELED_CONTEXTS),
             "min_context_windows": int(min_context_windows),
+            "min_context_captures": min_context_captures,
+            "weighting": "equal_capture_within_context" if capture_balanced else "pooled_windows",
             "robust_z_threshold": float(robust_z_threshold),
             "battery_voltage_scale_floor": BATTERY_VOLTAGE_SCALE_FLOOR,
             "context_policy": (

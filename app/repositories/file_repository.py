@@ -210,6 +210,7 @@ class FileBackedRepository:
             "sampling": session.sampling.model_dump(mode="json"),
             "signal_definitions": session.signal_definitions,
             "sample_count": len(session.samples),
+            "source_type": session.source_type,
             "created_at": _now(),
         }
         self._write_json(directory / "metadata.json", metadata)
@@ -225,7 +226,8 @@ class FileBackedRepository:
         records = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
         return len(records), records[offset : offset + limit]
 
-    def write_model_version(self, metadata: dict[str, Any]) -> dict[str, Any]:
+    def write_model_version(self, metadata: dict[str, Any], *, model_dir: Path | None = None) -> dict[str, Any]:
+        artifact_dir = model_dir or self.settings.model_dir
         model_version_id = metadata.get("model_version_id") or metadata.get("version") or "unknown-model-version"
         payload = {
             "id": model_version_id,
@@ -233,11 +235,16 @@ class FileBackedRepository:
             "model_name": metadata.get("model_name"),
             "model_family": metadata.get("model_family") or metadata.get("model_type"),
             "version": metadata.get("version") or metadata.get("model_version"),
-            "artifact_path": str(self.settings.model_dir / "isolation_forest.joblib"),
-            "scaler_artifact_path": str(self.settings.model_dir / "robust_scaler.joblib"),
+            "artifact_path": str(artifact_dir / "isolation_forest.joblib"),
+            "scaler_artifact_path": str(artifact_dir / "robust_scaler.joblib"),
             "artifact_sha256": (
-                file_sha256(self.settings.model_dir / "isolation_forest.joblib")
-                if (self.settings.model_dir / "isolation_forest.joblib").exists()
+                file_sha256(artifact_dir / "isolation_forest.joblib")
+                if (artifact_dir / "isolation_forest.joblib").exists()
+                else None
+            ),
+            "scaler_artifact_sha256": (
+                file_sha256(artifact_dir / "robust_scaler.joblib")
+                if (artifact_dir / "robust_scaler.joblib").exists()
                 else None
             ),
             "trained_at": metadata.get("created_at"),

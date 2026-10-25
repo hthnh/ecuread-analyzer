@@ -1,0 +1,1214 @@
+{
+  "completed_at": "2026-10-24T15:47:16.732816+07:00",
+  "verdict": "PASS: P3.1 deployed; read-only production acceptance passed",
+  "preflight": {
+    "started_at": "2026-10-24T15:34:32.568398+07:00",
+    "started_epoch": 1792830872.568432,
+    "base_image": "sha256:7bfe65816c9ed399833f59117fab67d0a7542fc3ea3777ff04a4c09bb4493dca",
+    "analyzer_image": "sha256:9d682df1aa2c24e8197f853a75ffee3ca48accc36f1a4005bce2bddd0830d010",
+    "rollback_image": "sha256:7bfe65816c9ed399833f59117fab67d0a7542fc3ea3777ff04a4c09bb4493dca",
+    "rollback_tag": "ecuread-p31-rollback:20261024t083431z",
+    "containers": {
+      "drisafe-web": {
+        "id": "5d2bc49e7715e8be1b2f0cda583d6c5f510ddc8673c9587b0f996b25b9e923dc",
+        "image": "sha256:7bfe65816c9ed399833f59117fab67d0a7542fc3ea3777ff04a4c09bb4493dca",
+        "started_at": "2026-10-24T07:47:01.236808607Z"
+      },
+      "ecu-analyzer": {
+        "id": "db15985c6ad2ce86df24ed5d8cc3f82267c9391009ab92b19733c378ef43fd75",
+        "image": "sha256:9d682df1aa2c24e8197f853a75ffee3ca48accc36f1a4005bce2bddd0830d010",
+        "started_at": "2026-10-24T01:38:20.731030379Z"
+      },
+      "drisafe-db-1": {
+        "id": "88793bab81a17a578c62596cf972e5364f69b4a390b866808938bcdf9515de0e",
+        "image": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+        "started_at": "2026-10-18T05:57:19.616051468Z"
+      },
+      "drisafe-redis-1": {
+        "id": "12d66a3e02214347668ea03e06647e5557dc8ff94c95a7c518bbe83574a9e8ec",
+        "image": "sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99",
+        "started_at": "2026-10-18T05:57:25.520981836Z"
+      }
+    },
+    "source_hashes": {
+      "services/analysis_submission.py": {
+        "before": "43848fa95cb3df41bdd7db8e0fe201f582d264211ce1837b01c3bb5adca7fcf0",
+        "after": "dea086cd151ea5bb82eb80ee86d7e8adb0638f3ec76c490a0a1c2484e8427268"
+      },
+      "services/analysis.py": {
+        "before": "60dcf8efbc3858026bbe032226c1f05edfc7d869b84d1088a53b2d02ebae4cfb",
+        "after": "39c945187d0c2464405038da43d8cde5f9615da0e3748c9dd20104ede84d5ce8"
+      },
+      "templates/session_detail.html": {
+        "before": "058a33759cf5d24c4a8b0be36e70ce8ddcf9b38e3b5516026499d48012794b36",
+        "after": "fd08eedc6b289ef6f169694517ab790594179e38b721bd32801fca1cf32a38fe"
+      },
+      "static/locales/messages.json": {
+        "before": "ac0b1b535002bc2970df184e8db817ed1be88dac16f7a3f992c83f9a624fffd9",
+        "after": "26e2c0f496f085deb73872d7990a179dacbbd5219f4eb758f9067bceacba9352"
+      }
+    },
+    "models": {
+      "model_metadata.json": "e20ef54bf6bac222f1b05c7a199c6c4ede431e5557d765aa30d3a5bf98c620fa",
+      ".gitkeep": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "robust_scaler.joblib": "69a7038a48485bb60ad40531152b766efee491dc5730269854ef85c3922962e6",
+      "isolation_forest.joblib": "1ea86e35976d6eed610724b43ab9ac6c7a87ca148335cd841938d8953ab4d85c",
+      "active_bundle.json": "7ba8de08f62b40b9021feb860ca74121e0da174bd4018b70507e99beaf00f813",
+      "honda_keihin_71_17_v2_candidate_human_normal/model_metadata.json": "6ab8ecd23eb97adaeacca2564ef156734e25f5e7c0f1d4364e7d15654f2541f8",
+      "honda_keihin_71_17_v2_candidate_human_normal/robust_scaler.joblib": "d6a3489ae26aa79ee691dbb9ab543d2bab7006b6d867de7efadc001e428ba33b",
+      "honda_keihin_71_17_v2_candidate_human_normal/isolation_forest.joblib": "20b12dcbc2e4f9d52e75d4e3d8e44c36a0a8e2dccccd6e0625a0c3af92a2a024",
+      "honda_keihin_71_17_v2/model_metadata.json": "0113ebd014374232b5e063f8ee3759a9c6aa732b7d30a8a99fb98f9f72de5945",
+      "honda_keihin_71_17_v2/robust_scaler.joblib": "38e50fb497fe4b7c4368c60932b913c24f4b35cb7a66030831d91e9487192f97",
+      "honda_keihin_71_17_v2/isolation_forest.joblib": "9f0ca2e687db31d4e5caabc220442f3884c4566c78bd321e67369be36c93abec",
+      "honda_keihin_71_17_v0.2_real_run/model_metadata.json": "1fb96a0e04a5340fc29fcca705cc9359333dd483f60c172c410b7efb0454eabf",
+      "honda_keihin_71_17_v0.2_real_run/robust_scaler.joblib": "95077ac62f3f8425b30045e3354c4019d3da63b770dfb1085f7d143a08e15b0b",
+      "honda_keihin_71_17_v0.2_real_run/isolation_forest.joblib": "c5dac13b880fea68821cd1e3f52bd1bf004866d0a2c983e185a756a3fbb4572c",
+      "bundles/native-full18-20261011T135838Z/battery_reference.json": "6b0cebd6d7038b124a3eb94bbebf7d2a3f6c25b5393bf2331999423de3bcbecf",
+      "bundles/native-full18-20261011T135838Z/training_authorization.json": "55df5565f93066e9145246b5998548fffeeca48a6f274764be5893c2397c5460",
+      "bundles/native-full18-20261011T135838Z/manifest.json": "e84a8350aae4708a9e429a313e90f8ee1a625209705a6df48141133f1a8bd5ae",
+      "bundles/native-full18-20261011T135838Z/speed_reference.json": "3aec3788f91ab07ce6286c4d606c428a4ac5413e57ac8695516dff34ad1b0348",
+      "bundles/native-pre-full18/manifest.json": "844b3462a66cbc1be3f8cb3e044ef1267ce76b2367d1109f7adb5fbfa7a9e650",
+      "bundles/native-full18-20261011T135838Z/iforest/model_metadata.json": "b0f9f6e13255d69e14af8f7b8a0af6e6887c7b01f52ad342937e489382d0ea35",
+      "bundles/native-full18-20261011T135838Z/iforest/robust_scaler.joblib": "2b780a9635327789aeb6a26ca8a7531d42512207fffe0dc152eccb0a1a971dfc",
+      "bundles/native-full18-20261011T135838Z/iforest/isolation_forest.joblib": "ca902dd40e828c2b668f4cddb5ed244a6f387804049c2f10f9fd5f5e8bf44085"
+    },
+    "bundle": {
+      "bundle_id": "native-full18-20261011T135838Z",
+      "manifest": "models/bundles/native-full18-20261011T135838Z/manifest.json",
+      "scope": "local",
+      "sha256": "e84a8350aae4708a9e429a313e90f8ee1a625209705a6df48141133f1a8bd5ae"
+    },
+    "database": {
+      "schema": "b7f2c9a4d610",
+      "sessions": 59,
+      "results": 69,
+      "pending": 0,
+      "selected_242": "analysis_20261024T020849Z_9324ea85a0c5",
+      "affected": [
+        {
+          "id": 242,
+          "capture_status": "completed",
+          "termination_reason": null,
+          "sync_status": "complete",
+          "record_count": 12625,
+          "selected_run": "analysis_20261024T020849Z_9324ea85a0c5"
+        },
+        {
+          "id": 246,
+          "capture_status": "interrupted",
+          "termination_reason": "unclean_runtime_shutdown",
+          "sync_status": "complete",
+          "record_count": 3352,
+          "selected_run": "da55f39a-d82f-4d61-b04f-6b28673a247b"
+        },
+        {
+          "id": 248,
+          "capture_status": "interrupted",
+          "termination_reason": "unclean_runtime_shutdown",
+          "sync_status": "complete",
+          "record_count": 12211,
+          "selected_run": "7a06b307-b2d3-486b-8792-2552a8a21040"
+        },
+        {
+          "id": 249,
+          "capture_status": "interrupted",
+          "termination_reason": "unclean_runtime_shutdown",
+          "sync_status": "complete",
+          "record_count": 9917,
+          "selected_run": "analysis_20261023T164629Z_d867df9f56e6"
+        }
+      ]
+    },
+    "protected_directory": "/home/hthnh/p3-1-rollout/20261024T083431Z",
+    "prior_backups": "/home/hthnh/p3-rollout/20261024T074257Z",
+    "disk_free_bytes": 13150703616,
+    "memory_available_bytes": 4814307328,
+    "models_and_analyzer_config_unchanged": true
+  },
+  "candidate": {
+    "image": "sha256:710177ba4d81d76dbddef52d6a2215dc6eeaff3e8f9f777d6c5418e9e5feda0f",
+    "tag": "ecuread-p31-20261024t083431z:drivesafe",
+    "base_image": "sha256:7bfe65816c9ed399833f59117fab67d0a7542fc3ea3777ff04a4c09bb4493dca",
+    "files": [
+      "services/analysis_submission.py",
+      "services/analysis.py",
+      "templates/session_detail.html",
+      "static/locales/messages.json"
+    ],
+    "source_hashes": {
+      "services/analysis_submission.py": {
+        "before": "43848fa95cb3df41bdd7db8e0fe201f582d264211ce1837b01c3bb5adca7fcf0",
+        "after": "dea086cd151ea5bb82eb80ee86d7e8adb0638f3ec76c490a0a1c2484e8427268"
+      },
+      "services/analysis.py": {
+        "before": "60dcf8efbc3858026bbe032226c1f05edfc7d869b84d1088a53b2d02ebae4cfb",
+        "after": "39c945187d0c2464405038da43d8cde5f9615da0e3748c9dd20104ede84d5ce8"
+      },
+      "templates/session_detail.html": {
+        "before": "058a33759cf5d24c4a8b0be36e70ce8ddcf9b38e3b5516026499d48012794b36",
+        "after": "fd08eedc6b289ef6f169694517ab790594179e38b721bd32801fca1cf32a38fe"
+      },
+      "static/locales/messages.json": {
+        "before": "ac0b1b535002bc2970df184e8db817ed1be88dac16f7a3f992c83f9a624fffd9",
+        "after": "26e2c0f496f085deb73872d7990a179dacbbd5219f4eb758f9067bceacba9352"
+      }
+    }
+  },
+  "deployment": {
+    "image": "sha256:710177ba4d81d76dbddef52d6a2215dc6eeaff3e8f9f777d6c5418e9e5feda0f",
+    "container": "3fd66ad2d31c8b4b5785520051c22fda077ff355696fc46a98fe3258f2d8f006",
+    "seconds_to_health": 6.302392959594727,
+    "health": {
+      "database": "ok",
+      "redis": "ok",
+      "status": "ok"
+    },
+    "analyzer_container_unchanged": true,
+    "database_and_redis_containers_unchanged": true,
+    "web_environment_unchanged": true,
+    "networks_and_mounts_unchanged": true,
+    "deployment_epoch": 1792831254.171738
+  },
+  "runtime": {
+    "drisafe-web": {
+      "id": "3fd66ad2d31c8b4b5785520051c22fda077ff355696fc46a98fe3258f2d8f006",
+      "image": "sha256:710177ba4d81d76dbddef52d6a2215dc6eeaff3e8f9f777d6c5418e9e5feda0f",
+      "running": true,
+      "restarts": 0,
+      "oom": false,
+      "started_at": "2026-10-24T08:40:57.79504694Z"
+    },
+    "ecu-analyzer": {
+      "id": "db15985c6ad2ce86df24ed5d8cc3f82267c9391009ab92b19733c378ef43fd75",
+      "image": "sha256:9d682df1aa2c24e8197f853a75ffee3ca48accc36f1a4005bce2bddd0830d010",
+      "running": true,
+      "restarts": 0,
+      "oom": false,
+      "started_at": "2026-10-24T01:38:20.731030379Z"
+    },
+    "drisafe-db-1": {
+      "id": "88793bab81a17a578c62596cf972e5364f69b4a390b866808938bcdf9515de0e",
+      "image": "sha256:742f40ea20b9ff2ff31db5458d127452988a2164df9e17441e191f3b72252193",
+      "running": true,
+      "restarts": 0,
+      "oom": false,
+      "started_at": "2026-10-18T05:57:19.616051468Z"
+    },
+    "drisafe-redis-1": {
+      "id": "12d66a3e02214347668ea03e06647e5557dc8ff94c95a7c518bbe83574a9e8ec",
+      "image": "sha256:6ab0b6e7381779332f97b8ca76193e45b0756f38d4c0dcda72dbb3c32061ab99",
+      "running": true,
+      "restarts": 0,
+      "oom": false,
+      "started_at": "2026-10-18T05:57:25.520981836Z"
+    }
+  },
+  "health": {
+    "drisafe-web": {
+      "http": 200,
+      "body": {
+        "database": "ok",
+        "redis": "ok",
+        "status": "ok"
+      }
+    },
+    "ecu-analyzer": {
+      "http": 200,
+      "body": {
+        "status": "ok",
+        "service": "ecuread-analyzer",
+        "model_loaded": true
+      }
+    }
+  },
+  "backups": {
+    "database": {
+      "bytes": 21027181,
+      "sha256": "2ef01c4a877a2bdb1d8b84ef16e0f5e4a5fe80fae0cdf74c3b830774d8ef08b2"
+    },
+    "configuration_copied": true,
+    "previous_analyzer_data_archive": "/home/hthnh/p3-rollout/20261024T074257Z/analyzer-data.tar.gz",
+    "rollback_image": "sha256:7bfe65816c9ed399833f59117fab67d0a7542fc3ea3777ff04a4c09bb4493dca",
+    "rollback_tag": "ecuread-p31-rollback:20261024t083431z"
+  },
+  "focused_candidate_regression": {
+    "passed": 36,
+    "seconds": 29.796,
+    "network": "none",
+    "database": "disposable SQLite",
+    "new_p31_cases": 8
+  },
+  "unchanged_p3_runtime_files": {
+    "models.py": "314916fb9a53fc0f3ff4706b7ea95130ddd2066659e07ec023213ba72c80a03f",
+    "routes/dashboard.py": "ce50417f27a2f79b2c62382355d0bcb09b597a785e2b4b65088672f209be1451",
+    "static/js/dashboardApi.js": "2b41d4bd4fc49d1d1338317cd01177dfea42dd77ce1d6a670ba239fa180ac09f",
+    "static/js/sessionDetail.js": "884c1b4af458c418c6d0d1e785faa3b7815a6716f3742d48e082581d5306478d",
+    "integrations/analyzer_client.py": "ccba458e4d7ed9f13b37eff659e9c38ad0ebfd6d92951f7ce7c70a03583ec419"
+  },
+  "browser": {
+    "phase": "production",
+    "session_views": [
+      {
+        "id": 246,
+        "language": "en",
+        "http": 200,
+        "action_visible": true,
+        "eligible": true,
+        "disabled": false,
+        "action_outside_details": true,
+        "initial_samples_requests": 0,
+        "interrupted_display": true,
+        "context_localized": true
+      },
+      {
+        "id": 248,
+        "language": "en",
+        "http": 200,
+        "action_visible": true,
+        "eligible": true,
+        "disabled": false,
+        "action_outside_details": true,
+        "initial_samples_requests": 0,
+        "interrupted_display": true,
+        "context_localized": true
+      },
+      {
+        "id": 249,
+        "language": "en",
+        "http": 200,
+        "action_visible": true,
+        "eligible": true,
+        "disabled": false,
+        "action_outside_details": true,
+        "initial_samples_requests": 0,
+        "interrupted_display": true,
+        "context_localized": true
+      },
+      {
+        "id": 242,
+        "language": "en",
+        "http": 200,
+        "action_visible": true,
+        "eligible": true,
+        "disabled": false,
+        "action_outside_details": true,
+        "initial_samples_requests": 0,
+        "interrupted_display": false,
+        "context_localized": false
+      },
+      {
+        "id": 246,
+        "language": "vi",
+        "http": 200,
+        "action_visible": true,
+        "eligible": true,
+        "disabled": false,
+        "action_outside_details": true,
+        "initial_samples_requests": 0,
+        "interrupted_display": true,
+        "context_localized": true
+      },
+      {
+        "id": 248,
+        "language": "vi",
+        "http": 200,
+        "action_visible": true,
+        "eligible": true,
+        "disabled": false,
+        "action_outside_details": true,
+        "initial_samples_requests": 0,
+        "interrupted_display": true,
+        "context_localized": true
+      },
+      {
+        "id": 249,
+        "language": "vi",
+        "http": 200,
+        "action_visible": true,
+        "eligible": true,
+        "disabled": false,
+        "action_outside_details": true,
+        "initial_samples_requests": 0,
+        "interrupted_display": true,
+        "context_localized": true
+      },
+      {
+        "id": 242,
+        "language": "vi",
+        "http": 200,
+        "action_visible": true,
+        "eligible": true,
+        "disabled": false,
+        "action_outside_details": true,
+        "initial_samples_requests": 0,
+        "interrupted_display": false,
+        "context_localized": false
+      }
+    ],
+    "guest_http": 200,
+    "guest_rerun_actions": 0,
+    "guest_real_session_http": 404,
+    "login_http": 200,
+    "anonymous_analysis_api": 401,
+    "home_and_recent_rides_http": 200,
+    "rerun_clicked": false,
+    "views": [],
+    "expanded_requests": [
+      {
+        "path": "/api/sessions/242/samples",
+        "method": "GET"
+      },
+      {
+        "path": "/sessions/242",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/dashboardApi.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/sessionDetail.js",
+        "method": "GET"
+      },
+      {
+        "path": "/api/sessions/242/samples",
+        "method": "GET"
+      },
+      {
+        "path": "/",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/sessions",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/dashboardApi.js",
+        "method": "GET"
+      },
+      {
+        "path": "/sessions/900101",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/dashboardApi.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/sessionDetail.js",
+        "method": "GET"
+      },
+      {
+        "path": "/sessions/900101",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/dashboardApi.js",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/sessionDetail.js",
+        "method": "GET"
+      },
+      {
+        "path": "/sessions/246",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/auth/login",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/auth/login",
+        "method": "GET"
+      },
+      {
+        "path": "/static/css/dashboard.css",
+        "method": "GET"
+      },
+      {
+        "path": "/static/js/i18n.js",
+        "method": "GET"
+      },
+      {
+        "path": "/api/sessions/242/analysis",
+        "method": "GET"
+      }
+    ],
+    "technical_initially_collapsed": true,
+    "chart_canvases_after_open": 4,
+    "event_link_works": true,
+    "locale_after_switch": "vi",
+    "errors": [],
+    "browser": "149.0.7827.55",
+    "analysis_posts": 0
+  },
+  "session_eligibility": [
+    {
+      "id": 242,
+      "records": 12625,
+      "capture_status": "completed",
+      "termination_reason": null,
+      "sync_status": "complete",
+      "selected_run": "analysis_20261024T020849Z_9324ea85a0c5",
+      "rerun": {
+        "eligible": true,
+        "processing": false,
+        "message": "rerun.ready"
+      },
+      "history": [
+        {
+          "id": 80,
+          "run": "87f16d88-91af-476e-af77-32c079637b36"
+        },
+        {
+          "id": 84,
+          "run": "analysis_20261023T232221Z_2c818f9e015c"
+        },
+        {
+          "id": 85,
+          "run": "analysis_20261024T014120Z_f53946d6f290"
+        },
+        {
+          "id": 86,
+          "run": "analysis_20261024T020849Z_9324ea85a0c5"
+        }
+      ],
+      "incomplete_sync_ineligible": true,
+      "active_capture_ineligible": true,
+      "fresh_claim_processing": true,
+      "expired_claim_retryable": true
+    },
+    {
+      "id": 246,
+      "records": 3352,
+      "capture_status": "interrupted",
+      "termination_reason": "unclean_runtime_shutdown",
+      "sync_status": "complete",
+      "selected_run": "da55f39a-d82f-4d61-b04f-6b28673a247b",
+      "rerun": {
+        "eligible": true,
+        "processing": false,
+        "message": "rerun.ready"
+      },
+      "history": [
+        {
+          "id": 78,
+          "run": "da55f39a-d82f-4d61-b04f-6b28673a247b"
+        }
+      ],
+      "incomplete_sync_ineligible": true,
+      "active_capture_ineligible": true,
+      "fresh_claim_processing": true,
+      "expired_claim_retryable": true
+    },
+    {
+      "id": 248,
+      "records": 12211,
+      "capture_status": "interrupted",
+      "termination_reason": "unclean_runtime_shutdown",
+      "sync_status": "complete",
+      "selected_run": "7a06b307-b2d3-486b-8792-2552a8a21040",
+      "rerun": {
+        "eligible": true,
+        "processing": false,
+        "message": "rerun.ready"
+      },
+      "history": [
+        {
+          "id": 82,
+          "run": "7a06b307-b2d3-486b-8792-2552a8a21040"
+        }
+      ],
+      "incomplete_sync_ineligible": true,
+      "active_capture_ineligible": true,
+      "fresh_claim_processing": true,
+      "expired_claim_retryable": true
+    },
+    {
+      "id": 249,
+      "records": 9917,
+      "capture_status": "interrupted",
+      "termination_reason": "unclean_runtime_shutdown",
+      "sync_status": "complete",
+      "selected_run": "analysis_20261023T164629Z_d867df9f56e6",
+      "rerun": {
+        "eligible": true,
+        "processing": false,
+        "message": "rerun.ready"
+      },
+      "history": [
+        {
+          "id": 79,
+          "run": "727ba9a3-d2b1-445a-a9dc-6bf2e7a48ab7"
+        },
+        {
+          "id": 83,
+          "run": "analysis_20261023T164629Z_d867df9f56e6"
+        }
+      ],
+      "incomplete_sync_ineligible": true,
+      "active_capture_ineligible": true,
+      "fresh_claim_processing": true,
+      "expired_claim_retryable": true
+    }
+  ],
+  "database_after": {
+    "schema": "b7f2c9a4d610",
+    "sessions": 59,
+    "results": 69,
+    "pending": 0,
+    "selected_242": "analysis_20261024T020849Z_9324ea85a0c5"
+  },
+  "preservation": {
+    "before": {
+      "telemetry_records": {
+        "sha256": "a8000d79465b245fed1b67fec39fc4072d6f09db00912e66dd77c46753a9dcb9",
+        "bytes": 365478573
+      },
+      "analysis_results": {
+        "sha256": "a0af972f55a1966ba65fc688c33f55bbbf0c582565e2a4a7d4f91a69ccf296cc",
+        "bytes": 54403750
+      },
+      "ride_sessions": {
+        "sha256": "9421e8ceafb86930496b6a9c37a9dd0895927c88a5a993c2dc237bfa012d1a5d",
+        "bytes": 65062
+      },
+      "sync_batches": {
+        "sha256": "e1773f529a5bb5495ceb4e095b17fda3d334a8ce313c288ad320bd48b02705d4",
+        "bytes": 64049
+      },
+      "raw_artifacts": {
+        "sha256": "469a19c315b5b8ff101c21414477777c137cd4aa199a4199d820401a77363e0b",
+        "bytes": 48091
+      }
+    },
+    "after": {
+      "telemetry_records": {
+        "sha256": "a8000d79465b245fed1b67fec39fc4072d6f09db00912e66dd77c46753a9dcb9",
+        "bytes": 365478573
+      },
+      "analysis_results": {
+        "sha256": "a0af972f55a1966ba65fc688c33f55bbbf0c582565e2a4a7d4f91a69ccf296cc",
+        "bytes": 54403750
+      },
+      "ride_sessions": {
+        "sha256": "9421e8ceafb86930496b6a9c37a9dd0895927c88a5a993c2dc237bfa012d1a5d",
+        "bytes": 65062
+      },
+      "sync_batches": {
+        "sha256": "e1773f529a5bb5495ceb4e095b17fda3d334a8ce313c288ad320bd48b02705d4",
+        "bytes": 64049
+      },
+      "raw_artifacts": {
+        "sha256": "469a19c315b5b8ff101c21414477777c137cd4aa199a4199d820401a77363e0b",
+        "bytes": 48091
+      }
+    },
+    "identical": true,
+    "session_242_analysis_api_identical": true,
+    "reanalysis_evidence_only_additions": [
+      "capture_status",
+      "termination_reason"
+    ],
+    "all_model_files_unchanged": true,
+    "analyzer_config_and_started_at_unchanged": true,
+    "no_analyzer_artifact_created_during_rollout": true,
+    "latest_analyzer_artifact_epoch": 1792807751.9348755
+  },
+  "latency": {
+    "/": {
+      "before": {
+        "n": 5,
+        "median_seconds": 3.274795,
+        "median_ttfb_seconds": 3.273803,
+        "max_seconds": 3.390189,
+        "body_transfer_bytes": 45719
+      },
+      "after": {
+        "n": 5,
+        "median_seconds": 3.37998,
+        "median_ttfb_seconds": 3.378857,
+        "max_seconds": 3.799686,
+        "body_transfer_bytes": 46090
+      },
+      "previous_p3_rollout_median_seconds": 3.402363
+    },
+    "/sessions": {
+      "before": {
+        "n": 5,
+        "median_seconds": 0.097104,
+        "median_ttfb_seconds": 0.096101,
+        "max_seconds": 0.141673,
+        "body_transfer_bytes": 45868
+      },
+      "after": {
+        "n": 5,
+        "median_seconds": 0.128414,
+        "median_ttfb_seconds": 0.127124,
+        "max_seconds": 0.32427,
+        "body_transfer_bytes": 46195
+      },
+      "previous_p3_rollout_median_seconds": 0.1443
+    },
+    "/sessions/242": {
+      "before": {
+        "n": 5,
+        "median_seconds": 1.425875,
+        "median_ttfb_seconds": 1.423744,
+        "max_seconds": 1.577603,
+        "body_transfer_bytes": 56918
+      },
+      "after": {
+        "n": 5,
+        "median_seconds": 1.475969,
+        "median_ttfb_seconds": 1.474132,
+        "max_seconds": 1.573562,
+        "body_transfer_bytes": 57257
+      },
+      "previous_p3_rollout_median_seconds": 1.450717
+    },
+    "/api/sessions/242/analysis": {
+      "before": {
+        "n": 5,
+        "median_seconds": 2.675457,
+        "median_ttfb_seconds": 2.673628,
+        "max_seconds": 2.865232,
+        "body_transfer_bytes": 719152
+      },
+      "after": {
+        "n": 5,
+        "median_seconds": 2.680653,
+        "median_ttfb_seconds": 2.669571,
+        "max_seconds": 2.917866,
+        "body_transfer_bytes": 719207
+      },
+      "previous_p3_rollout_median_seconds": 2.720104
+    }
+  },
+  "raw_latency": {
+    "before": [
+      {
+        "round": 1,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 4.1e-05,
+        "time_connect": 0.000245,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.389047,
+        "time_total": 3.390189,
+        "size_download": 45721
+      },
+      {
+        "round": 1,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.1e-05,
+        "time_connect": 0.00017,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.095216,
+        "time_total": 0.096271,
+        "size_download": 45866
+      },
+      {
+        "round": 1,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 3.2e-05,
+        "time_connect": 0.000211,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.453129,
+        "time_total": 1.45485,
+        "size_download": 56921
+      },
+      {
+        "round": 1,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.1e-05,
+        "time_connect": 0.000172,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.862688,
+        "time_total": 2.865232,
+        "size_download": 719152
+      },
+      {
+        "round": 2,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.7e-05,
+        "time_connect": 0.000179,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.136377,
+        "time_total": 3.137489,
+        "size_download": 45724
+      },
+      {
+        "round": 2,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.5e-05,
+        "time_connect": 0.000181,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.093036,
+        "time_total": 0.094347,
+        "size_download": 45864
+      },
+      {
+        "round": 2,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 4e-05,
+        "time_connect": 0.000212,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.347801,
+        "time_total": 1.349721,
+        "size_download": 56922
+      },
+      {
+        "round": 2,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.5e-05,
+        "time_connect": 0.000169,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.673628,
+        "time_total": 2.675457,
+        "size_download": 719152
+      },
+      {
+        "round": 3,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2e-05,
+        "time_connect": 0.000171,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.372521,
+        "time_total": 3.373528,
+        "size_download": 45721
+      },
+      {
+        "round": 3,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 3.2e-05,
+        "time_connect": 0.000203,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.099151,
+        "time_total": 0.1002,
+        "size_download": 45867
+      },
+      {
+        "round": 3,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 2.5e-05,
+        "time_connect": 0.00017,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.373747,
+        "time_total": 1.37567,
+        "size_download": 56920
+      },
+      {
+        "round": 3,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.1e-05,
+        "time_connect": 0.000177,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.50278,
+        "time_total": 2.504552,
+        "size_download": 719152
+      },
+      {
+        "round": 4,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 3e-05,
+        "time_connect": 0.000195,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.273803,
+        "time_total": 3.274795,
+        "size_download": 45723
+      },
+      {
+        "round": 4,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2e-05,
+        "time_connect": 0.000174,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.140608,
+        "time_total": 0.141673,
+        "size_download": 45868
+      },
+      {
+        "round": 4,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 3.3e-05,
+        "time_connect": 0.000198,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.575571,
+        "time_total": 1.577603,
+        "size_download": 56919
+      },
+      {
+        "round": 4,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000179,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.542638,
+        "time_total": 2.545186,
+        "size_download": 719152
+      },
+      {
+        "round": 5,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000168,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.120228,
+        "time_total": 3.121215,
+        "size_download": 45719
+      },
+      {
+        "round": 5,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2e-05,
+        "time_connect": 0.000176,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.096101,
+        "time_total": 0.097104,
+        "size_download": 45868
+      },
+      {
+        "round": 5,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 3e-05,
+        "time_connect": 0.000213,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.423744,
+        "time_total": 1.425875,
+        "size_download": 56918
+      },
+      {
+        "round": 5,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000219,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.83021,
+        "time_total": 2.831955,
+        "size_download": 719152
+      }
+    ],
+    "after": [
+      {
+        "round": 1,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.7e-05,
+        "time_connect": 0.000214,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.798452,
+        "time_total": 3.799686,
+        "size_download": 46084
+      },
+      {
+        "round": 1,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 3.4e-05,
+        "time_connect": 0.000214,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.322843,
+        "time_total": 0.32427,
+        "size_download": 46194
+      },
+      {
+        "round": 1,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000202,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.550516,
+        "time_total": 1.553093,
+        "size_download": 57247
+      },
+      {
+        "round": 1,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.7e-05,
+        "time_connect": 0.000197,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.697164,
+        "time_total": 2.698853,
+        "size_download": 719207
+      },
+      {
+        "round": 2,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.4e-05,
+        "time_connect": 0.000178,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.455175,
+        "time_total": 3.456327,
+        "size_download": 46090
+      },
+      {
+        "round": 2,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2e-05,
+        "time_connect": 0.000171,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.098294,
+        "time_total": 0.099679,
+        "size_download": 46197
+      },
+      {
+        "round": 2,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 2.5e-05,
+        "time_connect": 0.000174,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.571475,
+        "time_total": 1.573562,
+        "size_download": 57247
+      },
+      {
+        "round": 2,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2e-05,
+        "time_connect": 0.000172,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.657591,
+        "time_total": 2.659872,
+        "size_download": 719207
+      },
+      {
+        "round": 3,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000167,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.305851,
+        "time_total": 3.306855,
+        "size_download": 46091
+      },
+      {
+        "round": 3,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2e-05,
+        "time_connect": 0.000174,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.148583,
+        "time_total": 0.149465,
+        "size_download": 46197
+      },
+      {
+        "round": 3,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 3.1e-05,
+        "time_connect": 0.000174,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.474132,
+        "time_total": 1.475969,
+        "size_download": 57252
+      },
+      {
+        "round": 3,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 3.4e-05,
+        "time_connect": 0.000875,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.905327,
+        "time_total": 2.917866,
+        "size_download": 719207
+      },
+      {
+        "round": 4,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 1.9e-05,
+        "time_connect": 0.000172,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.378857,
+        "time_total": 3.37998,
+        "size_download": 46089
+      },
+      {
+        "round": 4,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 2.9e-05,
+        "time_connect": 0.000182,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.096352,
+        "time_total": 0.09779,
+        "size_download": 46198
+      },
+      {
+        "round": 4,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 3.1e-05,
+        "time_connect": 0.000195,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.432296,
+        "time_total": 1.434245,
+        "size_download": 57251
+      },
+      {
+        "round": 4,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.6e-05,
+        "time_connect": 0.000185,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.669571,
+        "time_total": 2.680653,
+        "size_download": 719207
+      },
+      {
+        "round": 5,
+        "route": "/",
+        "http_code": 200,
+        "time_namelookup": 2.5e-05,
+        "time_connect": 0.000295,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 3.362818,
+        "time_total": 3.364958,
+        "size_download": 46090
+      },
+      {
+        "round": 5,
+        "route": "/sessions",
+        "http_code": 200,
+        "time_namelookup": 3.2e-05,
+        "time_connect": 0.000203,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 0.127124,
+        "time_total": 0.128414,
+        "size_download": 46195
+      },
+      {
+        "round": 5,
+        "route": "/sessions/242",
+        "http_code": 200,
+        "time_namelookup": 2.4e-05,
+        "time_connect": 0.000164,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 1.459988,
+        "time_total": 1.461749,
+        "size_download": 57257
+      },
+      {
+        "round": 5,
+        "route": "/api/sessions/242/analysis",
+        "http_code": 200,
+        "time_namelookup": 2.7e-05,
+        "time_connect": 0.00018,
+        "time_appconnect": 0.0,
+        "time_starttransfer": 2.52234,
+        "time_total": 2.524275,
+        "size_download": 719207
+      }
+    ]
+  },
+  "logs": {
+    "drisafe-web": {
+      "analysis_post_count": 0,
+      "error_count": 0,
+      "worker_boots": 2
+    },
+    "ecu-analyzer": {
+      "analysis_post_count": 0,
+      "error_count": 0,
+      "worker_boots": 0
+    }
+  },
+  "public_login_path": {
+    "http_code": 200,
+    "time_namelookup": 0.067353,
+    "time_connect": 0.135116,
+    "time_appconnect": 0.218962,
+    "time_starttransfer": 0.405195,
+    "time_total": 0.499802
+  },
+  "production_harness_submissions": 0,
+  "production_analyses_executed": 0,
+  "rollback_executed": false
+}

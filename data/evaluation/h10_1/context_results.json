@@ -1,0 +1,1417 @@
+{
+  "overall": {
+    "capture_count": 18,
+    "duration_weighted_flag_frequency": 0.04253793797509612,
+    "eligible_time_union_s": 25169.841,
+    "equal_capture_decision_median": {
+      "count": 18,
+      "max": 0.1678751244882085,
+      "mean": 0.09848431341324701,
+      "median": 0.12499125450709402,
+      "min": -0.08328449027721785,
+      "p05": -0.07386476640085782,
+      "p25": 0.10194201148165292,
+      "p75": 0.14703426098105932,
+      "p95": 0.16765979624021948
+    },
+    "equal_capture_flag_frequency": 0.20386471914751214,
+    "equal_capture_flag_frequency_uncertainty": {
+      "draws": 10000,
+      "groups": 18,
+      "interval": [
+        0.05124916255725381,
+        0.3801278880962568
+      ],
+      "mean": 0.20386471914751214,
+      "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+      "seed": 42
+    },
+    "equal_capture_run_rate_per_hour": 37.57286532893053,
+    "equal_capture_runs_per_labeled_context_hour": 36.26387039423562,
+    "equal_capture_score_median": {
+      "count": 18,
+      "max": -0.3872478818741465,
+      "mean": -0.45518661170510566,
+      "median": -0.4287796845670888,
+      "min": -0.6412872241830538,
+      "p05": -0.6176813033967914,
+      "p25": -0.44762902952464523,
+      "p75": -0.40625386252266016,
+      "p95": -0.38827291011448983
+    },
+    "flagged_windows": 412,
+    "labeled_context_duration_s": 25189.348,
+    "largest_capture_share_of_flags": 0.4077669902912621,
+    "pooled_flag_time_fraction": 0.07210720957673117,
+    "pooled_runs_per_eligible_hour": 13.730718441963935,
+    "pooled_runs_per_labeled_context_hour": 13.72008517251022,
+    "pooled_window_flag_frequency": 0.04124536990689759,
+    "supported": true,
+    "total_runs": 96,
+    "windows": 9989
+  },
+  "tracks": {
+    "macro_operating": {
+      "__ambiguous": {
+        "capture_count": 18,
+        "duration_weighted_flag_frequency": 0.041695754666552176,
+        "eligible_time_union_s": 11866.839999999998,
+        "equal_capture_decision_median": {
+          "count": 18,
+          "max": 0.16839470061251866,
+          "mean": 0.09600447589073252,
+          "median": 0.12379162830189046,
+          "min": -0.07733066927318366,
+          "p05": -0.03319152055044953,
+          "p25": 0.06459925930021877,
+          "p75": 0.14533682000912124,
+          "p95": 0.16811781030414089
+        },
+        "equal_capture_flag_frequency": 0.2080871772131169,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 18,
+          "interval": [
+            0.057894611885411645,
+            0.387233831616661
+          ],
+          "mean": 0.2080871772131169,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 56.52740028798453,
+        "equal_capture_runs_per_labeled_context_hour": null,
+        "equal_capture_score_median": {
+          "count": 18,
+          "max": -0.3870540590538102,
+          "mean": -0.4576664492276201,
+          "median": -0.4300278192425151,
+          "min": -0.6353334031790197,
+          "p05": -0.5893552546488263,
+          "p25": -0.4900058083786166,
+          "p75": -0.4085621179225567,
+          "p95": -0.38758686873778675
+        },
+        "flagged_windows": 128,
+        "labeled_context_duration_s": 0,
+        "largest_capture_share_of_flags": 0.546875,
+        "pooled_decision_score": {
+          "count": 3183,
+          "max": 0.19982408213413072,
+          "mean": 0.11792952006602268,
+          "median": 0.12492474451760949,
+          "min": -0.10398008305204975,
+          "p05": 0.0091527842034062,
+          "p25": 0.09112607753814628,
+          "p75": 0.15845973333403207,
+          "p95": 0.18517946985931225
+        },
+        "pooled_flag_time_fraction": 0.0658916779867261,
+        "pooled_runs_per_eligible_hour": 15.471684121467892,
+        "pooled_runs_per_labeled_context_hour": null,
+        "pooled_score_sample": {
+          "count": 3183,
+          "max": -0.3560101293876001,
+          "mean": -0.43592988285222856,
+          "median": -0.4292993253893117,
+          "min": -0.6619828169578857,
+          "p05": -0.5419995877184485,
+          "p25": -0.46248601782124754,
+          "p75": -0.39587299863639364,
+          "p95": -0.36982682813082185
+        },
+        "pooled_window_flag_frequency": 0.04021363493559535,
+        "supported": true,
+        "total_runs": 51,
+        "windows": 3183
+      },
+      "engine_off": {
+        "capture_count": 0,
+        "pooled_decision_score": {
+          "count": 0
+        },
+        "pooled_score_sample": {
+          "count": 0
+        },
+        "supported": false
+      },
+      "moving_episode": {
+        "capture_count": 15,
+        "duration_weighted_flag_frequency": 0.02609732069548724,
+        "eligible_time_union_s": 16605.967999999997,
+        "equal_capture_decision_median": {
+          "count": 15,
+          "max": 0.1689302234597184,
+          "mean": 0.13607461997051454,
+          "median": 0.14449459511735183,
+          "min": 0.0424812720604647,
+          "p05": 0.07977830622747673,
+          "p25": 0.12481404765730339,
+          "p75": 0.15630296424721252,
+          "p95": 0.16719447166912305
+        },
+        "equal_capture_flag_frequency": 0.03117455760796141,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 15,
+          "interval": [
+            0.008959541773041185,
+            0.06178509093337952
+          ],
+          "mean": 0.03117455760796141,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 11.756887742183952,
+        "equal_capture_runs_per_labeled_context_hour": 10.268561761596867,
+        "equal_capture_score_median": {
+          "count": 15,
+          "max": -0.38714537112893577,
+          "mean": -0.4179868215642522,
+          "median": -0.41023060658037575,
+          "min": -0.5131586554468699,
+          "p05": -0.47041455448597574,
+          "p25": -0.4288692811590582,
+          "p75": -0.3983639202452295,
+          "p95": -0.3882143111611217
+        },
+        "flagged_windows": 138,
+        "labeled_context_duration_s": 18160.243000000002,
+        "largest_capture_share_of_flags": 0.6521739130434783,
+        "pooled_decision_score": {
+          "count": 5502,
+          "max": 0.19862409417762839,
+          "mean": 0.12709004851353922,
+          "median": 0.13654849570016708,
+          "min": -0.08153979716510495,
+          "p05": 0.027499942797484224,
+          "p25": 0.1021457052714601,
+          "p75": 0.16615686677151328,
+          "p95": 0.1858188846732299
+        },
+        "pooled_flag_time_fraction": 0.04671513277636091,
+        "pooled_runs_per_eligible_hour": 10.839476506277745,
+        "pooled_runs_per_labeled_context_hour": 9.91176164327757,
+        "pooled_score_sample": {
+          "count": 5502,
+          "max": -0.3545325015321973,
+          "mean": -0.42655819913187715,
+          "median": -0.41719603975928643,
+          "min": -0.6293982006811794,
+          "p05": -0.5248435266217293,
+          "p25": -0.4515115448619734,
+          "p75": -0.38780312131484745,
+          "p95": -0.3686976195057198
+        },
+        "pooled_window_flag_frequency": 0.025081788440567066,
+        "supported": true,
+        "total_runs": 50,
+        "windows": 5502
+      },
+      "moving_steady": {
+        "capture_count": 10,
+        "duration_weighted_flag_frequency": 0.007513557130960396,
+        "eligible_time_union_s": 2556.7390000000005,
+        "equal_capture_decision_median": {
+          "count": 10,
+          "max": 0.1847091954565708,
+          "mean": 0.14961791029755683,
+          "median": 0.16054017471741105,
+          "min": 0.07503878701772304,
+          "p05": 0.09401843060139917,
+          "p25": 0.13011301844274034,
+          "p75": 0.17493112756537008,
+          "p95": 0.18271722786333727
+        },
+        "equal_capture_flag_frequency": 0.0022727272727272726,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 10,
+          "interval": [
+            0.0,
+            0.006818181818181818
+          ],
+          "mean": 0.0022727272727272726,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 1.277729994356692,
+        "equal_capture_runs_per_labeled_context_hour": 0.8796546866657791,
+        "equal_capture_score_median": {
+          "count": 10,
+          "max": -0.37112501606516,
+          "mean": -0.40463272332223477,
+          "median": -0.39455093742481456,
+          "min": -0.47852648980479295,
+          "p05": -0.4580893076234788,
+          "p25": -0.42427576227678043,
+          "p75": -0.37888371028103435,
+          "p95": -0.3732256060385091
+        },
+        "flagged_windows": 5,
+        "labeled_context_duration_s": 4152.367499999999,
+        "largest_capture_share_of_flags": 1.0,
+        "pooled_decision_score": {
+          "count": 647,
+          "max": 0.18779222376183496,
+          "mean": 0.12953339701179137,
+          "median": 0.1358594568144142,
+          "min": -0.06463597560722534,
+          "p05": 0.059318720976766624,
+          "p25": 0.10528300126033596,
+          "p75": 0.16085408869196116,
+          "p95": 0.17870299951711582
+        },
+        "pooled_flag_time_fraction": 0.01632939459209563,
+        "pooled_runs_per_eligible_hour": 4.224130816637912,
+        "pooled_runs_per_labeled_context_hour": 2.600925857357279,
+        "pooled_score_sample": {
+          "count": 647,
+          "max": -0.36821245102176464,
+          "mean": -0.42346627306414564,
+          "median": -0.41664425586012677,
+          "min": -0.6124943791232997,
+          "p05": -0.48922786436462745,
+          "p25": -0.44788583290330386,
+          "p75": -0.39304844415756235,
+          "p95": -0.3764162111777784
+        },
+        "pooled_window_flag_frequency": 0.0077279752704791345,
+        "supported": true,
+        "total_runs": 3,
+        "windows": 647
+      },
+      "stationary_running": {
+        "capture_count": 15,
+        "duration_weighted_flag_frequency": 0.18328840649800543,
+        "eligible_time_union_s": 2200.4950000000017,
+        "equal_capture_decision_median": {
+          "count": 15,
+          "max": 0.10570374040560632,
+          "mean": 0.04208512601990757,
+          "median": 0.06479882483710658,
+          "min": -0.10813992046348753,
+          "p05": -0.08314176919869654,
+          "p25": 0.017150895288406104,
+          "p75": 0.08265918209913344,
+          "p95": 0.10315748910440395
+        },
+        "equal_capture_flag_frequency": 0.24937006286772576,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 15,
+          "interval": [
+            0.08328310634598667,
+            0.44016505857715393
+          ],
+          "mean": 0.24937006286772576,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 64.63713018377868,
+        "equal_capture_runs_per_labeled_context_hour": 54.01250909294616,
+        "equal_capture_score_median": {
+          "count": 15,
+          "max": -0.44904111803473507,
+          "mean": -0.5113722469342531,
+          "median": -0.490484691716477,
+          "min": -0.6661426543693235,
+          "p05": -0.6294617527081423,
+          "p25": -0.5382413787444057,
+          "p75": -0.4708380205171755,
+          "p95": -0.4533304619126028
+        },
+        "flagged_windows": 141,
+        "labeled_context_duration_s": 2497.120999999998,
+        "largest_capture_share_of_flags": 0.8085106382978723,
+        "pooled_decision_score": {
+          "count": 657,
+          "max": 0.14900530600715106,
+          "mean": 0.044344071755862274,
+          "median": 0.06780132730724275,
+          "min": -0.14258996251723788,
+          "p05": -0.08295569687616822,
+          "p25": 0.01036443233020734,
+          "p75": 0.08930888936760345,
+          "p95": 0.1107970409145374
+        },
+        "pooled_flag_time_fraction": 0.21926793744134837,
+        "pooled_runs_per_eligible_hour": 22.903937523148183,
+        "pooled_runs_per_labeled_context_hour": 20.183243022664918,
+        "pooled_score_sample": {
+          "count": 657,
+          "max": -0.4047960748030562,
+          "mean": -0.5076351167008544,
+          "median": -0.48721603267200797,
+          "min": -0.6839030529996593,
+          "p05": -0.6242687873585896,
+          "p25": -0.5439867258944366,
+          "p75": -0.46509726399207063,
+          "p95": -0.4439777383024707
+        },
+        "pooled_window_flag_frequency": 0.2146118721461187,
+        "supported": true,
+        "total_runs": 14,
+        "windows": 657
+      },
+      "unknown": {
+        "capture_count": 0,
+        "pooled_decision_score": {
+          "count": 0
+        },
+        "pooled_score_sample": {
+          "count": 0
+        },
+        "supported": false
+      }
+    },
+    "macro_thermal": {
+      "__ambiguous": {
+        "capture_count": 15,
+        "duration_weighted_flag_frequency": 0.06419466558382686,
+        "eligible_time_union_s": 4535.993,
+        "equal_capture_decision_median": {
+          "count": 15,
+          "max": 0.14955388186034285,
+          "mean": 0.10772869485869717,
+          "median": 0.11686366613908894,
+          "min": -0.051891340631953276,
+          "p05": 0.03201965125360075,
+          "p25": 0.1045820402473347,
+          "p75": 0.1291028847459954,
+          "p95": 0.14697902004162613
+        },
+        "equal_capture_flag_frequency": 0.09466548448482599,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 15,
+          "interval": [
+            0.007965480204291584,
+            0.23890714328926696
+          ],
+          "mean": 0.09466548448482599,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 19.2921983361532,
+        "equal_capture_runs_per_labeled_context_hour": null,
+        "equal_capture_score_median": {
+          "count": 15,
+          "max": -0.40519097657999853,
+          "mean": -0.4453776242077421,
+          "median": -0.43651511553533195,
+          "min": -0.5932044311143747,
+          "p05": -0.5138751583523777,
+          "p25": -0.44734481001553505,
+          "p75": -0.42743171636123023,
+          "p95": -0.40710540405762136
+        },
+        "flagged_windows": 70,
+        "labeled_context_duration_s": 0,
+        "largest_capture_share_of_flags": 0.7571428571428571,
+        "pooled_decision_score": {
+          "count": 1064,
+          "max": 0.19862409417762839,
+          "mean": 0.1030203692043545,
+          "median": 0.11011964844719321,
+          "min": -0.08705519694032826,
+          "p05": -0.018015306609002295,
+          "p25": 0.07138605880209101,
+          "p75": 0.146351434375823,
+          "p95": 0.18087403488243348
+        },
+        "pooled_flag_time_fraction": 0.0860356265981892,
+        "pooled_runs_per_eligible_hour": 19.047648442138247,
+        "pooled_runs_per_labeled_context_hour": null,
+        "pooled_score_sample": {
+          "count": 1064,
+          "max": -0.35721011734410246,
+          "mean": -0.45037953276246273,
+          "median": -0.4435965694987756,
+          "min": -0.6349136004564027,
+          "p05": -0.5678346172179863,
+          "p25": -0.482435270139258,
+          "p75": -0.40690957132453415,
+          "p95": -0.3750394938290429
+        },
+        "pooled_window_flag_frequency": 0.06578947368421052,
+        "supported": true,
+        "total_runs": 24,
+        "windows": 1064
+      },
+      "stable": {
+        "capture_count": 14,
+        "duration_weighted_flag_frequency": 0.015118571394160873,
+        "eligible_time_union_s": 19532.988,
+        "equal_capture_decision_median": {
+          "count": 14,
+          "max": 0.1743089515466769,
+          "mean": 0.14740424142967723,
+          "median": 0.15053527888352122,
+          "min": 0.1053579012820336,
+          "p05": 0.11060459284887143,
+          "p25": 0.13972842228575227,
+          "p75": 0.1616811151008382,
+          "p95": 0.17167704240752646
+        },
+        "equal_capture_flag_frequency": 0.016772671153594227,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 14,
+          "interval": [
+            0.0064572042050169455,
+            0.028854772400259902
+          ],
+          "mean": 0.016772671153594227,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 10.242396032983162,
+        "equal_capture_runs_per_labeled_context_hour": 10.078773062028933,
+        "equal_capture_score_median": {
+          "count": 14,
+          "max": -0.38176664304197727,
+          "mean": -0.40654445110704895,
+          "median": -0.4023960630476001,
+          "min": -0.4425005022340408,
+          "p05": -0.44111674590838934,
+          "p25": -0.4137247734361558,
+          "p75": -0.39305476709866016,
+          "p95": -0.3837793698340332
+        },
+        "flagged_windows": 111,
+        "labeled_context_duration_s": 19782.497,
+        "largest_capture_share_of_flags": 0.5765765765765766,
+        "pooled_decision_score": {
+          "count": 7393,
+          "max": 0.19837181327996334,
+          "mean": 0.13020362979338865,
+          "median": 0.13688836639654006,
+          "min": -0.07573627057323284,
+          "p05": 0.04342571457916849,
+          "p25": 0.10520883274554305,
+          "p75": 0.1665846197925519,
+          "p95": 0.185917335285457
+        },
+        "pooled_flag_time_fraction": 0.034735699422945444,
+        "pooled_runs_per_eligible_hour": 8.2936619835122,
+        "pooled_runs_per_labeled_context_hour": 8.189057225687941,
+        "pooled_score_sample": {
+          "count": 7393,
+          "max": -0.3545325015321973,
+          "mean": -0.4235311657302347,
+          "median": -0.4167449403901599,
+          "min": -0.6235946740893072,
+          "p05": -0.5099388050411735,
+          "p25": -0.4490089771502262,
+          "p75": -0.3873292872963339,
+          "p95": -0.3687820548186031
+        },
+        "pooled_window_flag_frequency": 0.015014202624103882,
+        "supported": true,
+        "total_runs": 45,
+        "windows": 7393
+      },
+      "unknown": {
+        "capture_count": 14,
+        "duration_weighted_flag_frequency": 0.07094646891646088,
+        "eligible_time_union_s": 3466.349,
+        "equal_capture_decision_median": {
+          "count": 14,
+          "max": 0.1485130254778076,
+          "mean": 0.0950584488811215,
+          "median": 0.11574132645050685,
+          "min": -0.025402259011143513,
+          "p05": 0.025348670624788128,
+          "p25": 0.07803217088727904,
+          "p75": 0.1218893501142192,
+          "p95": 0.1414350038712141
+        },
+        "equal_capture_flag_frequency": 0.12117334374287304,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 14,
+          "interval": [
+            0.02871996396549193,
+            0.27059707458578486
+          ],
+          "mean": 0.12117334374287304,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 38.02594791089251,
+        "equal_capture_runs_per_labeled_context_hour": 34.85681795205601,
+        "equal_capture_score_median": {
+          "count": 14,
+          "max": -0.4047408212571861,
+          "mean": -0.45903580250634624,
+          "median": -0.43876470509611304,
+          "min": -0.5812414637317334,
+          "p05": -0.5304436155622535,
+          "p25": -0.4735840772311175,
+          "p75": -0.4340736270152609,
+          "p95": -0.41276466224606384
+        },
+        "flagged_windows": 71,
+        "labeled_context_duration_s": 3872.1000000000017,
+        "largest_capture_share_of_flags": 0.6619718309859155,
+        "pooled_decision_score": {
+          "count": 1050,
+          "max": 0.19982408213413072,
+          "mean": 0.09917455606251291,
+          "median": 0.1083648716742551,
+          "min": -0.08153979716510495,
+          "p05": -0.019766215127280513,
+          "p25": 0.06780487331164448,
+          "p75": 0.13847941250644363,
+          "p95": 0.178150112186216
+        },
+        "pooled_flag_time_fraction": 0.11530200796284504,
+        "pooled_runs_per_eligible_hour": 23.886804242734936,
+        "pooled_runs_per_labeled_context_hour": 21.383745254513045,
+        "pooled_score_sample": {
+          "count": 1050,
+          "max": -0.3560101293876001,
+          "mean": -0.45416095154962194,
+          "median": -0.44471018001613594,
+          "min": -0.6293982006811794,
+          "p05": -0.5708611751528583,
+          "p25": -0.48420188140651427,
+          "p75": -0.4150398988531735,
+          "p95": -0.3772392402887869
+        },
+        "pooled_window_flag_frequency": 0.06761904761904762,
+        "supported": true,
+        "total_runs": 23,
+        "windows": 1050
+      },
+      "warming": {
+        "capture_count": 11,
+        "duration_weighted_flag_frequency": 0.30621974177430666,
+        "eligible_time_union_s": 1470.2559999999994,
+        "equal_capture_decision_median": {
+          "count": 11,
+          "max": 0.08860039934086233,
+          "mean": 0.03632261752783,
+          "median": 0.062434022834726266,
+          "min": -0.08328449027721785,
+          "p05": -0.07838321880416502,
+          "p25": 0.035723678903040706,
+          "p75": 0.0704094285168218,
+          "p95": 0.08805762615245077
+        },
+        "equal_capture_flag_frequency": 0.28709963793265975,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 11,
+          "interval": [
+            0.09801224633807572,
+            0.5168859753326335
+          ],
+          "mean": 0.28709963793265975,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 60.88639637898182,
+        "equal_capture_runs_per_labeled_context_hour": 58.92520644553065,
+        "equal_capture_score_median": {
+          "count": 11,
+          "max": -0.46477838233355856,
+          "mean": -0.5165958154761054,
+          "median": -0.4930033430093836,
+          "min": -0.6412872241830538,
+          "p05": -0.6280411309982937,
+          "p25": -0.5180894683179027,
+          "p75": -0.4820892600732747,
+          "p95": -0.46666956197908677
+        },
+        "flagged_windows": 160,
+        "labeled_context_duration_s": 1525.3749999999998,
+        "largest_capture_share_of_flags": 0.68125,
+        "pooled_decision_score": {
+          "count": 482,
+          "max": 0.16098800707916477,
+          "mean": 0.023275685768214645,
+          "median": 0.03776022696991144,
+          "min": -0.14258996251723788,
+          "p05": -0.08697767087601062,
+          "p25": -0.04851759653977711,
+          "p75": 0.07253451469548826,
+          "p95": 0.11985358796608843
+        },
+        "pooled_flag_time_fraction": 0.38445821680033965,
+        "pooled_runs_per_eligible_hour": 58.7652762512107,
+        "pooled_runs_per_labeled_context_hour": 56.641809391133336,
+        "pooled_score_sample": {
+          "count": 482,
+          "max": -0.3937209463978047,
+          "mean": -0.5285233378780221,
+          "median": -0.5173129326906283,
+          "min": -0.6839030529996593,
+          "p05": -0.6290665393509819,
+          "p25": -0.5900324626290447,
+          "p75": -0.4827326395692343,
+          "p95": -0.43559215398136847
+        },
+        "pooled_window_flag_frequency": 0.33195020746887965,
+        "supported": true,
+        "total_runs": 24,
+        "windows": 482
+      }
+    },
+    "micro_operating": {
+      "__ambiguous": {
+        "capture_count": 18,
+        "duration_weighted_flag_frequency": 0.03299498310519551,
+        "eligible_time_union_s": 23358.095,
+        "equal_capture_decision_median": {
+          "count": 18,
+          "max": 0.1678751244882085,
+          "mean": 0.10034014884543924,
+          "median": 0.1260856596938094,
+          "min": -0.08328449027721785,
+          "p05": -0.05576800961467038,
+          "p25": 0.09769485374839762,
+          "p75": 0.14745519025814807,
+          "p95": 0.16779967301582469
+        },
+        "equal_capture_flag_frequency": 0.1956570137248193,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 18,
+          "interval": [
+            0.03911043675661601,
+            0.36667951458329257
+          ],
+          "mean": 0.1956570137248193,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 46.22511364622964,
+        "equal_capture_runs_per_labeled_context_hour": null,
+        "equal_capture_score_median": {
+          "count": 18,
+          "max": -0.3872478818741465,
+          "mean": -0.45333077627291346,
+          "median": -0.4276852793803734,
+          "min": -0.6412872241830538,
+          "p05": -0.5995845466106039,
+          "p25": -0.4528711009782107,
+          "p75": -0.40644374767352986,
+          "p95": -0.38813303333888466
+        },
+        "flagged_windows": 260,
+        "labeled_context_duration_s": 0,
+        "largest_capture_share_of_flags": 0.5692307692307692,
+        "pooled_decision_score": {
+          "count": 8318,
+          "max": 0.19982408213413072,
+          "mean": 0.12189884872678713,
+          "median": 0.13012087398288108,
+          "min": -0.10813992046348753,
+          "p05": 0.018992458862174447,
+          "p25": 0.09517494858999437,
+          "p75": 0.16259065619921606,
+          "p95": 0.1852439950860779
+        },
+        "pooled_flag_time_fraction": 0.060457755651734474,
+        "pooled_runs_per_eligible_hour": 14.333360661475176,
+        "pooled_runs_per_labeled_context_hour": null,
+        "pooled_score_sample": {
+          "count": 8318,
+          "max": -0.3545325015321973,
+          "mean": -0.4318437693724084,
+          "median": -0.42380206701775497,
+          "min": -0.6661426543693235,
+          "p05": -0.5330661713492006,
+          "p25": -0.4585879568577544,
+          "p75": -0.3912500588579305,
+          "p95": -0.36949438402024126
+        },
+        "pooled_window_flag_frequency": 0.03125751382543881,
+        "supported": true,
+        "total_runs": 93,
+        "windows": 8318
+      },
+      "engine_off": {
+        "capture_count": 0,
+        "pooled_decision_score": {
+          "count": 0
+        },
+        "pooled_score_sample": {
+          "count": 0
+        },
+        "supported": false
+      },
+      "moving_accelerating": {
+        "capture_count": 9,
+        "duration_weighted_flag_frequency": 0.20996755696304303,
+        "eligible_time_union_s": 307.5039999999998,
+        "equal_capture_decision_median": {
+          "count": 9,
+          "max": 0.1760270522869895,
+          "mean": 0.08051312703444408,
+          "median": 0.0779281322444268,
+          "min": -0.010106088919085487,
+          "p05": -0.0014299851437884255,
+          "p25": 0.023724361227918295,
+          "p75": 0.11502210654332501,
+          "p95": 0.16404087830882946
+        },
+        "equal_capture_flag_frequency": 0.15353535353535352,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 9,
+          "interval": [
+            0.04040404040404041,
+            0.29797979797979796
+          ],
+          "mean": 0.15353535353535352,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 60.858322800122565,
+        "equal_capture_runs_per_labeled_context_hour": 4.908206587572354,
+        "equal_capture_score_median": {
+          "count": 9,
+          "max": -0.3773517293874314,
+          "mean": -0.4730395737291275,
+          "median": -0.47790607927730405,
+          "min": -0.5579644924351599,
+          "p05": -0.5530390235305213,
+          "p25": -0.5265640624753052,
+          "p75": -0.44010089981903,
+          "p95": -0.390161337033467
+        },
+        "flagged_windows": 9,
+        "labeled_context_duration_s": 3398.567499999998,
+        "largest_capture_share_of_flags": 0.5555555555555556,
+        "pooled_decision_score": {
+          "count": 41,
+          "max": 0.17860753733439005,
+          "mean": 0.05598507335858338,
+          "median": 0.051907666881712056,
+          "min": -0.05937811712436469,
+          "p05": -0.02991816198450581,
+          "p25": 0.004603873399150693,
+          "p75": 0.10701473827440589,
+          "p95": 0.17002995103391472
+        },
+        "pooled_flag_time_fraction": 0.24797726208439422,
+        "pooled_runs_per_eligible_hour": 70.24298870909001,
+        "pooled_runs_per_labeled_context_hour": 6.355618948277477,
+        "pooled_score_sample": {
+          "count": 41,
+          "max": -0.3772266741873408,
+          "mean": -0.49773051235797217,
+          "median": -0.5047335290359506,
+          "min": -0.6072365206404391,
+          "p05": -0.5777765655005802,
+          "p25": -0.5526311172935697,
+          "p75": -0.4481082680879491,
+          "p95": -0.38580426048781613
+        },
+        "pooled_window_flag_frequency": 0.21951219512195122,
+        "supported": true,
+        "total_runs": 6,
+        "windows": 41
+      },
+      "moving_decelerating": {
+        "capture_count": 9,
+        "duration_weighted_flag_frequency": 0.036084388790359766,
+        "eligible_time_union_s": 390.74699999999893,
+        "equal_capture_decision_median": {
+          "count": 9,
+          "max": 0.16241912327940056,
+          "mean": 0.12667949531760006,
+          "median": 0.13028763779295388,
+          "min": 0.06572533233099848,
+          "p05": 0.08044799253475445,
+          "p25": 0.1265008704793486,
+          "p75": 0.1363397333903438,
+          "p95": 0.15931811593404377
+        },
+        "equal_capture_flag_frequency": 0.014814814814814815,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 9,
+          "interval": [
+            0.0,
+            0.044444444444444446
+          ],
+          "mean": 0.014814814814814815,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 7.565083357762246,
+        "equal_capture_runs_per_labeled_context_hour": 1.3507797798397785,
+        "equal_capture_score_median": {
+          "count": 9,
+          "max": -0.3923257351609408,
+          "mean": -0.42744867092685757,
+          "median": -0.423091143881467,
+          "min": -0.4878399444915175,
+          "p05": -0.4708345349651849,
+          "p25": -0.429851592397402,
+          "p75": -0.4190976324537661,
+          "p95": -0.3951194396605009
+        },
+        "flagged_windows": 2,
+        "labeled_context_duration_s": 3211.3439999999982,
+        "largest_capture_share_of_flags": 1.0,
+        "pooled_decision_score": {
+          "count": 51,
+          "max": 0.16628104203631983,
+          "mean": 0.1131681392868906,
+          "median": 0.12849909067667958,
+          "min": -0.016560812374226797,
+          "p05": 0.015653213901466567,
+          "p25": 0.09633654742605086,
+          "p75": 0.14786279109955372,
+          "p95": 0.1607941784678804
+        },
+        "pooled_flag_time_fraction": 0.062702976606347,
+        "pooled_runs_per_eligible_hour": 18.426245115125695,
+        "pooled_runs_per_labeled_context_hour": 2.2420519259226057,
+        "pooled_score_sample": {
+          "count": 51,
+          "max": -0.38846381640402156,
+          "mean": -0.4402617115708432,
+          "median": -0.4262514710595013,
+          "min": -0.5644192158903012,
+          "p05": -0.5322051896146078,
+          "p25": -0.46089844326666957,
+          "p75": -0.40763674667927563,
+          "p95": -0.3939560717851438
+        },
+        "pooled_window_flag_frequency": 0.0392156862745098,
+        "supported": true,
+        "total_runs": 2,
+        "windows": 51
+      },
+      "moving_steady": {
+        "capture_count": 10,
+        "duration_weighted_flag_frequency": 0.004535452013210258,
+        "eligible_time_union_s": 2501.9880000000003,
+        "equal_capture_decision_median": {
+          "count": 10,
+          "max": 0.1847091954565708,
+          "mean": 0.14992093479746882,
+          "median": 0.16054017471741105,
+          "min": 0.07503878701772304,
+          "p05": 0.09484771771781952,
+          "p25": 0.1307863892083517,
+          "p75": 0.17493112756537008,
+          "p95": 0.18271722786333727
+        },
+        "equal_capture_flag_frequency": 0.0013953488372093023,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 10,
+          "interval": [
+            0.0,
+            0.004186046511627907
+          ],
+          "mean": 0.0013953488372093023,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 0.8853387896435034,
+        "equal_capture_runs_per_labeled_context_hour": 0.586436457777186,
+        "equal_capture_score_median": {
+          "count": 10,
+          "max": -0.37112501606516,
+          "mean": -0.40432969882232284,
+          "median": -0.39455093742481456,
+          "min": -0.47852648980479295,
+          "p05": -0.45775043550102046,
+          "p25": -0.42278503318789923,
+          "p75": -0.37888371028103435,
+          "p95": -0.3732256060385091
+        },
+        "flagged_windows": 3,
+        "labeled_context_duration_s": 4152.367499999999,
+        "largest_capture_share_of_flags": 1.0,
+        "pooled_decision_score": {
+          "count": 629,
+          "max": 0.18779222376183496,
+          "mean": 0.13013272553742208,
+          "median": 0.13631290387045458,
+          "min": -0.06463597560722534,
+          "p05": 0.060085969911398335,
+          "p25": 0.1052804927630982,
+          "p75": 0.16106020779737512,
+          "p95": 0.17888658705670762
+        },
+        "pooled_flag_time_fraction": 0.010791418663878482,
+        "pooled_runs_per_eligible_hour": 2.8777116437009287,
+        "pooled_runs_per_labeled_context_hour": 1.7339505715715193,
+        "pooled_score_sample": {
+          "count": 629,
+          "max": -0.36821245102176464,
+          "mean": -0.42286335691365673,
+          "median": -0.4158631166172079,
+          "min": -0.6124943791232997,
+          "p05": -0.4885152887982839,
+          "p25": -0.44700193937379756,
+          "p75": -0.3929762710536353,
+          "p95": -0.3762342056893355
+        },
+        "pooled_window_flag_frequency": 0.0047694753577106515,
+        "supported": true,
+        "total_runs": 2,
+        "windows": 629
+      },
+      "moving_variable": {
+        "capture_count": 15,
+        "duration_weighted_flag_frequency": 0.020415572729375945,
+        "eligible_time_union_s": 2792.992999999999,
+        "equal_capture_decision_median": {
+          "count": 15,
+          "max": 0.1817679714602664,
+          "mean": 0.14426262870071566,
+          "median": 0.160224603318812,
+          "min": -0.02011379488324372,
+          "p05": 0.06455542602126074,
+          "p25": 0.14322044604033457,
+          "p75": 0.16816133593866608,
+          "p95": 0.17683919767925985
+        },
+        "equal_capture_flag_frequency": 0.07471264367816091,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 15,
+          "interval": [
+            0.0,
+            0.2160919540229885
+          ],
+          "mean": 0.07471264367816091,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 17.64273932555657,
+        "equal_capture_runs_per_labeled_context_hour": 5.341330747104933,
+        "equal_capture_score_median": {
+          "count": 15,
+          "max": -0.37148587527472726,
+          "mean": -0.40979881283405106,
+          "median": -0.3937519980070376,
+          "min": -0.5757537223905783,
+          "p05": -0.4856374346921917,
+          "p25": -0.41229773971112926,
+          "p75": -0.38587672734318534,
+          "p95": -0.37745835724947724
+        },
+        "flagged_windows": 9,
+        "labeled_context_duration_s": 10524.595500000007,
+        "largest_capture_share_of_flags": 0.7777777777777778,
+        "pooled_decision_score": {
+          "count": 461,
+          "max": 0.19686970839442713,
+          "mean": 0.142247076922715,
+          "median": 0.15520420400497187,
+          "min": -0.07274726775071938,
+          "p05": 0.07232608380318822,
+          "p25": 0.1163608958188963,
+          "p75": 0.17570558445310502,
+          "p95": 0.18847303011043953
+        },
+        "pooled_flag_time_fraction": 0.018527436338007314,
+        "pooled_runs_per_eligible_hour": 3.866819573124603,
+        "pooled_runs_per_labeled_context_hour": 1.0261677040224484,
+        "pooled_score_sample": {
+          "count": 461,
+          "max": -0.35867233111454044,
+          "mean": -0.41119155483906633,
+          "median": -0.3977871545784015,
+          "min": -0.6206056712667938,
+          "p05": -0.4806785882777941,
+          "p25": -0.4356106100347116,
+          "p75": -0.37868486402392865,
+          "p95": -0.3643571158531404
+        },
+        "pooled_window_flag_frequency": 0.019522776572668113,
+        "supported": true,
+        "total_runs": 3,
+        "windows": 461
+      },
+      "stationary_running": {
+        "capture_count": 14,
+        "duration_weighted_flag_frequency": 0.19810113891163064,
+        "eligible_time_union_s": 1887.4850000000004,
+        "equal_capture_decision_median": {
+          "count": 14,
+          "max": 0.10460038093800494,
+          "mean": 0.05101281771634837,
+          "median": 0.06854506628155424,
+          "min": -0.07411770048631217,
+          "p05": -0.029681361107427136,
+          "p25": 0.02197421000532747,
+          "p75": 0.08478442395548878,
+          "p95": 0.10116150979654685
+        },
+        "equal_capture_flag_frequency": 0.18551102819685675,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 14,
+          "interval": [
+            0.03735681238209044,
+            0.36356408953651204
+          ],
+          "mean": 0.18551102819685675,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 49.43578460005855,
+        "equal_capture_runs_per_labeled_context_hour": 42.42799261482055,
+        "equal_capture_score_median": {
+          "count": 14,
+          "max": -0.45014447750233644,
+          "mean": -0.5021198865984069,
+          "median": -0.48431782849211247,
+          "min": -0.6154307909687335,
+          "p05": -0.5803068956560421,
+          "p25": -0.5320787748976518,
+          "p75": -0.467662627917917,
+          "p95": -0.4534941717423675
+        },
+        "flagged_windows": 129,
+        "labeled_context_duration_s": 2476.995999999998,
+        "largest_capture_share_of_flags": 0.8372093023255814,
+        "pooled_decision_score": {
+          "count": 489,
+          "max": 0.14900530600715106,
+          "mean": 0.03703537557610357,
+          "median": 0.06394176833384951,
+          "min": -0.14258996251723788,
+          "p05": -0.08423784126432865,
+          "p25": -0.006501181557768243,
+          "p75": 0.08723289443725718,
+          "p95": 0.11046681991716896
+        },
+        "pooled_flag_time_fraction": 0.23456928134528235,
+        "pooled_runs_per_eligible_hour": 24.794899032310187,
+        "pooled_runs_per_labeled_context_hour": 18.893853684059255,
+        "pooled_score_sample": {
+          "count": 489,
+          "max": -0.4047960748030562,
+          "mean": -0.5143350692662837,
+          "median": -0.4915549066350765,
+          "min": -0.6839030529996593,
+          "p05": -0.62555093174675,
+          "p25": -0.5616190118632469,
+          "p75": -0.4665229481393359,
+          "p95": -0.44269666496722226
+        },
+        "pooled_window_flag_frequency": 0.26380368098159507,
+        "supported": true,
+        "total_runs": 13,
+        "windows": 489
+      },
+      "unknown": {
+        "capture_count": 0,
+        "pooled_decision_score": {
+          "count": 0
+        },
+        "pooled_score_sample": {
+          "count": 0
+        },
+        "supported": false
+      }
+    },
+    "micro_thermal": {
+      "__ambiguous": {
+        "capture_count": 18,
+        "duration_weighted_flag_frequency": 0.03299498310519551,
+        "eligible_time_union_s": 23358.095,
+        "equal_capture_decision_median": {
+          "count": 18,
+          "max": 0.1678751244882085,
+          "mean": 0.10034014884543924,
+          "median": 0.1260856596938094,
+          "min": -0.08328449027721785,
+          "p05": -0.05576800961467038,
+          "p25": 0.09769485374839762,
+          "p75": 0.14745519025814807,
+          "p95": 0.16779967301582469
+        },
+        "equal_capture_flag_frequency": 0.1956570137248193,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 18,
+          "interval": [
+            0.03911043675661601,
+            0.36667951458329257
+          ],
+          "mean": 0.1956570137248193,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 46.22511364622964,
+        "equal_capture_runs_per_labeled_context_hour": null,
+        "equal_capture_score_median": {
+          "count": 18,
+          "max": -0.3872478818741465,
+          "mean": -0.45333077627291346,
+          "median": -0.4276852793803734,
+          "min": -0.6412872241830538,
+          "p05": -0.5995845466106039,
+          "p25": -0.4528711009782107,
+          "p75": -0.40644374767352986,
+          "p95": -0.38813303333888466
+        },
+        "flagged_windows": 260,
+        "labeled_context_duration_s": 0,
+        "largest_capture_share_of_flags": 0.5692307692307692,
+        "pooled_decision_score": {
+          "count": 8318,
+          "max": 0.19982408213413072,
+          "mean": 0.12189884872678713,
+          "median": 0.13012087398288108,
+          "min": -0.10813992046348753,
+          "p05": 0.018992458862174447,
+          "p25": 0.09517494858999437,
+          "p75": 0.16259065619921606,
+          "p95": 0.1852439950860779
+        },
+        "pooled_flag_time_fraction": 0.060457755651734474,
+        "pooled_runs_per_eligible_hour": 14.333360661475176,
+        "pooled_runs_per_labeled_context_hour": null,
+        "pooled_score_sample": {
+          "count": 8318,
+          "max": -0.3545325015321973,
+          "mean": -0.4318437693724084,
+          "median": -0.42380206701775497,
+          "min": -0.6661426543693235,
+          "p05": -0.5330661713492006,
+          "p25": -0.4585879568577544,
+          "p75": -0.3912500588579305,
+          "p95": -0.36949438402024126
+        },
+        "pooled_window_flag_frequency": 0.03125751382543881,
+        "supported": true,
+        "total_runs": 93,
+        "windows": 8318
+      },
+      "stable": {
+        "capture_count": 14,
+        "duration_weighted_flag_frequency": 0.01472961870797741,
+        "eligible_time_union_s": 6141.975999999999,
+        "equal_capture_decision_median": {
+          "count": 14,
+          "max": 0.1800779528947435,
+          "mean": 0.14285750091521773,
+          "median": 0.15510548188312656,
+          "min": 0.09221061538735892,
+          "p05": 0.09730675890171125,
+          "p25": 0.12427628742674086,
+          "p75": 0.16688661206351438,
+          "p95": 0.17241533358952257
+        },
+        "equal_capture_flag_frequency": 0.01188600671359292,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 14,
+          "interval": [
+            0.002176941832114246,
+            0.024660731988318196
+          ],
+          "mean": 0.01188600671359292,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 6.341107417768541,
+        "equal_capture_runs_per_labeled_context_hour": 1.9904388470651606,
+        "equal_capture_score_median": {
+          "count": 14,
+          "max": -0.3759976416939107,
+          "mean": -0.4110911916215084,
+          "median": -0.39850974214729507,
+          "min": -0.46322675045675094,
+          "p05": -0.45706721667036193,
+          "p25": -0.43100000088523704,
+          "p75": -0.3872445993857053,
+          "p95": -0.38096552577830567
+        },
+        "flagged_windows": 20,
+        "labeled_context_duration_s": 19782.497,
+        "largest_capture_share_of_flags": 0.65,
+        "pooled_decision_score": {
+          "count": 1261,
+          "max": 0.19686970839442713,
+          "mean": 0.12647967036113908,
+          "median": 0.1329071185110252,
+          "min": -0.06583572799794823,
+          "p05": 0.04976847380702809,
+          "p25": 0.09765053611856922,
+          "p75": 0.16340717524200954,
+          "p95": 0.18381029711043195
+        },
+        "pooled_flag_time_fraction": 0.028003854134239514,
+        "pooled_runs_per_eligible_hour": 7.619697634767705,
+        "pooled_runs_per_labeled_context_hour": 2.365727642976516,
+        "pooled_score_sample": {
+          "count": 1261,
+          "max": -0.35867233111454044,
+          "mean": -0.4267884210222187,
+          "median": -0.41972921340381114,
+          "min": -0.6136941315140226,
+          "p05": -0.5032987181667737,
+          "p25": -0.4549098903103746,
+          "p75": -0.38969463450055297,
+          "p95": -0.3706419409900568
+        },
+        "pooled_window_flag_frequency": 0.01586042823156225,
+        "supported": true,
+        "total_runs": 13,
+        "windows": 1261
+      },
+      "unknown": {
+        "capture_count": 13,
+        "duration_weighted_flag_frequency": 0.031440134007000686,
+        "eligible_time_union_s": 868.7440000000003,
+        "equal_capture_decision_median": {
+          "count": 13,
+          "max": 0.14506765316965964,
+          "mean": 0.0947332753333028,
+          "median": 0.10021010453772877,
+          "min": 0.016442468005710087,
+          "p05": 0.029718648804791803,
+          "p25": 0.0805817930221325,
+          "p75": 0.12890346767390154,
+          "p95": 0.1406013181484621
+        },
+        "equal_capture_flag_frequency": 0.022804972804972803,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 13,
+          "interval": [
+            0.0,
+            0.05015540015540016
+          ],
+          "mean": 0.022804972804972803,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 14.999891975432435,
+        "equal_capture_runs_per_labeled_context_hour": 4.770717583294204,
+        "equal_capture_score_median": {
+          "count": 13,
+          "max": -0.40818619356533403,
+          "mean": -0.459226748874694,
+          "median": -0.4539133123527513,
+          "min": -0.5369363136687109,
+          "p05": -0.5252782206181691,
+          "p25": -0.4682910506839635,
+          "p75": -0.42584139076643984,
+          "p95": -0.41352559263171706
+        },
+        "flagged_windows": 5,
+        "labeled_context_duration_s": 3850.599000000002,
+        "largest_capture_share_of_flags": 0.6,
+        "pooled_decision_score": {
+          "count": 160,
+          "max": 0.19397138210447112,
+          "mean": 0.09168864145850084,
+          "median": 0.08653212747491801,
+          "min": -0.06463597560722534,
+          "p05": 0.0059094613246359175,
+          "p25": 0.06565654998170531,
+          "p75": 0.12372620496137438,
+          "p95": 0.1737300493392026
+        },
+        "pooled_flag_time_fraction": 0.059280984962198545,
+        "pooled_runs_per_eligible_hour": 16.575654047682626,
+        "pooled_runs_per_labeled_context_hour": 3.739677904658468,
+        "pooled_score_sample": {
+          "count": 160,
+          "max": -0.36077347633587026,
+          "mean": -0.46213341732392044,
+          "median": -0.4651395486296454,
+          "min": -0.6124943791232997,
+          "p05": -0.5461529329893087,
+          "p25": -0.4865914416368345,
+          "p75": -0.4310521284217501,
+          "p95": -0.38170731650490725
+        },
+        "pooled_window_flag_frequency": 0.03125,
+        "supported": true,
+        "total_runs": 4,
+        "windows": 160
+      },
+      "warming": {
+        "capture_count": 8,
+        "duration_weighted_flag_frequency": 0.427898794148436,
+        "eligible_time_union_s": 869.9969999999995,
+        "equal_capture_decision_median": {
+          "count": 8,
+          "max": 0.11805892919842786,
+          "mean": 0.033531725373027114,
+          "median": 0.04452490499766476,
+          "min": -0.07411770048631217,
+          "p05": -0.050360551850997005,
+          "p25": 0.002272007574011664,
+          "p75": 0.06777515957048187,
+          "p95": 0.10090228475803185
+        },
+        "equal_capture_flag_frequency": 0.34339686180282514,
+        "equal_capture_flag_frequency_uncertainty": {
+          "draws": 10000,
+          "groups": 8,
+          "interval": [
+            0.1076388888888889,
+            0.6073176059414591
+          ],
+          "mean": 0.34339686180282514,
+          "method": "descriptive capture bootstrap; folds share training data, not confirmatory inference",
+          "seed": 42
+        },
+        "equal_capture_run_rate_per_hour": 67.80083245708278,
+        "equal_capture_runs_per_labeled_context_hour": 32.900082116132864,
+        "equal_capture_score_median": {
+          "count": 8,
+          "max": -0.43550634762408813,
+          "mean": -0.5182989812362704,
+          "median": -0.5071229796824274,
+          "min": -0.6154307909687335,
+          "p05": -0.596688035292138,
+          "p25": -0.5526696894105491,
+          "p75": -0.4866726049966221,
+          "p95": -0.45151609347273175
+        },
+        "flagged_windows": 127,
+        "labeled_context_duration_s": 1405.6274999999998,
+        "largest_capture_share_of_flags": 0.8503937007874016,
+        "pooled_decision_score": {
+          "count": 250,
+          "max": 0.13790613922859274,
+          "mean": -0.0022175934651938256,
+          "median": -0.005266925418981938,
+          "min": -0.14258996251723788,
+          "p05": -0.09001358729655733,
+          "p25": -0.06911301758865124,
+          "p75": 0.06428658578409994,
+          "p95": 0.1044715080834835
+        },
+        "pooled_flag_time_fraction": 0.45833376436930273,
+        "pooled_runs_per_eligible_hour": 37.241507729337016,
+        "pooled_runs_per_labeled_context_hour": 23.05020355677447,
+        "pooled_score_sample": {
+          "count": 250,
+          "max": -0.41565913759392326,
+          "mean": -0.5511558390666288,
+          "median": -0.560441365911134,
+          "min": -0.6839030529996593,
+          "p05": -0.6313266777789787,
+          "p25": -0.6113565990817147,
+          "p75": -0.4912089407884656,
+          "p95": -0.45136270343824736
+        },
+        "pooled_window_flag_frequency": 0.508,
+        "supported": true,
+        "total_runs": 9,
+        "windows": 250
+      }
+    }
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "date": "2026-10-24",
+  "status": "passed_disposable_regression_no_production_deployment",
+  "work_directory": "/tmp/ecuread-p2-20261023T235539Z",
+  "stored_canary_evidence_replay": {
+    "status": "passed",
+    "source_run": "analysis_20261023T232221Z_2c818f9e015c",
+    "records": 12625,
+    "windows": 1258,
+    "inference_executed": false,
+    "original_window_payload_sha256": "e0923fee98fa5fcd6af42290beed3c0bc0e1ec8485fa2892d011ab2e69dc3dd2",
+    "original_inputs_unchanged": true,
+    "prediction_health_detector_and_aggregation_fields_unchanged": true,
+    "grouped_finding_events": 14,
+    "reviewed_events": 11,
+    "interpretation_counts": {
+      "observations": 16,
+      "symptoms": 1,
+      "possible_causes": 0,
+      "recommended_checks": 10
+    },
+    "concrete_message_keys": [
+      "p2.obs.if",
+      "p2.obs.negative",
+      "p2.obs.speed_change",
+      "p2.obs.voltage"
+    ],
+    "preview_bytes": 3202990
+  },
+  "integration": {
+    "status": "passed",
+    "records": 12625,
+    "windows": 1258,
+    "analysis_run_id": "analysis_20261024T002727Z_a781b64727a3",
+    "http_seconds": 26.804,
+    "input_scope": "first 12625 records of existing session_000018 RAW capture, complete disposable replay fixture; not production session 242",
+    "transport": "HTTP DriveSafe Werkzeug -> HTTP Analyzer Uvicorn -> disposable SQLite/files; no production connections",
+    "original_pi_and_raw_preserved": true,
+    "retry_reused_same_run": true,
+    "result_count": 2,
+    "diagnostic_counts": {
+      "observations": 9,
+      "symptoms": 1,
+      "possible_causes": 0,
+      "recommended_checks": 7
+    }
+  },
+  "browser": {
+    "status": "passed",
+    "browser": "149.0.7827.55",
+    "english_vietnamese": true,
+    "concrete_voltage_reference": true,
+    "evidence_link_opens_original_event": true,
+    "detector_rows": 3,
+    "no_duplicate_analyst_tables_or_checks": true,
+    "desktop_mobile": true,
+    "page_errors": [],
+    "browser_analysis_posts": 0,
+    "read_only_followup_used_same_disposable_result": true
+  },
+  "preservation": {
+    "unchanged_production_file_count": 324,
+    "production_files_unchanged": true,
+    "production_containers_unchanged": true,
+    "ml_source_matches_frozen_p1": [
+      "app/ml/features.py",
+      "app/ml/iforest_detector.py",
+      "app/ml/contextual_detector.py",
+      "app/ml/contextual_speed.py",
+      "app/ml/inference.py"
+    ],
+    "same_fixture_p1_summary_fields_identical": [
+      "model_version",
+      "health_score",
+      "overall_status",
+      "anomaly_ratio",
+      "anomaly_window_count",
+      "window_count"
+    ],
+    "all_1258_persisted_detector_window_payloads_identical_to_p1": true
+  },
+  "source_manifest": {
+    "analyzer": {
+      "app/ml/diagnostic_interpretation.py": "349a1fcb14a5a412db4b934a28431e0d2c2dc891d78f4c178ac8ffd37380068d",
+      "app/ml/root_cause_analysis_v2.py": "92368a04bd529a596975aa9d92a5130c6d4f22ac0200e9173d684948256f935a",
+      "app/ml/evidence_aggregation.py": "73ee45ea52a1a0225f69e0fb06cee85c41f6477a9c40bccfd9c4e4c02be32ad9",
+      "app/services/research_harness.py": "2a11671d8bb79afca459e4674de0d3089ec7fd3fe7f13df6732a79df7974cd77",
+      "tests/p2_evidence_helpers.py": "c9abe1464dcf9b2adcbf352789392be072cced3b57905b4483cae7fb3b08c64c",
+      "tests/test_p2_diagnostic_interpretation.py": "3977b1347b8facbf8a0e162d3bf2441c62f6560178e386f614ba94bf3c1ee6e6",
+      "tests/fixtures/p2_canary_windows.json": "00a39b4a8730333cd5427fcc3452f23ed389927798ddd020f4ece51b603b0343",
+      "scripts/verify_p2_interpretation.py": "1f32fdda50cf3c4f46a932ea14bfd9c1de31e5497675e57d4d2143e3766de7ee"
+    },
+    "drivesafe": {
+      "services/diagnostic_presentation.py": "7936accb793eac30b73b6e434060c6848e840532ae67354bb2bb4b0b218ddb07",
+      "services/analysis.py": "dabefb938e9dcd5dead85906a435b08ea9bc178f4cd6e98a764dc9aad63ea13c",
+      "templates/session_detail.html": "7d6d505d9fc8751e7874d7b46556351867e109703572efa44c80a887eea214fc",
+      "static/locales/messages.json": "fa08a80164cfcc917fb44cba879f47dca88393d5ec4b97fc5010db39c3375937",
+      "static/js/sessionDetail.js": "b51acb45f814db9a47aa994d2e82e765e0facc59bbd7268f3895efda8f6f680b",
+      "tests/test_p2_diagnostic_interpretation.py": "0ca3ff7de607ca6aa401178eed1d1a00121a4b4d985444d342d237969e60f651",
+      "tests/fixtures/p2_canary_interpretation.json": "e4115b651ce25060228d4cb245e72751966c7c5736dff9bb6ccaa47aacadbbcf",
+      "scripts/verify_p2_disposable.py": "b02f6f81a0c9cc389485dfbaf6dd53980f166d0e064e47648f820a7e110ecf7b",
+      "scripts/verify_p2_browser.cjs": "51775c48150ed5a4f700de8f10ea9dff733afdc4a456bb5c95f754a7159f8d64"
+    }
+  },
+  "tests": {
+    "analyzer_initial_focused": 71,
+    "analyzer_final_targeted": 31,
+    "drivesafe_combined_executions": 110,
+    "drivesafe_final_p2": 3
+  },
+  "scope": {
+    "production_reanalysis": false,
+    "production_deployment": false,
+    "new_detectors": false,
+    "model_retraining": false,
+    "threshold_feature_or_health_changes": false,
+    "llm_used": false
+  },
+  "remaining_limits": [
+    "No P2 production image build/deployment or public-edge acceptance",
+    "RCA events and UI remain explicitly bounded representative views",
+    "Speed reference medians are not persisted by current detector; none invented",
+    "Cause gates require independent evidence and can yield zero causes",
+    "Single disposable replay is not a concurrency/load test"
+  ]
+}

@@ -7,7 +7,8 @@ import re
 
 from fastapi import APIRouter, File, Form, HTTPException, Request, UploadFile
 
-from app.ingestion.raw_ecu.adapter import import_raw_file
+from app.ingestion.raw_dispatch import detect_upload_format, import_dispatched_raw_file
+from app.ecu.profiles.honda_keihin_71_17 import PRODUCTION_DECODER_ID, PRODUCTION_DECODER_VERSION
 from app.services.session_processor import SessionProcessor
 from app.services.session_processor import validate_raw_import_for_processing
 from app.utils.ids import new_session_id
@@ -63,6 +64,7 @@ async def _process_raw_upload(
     firmware_version: str | None,
     client_session_id: str | None,
     process_with_model: bool,
+    raw_representation: str | None = None,
 ) -> dict:
     settings = request.app.state.settings
     storage = request.app.state.storage
@@ -71,13 +73,17 @@ async def _process_raw_upload(
     _validate_positive_optional(sampling_rate_hz, "sampling_rate_hz")
     client_session_id = _validated_client_session_id(client_session_id)
 
-    content = await file.read()
+    content = await file.read(settings.max_upload_bytes + 1)
     if not content:
         raise HTTPException(status_code=400, detail="uploaded file is empty")
     if len(content) > settings.max_upload_bytes:
         raise HTTPException(status_code=413, detail=f"upload exceeds {settings.max_upload_mb} MB")
 
     upload_sha256 = _sha256_bytes(content)
+    try:
+        selected_format = detect_upload_format(content, file.filename, raw_representation)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
     if client_session_id is not None:
         if device_id is None or not device_id.strip():
             raise HTTPException(status_code=422, detail="device_id is required when session_id is provided")
@@ -89,6 +95,13 @@ async def _process_raw_upload(
                     detail="upload conflicts with an existing session for this device_id and session_id",
                 )
             existing_session_id = existing["session_id"]
+            stored_session = repository.read_session(existing_session_id) or {}
+            if selected_format == "native24_table17" and (
+                stored_session.get("decoder_id") != PRODUCTION_DECODER_ID
+                or stored_session.get("decoder_version") != PRODUCTION_DECODER_VERSION
+                or stored_session.get("telemetry_schema_version") != "canonical-telemetry-v2"
+            ):
+                raise HTTPException(status_code=409, detail="existing upload uses a different decoder contract; preserve it and use a new client session_id for native-v2 import")
             existing_result = storage.read_result(existing_session_id)
             if existing_result is None:
                 raise HTTPException(
@@ -105,9 +118,10 @@ async def _process_raw_upload(
     staged_path = None
     try:
         staged_path = storage.stage_raw_upload(file.filename, content)
-        raw_import = import_raw_file(
+        raw_import = import_dispatched_raw_file(
             staged_path,
             settings,
+            raw_representation=selected_format,
             session_id=session_id,
             device_id=device_id,
             vehicle_id=vehicle_id,
@@ -170,6 +184,7 @@ async def upload_session(
     firmware_version: str | None = Form(default=None),
     session_id: str | None = Form(default=None),
     process_with_model: bool = Form(default=True),
+    raw_representation: str | None = Form(default=None),
 ) -> dict:
     return await _process_raw_upload(
         request,
@@ -182,6 +197,7 @@ async def upload_session(
         firmware_version,
         session_id,
         process_with_model,
+        raw_representation,
     )
 
 
@@ -197,6 +213,7 @@ async def import_raw_session(
     firmware_version: str | None = Form(default=None),
     session_id: str | None = Form(default=None),
     process_with_model: bool = Form(default=True),
+    raw_representation: str | None = Form(default=None),
 ) -> dict:
     return await _process_raw_upload(
         request,
@@ -209,4 +226,5 @@ async def import_raw_session(
         firmware_version,
         session_id,
         process_with_model,
+        raw_representation,
     )

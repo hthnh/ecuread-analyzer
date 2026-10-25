@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "browser": "149.0.7827.55",
+  "selected_run": true,
+  "detector_rows": 3,
+  "duplicated_analyst_tables": 0,
+  "duplicated_analyst_checks": 0,
+  "technical_details_collapsible": true,
+  "timeline_event_click": true,
+  "chart_canvases": 4,
+  "chart_disclosure": true,
+  "english_vietnamese_toggle": true,
+  "desktop_mobile_rendered": true,
+  "page_errors": [],
+  "browser_network_retry_keeps_attempt_key": true,
+  "dashboard_missing_score_en_vi": true
+}

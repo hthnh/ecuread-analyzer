@@ -1,0 +1,91 @@
+{
+  "annotations_and_raw_unchanged": true,
+  "approved_dataset_content_sha256": "5fd672ff45b69681e310efff7661cc8313989cfc10191047dc476e8161e156c1",
+  "historical_integrity": {
+    "h10_1_inputs": {
+      "archived_code_inputs": [
+        "app/api/health.py",
+        "app/api/model.py",
+        "app/domain/telemetry.py",
+        "app/ecu/profiles/honda_keihin_71_17.py",
+        "app/evaluation/historical_evidence.py",
+        "app/ingestion/honda_0x17/adapter.py",
+        "app/integration/diagnostic_evidence.py",
+        "app/ml/contextual_detector.py",
+        "app/ml/evidence_aggregation.py",
+        "app/ml/model_selection.py",
+        "app/ml/root_cause_analysis_v2.py",
+        "app/schemas.py",
+        "app/services/analysis_service.py",
+        "app/services/research_harness.py",
+        "app/services/session_processor.py",
+        "tests/test_context_benchmark_readiness.py",
+        "tests/test_group_aware_if.py"
+      ],
+      "changed_files": [],
+      "historical_data_and_models_checked_in_place": true,
+      "pinned_files_checked": 837
+    },
+    "h10_1_outputs": {
+      "archived_code_inputs": [],
+      "changed_files": [],
+      "historical_data_and_models_checked_in_place": true,
+      "pinned_files_checked": 19
+    },
+    "h10_2a_inputs": {
+      "archived_code_inputs": [
+        "app/api/health.py",
+        "app/api/model.py",
+        "app/domain/telemetry.py",
+        "app/ecu/profiles/honda_keihin_71_17.py",
+        "app/evaluation/context_validation_plan.py",
+        "app/evaluation/historical_evidence.py",
+        "app/ingestion/honda_0x17/adapter.py",
+        "app/integration/diagnostic_evidence.py",
+        "app/ml/contextual_detector.py",
+        "app/ml/evidence_aggregation.py",
+        "app/ml/model_selection.py",
+        "app/ml/root_cause_analysis_v2.py",
+        "app/schemas.py",
+        "app/services/analysis_service.py",
+        "app/services/research_harness.py",
+        "app/services/session_processor.py",
+        "tests/test_context_benchmark_readiness.py",
+        "tests/test_group_aware_if.py"
+      ],
+      "changed_files": [],
+      "historical_data_and_models_checked_in_place": true,
+      "pinned_files_checked": 859
+    },
+    "h10_2a_outputs": {
+      "archived_code_inputs": [],
+      "changed_files": [],
+      "historical_data_and_models_checked_in_place": true,
+      "pinned_files_checked": 57
+    }
+  },
+  "previous_models_unchanged": true,
+  "public_database_or_deployment_changed": false,
+  "source_count": 18,
+  "source_hashes": {
+    "session_000001": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+    "session_000002": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+    "session_000003": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+    "session_000004": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+    "session_000005": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+    "session_000006": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+    "session_000007": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+    "session_000014": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+    "session_000015": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+    "session_000016": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+    "session_000017": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+    "session_000018": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+    "session_000019": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+    "session_000020": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+    "session_000021": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+    "session_000022": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+    "session_000023": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+    "session_000024": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547"
+  },
+  "status": "passed"
+}

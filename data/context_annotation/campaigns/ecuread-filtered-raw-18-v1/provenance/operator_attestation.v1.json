@@ -1,0 +1,255 @@
+{
+  "assertions": {
+    "continuous_out_of_city_rides": [
+      "session_000016",
+      "session_000018",
+      "session_000023"
+    ],
+    "no_selected_file_intentionally_split_from_another_selected_file": true,
+    "separate_physical_runs": 18,
+    "varied_motorcycle_operating_conditions": true
+  },
+  "attestation_date": "2026-10-11",
+  "attestation_id": "ecuread-filtered-raw-18-v1:operator-independence:v1",
+  "attestation_source": "data_collector",
+  "attestation_timezone": "Asia/Saigon",
+  "attestation_type": "operator_declared_independence",
+  "dataset_id": "ecuread-filtered-raw-18-v1",
+  "declaration_source": "Explicit collector confirmation in the CTX2.3 user request; no independently authenticated identity asserted.",
+  "evidence_limitations": [
+    "Physical independence, varied conditions and out-of-city continuous rides are collector declarations, not machine verification.",
+    "SHA-256, frame validation, timestamp continuity and prior cross-file overlap checks establish file integrity, not separate physical runs.",
+    "No device capture UUID, absolute acquisition clock, GPS or independently authenticated collector identity is available.",
+    "Elapsed clocks restart per file. Distinct hashes and no 16-frame overlap cannot rule out all historical splitting or derivation.",
+    "The declaration applies only to these exact 18 source IDs and hashes, never to unrelated, synthetic or newly discovered files."
+  ],
+  "historical_lineage_sha256": "48524b503a89d5c12675367b8a19a0ee3848013c12690278ecb136ce23e0c0d1",
+  "historical_manifest_sha256": "538bf38dfc395084f7f08cdd342d9bbf8ac10d757c298623ca8cb80cb6e1c61e",
+  "machine_verified_independent_captures": null,
+  "operator_attested_independent_captures": 18,
+  "pre_attestation_manifest_sha256": "53ab889ba73308ac7669c8e2b67254af2558e76b52f07deb9348b0a971b85b0b",
+  "recorded_at": "2026-10-11T09:06:30.520925+07:00",
+  "schema_version": "capture-attestation-v1",
+  "sources": [
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 28.999,
+      "max_interval_ms": 253,
+      "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+      "sample_count": 117,
+      "session_id": "session_000001",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000001.jsonl",
+      "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 1446.503,
+      "max_interval_ms": 501,
+      "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "sample_count": 5781,
+      "session_id": "session_000002",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000002.jsonl",
+      "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 312.499,
+      "max_interval_ms": 500,
+      "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+      "sample_count": 1249,
+      "session_id": "session_000003",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000003.jsonl",
+      "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 755.001,
+      "max_interval_ms": 502,
+      "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "sample_count": 3017,
+      "session_id": "session_000004",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000004.jsonl",
+      "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 1963.997,
+      "max_interval_ms": 502,
+      "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "sample_count": 7851,
+      "session_id": "session_000005",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000005.jsonl",
+      "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 230.75,
+      "max_interval_ms": 499,
+      "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+      "sample_count": 923,
+      "session_id": "session_000006",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000006.jsonl",
+      "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 1598.002,
+      "max_interval_ms": 501,
+      "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "sample_count": 6389,
+      "session_id": "session_000007",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000007.jsonl",
+      "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 300.5,
+      "max_interval_ms": 499,
+      "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "sample_count": 1202,
+      "session_id": "session_000014",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+      "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 132.501,
+      "max_interval_ms": 253,
+      "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+      "sample_count": 531,
+      "session_id": "session_000015",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000015.jsonl",
+      "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {
+        "capture_type": "road",
+        "metadata_source": "operator_attestation",
+        "ride_pattern": "continuous_long_ride",
+        "trip_context": "out_of_city"
+      },
+      "duration_s": 4494.502,
+      "max_interval_ms": 502,
+      "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "sample_count": 17965,
+      "session_id": "session_000016",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000016.jsonl",
+      "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 873.5,
+      "max_interval_ms": 501,
+      "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+      "sample_count": 3492,
+      "session_id": "session_000017",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000017.jsonl",
+      "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {
+        "capture_type": "road",
+        "metadata_source": "operator_attestation",
+        "ride_pattern": "continuous_long_ride",
+        "trip_context": "out_of_city"
+      },
+      "duration_s": 4496.001,
+      "max_interval_ms": 502,
+      "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "sample_count": 17976,
+      "session_id": "session_000018",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000018.jsonl",
+      "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 548.67,
+      "max_interval_ms": 501,
+      "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+      "sample_count": 2194,
+      "session_id": "session_000019",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000019.jsonl",
+      "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 21.501,
+      "max_interval_ms": 253,
+      "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+      "sample_count": 87,
+      "session_id": "session_000020",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000020.jsonl",
+      "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 891.25,
+      "max_interval_ms": 502,
+      "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+      "sample_count": 3564,
+      "session_id": "session_000021",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000021.jsonl",
+      "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 755.001,
+      "max_interval_ms": 253,
+      "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+      "sample_count": 3021,
+      "session_id": "session_000022",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000022.jsonl",
+      "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {
+        "capture_type": "road",
+        "metadata_source": "operator_attestation",
+        "ride_pattern": "continuous_long_ride",
+        "trip_context": "out_of_city"
+      },
+      "duration_s": 4391.172,
+      "max_interval_ms": 751,
+      "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "sample_count": 17539,
+      "session_id": "session_000023",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000023.jsonl",
+      "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "timestamp_order": "strictly_increasing"
+    },
+    {
+      "confirmed_session_metadata": {},
+      "duration_s": 1948.999,
+      "max_interval_ms": 502,
+      "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+      "sample_count": 7790,
+      "session_id": "session_000024",
+      "source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000024.jsonl",
+      "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+      "timestamp_order": "strictly_increasing"
+    }
+  ],
+  "technical_evidence": {
+    "continuity_checked_again_at_attestation": true,
+    "exact_16_frame_cross_file_overlaps": [],
+    "input_integrity_sha256": "01fdacb7528c5a5efd50f436792d09acc10b0addfd4e2189d8002d490a641ae4",
+    "invalid_frames": 0,
+    "unique_source_hashes": 18
+  }
+}

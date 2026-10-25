@@ -1,0 +1,37 @@
+{
+  "verified_at": "2026-10-09T14:47:44.170Z",
+  "isolated_test_only": true,
+  "campaign_annotations_added": 0,
+  "proposals_accepted": 0,
+  "freezes_created": 0,
+  "next_pending_skips_uncertain": true,
+  "uncertainty_persists": true,
+  "correction_persists_after_reload": true,
+  "selected_evidence_visible": true,
+  "existing_annotations_and_proposals_unchanged": true,
+  "desktop_viewport": [
+    1440,
+    1100
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "mobile_overflow": false,
+  "canvas_signal_pixels": 509,
+  "browser_errors": [],
+  "before_sha256": {
+    "data/context_annotation/curated_corpus.json": "538bf38dfc395084f7f08cdd342d9bbf8ac10d757c298623ca8cb80cb6e1c61e",
+    "real_data/real_run/session_000004.jsonl": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+    "data/telemetry/calib-real-run-session-000004/samples.jsonl": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f",
+    "data/context_annotation/annotations/ride-20260920-1504.context.json": "2f28c3a72193a2665dbbd8a99779ba8c41a55001d8343c37e58efe0dbbebfdc8",
+    "data/context_annotation/suggestions/calib-real-run-session-000004.suggestions.json": "4372a30b7e25c3978b0204575310a5a7a54cbee82f0cafef96ae3f48f8b1bad4"
+  },
+  "after_sha256": {
+    "data/context_annotation/curated_corpus.json": "538bf38dfc395084f7f08cdd342d9bbf8ac10d757c298623ca8cb80cb6e1c61e",
+    "real_data/real_run/session_000004.jsonl": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+    "data/telemetry/calib-real-run-session-000004/samples.jsonl": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f",
+    "data/context_annotation/annotations/ride-20260920-1504.context.json": "2f28c3a72193a2665dbbd8a99779ba8c41a55001d8343c37e58efe0dbbebfdc8",
+    "data/context_annotation/suggestions/calib-real-run-session-000004.suggestions.json": "4372a30b7e25c3978b0204575310a5a7a54cbee82f0cafef96ae3f48f8b1bad4"
+  }
+}

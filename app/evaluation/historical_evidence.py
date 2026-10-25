@@ -481,6 +481,8 @@ def make_historical_record(
         signal_names = sorted(set(signal_names) | {"battery_voltage", "rpm", "tps_raw", "tps_voltage"})
     elif observation_family == FAMILY_RPM_TPS:
         signal_names = sorted(set(signal_names) | {"rpm", "tps_raw", "tps_voltage"})
+    elif observation_family == "contextual_speed":
+        signal_names = sorted(set(signal_names) | {"vehicle_speed_kmh", "rpm", "tps_raw", "tps_voltage"})
     elif observation_family == FAMILY_CONSTANT_SIGNAL and not signal_names:
         signal_names = sorted({signal for feature in features for signal in signals_for_feature(feature)})
     detector_versions = detector_versions_for_record(event, detector_finding, rca_item)
@@ -1309,6 +1311,8 @@ def severity_value(magnitude: dict[str, Any]) -> float | None:
 
 def family_for_rca_observation(observation: dict[str, Any]) -> str | None:
     observation_id = observation.get("observation_id")
+    if observation_id == "obs.v2.contextual_speed_deviation":
+        return "contextual_speed"
     if observation_id == "obs.v2.iforest_outside_reference":
         return FAMILY_IFOREST
     if observation_id == "obs.v2.contextual_voltage_deviation":

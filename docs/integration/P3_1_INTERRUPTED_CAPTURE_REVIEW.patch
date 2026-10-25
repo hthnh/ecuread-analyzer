@@ -1,0 +1,315 @@
+--- P3/services/analysis_submission.py
++++ P3.1/services/analysis_submission.py
+@@ -12,6 +12,15 @@
+ from integrations.analyzer_client import AnalyzerClient, AnalyzerClientError
+ from models import AnalysisResult, RideSession, TelemetryRecord, utc_now
+ from services.pi_sync import PI_SOURCE_TYPE
++
++
++TERMINAL_ANALYSIS_CAPTURE_STATES = frozenset(("completed", "interrupted"))
++
++
++def capture_ready_for_analysis(ride_session: RideSession) -> bool:
++    """Capture termination and synchronization are separate from input validity."""
++    return (ride_session.capture_status in TERMINAL_ANALYSIS_CAPTURE_STATES
++            and ride_session.sync_status == "complete")
+ 
+ 
+ def analyzer_client_from_config() -> AnalyzerClient:
+@@ -156,6 +165,8 @@
+         "missing_evidence": missing,
+         "source_kind": ride_session.source_kind,
+         "source_provenance_status": "supplied" if ride_session.source_kind else "unknown",
++        "capture_status": ride_session.capture_status,
++        "termination_reason": ride_session.termination_reason,
+     }
+ 
+ 
+@@ -165,7 +176,7 @@
+     The endpoint still validates the complete input; this view never runs ML.
+     """
+     reason = None
+-    if ride_session.sync_status != "complete" or ride_session.capture_status != "completed":
++    if not capture_ready_for_analysis(ride_session):
+         reason = "rerun.incomplete"
+     elif not records or len(records) != ride_session.record_count:
+         reason = "rerun.missing_records"
+@@ -546,10 +557,15 @@
+     if ride_session.analysis_status == "completed" and not force:
+         latest = _latest_analysis(ride_session)
+         return {"state": "completed", "analysis": latest.result_summary if latest else None}
++    if force:
++        # Use the same structural/termination contract as the visible action.
++        # Check before claiming a run or making any Analyzer request.
++        eligibility = manual_rerun_state(ride_session, _stored_records(ride_session))
++        if not eligibility["eligible"]:
++            from services.localization import translate
++            return {"state": "ineligible", "error": translate(eligibility["message"])}
+     client = analyzer_client_from_config()
+     if ride_session.source_type == PI_SOURCE_TYPE:
+-        if ride_session.sync_status != "complete" or ride_session.capture_status != "completed":
+-            return {"state": "ineligible", "error": "Server Harness requires a completed capture with complete stored telemetry."}
+         evidence = reanalysis_evidence(ride_session)
+         if not evidence["raw_reconstructible"]:
+             return _submit_canonical_session_to_analyzer(ride_session, client)
+--- P3/services/analysis.py
++++ P3.1/services/analysis.py
+@@ -208,15 +208,16 @@
+ 
+ 
+ def capture_termination_summary(session: RideSession) -> dict:
+-    if session.capture_status == "interrupted" and session.termination_reason == "unclean_runtime_shutdown":
++    if session.capture_status == "interrupted":
+         return {
+             "state": "interrupted",
+             "label": "Capture interrupted",
+-            "reason": "Unclean runtime shutdown",
++            "reason": "Unclean runtime shutdown" if session.termination_reason == "unclean_runtime_shutdown" else "Unknown",
+             "message": (
+                 "This capture was interrupted because the previous runtime ended uncleanly. "
+                 "The displayed data is the portion that was saved successfully."
+-            ),
++            ) if session.termination_reason == "unclean_runtime_shutdown" else "capture.interrupted_context",
++            "context_message": "capture.interrupted_context" if session.termination_reason == "unclean_runtime_shutdown" else None,
+         }
+     if session.capture_status == "completed" and session.termination_reason == "normal_stop":
+         return {
+--- P3/templates/session_detail.html
++++ P3.1/templates/session_detail.html
+@@ -35,6 +35,9 @@
+         <span class="badge capture-status-{{ summary.capture.state }}">{{ (summary.capture.label)|t }}</span>
+     </div>
+     <p class="capture-status-message">{{ (summary.capture.message)|t }}</p>
++    {% if summary.capture.context_message %}
++    <p class="muted capture-termination-context">{{ (summary.capture.context_message)|t }}</p>
++    {% endif %}
+     <dl class="detail-grid compact-details">
+         <div><dt>{{ _('Termination reason') }}</dt><dd>{{ (summary.capture.reason)|t }}</dd></div>
+     </dl>
+--- P3/static/locales/messages.json
++++ P3.1/static/locales/messages.json
+@@ -3785,8 +3785,8 @@
+       "vi": "Yêu cầu Harness đang được xử lý. Tải lại trang để kiểm tra kết quả trước khi thử lại."
+     },
+     "rerun.incomplete": {
+-      "en": "Harness rerun requires a completed capture and complete synchronization.",
+-      "vi": "Chỉ phân tích lại bằng Harness khi phiên thu thập đã hoàn tất và đồng bộ đầy đủ."
++      "en": "Harness rerun requires an ended capture (completed or interrupted) and complete synchronization.",
++      "vi": "Chỉ phân tích lại bằng Harness khi phiên thu thập đã kết thúc (hoàn tất hoặc gián đoạn) và đồng bộ đầy đủ."
+     },
+     "rerun.missing_records": {
+       "en": "Stored telemetry is incomplete; Harness rerun is unavailable.",
+@@ -3811,6 +3811,10 @@
+     "rerun.invalid_raw": {
+       "en": "Stored RAW or timestamps are invalid. Review the original evidence before retrying.",
+       "vi": "RAW hoặc dấu thời gian đã lưu không hợp lệ. Cần xem lại dữ liệu gốc trước khi thử lại."
++    },
++    "capture.interrupted_context": {
++      "en": "Recording can end abruptly when ignition or power is switched off. Saved data can still be analyzed once synchronization and input checks pass. Events near the end remain visible; an abrupt ending alone does not establish a component fault.",
++      "vi": "Việc ghi dữ liệu có thể kết thúc đột ngột khi tắt khóa điện hoặc nguồn. Dữ liệu đã lưu vẫn có thể được phân tích sau khi đồng bộ đầy đủ và đáp ứng kiểm tra đầu vào. Các sự kiện gần cuối phiên vẫn được giữ lại; chỉ riêng việc kết thúc đột ngột không đủ để kết luận bộ phận bị hỏng."
+     }
+   },
+   "aliases": {
+--- P3/tests/test_p3_rerun_recovery.py
++++ P3.1/tests/test_p3_rerun_recovery.py
+@@ -49,8 +49,8 @@
+             ride.analysis_status=status;ride.updated_at=utc_now()-timedelta(seconds=age);db.session.commit()
+             self.assertEqual(self.page(ride)[1],[{'details':[],'disabled':disabled}])
+     def test_incomplete_missing_raw_and_guest_have_no_action(self):
+-        ride=self.c.post_pi_v2_session('p3-ineligible');ride.capture_status='interrupted';db.session.commit()
+-        html,buttons=self.page(ride);self.assertEqual(buttons,[]);self.assertIn('completed capture',html)
++        ride=self.c.post_pi_v2_session('p3-ineligible');ride.capture_status='capturing';db.session.commit()
++        html,buttons=self.page(ride);self.assertEqual(buttons,[]);self.assertIn('ended capture',html)
+         ride.capture_status='completed';record=ride.telemetry_records[0];record.raw_hex=None;record.raw_frame=None;record.iat_c=None;db.session.commit()
+         html,buttons=self.page(ride);self.assertEqual(buttons,[]);self.assertIn('Complete RAW',html)
+         self.c.client.post('/auth/logout')
+--- P3/tests/test_app.py
++++ P3.1/tests/test_app.py
+@@ -1114,8 +1114,9 @@
+         self.login()
+         with patch.object(AnalyzerClient, "analyze_session") as canonical, patch.object(AnalyzerClient, "decode_analyze_raw_session") as raw:
+             response = self.client.post(f"/api/sessions/{session.id}/analysis/re-run")
+-        self.assertEqual(response.status_code, 503)
+-        self.assertIn("cannot be reconstructed", response.json["error"])
++        self.assertEqual(response.status_code, 409)
++        self.assertEqual(response.json["state"], "ineligible")
++        self.assertIn("Complete RAW or complete canonical", response.json["error"])
+         canonical.assert_not_called()
+         raw.assert_not_called()
+         self.assertFalse(response.json["reanalysis_evidence"]["raw_reconstructible"])
+@@ -2839,8 +2840,8 @@
+         self.assertEqual(status.json["message"], "ML API is not configured.")
+ 
+         rerun = self.client.post(f"/api/sessions/{session.id}/analysis/re-run")
+-        self.assertEqual(rerun.status_code, 503)
+-        self.assertEqual(rerun.json["state"], "failed")
++        self.assertEqual(rerun.status_code, 409)
++        self.assertEqual(rerun.json["state"], "ineligible")
+         self.assertIn("analysis", rerun.json)
+ 
+     def test_ai_status_uses_stored_analysis_metadata_when_api_unavailable(self):
+--- /dev/null
++++ P3.1/tests/test_p3_1_interrupted_capture.py
+@@ -0,0 +1,162 @@
++"""Terminal capture eligibility, historical preservation and causal restraint."""
++from copy import deepcopy
++from pathlib import Path
++import json
++import unittest
++from unittest.mock import patch
++
++from extensions import db
++from integrations.analyzer_client import AnalyzerClient, AnalyzerClientError
++from models import AnalysisResult, RideSession
++from services.analysis import analysis_snapshot, capture_termination_summary, session_records
++from services.analysis_submission import _raw_decode_request, _store_analysis_success, manual_rerun_state, submit_session_to_analyzer
++from tests import test_app as fixtures
++from tests.test_p3_rerun_recovery import Actions
++from tests.test_localization import Text
++
++
++class InterruptedCaptureTests(unittest.TestCase):
++    def setUp(self):
++        self.c = fixtures.DashboardTestCase('runTest')
++        self.c.setUp()
++        self.addCleanup(self.c.tearDown)
++        self.c.app.config['ML_API_BASE_URL'] = 'http://analyzer.example'
++        self.c.login()
++
++    def interrupted(self, name):
++        payload = self.c.pi_payload(session_id=name, seqs=tuple(range(10)), ended=True,
++                                    capture_status='interrupted', termination_reason='unclean_runtime_shutdown',
++                                    analysis=self.c.pi_analysis(run_id='pi-'+name))
++        response = self.c.client.post('/api/device/sync/session', json=payload, headers=self.c.headers_a)
++        self.assertEqual(response.status_code, 200)
++        return RideSession.query.filter_by(session_id=name).one(), payload
++
++    def test_completed_and_interrupted_sync_and_input_contract_match_page_api_and_service(self):
++        ride, _ = self.interrupted('p31-state-matrix')
++        for capture, sync, eligible in [('completed','complete',True), ('interrupted','complete',True),
++                                         ('interrupted','partial',False), ('interrupted','syncing',False),
++                                         ('capturing','complete',False), ('failed','complete',False)]:
++            with self.subTest(capture=capture, sync=sync):
++                ride.capture_status=capture;ride.sync_status=sync;db.session.commit()
++                state=manual_rerun_state(ride,session_records(ride))
++                self.assertEqual(state['eligible'],eligible)
++                html=self.c.client.get(f'/sessions/{ride.id}').get_data(as_text=True)
++                parser=Actions();parser.feed(html);self.assertEqual(bool(parser.buttons),eligible)
++                if not eligible:
++                    before=(ride.analysis_status,ride.analysis_run_id,ride.updated_at)
++                    with patch.object(AnalyzerClient,'decode_analyze_raw_session') as raw, patch.object(AnalyzerClient,'analyze_session') as canonical:
++                        response=self.c.client.post(f'/api/sessions/{ride.id}/analysis/re-run',json={'request_id':'ineligible'})
++                        self.assertEqual(response.status_code,409)
++                        self.assertEqual(submit_session_to_analyzer(ride.id,force=True)['state'],'ineligible')
++                        raw.assert_not_called();canonical.assert_not_called()
++                    self.assertEqual((ride.analysis_status,ride.analysis_run_id,ride.updated_at),before)
++
++    def test_interrupted_invalid_raw_missing_and_unreconstructible_input_never_submit(self):
++        for defect in ['bad_hex','missing_canonical','missing_records']:
++            with self.subTest(defect=defect):
++                ride,_=self.interrupted('p31-'+defect)
++                record=ride.telemetry_records[0]
++                if defect=='bad_hex':record.raw_hex='NOT-HEX'
++                elif defect=='missing_canonical':record.raw_hex=None;record.raw_frame=None;record.iat_c=None
++                else:db.session.delete(record)
++                db.session.commit()
++                with patch.object(AnalyzerClient,'decode_analyze_raw_session') as raw, patch.object(AnalyzerClient,'analyze_session') as canonical:
++                    self.assertEqual(self.c.client.post(f'/api/sessions/{ride.id}/analysis/re-run',json={'request_id':'invalid'}).status_code,409)
++                    self.assertEqual(submit_session_to_analyzer(ride.id,force=True)['state'],'ineligible')
++                    raw.assert_not_called();canonical.assert_not_called()
++                self.assertEqual(ride.capture_status,'interrupted')
++
++    def test_real_manual_route_retry_preserves_upload_identity_and_all_history(self):
++        ride,payload=self.interrupted('p31-preserved')
++        original_run=ride.analysis_run_id
++        original=deepcopy(AnalysisResult.query.filter_by(analysis_run_id=original_run).one().result_summary)
++        records=[r.to_dict() for r in session_records(ride)]
++        fingerprints=[(r.seq,r.record_fingerprint) for r in session_records(ride)]
++        request_before=_raw_decode_request(ride,submission_key='p31-same-attempt')
++        calls=[]
++        def analyzer(request):
++            calls.append(deepcopy(request))
++            if len(calls)==1:raise AnalyzerClientError('Result unconfirmed',code='ANALYZER_TIMEOUT',retryable=True)
++            return self.c.raw_analyzer_response(request,run_id='p31-server')
++        url=f'/api/sessions/{ride.id}/analysis/re-run'
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=analyzer):
++            self.assertEqual(self.c.client.post(url,json={'request_id':'p31-same-attempt'}).status_code,503)
++            self.assertEqual(self.c.client.post(url,json={'request_id':'p31-same-attempt'}).status_code,200)
++            self.assertEqual(self.c.client.post(url,json={'request_id':'p31-same-attempt'}).status_code,200)
++        self.assertEqual(len(calls),2);self.assertEqual(calls,[request_before,request_before])
++        self.assertEqual(self.c.client.post('/api/device/sync/session',json=payload,headers=self.c.headers_a).status_code,200)
++        db.session.refresh(ride)
++        self.assertEqual((ride.capture_status,ride.termination_reason,ride.analysis_run_id),('interrupted','unclean_runtime_shutdown','p31-server'))
++        self.assertEqual([r.to_dict() for r in session_records(ride)],records)
++        self.assertEqual([(r.seq,r.record_fingerprint) for r in session_records(ride)],fingerprints)
++        self.assertEqual(AnalysisResult.query.filter_by(ride_session_id=ride.id).count(),2)
++        self.assertEqual(AnalysisResult.query.filter_by(analysis_run_id=original_run).one().result_summary,original)
++        provenance=AnalysisResult.query.filter_by(analysis_run_id='p31-server').one().result_summary['reanalysis']
++        self.assertEqual(provenance['capture_status'],'interrupted');self.assertEqual(provenance['termination_reason'],'unclean_runtime_shutdown')
++        self.assertTrue(analysis_snapshot(ride)['can_rerun'])
++
++    def test_canonical_fallback_interrupted_stays_supported(self):
++        ride,_=self.interrupted('p31-canonical')
++        for r in session_records(ride):r.raw_hex=None;r.raw_frame=None
++        db.session.commit()
++        self.assertTrue(manual_rerun_state(ride,session_records(ride))['eligible'])
++        with patch.object(AnalyzerClient,'analyze_session',return_value=self.c.pi_analysis(run_id='p31-canonical-server')) as canonical, patch.object(AnalyzerClient,'decode_analyze_raw_session') as raw:
++            self.assertEqual(self.c.client.post(f'/api/sessions/{ride.id}/analysis/re-run',json={'request_id':'canonical'}).status_code,200)
++            canonical.assert_called_once();raw.assert_not_called()
++        self.assertEqual(ride.capture_status,'interrupted')
++
++    def test_interrupted_security_csrf_ownership_and_guest(self):
++        ride,_=self.interrupted('p31-security');url=f'/api/sessions/{ride.id}/analysis/re-run'
++        self.c.app.config['WTF_CSRF_ENABLED']=True
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session') as infer:
++            self.assertEqual(self.c.client.post(url,json={'request_id':'missing-csrf'}).status_code,400)
++            csrf=self.c.client.get('/auth/csrf',base_url='https://localhost').json['csrf_token']
++            with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=lambda r:self.c.raw_analyzer_response(r,run_id='p31-secure')):
++                self.assertEqual(self.c.client.post(url,json={'request_id':'with-csrf'},headers={'X-CSRFToken':csrf,'Referer':'https://localhost/'},base_url='https://localhost').status_code,200)
++            infer.assert_not_called()
++        self.c.app.config['WTF_CSRF_ENABLED']=False
++        self.c.client.post('/auth/logout');self.c.login(self.c.user_b.email)
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session') as infer:
++            self.assertEqual(self.c.client.post(url,json={'request_id':'other-owner'}).status_code,404);infer.assert_not_called()
++        self.c.client.post('/auth/logout')
++        with self.c.client.session_transaction() as session:session.clear();session['demo_mode']=True
++        self.assertEqual(self.c.client.post(url,json={'request_id':'guest'}).status_code,403)
++
++    def test_interrupted_both_locales_no_implicit_analysis_and_separate_status(self):
++        ride,_=self.interrupted('p31-locales')
++        for status in ['completed','failed']:
++            ride.analysis_status=status;db.session.commit()
++            for lang,label,context in [('en','Re-run Harness Analysis','an abrupt ending alone does not establish a component fault'),
++                                       ('vi','Phân tích lại bằng Harness','không đủ để kết luận bộ phận bị hỏng')]:
++                self.c.client.set_cookie('drisafe.language',lang)
++                with patch.object(AnalyzerClient,'decode_analyze_raw_session') as infer:
++                    response=self.c.client.get(f'/sessions/{ride.id}');infer.assert_not_called()
++                html=response.get_data(as_text=True);text=str(Text(html));parser=Actions();parser.feed(html)
++                self.assertIn(label,text);self.assertIn(context,text);self.assertEqual(parser.buttons,[{'details':[],'disabled':False}]);self.assertNotIn('localization-gap',html)
++                self.assertEqual(self.c.client.get(f'/sessions/{ride.id}.json').json['session']['capture_status'],'interrupted')
++
++    def test_terminal_evidence_timeline_and_predictions_are_retained_without_new_cause(self):
++        ride,_=self.interrupted('p31-terminal')
++        evidence=json.loads((Path(__file__).parent/'fixtures/p2_canary_interpretation.json').read_text())
++        evidence['analysis_run_id']='p31-terminal-server'
++        evidence['health_score']=88.0
++        evidence['model_version']='p31-unchanged-test-model'
++        end=ride.telemetry_records[-1]
++        evidence['anomaly_timeline']={'status':'available','analysis_run_id':evidence['analysis_run_id'],'items':[
++            {'start_sequence':end.seq,'end_sequence':end.seq,'start_time_ms':end.timestamp_ms,'end_time_ms':end.timestamp_ms}]}
++        original=deepcopy(evidence);_store_analysis_success(ride,evidence);db.session.commit()
++        snapshot=analysis_snapshot(ride)
++        self.assertTrue(snapshot['events']);self.assertEqual(snapshot['events'][-1]['end_seq'],end.seq)
++        self.assertEqual(AnalysisResult.query.filter_by(analysis_run_id=evidence['analysis_run_id']).one().result_summary,original)
++        from services.analysis import diagnostic_evidence_view
++        self.assertEqual(diagnostic_evidence_view(evidence)['summary']['possible_causes'],[])
++        self.assertEqual(evidence['health_score'],original['health_score'])
++        page=self.c.client.get(f'/sessions/{ride.id}').get_data(as_text=True)
++        self.assertIn('evidence-event-link',page);self.assertIn('capture-termination-context',page)
++        self.assertEqual(ride.capture_status,'interrupted')
++
++    def test_interrupted_unknown_reason_retains_termination_state(self):
++        ride,_=self.interrupted('p31-unknown-reason');ride.termination_reason=None
++        summary=capture_termination_summary(ride)
++        self.assertEqual(summary['state'],'interrupted');self.assertEqual(summary['reason'],'Unknown')
++        self.assertTrue(manual_rerun_state(ride,session_records(ride))['eligible'])

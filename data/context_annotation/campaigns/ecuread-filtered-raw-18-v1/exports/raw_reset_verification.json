@@ -1,0 +1,41 @@
+{
+  "accepted": 0,
+  "active_raw_sessions": 18,
+  "backup_path": "/home/hthnh/ecuread-analyzer-backups/legacy57-before-raw-reset-2026-10-11T031926.571546_0000.tar.gz",
+  "browser": {
+    "all_sources_from_requested_raw_folder": true,
+    "browser_errors": [],
+    "campaign_labels_accepted": 0,
+    "full_speed_coverage": true,
+    "legacy_sessions_visible": 0,
+    "long_session_duration_s": 4496.001,
+    "long_session_samples": 17976,
+    "mobile_overflow": false,
+    "nonblank_canvas_pixels": 439,
+    "review_evidence_visible": true,
+    "studio_url": "http://127.0.0.1:8767",
+    "verified_at": "2026-10-11T03:23:05.451Z",
+    "visible_sessions": 18
+  },
+  "canonical_samples": 100688,
+  "input_frames": 100688,
+  "legacy_session_paths_absent": true,
+  "pending_suggestions": 4643,
+  "protected_sources_models_research": {
+    "changed": [],
+    "protected_file_count": 431,
+    "unchanged": true
+  },
+  "retired_sessions": 57,
+  "tests": {
+    "command": ".venv/bin/pytest -q --junitxml=/tmp/context-raw-reset-tests.xml",
+    "errors": 0,
+    "failures": 0,
+    "generated_at": "2026-10-11T03:22:58.913649+00:00",
+    "passed": 312,
+    "skipped": 0,
+    "tests": 312,
+    "time_s": 51.431
+  },
+  "verified_at": "2026-10-11T03:23:40.429912+00:00"
+}

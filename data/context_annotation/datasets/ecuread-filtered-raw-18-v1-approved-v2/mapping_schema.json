@@ -1,0 +1,20 @@
+{
+  "events": "Separate overlapping markers; never an operating/thermal class",
+  "ground_truth_limit": "Operator bulk endorsement is not individual boundary validation or detector ground truth",
+  "interval_semantics": "[start_s, end_s); include last canonical sample when end_s equals session duration",
+  "ml_eligibility": "Canonical-index research windows, not detector predictions. ML feature/quality eligibility must be checked independently; no invalid row removal or concatenation across capture identities.",
+  "sample_identity": "session_id + zero-based canonical_index, original sequence and timestamp_ms",
+  "sample_ranges": "zero-based start_index inclusive, end_index exclusive; empty ranges retained",
+  "schema_version": "context-research-mapping-v1",
+  "time_basis": "elapsed seconds from canonical source start; no resampling or record removal",
+  "tracks": [
+    "micro_operating",
+    "micro_thermal",
+    "macro_operating",
+    "macro_thermal"
+  ],
+  "window_identity": "session_id + canonical row_start; complete 50-row windows only, trailing remainder not padded",
+  "window_policy": "Any interval boundary within (first_sample_time, last_sample_time] makes the axis ambiguous, even for identical labels or intervals containing no samples. Return all intersecting interval IDs; never majority-vote. Gaps remain unresolved; homogeneous unknown is abstention, not missing annotation.",
+  "window_size_samples": 50,
+  "window_step_samples": 10
+}

@@ -1,0 +1,9 @@
+{
+  "all_targets_verified": true,
+  "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+  "approval_path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/provenance/operator_context_approval.v1.json",
+  "approval_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+  "files_written_this_run": 0,
+  "recovery_directory": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/provenance/bulk_endorsement.v1",
+  "unresolved": []
+}

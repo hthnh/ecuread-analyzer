@@ -1,0 +1,3048 @@
+{
+  "export_content_sha256": "5fd672ff45b69681e310efff7661cc8313989cfc10191047dc476e8161e156c1",
+  "folds": [
+    {
+      "fold_id": "logo-session_000001",
+      "held_out": {
+        "duration_s": 28.999,
+        "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+        "sample_count": 117,
+        "session_id": "session_000001",
+        "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+        "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+        "window_count": 7
+      },
+      "held_out_windows": 7,
+      "training": [
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9982
+    },
+    {
+      "fold_id": "logo-session_000002",
+      "held_out": {
+        "duration_s": 1446.503,
+        "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+        "sample_count": 5781,
+        "session_id": "session_000002",
+        "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+        "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+        "window_count": 574
+      },
+      "held_out_windows": 574,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9415
+    },
+    {
+      "fold_id": "logo-session_000003",
+      "held_out": {
+        "duration_s": 312.499,
+        "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+        "sample_count": 1249,
+        "session_id": "session_000003",
+        "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+        "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+        "window_count": 120
+      },
+      "held_out_windows": 120,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9869
+    },
+    {
+      "fold_id": "logo-session_000004",
+      "held_out": {
+        "duration_s": 755.001,
+        "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+        "sample_count": 3017,
+        "session_id": "session_000004",
+        "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+        "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+        "window_count": 297
+      },
+      "held_out_windows": 297,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9692
+    },
+    {
+      "fold_id": "logo-session_000005",
+      "held_out": {
+        "duration_s": 1963.997,
+        "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+        "sample_count": 7851,
+        "session_id": "session_000005",
+        "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+        "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+        "window_count": 781
+      },
+      "held_out_windows": 781,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9208
+    },
+    {
+      "fold_id": "logo-session_000006",
+      "held_out": {
+        "duration_s": 230.75,
+        "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+        "sample_count": 923,
+        "session_id": "session_000006",
+        "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+        "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+        "window_count": 88
+      },
+      "held_out_windows": 88,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9901
+    },
+    {
+      "fold_id": "logo-session_000007",
+      "held_out": {
+        "duration_s": 1598.002,
+        "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+        "sample_count": 6389,
+        "session_id": "session_000007",
+        "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+        "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+        "window_count": 634
+      },
+      "held_out_windows": 634,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9355
+    },
+    {
+      "fold_id": "logo-session_000014",
+      "held_out": {
+        "duration_s": 300.5,
+        "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+        "sample_count": 1202,
+        "session_id": "session_000014",
+        "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+        "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+        "window_count": 116
+      },
+      "held_out_windows": 116,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9873
+    },
+    {
+      "fold_id": "logo-session_000015",
+      "held_out": {
+        "duration_s": 132.501,
+        "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+        "sample_count": 531,
+        "session_id": "session_000015",
+        "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+        "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+        "window_count": 49
+      },
+      "held_out_windows": 49,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9940
+    },
+    {
+      "fold_id": "logo-session_000016",
+      "held_out": {
+        "duration_s": 4494.502,
+        "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+        "sample_count": 17965,
+        "session_id": "session_000016",
+        "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+        "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+        "window_count": 1792
+      },
+      "held_out_windows": 1792,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 8197
+    },
+    {
+      "fold_id": "logo-session_000017",
+      "held_out": {
+        "duration_s": 873.5,
+        "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+        "sample_count": 3492,
+        "session_id": "session_000017",
+        "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+        "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+        "window_count": 345
+      },
+      "held_out_windows": 345,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9644
+    },
+    {
+      "fold_id": "logo-session_000018",
+      "held_out": {
+        "duration_s": 4496.001,
+        "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+        "sample_count": 17976,
+        "session_id": "session_000018",
+        "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+        "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+        "window_count": 1793
+      },
+      "held_out_windows": 1793,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 8196
+    },
+    {
+      "fold_id": "logo-session_000019",
+      "held_out": {
+        "duration_s": 548.67,
+        "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+        "sample_count": 2194,
+        "session_id": "session_000019",
+        "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+        "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+        "window_count": 215
+      },
+      "held_out_windows": 215,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9774
+    },
+    {
+      "fold_id": "logo-session_000020",
+      "held_out": {
+        "duration_s": 21.501,
+        "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+        "sample_count": 87,
+        "session_id": "session_000020",
+        "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+        "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+        "window_count": 4
+      },
+      "held_out_windows": 4,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9985
+    },
+    {
+      "fold_id": "logo-session_000021",
+      "held_out": {
+        "duration_s": 891.25,
+        "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+        "sample_count": 3564,
+        "session_id": "session_000021",
+        "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+        "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+        "window_count": 352
+      },
+      "held_out_windows": 352,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9637
+    },
+    {
+      "fold_id": "logo-session_000022",
+      "held_out": {
+        "duration_s": 755.001,
+        "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+        "sample_count": 3021,
+        "session_id": "session_000022",
+        "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+        "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+        "window_count": 298
+      },
+      "held_out_windows": 298,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 9691
+    },
+    {
+      "fold_id": "logo-session_000023",
+      "held_out": {
+        "duration_s": 4391.172,
+        "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+        "sample_count": 17539,
+        "session_id": "session_000023",
+        "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+        "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+        "window_count": 1749
+      },
+      "held_out_windows": 1749,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 1948.999,
+          "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "sample_count": 7790,
+          "session_id": "session_000024",
+          "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+          "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "window_count": 775
+        }
+      ],
+      "training_windows": 8240
+    },
+    {
+      "fold_id": "logo-session_000024",
+      "held_out": {
+        "duration_s": 1948.999,
+        "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+        "sample_count": 7790,
+        "session_id": "session_000024",
+        "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+        "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+        "window_count": 775
+      },
+      "held_out_windows": 775,
+      "training": [
+        {
+          "duration_s": 28.999,
+          "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "sample_count": 117,
+          "session_id": "session_000001",
+          "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+          "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "window_count": 7
+        },
+        {
+          "duration_s": 1446.503,
+          "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "sample_count": 5781,
+          "session_id": "session_000002",
+          "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+          "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "window_count": 574
+        },
+        {
+          "duration_s": 312.499,
+          "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "sample_count": 1249,
+          "session_id": "session_000003",
+          "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+          "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "window_count": 120
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "sample_count": 3017,
+          "session_id": "session_000004",
+          "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+          "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "window_count": 297
+        },
+        {
+          "duration_s": 1963.997,
+          "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "sample_count": 7851,
+          "session_id": "session_000005",
+          "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+          "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "window_count": 781
+        },
+        {
+          "duration_s": 230.75,
+          "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "sample_count": 923,
+          "session_id": "session_000006",
+          "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+          "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "window_count": 88
+        },
+        {
+          "duration_s": 1598.002,
+          "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "sample_count": 6389,
+          "session_id": "session_000007",
+          "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+          "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "window_count": 634
+        },
+        {
+          "duration_s": 300.5,
+          "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "sample_count": 1202,
+          "session_id": "session_000014",
+          "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+          "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "window_count": 116
+        },
+        {
+          "duration_s": 132.501,
+          "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "sample_count": 531,
+          "session_id": "session_000015",
+          "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+          "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "window_count": 49
+        },
+        {
+          "duration_s": 4494.502,
+          "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "sample_count": 17965,
+          "session_id": "session_000016",
+          "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+          "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "window_count": 1792
+        },
+        {
+          "duration_s": 873.5,
+          "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "sample_count": 3492,
+          "session_id": "session_000017",
+          "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+          "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "window_count": 345
+        },
+        {
+          "duration_s": 4496.001,
+          "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "sample_count": 17976,
+          "session_id": "session_000018",
+          "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+          "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "window_count": 1793
+        },
+        {
+          "duration_s": 548.67,
+          "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "sample_count": 2194,
+          "session_id": "session_000019",
+          "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+          "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "window_count": 215
+        },
+        {
+          "duration_s": 21.501,
+          "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "sample_count": 87,
+          "session_id": "session_000020",
+          "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+          "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "window_count": 4
+        },
+        {
+          "duration_s": 891.25,
+          "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "sample_count": 3564,
+          "session_id": "session_000021",
+          "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+          "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "window_count": 352
+        },
+        {
+          "duration_s": 755.001,
+          "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "sample_count": 3021,
+          "session_id": "session_000022",
+          "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+          "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "window_count": 298
+        },
+        {
+          "duration_s": 4391.172,
+          "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "sample_count": 17539,
+          "session_id": "session_000023",
+          "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+          "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "window_count": 1749
+        }
+      ],
+      "training_windows": 9214
+    }
+  ],
+  "schema_version": "h10.1-folds-v1"
+}

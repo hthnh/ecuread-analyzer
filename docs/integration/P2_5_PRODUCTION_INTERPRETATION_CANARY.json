@@ -1,0 +1,678 @@
+{
+  "status": "passed_with_public_ingress_verification_limit",
+  "utc": "2026-10-24T01:47:19.496672+00:00",
+  "session_id": 242,
+  "session_uuid": "80d11ec8-7b8f-5731-a7c3-828b60eb480e",
+  "preflight": {
+    "stage": {
+      "status": "passed",
+      "records": 12625,
+      "windows": 1258,
+      "http_seconds": 31.794,
+      "manual_request_bytes": 43,
+      "manual_response_bytes": 734223,
+      "analyzer_request_bytes": 1386317,
+      "analyzer_response_bytes": 12172617,
+      "cached_replay_same_run": true,
+      "run": "analysis_20261024T013259Z_1c5e16b3384d",
+      "locales": {
+        "en": {
+          "status": 200,
+          "html_bytes": 247648
+        },
+        "vi": {
+          "status": 200,
+          "html_bytes": 254600
+        }
+      },
+      "container_transport": "Nginx 90s -> Gunicorn 2x8/120s -> Analyzer 60s -> isolated PostgreSQL",
+      "diagnostic_counts": {
+        "observations": 9,
+        "symptoms": 1,
+        "possible_causes": 0,
+        "recommended_checks": 7
+      }
+    },
+    "candidate_images": {
+      "analyzer": {
+        "base_image": "sha256:94e35f2701f74616fa38ff26492e573416720032a168f2218c854df4551ee14e",
+        "baseline_container": "caf3f3604a8806615a6a8d8297c19cccf00473975ea7e820b3870dec550f4bea",
+        "base_tag": "ecuread-p2-5-20261024t011304z-base:analyzer",
+        "candidate_tag": "ecuread-p2-5-20261024t011304z:analyzer",
+        "source_sha256": {
+          "app/ml/diagnostic_interpretation.py": "349a1fcb14a5a412db4b934a28431e0d2c2dc891d78f4c178ac8ffd37380068d",
+          "app/ml/evidence_aggregation.py": "73ee45ea52a1a0225f69e0fb06cee85c41f6477a9c40bccfd9c4e4c02be32ad9",
+          "app/ml/root_cause_analysis_v2.py": "92368a04bd529a596975aa9d92a5130c6d4f22ac0200e9173d684948256f935a",
+          "app/services/research_harness.py": "2a11671d8bb79afca459e4674de0d3089ec7fd3fe7f13df6732a79df7974cd77"
+        },
+        "candidate_image": "sha256:9d682df1aa2c24e8197f853a75ffee3ca48accc36f1a4005bce2bddd0830d010"
+      },
+      "drivesafe": {
+        "base_image": "sha256:2c18966e5cefb3147632df4897bce2340b7e1b232144c2c0cca3c893ddf4dc8d",
+        "baseline_container": "72728df914024e4c309b6ceebbe9b5e09d586f28c738bdde8a776bc46fba17ec",
+        "base_tag": "ecuread-p2-5-20261024t011304z-base:drivesafe",
+        "candidate_tag": "ecuread-p2-5-20261024t011304z:drivesafe",
+        "source_sha256": {
+          "services/diagnostic_presentation.py": "7936accb793eac30b73b6e434060c6848e840532ae67354bb2bb4b0b218ddb07",
+          "services/analysis.py": "dabefb938e9dcd5dead85906a435b08ea9bc178f4cd6e98a764dc9aad63ea13c",
+          "templates/session_detail.html": "7d6d505d9fc8751e7874d7b46556351867e109703572efa44c80a887eea214fc",
+          "static/locales/messages.json": "fa08a80164cfcc917fb44cba879f47dca88393d5ec4b97fc5010db39c3375937",
+          "static/js/sessionDetail.js": "b51acb45f814db9a47aa994d2e82e765e0facc59bbd7268f3895efda8f6f680b"
+        },
+        "candidate_image": "sha256:c19e057b332a5dd821d0f88ecc7670a86459885518583757bc84a0b497bd9125"
+      }
+    },
+    "container_regression": {
+      "analyzer": {
+        "passed": 26,
+        "log_tail": [
+          "PASSED tests/test_evidence_aggregation.py::test_evidence_state_semantics_keep_no_evidence_distinct_from_health",
+          "PASSED tests/test_evidence_aggregation.py::test_skipped_detector_never_counts_as_negative_vote",
+          "PASSED tests/test_evidence_aggregation.py::test_event_aggregation_separates_finding_and_coverage_regions",
+          "PASSED tests/test_evidence_aggregation.py::test_summary_counts_detector_specific_and_disagreement_windows",
+          "PASSED tests/test_evidence_aggregation.py::test_h5_active_set_excludes_rejected_temporal_candidates"
+        ]
+      },
+      "drivesafe": {
+        "passed": 22,
+        "log_tail": [
+          "----------------------------------------------------------------------",
+          "Ran 22 tests in 13.503s",
+          "",
+          "OK"
+        ]
+      }
+    },
+    "all_1258_detector_windows_match_P1": true,
+    "runtime": {
+      "analyzer": {
+        "python": "3.12.13 (main, Jun 24 2026, 02:08:01) [GCC 14.2.0]",
+        "packages": {
+          "fastapi": "0.161.1",
+          "uvicorn": "0.54.0",
+          "numpy": "2.5.4",
+          "pandas": "2.3.3",
+          "scikit-learn": "1.9.0",
+          "joblib": "1.6.0",
+          "pydantic": "2.14.1"
+        }
+      },
+      "drivesafe": {
+        "python": "3.13.15 (main, Sep 19 2026, 01:05:27) [GCC 14.2.0]",
+        "packages": {
+          "Flask": "3.1.3",
+          "gunicorn": "23.0.0",
+          "SQLAlchemy": "2.0.54",
+          "psycopg": "3.3.6",
+          "requests": "2.34.2"
+        }
+      }
+    },
+    "limits": {
+      "raw_max_records": 20000,
+      "raw_request_max_bytes": 8388608,
+      "raw_body_seconds": 10,
+      "raw_analysis_cooperative_seconds": 45,
+      "analyzer_client_seconds": 60,
+      "proxy_seconds": 90,
+      "gunicorn_worker_seconds": 120,
+      "drivesafe_inbound_request_bytes": 2097152,
+      "response_note": "Measured upstream HTTP response exceeds 12 MB and succeeds; request guards are not response caps."
+    },
+    "staging_memory": {
+      "analyzer": {
+        "memory.current": 347004928,
+        "memory.peak": 441085952
+      },
+      "web": {
+        "memory.current": 429203456,
+        "memory.peak": 727908352
+      }
+    },
+    "actual_production_input": {
+      "records": 12625,
+      "prepared_request_bytes": 1448094
+    }
+  },
+  "final_operational": {
+    "utc": "2026-10-24T01:47:19.496672+00:00",
+    "images": {
+      "analyzer": {
+        "container_id": "db15985c6ad2ce86df24ed5d8cc3f82267c9391009ab92b19733c378ef43fd75",
+        "image": "sha256:9d682df1aa2c24e8197f853a75ffee3ca48accc36f1a4005bce2bddd0830d010",
+        "running": true,
+        "oom_killed": false,
+        "restart_count": 0
+      },
+      "drivesafe": {
+        "container_id": "48795bbad3c98a955ae74bf978c487e01b07ee2d948711ba6cfc2ae3cd88777f",
+        "image": "sha256:c19e057b332a5dd821d0f88ecc7670a86459885518583757bc84a0b497bd9125",
+        "running": true,
+        "oom_killed": false,
+        "restart_count": 0
+      }
+    },
+    "health": {
+      "analyzer": {
+        "status": "ok",
+        "service": "ecuread-analyzer",
+        "model_loaded": true
+      },
+      "drivesafe": {
+        "database": "ok",
+        "redis": "ok",
+        "status": "ok"
+      }
+    },
+    "schema_revision": "b7f2c9a4d610",
+    "in_flight": 0,
+    "selected_run": "analysis_20261024T014120Z_f53946d6f290",
+    "results": [
+      {
+        "id": 80,
+        "analysis_run_id": "87f16d88-91af-476e-af77-32c079637b36",
+        "canonical_records": null
+      },
+      {
+        "id": 84,
+        "analysis_run_id": "analysis_20261023T232221Z_2c818f9e015c",
+        "canonical_records": 12625
+      },
+      {
+        "id": 85,
+        "analysis_run_id": "analysis_20261024T014120Z_f53946d6f290",
+        "canonical_records": 12625
+      }
+    ],
+    "source_still_matches_reviewed_candidates": {
+      "analyzer": {
+        "app/ml/diagnostic_interpretation.py": true,
+        "app/ml/evidence_aggregation.py": true,
+        "app/ml/root_cause_analysis_v2.py": true,
+        "app/services/research_harness.py": true
+      },
+      "drivesafe": {
+        "services/diagnostic_presentation.py": true,
+        "services/analysis.py": true,
+        "templates/session_detail.html": true,
+        "static/locales/messages.json": true,
+        "static/js/sessionDetail.js": true
+      }
+    },
+    "disk_free_bytes": 13447434240,
+    "host_memory_kib": {
+      "MemTotal": "7471200",
+      "MemAvailable": "4191116",
+      "SwapFree": "2722792"
+    },
+    "rollbacks_used": false
+  },
+  "canary": {
+    "analysis_run_id": "analysis_20261024T014120Z_f53946d6f290",
+    "database_result_id": 85,
+    "records": 12625,
+    "windows": 1258,
+    "health_score": 86.07,
+    "anomaly_window_count": 69,
+    "anomaly_ratio": 0.054849,
+    "overall_status": "monitor",
+    "model_bundle": {
+      "activation_scope": "local",
+      "artifacts": {
+        "battery": {
+          "path": "models/bundles/native-full18-20261011T135838Z/battery_reference.json",
+          "sha256": "6b0cebd6d7038b124a3eb94bbebf7d2a3f6c25b5393bf2331999423de3bcbecf"
+        },
+        "if_metadata": {
+          "path": "models/bundles/native-full18-20261011T135838Z/iforest/model_metadata.json",
+          "sha256": "b0f9f6e13255d69e14af8f7b8a0af6e6887c7b01f52ad342937e489382d0ea35"
+        },
+        "if_model": {
+          "path": "models/bundles/native-full18-20261011T135838Z/iforest/isolation_forest.joblib",
+          "sha256": "ca902dd40e828c2b668f4cddb5ed244a6f387804049c2f10f9fd5f5e8bf44085"
+        },
+        "if_scaler": {
+          "path": "models/bundles/native-full18-20261011T135838Z/iforest/robust_scaler.joblib",
+          "sha256": "2b780a9635327789aeb6a26ca8a7531d42512207fffe0dc152eccb0a1a971dfc"
+        },
+        "speed": {
+          "path": "models/bundles/native-full18-20261011T135838Z/speed_reference.json",
+          "sha256": "3aec3788f91ab07ce6286c4d606c428a4ac5413e57ac8695516dff34ad1b0348"
+        }
+      },
+      "bundle_id": "native-full18-20261011T135838Z",
+      "manifest_sha256": "e84a8350aae4708a9e429a313e90f8ee1a625209705a6df48141133f1a8bd5ae"
+    },
+    "reanalysis": {
+      "analyzer_speed_record_count": 12625,
+      "input_sha256": "d09fef1c55be107503673ac95c5b5df1181d00930cd7c06d5f3736083803e5f7",
+      "manual_request_id": "p2-5-prod-242-20261024T011515Z",
+      "missing_evidence": [],
+      "missing_signals": [],
+      "model_selection": "analyzer_active_model",
+      "raw_reconstructible": true,
+      "raw_record_count": 12625,
+      "record_count": 12625,
+      "selected_decoder_id": "honda_keihin_71_17",
+      "selected_decoder_version": "1.0.0",
+      "selected_model_version": null,
+      "source_kind": "kline",
+      "source_of_truth": "stored_raw",
+      "source_provenance_status": "supplied",
+      "speed_status": "available",
+      "timestamp_record_count": 12625,
+      "uploaded_speed_record_count": 12625
+    },
+    "transport": {
+      "started_utc": "2026-10-24T01:41:11.229822+00:00",
+      "duration_seconds": 41.19,
+      "status": 200,
+      "transport_error": null,
+      "request_id": "p2-5-prod-242-20261024T011515Z",
+      "memory_baseline": {
+        "ecu-analyzer": {
+          "memory.current": 133074944,
+          "memory.peak": 147775488
+        },
+        "drisafe-web": {
+          "memory.current": 650379264,
+          "memory.peak": 793542656
+        }
+      },
+      "memory_sampled_peak_bytes": {
+        "ecu-analyzer": 427552768,
+        "drisafe-web": 783056896
+      },
+      "memory_after": {
+        "ecu-analyzer": {
+          "memory.current": 333864960,
+          "memory.peak": 450621440
+        },
+        "drisafe-web": {
+          "memory.current": 690974720,
+          "memory.peak": 793542656
+        }
+      },
+      "memory_sample_count": 206,
+      "memory_interval_seconds": 0.2
+    },
+    "manual_request_bytes": 48,
+    "manual_response_bytes": 1427775,
+    "upstream_http": {
+      "request_bytes": 1448094,
+      "response_bytes": 12503797,
+      "content_length": "12503797",
+      "content_encoding": null,
+      "mode": "Completed idempotency-cache response readback; no model execution"
+    },
+    "detectors": {
+      "contextual_battery_voltage": {
+        "execution_status": "ok",
+        "finding": "positive",
+        "applicability": {
+          "applicable": true,
+          "missing_features": [],
+          "reason": null
+        },
+        "model_version": "contextual-battery-robust-v1-ef5579cf38a0",
+        "scored_window_count": 1256,
+        "anomaly_window_count": 1,
+        "not_applicable_windows": 2
+      },
+      "contextual_speed": {
+        "execution_status": "ok",
+        "finding": "positive",
+        "applicability": {
+          "applicable": true,
+          "missing_features": [],
+          "reason": null
+        },
+        "model_version": "contextual-speed-robust-v1-fce8419c1951",
+        "scored_window_count": 1213,
+        "anomaly_window_count": 1,
+        "not_applicable_windows": 45
+      },
+      "isolation_forest": {
+        "execution_status": "ok",
+        "finding": "positive",
+        "applicability": {
+          "applicable": true,
+          "missing_features": [],
+          "reason": null
+        },
+        "model_version": "iforest-full18-20261011T135838Z",
+        "scored_window_count": 1258,
+        "anomaly_window_count": 69,
+        "not_applicable_windows": 0
+      }
+    },
+    "diagnostic_counts": {
+      "observations": 16,
+      "symptoms": 1,
+      "possible_causes": 0,
+      "recommended_checks": 10
+    },
+    "primary_observation_count": 12,
+    "technical_observation_count": 4,
+    "reviewed_event_count": 11,
+    "finding_region_count": 14,
+    "coverage_gap_region_count": 37,
+    "aggregate": {
+      "agreement": {
+        "full_coverage_agreement_window_count": 1149,
+        "no_score_fusion_or_voting": true,
+        "scope": "full_coverage_windows"
+      },
+      "counts": {
+        "applicable_detector_count": 3,
+        "detector_count": 3,
+        "executed_detector_count": 3,
+        "failed_detector_count": 0,
+        "negative_detector_count": 0,
+        "not_applicable_detector_count": 0,
+        "positive_detector_count": 3,
+        "skipped_detector_count": 0,
+        "unavailable_detector_count": 0
+      },
+      "counts_scope": "session_detector_findings",
+      "coverage_scope": "all_configured_detectors_across_all_windows",
+      "coverage_status": "partial",
+      "description": "Session contains windows with state detector_disagreement; see window_summary for all window counts.",
+      "detector_disagreement": {
+        "disagreement_window_count": 68,
+        "negative_detector_ids": [
+          "contextual_battery_voltage",
+          "contextual_speed",
+          "isolation_forest"
+        ],
+        "participant_ids_available": true,
+        "positive_detector_ids": [
+          "contextual_battery_voltage",
+          "contextual_speed",
+          "isolation_forest"
+        ],
+        "present": true,
+        "scope": "window_presence_within_session"
+      },
+      "detector_ids": {
+        "negative": [],
+        "not_applicable": [],
+        "positive": [
+          "isolation_forest",
+          "contextual_battery_voltage",
+          "contextual_speed"
+        ],
+        "unavailable": []
+      },
+      "event_provenance": null,
+      "evidence_scope": "window_presence_within_session",
+      "evidence_state": "detector_disagreement",
+      "evidence_state_policy": "disagreement_then_multiple_then_single_then_no_evidence_then_insufficient_coverage",
+      "no_evidence_is_verified_healthy": false,
+      "schema_version": "diagnostic-evidence-aggregate-v1",
+      "score_fusion_used": false,
+      "session_detector_summary": {
+        "counts": {
+          "applicable_detector_count": 3,
+          "detector_count": 3,
+          "executed_detector_count": 3,
+          "failed_detector_count": 0,
+          "negative_detector_count": 0,
+          "not_applicable_detector_count": 0,
+          "positive_detector_count": 3,
+          "skipped_detector_count": 0,
+          "unavailable_detector_count": 0
+        },
+        "coverage_scope": "detectors_applicable_in_at_least_one_window",
+        "coverage_status": "full",
+        "detector_disagreement": {
+          "negative_detector_ids": [],
+          "positive_detector_ids": [
+            "isolation_forest",
+            "contextual_battery_voltage",
+            "contextual_speed"
+          ],
+          "present": false,
+          "scope": "session_detector_findings"
+        },
+        "detector_ids": {
+          "negative": [],
+          "not_applicable": [],
+          "positive": [
+            "isolation_forest",
+            "contextual_battery_voltage",
+            "contextual_speed"
+          ],
+          "unavailable": []
+        },
+        "evidence_scope": "session_detector_findings",
+        "evidence_state": "multiple_detector_evidence"
+      },
+      "window_coverage": {
+        "full": 1213,
+        "none": 0,
+        "partial": 45,
+        "window_count": 1258
+      },
+      "window_summary": {
+        "all_applicable_agreement_windows": 1149,
+        "applicable_detector_count_distribution": {
+          "1": 2,
+          "2": 43,
+          "3": 1213
+        },
+        "both_applicable_agreement_windows": 1149,
+        "contextual_only_finding_windows": 0,
+        "coverage_status_counts": {
+          "full": 1213,
+          "none": 0,
+          "partial": 45
+        },
+        "detector_finding_counts": {
+          "contextual_battery_voltage": {
+            "negative": 1255,
+            "not_applicable": 2,
+            "positive": 1
+          },
+          "contextual_speed": {
+            "negative": 1212,
+            "not_applicable": 45,
+            "positive": 1
+          },
+          "isolation_forest": {
+            "negative": 1189,
+            "positive": 69
+          }
+        },
+        "disagreement_detector_ids": {
+          "negative": [
+            "contextual_battery_voltage",
+            "contextual_speed",
+            "isolation_forest"
+          ],
+          "positive": [
+            "contextual_battery_voltage",
+            "contextual_speed",
+            "isolation_forest"
+          ]
+        },
+        "disagreement_windows": 68,
+        "evidence_state_counts": {
+          "detector_disagreement": 68,
+          "no_evidence": 1188,
+          "single_detector_evidence": 2
+        },
+        "if_only_finding_windows": 68,
+        "insufficient_coverage_windows": 0,
+        "no_evidence_is_verified_healthy": false,
+        "no_evidence_windows": 1188,
+        "only_one_detector_applicable_windows": 2,
+        "overlapping_finding_windows": 1,
+        "score_fusion_used": false,
+        "window_count": 1258
+      }
+    },
+    "if_anomaly_timeline_items": 69,
+    "primary_and_all_detector_windows_match_P1_5": true
+  },
+  "browser": {
+    "status": "passed",
+    "transport": "Browser HTTPS URL routed to existing production Nginx HTTP origin; public Cloudflare ingress separately returns 403 from this environment",
+    "browser": "149.0.7827.55",
+    "session": 242,
+    "selected_run": "analysis_20261024T014120Z_f53946d6f290",
+    "detector_rows": 3,
+    "timeline_buttons": 10,
+    "timeline_event_click": true,
+    "chart_canvases": 4,
+    "locales": {
+      "vi": {
+        "session_status": 200,
+        "selected_run": "analysis_20261024T014120Z_f53946d6f290",
+        "localization_gap_count": 0,
+        "dashboard_status": 200
+      },
+      "en": {
+        "session_status": 200,
+        "selected_run": "analysis_20261024T014120Z_f53946d6f290",
+        "localization_gap_count": 0,
+        "dashboard_status": 200
+      }
+    },
+    "desktop_mobile": true,
+    "login_page_status": 200,
+    "guest_mode_status": 200,
+    "guest_dashboard_status": 200,
+    "page_errors": [],
+    "failed_requests": [],
+    "browser_analysis_posts": 0,
+    "p2_concrete_values": true,
+    "p2_speed_context": true,
+    "event_links_work": true,
+    "no_generic_observations_dominate": true,
+    "no_duplicate_recommendations": true
+  },
+  "guest_smoke": {
+    "en": {
+      "guest_dashboard": 200,
+      "bytes": 167312
+    },
+    "vi": {
+      "guest_dashboard": 200,
+      "bytes": 168299
+    }
+  },
+  "retry": {
+    "status": 200,
+    "same_run": "analysis_20261024T014120Z_f53946d6f290",
+    "response_bytes": 1427772,
+    "result_count": 3
+  },
+  "log_check": {
+    "ecu-analyzer": {
+      "lines": 10,
+      "errors": [],
+      "raw_analyze_posts": 2,
+      "manual_posts": 0
+    },
+    "drisafe-web": {
+      "lines": 8,
+      "errors": [],
+      "raw_analyze_posts": 0,
+      "manual_posts": 2
+    },
+    "public_ingress": {
+      "status": 403,
+      "server": "cloudflare"
+    }
+  },
+  "preservation": {
+    "database_before": {
+      "telemetry_all": {
+        "sha256": "a8000d79465b245fed1b67fec39fc4072d6f09db00912e66dd77c46753a9dcb9",
+        "bytes": 365478573
+      },
+      "original_results": {
+        "sha256": "cd941ab487f731833aed23fe2ac2c67edde025c5558d714b2af3ff3f4e1f79de",
+        "bytes": 27308768
+      },
+      "other_sessions": {
+        "sha256": "af848d27bc87072ebb8c33515a852fd837290d302efe20914c30a71f369f2746",
+        "bytes": 63905
+      },
+      "session_242_immutable": {
+        "sha256": "23297e955c096af9a4d46be341bce8ea1bc4a729e8e852afe1780ef310beb73f",
+        "bytes": 1088
+      },
+      "sync_batches": {
+        "sha256": "e1773f529a5bb5495ceb4e095b17fda3d334a8ce313c288ad320bd48b02705d4",
+        "bytes": 64049
+      },
+      "raw_artifacts": {
+        "sha256": "469a19c315b5b8ff101c21414477777c137cd4aa199a4199d820401a77363e0b",
+        "bytes": 48091
+      }
+    },
+    "database_after": {
+      "telemetry_all": {
+        "sha256": "a8000d79465b245fed1b67fec39fc4072d6f09db00912e66dd77c46753a9dcb9",
+        "bytes": 365478573
+      },
+      "original_results": {
+        "sha256": "cd941ab487f731833aed23fe2ac2c67edde025c5558d714b2af3ff3f4e1f79de",
+        "bytes": 27308768
+      },
+      "other_sessions": {
+        "sha256": "af848d27bc87072ebb8c33515a852fd837290d302efe20914c30a71f369f2746",
+        "bytes": 63905
+      },
+      "session_242_immutable": {
+        "sha256": "23297e955c096af9a4d46be341bce8ea1bc4a729e8e852afe1780ef310beb73f",
+        "bytes": 1088
+      },
+      "sync_batches": {
+        "sha256": "e1773f529a5bb5495ceb4e095b17fda3d334a8ce313c288ad320bd48b02705d4",
+        "bytes": 64049
+      },
+      "raw_artifacts": {
+        "sha256": "469a19c315b5b8ff101c21414477777c137cd4aa199a4199d820401a77363e0b",
+        "bytes": 48091
+      }
+    },
+    "files": {
+      "before_files": 324,
+      "missing": [],
+      "changed_registry_or_session_metadata": [
+        "telemetry/80d11ec8-7b8f-5731-a7c3-828b60eb480e/metadata.json",
+        "entities/sessions/80d11ec8-7b8f-5731-a7c3-828b60eb480e.json",
+        "entities/model_versions/iforest-full18-20261011T135838Z.json",
+        "entities/decoder_versions/honda_keihin_71_17_1.0.0.json"
+      ],
+      "new_files": [
+        "analyses/analysis_20261024T014120Z_f53946d6f290/analysis_run.json",
+        "analyses/analysis_20261024T014120Z_f53946d6f290/analysis_windows.jsonl",
+        "analyses/analysis_20261024T014120Z_f53946d6f290/window_features.jsonl"
+      ],
+      "new_analysis_runs": [
+        "analysis_20261024T014120Z_f53946d6f290"
+      ],
+      "all_old_model_artifacts_analysis_and_sample_files_unchanged": true
+    },
+    "changed_metadata_fields_only": {
+      "telemetry_metadata": "created_at",
+      "session_entity": "updated_at",
+      "model_version_registry": "created_at",
+      "decoder_version_registry": "updated_at"
+    }
+  },
+  "backups": {
+    "utc": "2026-10-24T01:36:14.680637+00:00",
+    "database_bytes": 19698607,
+    "analyzer_data_bytes": 64116028
+  },
+  "private_evidence_directory": "/home/hthnh/p2-5-rollout-backup/ecuread-p2-5-20261024t011304z",
+  "work_directory": "/tmp/ecuread-p2-5-20261024t011304z",
+  "automatic_session_analysis_enabled": false,
+  "independent_production_inference_runs": 1,
+  "temporary_owner_credentials_removed": true
+}

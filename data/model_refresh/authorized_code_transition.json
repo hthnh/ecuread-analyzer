@@ -1,0 +1,81 @@
+{
+  "archive_path": "data/model_refresh/pre_refresh_code.tar",
+  "archive_sha256": "a0791737ce4e1fc94d30e7e8184bc69c718655cbb34c6cd5f03acf5c7ce7432d",
+  "authorization": "FINAL MODEL PASS operator-approved engineering refresh",
+  "files": {
+    "app/api/health.py": {
+      "after_sha256": "2e5fb3c84869a2c224b7a0856276c4ddeed1c70ae3ff7c39f6b7761660b5cb4c",
+      "before_sha256": "6bb3180eac29f5937018198cbd92400ba828c46e5c23373037d038fdcb0c9ca9"
+    },
+    "app/api/model.py": {
+      "after_sha256": "48b49cbf5935d6ff9985ccdf44eb761622527736f1f6e083468cac813a028d28",
+      "before_sha256": "0383a961b52702b685fa41bedec8321cdaf6f36c6d77c735fd34706d9cc6e10c"
+    },
+    "app/domain/telemetry.py": {
+      "after_sha256": "5ec3846cb1f0262b0c328e094064b665d41a87da3a9953abca449149755b2ce3",
+      "before_sha256": "a6ee5b5f89660b87b250e9363a4e03fddbb396c6f186e3b2141d4368e8762ee8"
+    },
+    "app/ecu/profiles/honda_keihin_71_17.py": {
+      "after_sha256": "817e11e343e194dae2f1d1d01d2e61116bf8e7f207dfaa01841cb4ae7fa93626",
+      "before_sha256": "03a88804925bf207e37148e699b3f456087167af6979717a7167e520ef9408a3"
+    },
+    "app/evaluation/context_validation_plan.py": {
+      "after_sha256": "9ec2c2ed46b3fd5c2850e75bee4f85cd6dec6fbb2db97ffa8a4bfb45620ce2a0",
+      "before_sha256": "78c883bb4f1667b07b5f60adecf14e85cde58771b7f638959c05f7e7fa0e3335"
+    },
+    "app/evaluation/historical_evidence.py": {
+      "after_sha256": "acedd6a70177e40aaf4f67863bc451ea13b267b1d331eee172879aa9623117da",
+      "before_sha256": "5e0280a77f57964a2a505b38fc1b3fec2a567f1cc4a201e7ad0fb00f0ecb430e"
+    },
+    "app/ingestion/honda_0x17/adapter.py": {
+      "after_sha256": "82d31e591b97647cd975edfd50320e4c605183af89b86655930758cefa96810a",
+      "before_sha256": "bdc1517be49972458190feeea5f5d4056a98fbd0f58771bb18125f0172a42e02"
+    },
+    "app/integration/diagnostic_evidence.py": {
+      "after_sha256": "439643f6aec054f4356a5d5f1864945bb5473beaf0a90e861af8b3ff57954bd5",
+      "before_sha256": "ab07084a078a767b66077cda6ac076fef1ada2e974ed94fff86c0357d85c5251"
+    },
+    "app/ml/contextual_detector.py": {
+      "after_sha256": "9b0da11eb8d7f63727d56f8a9c10c8f80ce85a1a3c1d2fd7781f6ea0babc338a",
+      "before_sha256": "a3b7ebd17d669925b21fd06350a7d538e2a98ea9de544b5c1bc8e73be84c22c9"
+    },
+    "app/ml/evidence_aggregation.py": {
+      "after_sha256": "bdf1a40a7f3130ef21b57c364d95d183132e7d6aef572c98e2ef3fa1fce2a57d",
+      "before_sha256": "88858a26b46cfa6315906e1652583bae7c4f0dbeaf51fc498b4e5162db2f6fb1"
+    },
+    "app/ml/model_selection.py": {
+      "after_sha256": "7dd96d4fa83188a066d1f2b38939844563f9f070ed0952f2bf0944d4d42f8640",
+      "before_sha256": "5d605ac27a7302a2ebead2d1396c88953615f6b28cceb9a5b64f4ae7b73082e3"
+    },
+    "app/ml/root_cause_analysis_v2.py": {
+      "after_sha256": "fac04acf96aefab925ce8297f2fc82e106d88a88808c5b37e2ad41526625eefd",
+      "before_sha256": "9a01ae9e7046eed9fcf26cefe1c584be16aa184ee54e97f2f06ce0ad7effcc94"
+    },
+    "app/schemas.py": {
+      "after_sha256": "10853d6bb47c0cdb68ba651a876938a83e964d855352cec5ed456446df434cdd",
+      "before_sha256": "5d140210c31e60d79f87578880b4523b9826a2110900cbaa8e4cc6d78df23800"
+    },
+    "app/services/analysis_service.py": {
+      "after_sha256": "075c241e4403a243b61c5ea5d4459c3e47f03ab759a96dfced737992202576d1",
+      "before_sha256": "5f814f2dbdbc005b3b2cbbb0fe9c49f9f2a1651c373fa195867554dbc95345a4"
+    },
+    "app/services/research_harness.py": {
+      "after_sha256": "8582e3d0289a6a2affe6985a068c560c014e71e2ed78d51f81f14860dbd12b74",
+      "before_sha256": "bdbb06f07bd3eab05b8ca275b4e50c7314304cd03fd4482b20b0aa74b0eb60f9"
+    },
+    "app/services/session_processor.py": {
+      "after_sha256": "15554348ffcc70af559e4e58f03efb0c05eeac4f7bfb35dadf2a67bf7d8b03bd",
+      "before_sha256": "06a111e14596461e2765caca658b6b6749f7398909945b5346e6171a58f655bd"
+    },
+    "tests/test_context_benchmark_readiness.py": {
+      "after_sha256": "3df5a5e732c7504b132e982242cbd79a758f1064c0b50f221480308f2b7f0ee1",
+      "before_sha256": "ec9fad1a793e502314b51bb2d01c62b6a6a553e9cc2ec222f501ecb9ed509bde"
+    },
+    "tests/test_group_aware_if.py": {
+      "after_sha256": "8f6b9bd0dde972f9ab82588f0910a20ccad1a096b238590882cc4769fa564c0c",
+      "before_sha256": "b095a23b7401cc99d3689fcaa5faafc088b631b290f91b354ed2333451a339db"
+    }
+  },
+  "policy": "Published verification only. Strict guards for new research runs remain unchanged.",
+  "schema_version": "authorized-code-transition-v1"
+}

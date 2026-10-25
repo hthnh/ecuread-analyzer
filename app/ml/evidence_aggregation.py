@@ -104,9 +104,11 @@ def aggregate_window_results(
         "battery_voltage_median",
         "battery_voltage_min",
         "battery_voltage_mean",
+        "ect_c_median", "ect_c_first", "ect_c_last", "ect_c_delta",
+        "iat_c_median", "iat_c_first", "iat_c_last", "iat_c_delta",
     ),
 ) -> list[dict[str, Any]]:
-    resolved_policy = policy or AggregationPolicy()
+    resolved_policy = policy or AggregationPolicy(detector_ids=tuple(result.identity.detector_id for result in results))
     by_id = {result.identity.detector_id: result for result in results}
     rows: list[dict[str, Any]] = []
     for row_number in range(len(feature_frame)):
@@ -203,7 +205,7 @@ def detector_local_threshold(result: DetectorResult, evidence: dict[str, Any]) -
     for key, value in evidence.items():
         if key.endswith("_threshold") and value is not None:
             return {"column": key, "value": _json_safe(value), "source": "detector_evidence"}
-    nested = evidence.get("contextual_evidence")
+    nested = evidence.get("contextual_evidence") or evidence.get("speed_evidence")
     if isinstance(nested, dict) and nested.get("threshold") is not None:
         return {"column": "contextual_anomaly_score", "value": _json_safe(nested["threshold"]), "source": "detector_evidence"}
     if result.identity.detector_id == ISOLATION_FOREST_DETECTOR_ID:
@@ -224,7 +226,7 @@ def aggregate_window(
     telemetry: dict[str, Any] | None = None,
     policy: AggregationPolicy | None = None,
 ) -> dict[str, Any]:
-    resolved_policy = policy or AggregationPolicy()
+    resolved_policy = policy or AggregationPolicy(detector_ids=tuple(finding["detector_id"] for finding in detector_findings))
     available = [finding for finding in detector_findings if finding["available"]]
     applicable = [finding for finding in detector_findings if finding["applicable"]]
     positive = [finding for finding in applicable if finding["finding"] == "positive"]
@@ -314,6 +316,9 @@ def build_aggregate_events(window_rows: list[dict[str, Any]]) -> dict[str, Any]:
                     row["aggregate_evidence_status"]["state"],
                     tuple(row["detector_ids"]["positive"]),
                     tuple(row["detector_ids"]["negative"]),
+                    tuple(row["detector_ids"]["not_applicable"]),
+                    tuple(row["detector_ids"]["unavailable"]),
+                    _finding_contexts(row),
                 ),
                 event_id_prefix=f"{session_id}:finding",
                 event_type_fn=finding_event_type,
@@ -376,7 +381,7 @@ def summarize_aggregate_windows(window_rows: list[dict[str, Any]]) -> dict[str, 
         for row in window_rows
         if row["detector_ids"]["positive"] == [CONTEXTUAL_BATTERY_DETECTOR_ID]
     )
-    both_applicable_agree = sum(
+    all_applicable_agree = sum(
         1
         for row in window_rows
         if row["coverage"]["status"] == "full"
@@ -385,7 +390,7 @@ def summarize_aggregate_windows(window_rows: list[dict[str, Any]]) -> dict[str, 
     return {
         "window_count": len(window_rows),
         "evidence_state_counts": dict(sorted(states.items())),
-        "coverage_status_counts": dict(sorted(coverage.items())),
+        "coverage_status_counts": {key: int(coverage[key]) for key in ("full", "partial", "none")},
         "applicable_detector_count_distribution": dict(sorted(applicable_distribution.items())),
         "detector_finding_counts": {
             detector_id: dict(sorted(counter.items()))
@@ -393,11 +398,22 @@ def summarize_aggregate_windows(window_rows: list[dict[str, Any]]) -> dict[str, 
         },
         "if_only_finding_windows": if_only,
         "contextual_only_finding_windows": contextual_only,
-        "overlapping_finding_windows": _state_count("multiple_detector_evidence"),
+        "overlapping_finding_windows": sum(len(row["detector_ids"]["positive"]) > 1 for row in window_rows),
         "disagreement_windows": _state_count("detector_disagreement"),
         "insufficient_coverage_windows": _state_count("insufficient_coverage"),
         "only_one_detector_applicable_windows": int(applicable_distribution.get("1", 0)),
-        "both_applicable_agreement_windows": both_applicable_agree,
+        "all_applicable_agreement_windows": all_applicable_agree,
+        # Historical alias; agreement requires every configured detector, including runs with 3+ detectors.
+        "both_applicable_agreement_windows": all_applicable_agree,
+        "disagreement_detector_ids": {
+            finding: sorted({
+                detector_id
+                for row in window_rows
+                if row["aggregate_evidence_status"]["state"] == "detector_disagreement"
+                for detector_id in row["detector_ids"][finding]
+            })
+            for finding in ("positive", "negative")
+        },
         "no_evidence_windows": _state_count("no_evidence"),
         "no_evidence_is_verified_healthy": False,
         "score_fusion_used": False,
@@ -407,7 +423,21 @@ def summarize_aggregate_windows(window_rows: list[dict[str, Any]]) -> dict[str, 
 def representative_events(events: dict[str, Any], limit_per_type: int = 3) -> list[dict[str, Any]]:
     selected: list[dict[str, Any]] = []
     counts: Counter[str] = Counter()
-    for event in [*events.get("finding_events", []), *events.get("coverage_gap_regions", [])]:
+    candidates = [*events.get("finding_events", []), *events.get("coverage_gap_regions", [])]
+    # Reserve a witness for each positive detector and contextual phenomenon.
+    # Otherwise the first few IF regions can crowd a real battery/speed finding out.
+    seen = set()
+    mandatory = []
+    for event in candidates:
+        row = event.get("representative_window") or {}
+        for context in _finding_contexts(row):
+            if context not in seen:
+                mandatory.append(event)
+                seen.add(context)
+    ordered = mandatory + [event for event in candidates if event not in mandatory]
+    for event in ordered:
+        if event in selected:
+            continue
         event_type = event["event_type"]
         if counts[event_type] >= limit_per_type:
             continue
@@ -474,6 +504,8 @@ def _group_rows(
             active
             and row is not None
             and int(row["window_number"]) == int(active[-1]["window_number"]) + 1
+            and (row.get("start_frame_index") is None or active[-1].get("end_frame_index") is None
+                 or row["start_frame_index"] <= active[-1]["end_frame_index"] + 1)
         )
         if matches and active and key == active_key and contiguous:
             active.append(row)
@@ -483,6 +515,18 @@ def _group_rows(
         active = [row] if matches else []
         active_key = key
     return events
+
+
+def _finding_contexts(row: dict[str, Any]) -> tuple:
+    contexts = []
+    for finding in row.get("detector_findings", []):
+        if finding.get("finding") != "positive":
+            continue
+        evidence = finding.get("evidence") or {}
+        battery = evidence.get("contextual_evidence") or {}
+        speed = evidence.get("speed_evidence") or {}
+        contexts.append((finding["detector_id"], battery.get("operating_context"), speed.get("context"), speed.get("reason")))
+    return tuple(contexts)
 
 
 def _event_from_rows(rows: list[dict[str, Any]], *, event_id: str, event_type: str) -> dict[str, Any]:
@@ -517,23 +561,52 @@ def _event_from_rows(rows: list[dict[str, Any]], *, event_id: str, event_type: s
             "end_window_number": last["window_number"],
         },
         "representative_window": first,
+        "representative_policy": "strongest_local_score_per_detector; values retain their source window",
+        "detector_representatives": _detector_representatives(rows),
+        "window_coverage": dict(Counter(row["coverage"]["status"] for row in rows)),
+        "window_evidence_refs": [
+            {key: row.get(key) for key in ("window_number", "window_index", "start_frame_index", "end_frame_index", "start_time_ms", "end_time_ms")}
+            for row in rows
+        ],
         "interpretation": "aggregate evidence relationship only; not a diagnostic root-cause claim",
     }
 
 
+def _detector_representatives(rows: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    witnesses = {}
+    ranks = {}
+    for row in rows:
+        for finding in row["detector_findings"]:
+            detector_id = finding["detector_id"]
+            local = finding.get("detector_local_score") or {}
+            value = _float_or_none(local.get("value"))
+            # Never compare scores between different detectors.
+            rank = (-value if local.get("direction") == "lower_is_more_anomalous" else value) if value is not None else -math.inf
+            if detector_id not in witnesses or rank > ranks[detector_id]:
+                witnesses[detector_id] = {
+                    key: row.get(key) for key in ("window_number", "window_index", "start_frame_index", "end_frame_index", "start_time_ms", "end_time_ms", "telemetry")
+                }
+                witnesses[detector_id]["detector_findings"] = [finding]
+                battery = next((item for item in row["detector_findings"] if item["detector_id"] == "contextual_battery_voltage"), {})
+                witnesses[detector_id]["operating_context"] = ((battery.get("evidence") or {}).get("contextual_evidence") or {}).get("operating_context")
+                ranks[detector_id] = rank
+    return witnesses
+
+
 def _event_duration(rows: list[dict[str, Any]]) -> float | None:
-    if rows[0].get("start_time_ms") is not None and rows[-1].get("end_time_ms") is not None:
-        return round(max(0.0, float(rows[-1]["end_time_ms"]) - float(rows[0]["start_time_ms"])), 6)
-    durations = [_float_or_none(row.get("duration_ms")) for row in rows]
-    if all(duration is not None for duration in durations):
-        return round(sum(float(duration) for duration in durations), 6)
-    return None
+    start, end = (_float_or_none(rows[0].get("start_time_ms")), _float_or_none(rows[-1].get("end_time_ms")))
+    if start is not None and end is not None:
+        return round(end - start, 6) if end >= start else None
+    # Overlapping window durations cannot be summed into an event duration.
+    return _float_or_none(rows[0].get("duration_ms")) if len(rows) == 1 else None
 
 
 def _applicability_reason(payload: dict[str, Any], evidence: dict[str, Any]) -> str:
     if payload.get("reason"):
         return str(payload["reason"])
     nested = evidence.get("contextual_evidence")
+    if not nested:
+        nested = evidence.get("speed_evidence")
     if isinstance(nested, dict) and nested.get("reason"):
         return str(nested["reason"])
     for key in ("contextual_status", "temporal_status", "rpm_stability_status"):

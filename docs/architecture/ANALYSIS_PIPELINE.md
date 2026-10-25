@@ -422,6 +422,35 @@ source_type = raw_decode_analyze
 The `analysis` object is the same summary contract produced by
 `AnalysisService`.
 
+### Bounded complete RAW sessions
+
+The RAW JSON endpoint accepts at most **20,000 records** and **8 MiB** of JSON.
+It preserves the supplied sequences and timestamps and analyzes one complete
+session using the existing 50-sample windows and 10-sample stride. File uploads
+remain a separate 25 MiB contract; they are not used to split RAW reruns.
+
+Only one RAW request is admitted across processes sharing the data directory.
+Busy requests return 429 with `Retry-After: 5`; oversized bodies return 413 and
+oversized record arrays return 422. Body receipt has a 10-second deadline. A
+45-second compute budget is checked between analysis stages, before result
+persistence, and returns 504 on expiry. This is a cooperative stage budget, not
+an interrupt inside a running pandas or model operation.
+
+Clients may send an `idempotency_key` string (1-128 characters) in the JSON body.
+The key is scoped to device/session and normalized input. Reusing it with the
+same input returns the original canonical response and analysis run without
+inference; changing input under the same key returns 409. A reserved run ID,
+canonical snapshot, and completion record support restart recovery and repair
+of interrupted persistence under the same run. An intentional new analysis
+uses a new key. Unkeyed legacy requests continue to create new analyses.
+
+DriveSafe uses a stable key while retrying an unsuccessful attempt, then changes
+the key for a later explicit rerun after storing the prior result. Its client
+timeout defaults to 60 seconds. No existing Pi result is silently replaced.
+
+See `docs/integration/P0_LARGE_SESSION_COMPLETION_2026_10_23.md` for measured
+timings, evidence rendering checks and release limitations.
+
 ## Pi Native V2 Training Path
 
 `app.ml.profile_v02_training` now trains the Pi/native V2 baseline from native
@@ -451,3 +480,63 @@ data/models/honda_keihin_71_17_v2
 The model metadata records `telemetry_schema_version=canonical-telemetry-v2`,
 `decoder_id=honda_keihin_71_17`, `decoder_version=1.0.0`, and
 `training_decoder_versions=["honda_keihin_71_17:1.0.0"]`.
+
+## Live Research Harness Shadow Path
+
+Production analysis remains anchored to Isolation Forest:
+
+```text
+canonical telemetry
+-> feature generation
+-> run_inference()
+-> Isolation Forest
+-> production result / health / severity semantics
+```
+
+H9C adds an additive research-shadow path after production inference succeeds
+or returns its existing non-success status:
+
+```text
+production Isolation Forest evidence
++ Contextual Battery Voltage
+-> H5 evidence aggregation
+-> RCA v2
+-> H8 historical evidence lookup
+-> diagnostic_evidence
+-> DriveSafe research inspector
+```
+
+The shadow path reuses the production Isolation Forest detector result instead
+of running a second IF pass. The contextual detector executes from the existing
+H3/H3.1 reference artifact at `data/evaluation/h3/contextual_reference.json`.
+If that artifact is missing or invalid, the contextual detector is marked
+`skipped` or `failed`; it is never converted to a normal finding.
+
+Research evidence is not production gating. It does not alter:
+
+```text
+overall_status
+health_score
+anomaly_ratio
+anomaly_window_count
+alerts or notifications
+```
+
+The active live research detector set is:
+
+```text
+production: isolation_forest
+research shadow: contextual_battery_voltage
+```
+
+The archived temporal candidates remain excluded:
+
+```text
+temporal_battery_shift
+temporal_rpm_stability
+```
+
+The Honda SH Mode project scope does not provide a usable MAP signal for this
+research harness. No MAP-dependent contextual logic, UI input, or production
+requirement exists in the live path. The contextual detector uses verified RPM,
+TPS raw, TPS voltage, and battery voltage features.

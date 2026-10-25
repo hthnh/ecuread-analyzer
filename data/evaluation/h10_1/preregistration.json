@@ -1,0 +1,7 @@
+{
+  "fold_manifest_sha256": "8c74e64b47beb699f4d2ed5aae3eca9a092fec5989a19f47f2b5cf6fc1815341",
+  "protected_inputs_sha256": "5c9ab9175b5cdbe21ec16eedc5f841640583fddd6215c20fa6c629b98fb4430f",
+  "protocol_sha256": "213fb4f4d007dc9181ec6a0c13d707d4d8138c480b15292554c80b866d9c7a4f",
+  "registered_at": "2026-10-11T12:04:52.108141+00:00",
+  "training_started": false
+}

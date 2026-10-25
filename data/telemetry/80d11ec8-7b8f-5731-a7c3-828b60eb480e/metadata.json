@@ -1,0 +1,42 @@
+{
+  "session_id": "80d11ec8-7b8f-5731-a7c3-828b60eb480e",
+  "vehicle_id": "Honda SH Mode 125",
+  "device_id": "ecuread-pi5-001",
+  "ecu_profile_id": "honda_keihin_71_17",
+  "decoder_id": "honda_keihin_71_17",
+  "decoder_version": "1.0.0",
+  "telemetry_schema_version": "canonical-telemetry-v2",
+  "sampling": {
+    "sample_interval_ms": null,
+    "sampling_rate_hz": null
+  },
+  "signal_definitions": {
+    "rpm": {
+      "status": "verified",
+      "unit": "rpm"
+    },
+    "tps_voltage": {
+      "status": "verified",
+      "unit": "V"
+    },
+    "tps_raw": {
+      "status": "verified_as_raw",
+      "unit": "raw"
+    },
+    "battery_voltage": {
+      "status": "verified",
+      "unit": "V"
+    },
+    "iat_c": {
+      "status": "provisional_high_confidence",
+      "unit": "degC"
+    },
+    "ect_c": {
+      "status": "provisional_high_confidence",
+      "unit": "degC"
+    }
+  },
+  "sample_count": 12625,
+  "source_type": "raw_decode_analyze",
+  "created_at": "2026-10-24T02:09:09.726093+00:00"
+}

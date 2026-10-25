@@ -1,0 +1,670 @@
+{
+  "status": "passed_single_production_canary",
+  "date_local": "2026-10-24 Asia/Saigon",
+  "deployment": {
+    "action": "Retained complete P1 implementations already live; no container recreation, build or pull",
+    "running": {
+      "ecu-analyzer": {
+        "image_id": "sha256:94e35f2701f74616fa38ff26492e573416720032a168f2218c854df4551ee14e",
+        "container_id": "caf3f3604a8806615a6a8d8297c19cccf00473975ea7e820b3870dec550f4bea",
+        "started_at": "2026-10-23T16:45:57.319161813Z"
+      },
+      "drisafe-web": {
+        "image_id": "sha256:2c18966e5cefb3147632df4897bce2340b7e1b232144c2c0cca3c893ddf4dc8d",
+        "container_id": "72728df914024e4c309b6ceebbe9b5e09d586f28c738bdde8a776bc46fba17ec",
+        "started_at": "2026-10-23T17:27:24.57926965Z"
+      }
+    },
+    "verified_candidates": {
+      "analyzer": "sha256:422b92cca47091a8c6787f578d729f082da199d26318106ac14d45f52c86601a",
+      "drivesafe": "sha256:80bf7c69fbc33e9a80b3449df00fe64face8a0f9b1cca9e7d62cffd047f3005b"
+    },
+    "runtime_source_compatibility": {
+      "analyzer": {
+        "files": 164,
+        "differences": {
+          "Dockerfile": {
+            "expected": "67060f343de1c50d52070aec4a4dcf0e9663a89b972b8d68e6d7bd285dbca5d1",
+            "actual": null
+          }
+        },
+        "image": "sha256:94e35f2701f74616fa38ff26492e573416720032a168f2218c854df4551ee14e",
+        "container": "caf3f3604a8806615a6a8d8297c19cccf00473975ea7e820b3870dec550f4bea"
+      },
+      "drivesafe": {
+        "files": 248,
+        "differences": {},
+        "image": "sha256:2c18966e5cefb3147632df4897bce2340b7e1b232144c2c0cca3c893ddf4dc8d",
+        "container": "72728df914024e4c309b6ceebbe9b5e09d586f28c738bdde8a776bc46fba17ec"
+      }
+    }
+  },
+  "authorization": {
+    "authorized_session": 242,
+    "uuid": "80d11ec8-7b8f-5731-a7c3-828b60eb480e",
+    "expected_records": 12625,
+    "expected_windows": 1258,
+    "request_id": "p1-5-prod-242-20261023T231909Z",
+    "started_utc": "2026-10-23T23:19:09.531353+00:00"
+  },
+  "backup": {
+    "directory": "/home/hthnh/p1-rollout-backup/p1-5-final-20261023T231909Z",
+    "files": {
+      "analyzer-data.tar.gz": 61636091,
+      "drisafe.dump": 19050385
+    },
+    "postgres_dump_catalog_verified": true,
+    "rollback_tags": {
+      "analyzer": "ecuread-p1-5-rollback:analyzer",
+      "drivesafe": "ecuread-p1-5-rollback:web"
+    }
+  },
+  "active_bundle": {
+    "activation_scope": "local",
+    "artifacts": {
+      "battery": {
+        "path": "models/bundles/native-full18-20261011T135838Z/battery_reference.json",
+        "sha256": "6b0cebd6d7038b124a3eb94bbebf7d2a3f6c25b5393bf2331999423de3bcbecf"
+      },
+      "if_metadata": {
+        "path": "models/bundles/native-full18-20261011T135838Z/iforest/model_metadata.json",
+        "sha256": "b0f9f6e13255d69e14af8f7b8a0af6e6887c7b01f52ad342937e489382d0ea35"
+      },
+      "if_model": {
+        "path": "models/bundles/native-full18-20261011T135838Z/iforest/isolation_forest.joblib",
+        "sha256": "ca902dd40e828c2b668f4cddb5ed244a6f387804049c2f10f9fd5f5e8bf44085"
+      },
+      "if_scaler": {
+        "path": "models/bundles/native-full18-20261011T135838Z/iforest/robust_scaler.joblib",
+        "sha256": "2b780a9635327789aeb6a26ca8a7531d42512207fffe0dc152eccb0a1a971dfc"
+      },
+      "speed": {
+        "path": "models/bundles/native-full18-20261011T135838Z/speed_reference.json",
+        "sha256": "3aec3788f91ab07ce6286c4d606c428a4ac5413e57ac8695516dff34ad1b0348"
+      }
+    },
+    "bundle_id": "native-full18-20261011T135838Z",
+    "manifest_sha256": "e84a8350aae4708a9e429a313e90f8ee1a625209705a6df48141133f1a8bd5ae"
+  },
+  "active_artifact_sha256": {
+    "/home/hthnh/ecuread-analyzer/data/models/active_bundle.json": "7ba8de08f62b40b9021feb860ca74121e0da174bd4018b70507e99beaf00f813",
+    "/home/hthnh/ecuread-analyzer/data/models/bundles/native-full18-20261011T135838Z/manifest.json": "e84a8350aae4708a9e429a313e90f8ee1a625209705a6df48141133f1a8bd5ae",
+    "/home/hthnh/ecuread-analyzer/data/models/bundles/native-full18-20261011T135838Z/battery_reference.json": "6b0cebd6d7038b124a3eb94bbebf7d2a3f6c25b5393bf2331999423de3bcbecf",
+    "/home/hthnh/ecuread-analyzer/data/models/bundles/native-full18-20261011T135838Z/iforest/model_metadata.json": "b0f9f6e13255d69e14af8f7b8a0af6e6887c7b01f52ad342937e489382d0ea35",
+    "/home/hthnh/ecuread-analyzer/data/models/bundles/native-full18-20261011T135838Z/iforest/isolation_forest.joblib": "ca902dd40e828c2b668f4cddb5ed244a6f387804049c2f10f9fd5f5e8bf44085",
+    "/home/hthnh/ecuread-analyzer/data/models/bundles/native-full18-20261011T135838Z/iforest/robust_scaler.joblib": "2b780a9635327789aeb6a26ca8a7531d42512207fffe0dc152eccb0a1a971dfc",
+    "/home/hthnh/ecuread-analyzer/data/models/bundles/native-full18-20261011T135838Z/speed_reference.json": "3aec3788f91ab07ce6286c4d606c428a4ac5413e57ac8695516dff34ad1b0348"
+  },
+  "health_after": {
+    "drivesafe": {
+      "http_status": 200,
+      "body": {
+        "database": "ok",
+        "redis": "ok",
+        "status": "ok"
+      }
+    },
+    "analyzer": {
+      "status": "ok",
+      "service": "ecuread-analyzer",
+      "model_loaded": true
+    }
+  },
+  "database_revision": "b7f2c9a4d610",
+  "session": 242,
+  "session_uuid": "80d11ec8-7b8f-5731-a7c3-828b60eb480e",
+  "result_id": 84,
+  "analysis_run_id": "analysis_20261023T232221Z_2c818f9e015c",
+  "original_result_id": 80,
+  "original_pi_run_id": "87f16d88-91af-476e-af77-32c079637b36",
+  "window_acceptance": {
+    "status": "passed",
+    "windows": 1258,
+    "first_sequence": 0,
+    "last_window_end": 12619,
+    "tail_samples_retained": 5,
+    "coverage": {
+      "full": 1213,
+      "partial": 45,
+      "none": 0
+    },
+    "disagreement": 68,
+    "scored": {
+      "isolation_forest": 1258,
+      "contextual_battery_voltage": 1256,
+      "contextual_speed": 1213
+    },
+    "positive_windows": {
+      "isolation_forest": 69,
+      "contextual_battery_voltage": 1,
+      "contextual_speed": 1
+    },
+    "not_applicable_windows": {
+      "contextual_speed": 45,
+      "contextual_battery_voltage": 2
+    },
+    "per_window_metrics_match": true
+  },
+  "transport": {
+    "started_utc": "2026-10-23T23:22:02.603709+00:00",
+    "duration_seconds": 51.156,
+    "status": 200,
+    "transport_error": null,
+    "request_id": "p1-5-prod-242-20261023T231909Z",
+    "memory_baseline": {
+      "ecu-analyzer": {
+        "memory.current": 325611520,
+        "memory.peak": 490983424
+      },
+      "drisafe-web": {
+        "memory.current": 699576320,
+        "memory.peak": 782553088
+      }
+    },
+    "memory_sampled_peak_bytes": {
+      "ecu-analyzer": 621481984,
+      "drisafe-web": 869105664
+    },
+    "memory_after": {
+      "ecu-analyzer": {
+        "memory.current": 502251520,
+        "memory.peak": 649781248
+      },
+      "drisafe-web": {
+        "memory.current": 742481920,
+        "memory.peak": 869367808
+      }
+    },
+    "memory_sample_count": 256,
+    "memory_interval_seconds": 0.2
+  },
+  "retry": {
+    "status": 200,
+    "same_run": "analysis_20261023T232221Z_2c818f9e015c",
+    "seconds": 8.374,
+    "result_count": 2
+  },
+  "detectors": {
+    "contextual_battery_voltage": {
+      "model_version": "contextual-battery-robust-v1-ef5579cf38a0",
+      "execution_status": "ok",
+      "applicability": {
+        "applicable": true,
+        "missing_features": [],
+        "reason": null
+      },
+      "scored_window_count": 1256,
+      "anomaly_window_count": 1,
+      "finding": "positive",
+      "error": null
+    },
+    "contextual_speed": {
+      "model_version": "contextual-speed-robust-v1-fce8419c1951",
+      "execution_status": "ok",
+      "applicability": {
+        "applicable": true,
+        "missing_features": [],
+        "reason": null
+      },
+      "scored_window_count": 1213,
+      "anomaly_window_count": 1,
+      "finding": "positive",
+      "error": null
+    },
+    "isolation_forest": {
+      "model_version": "iforest-full18-20261011T135838Z",
+      "execution_status": "ok",
+      "applicability": {
+        "applicable": true,
+        "missing_features": [],
+        "reason": null
+      },
+      "scored_window_count": 1258,
+      "anomaly_window_count": 69,
+      "finding": "positive",
+      "error": null
+    }
+  },
+  "diagnostic_evidence": {
+    "schema_version": "analyzer-diagnostic-evidence-v1",
+    "analysis_version": "h9-drive-safe-diagnostic-evidence-v1",
+    "aggregate": {
+      "agreement": {
+        "full_coverage_agreement_window_count": 1149,
+        "no_score_fusion_or_voting": true,
+        "scope": "full_coverage_windows"
+      },
+      "counts": {
+        "applicable_detector_count": 3,
+        "detector_count": 3,
+        "executed_detector_count": 3,
+        "failed_detector_count": 0,
+        "negative_detector_count": 0,
+        "not_applicable_detector_count": 0,
+        "positive_detector_count": 3,
+        "skipped_detector_count": 0,
+        "unavailable_detector_count": 0
+      },
+      "counts_scope": "session_detector_findings",
+      "coverage_scope": "all_configured_detectors_across_all_windows",
+      "coverage_status": "partial",
+      "description": "Session contains windows with state detector_disagreement; see window_summary for all window counts.",
+      "detector_disagreement": {
+        "disagreement_window_count": 68,
+        "negative_detector_ids": [
+          "contextual_battery_voltage",
+          "contextual_speed",
+          "isolation_forest"
+        ],
+        "participant_ids_available": true,
+        "positive_detector_ids": [
+          "contextual_battery_voltage",
+          "contextual_speed",
+          "isolation_forest"
+        ],
+        "present": true,
+        "scope": "window_presence_within_session"
+      },
+      "detector_ids": {
+        "negative": [],
+        "not_applicable": [],
+        "positive": [
+          "isolation_forest",
+          "contextual_battery_voltage",
+          "contextual_speed"
+        ],
+        "unavailable": []
+      },
+      "event_provenance": null,
+      "evidence_scope": "window_presence_within_session",
+      "evidence_state": "detector_disagreement",
+      "evidence_state_policy": "disagreement_then_multiple_then_single_then_no_evidence_then_insufficient_coverage",
+      "no_evidence_is_verified_healthy": false,
+      "schema_version": "diagnostic-evidence-aggregate-v1",
+      "score_fusion_used": false,
+      "session_detector_summary": {
+        "counts": {
+          "applicable_detector_count": 3,
+          "detector_count": 3,
+          "executed_detector_count": 3,
+          "failed_detector_count": 0,
+          "negative_detector_count": 0,
+          "not_applicable_detector_count": 0,
+          "positive_detector_count": 3,
+          "skipped_detector_count": 0,
+          "unavailable_detector_count": 0
+        },
+        "coverage_scope": "detectors_applicable_in_at_least_one_window",
+        "coverage_status": "full",
+        "detector_disagreement": {
+          "negative_detector_ids": [],
+          "positive_detector_ids": [
+            "isolation_forest",
+            "contextual_battery_voltage",
+            "contextual_speed"
+          ],
+          "present": false,
+          "scope": "session_detector_findings"
+        },
+        "detector_ids": {
+          "negative": [],
+          "not_applicable": [],
+          "positive": [
+            "isolation_forest",
+            "contextual_battery_voltage",
+            "contextual_speed"
+          ],
+          "unavailable": []
+        },
+        "evidence_scope": "session_detector_findings",
+        "evidence_state": "multiple_detector_evidence"
+      },
+      "window_coverage": {
+        "full": 1213,
+        "none": 0,
+        "partial": 45,
+        "window_count": 1258
+      },
+      "window_summary": {
+        "all_applicable_agreement_windows": 1149,
+        "applicable_detector_count_distribution": {
+          "1": 2,
+          "2": 43,
+          "3": 1213
+        },
+        "both_applicable_agreement_windows": 1149,
+        "contextual_only_finding_windows": 0,
+        "coverage_status_counts": {
+          "full": 1213,
+          "none": 0,
+          "partial": 45
+        },
+        "detector_finding_counts": {
+          "contextual_battery_voltage": {
+            "negative": 1255,
+            "not_applicable": 2,
+            "positive": 1
+          },
+          "contextual_speed": {
+            "negative": 1212,
+            "not_applicable": 45,
+            "positive": 1
+          },
+          "isolation_forest": {
+            "negative": 1189,
+            "positive": 69
+          }
+        },
+        "disagreement_detector_ids": {
+          "negative": [
+            "contextual_battery_voltage",
+            "contextual_speed",
+            "isolation_forest"
+          ],
+          "positive": [
+            "contextual_battery_voltage",
+            "contextual_speed",
+            "isolation_forest"
+          ]
+        },
+        "disagreement_windows": 68,
+        "evidence_state_counts": {
+          "detector_disagreement": 68,
+          "no_evidence": 1188,
+          "single_detector_evidence": 2
+        },
+        "if_only_finding_windows": 68,
+        "insufficient_coverage_windows": 0,
+        "no_evidence_is_verified_healthy": false,
+        "no_evidence_windows": 1188,
+        "only_one_detector_applicable_windows": 2,
+        "overlapping_finding_windows": 1,
+        "score_fusion_used": false,
+        "window_count": 1258
+      }
+    },
+    "observations": [
+      "Aggregate detector evidence state preserved.",
+      "Isolation Forest reported a pattern outside its learned reference distribution.",
+      "RPM/TPS feature families were involved in the detector observation.",
+      "A constant or low-variance signal feature was observed in the IF unusual-feature list.",
+      "Contextual battery-voltage deviation was observed.",
+      "Active detector disagreement is preserved without consensus diagnosis."
+    ],
+    "symptoms": [
+      "Contextual supply-voltage deviation."
+    ],
+    "possible_causes": [],
+    "recommended_checks": [
+      {
+        "check_id": "check.v2.iforest_feature_review",
+        "description": "Inspect IF-listed feature families in raw telemetry and compare with operator/session notes."
+      },
+      {
+        "check_id": "check.v2.rpm_tps_reproduction",
+        "description": "Reproduce the same operating state and compare RPM response against throttle behavior."
+      },
+      {
+        "check_id": "check.v2.rpm_tps_repeatability",
+        "description": "Inspect whether the RPM/TPS pattern repeats across independent sessions."
+      },
+      {
+        "check_id": "check.v2.raw_frame_integrity",
+        "description": "Inspect raw frames, timestamp/frame continuity and checksum/header outcomes."
+      },
+      {
+        "check_id": "check.v2.known_stimulus_response",
+        "description": "Check whether the signal changes under a known stimulus before inferring acquisition failure."
+      },
+      {
+        "check_id": "check.v2.voltage_context_compare",
+        "description": "Compare voltage behavior across similar RPM/TPS operating contexts and repeat captures."
+      },
+      {
+        "check_id": "check.v2.external_supply_measurement",
+        "description": "Inspect charging/supply measurements and battery terminal/supply-path condition when physically appropriate."
+      },
+      {
+        "check_id": "check.v2.detector_scope_review",
+        "description": "Review each detector in its own score semantics and phenomenon scope."
+      },
+      {
+        "check_id": "check.v2.no_evidence_boundary",
+        "description": "Do not treat no detector anomaly evidence as verified healthy without independent validation."
+      }
+    ],
+    "check_priorities": [
+      {
+        "check_id": "check.v2.iforest_feature_review",
+        "deterministic": true,
+        "family": "isolation_forest_positive",
+        "priority": "insufficient_evidence",
+        "reason": "Compatible historical evidence is unavailable.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00001"
+        ]
+      },
+      {
+        "check_id": "check.v2.rpm_tps_reproduction",
+        "deterministic": true,
+        "family": "rpm_tps_pattern",
+        "priority": "relevant",
+        "reason": "Check remains evidence-tied, but recurrence is not strong enough for priority.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00002"
+        ]
+      },
+      {
+        "check_id": "check.v2.rpm_tps_repeatability",
+        "deterministic": true,
+        "family": "rpm_tps_pattern",
+        "priority": "relevant",
+        "reason": "Check remains evidence-tied, but recurrence is not strong enough for priority.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00002"
+        ]
+      },
+      {
+        "check_id": "check.v2.raw_frame_integrity",
+        "deterministic": true,
+        "family": "constant_signal_feature",
+        "priority": "insufficient_evidence",
+        "reason": "Compatible historical evidence is unavailable.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00003"
+        ]
+      },
+      {
+        "check_id": "check.v2.known_stimulus_response",
+        "deterministic": true,
+        "family": "constant_signal_feature",
+        "priority": "insufficient_evidence",
+        "reason": "Compatible historical evidence is unavailable.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00003"
+        ]
+      },
+      {
+        "check_id": "check.v2.voltage_context_compare",
+        "deterministic": true,
+        "family": "contextual_voltage_deviation",
+        "priority": "relevant",
+        "reason": "Check remains evidence-tied, but recurrence is not strong enough for priority.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00004",
+          "h8-comparison-00006"
+        ]
+      },
+      {
+        "check_id": "check.v2.external_supply_measurement",
+        "deterministic": true,
+        "family": "contextual_voltage_deviation",
+        "priority": "relevant",
+        "reason": "Check remains evidence-tied, but recurrence is not strong enough for priority.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00004",
+          "h8-comparison-00006"
+        ]
+      },
+      {
+        "check_id": "check.v2.detector_scope_review",
+        "deterministic": true,
+        "family": "detector_disagreement",
+        "priority": "relevant",
+        "reason": "Check remains evidence-tied, but recurrence is not strong enough for priority.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00005"
+        ]
+      },
+      {
+        "check_id": "check.v2.no_evidence_boundary",
+        "deterministic": true,
+        "family": "no_anomaly_evidence",
+        "priority": "priority",
+        "reason": "Comparable history shows recurrent or persistent evidence.",
+        "supporting_comparison_ids": [
+          "h8-comparison-00019",
+          "h8-comparison-00020"
+        ]
+      }
+    ],
+    "timeline_status": "available",
+    "timeline_items": 69
+  },
+  "reanalysis_provenance": {
+    "analyzer_speed_record_count": 12625,
+    "input_sha256": "d66674cd86951f9cd61e106713b378abfb5db8d6b55bf57460fac28a9d462819",
+    "manual_request_id": "p1-5-prod-242-20261023T231909Z",
+    "missing_evidence": [],
+    "missing_signals": [],
+    "model_selection": "analyzer_active_model",
+    "raw_reconstructible": true,
+    "raw_record_count": 12625,
+    "record_count": 12625,
+    "selected_decoder_id": "honda_keihin_71_17",
+    "selected_decoder_version": "1.0.0",
+    "selected_model_version": null,
+    "source_kind": "kline",
+    "source_of_truth": "stored_raw",
+    "source_provenance_status": "supplied",
+    "speed_status": "available",
+    "timestamp_record_count": 12625,
+    "uploaded_speed_record_count": 12625
+  },
+  "browser": {
+    "status": "passed",
+    "transport": "Browser HTTPS URL routed to existing production Nginx HTTP origin; public Cloudflare ingress separately returns 403 from this environment",
+    "browser": "149.0.7827.55",
+    "session": 242,
+    "selected_run": "analysis_20261023T232221Z_2c818f9e015c",
+    "detector_rows": 3,
+    "timeline_buttons": 10,
+    "timeline_event_click": true,
+    "chart_canvases": 4,
+    "locales": {
+      "vi": {
+        "session_status": 200,
+        "selected_run": "analysis_20261023T232221Z_2c818f9e015c",
+        "localization_gap_count": 0,
+        "dashboard_status": 200
+      },
+      "en": {
+        "session_status": 200,
+        "selected_run": "analysis_20261023T232221Z_2c818f9e015c",
+        "localization_gap_count": 0,
+        "dashboard_status": 200
+      }
+    },
+    "desktop_mobile": true,
+    "login_page_status": 200,
+    "guest_mode_status": 200,
+    "guest_dashboard_status": 200,
+    "page_errors": [],
+    "failed_requests": [],
+    "browser_analysis_posts": 0
+  },
+  "historical_fingerprints": {
+    "telemetry_all": {
+      "sha256": "a8000d79465b245fed1b67fec39fc4072d6f09db00912e66dd77c46753a9dcb9",
+      "bytes": 365478573
+    },
+    "original_result_80": {
+      "sha256": "ed6bfc1f277222346f9cc1c34c8fb3e80c5feb39509af449bac5dacb70f3dd98",
+      "bytes": 1785
+    },
+    "other_analysis_results": {
+      "sha256": "7cb4659f8c641588e7ef317435fe05c67ef408fd735a096e7a888b38cfd0c2e6",
+      "bytes": 14038081
+    },
+    "other_sessions": {
+      "sha256": "af848d27bc87072ebb8c33515a852fd837290d302efe20914c30a71f369f2746",
+      "bytes": 63905
+    },
+    "sync_batches": {
+      "sha256": "e1773f529a5bb5495ceb4e095b17fda3d334a8ce313c288ad320bd48b02705d4",
+      "bytes": 64049
+    },
+    "raw_artifacts": {
+      "sha256": "469a19c315b5b8ff101c21414477777c137cd4aa199a4199d820401a77363e0b",
+      "bytes": 48091
+    }
+  },
+  "historical_fingerprints_equal": true,
+  "analyzer_original_file_check": {
+    "files": 318,
+    "changed": [
+      "entities/decoder_versions/honda_keihin_71_17_1.0.0.json",
+      "entities/model_versions/iforest-full18-20261011T135838Z.json"
+    ],
+    "missing": []
+  },
+  "registry_timestamp_changes": {
+    "entities/decoder_versions/honda_keihin_71_17_1.0.0.json": {
+      "updated_at": {
+        "before": "2026-10-23T16:46:35.015413+00:00",
+        "after": "2026-10-23T23:22:42.206501+00:00"
+      }
+    },
+    "entities/model_versions/iforest-full18-20261011T135838Z.json": {
+      "created_at": {
+        "before": "2026-10-23T16:46:35.927133+00:00",
+        "after": "2026-10-23T23:22:42.973728+00:00"
+      }
+    }
+  },
+  "operations": {
+    "log_errors": {
+      "ecu-analyzer": [],
+      "drisafe-web": []
+    },
+    "analysis_post_counts": {
+      "ecu-analyzer": 1,
+      "drisafe-web": 2
+    },
+    "new_analyzer_files": [
+      "analyses/analysis_20261023T232221Z_2c818f9e015c/analysis_run.json",
+      "analyses/analysis_20261023T232221Z_2c818f9e015c/analysis_windows.jsonl",
+      "analyses/analysis_20261023T232221Z_2c818f9e015c/window_features.jsonl",
+      "entities/sessions/80d11ec8-7b8f-5731-a7c3-828b60eb480e.json",
+      "telemetry/80d11ec8-7b8f-5731-a7c3-828b60eb480e/metadata.json",
+      "telemetry/80d11ec8-7b8f-5731-a7c3-828b60eb480e/samples.jsonl"
+    ],
+    "new_analyzer_runs": [
+      "analysis_20261023T232221Z_2c818f9e015c"
+    ],
+    "active_artifacts_unchanged": true,
+    "final_state": {
+      "original_result_id": 80,
+      "original_run": "87f16d88-91af-476e-af77-32c079637b36",
+      "original_model": "iforest-baseline-20260920T091709Z",
+      "original_summary_readable": true,
+      "selected_run": "analysis_20261023T232221Z_2c818f9e015c",
+      "status": "completed",
+      "in_flight": 0,
+      "revision": "b7f2c9a4d610"
+    },
+    "checked_utc": "2026-10-23T23:33:11.616147+00:00"
+  },
+  "automatic_analysis_enabled_by_task": false,
+  "other_sessions_processed_by_task": 0
+}

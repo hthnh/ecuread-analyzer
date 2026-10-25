@@ -27,7 +27,6 @@ from app.ml.contextual_detector import (
     ContextualBatteryVoltageDetector,
 )
 from app.ml.evidence_aggregation import (
-    EVIDENCE_STATE_DESCRIPTIONS,
     AggregationPolicy,
     aggregate_window_results,
     build_aggregate_events,
@@ -35,12 +34,15 @@ from app.ml.evidence_aggregation import (
     summarize_aggregate_windows,
 )
 from app.ml.harness import DetectorContext, DetectorIdentity, DetectorResult, ModelHarness
+from app.ml.active_bundle import ActiveBundle
+from app.ml.contextual_speed import SPEED_DETECTOR_ID, ContextualSpeedDetector, speed_window_features
 from app.ml.iforest_detector import ISOLATION_FOREST_DETECTOR_ID, isolation_forest_identity
 from app.ml.root_cause_analysis_v2 import (
     RCA_V2_ENGINE_VERSION,
     RCA_V2_RULE_CATALOG_VERSION,
     RootCauseAnalyzerV2,
 )
+from app.ml.diagnostic_interpretation import VERSION as INTERPRETATION_VERSION, merge_findings
 
 
 LIVE_RESEARCH_ANALYSIS_VERSION = "h9c-live-research-harness-v1"
@@ -68,6 +70,7 @@ def run_research_harness(
     signal_columns: list[str],
     warnings: list[str] | None = None,
     created_at: str | None = None,
+    bundle: ActiveBundle | None = None,
 ) -> LiveResearchHarnessOutput:
     started = perf_counter()
     local_warnings = list(warnings or [])
@@ -77,12 +80,18 @@ def run_research_harness(
     timings["production_if_inference_ms"] = _metadata_latency_ms(production_if)
 
     contextual_started = perf_counter()
-    contextual_result, contextual_reference, contextual_warning = _contextual_result(settings, feature_frame, telemetry_schema_version, signal_columns)
+    contextual_result, contextual_reference, contextual_warning = _contextual_result(settings, feature_frame, telemetry_schema_version, signal_columns, reference=bundle.battery if bundle else None)
     timings["contextual_detector_ms"] = round((perf_counter() - contextual_started) * 1000.0, 6)
     if contextual_warning:
         local_warnings.append(contextual_warning)
 
     detector_results = [production_if, contextual_result]
+    speed_result = None
+    if bundle is not None and bundle.speed is not None:
+        speed_frame = speed_window_features(frame_data, feature_frame)
+        speed_result = ModelHarness([ContextualSpeedDetector(bundle.speed)]).run(speed_frame, DetectorContext(
+            telemetry_schema_version=telemetry_schema_version, signal_columns=tuple(signal_columns))).result_for(SPEED_DETECTOR_ID)
+        detector_results.append(speed_result)
     detector_summaries = [result.to_summary() for result in detector_results]
 
     aggregation_started = perf_counter()
@@ -91,7 +100,7 @@ def run_research_harness(
         feature_frame=feature_frame,
         results=detector_results,
         frame_data=frame_data,
-        policy=AggregationPolicy(),
+        policy=AggregationPolicy(detector_ids=tuple(r.identity.detector_id for r in detector_results)),
     ) if not feature_frame.empty else []
     aggregate_events = build_aggregate_events(aggregate_rows) if aggregate_rows else _empty_aggregate_events()
     aggregate_summary = summarize_aggregate_windows(aggregate_rows) if aggregate_rows else _empty_aggregate_summary()
@@ -141,9 +150,22 @@ def run_research_harness(
         warnings=local_warnings,
         created_at=created_at,
     )
+    if bundle is not None:
+        evidence["provenance"]["model_bundle"] = bundle.provenance()
+        evidence["capability_status"]["supporting_detectors"] = [r.identity.detector_id for r in detector_results[1:]]
+    merged = _merge_research_windows(production_if.windows, contextual_result.windows)
+    if speed_result is not None:
+        for column in speed_result.windows:
+            if column.startswith("speed_"):
+                merged[column] = speed_result.windows[column].values
+    # Persist all detector-local evidence under the existing per-window contract.
+    merged["detector_results"] = [[r.window_payload(i) for r in detector_results] for i in range(len(merged))]
+    for column in ("start_time_ms", "end_time_ms"):
+        merged[column] = [r[column] for r in aggregate_rows]
+    merged["aggregate_evidence"] = aggregate_rows
     return LiveResearchHarnessOutput(
         diagnostic_evidence=_json_clone(evidence),
-        windows=_merge_research_windows(production_if.windows, contextual_result.windows),
+        windows=merged,
         detector_results=detector_summaries,
         warnings=local_warnings,
     )
@@ -168,16 +190,17 @@ def _contextual_result(
     feature_frame: pd.DataFrame,
     telemetry_schema_version: str,
     signal_columns: list[str],
+    reference: dict[str, Any] | None = None,
 ) -> tuple[DetectorResult, dict[str, Any] | None, str | None]:
     reference_path = settings.data_dir / "evaluation" / "h3" / "contextual_reference.json"
-    if not reference_path.exists():
+    if reference is None and not reference_path.exists():
         return (
             _contextual_skipped_result(feature_frame, reason="contextual_reference_unavailable"),
             None,
             f"contextual battery reference not found at {reference_path}; research detector marked skipped",
         )
     try:
-        reference = json.loads(reference_path.read_text(encoding="utf-8"))
+        reference = reference if reference is not None else json.loads(reference_path.read_text(encoding="utf-8"))
     except Exception as exc:  # noqa: BLE001 - optional research component failure is isolated.
         return (
             _contextual_failed_result(feature_frame, type(exc).__name__, str(exc)),
@@ -257,20 +280,7 @@ def _diagnostic_evidence(
     created_at: str | None,
 ) -> dict[str, Any]:
     detectors = {detector["detector_id"]: normalize_detector(detector) for detector in detector_summaries}
-    aggregate = aggregate_from_detectors(detectors)
-    state = _session_evidence_state(aggregate_summary, aggregate["evidence_state"])
-    aggregate["evidence_state"] = state
-    aggregate["description"] = EVIDENCE_STATE_DESCRIPTIONS[state]
-    aggregate["coverage_status"] = _session_coverage_status(aggregate_summary, aggregate.get("coverage_status"))
-    aggregate["window_summary"] = aggregate_summary
-    aggregate["detector_disagreement"] = {
-        **aggregate.get("detector_disagreement", {}),
-        "disagreement_window_count": int(aggregate_summary.get("disagreement_windows", 0) or 0),
-    }
-    aggregate["agreement"] = {
-        "full_coverage_agreement_window_count": int(aggregate_summary.get("both_applicable_agreement_windows", 0) or 0),
-        "no_score_fusion_or_voting": True,
-    }
+    aggregate = aggregate_from_detectors(detectors, aggregate_summary)
 
     component_status = _component_status(detectors, history, rca_results)
     return {
@@ -315,6 +325,7 @@ def _diagnostic_evidence(
             "contextual_reference_version": (contextual_reference or {}).get("model_version"),
             "contextual_reference_schema_version": (contextual_reference or {}).get("schema_version"),
             "rca_engine_version": RCA_V2_ENGINE_VERSION,
+            "interpretation_version": INTERPRETATION_VERSION,
             "rca_rule_version": RCA_V2_RULE_CATALOG_VERSION,
             "telemetry_schema_version": telemetry_schema_version,
             "feature_schema_version": feature_schema_version,
@@ -347,6 +358,7 @@ def _component_status(
         "overall_status": overall,
         "isolation_forest": detectors.get(ISOLATION_FOREST_DETECTOR_ID, {}).get("execution_status"),
         "contextual_battery_voltage": contextual.get("execution_status"),
+        **({"contextual_speed": detectors[SPEED_DETECTOR_ID].get("execution_status")} if SPEED_DETECTOR_ID in detectors else {}),
         "evidence_aggregation": "available",
         "rca_v2": "available" if rca_results else "unavailable",
         "historical_evidence": history.get("status"),
@@ -361,10 +373,12 @@ def _interpretation_from_rca(results: list[dict[str, Any]]) -> dict[str, Any]:
         "status": "available",
         "sections_distinct": True,
         "h7_v1_hypotheses_exposed": False,
-        "observations": _dedupe(_flatten(result.get("observations", []) for result in results), "observation_id"),
-        "symptoms": _dedupe(_flatten(result.get("symptoms", []) for result in results), "symptom_id"),
+        "interpretation_version": INTERPRETATION_VERSION,
+        "reviewed_event_count": len(results),
+        "observations": merge_findings(results, "observations", "observation_id"),
+        "symptoms": merge_findings(results, "symptoms", "symptom_id"),
         "possible_causes": _dedupe(_flatten(result.get("possible_causes", []) for result in results), "cause_id"),
-        "recommended_checks": _dedupe(_flatten(result.get("recommended_checks", []) for result in results), "check_id"),
+        "recommended_checks": merge_findings(results, "recommended_checks", "check_id"),
         "limitations": _dedupe(_flatten(result.get("evidence_limitations", []) for result in results), "limitation_id"),
     }
 
@@ -404,6 +418,10 @@ def _rca_case(
     representative = event.get("representative_window") or {}
     findings = representative.get("detector_findings") or []
     by_detector = {finding.get("detector_id"): finding for finding in findings if finding.get("detector_id")}
+    for detector_id, witness in (event.get("detector_representatives") or {}).items():
+        selected = next((finding for finding in witness.get("detector_findings", []) if finding.get("detector_id") == detector_id), None)
+        if selected is not None:
+            by_detector[detector_id] = selected
     contextual = by_detector.get(CONTEXTUAL_BATTERY_DETECTOR_ID, {})
     iforest = by_detector.get(ISOLATION_FOREST_DETECTOR_ID, {})
     contextual_evidence = (contextual.get("evidence") or {}).get("contextual_evidence") or {}
@@ -452,6 +470,12 @@ def _rca_case(
                 "device_id": session.device_id,
                 "ecu_profile_id": session.ecu_profile_id,
                 "source_type": session.source_type,
+            },
+            "signal_provenance": {
+                "speed": next((sample.speed_provenance for sample in session.samples if sample.vehicle_speed_kmh is not None), {}),
+                "time_basis": "record_timestamp_ms" if any(sample.timestamp_ms is not None for sample in session.samples) else session.sampling.time_basis,
+                "decoder_id": session.decoder_id,
+                "decoder_version": session.decoder_version,
             },
             "decoder": {
                 "decoder_id": session.decoder_id,
@@ -582,7 +606,7 @@ def _current_session_manifest(
         "evaluation_ready": True,
         "window_count": int(len(feature_frame)),
         "sample_count": len(session.samples),
-        "verified_signals": list(signal_columns),
+        "verified_signals": [*signal_columns, *(["vehicle_speed_kmh"] if any(s.vehicle_speed_kmh is not None for s in session.samples) else [])],
         "signal_columns": list(signal_columns),
         "telemetry_schema_version": telemetry_schema_version,
         "capture_provenance": {
@@ -609,27 +633,6 @@ def _history_limitations(comparisons: list[dict[str, Any]]) -> list[str]:
         }
     )
     return limitations or ["Historical evidence is descriptive only and cannot confirm root cause."]
-
-
-def _session_evidence_state(summary: dict[str, Any], fallback: str) -> str:
-    counts = summary.get("evidence_state_counts") or {}
-    for state in ("detector_disagreement", "multiple_detector_evidence", "single_detector_evidence", "no_evidence"):
-        if int(counts.get(state, 0) or 0) > 0:
-            return state
-    if int(counts.get("insufficient_coverage", 0) or 0) > 0:
-        return "insufficient_coverage"
-    return fallback
-
-
-def _session_coverage_status(summary: dict[str, Any], fallback: str | None) -> str:
-    counts = summary.get("coverage_status_counts") or {}
-    if int(counts.get("full", 0) or 0) > 0:
-        return "full"
-    if int(counts.get("partial", 0) or 0) > 0:
-        return "partial"
-    if int(counts.get("none", 0) or 0) > 0:
-        return "none"
-    return fallback or "none"
 
 
 def _summary_events_for_rca(session_id: str, rows: list[dict[str, Any]]) -> list[dict[str, Any]]:

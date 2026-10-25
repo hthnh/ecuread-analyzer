@@ -60,6 +60,34 @@ def _detector_result(
     )
 
 
+def _model_unavailable_output(
+    *,
+    feature_frame: pd.DataFrame,
+    model_metadata: dict[str, Any] | None,
+    detector_result: DetectorResult,
+    note: str,
+    minimum_windows_for_status: int,
+) -> InferenceOutput:
+    evidence_window_count = int(len(feature_frame))
+    return InferenceOutput(
+        model_loaded=bool(model_metadata),
+        windows=feature_frame.copy(),
+        anomaly_ratio=0.0,
+        anomaly_windows=0,
+        health_score=None,
+        overall_status="model_unavailable",
+        most_unusual_features=[],
+        note=note,
+        evidence_window_count=evidence_window_count,
+        minimum_windows_for_status=minimum_windows_for_status,
+        evidence_sufficient=evidence_window_count >= minimum_windows_for_status,
+        model_metadata=model_metadata,
+        warnings=[note],
+        detector_results=[detector_result.to_summary()],
+        detector_result_objects=[detector_result],
+    )
+
+
 def _validate_model_compatibility(
     metadata: dict[str, Any],
     *,
@@ -153,11 +181,28 @@ def run_inference(
         )
 
     bundle = load_model_bundle(model_dir)
-    _validate_model_compatibility(
-        bundle.metadata,
-        expected_telemetry_schema_version=expected_telemetry_schema_version,
-        expected_signal_columns=expected_signal_columns,
-    )
+    try:
+        _validate_model_compatibility(
+            bundle.metadata,
+            expected_telemetry_schema_version=expected_telemetry_schema_version,
+            expected_signal_columns=expected_signal_columns,
+        )
+    except ValueError as exc:
+        warning = f"detector {ISOLATION_FOREST_DETECTOR_ID!r} was skipped because the model is incompatible: {exc}"
+        detector_result = _detector_result(
+            model_metadata=bundle.metadata,
+            status="skipped",
+            reason="model_incompatible",
+            feature_frame=feature_frame,
+            warnings=[warning],
+        )
+        return _model_unavailable_output(
+            feature_frame=feature_frame,
+            model_metadata=bundle.metadata,
+            detector_result=detector_result,
+            note=warning,
+            minimum_windows_for_status=minimum_windows_for_status,
+        )
 
     harness = ModelHarness([IsolationForestDetector(bundle)])
     harness_result = harness.run(
@@ -171,11 +216,11 @@ def run_inference(
     primary = harness_result.result_for(ISOLATION_FOREST_DETECTOR_ID)
     if primary is None:
         raise RuntimeError("Isolation Forest detector was not registered")
-    if primary.status == "skipped" and primary.reason == "missing_features":
-        raise ValueError(f"inference feature frame is missing model features: {list(primary.missing_features)}")
     if primary.status != "ok":
         windows = feature_frame.copy()
         warning = f"detector {primary.identity.detector_id!r} did not produce a prediction: {primary.reason}"
+        if primary.status == "skipped" and primary.reason == "missing_features":
+            warning = f"inference feature frame is missing model features: {list(primary.missing_features)}"
         if primary.error_message:
             warning = f"{warning}: {primary.error_message}"
         return InferenceOutput(

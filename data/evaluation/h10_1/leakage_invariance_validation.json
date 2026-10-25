@@ -1,0 +1,12 @@
+{
+  "all_18_folds_group_source_disjoint": true,
+  "all_9989_windows_scored_once": true,
+  "changed_files": [],
+  "manual_adjudication": "pending",
+  "new_unpinned_files": [],
+  "pinned_files_checked": 837,
+  "preregistered_before_training": true,
+  "source_samples_verified": 100688,
+  "training_only_scalers_offsets_verified": true,
+  "training_started": "2026-10-11T12:05:03.905143+00:00"
+}

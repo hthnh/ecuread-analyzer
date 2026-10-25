@@ -1,0 +1,3728 @@
+{
+  "annotation": {
+    "created_at": "2026-10-11T10:28:25.355642+00:00",
+    "events": [
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "confirmation_history": [],
+        "end_s": 299.5,
+        "event": "throttle_burst",
+        "evidence": {
+          "above_baseline": 0.46875,
+          "ect_c": {
+            "end": 65.0,
+            "max": 65.0,
+            "median": 65.0,
+            "min": 65.0,
+            "p90_p10": 0.0,
+            "start": 65.0
+          },
+          "hold_s": 0.49900000000002365,
+          "opening_rate_per_s": 0.4692192192192348,
+          "rpm": {
+            "end": 4235.5,
+            "max": 4659.0,
+            "median": 3597.0,
+            "min": 2068.0,
+            "p90_p10": 2163.2000000000007,
+            "start": 2442.5
+          },
+          "rpm_trend": "increasing",
+          "sample_count": 7,
+          "speed_end": 16.0,
+          "speed_kmh": {
+            "end": 16.0,
+            "max": 18.0,
+            "median": 12.0,
+            "min": 7.0,
+            "p90_p10": 8.5,
+            "start": 7.5
+          },
+          "speed_start": 7.5,
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_rise": 0.46875,
+          "tps_trend": "opening",
+          "tps_voltage": {
+            "end": 0.8984375,
+            "max": 1.484375,
+            "median": 0.60546875,
+            "min": 0.48828125,
+            "p90_p10": 0.890625,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "strong",
+        "human_confirmation": null,
+        "id": "auto_suggest_0f651a272cf632c0788c",
+        "notes": "",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 299.5,
+          "event": "throttle_burst",
+          "evidence": {
+            "above_baseline": 0.46875,
+            "ect_c": {
+              "end": 65.0,
+              "max": 65.0,
+              "median": 65.0,
+              "min": 65.0,
+              "p90_p10": 0.0,
+              "start": 65.0
+            },
+            "hold_s": 0.49900000000002365,
+            "opening_rate_per_s": 0.4692192192192348,
+            "rpm": {
+              "end": 4235.5,
+              "max": 4659.0,
+              "median": 3597.0,
+              "min": 2068.0,
+              "p90_p10": 2163.2000000000007,
+              "start": 2442.5
+            },
+            "rpm_trend": "increasing",
+            "sample_count": 7,
+            "speed_end": 16.0,
+            "speed_kmh": {
+              "end": 16.0,
+              "max": 18.0,
+              "median": 12.0,
+              "min": 7.0,
+              "p90_p10": 8.5,
+              "start": 7.5
+            },
+            "speed_start": 7.5,
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_rise": 0.46875,
+            "tps_trend": "opening",
+            "tps_voltage": {
+              "end": 0.8984375,
+              "max": 1.484375,
+              "median": 0.60546875,
+              "min": 0.48828125,
+              "p90_p10": 0.890625,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "strong",
+          "operating_context": null,
+          "reason": "Rapid TPS rise with a sustained opening above the session baseline.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 298.002,
+          "thermal_phase": null,
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Rapid TPS rise with a sustained opening above the session baseline.",
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 298.002,
+        "suggestion_id": "suggest_0f651a272cf632c0788c"
+      }
+    ],
+    "schema_version": "context-annotation-v2",
+    "segments": [
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "confirmation_history": [],
+        "end_s": 227.625,
+        "evidence": {
+          "ect_c": {
+            "end": 59.0,
+            "max": 59.0,
+            "median": 48.0,
+            "min": 32.0,
+            "p90_p10": 23.0,
+            "start": 32.0
+          },
+          "rpm": {
+            "end": 1416.5,
+            "max": 2129.0,
+            "median": 1340.0,
+            "min": 723.0,
+            "p90_p10": 140.0,
+            "start": 1652.0
+          },
+          "rpm_in_idle_region": true,
+          "rpm_trend": "decreasing",
+          "sample_count": 911,
+          "speed_end": 0.0,
+          "speed_kmh": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "speed_start": 0.0,
+          "speed_trend_kmh_s": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "thermal_rule": "warming",
+          "thermal_trend_c_s": {
+            "end": 0.07499765632616928,
+            "max": 0.17500656274610302,
+            "median": 0.125,
+            "min": 0.062499218759765524,
+            "p90_p10": 0.08394881848044931,
+            "start": 0.0975609756097561
+          },
+          "thermal_window_delta_c": {
+            "end": 3.0,
+            "max": 7.0,
+            "median": 5.0,
+            "min": 2.0,
+            "p90_p10": 3.0,
+            "start": 2.0
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "stable",
+          "tps_voltage": {
+            "end": 0.48828125,
+            "max": 0.48828125,
+            "median": 0.48828125,
+            "min": 0.48828125,
+            "p90_p10": 0.0,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "strong",
+        "human_confirmation": null,
+        "id": "auto_suggest_7cd371104465585120a4",
+        "labels": {
+          "operating_context": "stationary_running",
+          "thermal_phase": "warming"
+        },
+        "notes": "",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 227.625,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 59.0,
+              "max": 59.0,
+              "median": 48.0,
+              "min": 32.0,
+              "p90_p10": 23.0,
+              "start": 32.0
+            },
+            "rpm": {
+              "end": 1416.5,
+              "max": 2129.0,
+              "median": 1340.0,
+              "min": 723.0,
+              "p90_p10": 140.0,
+              "start": 1652.0
+            },
+            "rpm_in_idle_region": true,
+            "rpm_trend": "decreasing",
+            "sample_count": 911,
+            "speed_end": 0.0,
+            "speed_kmh": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "speed_start": 0.0,
+            "speed_trend_kmh_s": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "thermal_rule": "warming",
+            "thermal_trend_c_s": {
+              "end": 0.07499765632616928,
+              "max": 0.17500656274610302,
+              "median": 0.125,
+              "min": 0.062499218759765524,
+              "p90_p10": 0.08394881848044931,
+              "start": 0.0975609756097561
+            },
+            "thermal_window_delta_c": {
+              "end": 3.0,
+              "max": 7.0,
+              "median": 5.0,
+              "min": 2.0,
+              "p90_p10": 3.0,
+              "start": 2.0
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "stable",
+            "tps_voltage": {
+              "end": 0.48828125,
+              "max": 0.48828125,
+              "median": 0.48828125,
+              "min": 0.48828125,
+              "p90_p10": 0.0,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "strong",
+          "operating_context": "stationary_running",
+          "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 0.0,
+          "thermal_phase": "warming",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 0.0,
+        "suggestion_id": "suggest_7cd371104465585120a4",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "confirmation_history": [],
+        "end_s": 232.3755,
+        "evidence": {
+          "ect_c": {
+            "end": 59.0,
+            "max": 60.0,
+            "median": 59.0,
+            "min": 59.0,
+            "p90_p10": 0.0,
+            "start": 59.0
+          },
+          "rpm": {
+            "end": 1421.0,
+            "max": 1433.0,
+            "median": 1399.0,
+            "min": 1350.0,
+            "p90_p10": 48.59999999999991,
+            "start": 1393.0
+          },
+          "rpm_in_idle_region": true,
+          "rpm_trend": "stable",
+          "sample_count": 19,
+          "speed_end": 0.0,
+          "speed_kmh": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "speed_start": 0.0,
+          "speed_trend_kmh_s": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "thermal_rule": "unknown",
+          "thermal_trend_c_s": {
+            "end": 0.04984471663470287,
+            "max": 0.05000125003125079,
+            "median": 0.05,
+            "min": 0.0496900582615933,
+            "p90_p10": 0.00031069175090691487,
+            "start": 0.04999937501562461
+          },
+          "thermal_window_delta_c": {
+            "end": 2.0,
+            "max": 2.0,
+            "median": 2.0,
+            "min": 2.0,
+            "p90_p10": 0.0,
+            "start": 2.0
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "stable",
+          "tps_voltage": {
+            "end": 0.48828125,
+            "max": 0.48828125,
+            "median": 0.48828125,
+            "min": 0.48828125,
+            "p90_p10": 0.0,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "limited",
+        "human_confirmation": null,
+        "id": "auto_suggest_8d67b7ee48de49d7c803",
+        "labels": {
+          "operating_context": "stationary_running",
+          "thermal_phase": "unknown"
+        },
+        "notes": "",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 232.3755,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 59.0,
+              "max": 60.0,
+              "median": 59.0,
+              "min": 59.0,
+              "p90_p10": 0.0,
+              "start": 59.0
+            },
+            "rpm": {
+              "end": 1421.0,
+              "max": 1433.0,
+              "median": 1399.0,
+              "min": 1350.0,
+              "p90_p10": 48.59999999999991,
+              "start": 1393.0
+            },
+            "rpm_in_idle_region": true,
+            "rpm_trend": "stable",
+            "sample_count": 19,
+            "speed_end": 0.0,
+            "speed_kmh": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "speed_start": 0.0,
+            "speed_trend_kmh_s": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "thermal_rule": "unknown",
+            "thermal_trend_c_s": {
+              "end": 0.04984471663470287,
+              "max": 0.05000125003125079,
+              "median": 0.05,
+              "min": 0.0496900582615933,
+              "p90_p10": 0.00031069175090691487,
+              "start": 0.04999937501562461
+            },
+            "thermal_window_delta_c": {
+              "end": 2.0,
+              "max": 2.0,
+              "median": 2.0,
+              "min": 2.0,
+              "p90_p10": 0.0,
+              "start": 2.0
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "stable",
+            "tps_voltage": {
+              "end": 0.48828125,
+              "max": 0.48828125,
+              "median": 0.48828125,
+              "min": 0.48828125,
+              "p90_p10": 0.0,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "limited",
+          "operating_context": "stationary_running",
+          "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 227.625,
+          "thermal_phase": "unknown",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 227.625,
+        "suggestion_id": "suggest_8d67b7ee48de49d7c803",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "confirmation_history": [],
+        "end_s": 297.876,
+        "evidence": {
+          "ect_c": {
+            "end": 65.0,
+            "max": 65.0,
+            "median": 62.0,
+            "min": 60.0,
+            "p90_p10": 4.0,
+            "start": 60.0
+          },
+          "rpm": {
+            "end": 2542.0,
+            "max": 2667.0,
+            "median": 1419.0,
+            "min": 1335.0,
+            "p90_p10": 78.0,
+            "start": 1442.5
+          },
+          "rpm_in_idle_region": true,
+          "rpm_trend": "increasing",
+          "sample_count": 261,
+          "speed_end": 0.0,
+          "speed_kmh": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "speed_start": 0.0,
+          "speed_trend_kmh_s": {
+            "end": 3.175723359209594,
+            "max": 3.176470588235294,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "thermal_rule": "warming",
+          "thermal_trend_c_s": {
+            "end": 0.08939324786743502,
+            "max": 0.11214953271028037,
+            "median": 0.07946809356043553,
+            "min": 0.05,
+            "p90_p10": 0.02673037946449458,
+            "start": 0.05605667221545879
+          },
+          "thermal_window_delta_c": {
+            "end": 2.0,
+            "max": 4.0,
+            "median": 3.0,
+            "min": 2.0,
+            "p90_p10": 2.0,
+            "start": 2.25
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "opening",
+          "tps_voltage": {
+            "end": 0.830078125,
+            "max": 1.19140625,
+            "median": 0.48828125,
+            "min": 0.48828125,
+            "p90_p10": 0.0,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "strong",
+        "human_confirmation": null,
+        "id": "auto_suggest_9a90a180e507678ac7d6",
+        "labels": {
+          "operating_context": "stationary_running",
+          "thermal_phase": "warming"
+        },
+        "notes": "",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 297.876,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 65.0,
+              "max": 65.0,
+              "median": 62.0,
+              "min": 60.0,
+              "p90_p10": 4.0,
+              "start": 60.0
+            },
+            "rpm": {
+              "end": 2542.0,
+              "max": 2667.0,
+              "median": 1419.0,
+              "min": 1335.0,
+              "p90_p10": 78.0,
+              "start": 1442.5
+            },
+            "rpm_in_idle_region": true,
+            "rpm_trend": "increasing",
+            "sample_count": 261,
+            "speed_end": 0.0,
+            "speed_kmh": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "speed_start": 0.0,
+            "speed_trend_kmh_s": {
+              "end": 3.175723359209594,
+              "max": 3.176470588235294,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "thermal_rule": "warming",
+            "thermal_trend_c_s": {
+              "end": 0.08939324786743502,
+              "max": 0.11214953271028037,
+              "median": 0.07946809356043553,
+              "min": 0.05,
+              "p90_p10": 0.02673037946449458,
+              "start": 0.05605667221545879
+            },
+            "thermal_window_delta_c": {
+              "end": 2.0,
+              "max": 4.0,
+              "median": 3.0,
+              "min": 2.0,
+              "p90_p10": 2.0,
+              "start": 2.25
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "opening",
+            "tps_voltage": {
+              "end": 0.830078125,
+              "max": 1.19140625,
+              "median": 0.48828125,
+              "min": 0.48828125,
+              "p90_p10": 0.0,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "strong",
+          "operating_context": "stationary_running",
+          "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 232.3755,
+          "thermal_phase": "warming",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 232.3755,
+        "suggestion_id": "suggest_9a90a180e507678ac7d6",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "confirmation_history": [],
+        "end_s": 298.1265,
+        "evidence": {
+          "ect_c": {
+            "end": 65.0,
+            "max": 65.0,
+            "median": 65.0,
+            "min": 65.0,
+            "p90_p10": 0.0,
+            "start": 65.0
+          },
+          "rpm": {
+            "end": 2817.0,
+            "max": 2817.0,
+            "median": 2817.0,
+            "min": 2817.0,
+            "p90_p10": 0.0,
+            "start": 2817.0
+          },
+          "rpm_in_idle_region": false,
+          "rpm_trend": "stable",
+          "sample_count": 1,
+          "speed_trend_kmh_s": {
+            "end": 3.5980810234541485,
+            "max": 3.5980810234541485,
+            "median": 3.5980810234541485,
+            "min": 3.5980810234541485,
+            "p90_p10": 0.0,
+            "start": 3.5980810234541485
+          },
+          "thermal_rule": "warming",
+          "thermal_trend_c_s": {
+            "end": 0.09196247930844195,
+            "max": 0.09196247930844195,
+            "median": 0.09196247930844195,
+            "min": 0.09196247930844195,
+            "p90_p10": 0.0,
+            "start": 0.09196247930844195
+          },
+          "thermal_window_delta_c": {
+            "end": 2.0,
+            "max": 2.0,
+            "median": 2.0,
+            "min": 2.0,
+            "p90_p10": 0.0,
+            "start": 2.0
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "stable",
+          "tps_voltage": {
+            "end": 0.48828125,
+            "max": 0.48828125,
+            "median": 0.48828125,
+            "min": 0.48828125,
+            "p90_p10": 0.0,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "insufficient",
+        "human_confirmation": null,
+        "id": "auto_suggest_31f01d533fea0c123c0e",
+        "labels": {
+          "operating_context": "unknown",
+          "thermal_phase": "warming"
+        },
+        "notes": "",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 298.1265,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 65.0,
+              "max": 65.0,
+              "median": 65.0,
+              "min": 65.0,
+              "p90_p10": 0.0,
+              "start": 65.0
+            },
+            "rpm": {
+              "end": 2817.0,
+              "max": 2817.0,
+              "median": 2817.0,
+              "min": 2817.0,
+              "p90_p10": 0.0,
+              "start": 2817.0
+            },
+            "rpm_in_idle_region": false,
+            "rpm_trend": "stable",
+            "sample_count": 1,
+            "speed_trend_kmh_s": {
+              "end": 3.5980810234541485,
+              "max": 3.5980810234541485,
+              "median": 3.5980810234541485,
+              "min": 3.5980810234541485,
+              "p90_p10": 0.0,
+              "start": 3.5980810234541485
+            },
+            "thermal_rule": "warming",
+            "thermal_trend_c_s": {
+              "end": 0.09196247930844195,
+              "max": 0.09196247930844195,
+              "median": 0.09196247930844195,
+              "min": 0.09196247930844195,
+              "p90_p10": 0.0,
+              "start": 0.09196247930844195
+            },
+            "thermal_window_delta_c": {
+              "end": 2.0,
+              "max": 2.0,
+              "median": 2.0,
+              "min": 2.0,
+              "p90_p10": 0.0,
+              "start": 2.0
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "stable",
+            "tps_voltage": {
+              "end": 0.48828125,
+              "max": 0.48828125,
+              "median": 0.48828125,
+              "min": 0.48828125,
+              "p90_p10": 0.0,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "insufficient",
+          "operating_context": "unknown",
+          "reason": "Missing, conflicting, transitional, or insufficiently persistent evidence; motion not inferred from RPM.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 297.876,
+          "thermal_phase": "warming",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Missing, conflicting, transitional, or insufficiently persistent evidence; motion not inferred from RPM.",
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 297.876,
+        "suggestion_id": "suggest_31f01d533fea0c123c0e",
+        "taxonomy_version": "context-taxonomy-v2"
+      },
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "confirmation_history": [],
+        "end_s": 300.5,
+        "evidence": {
+          "ect_c": {
+            "end": 65.0,
+            "max": 65.0,
+            "median": 65.0,
+            "min": 65.0,
+            "p90_p10": 0.0,
+            "start": 65.0
+          },
+          "rpm": {
+            "end": 2234.0,
+            "max": 4659.0,
+            "median": 3170.0,
+            "min": 1918.0,
+            "p90_p10": 2344.0999999999995,
+            "start": 2490.0
+          },
+          "rpm_in_idle_region": false,
+          "rpm_trend": "decreasing",
+          "sample_count": 10,
+          "speed_end": 9.0,
+          "speed_kmh": {
+            "end": 9.0,
+            "max": 18.0,
+            "median": 12.0,
+            "min": 7.0,
+            "p90_p10": 7.399999999999999,
+            "start": 8.0
+          },
+          "speed_start": 8.0,
+          "speed_trend_kmh_s": {
+            "end": 4.4,
+            "max": 4.4,
+            "median": 3.5709184402228376,
+            "min": 3.3324446814183095,
+            "p90_p10": 1.0675553185816908,
+            "start": 3.3324446814183095
+          },
+          "thermal_rule": "warming",
+          "thermal_trend_c_s": {
+            "end": 0.0975633552037854,
+            "max": 0.09876299350633323,
+            "median": 0.09525259421629316,
+            "min": 0.09195613692268782,
+            "p90_p10": 0.0057214739641736345,
+            "start": 0.09196247930844195
+          },
+          "thermal_window_delta_c": {
+            "end": 2.0,
+            "max": 2.0,
+            "median": 2.0,
+            "min": 2.0,
+            "p90_p10": 0.0,
+            "start": 2.0
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "closing",
+          "tps_voltage": {
+            "end": 0.48828125,
+            "max": 1.484375,
+            "median": 0.498046875,
+            "min": 0.48828125,
+            "p90_p10": 0.837890625,
+            "start": 1.015625
+          }
+        },
+        "evidence_quality": "strong",
+        "human_confirmation": null,
+        "id": "auto_suggest_dd9a10bc5bb3cbff7eba",
+        "labels": {
+          "operating_context": "moving_variable",
+          "thermal_phase": "warming"
+        },
+        "notes": "",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 300.5,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 65.0,
+              "max": 65.0,
+              "median": 65.0,
+              "min": 65.0,
+              "p90_p10": 0.0,
+              "start": 65.0
+            },
+            "rpm": {
+              "end": 2234.0,
+              "max": 4659.0,
+              "median": 3170.0,
+              "min": 1918.0,
+              "p90_p10": 2344.0999999999995,
+              "start": 2490.0
+            },
+            "rpm_in_idle_region": false,
+            "rpm_trend": "decreasing",
+            "sample_count": 10,
+            "speed_end": 9.0,
+            "speed_kmh": {
+              "end": 9.0,
+              "max": 18.0,
+              "median": 12.0,
+              "min": 7.0,
+              "p90_p10": 7.399999999999999,
+              "start": 8.0
+            },
+            "speed_start": 8.0,
+            "speed_trend_kmh_s": {
+              "end": 4.4,
+              "max": 4.4,
+              "median": 3.5709184402228376,
+              "min": 3.3324446814183095,
+              "p90_p10": 1.0675553185816908,
+              "start": 3.3324446814183095
+            },
+            "thermal_rule": "warming",
+            "thermal_trend_c_s": {
+              "end": 0.0975633552037854,
+              "max": 0.09876299350633323,
+              "median": 0.09525259421629316,
+              "min": 0.09195613692268782,
+              "p90_p10": 0.0057214739641736345,
+              "start": 0.09196247930844195
+            },
+            "thermal_window_delta_c": {
+              "end": 2.0,
+              "max": 2.0,
+              "median": 2.0,
+              "min": 2.0,
+              "p90_p10": 0.0,
+              "start": 2.0
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "closing",
+            "tps_voltage": {
+              "end": 0.48828125,
+              "max": 1.484375,
+              "median": 0.498046875,
+              "min": 0.48828125,
+              "p90_p10": 0.837890625,
+              "start": 1.015625
+            }
+          },
+          "evidence_quality": "strong",
+          "operating_context": "moving_variable",
+          "reason": "Observed movement with mixed or short-lived trends and no persistent steady state.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 298.1265,
+          "thermal_phase": "warming",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Observed movement with mixed or short-lived trends and no persistent steady state.",
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 298.1265,
+        "suggestion_id": "suggest_dd9a10bc5bb3cbff7eba",
+        "taxonomy_version": "context-taxonomy-v2"
+      }
+    ],
+    "session_id": "session_000014",
+    "session_labels": {
+      "capture_type": "unknown",
+      "known_traffic_conditions": null,
+      "notes": "",
+      "route_notes": "",
+      "route_type": null,
+      "start_thermal_state": "unknown"
+    },
+    "source": {
+      "augmentation_id": null,
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "derivation_type": null,
+      "filename": "real_data/fulldata_afterclean/session_000014.jsonl",
+      "session_id": "session_000014",
+      "sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "source_session_id": null
+    },
+    "updated_at": "2026-10-11T10:28:40.220387+00:00"
+  },
+  "detailed_proposals": {
+    "config": {
+      "acceleration_kmh_s": 0.7,
+      "engine_persistence_s": 3.0,
+      "engine_running_rpm": 400.0,
+      "gap_interval_multiplier": 8.0,
+      "gap_min_s": 3.0,
+      "idle_region_high_rpm": 2200.0,
+      "idle_region_low_rpm": 1000.0,
+      "maximum_speed_rate_kmh_s": 35.0,
+      "minimum_segment_s": 4.0,
+      "moving_enter_kmh": 3.0,
+      "smoothing_s": 1.0,
+      "speed_trend_delta_kmh": 3.0,
+      "speed_trend_window_s": 6.0,
+      "stable_rate_c_s": 0.03,
+      "stable_spread_c": 3.0,
+      "stationary_speed_kmh": 1.0,
+      "steady_spread_kmh": 3.0,
+      "steady_window_s": 8.0,
+      "stop_go_cycles": 3,
+      "stop_go_window_s": 180.0,
+      "thermal_minimum_window_s": 20.0,
+      "thermal_persistence_s": 20.0,
+      "thermal_window_s": 60.0,
+      "tps_burst_above_baseline_raw": 25.0,
+      "tps_burst_above_baseline_v": 0.4,
+      "tps_burst_delta_raw": 20.0,
+      "tps_burst_delta_v": 0.3,
+      "tps_burst_hold_s": 0.5,
+      "tps_burst_rate_raw_s": 20.0,
+      "tps_burst_rate_v_s": 0.35,
+      "tps_event_cooldown_s": 3.0,
+      "tps_opening_window_s": 2.0,
+      "warming_delta_c": 2.0,
+      "warming_rate_c_s": 0.05
+    },
+    "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+    "events": [
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "end_s": 299.5,
+        "event": "throttle_burst",
+        "evidence": {
+          "above_baseline": 0.46875,
+          "ect_c": {
+            "end": 65.0,
+            "max": 65.0,
+            "median": 65.0,
+            "min": 65.0,
+            "p90_p10": 0.0,
+            "start": 65.0
+          },
+          "hold_s": 0.49900000000002365,
+          "opening_rate_per_s": 0.4692192192192348,
+          "rpm": {
+            "end": 4235.5,
+            "max": 4659.0,
+            "median": 3597.0,
+            "min": 2068.0,
+            "p90_p10": 2163.2000000000007,
+            "start": 2442.5
+          },
+          "rpm_trend": "increasing",
+          "sample_count": 7,
+          "speed_end": 16.0,
+          "speed_kmh": {
+            "end": 16.0,
+            "max": 18.0,
+            "median": 12.0,
+            "min": 7.0,
+            "p90_p10": 8.5,
+            "start": 7.5
+          },
+          "speed_start": 7.5,
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_rise": 0.46875,
+          "tps_trend": "opening",
+          "tps_voltage": {
+            "end": 0.8984375,
+            "max": 1.484375,
+            "median": 0.60546875,
+            "min": 0.48828125,
+            "p90_p10": 0.890625,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "strong",
+        "human_confirmation": null,
+        "id": "suggest_0f651a272cf632c0788c",
+        "notes": "",
+        "operating_context": null,
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 299.5,
+          "event": "throttle_burst",
+          "evidence": {
+            "above_baseline": 0.46875,
+            "ect_c": {
+              "end": 65.0,
+              "max": 65.0,
+              "median": 65.0,
+              "min": 65.0,
+              "p90_p10": 0.0,
+              "start": 65.0
+            },
+            "hold_s": 0.49900000000002365,
+            "opening_rate_per_s": 0.4692192192192348,
+            "rpm": {
+              "end": 4235.5,
+              "max": 4659.0,
+              "median": 3597.0,
+              "min": 2068.0,
+              "p90_p10": 2163.2000000000007,
+              "start": 2442.5
+            },
+            "rpm_trend": "increasing",
+            "sample_count": 7,
+            "speed_end": 16.0,
+            "speed_kmh": {
+              "end": 16.0,
+              "max": 18.0,
+              "median": 12.0,
+              "min": 7.0,
+              "p90_p10": 8.5,
+              "start": 7.5
+            },
+            "speed_start": 7.5,
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_rise": 0.46875,
+            "tps_trend": "opening",
+            "tps_voltage": {
+              "end": 0.8984375,
+              "max": 1.484375,
+              "median": 0.60546875,
+              "min": 0.48828125,
+              "p90_p10": 0.890625,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "strong",
+          "operating_context": null,
+          "reason": "Rapid TPS rise with a sustained opening above the session baseline.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 298.002,
+          "thermal_phase": null,
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Rapid TPS rise with a sustained opening above the session baseline.",
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 298.002,
+        "thermal_phase": null
+      }
+    ],
+    "generated_at": "2026-10-11T08:14:02.507513+00:00",
+    "metrics": {
+      "duration_distribution_s": {
+        "max": 227.625,
+        "median": 4.750499999999988,
+        "min": 0.250500000000045,
+        "p90": 162.7752
+      },
+      "duration_s": 300.5,
+      "event_count": 1,
+      "event_counts": {
+        "throttle_burst": 1
+      },
+      "fragmentation_per_minute": 0.9983361064891846,
+      "operating_duration_s": {
+        "moving_variable": 2.3734999999999786,
+        "stationary_running": 297.876,
+        "unknown": 0.250500000000045
+      },
+      "partial_evidence": true,
+      "pending_human_review": 6,
+      "rule_conflicting_samples": 0,
+      "segment_count": 5,
+      "short_segment_count": 2,
+      "speed_available_count": 1202,
+      "speed_outliers_rejected": 1,
+      "speed_spread_by_context_kmh": {
+        "moving_variable": 7.399999999999999
+      },
+      "stationary_interval_count": 3,
+      "stationary_interval_durations_s": [
+        297.876
+      ],
+      "thermal_duration_s": {
+        "stable": 0,
+        "unknown": 4.750499999999988,
+        "warming": 295.7495
+      },
+      "unknown_coverage": 0.0008336106489186191,
+      "unknown_operating_duration_s": 0.250500000000045,
+      "verified_stationary_interval_count": 1
+    },
+    "rule_version": "ctx2-rules-v1",
+    "schema_version": "context-suggestions-v2",
+    "segments": [
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "end_s": 227.625,
+        "event": null,
+        "evidence": {
+          "ect_c": {
+            "end": 59.0,
+            "max": 59.0,
+            "median": 48.0,
+            "min": 32.0,
+            "p90_p10": 23.0,
+            "start": 32.0
+          },
+          "rpm": {
+            "end": 1416.5,
+            "max": 2129.0,
+            "median": 1340.0,
+            "min": 723.0,
+            "p90_p10": 140.0,
+            "start": 1652.0
+          },
+          "rpm_in_idle_region": true,
+          "rpm_trend": "decreasing",
+          "sample_count": 911,
+          "speed_end": 0.0,
+          "speed_kmh": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "speed_start": 0.0,
+          "speed_trend_kmh_s": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "thermal_rule": "warming",
+          "thermal_trend_c_s": {
+            "end": 0.07499765632616928,
+            "max": 0.17500656274610302,
+            "median": 0.125,
+            "min": 0.062499218759765524,
+            "p90_p10": 0.08394881848044931,
+            "start": 0.0975609756097561
+          },
+          "thermal_window_delta_c": {
+            "end": 3.0,
+            "max": 7.0,
+            "median": 5.0,
+            "min": 2.0,
+            "p90_p10": 3.0,
+            "start": 2.0
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "stable",
+          "tps_voltage": {
+            "end": 0.48828125,
+            "max": 0.48828125,
+            "median": 0.48828125,
+            "min": 0.48828125,
+            "p90_p10": 0.0,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "strong",
+        "human_confirmation": null,
+        "id": "suggest_7cd371104465585120a4",
+        "notes": "",
+        "operating_context": "stationary_running",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 227.625,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 59.0,
+              "max": 59.0,
+              "median": 48.0,
+              "min": 32.0,
+              "p90_p10": 23.0,
+              "start": 32.0
+            },
+            "rpm": {
+              "end": 1416.5,
+              "max": 2129.0,
+              "median": 1340.0,
+              "min": 723.0,
+              "p90_p10": 140.0,
+              "start": 1652.0
+            },
+            "rpm_in_idle_region": true,
+            "rpm_trend": "decreasing",
+            "sample_count": 911,
+            "speed_end": 0.0,
+            "speed_kmh": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "speed_start": 0.0,
+            "speed_trend_kmh_s": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "thermal_rule": "warming",
+            "thermal_trend_c_s": {
+              "end": 0.07499765632616928,
+              "max": 0.17500656274610302,
+              "median": 0.125,
+              "min": 0.062499218759765524,
+              "p90_p10": 0.08394881848044931,
+              "start": 0.0975609756097561
+            },
+            "thermal_window_delta_c": {
+              "end": 3.0,
+              "max": 7.0,
+              "median": 5.0,
+              "min": 2.0,
+              "p90_p10": 3.0,
+              "start": 2.0
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "stable",
+            "tps_voltage": {
+              "end": 0.48828125,
+              "max": 0.48828125,
+              "median": 0.48828125,
+              "min": 0.48828125,
+              "p90_p10": 0.0,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "strong",
+          "operating_context": "stationary_running",
+          "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 0.0,
+          "thermal_phase": "warming",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 0.0,
+        "thermal_phase": "warming"
+      },
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "end_s": 232.3755,
+        "event": null,
+        "evidence": {
+          "ect_c": {
+            "end": 59.0,
+            "max": 60.0,
+            "median": 59.0,
+            "min": 59.0,
+            "p90_p10": 0.0,
+            "start": 59.0
+          },
+          "rpm": {
+            "end": 1421.0,
+            "max": 1433.0,
+            "median": 1399.0,
+            "min": 1350.0,
+            "p90_p10": 48.59999999999991,
+            "start": 1393.0
+          },
+          "rpm_in_idle_region": true,
+          "rpm_trend": "stable",
+          "sample_count": 19,
+          "speed_end": 0.0,
+          "speed_kmh": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "speed_start": 0.0,
+          "speed_trend_kmh_s": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "thermal_rule": "unknown",
+          "thermal_trend_c_s": {
+            "end": 0.04984471663470287,
+            "max": 0.05000125003125079,
+            "median": 0.05,
+            "min": 0.0496900582615933,
+            "p90_p10": 0.00031069175090691487,
+            "start": 0.04999937501562461
+          },
+          "thermal_window_delta_c": {
+            "end": 2.0,
+            "max": 2.0,
+            "median": 2.0,
+            "min": 2.0,
+            "p90_p10": 0.0,
+            "start": 2.0
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "stable",
+          "tps_voltage": {
+            "end": 0.48828125,
+            "max": 0.48828125,
+            "median": 0.48828125,
+            "min": 0.48828125,
+            "p90_p10": 0.0,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "limited",
+        "human_confirmation": null,
+        "id": "suggest_8d67b7ee48de49d7c803",
+        "notes": "",
+        "operating_context": "stationary_running",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 232.3755,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 59.0,
+              "max": 60.0,
+              "median": 59.0,
+              "min": 59.0,
+              "p90_p10": 0.0,
+              "start": 59.0
+            },
+            "rpm": {
+              "end": 1421.0,
+              "max": 1433.0,
+              "median": 1399.0,
+              "min": 1350.0,
+              "p90_p10": 48.59999999999991,
+              "start": 1393.0
+            },
+            "rpm_in_idle_region": true,
+            "rpm_trend": "stable",
+            "sample_count": 19,
+            "speed_end": 0.0,
+            "speed_kmh": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "speed_start": 0.0,
+            "speed_trend_kmh_s": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "thermal_rule": "unknown",
+            "thermal_trend_c_s": {
+              "end": 0.04984471663470287,
+              "max": 0.05000125003125079,
+              "median": 0.05,
+              "min": 0.0496900582615933,
+              "p90_p10": 0.00031069175090691487,
+              "start": 0.04999937501562461
+            },
+            "thermal_window_delta_c": {
+              "end": 2.0,
+              "max": 2.0,
+              "median": 2.0,
+              "min": 2.0,
+              "p90_p10": 0.0,
+              "start": 2.0
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "stable",
+            "tps_voltage": {
+              "end": 0.48828125,
+              "max": 0.48828125,
+              "median": 0.48828125,
+              "min": 0.48828125,
+              "p90_p10": 0.0,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "limited",
+          "operating_context": "stationary_running",
+          "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 227.625,
+          "thermal_phase": "unknown",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 227.625,
+        "thermal_phase": "unknown"
+      },
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "end_s": 297.876,
+        "event": null,
+        "evidence": {
+          "ect_c": {
+            "end": 65.0,
+            "max": 65.0,
+            "median": 62.0,
+            "min": 60.0,
+            "p90_p10": 4.0,
+            "start": 60.0
+          },
+          "rpm": {
+            "end": 2542.0,
+            "max": 2667.0,
+            "median": 1419.0,
+            "min": 1335.0,
+            "p90_p10": 78.0,
+            "start": 1442.5
+          },
+          "rpm_in_idle_region": true,
+          "rpm_trend": "increasing",
+          "sample_count": 261,
+          "speed_end": 0.0,
+          "speed_kmh": {
+            "end": 0.0,
+            "max": 0.0,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "speed_start": 0.0,
+          "speed_trend_kmh_s": {
+            "end": 3.175723359209594,
+            "max": 3.176470588235294,
+            "median": 0.0,
+            "min": 0.0,
+            "p90_p10": 0.0,
+            "start": 0.0
+          },
+          "thermal_rule": "warming",
+          "thermal_trend_c_s": {
+            "end": 0.08939324786743502,
+            "max": 0.11214953271028037,
+            "median": 0.07946809356043553,
+            "min": 0.05,
+            "p90_p10": 0.02673037946449458,
+            "start": 0.05605667221545879
+          },
+          "thermal_window_delta_c": {
+            "end": 2.0,
+            "max": 4.0,
+            "median": 3.0,
+            "min": 2.0,
+            "p90_p10": 2.0,
+            "start": 2.25
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "opening",
+          "tps_voltage": {
+            "end": 0.830078125,
+            "max": 1.19140625,
+            "median": 0.48828125,
+            "min": 0.48828125,
+            "p90_p10": 0.0,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "strong",
+        "human_confirmation": null,
+        "id": "suggest_9a90a180e507678ac7d6",
+        "notes": "",
+        "operating_context": "stationary_running",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 297.876,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 65.0,
+              "max": 65.0,
+              "median": 62.0,
+              "min": 60.0,
+              "p90_p10": 4.0,
+              "start": 60.0
+            },
+            "rpm": {
+              "end": 2542.0,
+              "max": 2667.0,
+              "median": 1419.0,
+              "min": 1335.0,
+              "p90_p10": 78.0,
+              "start": 1442.5
+            },
+            "rpm_in_idle_region": true,
+            "rpm_trend": "increasing",
+            "sample_count": 261,
+            "speed_end": 0.0,
+            "speed_kmh": {
+              "end": 0.0,
+              "max": 0.0,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "speed_start": 0.0,
+            "speed_trend_kmh_s": {
+              "end": 3.175723359209594,
+              "max": 3.176470588235294,
+              "median": 0.0,
+              "min": 0.0,
+              "p90_p10": 0.0,
+              "start": 0.0
+            },
+            "thermal_rule": "warming",
+            "thermal_trend_c_s": {
+              "end": 0.08939324786743502,
+              "max": 0.11214953271028037,
+              "median": 0.07946809356043553,
+              "min": 0.05,
+              "p90_p10": 0.02673037946449458,
+              "start": 0.05605667221545879
+            },
+            "thermal_window_delta_c": {
+              "end": 2.0,
+              "max": 4.0,
+              "median": 3.0,
+              "min": 2.0,
+              "p90_p10": 2.0,
+              "start": 2.25
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "opening",
+            "tps_voltage": {
+              "end": 0.830078125,
+              "max": 1.19140625,
+              "median": 0.48828125,
+              "min": 0.48828125,
+              "p90_p10": 0.0,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "strong",
+          "operating_context": "stationary_running",
+          "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 232.3755,
+          "thermal_phase": "warming",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Sustained near-zero validated candidate speed with engine RPM above the noise floor.",
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 232.3755,
+        "thermal_phase": "warming"
+      },
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "end_s": 298.1265,
+        "event": null,
+        "evidence": {
+          "ect_c": {
+            "end": 65.0,
+            "max": 65.0,
+            "median": 65.0,
+            "min": 65.0,
+            "p90_p10": 0.0,
+            "start": 65.0
+          },
+          "rpm": {
+            "end": 2817.0,
+            "max": 2817.0,
+            "median": 2817.0,
+            "min": 2817.0,
+            "p90_p10": 0.0,
+            "start": 2817.0
+          },
+          "rpm_in_idle_region": false,
+          "rpm_trend": "stable",
+          "sample_count": 1,
+          "speed_trend_kmh_s": {
+            "end": 3.5980810234541485,
+            "max": 3.5980810234541485,
+            "median": 3.5980810234541485,
+            "min": 3.5980810234541485,
+            "p90_p10": 0.0,
+            "start": 3.5980810234541485
+          },
+          "thermal_rule": "warming",
+          "thermal_trend_c_s": {
+            "end": 0.09196247930844195,
+            "max": 0.09196247930844195,
+            "median": 0.09196247930844195,
+            "min": 0.09196247930844195,
+            "p90_p10": 0.0,
+            "start": 0.09196247930844195
+          },
+          "thermal_window_delta_c": {
+            "end": 2.0,
+            "max": 2.0,
+            "median": 2.0,
+            "min": 2.0,
+            "p90_p10": 0.0,
+            "start": 2.0
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "stable",
+          "tps_voltage": {
+            "end": 0.48828125,
+            "max": 0.48828125,
+            "median": 0.48828125,
+            "min": 0.48828125,
+            "p90_p10": 0.0,
+            "start": 0.48828125
+          }
+        },
+        "evidence_quality": "insufficient",
+        "human_confirmation": null,
+        "id": "suggest_31f01d533fea0c123c0e",
+        "notes": "",
+        "operating_context": "unknown",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 298.1265,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 65.0,
+              "max": 65.0,
+              "median": 65.0,
+              "min": 65.0,
+              "p90_p10": 0.0,
+              "start": 65.0
+            },
+            "rpm": {
+              "end": 2817.0,
+              "max": 2817.0,
+              "median": 2817.0,
+              "min": 2817.0,
+              "p90_p10": 0.0,
+              "start": 2817.0
+            },
+            "rpm_in_idle_region": false,
+            "rpm_trend": "stable",
+            "sample_count": 1,
+            "speed_trend_kmh_s": {
+              "end": 3.5980810234541485,
+              "max": 3.5980810234541485,
+              "median": 3.5980810234541485,
+              "min": 3.5980810234541485,
+              "p90_p10": 0.0,
+              "start": 3.5980810234541485
+            },
+            "thermal_rule": "warming",
+            "thermal_trend_c_s": {
+              "end": 0.09196247930844195,
+              "max": 0.09196247930844195,
+              "median": 0.09196247930844195,
+              "min": 0.09196247930844195,
+              "p90_p10": 0.0,
+              "start": 0.09196247930844195
+            },
+            "thermal_window_delta_c": {
+              "end": 2.0,
+              "max": 2.0,
+              "median": 2.0,
+              "min": 2.0,
+              "p90_p10": 0.0,
+              "start": 2.0
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "stable",
+            "tps_voltage": {
+              "end": 0.48828125,
+              "max": 0.48828125,
+              "median": 0.48828125,
+              "min": 0.48828125,
+              "p90_p10": 0.0,
+              "start": 0.48828125
+            }
+          },
+          "evidence_quality": "insufficient",
+          "operating_context": "unknown",
+          "reason": "Missing, conflicting, transitional, or insufficiently persistent evidence; motion not inferred from RPM.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 297.876,
+          "thermal_phase": "warming",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Missing, conflicting, transitional, or insufficiently persistent evidence; motion not inferred from RPM.",
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 297.876,
+        "thermal_phase": "warming"
+      },
+      {
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "end_s": 300.5,
+        "event": null,
+        "evidence": {
+          "ect_c": {
+            "end": 65.0,
+            "max": 65.0,
+            "median": 65.0,
+            "min": 65.0,
+            "p90_p10": 0.0,
+            "start": 65.0
+          },
+          "rpm": {
+            "end": 2234.0,
+            "max": 4659.0,
+            "median": 3170.0,
+            "min": 1918.0,
+            "p90_p10": 2344.0999999999995,
+            "start": 2490.0
+          },
+          "rpm_in_idle_region": false,
+          "rpm_trend": "decreasing",
+          "sample_count": 10,
+          "speed_end": 9.0,
+          "speed_kmh": {
+            "end": 9.0,
+            "max": 18.0,
+            "median": 12.0,
+            "min": 7.0,
+            "p90_p10": 7.399999999999999,
+            "start": 8.0
+          },
+          "speed_start": 8.0,
+          "speed_trend_kmh_s": {
+            "end": 4.4,
+            "max": 4.4,
+            "median": 3.5709184402228376,
+            "min": 3.3324446814183095,
+            "p90_p10": 1.0675553185816908,
+            "start": 3.3324446814183095
+          },
+          "thermal_rule": "warming",
+          "thermal_trend_c_s": {
+            "end": 0.0975633552037854,
+            "max": 0.09876299350633323,
+            "median": 0.09525259421629316,
+            "min": 0.09195613692268782,
+            "p90_p10": 0.0057214739641736345,
+            "start": 0.09196247930844195
+          },
+          "thermal_window_delta_c": {
+            "end": 2.0,
+            "max": 2.0,
+            "median": 2.0,
+            "min": 2.0,
+            "p90_p10": 0.0,
+            "start": 2.0
+          },
+          "tps_baseline": 0.48828125,
+          "tps_basis": "tps_voltage",
+          "tps_trend": "closing",
+          "tps_voltage": {
+            "end": 0.48828125,
+            "max": 1.484375,
+            "median": 0.498046875,
+            "min": 0.48828125,
+            "p90_p10": 0.837890625,
+            "start": 1.015625
+          }
+        },
+        "evidence_quality": "strong",
+        "human_confirmation": null,
+        "id": "suggest_dd9a10bc5bb3cbff7eba",
+        "notes": "",
+        "operating_context": "moving_variable",
+        "origin": "auto_suggested",
+        "original_proposal": {
+          "config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+          "end_s": 300.5,
+          "event": null,
+          "evidence": {
+            "ect_c": {
+              "end": 65.0,
+              "max": 65.0,
+              "median": 65.0,
+              "min": 65.0,
+              "p90_p10": 0.0,
+              "start": 65.0
+            },
+            "rpm": {
+              "end": 2234.0,
+              "max": 4659.0,
+              "median": 3170.0,
+              "min": 1918.0,
+              "p90_p10": 2344.0999999999995,
+              "start": 2490.0
+            },
+            "rpm_in_idle_region": false,
+            "rpm_trend": "decreasing",
+            "sample_count": 10,
+            "speed_end": 9.0,
+            "speed_kmh": {
+              "end": 9.0,
+              "max": 18.0,
+              "median": 12.0,
+              "min": 7.0,
+              "p90_p10": 7.399999999999999,
+              "start": 8.0
+            },
+            "speed_start": 8.0,
+            "speed_trend_kmh_s": {
+              "end": 4.4,
+              "max": 4.4,
+              "median": 3.5709184402228376,
+              "min": 3.3324446814183095,
+              "p90_p10": 1.0675553185816908,
+              "start": 3.3324446814183095
+            },
+            "thermal_rule": "warming",
+            "thermal_trend_c_s": {
+              "end": 0.0975633552037854,
+              "max": 0.09876299350633323,
+              "median": 0.09525259421629316,
+              "min": 0.09195613692268782,
+              "p90_p10": 0.0057214739641736345,
+              "start": 0.09196247930844195
+            },
+            "thermal_window_delta_c": {
+              "end": 2.0,
+              "max": 2.0,
+              "median": 2.0,
+              "min": 2.0,
+              "p90_p10": 0.0,
+              "start": 2.0
+            },
+            "tps_baseline": 0.48828125,
+            "tps_basis": "tps_voltage",
+            "tps_trend": "closing",
+            "tps_voltage": {
+              "end": 0.48828125,
+              "max": 1.484375,
+              "median": 0.498046875,
+              "min": 0.48828125,
+              "p90_p10": 0.837890625,
+              "start": 1.015625
+            }
+          },
+          "evidence_quality": "strong",
+          "operating_context": "moving_variable",
+          "reason": "Observed movement with mixed or short-lived trends and no persistent steady state.",
+          "rule_config": {
+            "acceleration_kmh_s": 0.7,
+            "engine_persistence_s": 3.0,
+            "engine_running_rpm": 400.0,
+            "gap_interval_multiplier": 8.0,
+            "gap_min_s": 3.0,
+            "idle_region_high_rpm": 2200.0,
+            "idle_region_low_rpm": 1000.0,
+            "maximum_speed_rate_kmh_s": 35.0,
+            "minimum_segment_s": 4.0,
+            "moving_enter_kmh": 3.0,
+            "smoothing_s": 1.0,
+            "speed_trend_delta_kmh": 3.0,
+            "speed_trend_window_s": 6.0,
+            "stable_rate_c_s": 0.03,
+            "stable_spread_c": 3.0,
+            "stationary_speed_kmh": 1.0,
+            "steady_spread_kmh": 3.0,
+            "steady_window_s": 8.0,
+            "stop_go_cycles": 3,
+            "stop_go_window_s": 180.0,
+            "thermal_minimum_window_s": 20.0,
+            "thermal_persistence_s": 20.0,
+            "thermal_window_s": 60.0,
+            "tps_burst_above_baseline_raw": 25.0,
+            "tps_burst_above_baseline_v": 0.4,
+            "tps_burst_delta_raw": 20.0,
+            "tps_burst_delta_v": 0.3,
+            "tps_burst_hold_s": 0.5,
+            "tps_burst_rate_raw_s": 20.0,
+            "tps_burst_rate_v_s": 0.35,
+            "tps_event_cooldown_s": 3.0,
+            "tps_opening_window_s": 2.0,
+            "warming_delta_c": 2.0,
+            "warming_rate_c_s": 0.05
+          },
+          "rule_version": "ctx2-rules-v1",
+          "signal_provenance": {
+            "alignment": "direct_source_record_order",
+            "available_count": 1202,
+            "calibration": "rider_corroborated_not_gps_calibrated",
+            "decoder_version": "ctx2-honda-table17-speed-v1",
+            "native_byte_index": 19,
+            "origin": "original_raw",
+            "raw_source_path": "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/raw/session_000014.jsonl",
+            "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+            "sample_offset": 0,
+            "signal": "vehicle_speed_kmh",
+            "status": "available",
+            "total_count": 1202,
+            "unit": "km/h",
+            "validation_counts": {
+              "normalized_24": 1202,
+              "valid_frames": 1202
+            }
+          },
+          "start_s": 298.1265,
+          "thermal_phase": "warming",
+          "timestamp_basis": "captured_timestamp_ms"
+        },
+        "reason": "Observed movement with mixed or short-lived trends and no persistent steady state.",
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "rule_version": "ctx2-rules-v1",
+        "start_s": 298.1265,
+        "thermal_phase": "warming"
+      }
+    ],
+    "session_id": "session_000014",
+    "signal_provenance": {
+      "alignment": "direct_source_record_order",
+      "available_count": 1202,
+      "calibration": "rider_corroborated_not_gps_calibrated",
+      "decoder_version": "ctx2-honda-table17-speed-v1",
+      "native_byte_index": 19,
+      "origin": "original_raw",
+      "raw_source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+      "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "sample_offset": 0,
+      "signal": "vehicle_speed_kmh",
+      "status": "available",
+      "total_count": 1202,
+      "unit": "km/h",
+      "validation_counts": {
+        "normalized_24": 1202,
+        "valid_frames": 1202
+      }
+    },
+    "source": {
+      "augmentation_id": null,
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "derivation_type": null,
+      "filename": "real_data/fulldata_afterclean/session_000014.jsonl",
+      "session_id": "session_000014",
+      "sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "source_session_id": null
+    },
+    "taxonomy_version": "context-taxonomy-v2",
+    "timestamp_integrity": {
+      "basis": "captured_timestamp_ms",
+      "capture_gaps": [],
+      "gap_duration_s": 0,
+      "gap_threshold_s": 3.0,
+      "median_interval_s": 0.25,
+      "status": "valid"
+    }
+  },
+  "event_markers": [
+    {
+      "end_index": 1197,
+      "end_s": 299.5,
+      "event": "throttle_burst",
+      "id": "auto_suggest_0f651a272cf632c0788c",
+      "review_provenance": "bulk_operator_endorsement",
+      "start_index": 1191,
+      "start_s": 298.002
+    }
+  ],
+  "macro_review": {
+    "detailed_content_sha256": "cdd6bc5379c60f00af5afc9b0f479df2d829df2c71b3505f064210a8bdd20c6f",
+    "episodes": [
+      {
+        "axis": "operating",
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "child_ids": [
+          "suggest_7cd371104465585120a4",
+          "suggest_8d67b7ee48de49d7c803",
+          "suggest_9a90a180e507678ac7d6"
+        ],
+        "end_s": 297.876,
+        "event_ids": [],
+        "evidence": {
+          "boundary_samples": [
+            {
+              "boundary_s": 0.0,
+              "ect_c": 32.0,
+              "rpm": 723.0,
+              "sample_elapsed_s": 0.0,
+              "sequence": 0,
+              "timestamp_ms": 0.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 0.0
+            },
+            {
+              "boundary_s": 297.876,
+              "ect_c": 65.0,
+              "rpm": 2667.0,
+              "sample_elapsed_s": 297.75,
+              "sequence": 1190,
+              "timestamp_ms": 297750.0,
+              "tps_voltage": 1.19140625,
+              "vehicle_speed_kmh": 0.0
+            }
+          ],
+          "sample_count": 1191,
+          "signals": {
+            "ect_c": {
+              "available_count": 1191,
+              "end": 65.0,
+              "max": 65.0,
+              "min": 32.0,
+              "start": 32.0
+            },
+            "rpm": {
+              "available_count": 1191,
+              "end": 2667.0,
+              "max": 2667.0,
+              "min": 723.0,
+              "start": 723.0
+            },
+            "tps_raw": {
+              "available_count": 1191,
+              "end": 28.0,
+              "max": 28.0,
+              "min": 0.0,
+              "start": 0.0
+            },
+            "tps_voltage": {
+              "available_count": 1191,
+              "end": 1.19140625,
+              "max": 1.19140625,
+              "min": 0.48828125,
+              "start": 0.48828125
+            },
+            "vehicle_speed_kmh": {
+              "available_count": 1191,
+              "end": 0.0,
+              "max": 0.0,
+              "min": 0.0,
+              "start": 0.0
+            }
+          }
+        },
+        "id": "macro-1fcb6bc0ed2fd1af60691421",
+        "label": "stationary_running",
+        "notes": "",
+        "original_proposal": {
+          "axis": "operating",
+          "child_ids": [
+            "suggest_7cd371104465585120a4",
+            "suggest_8d67b7ee48de49d7c803",
+            "suggest_9a90a180e507678ac7d6"
+          ],
+          "end_s": 297.876,
+          "label": "stationary_running",
+          "start_s": 0.0
+        },
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "start_s": 0.0
+      },
+      {
+        "axis": "operating",
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "child_ids": [
+          "suggest_31f01d533fea0c123c0e"
+        ],
+        "end_s": 298.1265,
+        "event_ids": [
+          "suggest_0f651a272cf632c0788c"
+        ],
+        "evidence": {
+          "boundary_samples": [
+            {
+              "boundary_s": 297.876,
+              "ect_c": 65.0,
+              "rpm": 2667.0,
+              "sample_elapsed_s": 297.75,
+              "sequence": 1190,
+              "timestamp_ms": 297750.0,
+              "tps_voltage": 1.19140625,
+              "vehicle_speed_kmh": 0.0
+            },
+            {
+              "boundary_s": 298.1265,
+              "ect_c": 65.0,
+              "rpm": 2068.0,
+              "sample_elapsed_s": 298.251,
+              "sequence": 1192,
+              "timestamp_ms": 298251.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 8.0
+            }
+          ],
+          "sample_count": 1,
+          "signals": {
+            "ect_c": {
+              "available_count": 1,
+              "end": 65.0,
+              "max": 65.0,
+              "min": 65.0,
+              "start": 65.0
+            },
+            "rpm": {
+              "available_count": 1,
+              "end": 2817.0,
+              "max": 2817.0,
+              "min": 2817.0,
+              "start": 2817.0
+            },
+            "tps_raw": {
+              "available_count": 1,
+              "end": 0.0,
+              "max": 0.0,
+              "min": 0.0,
+              "start": 0.0
+            },
+            "tps_voltage": {
+              "available_count": 1,
+              "end": 0.48828125,
+              "max": 0.48828125,
+              "min": 0.48828125,
+              "start": 0.48828125
+            },
+            "vehicle_speed_kmh": {
+              "available_count": 1,
+              "end": 9.0,
+              "max": 9.0,
+              "min": 9.0,
+              "start": 9.0
+            }
+          }
+        },
+        "id": "macro-b684251f2476ef15463c2d08",
+        "label": "unknown",
+        "notes": "",
+        "original_proposal": {
+          "axis": "operating",
+          "child_ids": [
+            "suggest_31f01d533fea0c123c0e"
+          ],
+          "end_s": 298.1265,
+          "label": "unknown",
+          "start_s": 297.876
+        },
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "start_s": 297.876
+      },
+      {
+        "axis": "operating",
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "child_ids": [
+          "suggest_dd9a10bc5bb3cbff7eba"
+        ],
+        "end_s": 300.5,
+        "event_ids": [
+          "suggest_0f651a272cf632c0788c"
+        ],
+        "evidence": {
+          "boundary_samples": [
+            {
+              "boundary_s": 298.1265,
+              "ect_c": 65.0,
+              "rpm": 2068.0,
+              "sample_elapsed_s": 298.251,
+              "sequence": 1192,
+              "timestamp_ms": 298251.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 8.0
+            },
+            {
+              "boundary_s": 300.5,
+              "ect_c": 65.0,
+              "rpm": 1918.0,
+              "sample_elapsed_s": 300.5,
+              "sequence": 1201,
+              "timestamp_ms": 300500.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 8.0
+            }
+          ],
+          "sample_count": 10,
+          "signals": {
+            "ect_c": {
+              "available_count": 10,
+              "end": 65.0,
+              "max": 65.0,
+              "min": 65.0,
+              "start": 65.0
+            },
+            "rpm": {
+              "available_count": 10,
+              "end": 1918.0,
+              "max": 4659.0,
+              "min": 1918.0,
+              "start": 2068.0
+            },
+            "tps_raw": {
+              "available_count": 10,
+              "end": 0.0,
+              "max": 39.0,
+              "min": 0.0,
+              "start": 0.0
+            },
+            "tps_voltage": {
+              "available_count": 10,
+              "end": 0.48828125,
+              "max": 1.484375,
+              "min": 0.48828125,
+              "start": 0.48828125
+            },
+            "vehicle_speed_kmh": {
+              "available_count": 10,
+              "end": 8.0,
+              "max": 18.0,
+              "min": 7.0,
+              "start": 8.0
+            }
+          }
+        },
+        "id": "macro-24f0880e4ac3cdc6ceda71c5",
+        "label": "moving_episode",
+        "notes": "",
+        "original_proposal": {
+          "axis": "operating",
+          "child_ids": [
+            "suggest_dd9a10bc5bb3cbff7eba"
+          ],
+          "end_s": 300.5,
+          "label": "moving_episode",
+          "start_s": 298.1265
+        },
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "start_s": 298.1265
+      },
+      {
+        "axis": "thermal",
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "child_ids": [
+          "suggest_7cd371104465585120a4"
+        ],
+        "end_s": 227.625,
+        "event_ids": [],
+        "evidence": {
+          "boundary_samples": [
+            {
+              "boundary_s": 0.0,
+              "ect_c": 32.0,
+              "rpm": 723.0,
+              "sample_elapsed_s": 0.0,
+              "sequence": 0,
+              "timestamp_ms": 0.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 0.0
+            },
+            {
+              "boundary_s": 227.625,
+              "ect_c": 59.0,
+              "rpm": 1422.0,
+              "sample_elapsed_s": 227.75,
+              "sequence": 911,
+              "timestamp_ms": 227750.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 0.0
+            }
+          ],
+          "sample_count": 911,
+          "signals": {
+            "ect_c": {
+              "available_count": 911,
+              "end": 59.0,
+              "max": 59.0,
+              "min": 32.0,
+              "start": 32.0
+            },
+            "rpm": {
+              "available_count": 911,
+              "end": 1426.0,
+              "max": 2129.0,
+              "min": 723.0,
+              "start": 723.0
+            },
+            "tps_raw": {
+              "available_count": 911,
+              "end": 0.0,
+              "max": 0.0,
+              "min": 0.0,
+              "start": 0.0
+            },
+            "tps_voltage": {
+              "available_count": 911,
+              "end": 0.48828125,
+              "max": 0.48828125,
+              "min": 0.48828125,
+              "start": 0.48828125
+            },
+            "vehicle_speed_kmh": {
+              "available_count": 911,
+              "end": 0.0,
+              "max": 0.0,
+              "min": 0.0,
+              "start": 0.0
+            }
+          }
+        },
+        "id": "macro-d58c92d2dcce8a9bea57e52e",
+        "label": "warming",
+        "notes": "",
+        "original_proposal": {
+          "axis": "thermal",
+          "child_ids": [
+            "suggest_7cd371104465585120a4"
+          ],
+          "end_s": 227.625,
+          "label": "warming",
+          "start_s": 0.0
+        },
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "start_s": 0.0
+      },
+      {
+        "axis": "thermal",
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "child_ids": [
+          "suggest_8d67b7ee48de49d7c803"
+        ],
+        "end_s": 232.3755,
+        "event_ids": [],
+        "evidence": {
+          "boundary_samples": [
+            {
+              "boundary_s": 227.625,
+              "ect_c": 59.0,
+              "rpm": 1422.0,
+              "sample_elapsed_s": 227.75,
+              "sequence": 911,
+              "timestamp_ms": 227750.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 0.0
+            },
+            {
+              "boundary_s": 232.3755,
+              "ect_c": 60.0,
+              "rpm": 1432.0,
+              "sample_elapsed_s": 232.25,
+              "sequence": 929,
+              "timestamp_ms": 232250.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 0.0
+            }
+          ],
+          "sample_count": 19,
+          "signals": {
+            "ect_c": {
+              "available_count": 19,
+              "end": 60.0,
+              "max": 60.0,
+              "min": 59.0,
+              "start": 59.0
+            },
+            "rpm": {
+              "available_count": 19,
+              "end": 1432.0,
+              "max": 1433.0,
+              "min": 1350.0,
+              "start": 1422.0
+            },
+            "tps_raw": {
+              "available_count": 19,
+              "end": 0.0,
+              "max": 0.0,
+              "min": 0.0,
+              "start": 0.0
+            },
+            "tps_voltage": {
+              "available_count": 19,
+              "end": 0.48828125,
+              "max": 0.48828125,
+              "min": 0.48828125,
+              "start": 0.48828125
+            },
+            "vehicle_speed_kmh": {
+              "available_count": 19,
+              "end": 0.0,
+              "max": 0.0,
+              "min": 0.0,
+              "start": 0.0
+            }
+          }
+        },
+        "id": "macro-13f1ff34ac4e56cea73ad672",
+        "label": "unknown",
+        "notes": "",
+        "original_proposal": {
+          "axis": "thermal",
+          "child_ids": [
+            "suggest_8d67b7ee48de49d7c803"
+          ],
+          "end_s": 232.3755,
+          "label": "unknown",
+          "start_s": 227.625
+        },
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "start_s": 227.625
+      },
+      {
+        "axis": "thermal",
+        "bulk_endorsement": {
+          "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+          "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+          "approval_source": "data_collector",
+          "approval_type": "bulk_operator_endorsement",
+          "individual_interval_review": false,
+          "reviewed_at": "2026-10-11T10:28:40.220387+00:00"
+        },
+        "child_ids": [
+          "suggest_9a90a180e507678ac7d6",
+          "suggest_31f01d533fea0c123c0e",
+          "suggest_dd9a10bc5bb3cbff7eba"
+        ],
+        "end_s": 300.5,
+        "event_ids": [
+          "suggest_0f651a272cf632c0788c"
+        ],
+        "evidence": {
+          "boundary_samples": [
+            {
+              "boundary_s": 232.3755,
+              "ect_c": 60.0,
+              "rpm": 1432.0,
+              "sample_elapsed_s": 232.25,
+              "sequence": 929,
+              "timestamp_ms": 232250.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 0.0
+            },
+            {
+              "boundary_s": 300.5,
+              "ect_c": 65.0,
+              "rpm": 1918.0,
+              "sample_elapsed_s": 300.5,
+              "sequence": 1201,
+              "timestamp_ms": 300500.0,
+              "tps_voltage": 0.48828125,
+              "vehicle_speed_kmh": 8.0
+            }
+          ],
+          "sample_count": 272,
+          "signals": {
+            "ect_c": {
+              "available_count": 272,
+              "end": 65.0,
+              "max": 65.0,
+              "min": 60.0,
+              "start": 60.0
+            },
+            "rpm": {
+              "available_count": 272,
+              "end": 1918.0,
+              "max": 4659.0,
+              "min": 1335.0,
+              "start": 1445.0
+            },
+            "tps_raw": {
+              "available_count": 272,
+              "end": 0.0,
+              "max": 39.0,
+              "min": 0.0,
+              "start": 0.0
+            },
+            "tps_voltage": {
+              "available_count": 272,
+              "end": 0.48828125,
+              "max": 1.484375,
+              "min": 0.48828125,
+              "start": 0.48828125
+            },
+            "vehicle_speed_kmh": {
+              "available_count": 272,
+              "end": 8.0,
+              "max": 18.0,
+              "min": 0.0,
+              "start": 0.0
+            }
+          }
+        },
+        "id": "macro-892e3e8c86623fa188242c47",
+        "label": "warming",
+        "notes": "",
+        "original_proposal": {
+          "axis": "thermal",
+          "child_ids": [
+            "suggest_9a90a180e507678ac7d6",
+            "suggest_31f01d533fea0c123c0e",
+            "suggest_dd9a10bc5bb3cbff7eba"
+          ],
+          "end_s": 300.5,
+          "label": "warming",
+          "start_s": 232.3755
+        },
+        "review_history": [
+          {
+            "action": "bulk_endorse",
+            "approval_id": "ecuread-filtered-raw-18-v1:bulk-endorsement:d4abdcb2ec4dd777a15c2fca2784e84e17b1a4011b6526d182a9de4d484ad64f",
+            "approval_record_sha256": "65b6d38fd76efb187010cf3629e2339ee1e8ac44144b1bc639c1f5369fee32f7",
+            "approval_source": "data_collector",
+            "approval_type": "bulk_operator_endorsement",
+            "individual_interval_review": false,
+            "reviewed_at": "2026-10-11T10:28:40.220387+00:00",
+            "time_basis": "not_measured"
+          }
+        ],
+        "review_status": "accepted",
+        "start_s": 232.3755
+      }
+    ],
+    "generated_at": "2026-10-11T08:14:02.715740+00:00",
+    "retained_reviews": [],
+    "rule_version": "ctx24-macro-v1",
+    "schema_version": "context-macro-review-v1",
+    "session_id": "session_000014",
+    "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6"
+  },
+  "tracks": {
+    "macro_operating": [
+      {
+        "child_ids": [
+          "suggest_7cd371104465585120a4",
+          "suggest_8d67b7ee48de49d7c803",
+          "suggest_9a90a180e507678ac7d6"
+        ],
+        "end_index": 1191,
+        "end_s": 297.876,
+        "event_ids": [],
+        "id": "macro-1fcb6bc0ed2fd1af60691421",
+        "label": "stationary_running",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 0,
+        "start_s": 0.0
+      },
+      {
+        "child_ids": [
+          "suggest_31f01d533fea0c123c0e"
+        ],
+        "end_index": 1192,
+        "end_s": 298.1265,
+        "event_ids": [
+          "suggest_0f651a272cf632c0788c"
+        ],
+        "id": "macro-b684251f2476ef15463c2d08",
+        "label": "unknown",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 1191,
+        "start_s": 297.876
+      },
+      {
+        "child_ids": [
+          "suggest_dd9a10bc5bb3cbff7eba"
+        ],
+        "end_index": 1202,
+        "end_s": 300.5,
+        "event_ids": [
+          "suggest_0f651a272cf632c0788c"
+        ],
+        "id": "macro-24f0880e4ac3cdc6ceda71c5",
+        "label": "moving_episode",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 1192,
+        "start_s": 298.1265
+      }
+    ],
+    "macro_thermal": [
+      {
+        "child_ids": [
+          "suggest_7cd371104465585120a4"
+        ],
+        "end_index": 911,
+        "end_s": 227.625,
+        "event_ids": [],
+        "id": "macro-d58c92d2dcce8a9bea57e52e",
+        "label": "warming",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 0,
+        "start_s": 0.0
+      },
+      {
+        "child_ids": [
+          "suggest_8d67b7ee48de49d7c803"
+        ],
+        "end_index": 930,
+        "end_s": 232.3755,
+        "event_ids": [],
+        "id": "macro-13f1ff34ac4e56cea73ad672",
+        "label": "unknown",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 911,
+        "start_s": 227.625
+      },
+      {
+        "child_ids": [
+          "suggest_9a90a180e507678ac7d6",
+          "suggest_31f01d533fea0c123c0e",
+          "suggest_dd9a10bc5bb3cbff7eba"
+        ],
+        "end_index": 1202,
+        "end_s": 300.5,
+        "event_ids": [
+          "suggest_0f651a272cf632c0788c"
+        ],
+        "id": "macro-892e3e8c86623fa188242c47",
+        "label": "warming",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 930,
+        "start_s": 232.3755
+      }
+    ],
+    "micro_operating": [
+      {
+        "end_index": 911,
+        "end_s": 227.625,
+        "id": "auto_suggest_7cd371104465585120a4",
+        "label": "stationary_running",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 0,
+        "start_s": 0.0,
+        "suggestion_id": "suggest_7cd371104465585120a4"
+      },
+      {
+        "end_index": 930,
+        "end_s": 232.3755,
+        "id": "auto_suggest_8d67b7ee48de49d7c803",
+        "label": "stationary_running",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 911,
+        "start_s": 227.625,
+        "suggestion_id": "suggest_8d67b7ee48de49d7c803"
+      },
+      {
+        "end_index": 1191,
+        "end_s": 297.876,
+        "id": "auto_suggest_9a90a180e507678ac7d6",
+        "label": "stationary_running",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 930,
+        "start_s": 232.3755,
+        "suggestion_id": "suggest_9a90a180e507678ac7d6"
+      },
+      {
+        "end_index": 1192,
+        "end_s": 298.1265,
+        "id": "auto_suggest_31f01d533fea0c123c0e",
+        "label": "unknown",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 1191,
+        "start_s": 297.876,
+        "suggestion_id": "suggest_31f01d533fea0c123c0e"
+      },
+      {
+        "end_index": 1202,
+        "end_s": 300.5,
+        "id": "auto_suggest_dd9a10bc5bb3cbff7eba",
+        "label": "moving_variable",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 1192,
+        "start_s": 298.1265,
+        "suggestion_id": "suggest_dd9a10bc5bb3cbff7eba"
+      }
+    ],
+    "micro_thermal": [
+      {
+        "end_index": 911,
+        "end_s": 227.625,
+        "id": "auto_suggest_7cd371104465585120a4",
+        "label": "warming",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 0,
+        "start_s": 0.0,
+        "suggestion_id": "suggest_7cd371104465585120a4"
+      },
+      {
+        "end_index": 930,
+        "end_s": 232.3755,
+        "id": "auto_suggest_8d67b7ee48de49d7c803",
+        "label": "unknown",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 911,
+        "start_s": 227.625,
+        "suggestion_id": "suggest_8d67b7ee48de49d7c803"
+      },
+      {
+        "end_index": 1191,
+        "end_s": 297.876,
+        "id": "auto_suggest_9a90a180e507678ac7d6",
+        "label": "warming",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 930,
+        "start_s": 232.3755,
+        "suggestion_id": "suggest_9a90a180e507678ac7d6"
+      },
+      {
+        "end_index": 1192,
+        "end_s": 298.1265,
+        "id": "auto_suggest_31f01d533fea0c123c0e",
+        "label": "warming",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 1191,
+        "start_s": 297.876,
+        "suggestion_id": "suggest_31f01d533fea0c123c0e"
+      },
+      {
+        "end_index": 1202,
+        "end_s": 300.5,
+        "id": "auto_suggest_dd9a10bc5bb3cbff7eba",
+        "label": "warming",
+        "review_provenance": "bulk_operator_endorsement",
+        "start_index": 1192,
+        "start_s": 298.1265,
+        "suggestion_id": "suggest_dd9a10bc5bb3cbff7eba"
+      }
+    ]
+  }
+}

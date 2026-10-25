@@ -1,0 +1,3328 @@
+{
+  "accepted_counts_by_provenance": {
+    "bulk_operator_endorsement": 5531,
+    "individually_confirmed": 302
+  },
+  "accepted_macro_within_axis_overlap_count": 0,
+  "accepted_micro_overlap_count": 0,
+  "canonical_sample_count": 100688,
+  "capture_groups_unique": true,
+  "duration_s": 25189.348,
+  "event_count": 1559,
+  "event_distribution": {
+    "engine_stop": 8,
+    "repeated_stop_go": 4,
+    "throttle_burst": 1547
+  },
+  "human_boundary_accuracy": "not_measured",
+  "integrity_validation": "All source SHAs, annotation bounds, non-overlap and macro references checked; validation failures abort publication",
+  "machine_verified_independent_captures": null,
+  "macro_count": 1190,
+  "manual_interval_review_time": "not_measured_by_this_task",
+  "micro_interval_count": 3084,
+  "operator_attested_independent_captures": 18,
+  "schema_version": "context-approved-dataset-audit-v1",
+  "session_count": 18,
+  "sessions": [
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 6,
+        "individually_confirmed": 8
+      },
+      "annotation_sha256": "150a0f5df71499c6a26de93bffb88fb617b1e743582ec50e0083fdd27edff846",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "d0a17a8a18e83d5a225440a124fdeb0f7ea86afb52c2d37ee67110c26995a34a",
+        "suggestion_sha256": "8c738838021fdcb2396f25a60c3534f0a0b2b7b5d2c2f0121602af3633e057e1"
+      },
+      "canonical_sample_count": 117,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 28.999,
+      "event_count": 1,
+      "event_distribution": {
+        "throttle_burst": 1
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 8,
+        "stationary_proposals_preserved": 4
+      },
+      "macro_count": 6,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "e94fd9f9f26bc18af6bbde8b67f3eb2fefbd7081dc16fa4b69ae40d20d371cf1",
+      "macro_status_counts": {
+        "accepted": 6
+      },
+      "mapping": {
+        "samples": 117,
+        "trailing_samples_after_last_window": 7,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 6,
+            "homogeneous": 1
+          },
+          "macro_thermal": {
+            "homogeneous": 7
+          },
+          "micro_operating": {
+            "ambiguous": 7
+          },
+          "micro_thermal": {
+            "ambiguous": 7
+          }
+        },
+        "windows": 7
+      },
+      "micro_interval_count": 7,
+      "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+      "proposal_status_counts": {
+        "accepted": 8
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000001",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 117,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+        "raw_source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 117,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 117,
+          "valid_frames": 117
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+      "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+      "suggestions_sha256": "8c738838021fdcb2396f25a60c3534f0a0b2b7b5d2c2f0121602af3633e057e1",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 5,
+          "accepted_duration_s": 28.999,
+          "duration_by_context_s": {
+            "moving_episode": 5.749500000000001,
+            "stationary_running": 20.125,
+            "unknown": 3.1244999999999976
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 28.999
+          },
+          "explicit_unknown_duration_s": 3.1244999999999976,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 1,
+          "accepted_duration_s": 28.999,
+          "duration_by_context_s": {
+            "warming": 28.999
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 28.999
+          },
+          "explicit_unknown_duration_s": 0,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 7,
+          "accepted_duration_s": 28.999,
+          "duration_by_context_s": {
+            "moving_variable": 5.749500000000001,
+            "stationary_running": 20.125,
+            "unknown": 3.1244999999999976
+          },
+          "duration_by_provenance_s": {
+            "individually_confirmed": 28.999
+          },
+          "explicit_unknown_duration_s": 3.1244999999999976,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 7,
+          "accepted_duration_s": 28.999,
+          "duration_by_context_s": {
+            "warming": 28.999
+          },
+          "duration_by_provenance_s": {
+            "individually_confirmed": 28.999
+          },
+          "explicit_unknown_duration_s": 0,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 55,
+        "individually_confirmed": 287
+      },
+      "annotation_sha256": "977ed05af0b835bb58e8712d48092cea634f500d380491e828ba2e8950262137",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "ad423e91eefec5f445a572645e1e1d625173a80727253886d56c460648185849",
+        "suggestion_sha256": "ed9efcf4c350bf1cb9a604a2767e313f528ec28048320e4a203c8cc64637b204"
+      },
+      "canonical_sample_count": 5781,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 1446.503,
+      "event_count": 84,
+      "event_distribution": {
+        "engine_stop": 1,
+        "throttle_burst": 83
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 287,
+        "stationary_proposals_preserved": 3
+      },
+      "macro_count": 55,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "9ae9aa4033cfa54c61d569e0be22e31be6390a7c0af7235a13b9393bb33b7053",
+      "macro_status_counts": {
+        "accepted": 55
+      },
+      "mapping": {
+        "samples": 5781,
+        "trailing_samples_after_last_window": 1,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 130,
+            "homogeneous": 444
+          },
+          "macro_thermal": {
+            "abstained": 25,
+            "ambiguous": 43,
+            "homogeneous": 506
+          },
+          "micro_operating": {
+            "ambiguous": 523,
+            "homogeneous": 51
+          },
+          "micro_thermal": {
+            "abstained": 5,
+            "ambiguous": 523,
+            "homogeneous": 46
+          }
+        },
+        "windows": 574
+      },
+      "micro_interval_count": 203,
+      "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "proposal_status_counts": {
+        "accepted": 287
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000002",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 5781,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+        "raw_source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 5781,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 5781,
+          "valid_frames": 5781
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+      "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "suggestions_sha256": "ed9efcf4c350bf1cb9a604a2767e313f528ec28048320e4a203c8cc64637b204",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 45,
+          "accepted_duration_s": 1446.503,
+          "duration_by_context_s": {
+            "engine_off": 10.375999999999976,
+            "moving_episode": 1317.7474999999997,
+            "moving_steady": 63.000000000000114,
+            "stationary_running": 31.999000000000024,
+            "unknown": 23.38050000000017
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1446.503
+          },
+          "explicit_unknown_duration_s": 23.38050000000017,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 10,
+          "accepted_duration_s": 1446.503,
+          "duration_by_context_s": {
+            "stable": 1148.502,
+            "unknown": 117.375,
+            "warming": 180.626
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1446.503
+          },
+          "explicit_unknown_duration_s": 117.375,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 203,
+          "accepted_duration_s": 1446.503,
+          "duration_by_context_s": {
+            "engine_off": 10.375999999999976,
+            "moving_accelerating": 267.50850000000025,
+            "moving_decelerating": 289.7475000000001,
+            "moving_steady": 63.000000000000114,
+            "moving_variable": 760.4914999999993,
+            "stationary_running": 31.999000000000024,
+            "unknown": 23.38050000000017
+          },
+          "duration_by_provenance_s": {
+            "individually_confirmed": 1446.503
+          },
+          "explicit_unknown_duration_s": 23.38050000000017,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 203,
+          "accepted_duration_s": 1446.503,
+          "duration_by_context_s": {
+            "stable": 1148.502,
+            "unknown": 117.375,
+            "warming": 180.626
+          },
+          "duration_by_provenance_s": {
+            "individually_confirmed": 1446.503
+          },
+          "explicit_unknown_duration_s": 117.375,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 75,
+        "individually_confirmed": 7
+      },
+      "annotation_sha256": "cbe1a4046f4b91f3b5122ba067676f44d6681662d10de4e2e72e880d0abbff2a",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "2eee5b4ca03dbcc412455edc4bc2790a9b24bf1e3ffa7732716aad82bf81ec4d",
+        "suggestion_sha256": "9d3bef981ed85756328b5bc78129c3790ade5b90cef3b667b9e290347141f910"
+      },
+      "canonical_sample_count": 1249,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 312.499,
+      "event_count": 32,
+      "event_distribution": {
+        "throttle_burst": 32
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 7,
+        "stationary_proposals_preserved": 2
+      },
+      "macro_count": 9,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "6b4bd5b45f0ca9873b6afc6493928f6474a76c1b56ab33aa03c8980f51891758",
+      "macro_status_counts": {
+        "accepted": 9
+      },
+      "mapping": {
+        "samples": 1249,
+        "trailing_samples_after_last_window": 9,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 19,
+            "homogeneous": 101
+          },
+          "macro_thermal": {
+            "ambiguous": 1,
+            "homogeneous": 119
+          },
+          "micro_operating": {
+            "ambiguous": 94,
+            "homogeneous": 26
+          },
+          "micro_thermal": {
+            "ambiguous": 94,
+            "homogeneous": 26
+          }
+        },
+        "windows": 120
+      },
+      "micro_interval_count": 41,
+      "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+      "proposal_status_counts": {
+        "accepted": 73
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000003",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 1249,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+        "raw_source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 1249,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 1249,
+          "valid_frames": 1249
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+      "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+      "suggestions_sha256": "39a25bc7786c675c073b48304a41ff9e1f3f10347c0212686f880b2eac575184",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 7,
+          "accepted_duration_s": 312.499,
+          "duration_by_context_s": {
+            "moving_episode": 228.62650000000002,
+            "moving_steady": 4.0,
+            "stationary_running": 79.622,
+            "unknown": 0.2505000000000024
+          },
+          "duration_by_provenance_s": {
+            "individually_confirmed": 312.499
+          },
+          "explicit_unknown_duration_s": 0.2505000000000024,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 2,
+          "accepted_duration_s": 312.499,
+          "duration_by_context_s": {
+            "stable": 307.8735,
+            "unknown": 4.625500000000045
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 312.499
+          },
+          "explicit_unknown_duration_s": 4.625500000000045,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 41,
+          "accepted_duration_s": 312.499,
+          "duration_by_context_s": {
+            "moving_accelerating": 57.003499999999974,
+            "moving_decelerating": 56.24950000000004,
+            "moving_steady": 4.0,
+            "moving_variable": 115.3735,
+            "stationary_running": 79.622,
+            "unknown": 0.2505000000000024
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 312.499
+          },
+          "explicit_unknown_duration_s": 0.2505000000000024,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 41,
+          "accepted_duration_s": 312.499,
+          "duration_by_context_s": {
+            "stable": 307.8735,
+            "unknown": 4.625500000000045
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 312.499
+          },
+          "explicit_unknown_duration_s": 4.625500000000045,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 212
+      },
+      "annotation_sha256": "fa440cb16ceb352cfd06eb57f9001957bf64a09368edde8fc866f66c77909b87",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "de653bd7d8b9422d27b10dffdf294e623c71e85cc531f09bec3f518ed56eb3a7",
+        "suggestion_sha256": "a60aa4344875a751a6ce129129b88d1873a0c15aa6762033c83df7af42bf768b"
+      },
+      "canonical_sample_count": 3017,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 755.001,
+      "event_count": 64,
+      "event_distribution": {
+        "repeated_stop_go": 1,
+        "throttle_burst": 63
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 8
+      },
+      "macro_count": 38,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "9d83bbfa00392731e844ad1d6531d455b7dd3102458941e533bf6a5054ed2b79",
+      "macro_status_counts": {
+        "accepted": 38
+      },
+      "mapping": {
+        "samples": 3017,
+        "trailing_samples_after_last_window": 7,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 81,
+            "homogeneous": 216
+          },
+          "macro_thermal": {
+            "abstained": 135,
+            "ambiguous": 39,
+            "homogeneous": 123
+          },
+          "micro_operating": {
+            "ambiguous": 264,
+            "homogeneous": 33
+          },
+          "micro_thermal": {
+            "abstained": 18,
+            "ambiguous": 264,
+            "homogeneous": 15
+          }
+        },
+        "windows": 297
+      },
+      "micro_interval_count": 110,
+      "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "proposal_status_counts": {
+        "accepted": 174
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000004",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 3017,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+        "raw_source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 3017,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 3017,
+          "valid_frames": 3017
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+      "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "suggestions_sha256": "434ef8510bdc41b3b83ddef1e33f30504811d99154a9c21c55d35680e3649c6b",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 29,
+          "accepted_duration_s": 755.001,
+          "duration_by_context_s": {
+            "moving_episode": 616.2460000000001,
+            "moving_steady": 15.00049999999996,
+            "stationary_running": 116.50349999999992,
+            "unknown": 7.251000000000035
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 755.001
+          },
+          "explicit_unknown_duration_s": 7.251000000000035,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 9,
+          "accepted_duration_s": 755.001,
+          "duration_by_context_s": {
+            "stable": 369.25149999999996,
+            "unknown": 385.7495
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 755.001
+          },
+          "explicit_unknown_duration_s": 385.7495,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 110,
+          "accepted_duration_s": 755.001,
+          "duration_by_context_s": {
+            "moving_accelerating": 128.00099999999998,
+            "moving_decelerating": 154.49499999999998,
+            "moving_steady": 15.00049999999996,
+            "moving_variable": 333.7500000000001,
+            "stationary_running": 116.50349999999992,
+            "unknown": 7.251000000000035
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 755.001
+          },
+          "explicit_unknown_duration_s": 7.251000000000035,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 110,
+          "accepted_duration_s": 755.001,
+          "duration_by_context_s": {
+            "stable": 369.2515,
+            "unknown": 385.7495
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 755.001
+          },
+          "explicit_unknown_duration_s": 385.7495,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 451
+      },
+      "annotation_sha256": "6b4f5262da99e408de53f7ca8fe0241c56f188b3d14d0de64aeb0e88581b478b",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "b9b5c3f13331852f2dd8b0abc14995d7f531a64b990846a5a9f3789bb0ed149e",
+        "suggestion_sha256": "29fb6cbadea2aa7319e539b6f740bb1fb8a3e3e8b1eafef202d0622f812602d7"
+      },
+      "canonical_sample_count": 7851,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 1963.997,
+      "event_count": 138,
+      "event_distribution": {
+        "throttle_burst": 138
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 5
+      },
+      "macro_count": 58,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "3dfd6163d94c010626e16ccf87ffd75fa7f924c6eede394f58ec7b3df1a28414",
+      "macro_status_counts": {
+        "accepted": 58
+      },
+      "mapping": {
+        "samples": 7851,
+        "trailing_samples_after_last_window": 1,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 138,
+            "homogeneous": 643
+          },
+          "macro_thermal": {
+            "abstained": 84,
+            "ambiguous": 57,
+            "homogeneous": 640
+          },
+          "micro_operating": {
+            "ambiguous": 676,
+            "homogeneous": 105
+          },
+          "micro_thermal": {
+            "abstained": 18,
+            "ambiguous": 676,
+            "homogeneous": 87
+          }
+        },
+        "windows": 781
+      },
+      "micro_interval_count": 255,
+      "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "proposal_status_counts": {
+        "accepted": 393
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000005",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 7851,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+        "raw_source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 7851,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 7851,
+          "valid_frames": 7851
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+      "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "suggestions_sha256": "a7ae89ca85eb01ef1ddda3e4bc043666e48e3e5ec979d3674c82648997cc7e9e",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 45,
+          "accepted_duration_s": 1963.997,
+          "duration_by_context_s": {
+            "moving_episode": 1741.4980000000005,
+            "moving_steady": 81.99949999999947,
+            "stationary_running": 120.25000000000011,
+            "unknown": 20.24950000000001
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1963.997
+          },
+          "explicit_unknown_duration_s": 20.24950000000001,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 13,
+          "accepted_duration_s": 1963.997,
+          "duration_by_context_s": {
+            "stable": 1651.3695000000002,
+            "unknown": 276.6279999999998,
+            "warming": 35.99950000000001
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1963.997
+          },
+          "explicit_unknown_duration_s": 276.6279999999998,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 255,
+          "accepted_duration_s": 1963.997,
+          "duration_by_context_s": {
+            "moving_accelerating": 333.7634999999995,
+            "moving_decelerating": 332.2340000000005,
+            "moving_steady": 81.99949999999947,
+            "moving_variable": 1075.5005000000006,
+            "stationary_running": 120.25000000000011,
+            "unknown": 20.24950000000001
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1963.997
+          },
+          "explicit_unknown_duration_s": 20.24950000000001,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 255,
+          "accepted_duration_s": 1963.997,
+          "duration_by_context_s": {
+            "stable": 1651.3695000000002,
+            "unknown": 276.6279999999998,
+            "warming": 35.99950000000001
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1963.997
+          },
+          "explicit_unknown_duration_s": 276.6279999999998,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 51
+      },
+      "annotation_sha256": "f76aef117aeff1b918cb2f9cf139cf70464a0cf9f54d3cd2f5bb95288cc62ee2",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "cfc2e4a076bc647e2af27448b0e071d06340e5cbca097978bda00538c551dd43",
+        "suggestion_sha256": "3eb83320b9f370ca2d529c4cec4a5f19de3cb0be26855ed32b2c8dc7433d00a5"
+      },
+      "canonical_sample_count": 923,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 230.75,
+      "event_count": 5,
+      "event_distribution": {
+        "engine_stop": 1,
+        "throttle_burst": 4
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 3
+      },
+      "macro_count": 16,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "36c18c6b336c47e1466afd116cb4053c3bc2b223ebd81e43d04b5b952b5144c2",
+      "macro_status_counts": {
+        "accepted": 16
+      },
+      "mapping": {
+        "samples": 923,
+        "trailing_samples_after_last_window": 3,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 29,
+            "homogeneous": 59
+          },
+          "macro_thermal": {
+            "abstained": 2,
+            "ambiguous": 9,
+            "homogeneous": 77
+          },
+          "micro_operating": {
+            "ambiguous": 66,
+            "homogeneous": 22
+          },
+          "micro_thermal": {
+            "abstained": 2,
+            "ambiguous": 66,
+            "homogeneous": 20
+          }
+        },
+        "windows": 88
+      },
+      "micro_interval_count": 30,
+      "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+      "proposal_status_counts": {
+        "accepted": 35
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000006",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 923,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+        "raw_source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 923,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 923,
+          "valid_frames": 923
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+      "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+      "suggestions_sha256": "c5b668675320a78a6c8deeddb7b9aca2a13523055db125ad6a82acd31c56ff5c",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 13,
+          "accepted_duration_s": 230.75,
+          "duration_by_context_s": {
+            "engine_off": 10.375,
+            "moving_episode": 149.75,
+            "stationary_running": 51.499500000000005,
+            "unknown": 19.12549999999999
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 230.75
+          },
+          "explicit_unknown_duration_s": 19.12549999999999,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 3,
+          "accepted_duration_s": 230.75,
+          "duration_by_context_s": {
+            "stable": 86.87549999999999,
+            "unknown": 16.24900000000001,
+            "warming": 127.6255
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 230.75
+          },
+          "explicit_unknown_duration_s": 16.24900000000001,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 30,
+          "accepted_duration_s": 230.75,
+          "duration_by_context_s": {
+            "engine_off": 10.375,
+            "moving_accelerating": 24.750999999999998,
+            "moving_decelerating": 22.75199999999998,
+            "moving_variable": 102.24700000000001,
+            "stationary_running": 51.499500000000005,
+            "unknown": 19.12549999999999
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 230.75
+          },
+          "explicit_unknown_duration_s": 19.12549999999999,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 30,
+          "accepted_duration_s": 230.75,
+          "duration_by_context_s": {
+            "stable": 86.87549999999999,
+            "unknown": 16.24900000000001,
+            "warming": 127.6255
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 230.75
+          },
+          "explicit_unknown_duration_s": 16.24900000000001,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 333
+      },
+      "annotation_sha256": "1d6687561b190d9effa43183a96d29cc4a38d9764728157a56082fc546c92632",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "cb3e45b9c8d0b5dc4ea0c4fa8f82d485f2b9b7fd7be24ab4b6a2d155cd7b8561",
+        "suggestion_sha256": "9d18f31284e0a713ad9829edd07c66633458792b7cabe88caee7dd3d0225285c"
+      },
+      "canonical_sample_count": 6389,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 1598.002,
+      "event_count": 65,
+      "event_distribution": {
+        "repeated_stop_go": 1,
+        "throttle_burst": 64
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 4
+      },
+      "macro_count": 52,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "ce89c3de92e5ecbfa9c57729f43ba308e686ec1f3ae3396d7802679adc49cc5b",
+      "macro_status_counts": {
+        "accepted": 52
+      },
+      "mapping": {
+        "samples": 6389,
+        "trailing_samples_after_last_window": 9,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 147,
+            "homogeneous": 487
+          },
+          "macro_thermal": {
+            "abstained": 35,
+            "ambiguous": 28,
+            "homogeneous": 571
+          },
+          "micro_operating": {
+            "ambiguous": 586,
+            "homogeneous": 48
+          },
+          "micro_thermal": {
+            "abstained": 4,
+            "ambiguous": 586,
+            "homogeneous": 44
+          }
+        },
+        "windows": 634
+      },
+      "micro_interval_count": 216,
+      "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "proposal_status_counts": {
+        "accepted": 281
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000007",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 6389,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+        "raw_source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 6389,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 6389,
+          "valid_frames": 6389
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+      "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "suggestions_sha256": "99a596c676bf0d6864ec3c4946233d28af37fcf2fadbfb6faa2f1d39deb8de74",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 45,
+          "accepted_duration_s": 1598.002,
+          "duration_by_context_s": {
+            "moving_episode": 1417.7485000000001,
+            "moving_steady": 114.50050000000016,
+            "stationary_running": 51.74950000000001,
+            "unknown": 14.003499999999812
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1598.002
+          },
+          "explicit_unknown_duration_s": 14.003499999999812,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 7,
+          "accepted_duration_s": 1598.002,
+          "duration_by_context_s": {
+            "stable": 1449.875,
+            "unknown": 123.3789999999999,
+            "warming": 24.748000000000047
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1598.002
+          },
+          "explicit_unknown_duration_s": 123.3789999999999,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 216,
+          "accepted_duration_s": 1598.002,
+          "duration_by_context_s": {
+            "moving_accelerating": 272.00500000000005,
+            "moving_decelerating": 291.2415,
+            "moving_steady": 114.50050000000016,
+            "moving_variable": 854.502,
+            "stationary_running": 51.74950000000001,
+            "unknown": 14.003499999999812
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1598.002
+          },
+          "explicit_unknown_duration_s": 14.003499999999812,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 216,
+          "accepted_duration_s": 1598.002,
+          "duration_by_context_s": {
+            "stable": 1449.875,
+            "unknown": 123.3789999999999,
+            "warming": 24.748000000000047
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1598.002
+          },
+          "explicit_unknown_duration_s": 123.3789999999999,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 12
+      },
+      "annotation_sha256": "5f3ee1e08673c0919b174edc5068a861c32c7c9127f9da85ef46bbc2db02b57a",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "3db55aa451100fcb5dc3872e3b5c8a614b0bd17c98500d6773186d31a1af20b8",
+        "suggestion_sha256": "1b178e7c76ab2b77421f88830317e0f872b72da73abef9f060814cda595eb76c"
+      },
+      "canonical_sample_count": 1202,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 300.5,
+      "event_count": 1,
+      "event_distribution": {
+        "throttle_burst": 1
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 3
+      },
+      "macro_count": 6,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "21b24e26052d3be529743a6d0f5b25dab828459d1750a1027c23ad89d2619d5f",
+      "macro_status_counts": {
+        "accepted": 6
+      },
+      "mapping": {
+        "samples": 1202,
+        "trailing_samples_after_last_window": 2,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 1,
+            "homogeneous": 115
+          },
+          "macro_thermal": {
+            "ambiguous": 6,
+            "homogeneous": 110
+          },
+          "micro_operating": {
+            "ambiguous": 7,
+            "homogeneous": 109
+          },
+          "micro_thermal": {
+            "ambiguous": 7,
+            "homogeneous": 109
+          }
+        },
+        "windows": 116
+      },
+      "micro_interval_count": 5,
+      "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "proposal_status_counts": {
+        "accepted": 6
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000014",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 1202,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+        "raw_source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 1202,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 1202,
+          "valid_frames": 1202
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+      "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "suggestions_sha256": "8f304cc829d447e868a6824d404c04d8e099d34d3ca53c7c2560d86a7e80184d",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 3,
+          "accepted_duration_s": 300.5,
+          "duration_by_context_s": {
+            "moving_episode": 2.3734999999999786,
+            "stationary_running": 297.876,
+            "unknown": 0.250500000000045
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 300.5
+          },
+          "explicit_unknown_duration_s": 0.250500000000045,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 3,
+          "accepted_duration_s": 300.5,
+          "duration_by_context_s": {
+            "unknown": 4.750499999999988,
+            "warming": 295.7495
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 300.5
+          },
+          "explicit_unknown_duration_s": 4.750499999999988,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 5,
+          "accepted_duration_s": 300.5,
+          "duration_by_context_s": {
+            "moving_variable": 2.3734999999999786,
+            "stationary_running": 297.876,
+            "unknown": 0.250500000000045
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 300.5
+          },
+          "explicit_unknown_duration_s": 0.250500000000045,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 5,
+          "accepted_duration_s": 300.5,
+          "duration_by_context_s": {
+            "unknown": 4.750499999999988,
+            "warming": 295.7495
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 300.5
+          },
+          "explicit_unknown_duration_s": 4.750499999999988,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 34
+      },
+      "annotation_sha256": "99436b8311180baaacf688cd345d875be808a41e9f5f47a81665e269aa17b7ea",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "f30cd8495e42845552cca0131de4ec674e7fb639940aac0df5af6cd5111a460e",
+        "suggestion_sha256": "7fb7f7bc76f776a3687cab19876cf2043a7deca53e969ceea01052ad2424947b"
+      },
+      "canonical_sample_count": 531,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 132.501,
+      "event_count": 7,
+      "event_distribution": {
+        "throttle_burst": 7
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 1
+      },
+      "macro_count": 10,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "cf95b64fc15c393015ca9eb8bdebdf62f40e4f021207cbd5f2724dfc11be8859",
+      "macro_status_counts": {
+        "accepted": 10
+      },
+      "mapping": {
+        "samples": 531,
+        "trailing_samples_after_last_window": 1,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 26,
+            "homogeneous": 23
+          },
+          "macro_thermal": {
+            "homogeneous": 49
+          },
+          "micro_operating": {
+            "ambiguous": 39,
+            "homogeneous": 10
+          },
+          "micro_thermal": {
+            "ambiguous": 39,
+            "homogeneous": 10
+          }
+        },
+        "windows": 49
+      },
+      "micro_interval_count": 17,
+      "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+      "proposal_status_counts": {
+        "accepted": 24
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000015",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 531,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+        "raw_source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 531,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 531,
+          "valid_frames": 531
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+      "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+      "suggestions_sha256": "e1d9908e05415e0960425715cf487445675bf8604f802994cd4ef20380e818e7",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 9,
+          "accepted_duration_s": 132.501,
+          "duration_by_context_s": {
+            "moving_episode": 85.374,
+            "moving_steady": 14.001500000000007,
+            "stationary_running": 30.125,
+            "unknown": 3.0005000000000024
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 132.501
+          },
+          "explicit_unknown_duration_s": 3.0005000000000024,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 1,
+          "accepted_duration_s": 132.501,
+          "duration_by_context_s": {
+            "warming": 132.501
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 132.501
+          },
+          "explicit_unknown_duration_s": 0,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 17,
+          "accepted_duration_s": 132.501,
+          "duration_by_context_s": {
+            "moving_accelerating": 20.0,
+            "moving_decelerating": 17.748999999999995,
+            "moving_steady": 14.001500000000007,
+            "moving_variable": 47.625,
+            "stationary_running": 30.125,
+            "unknown": 3.0005000000000024
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 132.501
+          },
+          "explicit_unknown_duration_s": 3.0005000000000024,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 17,
+          "accepted_duration_s": 132.501,
+          "duration_by_context_s": {
+            "warming": 132.501
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 132.501
+          },
+          "explicit_unknown_duration_s": 0,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 1107
+      },
+      "annotation_sha256": "aa481f1633ee83469dcd93e294be9b172c82b6ac42fdd2ac230c1e91d7b04226",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "db79227b9b0d2244443232b6a96c422a1cb0410a243df87c799466debddd82d5",
+        "suggestion_sha256": "2d21fb48dd5d1008f8c247f9e60ab4e11d657e35a7634939ae3f4e73a950601b"
+      },
+      "canonical_sample_count": 17965,
+      "confirmed_session_metadata": {
+        "capture_type": "road",
+        "metadata_source": "operator_attestation",
+        "ride_pattern": "continuous_long_ride",
+        "trip_context": "out_of_city"
+      },
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 4494.502,
+      "event_count": 301,
+      "event_distribution": {
+        "engine_stop": 1,
+        "repeated_stop_go": 2,
+        "throttle_burst": 298
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 43
+      },
+      "macro_count": 230,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "e83e7180eda902d54163c71b4c3a7432cce5fe59b3384e3bb2a52b02c9b28593",
+      "macro_status_counts": {
+        "accepted": 230
+      },
+      "mapping": {
+        "samples": 17965,
+        "trailing_samples_after_last_window": 5,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 499,
+            "homogeneous": 1293
+          },
+          "macro_thermal": {
+            "abstained": 177,
+            "ambiguous": 301,
+            "homogeneous": 1314
+          },
+          "micro_operating": {
+            "ambiguous": 1530,
+            "homogeneous": 262
+          },
+          "micro_thermal": {
+            "abstained": 11,
+            "ambiguous": 1530,
+            "homogeneous": 251
+          }
+        },
+        "windows": 1792
+      },
+      "micro_interval_count": 576,
+      "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "proposal_status_counts": {
+        "accepted": 877
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000016",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 17965,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+        "raw_source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 17965,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 17965,
+          "valid_frames": 17965
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+      "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "suggestions_sha256": "eece0c4f9b9f041ba61e32eb4b79de030d3a3fa7e30735bdf8b3f709dc04b0cc",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 161,
+          "accepted_duration_s": 4494.502,
+          "duration_by_context_s": {
+            "engine_off": 6.126500000000306,
+            "moving_episode": 3398.7455,
+            "moving_steady": 229.50550000000055,
+            "stationary_running": 827.2434999999988,
+            "unknown": 32.88100000000076
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4494.502
+          },
+          "explicit_unknown_duration_s": 32.88100000000076,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 69,
+          "accepted_duration_s": 4494.502,
+          "duration_by_context_s": {
+            "stable": 3331.8755000000006,
+            "unknown": 722.2515000000001,
+            "warming": 440.3749999999998
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4494.502
+          },
+          "explicit_unknown_duration_s": 722.2515000000001,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 576,
+          "accepted_duration_s": 4494.502,
+          "duration_by_context_s": {
+            "engine_off": 6.126500000000306,
+            "moving_accelerating": 741.6364999999996,
+            "moving_decelerating": 721.617999999999,
+            "moving_steady": 229.50550000000055,
+            "moving_variable": 1935.4910000000013,
+            "stationary_running": 827.2434999999988,
+            "unknown": 32.88100000000076
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4494.502
+          },
+          "explicit_unknown_duration_s": 32.88100000000076,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 576,
+          "accepted_duration_s": 4494.502,
+          "duration_by_context_s": {
+            "stable": 3331.8755,
+            "unknown": 722.2515000000001,
+            "warming": 440.3749999999998
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4494.502
+          },
+          "explicit_unknown_duration_s": 722.2515000000001,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 200
+      },
+      "annotation_sha256": "72fb237211a792c449fc9920a457ecfb04a4fa8444b9093444de158059e8d595",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "0619fc31987cc93f624b239573d24a9644b773853eb533a3fa942920172cfa44",
+        "suggestion_sha256": "00732d2104880da37cb420a9a831b366ac7c4277b0e7dd3b372441c21199f28e"
+      },
+      "canonical_sample_count": 3492,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 873.5,
+      "event_count": 46,
+      "event_distribution": {
+        "throttle_burst": 46
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 4
+      },
+      "macro_count": 46,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "25f8976caab214c4fae470806b70bac29d65ea372b665a49b5da63689ebb9e39",
+      "macro_status_counts": {
+        "accepted": 46
+      },
+      "mapping": {
+        "samples": 3492,
+        "trailing_samples_after_last_window": 2,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 145,
+            "homogeneous": 200
+          },
+          "macro_thermal": {
+            "abstained": 16,
+            "ambiguous": 35,
+            "homogeneous": 294
+          },
+          "micro_operating": {
+            "ambiguous": 305,
+            "homogeneous": 40
+          },
+          "micro_thermal": {
+            "abstained": 11,
+            "ambiguous": 305,
+            "homogeneous": 29
+          }
+        },
+        "windows": 345
+      },
+      "micro_interval_count": 108,
+      "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+      "proposal_status_counts": {
+        "accepted": 154
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000017",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 3492,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+        "raw_source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 3492,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 3492,
+          "valid_frames": 3492
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+      "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+      "suggestions_sha256": "4f0b55e2ed96f956e9662aa3dc46c992b63f31c7a32e242064e1b06ee71637a2",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 38,
+          "accepted_duration_s": 873.5,
+          "duration_by_context_s": {
+            "moving_episode": 588.4995000000001,
+            "moving_steady": 205.25149999999996,
+            "stationary_running": 72.87549999999999,
+            "unknown": 6.873499999999979
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 873.5
+          },
+          "explicit_unknown_duration_s": 6.873499999999979,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 8,
+          "accepted_duration_s": 873.5,
+          "duration_by_context_s": {
+            "stable": 718.625,
+            "unknown": 88.8745,
+            "warming": 66.0005
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 873.5
+          },
+          "explicit_unknown_duration_s": 88.8745,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 108,
+          "accepted_duration_s": 873.5,
+          "duration_by_context_s": {
+            "moving_accelerating": 123.75100000000002,
+            "moving_decelerating": 94.74500000000012,
+            "moving_steady": 205.25149999999996,
+            "moving_variable": 370.0034999999999,
+            "stationary_running": 72.87549999999999,
+            "unknown": 6.873499999999979
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 873.5
+          },
+          "explicit_unknown_duration_s": 6.873499999999979,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 108,
+          "accepted_duration_s": 873.5,
+          "duration_by_context_s": {
+            "stable": 718.625,
+            "unknown": 88.8745,
+            "warming": 66.0005
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 873.5
+          },
+          "explicit_unknown_duration_s": 88.8745,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 1071
+      },
+      "annotation_sha256": "283c1c552d76441fe34608c43fd4ee470cfa49f7de03d4e1935e0d7dd73ac89b",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "dcb77e121edfc61cbe32f0a5b33d7de49bb4867a204dc1f8dda0e2fb1c05f57c",
+        "suggestion_sha256": "1c2039aef60fe5bb85fdb978087eb8e1a92cbbd177689cdfcf6e507939fab331"
+      },
+      "canonical_sample_count": 17976,
+      "confirmed_session_metadata": {
+        "capture_type": "road",
+        "metadata_source": "operator_attestation",
+        "ride_pattern": "continuous_long_ride",
+        "trip_context": "out_of_city"
+      },
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 4496.001,
+      "event_count": 312,
+      "event_distribution": {
+        "throttle_burst": 312
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 9
+      },
+      "macro_count": 225,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "d3349e5d37df80e40b2bbe2b6f969c69be5c2226436041025535caeedf4552cf",
+      "macro_status_counts": {
+        "accepted": 225
+      },
+      "mapping": {
+        "samples": 17976,
+        "trailing_samples_after_last_window": 6,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 788,
+            "homogeneous": 1005
+          },
+          "macro_thermal": {
+            "abstained": 128,
+            "ambiguous": 77,
+            "homogeneous": 1588
+          },
+          "micro_operating": {
+            "ambiguous": 1512,
+            "homogeneous": 281
+          },
+          "micro_thermal": {
+            "abstained": 20,
+            "ambiguous": 1512,
+            "homogeneous": 261
+          }
+        },
+        "windows": 1793
+      },
+      "micro_interval_count": 534,
+      "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "proposal_status_counts": {
+        "accepted": 846
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000018",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 17976,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+        "raw_source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 17976,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 17976,
+          "valid_frames": 17976
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+      "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "suggestions_sha256": "866da4e7104bbde9d14a26defe4317e94d3e1407812db3e655529b262f19ee4a",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 208,
+          "accepted_duration_s": 4496.001,
+          "duration_by_context_s": {
+            "moving_episode": 3055.8870000000024,
+            "moving_steady": 1317.6134999999986,
+            "stationary_running": 112.75000000000003,
+            "unknown": 9.75049999999942
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4496.001
+          },
+          "explicit_unknown_duration_s": 9.75049999999942,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 17,
+          "accepted_duration_s": 4496.001,
+          "duration_by_context_s": {
+            "stable": 4066.5004999999996,
+            "unknown": 429.50050000000067
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4496.001
+          },
+          "explicit_unknown_duration_s": 429.50050000000067,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 534,
+          "accepted_duration_s": 4496.001,
+          "duration_by_context_s": {
+            "moving_accelerating": 595.0135000000002,
+            "moving_decelerating": 614.2479999999987,
+            "moving_steady": 1317.6134999999986,
+            "moving_variable": 1846.6255000000033,
+            "stationary_running": 112.75000000000003,
+            "unknown": 9.75049999999942
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4496.001
+          },
+          "explicit_unknown_duration_s": 9.75049999999942,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 534,
+          "accepted_duration_s": 4496.001,
+          "duration_by_context_s": {
+            "stable": 4066.500499999999,
+            "unknown": 429.50050000000067
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4496.001
+          },
+          "explicit_unknown_duration_s": 429.50050000000067,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 133
+      },
+      "annotation_sha256": "1784b4cde11380fbc9cd76054cc7a0d5f6d1f4ecc992971a0fc719f18fa94f3f",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "5966e2bf988673c4355ad7093c898f4a68282d73a3a60b219588b69bc9880761",
+        "suggestion_sha256": "58f4d59de64b97c676d96854492fc94b979135608e07f97e9941149813146756"
+      },
+      "canonical_sample_count": 2194,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 548.67,
+      "event_count": 36,
+      "event_distribution": {
+        "engine_stop": 1,
+        "throttle_burst": 35
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 4
+      },
+      "macro_count": 30,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "d1ba6e3835d85a837fc2b5bb2dd23399a747d9b0895eabc3d20701242a570e9b",
+      "macro_status_counts": {
+        "accepted": 30
+      },
+      "mapping": {
+        "samples": 2194,
+        "trailing_samples_after_last_window": 4,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 84,
+            "homogeneous": 131
+          },
+          "macro_thermal": {
+            "abstained": 38,
+            "ambiguous": 30,
+            "homogeneous": 147
+          },
+          "micro_operating": {
+            "ambiguous": 183,
+            "homogeneous": 32
+          },
+          "micro_thermal": {
+            "abstained": 13,
+            "ambiguous": 183,
+            "homogeneous": 19
+          }
+        },
+        "windows": 215
+      },
+      "micro_interval_count": 67,
+      "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+      "proposal_status_counts": {
+        "accepted": 103
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000019",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 2194,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+        "raw_source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 2194,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 2194,
+          "valid_frames": 2194
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+      "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+      "suggestions_sha256": "87c31e5a4602e51fda35a83e2581d3b6c5b3ad0a43c5aca7cfa88ace274e249b",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 23,
+          "accepted_duration_s": 548.67,
+          "duration_by_context_s": {
+            "engine_off": 10.125999999999976,
+            "moving_episode": 393.2465,
+            "moving_steady": 87.00199999999997,
+            "stationary_running": 56.75049999999999,
+            "unknown": 1.545
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 548.67
+          },
+          "explicit_unknown_duration_s": 1.545,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 7,
+          "accepted_duration_s": 548.67,
+          "duration_by_context_s": {
+            "stable": 403.5015,
+            "unknown": 145.16849999999994
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 548.6699999999998
+          },
+          "explicit_unknown_duration_s": 145.16849999999994,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 67,
+          "accepted_duration_s": 548.67,
+          "duration_by_context_s": {
+            "engine_off": 10.125999999999976,
+            "moving_accelerating": 87.751,
+            "moving_decelerating": 90.50000000000003,
+            "moving_steady": 87.00199999999997,
+            "moving_variable": 214.9955,
+            "stationary_running": 56.75049999999999,
+            "unknown": 1.545
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 548.67
+          },
+          "explicit_unknown_duration_s": 1.545,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 67,
+          "accepted_duration_s": 548.67,
+          "duration_by_context_s": {
+            "stable": 403.5015000000001,
+            "unknown": 145.16849999999994
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 548.67
+          },
+          "explicit_unknown_duration_s": 145.16849999999994,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 12
+      },
+      "annotation_sha256": "24c322358e022a26a82f0601a46ea3ed62f3bd94002d1e3af0a267328f66367a",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "2ec9ea863d77ab5b2332d9ef765e653421026728d3ab4d6513c7b7b8db65482f",
+        "suggestion_sha256": "bda76ea9b1b8839fe4a796e33c957578a77f12e9ed5b8bfb717195db5cea70c3"
+      },
+      "canonical_sample_count": 87,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 21.501,
+      "event_count": 2,
+      "event_distribution": {
+        "engine_stop": 1,
+        "throttle_burst": 1
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 1
+      },
+      "macro_count": 6,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "362bf58721885e47baa301c98d814d2a4303c6d19ad42be622cd88b78f157c53",
+      "macro_status_counts": {
+        "accepted": 6
+      },
+      "mapping": {
+        "samples": 87,
+        "trailing_samples_after_last_window": 7,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 4
+          },
+          "macro_thermal": {
+            "abstained": 4
+          },
+          "micro_operating": {
+            "ambiguous": 4
+          },
+          "micro_thermal": {
+            "ambiguous": 4
+          }
+        },
+        "windows": 4
+      },
+      "micro_interval_count": 4,
+      "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+      "proposal_status_counts": {
+        "accepted": 6
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000020",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 87,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+        "raw_source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 87,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 87,
+          "valid_frames": 87
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+      "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+      "suggestions_sha256": "0d07262d586004327bfa3aeb9727ff550fc0a988109c0ec482c01f327c7fc1a3",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 5,
+          "accepted_duration_s": 21.501,
+          "duration_by_context_s": {
+            "engine_off": 10.126000000000001,
+            "moving_episode": 5.2490000000000006,
+            "stationary_running": 4.2505,
+            "unknown": 1.8755
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 21.501
+          },
+          "explicit_unknown_duration_s": 1.8755,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 1,
+          "accepted_duration_s": 21.501,
+          "duration_by_context_s": {
+            "unknown": 21.501
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 21.501
+          },
+          "explicit_unknown_duration_s": 21.501,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 4,
+          "accepted_duration_s": 21.501,
+          "duration_by_context_s": {
+            "engine_off": 10.126000000000001,
+            "moving_variable": 5.2490000000000006,
+            "stationary_running": 4.2505,
+            "unknown": 1.8755
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 21.501
+          },
+          "explicit_unknown_duration_s": 1.8755,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 4,
+          "accepted_duration_s": 21.501,
+          "duration_by_context_s": {
+            "unknown": 21.501
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 21.501
+          },
+          "explicit_unknown_duration_s": 21.501,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 175
+      },
+      "annotation_sha256": "56e0b40d345a2aaa69f29b8f1c01903f8c06ea47da30088667965e305df4ea14",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "f110880aecdaf9ccf1155a7f373092e03fbf22159aa1510d7f411de7c1a62635",
+        "suggestion_sha256": "31e075eca39e195256c846004d979c1935085520ca5af1948d73930a1049e4f7"
+      },
+      "canonical_sample_count": 3564,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 891.25,
+      "event_count": 30,
+      "event_distribution": {
+        "engine_stop": 1,
+        "throttle_burst": 29
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 1
+      },
+      "macro_count": 50,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "269b91dfd6d165d442497b3a2eb0c223cea4c58010741a9cc2601d165d397ce2",
+      "macro_status_counts": {
+        "accepted": 50
+      },
+      "mapping": {
+        "samples": 3564,
+        "trailing_samples_after_last_window": 4,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 178,
+            "homogeneous": 174
+          },
+          "macro_thermal": {
+            "abstained": 29,
+            "ambiguous": 15,
+            "homogeneous": 308
+          },
+          "micro_operating": {
+            "ambiguous": 272,
+            "homogeneous": 80
+          },
+          "micro_thermal": {
+            "abstained": 2,
+            "ambiguous": 272,
+            "homogeneous": 78
+          }
+        },
+        "windows": 352
+      },
+      "micro_interval_count": 95,
+      "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+      "proposal_status_counts": {
+        "accepted": 125
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000021",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 3564,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+        "raw_source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 3564,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 3564,
+          "valid_frames": 3564
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+      "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+      "suggestions_sha256": "2819da7beee4cd09e5bfd112ebd17f95e93b9e3933513126163a4de47a2449af",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 46,
+          "accepted_duration_s": 891.25,
+          "duration_by_context_s": {
+            "engine_off": 10.373500000000035,
+            "moving_episode": 467.75349999999986,
+            "moving_steady": 404.24550000000016,
+            "stationary_running": 4.500499999999988,
+            "unknown": 4.377
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 891.25
+          },
+          "explicit_unknown_duration_s": 4.377,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 4,
+          "accepted_duration_s": 891.25,
+          "duration_by_context_s": {
+            "stable": 795.6220000000001,
+            "unknown": 95.62799999999997
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 891.25
+          },
+          "explicit_unknown_duration_s": 95.62799999999997,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 95,
+          "accepted_duration_s": 891.25,
+          "duration_by_context_s": {
+            "engine_off": 10.373500000000035,
+            "moving_accelerating": 104.75049999999999,
+            "moving_decelerating": 101.0004999999999,
+            "moving_steady": 404.24550000000016,
+            "moving_variable": 262.00249999999994,
+            "stationary_running": 4.500499999999988,
+            "unknown": 4.377
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 891.25
+          },
+          "explicit_unknown_duration_s": 4.377,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 95,
+          "accepted_duration_s": 891.25,
+          "duration_by_context_s": {
+            "stable": 795.622,
+            "unknown": 95.62799999999997
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 891.25
+          },
+          "explicit_unknown_duration_s": 95.62799999999997,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 132
+      },
+      "annotation_sha256": "e783670a514917f09cb510d557a4674033b1593a0f978527384750adcbf84c68",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "d5d40ab9a79357758f1c596cbae950707d98292d381671f68b170909b163663a",
+        "suggestion_sha256": "47e95c8bcdc2476518b4d157a40d131028de8ae768f06c684998fe552a88f31a"
+      },
+      "canonical_sample_count": 3021,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 755.001,
+      "event_count": 28,
+      "event_distribution": {
+        "engine_stop": 1,
+        "throttle_burst": 27
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 0
+      },
+      "macro_count": 38,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "a681cd5ba18889b63750881e34205703db56c9aad859d576db5de452a94dd0b6",
+      "macro_status_counts": {
+        "accepted": 38
+      },
+      "mapping": {
+        "samples": 3021,
+        "trailing_samples_after_last_window": 1,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 103,
+            "homogeneous": 195
+          },
+          "macro_thermal": {
+            "abstained": 13,
+            "ambiguous": 24,
+            "homogeneous": 261
+          },
+          "micro_operating": {
+            "ambiguous": 187,
+            "homogeneous": 111
+          },
+          "micro_thermal": {
+            "abstained": 3,
+            "ambiguous": 187,
+            "homogeneous": 108
+          }
+        },
+        "windows": 298
+      },
+      "micro_interval_count": 66,
+      "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+      "proposal_status_counts": {
+        "accepted": 94
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000022",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 3021,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+        "raw_source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 3021,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 3021,
+          "valid_frames": 3021
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+      "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+      "suggestions_sha256": "3e4c0fd446608dd8c558c92eebe18dfca48d0dc5a844e86248a5c320c3d15089",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 32,
+          "accepted_duration_s": 755.001,
+          "duration_by_context_s": {
+            "moving_episode": 350.25000000000006,
+            "moving_steady": 397.2484999999999,
+            "unknown": 7.502499999999988
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 755.001
+          },
+          "explicit_unknown_duration_s": 7.502499999999988,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 6,
+          "accepted_duration_s": 755.001,
+          "duration_by_context_s": {
+            "stable": 686.3725,
+            "unknown": 68.62849999999999
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 755.001
+          },
+          "explicit_unknown_duration_s": 68.62849999999999,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 66,
+          "accepted_duration_s": 755.001,
+          "duration_by_context_s": {
+            "moving_accelerating": 62.50049999999994,
+            "moving_decelerating": 60.74900000000004,
+            "moving_steady": 397.2484999999999,
+            "moving_variable": 227.0005000000001,
+            "unknown": 7.502499999999988
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 755.001
+          },
+          "explicit_unknown_duration_s": 7.502499999999988,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 66,
+          "accepted_duration_s": 755.001,
+          "duration_by_context_s": {
+            "stable": 686.3725,
+            "unknown": 68.62849999999999
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 755.001
+          },
+          "explicit_unknown_duration_s": 68.62849999999999,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 1024
+      },
+      "annotation_sha256": "0de989bd9dc8650c007df2d839f40c186354e70bf9b1bcd99292c69437b9bcb8",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "b67e9a28f13a7cc919f113fbcee1b628482d8a0a6b38555f61246cf5bea20d2e",
+        "suggestion_sha256": "8ea004aba6c9425a55ec4977a7cb47f4e7d0e1a419bfc63cc9dc233fe4373813"
+      },
+      "canonical_sample_count": 17539,
+      "confirmed_session_metadata": {
+        "capture_type": "road",
+        "metadata_source": "operator_attestation",
+        "ride_pattern": "continuous_long_ride",
+        "trip_context": "out_of_city"
+      },
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 4391.172,
+      "event_count": 277,
+      "event_distribution": {
+        "engine_stop": 1,
+        "throttle_burst": 276
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 14
+      },
+      "macro_count": 233,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "f2f90c9c372abc9bc2a53a325d62fae17c95e35ccc93ef55cf360c5b95467674",
+      "macro_status_counts": {
+        "accepted": 233
+      },
+      "mapping": {
+        "samples": 17539,
+        "trailing_samples_after_last_window": 9,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 656,
+            "homogeneous": 1093
+          },
+          "macro_thermal": {
+            "abstained": 225,
+            "ambiguous": 236,
+            "homogeneous": 1288
+          },
+          "micro_operating": {
+            "ambiguous": 1408,
+            "homogeneous": 341
+          },
+          "micro_thermal": {
+            "abstained": 20,
+            "ambiguous": 1408,
+            "homogeneous": 321
+          }
+        },
+        "windows": 1749
+      },
+      "micro_interval_count": 514,
+      "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "proposal_status_counts": {
+        "accepted": 791
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000023",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 17539,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+        "raw_source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 17539,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 17539,
+          "valid_frames": 17539
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+      "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "suggestions_sha256": "344627ab1871a0e24d73ebfc49b2e016ba6c117d28eddb92f3d6741bf931fe61",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 182,
+          "accepted_duration_s": 4391.172,
+          "duration_by_context_s": {
+            "engine_off": 10.375,
+            "moving_episode": 2871.240500000001,
+            "moving_steady": 1227.7544999999998,
+            "stationary_running": 273.0049999999991,
+            "unknown": 8.79699999999991
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4391.172
+          },
+          "explicit_unknown_duration_s": 8.79699999999991,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 51,
+          "accepted_duration_s": 4391.172,
+          "duration_by_context_s": {
+            "stable": 3496.753499999998,
+            "unknown": 847.1680000000014,
+            "warming": 47.2505000000001
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4391.1720000000005
+          },
+          "explicit_unknown_duration_s": 847.1680000000014,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 514,
+          "accepted_duration_s": 4391.172,
+          "duration_by_context_s": {
+            "engine_off": 10.375,
+            "moving_accelerating": 689.3789999999982,
+            "moving_decelerating": 592.250500000001,
+            "moving_steady": 1227.7544999999998,
+            "moving_variable": 1589.6110000000017,
+            "stationary_running": 273.0049999999991,
+            "unknown": 8.79699999999991
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4391.172
+          },
+          "explicit_unknown_duration_s": 8.79699999999991,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 514,
+          "accepted_duration_s": 4391.172,
+          "duration_by_context_s": {
+            "stable": 3496.753499999998,
+            "unknown": 847.1680000000014,
+            "warming": 47.2505000000001
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 4391.172
+          },
+          "explicit_unknown_duration_s": 847.1680000000014,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    },
+    {
+      "accepted_counts_by_provenance": {
+        "bulk_operator_endorsement": 448
+      },
+      "annotation_sha256": "a496444ca269264085b507dcd5577435b3913f85894fdcc6426e79ce0f18e185",
+      "approved_suggestion_hashes": {
+        "macro_sha256": "7fce4280b6ba1c6ef20150d0b6fca6b19f9eb98814125d224cff9ab4fb81b36c",
+        "suggestion_sha256": "df2028ba9ff8b773d7cd5ebe192d18050f00b1076c69f581ca3057525dae816a"
+      },
+      "canonical_sample_count": 7790,
+      "confirmed_session_metadata": {},
+      "decoder_provenance": {
+        "decoder_id": "honda_keihin_71_17",
+        "decoder_version": "1.0.0",
+        "ecu_profile_id": "honda_keihin_71_17",
+        "signal_definitions": {
+          "battery_voltage": {
+            "status": "verified",
+            "unit": "V"
+          },
+          "ect_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "iat_c": {
+            "status": "provisional_high_confidence",
+            "unit": "degC"
+          },
+          "rpm": {
+            "status": "verified",
+            "unit": "rpm"
+          },
+          "tps_raw": {
+            "status": "verified_as_raw",
+            "unit": "raw"
+          },
+          "tps_voltage": {
+            "status": "verified",
+            "unit": "V"
+          }
+        },
+        "source_type": "native_honda_0x17",
+        "telemetry_schema_version": "canonical-telemetry-v2"
+      },
+      "duration_s": 1948.999,
+      "event_count": 130,
+      "event_distribution": {
+        "throttle_burst": 130
+      },
+      "integrity": {
+        "all_macro_links_and_boundaries_preserved": true,
+        "all_original_proposals_preserved": true,
+        "existing_human_records_preserved": 0,
+        "stationary_proposals_preserved": 17
+      },
+      "macro_count": 82,
+      "macro_rule_version": "ctx24-macro-v1",
+      "macro_sha256": "49e76a607b5665dc078acb59197e61b258282fad29138a0dbe66fd3a9401cdbc",
+      "macro_status_counts": {
+        "accepted": 82
+      },
+      "mapping": {
+        "samples": 7790,
+        "trailing_samples_after_last_window": 0,
+        "window_status_by_axis": {
+          "macro_operating": {
+            "ambiguous": 149,
+            "homogeneous": 626
+          },
+          "macro_thermal": {
+            "abstained": 139,
+            "ambiguous": 163,
+            "homogeneous": 473
+          },
+          "micro_operating": {
+            "ambiguous": 655,
+            "homogeneous": 120
+          },
+          "micro_thermal": {
+            "abstained": 33,
+            "ambiguous": 655,
+            "homogeneous": 87
+          }
+        },
+        "windows": 775
+      },
+      "micro_interval_count": 236,
+      "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+      "proposal_status_counts": {
+        "accepted": 366
+      },
+      "rule_config_sha256": "fd67888efcb842876003fd3140c48c88af78fab2a0f84df985ab18f1e41a2a6b",
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000024",
+      "signal_provenance": {
+        "alignment": "direct_source_record_order",
+        "available_count": 7790,
+        "calibration": "rider_corroborated_not_gps_calibrated",
+        "decoder_version": "ctx2-honda-table17-speed-v1",
+        "native_byte_index": 19,
+        "origin": "original_raw",
+        "raw_source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+        "raw_source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+        "sample_offset": 0,
+        "signal": "vehicle_speed_kmh",
+        "status": "available",
+        "total_count": 7790,
+        "unit": "km/h",
+        "validation_counts": {
+          "normalized_24": 7790,
+          "valid_frames": 7790
+        }
+      },
+      "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+      "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+      "suggestions_sha256": "dd395e9abe10d6648918ade02e11b1356f6d1936443204566b975a2ed49c7a1d",
+      "taxonomy_version": "context-taxonomy-v2",
+      "tracks": {
+        "macro_operating": {
+          "accepted_count": 45,
+          "accepted_duration_s": 1948.999,
+          "duration_by_context_s": {
+            "moving_episode": 1477.6299999999997,
+            "moving_steady": 106.2460000000001,
+            "stationary_running": 354.74699999999984,
+            "unknown": 10.376000000000364
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1948.999
+          },
+          "explicit_unknown_duration_s": 10.376000000000364,
+          "truly_unannotated_duration_s": 0
+        },
+        "macro_thermal": {
+          "accepted_count": 37,
+          "accepted_duration_s": 1948.999,
+          "duration_by_context_s": {
+            "stable": 1269.4995000000001,
+            "unknown": 533.9990000000001,
+            "warming": 145.50049999999987
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1948.999
+          },
+          "explicit_unknown_duration_s": 533.9990000000001,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_operating": {
+          "accepted_count": 236,
+          "accepted_duration_s": 1948.999,
+          "duration_by_context_s": {
+            "moving_accelerating": 332.01049999999987,
+            "moving_decelerating": 356.2429999999995,
+            "moving_steady": 106.2460000000001,
+            "moving_variable": 789.3765000000003,
+            "stationary_running": 354.74699999999984,
+            "unknown": 10.376000000000364
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1948.999
+          },
+          "explicit_unknown_duration_s": 10.376000000000364,
+          "truly_unannotated_duration_s": 0
+        },
+        "micro_thermal": {
+          "accepted_count": 236,
+          "accepted_duration_s": 1948.999,
+          "duration_by_context_s": {
+            "stable": 1269.4995000000001,
+            "unknown": 533.9990000000001,
+            "warming": 145.50049999999987
+          },
+          "duration_by_provenance_s": {
+            "bulk_operator_endorsement": 1948.999
+          },
+          "explicit_unknown_duration_s": 533.9990000000001,
+          "truly_unannotated_duration_s": 0
+        }
+      }
+    }
+  ],
+  "snapshot_attempt": {
+    "bulk_endorsement_is_not_individual_confirmation": true,
+    "policy": "unchanged individual-review snapshot-v1",
+    "reason": "missing named human review provenance: session_000003",
+    "status": "blocked"
+  },
+  "source_sha_unique": true,
+  "total_accepted_annotations": 5833,
+  "tracks": {
+    "macro_operating": {
+      "accepted_count": 941,
+      "accepted_duration_s": 25189.347999999998,
+      "duration_by_context_s": {
+        "engine_off": 67.8780000000003,
+        "moving_episode": 18173.615000000005,
+        "moving_steady": 4267.368999999999,
+        "stationary_running": 2505.8719999999985,
+        "unknown": 174.6140000000005
+      },
+      "duration_by_provenance_s": {
+        "bulk_operator_endorsement": 24876.849,
+        "individually_confirmed": 312.499
+      },
+      "explicit_unknown_duration_s": 174.6140000000005,
+      "truly_unannotated_duration_s": 0.0
+    },
+    "macro_thermal": {
+      "accepted_count": 249,
+      "accepted_duration_s": 25189.347999999998,
+      "duration_by_context_s": {
+        "stable": 19782.497,
+        "unknown": 3881.476000000002,
+        "warming": 1525.3749999999998
+      },
+      "duration_by_provenance_s": {
+        "bulk_operator_endorsement": 25189.348
+      },
+      "explicit_unknown_duration_s": 3881.476000000002,
+      "truly_unannotated_duration_s": 0.0
+    },
+    "micro_operating": {
+      "accepted_count": 3084,
+      "accepted_duration_s": 25189.347999999998,
+      "duration_by_context_s": {
+        "engine_off": 67.8780000000003,
+        "moving_accelerating": 3839.824999999998,
+        "moving_decelerating": 3795.8224999999993,
+        "moving_steady": 4267.368999999999,
+        "moving_variable": 10537.967500000004,
+        "stationary_running": 2505.8719999999985,
+        "unknown": 174.6140000000005
+      },
+      "duration_by_provenance_s": {
+        "bulk_operator_endorsement": 23713.845999999998,
+        "individually_confirmed": 1475.502
+      },
+      "explicit_unknown_duration_s": 174.6140000000005,
+      "truly_unannotated_duration_s": 0.0
+    },
+    "micro_thermal": {
+      "accepted_count": 3084,
+      "accepted_duration_s": 25189.347999999998,
+      "duration_by_context_s": {
+        "stable": 19782.497,
+        "unknown": 3881.476000000002,
+        "warming": 1525.3749999999998
+      },
+      "duration_by_provenance_s": {
+        "bulk_operator_endorsement": 23713.845999999998,
+        "individually_confirmed": 1475.502
+      },
+      "explicit_unknown_duration_s": 3881.476000000002,
+      "truly_unannotated_duration_s": 0.0
+    }
+  },
+  "unresolved_annotation_count": 0,
+  "unresolved_conflicts": []
+}

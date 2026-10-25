@@ -170,6 +170,13 @@ def decode_production_values(
         "battery_voltage": b[14] / 10.0,
         "iat_c": float(b[11] - 40),
         "ect_c": float(b[13] - 40),
+        "vehicle_speed_kmh": float(b[19]),
+        "speed_provenance": {
+            "decoder_version": "honda-table17-speed-v1",
+            "source_byte": 19,
+            "unit": "km/h",
+            "calibration": "operator_corroborated_not_gps_calibrated",
+        },
         "tps_percent_calibrated": _tps_percent_calibrated(tps_raw),
         "iat_voltage_candidate": _voltage(b[10]),
         "ect_voltage_candidate": _voltage(b[12]),

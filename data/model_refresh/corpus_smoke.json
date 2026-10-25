@@ -1,0 +1,729 @@
+{
+  "all_canonical_values_upload_parity": true,
+  "approved_dataset_content_sha256": "5fd672ff45b69681e310efff7661cc8313989cfc10191047dc476e8161e156c1",
+  "canonical_count": 100688,
+  "elapsed_s": 310.13818340201396,
+  "long_retry_idempotent": true,
+  "missing_speed_safe_skip": true,
+  "peak_rss_mib": 708.1875,
+  "runtime_code_sha256": {
+    "app/__init__.py": "91ecba6e2a5be4d68aae925dd2b3d26c090f31875c4fd6b6ad351ff2040c0abd",
+    "app/api/__init__.py": "55dcea48413a429bb625b1e2dc686b7ff576d93082ec584be405f40c98367160",
+    "app/api/analysis.py": "231cfbdb0583c0c6ddb919da76a890e675ab4d3478a1331f5a2427b3ce88eaf3",
+    "app/api/health.py": "2e5fb3c84869a2c224b7a0856276c4ddeed1c70ae3ff7c39f6b7761660b5cb4c",
+    "app/api/model.py": "48b49cbf5935d6ff9985ccdf44eb761622527736f1f6e083468cac813a028d28",
+    "app/api/raw.py": "e9ac96e6510550226f546ff74518c0b12ff57222f2dd1b6be157f056c4f0b595",
+    "app/api/sessions.py": "ab27fe92c11e28a1253383be50ee6bb901b4a0d7cae81fd9633db96825fe82ee",
+    "app/api/uploads.py": "b14092331e05a4fef484452fb4d9868fe4c0da11ef4f47b6495d94519d8ce477",
+    "app/audit/__init__.py": "3c78788ea0fb8b468bf16f215d385ccca713e31b0d6625da9c1c4e1f920e5b92",
+    "app/audit/byte_statistics.py": "a4c4aa271d57014a890cbf615140d45ff4a29445fb2f16425f6ecc2038489cce",
+    "app/audit/calibration.py": "73b111aee136d84b5d6fa83b5a3c0dae9d90a563345f9c15101fc6c48e54fc8c",
+    "app/audit/formula_search.py": "8618cf972297b655feb6d8752bc92f76658163f5add6b29d09dca0d631d1c60c",
+    "app/audit/human_normal_retraining.py": "d86df59d2a5ff40b2559db96113ee6ae5786e9a273eb13efbe0a248c79498b56",
+    "app/audit/loading.py": "15c36b6861a8a76470ffe6584f98b2a19401387f5414851d0f79af88611f6f51",
+    "app/audit/ml_false_positive_audit.py": "facebc5b42e19289997939db34e12508fa34965f4c8e9c4e0bb26e6c13c3b6cc",
+    "app/audit/plausibility.py": "b0b6ad980ec29911118fc28ba4d5311791de82199bd00203ba0c135fc58976aa",
+    "app/audit/report.py": "8ed33284812581e7c749dcf1a90f5fb5218064a0033e3dc66cc048479f76afe3",
+    "app/config.py": "ad19ee65eb7628f0ae36ba0c81a1b1a120e2863299765ba274270dc8ff5fb569",
+    "app/context_annotation/__init__.py": "4b4f25183db9ce9828d5d8dfb92945e47e80c23a8af333459fdfacc40d78bed9",
+    "app/context_annotation/annotation_snapshot.py": "a655a4bbafd2a7ccb2ac49ced4c52f13be0a28ccf98ca1de0c85f6ba499657c3",
+    "app/context_annotation/approved_export.py": "c215ad2425e735ec1ab23429e01612b5328ddd23650f03494807f86be21009b7",
+    "app/context_annotation/attestation.py": "67f022610d48f14becdcfd115fc7c79ad300c9cc94f7eff7e468fb89e54ecd97",
+    "app/context_annotation/auto_label.py": "31109547a2482590136a94509e1133168d6c1bc777430d704918f63ccb1f1ed6",
+    "app/context_annotation/auto_labeler.py": "402b51e5707bff7a1f6297c024866939efa8aff0a8fed809efec97d77f1419c1",
+    "app/context_annotation/bulk_endorsement.py": "f9619f5d360261d2638cdd4443c13cc1f72a8cf7ed9d9324143d44ac6fbf3da5",
+    "app/context_annotation/corpus.py": "7fd07a243d15bd73b60d739e97a858762b69927ec904b9e1412f67022ed2bd08",
+    "app/context_annotation/freeze_dataset.py": "cfd465a055bea473754e522df9590c4f30d8d6bbe710cb6b73743cf0c4da0f79",
+    "app/context_annotation/macro.py": "5bb34c2b472a71093478a7ea6e54dadbc41c42cb58fbd68aa0b4da7c785351d1",
+    "app/context_annotation/models.py": "1e44224731ea7d379c6bbb4ea9fc1bb9472212d2eb713a1affc12dae35337ce6",
+    "app/context_annotation/pilot_quality.py": "a287b0b7c505812ac29c37a94cbc87ad67d00620d3615e8b478df80cc26501e0",
+    "app/context_annotation/preflight.py": "4d878f02a6de1efeb7e5c2a1b9ee15b185a87d6521257d4d3482acf901d68f95",
+    "app/context_annotation/raw_campaign.py": "8110e0b8c9614efb230220355aa3dc1ac049216bb10eea1b2eb7a27204e01d76",
+    "app/context_annotation/review.py": "664f81f48bbe1f08204a495c0e9cdda0fd6493c03098f831eacf06aa99b5895d",
+    "app/context_annotation/review_effort.py": "d2650fc94b1d4734a2393eb80b51fcfb1913e1ba4fb236e57e010cf90b1b3445",
+    "app/context_annotation/service.py": "dedeed6e6ff23b89a49c29e846e14ba20ffa48aee5347c795b03553a1608109e",
+    "app/context_annotation/session_loader.py": "d19cc4bbb138d826bfbf5346d246c3d37448d3dba8d177284649dc8e8e680824",
+    "app/context_annotation/speed.py": "a7092172730772c525f3ef2f85122ab1afe4f8ca0e0108fd95a9e8206de2ddcf",
+    "app/context_annotation/storage.py": "7447952e66e26a7959ad9d8b30801da94e495293c50c4146a46c400ff1b7df1c",
+    "app/context_annotation/validation.py": "d7591fdc77338d11ff7d15663f2c9a22d157b6b4f4f588f1122f5e0d52d9d5fe",
+    "app/context_annotation/validation_report.py": "c1af358f24295fc6753fa0fd110d7062831e11d25fd225a4651358606b062ce7",
+    "app/context_annotation/web.py": "1848f8be5b970fb60e756b6bbcbf7221fa4d7a70a3efadb488fd87524d7e8a2d",
+    "app/domain/__init__.py": "3c78788ea0fb8b468bf16f215d385ccca713e31b0d6625da9c1c4e1f920e5b92",
+    "app/domain/analysis.py": "f19770265c71e615e0ccf51e4e3319cb0b084c34973be73708902f98ce3b09fe",
+    "app/domain/model.py": "0f31892432b5785bbbec8770471ef0186911ff7c8f0f6ff34d3f32cd1d9f8f47",
+    "app/domain/telemetry.py": "5ec3846cb1f0262b0c328e094064b665d41a87da3a9953abca449149755b2ce3",
+    "app/ecu/__init__.py": "066abb810a778f9b3283759c0455f9a3aa29889071e5379389ffd37e4e789b7d",
+    "app/ecu/checksum.py": "a35963a795e190b55bb45eb0dfa1d14f15bd6d2124e6bb33a802acc12109ff88",
+    "app/ecu/decoder.py": "75502007526cebd7d3169dc96f8a8135555aeded3e44e0a95044bec0eb73af72",
+    "app/ecu/parser.py": "54be981fc8018d5c938361274179f89662db4c28d72c92efb4e7dfe67b8de799",
+    "app/ecu/profile_registry.py": "dd4abc027666c13979393fa1e4cffcc9c3be24e2122d9e3283e81e39d12e48be",
+    "app/ecu/profiles/__init__.py": "3c78788ea0fb8b468bf16f215d385ccca713e31b0d6625da9c1c4e1f920e5b92",
+    "app/ecu/profiles/honda_keihin_71_17.py": "817e11e343e194dae2f1d1d01d2e61116bf8e7f207dfaa01841cb4ae7fa93626",
+    "app/ecu/validation.py": "c2a04f9d7169d9af2a67dd3760e8a4e25cee0ac958dcc6f01fa53be41f45407c",
+    "app/evaluation/__init__.py": "3c78788ea0fb8b468bf16f215d385ccca713e31b0d6625da9c1c4e1f920e5b92",
+    "app/evaluation/context_benchmark_readiness.py": "80befe107a36ef67b0e5cc941cd16f737d5eed412baf874828ff08d8c3c52d04",
+    "app/evaluation/context_validation_plan.py": "9ec2c2ed46b3fd5c2850e75bee4f85cd6dec6fbb2db97ffa8a4bfb45620ce2a0",
+    "app/evaluation/contextual_review.py": "3f02aa5d9577c4915d50f6870478daabfbcd6ac8b805267e79644c716e40ac45",
+    "app/evaluation/contextual_shadow.py": "fcc8d78f452fc033938183e2d96cb96f8ab3e10da2ce6e8ad48092de677fa73b",
+    "app/evaluation/detector_validation.py": "ea7132c7227739607b9e8541953398c9672b4231fd680d594e9eed38314375b8",
+    "app/evaluation/diagnostic_integration.py": "5c10910f59eba3f647eb8780b93fc323824712b929e27aa338de9d724e10ee51",
+    "app/evaluation/evidence_aggregation.py": "62c91d97484c16841dabdd2f77ec82118146af70c4a256a5882d85e2c907f578",
+    "app/evaluation/group_aware_if.py": "6e26bf167d850163aad75fd95c88a682af48898e0d28acd69ba677fc0d9aec4f",
+    "app/evaluation/historical_evidence.py": "acedd6a70177e40aaf4f67863bc451ea13b267b1d331eee172879aa9623117da",
+    "app/evaluation/legacy_iforest.py": "f056078ca92f8b39ccb3154e9151a59fe0decfb7d5efef50a338297355d39391",
+    "app/evaluation/model_harness_evaluation.py": "29b998747cb393cb59ad1860666402bc92a170e20b286bc9a76feccf70bf1855",
+    "app/evaluation/published_integrity.py": "64da0cffb3de6218526176f81580e1597d0ba7c00d035a83a879e11a961a1d8f",
+    "app/evaluation/rca_expert_validation.py": "9ba5edf336049e5c5aae0598c88cfd6ccc3d753cda6fc6599afb98e7ac985808",
+    "app/evaluation/rca_surrogate_validation.py": "9b56cf0eb988f446ff51d5660752b3037c9c75fd2b09390c599c4154a2b6663e",
+    "app/evaluation/research_architecture_audit.py": "12a112f2636f53d994c9c24acdb3aeae3df09e52c8b3df7629ff326cc07d6681",
+    "app/evaluation/root_cause_analysis.py": "8c85cf11388d36fff97e2ec0ab9afafbb0125ad88a3cc5d1347be13803e6243b",
+    "app/evaluation/root_cause_analysis_v2.py": "965e787606fbd4b52805afa619eb605de4de6d3405943049a1457c01d22c2fb5",
+    "app/evaluation/temporal_candidate_revision.py": "84a1467f67dde993bafa3498c6738d5d288caa5bfd89ae044fd606711271b5bd",
+    "app/evaluation/temporal_shadow.py": "6d88054584c1dc1a1f6e49c4a65b698909d840f5c9b389a25222c5d6b619f38f",
+    "app/ingestion/__init__.py": "3c78788ea0fb8b468bf16f215d385ccca713e31b0d6625da9c1c4e1f920e5b92",
+    "app/ingestion/honda_0x17/__init__.py": "b3eebdda98f2d86f4a6e739a9e0811e405d9b03d0fd250588b6ef3263a1ec838",
+    "app/ingestion/honda_0x17/adapter.py": "82d31e591b97647cd975edfd50320e4c605183af89b86655930758cefa96810a",
+    "app/ingestion/raw_dispatch.py": "6117fda95031e4ecd48bd2b35e41da5a7e1bd478beef7162c2aba10e458b6b4f",
+    "app/ingestion/raw_ecu/__init__.py": "3c78788ea0fb8b468bf16f215d385ccca713e31b0d6625da9c1c4e1f920e5b92",
+    "app/ingestion/raw_ecu/adapter.py": "959e38f0fea3ab74d6938aa5058333aa0d740e0e0992299c12c59230fa75a638",
+    "app/ingestion/raw_ecu/checksum.py": "d1d142703132b4bcae33eb8c12188bd2fc123333c8a1dd77f0e47ae71b95c7e6",
+    "app/ingestion/raw_ecu/decoder.py": "40b5782e1d588aa241f835b120da4916cbe5a55a9a2d391b5ef43cffc92670bb",
+    "app/ingestion/raw_ecu/parser.py": "f95266639768f54c705b1d054eeb8eee60736746008832ac72f5842d0013b761",
+    "app/ingestion/raw_ecu/validation.py": "6689be3cef3808f52f95a7c329209bd28d86d9d347a37084a679221f47e9198c",
+    "app/integration/__init__.py": "bada8f8fe6f0a2dfe1993274b1706c3d930f68394e8296b52ae3168c39ed8bf7",
+    "app/integration/diagnostic_evidence.py": "439643f6aec054f4356a5d5f1864945bb5473beaf0a90e861af8b3ff57954bd5",
+    "app/main.py": "3c4367c4f8b6eb82eb48e96eb6f98259c88a288109813bdf52040fb94ef42ad1",
+    "app/ml/__init__.py": "4666194f5238ca068875c321a0fc28acc404776695d946f45cad772716c36a64",
+    "app/ml/active_bundle.py": "f8ecfa0ef4b48f9cbab2e53b60101781bd0e177a5401d65fbce168a6ff2bad37",
+    "app/ml/artifacts.py": "848417a9e3cef575014d53f86443f207b15eb2a84476f50d250fc605dc806235",
+    "app/ml/contextual_detector.py": "9b0da11eb8d7f63727d56f8a9c10c8f80ce85a1a3c1d2fd7781f6ea0babc338a",
+    "app/ml/contextual_speed.py": "43c47e56fcba3940daf199deff77ce4a66f9a7ff315d45ddcacc852783f858fe",
+    "app/ml/evidence_aggregation.py": "bdf1a40a7f3130ef21b57c364d95d183132e7d6aef572c98e2ef3fa1fce2a57d",
+    "app/ml/features.py": "ea5f3d2b4e39625cb6754cbfd83c9ee8f14a8b8742e442419e456d58cc81ea6e",
+    "app/ml/harness.py": "9ae58db4328296de1b6bfd4320a6cfd57d3f346467e0ab5ea97bdfe550973df5",
+    "app/ml/iforest_detector.py": "52dbe1546c67f99c6dba4cfe83bc43e5673f59b92ab7faa689e861d8254c1a84",
+    "app/ml/inference.py": "5d0ba4a2c290f9e1bc1d95d928fa55f8e067662915ce7282bd3d870c8fc14c3a",
+    "app/ml/model_selection.py": "7dd96d4fa83188a066d1f2b38939844563f9f070ed0952f2bf0944d4d42f8640",
+    "app/ml/profile_v02_training.py": "e1cf101719c6b4a717226b4b12fe56dd43ca1513e7d9fcf3759466be1c7a6ddc",
+    "app/ml/robust_reference.py": "55834ef7b5401cf8c3460465647721e49a51abe6d63f14e966f761c4cfed6e64",
+    "app/ml/root_cause_analysis.py": "314b10dc94a3f2f9b48ca5f620010fcc832f17b7091e13f162e0f515eaa5e5c4",
+    "app/ml/root_cause_analysis_v2.py": "fac04acf96aefab925ce8297f2fc82e106d88a88808c5b37e2ad41526625eefd",
+    "app/ml/rpm_stability_detector.py": "3115508df4d29f94a918a800911714568b59451d706127c8a703590e1c016087",
+    "app/ml/scoring.py": "277a04aeb58be2e68db9262097682be3adb385d3ee3be8217a36143e25e9625f",
+    "app/ml/temporal_detector.py": "35c186089ff46fd9e6f48a4725d346519d9ef7b7dc1c9317d9a76da9a8fc3645",
+    "app/ml/training.py": "ea51b18fd97658e78dd3be96b9e0d98b5e49c0abee4e259358dbc4dfa11cee70",
+    "app/ml/validation.py": "faf9271c74283ef82271c06f4805401e5966470075675a546f5fc94f0e7cedb8",
+    "app/ml/windowing.py": "90e3c7a3dbf5fad76590243ed26e2dffa6b5270acc649f3135ed757317a23eb9",
+    "app/repositories/__init__.py": "3c78788ea0fb8b468bf16f215d385ccca713e31b0d6625da9c1c4e1f920e5b92",
+    "app/repositories/file_repository.py": "777b55c8c7d1d448ee74e51548918f7aa926d1f39c759d1c75f4e9f049977825",
+    "app/schemas.py": "10853d6bb47c0cdb68ba651a876938a83e964d855352cec5ed456446df434cdd",
+    "app/services/__init__.py": "58e6ba782a24ca1755faf0a8ce537477cfe1b05f99602e33162b0554cef7c09b",
+    "app/services/analysis_service.py": "075c241e4403a243b61c5ea5d4459c3e47f03ab759a96dfced737992202576d1",
+    "app/services/research_harness.py": "8582e3d0289a6a2affe6985a068c560c014e71e2ed78d51f81f14860dbd12b74",
+    "app/services/session_processor.py": "15554348ffcc70af559e4e58f03efb0c05eeac4f7bfb35dadf2a67bf7d8b03bd",
+    "app/services/storage.py": "b0fc63163e8714f7ab87500df21428cbb431471d53de2a0e1ccdbad4318ca541",
+    "app/services/training_service.py": "b0682d6c87ed2d5d94e2e9424a175f522d19cc7ff04c7b415b1b2652bd42eb8f",
+    "app/utils/__init__.py": "4030ec07692b7cada8d29ae7ca4d6b81eaf5c32ba122d6d20b440cf8592b8677",
+    "app/utils/ids.py": "d6fcba3a19bcf2a533cbabf5e8b6cb4e287167e4051f323cde281709919f125d"
+  },
+  "sessions": [
+    {
+      "canonical_count": 117,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 7,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 7,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 7,
+          "scored": 7,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 28.999,
+      "elapsed_s": 0.7346260310150683,
+      "errors": [],
+      "generated_windows": 7,
+      "history_status": "available",
+      "input_frame_count": 117,
+      "session_id": "session_000001",
+      "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+      "upload_processing_s": 0.5313
+    },
+    {
+      "canonical_count": 5781,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 572,
+          "skipped": 2,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 570,
+          "skipped": 4,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 20,
+          "scored": 574,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 1446.503,
+      "elapsed_s": 16.59614212892484,
+      "errors": [],
+      "generated_windows": 574,
+      "history_status": "available",
+      "input_frame_count": 5781,
+      "session_id": "session_000002",
+      "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+      "upload_processing_s": 13.7315
+    },
+    {
+      "canonical_count": 1249,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 0,
+          "scored": 120,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 1,
+          "scored": 120,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 5,
+          "scored": 120,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 312.499,
+      "elapsed_s": 3.8021437289426103,
+      "errors": [],
+      "generated_windows": 120,
+      "history_status": "available",
+      "input_frame_count": 1249,
+      "session_id": "session_000003",
+      "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+      "upload_processing_s": 3.2474
+    },
+    {
+      "canonical_count": 3017,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 297,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 292,
+          "skipped": 5,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 1,
+          "scored": 297,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 755.001,
+      "elapsed_s": 7.518554226960987,
+      "errors": [],
+      "generated_windows": 297,
+      "history_status": "available",
+      "input_frame_count": 3017,
+      "session_id": "session_000004",
+      "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+      "upload_processing_s": 6.1296
+    },
+    {
+      "canonical_count": 7851,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 781,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 777,
+          "skipped": 4,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 5,
+          "scored": 781,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 1963.997,
+      "elapsed_s": 17.780308302026242,
+      "errors": [],
+      "generated_windows": 781,
+      "history_status": "available",
+      "input_frame_count": 7851,
+      "session_id": "session_000005",
+      "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+      "upload_processing_s": 14.7382
+    },
+    {
+      "canonical_count": 923,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 86,
+          "skipped": 2,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 86,
+          "skipped": 2,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 13,
+          "scored": 88,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 230.75,
+      "elapsed_s": 2.221484052017331,
+      "errors": [],
+      "generated_windows": 88,
+      "history_status": "available",
+      "input_frame_count": 923,
+      "session_id": "session_000006",
+      "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+      "upload_processing_s": 1.7457
+    },
+    {
+      "canonical_count": 6389,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 634,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 1,
+          "scored": 631,
+          "skipped": 3,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 4,
+          "scored": 634,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 1598.002,
+      "elapsed_s": 14.583791543031111,
+      "errors": [],
+      "generated_windows": 634,
+      "history_status": "available",
+      "input_frame_count": 6389,
+      "session_id": "session_000007",
+      "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+      "upload_processing_s": 12.68
+    },
+    {
+      "canonical_count": 1202,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 116,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 116,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 114,
+          "scored": 116,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 300.5,
+      "elapsed_s": 2.849650224088691,
+      "errors": [],
+      "generated_windows": 116,
+      "history_status": "available",
+      "input_frame_count": 1202,
+      "session_id": "session_000014",
+      "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+      "upload_processing_s": 2.4064
+    },
+    {
+      "canonical_count": 531,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 0,
+          "scored": 49,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 49,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 13,
+          "scored": 49,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 132.501,
+      "elapsed_s": 1.262538181967102,
+      "errors": [],
+      "generated_windows": 49,
+      "history_status": "available",
+      "input_frame_count": 531,
+      "session_id": "session_000015",
+      "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+      "upload_processing_s": 1.0661
+    },
+    {
+      "canonical_count": 17965,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 1787,
+          "skipped": 5,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 1783,
+          "skipped": 9,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 6,
+          "scored": 1792,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 4494.502,
+      "elapsed_s": 43.20602320996113,
+      "errors": [],
+      "generated_windows": 1792,
+      "history_status": "available",
+      "input_frame_count": 17965,
+      "session_id": "session_000016",
+      "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+      "upload_processing_s": 37.3424
+    },
+    {
+      "canonical_count": 3492,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 345,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 345,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 0,
+          "scored": 345,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 873.5,
+      "elapsed_s": 6.784107770072296,
+      "errors": [],
+      "generated_windows": 345,
+      "history_status": "available",
+      "input_frame_count": 3492,
+      "session_id": "session_000017",
+      "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+      "upload_processing_s": 5.6871
+    },
+    {
+      "canonical_count": 17976,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 1785,
+          "skipped": 8,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 1790,
+          "skipped": 3,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 9,
+          "scored": 1793,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 4496.001,
+      "elapsed_s": 102.32908775599208,
+      "errors": [],
+      "generated_windows": 1793,
+      "history_status": "available",
+      "input_frame_count": 17976,
+      "session_id": "session_000018",
+      "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+      "upload_processing_s": 29.9099
+    },
+    {
+      "canonical_count": 2194,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 0,
+          "scored": 213,
+          "skipped": 2,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 212,
+          "skipped": 3,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 7,
+          "scored": 215,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 548.67,
+      "elapsed_s": 6.114106465014629,
+      "errors": [],
+      "generated_windows": 215,
+      "history_status": "available",
+      "input_frame_count": 2194,
+      "session_id": "session_000019",
+      "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+      "upload_processing_s": 5.1734
+    },
+    {
+      "canonical_count": 87,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 3,
+          "scored": 3,
+          "skipped": 1,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 3,
+          "skipped": 1,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 4,
+          "scored": 4,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 21.501,
+      "elapsed_s": 0.5970337509643286,
+      "errors": [],
+      "generated_windows": 4,
+      "history_status": "available",
+      "input_frame_count": 87,
+      "session_id": "session_000020",
+      "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+      "upload_processing_s": 0.5042
+    },
+    {
+      "canonical_count": 3564,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 350,
+          "skipped": 2,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 1,
+          "scored": 350,
+          "skipped": 2,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 5,
+          "scored": 352,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 891.25,
+      "elapsed_s": 9.349367515998892,
+      "errors": [],
+      "generated_windows": 352,
+      "history_status": "available",
+      "input_frame_count": 3564,
+      "session_id": "session_000021",
+      "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+      "upload_processing_s": 7.5698
+    },
+    {
+      "canonical_count": 3021,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 298,
+          "skipped": 0,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 0,
+          "scored": 295,
+          "skipped": 3,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 2,
+          "scored": 298,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 755.001,
+      "elapsed_s": 10.214603714062832,
+      "errors": [],
+      "generated_windows": 298,
+      "history_status": "available",
+      "input_frame_count": 3021,
+      "session_id": "session_000022",
+      "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+      "upload_processing_s": 8.8133
+    },
+    {
+      "canonical_count": 17539,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 0,
+          "scored": 1665,
+          "skipped": 84,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 3,
+          "scored": 1721,
+          "skipped": 28,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 74,
+          "scored": 1749,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 4391.172,
+      "elapsed_s": 46.26904334500432,
+      "errors": [],
+      "generated_windows": 1749,
+      "history_status": "available",
+      "input_frame_count": 17539,
+      "session_id": "session_000023",
+      "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+      "upload_processing_s": 39.1775
+    },
+    {
+      "canonical_count": 7790,
+      "decoder_version": "honda_keihin_71_17:1.0.0",
+      "detectors": {
+        "contextual_battery_voltage": {
+          "flagged": 1,
+          "scored": 772,
+          "skipped": 3,
+          "status": "ok"
+        },
+        "contextual_speed": {
+          "flagged": 2,
+          "scored": 773,
+          "skipped": 2,
+          "status": "ok"
+        },
+        "isolation_forest": {
+          "flagged": 11,
+          "scored": 775,
+          "skipped": 0,
+          "status": "ok"
+        }
+      },
+      "duration_s": 1948.999,
+      "elapsed_s": 17.833866355009377,
+      "errors": [],
+      "generated_windows": 775,
+      "history_status": "available",
+      "input_frame_count": 7790,
+      "session_id": "session_000024",
+      "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+      "upload_processing_s": 14.9701
+    }
+  ],
+  "source_count": 18,
+  "status": "passed",
+  "timestamp_window_identity_parity": true,
+  "window_count": 9989
+}

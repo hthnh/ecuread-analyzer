@@ -1,0 +1,41 @@
+{
+  "verified_at": "2026-10-09T13:40:22.999Z",
+  "source_session_id": "calib-real-run-session-000004",
+  "loaded": true,
+  "auto_segmented": true,
+  "visualized": true,
+  "manually_corrected": true,
+  "accepted": true,
+  "persisted_and_reloaded": true,
+  "source_and_existing_annotation_hashes_unchanged": true,
+  "before_sha256": {
+    "raw": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+    "canonical": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f",
+    "existingHumanAnnotation": "2f28c3a72193a2665dbbd8a99779ba8c41a55001d8343c37e58efe0dbbebfdc8"
+  },
+  "after_sha256": {
+    "raw": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+    "canonical": "0431f0ce7b08f83e7c92104165a2f6ad16827bea659eae4acfe4996311a0356f",
+    "existingHumanAnnotation": "2f28c3a72193a2665dbbd8a99779ba8c41a55001d8343c37e58efe0dbbebfdc8"
+  },
+  "canvas_signal_pixels": 3795,
+  "timeline_framing": {
+    "canvasPlotLeft": 216,
+    "lanePlotLeft": 215,
+    "canvasPlotRight": 1411,
+    "lanePlotRight": 1412
+  },
+  "desktop_viewport": [
+    1440,
+    1100
+  ],
+  "mobile_viewport": [
+    390,
+    844
+  ],
+  "mobile_overflow": false,
+  "isolated_verification_only": true,
+  "campaign_review_added": false,
+  "browser_errors": [],
+  "accepted_correction_preserves_confirmation_history": true
+}

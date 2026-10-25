@@ -9,7 +9,8 @@ from typing import Any
 import pandas as pd
 
 from app.config import Settings
-from app.ingestion.raw_ecu.adapter import import_raw_file, parse_result_to_canonical_session
+from app.ingestion.raw_ecu.adapter import parse_result_to_canonical_session
+from app.ingestion.raw_dispatch import import_dispatched_raw_file
 from app.ingestion.raw_ecu.parser import ParseResult
 from app.services.analysis_service import AnalysisService, build_feature_frame
 from app.services.storage import StorageService, safe_filename
@@ -68,6 +69,11 @@ def validate_raw_import_for_processing(raw_import) -> None:
         if raw_import.statistics.get("source_format") == "esp_jsonl":
             raise ValueError("empty JSONL upload or no JSONL records found")
         raise ValueError("no RAW frames found in upload")
+    if raw_import.canonical_session.source_type == "native_honda_0x17":
+        invalid = [s for s in raw_import.canonical_session.samples if not s.frame_valid or not s.checksum_valid]
+        if invalid:
+            examples = [f"sequence {s.sequence}: {s.quality_flags}" for s in invalid[:3]]
+            raise ValueError("invalid native RAW frames: " + "; ".join(examples))
     if raw_import.statistics.get("source_format") == "esp_jsonl" and raw_import.statistics["frame_errors"] > 0:
         failed = raw_import.frame_data[raw_import.frame_data["parse_ok"] == False]  # noqa: E712
         examples = [
@@ -100,7 +106,7 @@ class SessionProcessor:
         process_with_model: bool = True,
     ) -> dict[str, Any]:
         logger.info("session created", extra={"session_id": session_id})
-        raw_import = import_raw_file(
+        raw_import = import_dispatched_raw_file(
             raw_path,
             self.settings,
             session_id=session_id,
@@ -206,6 +212,10 @@ class SessionProcessor:
                 "upload_sha256": upload_sha256,
                 "source_format": raw_import.statistics.get("source_format"),
                 "time_basis": time_basis,
+                "raw_representation": raw_import.statistics.get("raw_representation"),
+                "decoder_id": raw_import.canonical_session.decoder_id,
+                "decoder_version": raw_import.canonical_session.decoder_version,
+                "telemetry_schema_version": raw_import.canonical_session.telemetry_schema_version,
             },
             "statistics": {
                 **raw_import.statistics,
@@ -229,6 +239,7 @@ class SessionProcessor:
                 "note": analysis.summary["note"],
             },
             "diagnostic_evidence": analysis.summary["diagnostic_evidence"],
+            "model_bundle": analysis.summary["model_bundle"],
             "artifacts": {
                 "raw": str(self.storage.session_raw_dir(session_id) / "original.txt"),
                 "frames": str(self.storage.session_processed_dir(session_id) / "frames.csv"),

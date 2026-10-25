@@ -1,0 +1,2794 @@
+{
+  "evidence_conflicts": 19,
+  "evidence_discrepancy_sample_count_unique": 19,
+  "export_content_sha256": "5fd672ff45b69681e310efff7661cc8313989cfc10191047dc476e8161e156c1",
+  "interpretation": "micro thermal inherits joint interval boundaries, even when the thermal label stays identical; macro thermal is independently coalesced. Status counts overlap across axes; touches_unknown includes unknown inside ambiguous windows. Raw speed/label discrepancies are review candidates, not adjudicated ground truth; affected windows separately reported. No imputation.",
+  "majority_vote_used": false,
+  "mapping_conflicts": 0,
+  "missing_mapping_count": 0,
+  "missing_model_signal_samples": 0,
+  "missing_raw_speed_samples": 0,
+  "representations": {
+    "macro": {
+      "by_capture_group": [
+        {
+          "capture_group": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "counts": {
+            "both_known": 1,
+            "both_known_without_measured_discrepancy": 0,
+            "either_abstained": 0,
+            "either_boundary_ambiguous": 6,
+            "measured_evidence_discrepancy_windows": 6,
+            "operating:ambiguous": 6,
+            "operating:homogeneous": 1,
+            "thermal:homogeneous": 7,
+            "touches_unknown": 1
+          },
+          "joint_known": {
+            "stationary_running|warming": 1
+          },
+          "operating": {
+            "stationary_running": 1
+          },
+          "session_id": "session_000001",
+          "thermal": {
+            "warming": 7
+          }
+        },
+        {
+          "capture_group": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "counts": {
+            "both_known": 396,
+            "both_known_without_measured_discrepancy": 396,
+            "either_abstained": 25,
+            "either_boundary_ambiguous": 157,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 130,
+            "operating:homogeneous": 444,
+            "thermal:abstained": 25,
+            "thermal:ambiguous": 43,
+            "thermal:homogeneous": 506,
+            "touches_unknown": 97
+          },
+          "joint_known": {
+            "moving_episode|stable": 344,
+            "moving_episode|warming": 50,
+            "moving_steady|stable": 1,
+            "stationary_running|stable": 1
+          },
+          "operating": {
+            "moving_episode": 442,
+            "moving_steady": 1,
+            "stationary_running": 1
+          },
+          "session_id": "session_000002",
+          "thermal": {
+            "stable": 438,
+            "unknown": 25,
+            "warming": 68
+          }
+        },
+        {
+          "capture_group": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "counts": {
+            "both_known": 100,
+            "both_known_without_measured_discrepancy": 100,
+            "either_abstained": 0,
+            "either_boundary_ambiguous": 20,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 19,
+            "operating:homogeneous": 101,
+            "thermal:ambiguous": 1,
+            "thermal:homogeneous": 119,
+            "touches_unknown": 6
+          },
+          "joint_known": {
+            "moving_episode|stable": 76,
+            "stationary_running|stable": 24
+          },
+          "operating": {
+            "moving_episode": 77,
+            "stationary_running": 24
+          },
+          "session_id": "session_000003",
+          "thermal": {
+            "stable": 119
+          }
+        },
+        {
+          "capture_group": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "counts": {
+            "both_known": 102,
+            "both_known_without_measured_discrepancy": 102,
+            "either_abstained": 135,
+            "either_boundary_ambiguous": 104,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 81,
+            "operating:homogeneous": 216,
+            "thermal:abstained": 135,
+            "thermal:ambiguous": 39,
+            "thermal:homogeneous": 123,
+            "touches_unknown": 187
+          },
+          "joint_known": {
+            "moving_episode|stable": 102
+          },
+          "operating": {
+            "moving_episode": 197,
+            "stationary_running": 19
+          },
+          "session_id": "session_000004",
+          "thermal": {
+            "stable": 123,
+            "unknown": 135
+          }
+        },
+        {
+          "capture_group": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "counts": {
+            "both_known": 545,
+            "both_known_without_measured_discrepancy": 545,
+            "either_abstained": 84,
+            "either_boundary_ambiguous": 182,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 138,
+            "operating:homogeneous": 643,
+            "thermal:abstained": 84,
+            "thermal:ambiguous": 57,
+            "thermal:homogeneous": 640,
+            "touches_unknown": 151
+          },
+          "joint_known": {
+            "moving_episode|stable": 537,
+            "stationary_running|stable": 1,
+            "stationary_running|warming": 7
+          },
+          "operating": {
+            "moving_episode": 614,
+            "stationary_running": 29
+          },
+          "session_id": "session_000005",
+          "thermal": {
+            "stable": 631,
+            "unknown": 84,
+            "warming": 9
+          }
+        },
+        {
+          "capture_group": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "counts": {
+            "both_known": 57,
+            "both_known_without_measured_discrepancy": 57,
+            "either_abstained": 2,
+            "either_boundary_ambiguous": 29,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 29,
+            "operating:homogeneous": 59,
+            "thermal:abstained": 2,
+            "thermal:ambiguous": 9,
+            "thermal:homogeneous": 77,
+            "touches_unknown": 30
+          },
+          "joint_known": {
+            "moving_episode|stable": 25,
+            "moving_episode|warming": 24,
+            "stationary_running|warming": 8
+          },
+          "operating": {
+            "moving_episode": 49,
+            "stationary_running": 10
+          },
+          "session_id": "session_000006",
+          "thermal": {
+            "stable": 30,
+            "unknown": 2,
+            "warming": 47
+          }
+        },
+        {
+          "capture_group": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "counts": {
+            "both_known": 442,
+            "both_known_without_measured_discrepancy": 442,
+            "either_abstained": 35,
+            "either_boundary_ambiguous": 173,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 147,
+            "operating:homogeneous": 487,
+            "thermal:abstained": 35,
+            "thermal:ambiguous": 28,
+            "thermal:homogeneous": 571,
+            "touches_unknown": 67
+          },
+          "joint_known": {
+            "moving_episode|stable": 439,
+            "moving_steady|stable": 3
+          },
+          "operating": {
+            "moving_episode": 475,
+            "moving_steady": 3,
+            "stationary_running": 9
+          },
+          "session_id": "session_000007",
+          "thermal": {
+            "stable": 566,
+            "unknown": 35,
+            "warming": 5
+          }
+        },
+        {
+          "capture_group": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "counts": {
+            "both_known": 109,
+            "both_known_without_measured_discrepancy": 109,
+            "either_abstained": 0,
+            "either_boundary_ambiguous": 7,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 1,
+            "operating:homogeneous": 115,
+            "thermal:ambiguous": 6,
+            "thermal:homogeneous": 110,
+            "touches_unknown": 7
+          },
+          "joint_known": {
+            "stationary_running|warming": 109
+          },
+          "operating": {
+            "stationary_running": 115
+          },
+          "session_id": "session_000014",
+          "thermal": {
+            "warming": 110
+          }
+        },
+        {
+          "capture_group": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "counts": {
+            "both_known": 23,
+            "both_known_without_measured_discrepancy": 23,
+            "either_abstained": 0,
+            "either_boundary_ambiguous": 26,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 26,
+            "operating:homogeneous": 23,
+            "thermal:homogeneous": 49,
+            "touches_unknown": 10
+          },
+          "joint_known": {
+            "moving_episode|warming": 15,
+            "stationary_running|warming": 8
+          },
+          "operating": {
+            "moving_episode": 15,
+            "stationary_running": 8
+          },
+          "session_id": "session_000015",
+          "thermal": {
+            "warming": 49
+          }
+        },
+        {
+          "capture_group": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "counts": {
+            "both_known": 1022,
+            "both_known_without_measured_discrepancy": 1022,
+            "either_abstained": 177,
+            "either_boundary_ambiguous": 670,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 499,
+            "operating:homogeneous": 1293,
+            "thermal:abstained": 177,
+            "thermal:ambiguous": 301,
+            "thermal:homogeneous": 1314,
+            "touches_unknown": 528
+          },
+          "joint_known": {
+            "moving_episode|stable": 858,
+            "moving_episode|warming": 17,
+            "moving_steady|stable": 2,
+            "stationary_running|stable": 66,
+            "stationary_running|warming": 79
+          },
+          "operating": {
+            "moving_episode": 1073,
+            "moving_steady": 2,
+            "stationary_running": 218
+          },
+          "session_id": "session_000016",
+          "thermal": {
+            "stable": 1202,
+            "unknown": 177,
+            "warming": 112
+          }
+        },
+        {
+          "capture_group": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "counts": {
+            "both_known": 156,
+            "both_known_without_measured_discrepancy": 156,
+            "either_abstained": 16,
+            "either_boundary_ambiguous": 175,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 145,
+            "operating:homogeneous": 200,
+            "thermal:abstained": 16,
+            "thermal:ambiguous": 35,
+            "thermal:homogeneous": 294,
+            "touches_unknown": 63
+          },
+          "joint_known": {
+            "moving_episode|stable": 131,
+            "moving_episode|warming": 7,
+            "moving_steady|stable": 18
+          },
+          "operating": {
+            "moving_episode": 162,
+            "moving_steady": 18,
+            "stationary_running": 20
+          },
+          "session_id": "session_000017",
+          "thermal": {
+            "stable": 272,
+            "unknown": 16,
+            "warming": 22
+          }
+        },
+        {
+          "capture_group": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "counts": {
+            "both_known": 891,
+            "both_known_without_measured_discrepancy": 891,
+            "either_abstained": 128,
+            "either_boundary_ambiguous": 832,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 788,
+            "operating:homogeneous": 1005,
+            "thermal:abstained": 128,
+            "thermal:ambiguous": 77,
+            "thermal:homogeneous": 1588,
+            "touches_unknown": 244
+          },
+          "joint_known": {
+            "moving_episode|stable": 703,
+            "moving_steady|stable": 180,
+            "stationary_running|stable": 8
+          },
+          "operating": {
+            "moving_episode": 791,
+            "moving_steady": 196,
+            "stationary_running": 18
+          },
+          "session_id": "session_000018",
+          "thermal": {
+            "stable": 1588,
+            "unknown": 128
+          }
+        },
+        {
+          "capture_group": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "counts": {
+            "both_known": 87,
+            "both_known_without_measured_discrepancy": 87,
+            "either_abstained": 38,
+            "either_boundary_ambiguous": 104,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 84,
+            "operating:homogeneous": 131,
+            "thermal:abstained": 38,
+            "thermal:ambiguous": 30,
+            "thermal:homogeneous": 147,
+            "touches_unknown": 68
+          },
+          "joint_known": {
+            "moving_episode|stable": 75,
+            "moving_steady|stable": 11,
+            "stationary_running|stable": 1
+          },
+          "operating": {
+            "moving_episode": 107,
+            "moving_steady": 11,
+            "stationary_running": 13
+          },
+          "session_id": "session_000019",
+          "thermal": {
+            "stable": 147,
+            "unknown": 38
+          }
+        },
+        {
+          "capture_group": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "counts": {
+            "both_known": 0,
+            "both_known_without_measured_discrepancy": 0,
+            "either_abstained": 4,
+            "either_boundary_ambiguous": 4,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 4,
+            "thermal:abstained": 4,
+            "touches_unknown": 4
+          },
+          "joint_known": {},
+          "operating": {},
+          "session_id": "session_000020",
+          "thermal": {
+            "unknown": 4
+          }
+        },
+        {
+          "capture_group": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "counts": {
+            "both_known": 152,
+            "both_known_without_measured_discrepancy": 152,
+            "either_abstained": 29,
+            "either_boundary_ambiguous": 183,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 178,
+            "operating:homogeneous": 174,
+            "thermal:abstained": 29,
+            "thermal:ambiguous": 15,
+            "thermal:homogeneous": 308,
+            "touches_unknown": 44
+          },
+          "joint_known": {
+            "moving_episode|stable": 79,
+            "moving_steady|stable": 73
+          },
+          "operating": {
+            "moving_episode": 101,
+            "moving_steady": 73
+          },
+          "session_id": "session_000021",
+          "thermal": {
+            "stable": 308,
+            "unknown": 29
+          }
+        },
+        {
+          "capture_group": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "counts": {
+            "both_known": 175,
+            "both_known_without_measured_discrepancy": 175,
+            "either_abstained": 13,
+            "either_boundary_ambiguous": 114,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 103,
+            "operating:homogeneous": 195,
+            "thermal:abstained": 13,
+            "thermal:ambiguous": 24,
+            "thermal:homogeneous": 261,
+            "touches_unknown": 40
+          },
+          "joint_known": {
+            "moving_episode|stable": 74,
+            "moving_steady|stable": 101
+          },
+          "operating": {
+            "moving_episode": 87,
+            "moving_steady": 108
+          },
+          "session_id": "session_000022",
+          "thermal": {
+            "stable": 261,
+            "unknown": 13
+          }
+        },
+        {
+          "capture_group": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "counts": {
+            "both_known": 772,
+            "both_known_without_measured_discrepancy": 772,
+            "either_abstained": 225,
+            "either_boundary_ambiguous": 821,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 656,
+            "operating:homogeneous": 1093,
+            "thermal:abstained": 225,
+            "thermal:ambiguous": 236,
+            "thermal:homogeneous": 1288,
+            "touches_unknown": 479
+          },
+          "joint_known": {
+            "moving_episode|stable": 519,
+            "moving_episode|warming": 4,
+            "moving_steady|stable": 213,
+            "stationary_running|stable": 31,
+            "stationary_running|warming": 5
+          },
+          "operating": {
+            "moving_episode": 803,
+            "moving_steady": 220,
+            "stationary_running": 70
+          },
+          "session_id": "session_000023",
+          "thermal": {
+            "stable": 1279,
+            "unknown": 225,
+            "warming": 9
+          }
+        },
+        {
+          "capture_group": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "counts": {
+            "both_known": 390,
+            "both_known_without_measured_discrepancy": 390,
+            "either_abstained": 139,
+            "either_boundary_ambiguous": 264,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 149,
+            "operating:homogeneous": 626,
+            "thermal:abstained": 139,
+            "thermal:ambiguous": 163,
+            "thermal:homogeneous": 473,
+            "touches_unknown": 311
+          },
+          "joint_known": {
+            "moving_episode|stable": 314,
+            "moving_episode|warming": 9,
+            "moving_steady|stable": 10,
+            "moving_steady|warming": 1,
+            "stationary_running|stable": 36,
+            "stationary_running|warming": 20
+          },
+          "operating": {
+            "moving_episode": 509,
+            "moving_steady": 15,
+            "stationary_running": 102
+          },
+          "session_id": "session_000024",
+          "thermal": {
+            "stable": 429,
+            "unknown": 139,
+            "warming": 44
+          }
+        }
+      ],
+      "by_label": {
+        "joint_known:moving_episode|stable": {
+          "capture_groups": 14,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 978.4989999999999,
+            "session_000003": 219.248,
+            "session_000004": 323.99500000000006,
+            "session_000005": 1480.2420000000002,
+            "session_000006": 72.25,
+            "session_000007": 1244.5,
+            "session_000016": 2575.9950000000003,
+            "session_000017": 435.249,
+            "session_000018": 2362.9949999999985,
+            "session_000019": 265.74699999999996,
+            "session_000021": 324.4939999999999,
+            "session_000022": 224.002,
+            "session_000023": 1845.7509999999984,
+            "session_000024": 951.2520000000001
+          },
+          "largest_capture_share": 0.20065481758652948,
+          "windows": 4276,
+          "windows_by_capture": {
+            "session_000002": 344,
+            "session_000003": 76,
+            "session_000004": 102,
+            "session_000005": 537,
+            "session_000006": 25,
+            "session_000007": 439,
+            "session_000016": 858,
+            "session_000017": 131,
+            "session_000018": 703,
+            "session_000019": 75,
+            "session_000021": 79,
+            "session_000022": 74,
+            "session_000023": 519,
+            "session_000024": 314
+          }
+        },
+        "joint_known:moving_episode|warming": {
+          "capture_groups": 7,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 144.501,
+            "session_000006": 70.001,
+            "session_000015": 66.74799999999999,
+            "session_000016": 52.25,
+            "session_000017": 27.251000000000005,
+            "session_000023": 19.75,
+            "session_000024": 32.252
+          },
+          "largest_capture_share": 0.3968253968253968,
+          "windows": 126,
+          "windows_by_capture": {
+            "session_000002": 50,
+            "session_000006": 24,
+            "session_000015": 15,
+            "session_000016": 17,
+            "session_000017": 7,
+            "session_000023": 4,
+            "session_000024": 9
+          }
+        },
+        "joint_known:moving_steady|stable": {
+          "capture_groups": 10,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000007": 17.250999999999976,
+            "session_000016": 14.750999999999749,
+            "session_000017": 93.75299999999993,
+            "session_000018": 762.4930000000006,
+            "session_000019": 46.99800000000002,
+            "session_000021": 289.7459999999999,
+            "session_000022": 320.74699999999996,
+            "session_000023": 798.4980000000002,
+            "session_000024": 44.500999999999976
+          },
+          "largest_capture_share": 0.3480392156862745,
+          "windows": 612,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000007": 3,
+            "session_000016": 2,
+            "session_000017": 18,
+            "session_000018": 180,
+            "session_000019": 11,
+            "session_000021": 73,
+            "session_000022": 101,
+            "session_000023": 213,
+            "session_000024": 10
+          }
+        },
+        "joint_known:moving_steady|warming": {
+          "capture_groups": 1,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000024": 12.251999999999953
+          },
+          "largest_capture_share": 1.0,
+          "windows": 1,
+          "windows_by_capture": {
+            "session_000024": 1
+          }
+        },
+        "joint_known:stationary_running|stable": {
+          "capture_groups": 8,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000003": 70.249,
+            "session_000005": 12.249000000000024,
+            "session_000016": 242.9959999999994,
+            "session_000018": 59.001000000000204,
+            "session_000019": 12.248999999999967,
+            "session_000023": 135.99400000000082,
+            "session_000024": 138.75100000000003
+          },
+          "largest_capture_share": 0.39285714285714285,
+          "windows": 168,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000003": 24,
+            "session_000005": 1,
+            "session_000016": 66,
+            "session_000018": 8,
+            "session_000019": 1,
+            "session_000023": 31,
+            "session_000024": 36
+          }
+        },
+        "joint_known:stationary_running|warming": {
+          "capture_groups": 8,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000001": 12.25,
+            "session_000005": 27.247999999999934,
+            "session_000006": 29.749000000000002,
+            "session_000014": 292.251,
+            "session_000015": 29.751,
+            "session_000016": 315.2479999999996,
+            "session_000023": 22.25,
+            "session_000024": 69.749
+          },
+          "largest_capture_share": 0.459915611814346,
+          "windows": 237,
+          "windows_by_capture": {
+            "session_000001": 1,
+            "session_000005": 7,
+            "session_000006": 8,
+            "session_000014": 109,
+            "session_000015": 8,
+            "session_000016": 79,
+            "session_000023": 5,
+            "session_000024": 20
+          }
+        },
+        "operating:moving_episode": {
+          "capture_groups": 15,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 1252.753,
+            "session_000003": 221.748,
+            "session_000004": 581.245,
+            "session_000005": 1672.75,
+            "session_000006": 142.251,
+            "session_000007": 1344.25,
+            "session_000015": 66.74799999999999,
+            "session_000016": 3182.241,
+            "session_000017": 522.4990000000001,
+            "session_000018": 2612.2369999999987,
+            "session_000019": 355.499,
+            "session_000021": 389.2459999999999,
+            "session_000022": 276.00100000000003,
+            "session_000023": 2556.748999999998,
+            "session_000024": 1429.751
+          },
+          "largest_capture_share": 0.19501999272991638,
+          "windows": 5502,
+          "windows_by_capture": {
+            "session_000002": 442,
+            "session_000003": 77,
+            "session_000004": 197,
+            "session_000005": 614,
+            "session_000006": 49,
+            "session_000007": 475,
+            "session_000015": 15,
+            "session_000016": 1073,
+            "session_000017": 162,
+            "session_000018": 791,
+            "session_000019": 107,
+            "session_000021": 101,
+            "session_000022": 87,
+            "session_000023": 803,
+            "session_000024": 509
+          }
+        },
+        "operating:moving_steady": {
+          "capture_groups": 10,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000007": 17.250999999999976,
+            "session_000016": 14.750999999999749,
+            "session_000017": 93.75299999999993,
+            "session_000018": 831.7430000000006,
+            "session_000019": 46.99800000000002,
+            "session_000021": 289.7459999999999,
+            "session_000022": 338.24699999999996,
+            "session_000023": 845.2490000000004,
+            "session_000024": 66.75099999999998
+          },
+          "largest_capture_share": 0.3400309119010819,
+          "windows": 647,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000007": 3,
+            "session_000016": 2,
+            "session_000017": 18,
+            "session_000018": 196,
+            "session_000019": 11,
+            "session_000021": 73,
+            "session_000022": 108,
+            "session_000023": 220,
+            "session_000024": 15
+          }
+        },
+        "operating:stationary_running": {
+          "capture_groups": 15,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000001": 12.25,
+            "session_000002": 12.25,
+            "session_000003": 70.249,
+            "session_000004": 86.49800000000005,
+            "session_000005": 111.50200000000001,
+            "session_000006": 44.499,
+            "session_000007": 42.00299999999993,
+            "session_000014": 297.501,
+            "session_000015": 29.751,
+            "session_000016": 730.9970000000001,
+            "session_000017": 69.74700000000004,
+            "session_000018": 74.25200000000041,
+            "session_000019": 52.0,
+            "session_000023": 243.24800000000096,
+            "session_000024": 323.74800000000005
+          },
+          "largest_capture_share": 0.3318112633181126,
+          "windows": 657,
+          "windows_by_capture": {
+            "session_000001": 1,
+            "session_000002": 1,
+            "session_000003": 24,
+            "session_000004": 19,
+            "session_000005": 29,
+            "session_000006": 10,
+            "session_000007": 9,
+            "session_000014": 115,
+            "session_000015": 8,
+            "session_000016": 218,
+            "session_000017": 20,
+            "session_000018": 18,
+            "session_000019": 13,
+            "session_000023": 70,
+            "session_000024": 102
+          }
+        },
+        "thermal:stable": {
+          "capture_groups": 14,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 1135.503,
+            "session_000003": 307.748,
+            "session_000004": 356.99700000000007,
+            "session_000005": 1637.496,
+            "session_000006": 84.75,
+            "session_000007": 1445.25,
+            "session_000016": 3270.494,
+            "session_000017": 709.7539999999999,
+            "session_000018": 4050.0,
+            "session_000019": 397.0,
+            "session_000021": 790.0,
+            "session_000022": 681.749,
+            "session_000023": 3437.248000000001,
+            "session_000024": 1228.9990000000003
+          },
+          "largest_capture_share": 0.21479778168537805,
+          "windows": 7393,
+          "windows_by_capture": {
+            "session_000002": 438,
+            "session_000003": 119,
+            "session_000004": 123,
+            "session_000005": 631,
+            "session_000006": 30,
+            "session_000007": 566,
+            "session_000016": 1202,
+            "session_000017": 272,
+            "session_000018": 1588,
+            "session_000019": 147,
+            "session_000021": 308,
+            "session_000022": 261,
+            "session_000023": 1279,
+            "session_000024": 429
+          }
+        },
+        "thermal:unknown": {
+          "capture_groups": 14,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 101.50099999999998,
+            "session_000004": 376.74800000000005,
+            "session_000005": 258.75200000000007,
+            "session_000006": 14.75,
+            "session_000007": 116.74900000000002,
+            "session_000016": 608.5010000000002,
+            "session_000017": 79.249,
+            "session_000018": 398.2520000000001,
+            "session_000019": 134.1690000000001,
+            "session_000020": 19.751,
+            "session_000021": 92.00000000000003,
+            "session_000022": 61.753000000000036,
+            "session_000023": 748.6729999999997,
+            "session_000024": 455.50099999999986
+          },
+          "largest_capture_share": 0.21428571428571427,
+          "windows": 1050,
+          "windows_by_capture": {
+            "session_000002": 25,
+            "session_000004": 135,
+            "session_000005": 84,
+            "session_000006": 2,
+            "session_000007": 35,
+            "session_000016": 177,
+            "session_000017": 16,
+            "session_000018": 128,
+            "session_000019": 38,
+            "session_000020": 4,
+            "session_000021": 29,
+            "session_000022": 13,
+            "session_000023": 225,
+            "session_000024": 139
+          }
+        },
+        "thermal:warming": {
+          "capture_groups": 11,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000001": 27.249,
+            "session_000002": 179.751,
+            "session_000005": 32.24899999999991,
+            "session_000006": 127.501,
+            "session_000007": 22.250999999999976,
+            "session_000014": 294.751,
+            "session_000015": 132.249,
+            "session_000016": 407.75199999999955,
+            "session_000017": 64.751,
+            "session_000023": 42.0,
+            "session_000024": 139.75199999999995
+          },
+          "largest_capture_share": 0.23236514522821577,
+          "windows": 482,
+          "windows_by_capture": {
+            "session_000001": 7,
+            "session_000002": 68,
+            "session_000005": 9,
+            "session_000006": 47,
+            "session_000007": 5,
+            "session_000014": 110,
+            "session_000015": 49,
+            "session_000016": 112,
+            "session_000017": 22,
+            "session_000023": 9,
+            "session_000024": 44
+          }
+        }
+      },
+      "counts": {
+        "both_known": 5420,
+        "both_known_without_measured_discrepancy": 5419,
+        "either_abstained": 1050,
+        "either_boundary_ambiguous": 3871,
+        "measured_evidence_discrepancy_windows": 6,
+        "operating:ambiguous": 3183,
+        "operating:homogeneous": 6806,
+        "thermal:abstained": 1050,
+        "thermal:ambiguous": 1064,
+        "thermal:homogeneous": 7875,
+        "touches_unknown": 2337
+      },
+      "segment_duration_s": {
+        "operating:engine_off": {
+          "count": 7,
+          "max": 10.375999999999976,
+          "mean": 9.696857142857185,
+          "median": 10.373500000000035,
+          "min": 6.126500000000306,
+          "p05": 7.3263500000002075,
+          "p25": 10.125999999999989,
+          "p75": 10.375,
+          "p95": 10.375699999999984
+        },
+        "operating:moving_episode": {
+          "count": 429,
+          "max": 359.5005,
+          "mean": 42.36273892773893,
+          "median": 25.000500000000102,
+          "min": 0.5,
+          "p05": 3.999999999999966,
+          "p25": 8.75,
+          "p75": 56.50049999999999,
+          "p95": 141.2002999999999
+        },
+        "operating:moving_steady": {
+          "count": 309,
+          "max": 133.001,
+          "mean": 13.810255663430416,
+          "median": 8.248499999999694,
+          "min": 4.0,
+          "p05": 4.25,
+          "p25": 5.749499999999898,
+          "p75": 15.749000000000024,
+          "p95": 40.19969999999989
+        },
+        "operating:stationary_running": {
+          "count": 83,
+          "max": 297.876,
+          "mean": 30.19122891566262,
+          "median": 22.750999999999976,
+          "min": 1.0,
+          "p05": 3.2754999999999987,
+          "p25": 9.124500000000012,
+          "p75": 38.12474999999989,
+          "p95": 70.30009999999999
+        },
+        "operating:unknown": {
+          "count": 113,
+          "max": 10.499499999999998,
+          "mean": 1.545256637168146,
+          "median": 0.7509999999999994,
+          "min": 0.0009999999999763531,
+          "p05": 0.24949999999989814,
+          "p25": 0.25050000000010186,
+          "p75": 2.0020000000000664,
+          "p95": 4.82619999999999
+        },
+        "thermal:stable": {
+          "count": 106,
+          "max": 2655.25,
+          "mean": 186.62733018867925,
+          "median": 87.3125,
+          "min": 16.75,
+          "p05": 22.06212500000001,
+          "p25": 33.2504999999999,
+          "p75": 209.24962499999998,
+          "p95": 717.8433749999997
+        },
+        "thermal:unknown": {
+          "count": 116,
+          "max": 179.74949999999998,
+          "mean": 33.46100000000001,
+          "median": 24.000999999999976,
+          "min": 0.2504999999999882,
+          "p05": 3.9375,
+          "p25": 12.499874999999975,
+          "p75": 42.499874999999975,
+          "p95": 86.74950000000004
+        },
+        "thermal:warming": {
+          "count": 27,
+          "max": 227.625,
+          "mean": 56.49537037037036,
+          "median": 34.251000000000204,
+          "min": 22.5,
+          "p05": 23.07409999999975,
+          "p25": 26.874500000000012,
+          "p75": 62.68825,
+          "p95": 166.18849999999998
+        }
+      },
+      "switching_by_capture": [
+        {
+          "operating": {
+            "interval_boundaries": 4,
+            "label_changes": 4,
+            "label_changes_per_hour": 496.56884720162765
+          },
+          "session_id": "session_000001",
+          "thermal": {
+            "interval_boundaries": 0,
+            "label_changes": 0,
+            "label_changes_per_hour": 0.0
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 44,
+            "label_changes": 43,
+            "label_changes_per_hour": 107.01671548555379
+          },
+          "session_id": "session_000002",
+          "thermal": {
+            "interval_boundaries": 9,
+            "label_changes": 9,
+            "label_changes_per_hour": 22.39884742720893
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 6,
+            "label_changes": 6,
+            "label_changes_per_hour": 69.12022118470779
+          },
+          "session_id": "session_000003",
+          "thermal": {
+            "interval_boundaries": 1,
+            "label_changes": 1,
+            "label_changes_per_hour": 11.520036864117964
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 28,
+            "label_changes": 28,
+            "label_changes_per_hour": 133.50975694071929
+          },
+          "session_id": "session_000004",
+          "thermal": {
+            "interval_boundaries": 8,
+            "label_changes": 8,
+            "label_changes_per_hour": 38.14564484020551
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 44,
+            "label_changes": 44,
+            "label_changes_per_hour": 80.651854356193
+          },
+          "session_id": "session_000005",
+          "thermal": {
+            "interval_boundaries": 12,
+            "label_changes": 12,
+            "label_changes_per_hour": 21.99596027896173
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 12,
+            "label_changes": 11,
+            "label_changes_per_hour": 171.61430119176597
+          },
+          "session_id": "session_000006",
+          "thermal": {
+            "interval_boundaries": 2,
+            "label_changes": 2,
+            "label_changes_per_hour": 31.202600216684722
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 44,
+            "label_changes": 44,
+            "label_changes_per_hour": 99.1237808213006
+          },
+          "session_id": "session_000007",
+          "thermal": {
+            "interval_boundaries": 6,
+            "label_changes": 6,
+            "label_changes_per_hour": 13.516879202904628
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 2,
+            "label_changes": 2,
+            "label_changes_per_hour": 23.960066555740433
+          },
+          "session_id": "session_000014",
+          "thermal": {
+            "interval_boundaries": 2,
+            "label_changes": 2,
+            "label_changes_per_hour": 23.960066555740433
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 8,
+            "label_changes": 8,
+            "label_changes_per_hour": 217.35685013698009
+          },
+          "session_id": "session_000015",
+          "thermal": {
+            "interval_boundaries": 0,
+            "label_changes": 0,
+            "label_changes_per_hour": 0.0
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 160,
+            "label_changes": 159,
+            "label_changes_per_hour": 127.35560024225153
+          },
+          "session_id": "session_000016",
+          "thermal": {
+            "interval_boundaries": 68,
+            "label_changes": 68,
+            "label_changes_per_hour": 54.46654601555411
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 37,
+            "label_changes": 37,
+            "label_changes_per_hour": 152.48998282770464
+          },
+          "session_id": "session_000017",
+          "thermal": {
+            "interval_boundaries": 7,
+            "label_changes": 7,
+            "label_changes_per_hour": 28.849456210646824
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 207,
+            "label_changes": 207,
+            "label_changes_per_hour": 165.74729409535274
+          },
+          "session_id": "session_000018",
+          "thermal": {
+            "interval_boundaries": 16,
+            "label_changes": 16,
+            "label_changes_per_hour": 12.81138505084852
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 22,
+            "label_changes": 21,
+            "label_changes_per_hour": 137.7877412652414
+          },
+          "session_id": "session_000019",
+          "thermal": {
+            "interval_boundaries": 6,
+            "label_changes": 6,
+            "label_changes_per_hour": 39.36792607578326
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 4,
+            "label_changes": 3,
+            "label_changes_per_hour": 502.302218501465
+          },
+          "session_id": "session_000020",
+          "thermal": {
+            "interval_boundaries": 0,
+            "label_changes": 0,
+            "label_changes_per_hour": 0.0
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 45,
+            "label_changes": 43,
+            "label_changes_per_hour": 173.68863955119215
+          },
+          "session_id": "session_000021",
+          "thermal": {
+            "interval_boundaries": 3,
+            "label_changes": 3,
+            "label_changes_per_hour": 12.11781206171108
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 31,
+            "label_changes": 30,
+            "label_changes_per_hour": 143.04616815077065
+          },
+          "session_id": "session_000022",
+          "thermal": {
+            "interval_boundaries": 5,
+            "label_changes": 5,
+            "label_changes_per_hour": 23.841028025128445
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 181,
+            "label_changes": 179,
+            "label_changes_per_hour": 146.74897726620594
+          },
+          "session_id": "session_000023",
+          "thermal": {
+            "interval_boundaries": 50,
+            "label_changes": 50,
+            "label_changes_per_hour": 40.9913344319011
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 44,
+            "label_changes": 43,
+            "label_changes_per_hour": 79.42538708331816
+          },
+          "session_id": "session_000024",
+          "thermal": {
+            "interval_boundaries": 36,
+            "label_changes": 36,
+            "label_changes_per_hour": 66.49567290696403
+          }
+        }
+      ],
+      "switching_distribution_per_hour": {
+        "operating": {
+          "count": 18,
+          "max": 502.302218501465,
+          "mean": 168.19524460322728,
+          "median": 140.41695470800602,
+          "min": 23.960066555740433,
+          "p05": 62.34619799036269,
+          "p25": 101.0970144873639,
+          "p75": 170.14754941766267,
+          "p95": 497.42885289660325
+        },
+        "thermal": {
+          "count": 18,
+          "max": 66.49567290696403,
+          "mean": 24.537844231353407,
+          "median": 23.119937726168686,
+          "min": 0.0,
+          "p05": 0.0,
+          "p25": 12.29120530899544,
+          "p75": 36.409883684325315,
+          "p95": 56.27091504926558
+        }
+      }
+    },
+    "micro": {
+      "by_capture_group": [
+        {
+          "capture_group": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+          "counts": {
+            "both_known": 0,
+            "both_known_without_measured_discrepancy": 0,
+            "either_abstained": 0,
+            "either_boundary_ambiguous": 7,
+            "measured_evidence_discrepancy_windows": 6,
+            "operating:ambiguous": 7,
+            "thermal:ambiguous": 7,
+            "touches_unknown": 1
+          },
+          "joint_known": {},
+          "operating": {},
+          "session_id": "session_000001",
+          "thermal": {}
+        },
+        {
+          "capture_group": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+          "counts": {
+            "both_known": 46,
+            "both_known_without_measured_discrepancy": 46,
+            "either_abstained": 5,
+            "either_boundary_ambiguous": 523,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 523,
+            "operating:homogeneous": 51,
+            "thermal:abstained": 5,
+            "thermal:ambiguous": 523,
+            "thermal:homogeneous": 46,
+            "touches_unknown": 97
+          },
+          "joint_known": {
+            "moving_accelerating|stable": 1,
+            "moving_steady|stable": 1,
+            "moving_variable|stable": 40,
+            "moving_variable|warming": 3,
+            "stationary_running|stable": 1
+          },
+          "operating": {
+            "moving_accelerating": 1,
+            "moving_decelerating": 3,
+            "moving_steady": 1,
+            "moving_variable": 45,
+            "stationary_running": 1
+          },
+          "session_id": "session_000002",
+          "thermal": {
+            "stable": 43,
+            "unknown": 5,
+            "warming": 3
+          }
+        },
+        {
+          "capture_group": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+          "counts": {
+            "both_known": 26,
+            "both_known_without_measured_discrepancy": 26,
+            "either_abstained": 0,
+            "either_boundary_ambiguous": 94,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 94,
+            "operating:homogeneous": 26,
+            "thermal:ambiguous": 94,
+            "thermal:homogeneous": 26,
+            "touches_unknown": 6
+          },
+          "joint_known": {
+            "moving_variable|stable": 2,
+            "stationary_running|stable": 24
+          },
+          "operating": {
+            "moving_variable": 2,
+            "stationary_running": 24
+          },
+          "session_id": "session_000003",
+          "thermal": {
+            "stable": 26
+          }
+        },
+        {
+          "capture_group": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+          "counts": {
+            "both_known": 15,
+            "both_known_without_measured_discrepancy": 15,
+            "either_abstained": 18,
+            "either_boundary_ambiguous": 264,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 264,
+            "operating:homogeneous": 33,
+            "thermal:abstained": 18,
+            "thermal:ambiguous": 264,
+            "thermal:homogeneous": 15,
+            "touches_unknown": 187
+          },
+          "joint_known": {
+            "moving_decelerating|stable": 3,
+            "moving_variable|stable": 12
+          },
+          "operating": {
+            "moving_decelerating": 3,
+            "moving_variable": 13,
+            "stationary_running": 17
+          },
+          "session_id": "session_000004",
+          "thermal": {
+            "stable": 15,
+            "unknown": 18
+          }
+        },
+        {
+          "capture_group": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+          "counts": {
+            "both_known": 87,
+            "both_known_without_measured_discrepancy": 87,
+            "either_abstained": 18,
+            "either_boundary_ambiguous": 676,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 676,
+            "operating:homogeneous": 105,
+            "thermal:abstained": 18,
+            "thermal:ambiguous": 676,
+            "thermal:homogeneous": 87,
+            "touches_unknown": 151
+          },
+          "joint_known": {
+            "moving_accelerating|stable": 2,
+            "moving_variable|stable": 77,
+            "stationary_running|stable": 1,
+            "stationary_running|warming": 7
+          },
+          "operating": {
+            "moving_accelerating": 2,
+            "moving_variable": 79,
+            "stationary_running": 24
+          },
+          "session_id": "session_000005",
+          "thermal": {
+            "stable": 80,
+            "unknown": 18,
+            "warming": 7
+          }
+        },
+        {
+          "capture_group": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+          "counts": {
+            "both_known": 20,
+            "both_known_without_measured_discrepancy": 20,
+            "either_abstained": 2,
+            "either_boundary_ambiguous": 66,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 66,
+            "operating:homogeneous": 22,
+            "thermal:abstained": 2,
+            "thermal:ambiguous": 66,
+            "thermal:homogeneous": 20,
+            "touches_unknown": 30
+          },
+          "joint_known": {
+            "moving_variable|stable": 8,
+            "moving_variable|warming": 4,
+            "stationary_running|warming": 8
+          },
+          "operating": {
+            "moving_variable": 12,
+            "stationary_running": 10
+          },
+          "session_id": "session_000006",
+          "thermal": {
+            "stable": 8,
+            "unknown": 2,
+            "warming": 12
+          }
+        },
+        {
+          "capture_group": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+          "counts": {
+            "both_known": 44,
+            "both_known_without_measured_discrepancy": 44,
+            "either_abstained": 4,
+            "either_boundary_ambiguous": 586,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 586,
+            "operating:homogeneous": 48,
+            "thermal:abstained": 4,
+            "thermal:ambiguous": 586,
+            "thermal:homogeneous": 44,
+            "touches_unknown": 67
+          },
+          "joint_known": {
+            "moving_accelerating|stable": 1,
+            "moving_decelerating|stable": 1,
+            "moving_steady|stable": 3,
+            "moving_variable|stable": 39
+          },
+          "operating": {
+            "moving_accelerating": 1,
+            "moving_decelerating": 1,
+            "moving_steady": 3,
+            "moving_variable": 39,
+            "stationary_running": 4
+          },
+          "session_id": "session_000007",
+          "thermal": {
+            "stable": 44,
+            "unknown": 4
+          }
+        },
+        {
+          "capture_group": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+          "counts": {
+            "both_known": 109,
+            "both_known_without_measured_discrepancy": 109,
+            "either_abstained": 0,
+            "either_boundary_ambiguous": 7,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 7,
+            "operating:homogeneous": 109,
+            "thermal:ambiguous": 7,
+            "thermal:homogeneous": 109,
+            "touches_unknown": 7
+          },
+          "joint_known": {
+            "stationary_running|warming": 109
+          },
+          "operating": {
+            "stationary_running": 109
+          },
+          "session_id": "session_000014",
+          "thermal": {
+            "warming": 109
+          }
+        },
+        {
+          "capture_group": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+          "counts": {
+            "both_known": 10,
+            "both_known_without_measured_discrepancy": 10,
+            "either_abstained": 0,
+            "either_boundary_ambiguous": 39,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 39,
+            "operating:homogeneous": 10,
+            "thermal:ambiguous": 39,
+            "thermal:homogeneous": 10,
+            "touches_unknown": 10
+          },
+          "joint_known": {
+            "moving_variable|warming": 2,
+            "stationary_running|warming": 8
+          },
+          "operating": {
+            "moving_variable": 2,
+            "stationary_running": 8
+          },
+          "session_id": "session_000015",
+          "thermal": {
+            "warming": 10
+          }
+        },
+        {
+          "capture_group": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+          "counts": {
+            "both_known": 251,
+            "both_known_without_measured_discrepancy": 251,
+            "either_abstained": 11,
+            "either_boundary_ambiguous": 1530,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 1530,
+            "operating:homogeneous": 262,
+            "thermal:abstained": 11,
+            "thermal:ambiguous": 1530,
+            "thermal:homogeneous": 251,
+            "touches_unknown": 528
+          },
+          "joint_known": {
+            "moving_accelerating|stable": 7,
+            "moving_decelerating|stable": 5,
+            "moving_steady|stable": 2,
+            "moving_variable|stable": 92,
+            "stationary_running|stable": 66,
+            "stationary_running|warming": 79
+          },
+          "operating": {
+            "moving_accelerating": 7,
+            "moving_decelerating": 6,
+            "moving_steady": 2,
+            "moving_variable": 93,
+            "stationary_running": 154
+          },
+          "session_id": "session_000016",
+          "thermal": {
+            "stable": 172,
+            "unknown": 11,
+            "warming": 79
+          }
+        },
+        {
+          "capture_group": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+          "counts": {
+            "both_known": 29,
+            "both_known_without_measured_discrepancy": 29,
+            "either_abstained": 11,
+            "either_boundary_ambiguous": 305,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 305,
+            "operating:homogeneous": 40,
+            "thermal:abstained": 11,
+            "thermal:ambiguous": 305,
+            "thermal:homogeneous": 29,
+            "touches_unknown": 63
+          },
+          "joint_known": {
+            "moving_steady|stable": 18,
+            "moving_variable|stable": 11
+          },
+          "operating": {
+            "moving_steady": 18,
+            "moving_variable": 11,
+            "stationary_running": 11
+          },
+          "session_id": "session_000017",
+          "thermal": {
+            "stable": 29,
+            "unknown": 11
+          }
+        },
+        {
+          "capture_group": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+          "counts": {
+            "both_known": 261,
+            "both_known_without_measured_discrepancy": 261,
+            "either_abstained": 20,
+            "either_boundary_ambiguous": 1512,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 1512,
+            "operating:homogeneous": 281,
+            "thermal:abstained": 20,
+            "thermal:ambiguous": 1512,
+            "thermal:homogeneous": 261,
+            "touches_unknown": 244
+          },
+          "joint_known": {
+            "moving_accelerating|stable": 8,
+            "moving_decelerating|stable": 13,
+            "moving_steady|stable": 180,
+            "moving_variable|stable": 52,
+            "stationary_running|stable": 8
+          },
+          "operating": {
+            "moving_accelerating": 11,
+            "moving_decelerating": 13,
+            "moving_steady": 192,
+            "moving_variable": 56,
+            "stationary_running": 9
+          },
+          "session_id": "session_000018",
+          "thermal": {
+            "stable": 261,
+            "unknown": 20
+          }
+        },
+        {
+          "capture_group": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+          "counts": {
+            "both_known": 19,
+            "both_known_without_measured_discrepancy": 19,
+            "either_abstained": 13,
+            "either_boundary_ambiguous": 183,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 183,
+            "operating:homogeneous": 32,
+            "thermal:abstained": 13,
+            "thermal:ambiguous": 183,
+            "thermal:homogeneous": 19,
+            "touches_unknown": 68
+          },
+          "joint_known": {
+            "moving_decelerating|stable": 3,
+            "moving_steady|stable": 11,
+            "moving_variable|stable": 4,
+            "stationary_running|stable": 1
+          },
+          "operating": {
+            "moving_decelerating": 3,
+            "moving_steady": 11,
+            "moving_variable": 12,
+            "stationary_running": 6
+          },
+          "session_id": "session_000019",
+          "thermal": {
+            "stable": 19,
+            "unknown": 13
+          }
+        },
+        {
+          "capture_group": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+          "counts": {
+            "both_known": 0,
+            "both_known_without_measured_discrepancy": 0,
+            "either_abstained": 0,
+            "either_boundary_ambiguous": 4,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 4,
+            "thermal:ambiguous": 4,
+            "touches_unknown": 4
+          },
+          "joint_known": {},
+          "operating": {},
+          "session_id": "session_000020",
+          "thermal": {}
+        },
+        {
+          "capture_group": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+          "counts": {
+            "both_known": 78,
+            "both_known_without_measured_discrepancy": 78,
+            "either_abstained": 2,
+            "either_boundary_ambiguous": 272,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 272,
+            "operating:homogeneous": 80,
+            "thermal:abstained": 2,
+            "thermal:ambiguous": 272,
+            "thermal:homogeneous": 78,
+            "touches_unknown": 44
+          },
+          "joint_known": {
+            "moving_accelerating|stable": 1,
+            "moving_decelerating|stable": 1,
+            "moving_steady|stable": 73,
+            "moving_variable|stable": 3
+          },
+          "operating": {
+            "moving_accelerating": 3,
+            "moving_decelerating": 1,
+            "moving_steady": 73,
+            "moving_variable": 3
+          },
+          "session_id": "session_000021",
+          "thermal": {
+            "stable": 78,
+            "unknown": 2
+          }
+        },
+        {
+          "capture_group": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+          "counts": {
+            "both_known": 108,
+            "both_known_without_measured_discrepancy": 108,
+            "either_abstained": 3,
+            "either_boundary_ambiguous": 187,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 187,
+            "operating:homogeneous": 111,
+            "thermal:abstained": 3,
+            "thermal:ambiguous": 187,
+            "thermal:homogeneous": 108,
+            "touches_unknown": 40
+          },
+          "joint_known": {
+            "moving_steady|stable": 101,
+            "moving_variable|stable": 7
+          },
+          "operating": {
+            "moving_accelerating": 1,
+            "moving_steady": 103,
+            "moving_variable": 7
+          },
+          "session_id": "session_000022",
+          "thermal": {
+            "stable": 108,
+            "unknown": 3
+          }
+        },
+        {
+          "capture_group": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+          "counts": {
+            "both_known": 321,
+            "both_known_without_measured_discrepancy": 321,
+            "either_abstained": 20,
+            "either_boundary_ambiguous": 1408,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 1408,
+            "operating:homogeneous": 341,
+            "thermal:abstained": 20,
+            "thermal:ambiguous": 1408,
+            "thermal:homogeneous": 321,
+            "touches_unknown": 479
+          },
+          "joint_known": {
+            "moving_accelerating|stable": 10,
+            "moving_decelerating|stable": 14,
+            "moving_steady|stable": 213,
+            "moving_variable|stable": 44,
+            "moving_variable|warming": 4,
+            "stationary_running|stable": 31,
+            "stationary_running|warming": 5
+          },
+          "operating": {
+            "moving_accelerating": 10,
+            "moving_decelerating": 15,
+            "moving_steady": 215,
+            "moving_variable": 58,
+            "stationary_running": 43
+          },
+          "session_id": "session_000023",
+          "thermal": {
+            "stable": 312,
+            "unknown": 20,
+            "warming": 9
+          }
+        },
+        {
+          "capture_group": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+          "counts": {
+            "both_known": 87,
+            "both_known_without_measured_discrepancy": 87,
+            "either_abstained": 33,
+            "either_boundary_ambiguous": 655,
+            "measured_evidence_discrepancy_windows": 0,
+            "operating:ambiguous": 655,
+            "operating:homogeneous": 120,
+            "thermal:abstained": 33,
+            "thermal:ambiguous": 655,
+            "thermal:homogeneous": 87,
+            "touches_unknown": 311
+          },
+          "joint_known": {
+            "moving_accelerating|stable": 2,
+            "moving_decelerating|stable": 6,
+            "moving_steady|stable": 10,
+            "moving_steady|warming": 1,
+            "moving_variable|stable": 12,
+            "stationary_running|stable": 36,
+            "stationary_running|warming": 20
+          },
+          "operating": {
+            "moving_accelerating": 5,
+            "moving_decelerating": 6,
+            "moving_steady": 11,
+            "moving_variable": 29,
+            "stationary_running": 69
+          },
+          "session_id": "session_000024",
+          "thermal": {
+            "stable": 66,
+            "unknown": 33,
+            "warming": 21
+          }
+        }
+      ],
+      "by_label": {
+        "joint_known:moving_accelerating|stable": {
+          "capture_groups": 8,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000005": 14.751000000000005,
+            "session_000007": 12.248999999999995,
+            "session_000016": 46.74600000000005,
+            "session_000018": 59.003999999999905,
+            "session_000021": 12.25200000000001,
+            "session_000023": 73.75199999999984,
+            "session_000024": 14.75
+          },
+          "largest_capture_share": 0.3125,
+          "windows": 32,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000005": 2,
+            "session_000007": 1,
+            "session_000016": 7,
+            "session_000018": 8,
+            "session_000021": 1,
+            "session_000023": 10,
+            "session_000024": 2
+          }
+        },
+        "joint_known:moving_decelerating|stable": {
+          "capture_groups": 8,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000004": 17.25,
+            "session_000007": 12.249000000000024,
+            "session_000016": 61.251999999999896,
+            "session_000018": 90.99699999999913,
+            "session_000019": 27.002999999999986,
+            "session_000021": 12.249000000000024,
+            "session_000023": 93.49799999999982,
+            "session_000024": 34.499000000000024
+          },
+          "largest_capture_share": 0.30434782608695654,
+          "windows": 46,
+          "windows_by_capture": {
+            "session_000004": 3,
+            "session_000007": 1,
+            "session_000016": 5,
+            "session_000018": 13,
+            "session_000019": 3,
+            "session_000021": 1,
+            "session_000023": 14,
+            "session_000024": 6
+          }
+        },
+        "joint_known:moving_steady|stable": {
+          "capture_groups": 10,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000007": 17.250999999999976,
+            "session_000016": 14.750999999999749,
+            "session_000017": 93.75299999999993,
+            "session_000018": 762.4930000000006,
+            "session_000019": 46.99800000000002,
+            "session_000021": 289.7459999999999,
+            "session_000022": 320.74699999999996,
+            "session_000023": 798.4980000000002,
+            "session_000024": 44.500999999999976
+          },
+          "largest_capture_share": 0.3480392156862745,
+          "windows": 612,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000007": 3,
+            "session_000016": 2,
+            "session_000017": 18,
+            "session_000018": 180,
+            "session_000019": 11,
+            "session_000021": 73,
+            "session_000022": 101,
+            "session_000023": 213,
+            "session_000024": 10
+          }
+        },
+        "joint_known:moving_steady|warming": {
+          "capture_groups": 1,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000024": 12.251999999999953
+          },
+          "largest_capture_share": 1.0,
+          "windows": 1,
+          "windows_by_capture": {
+            "session_000024": 1
+          }
+        },
+        "joint_known:moving_variable|stable": {
+          "capture_groups": 14,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 237.00499999999988,
+            "session_000003": 24.501999999999995,
+            "session_000004": 68.99900000000002,
+            "session_000005": 407.50199999999995,
+            "session_000006": 29.748999999999995,
+            "session_000007": 263.74600000000004,
+            "session_000016": 571.4939999999997,
+            "session_000017": 66.50299999999996,
+            "session_000018": 334.9969999999996,
+            "session_000019": 19.751000000000033,
+            "session_000021": 17.25,
+            "session_000022": 37.00200000000012,
+            "session_000023": 266.2489999999998,
+            "session_000024": 117.74900000000002
+          },
+          "largest_capture_share": 0.228287841191067,
+          "windows": 403,
+          "windows_by_capture": {
+            "session_000002": 40,
+            "session_000003": 2,
+            "session_000004": 12,
+            "session_000005": 77,
+            "session_000006": 8,
+            "session_000007": 39,
+            "session_000016": 92,
+            "session_000017": 11,
+            "session_000018": 52,
+            "session_000019": 4,
+            "session_000021": 3,
+            "session_000022": 7,
+            "session_000023": 44,
+            "session_000024": 12
+          }
+        },
+        "joint_known:moving_variable|warming": {
+          "capture_groups": 4,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 17.25,
+            "session_000006": 19.75,
+            "session_000015": 14.749000000000002,
+            "session_000023": 19.75
+          },
+          "largest_capture_share": 0.3076923076923077,
+          "windows": 13,
+          "windows_by_capture": {
+            "session_000002": 3,
+            "session_000006": 4,
+            "session_000015": 2,
+            "session_000023": 4
+          }
+        },
+        "joint_known:stationary_running|stable": {
+          "capture_groups": 8,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000003": 70.249,
+            "session_000005": 12.249000000000024,
+            "session_000016": 242.9959999999994,
+            "session_000018": 59.001000000000204,
+            "session_000019": 12.248999999999967,
+            "session_000023": 135.99400000000082,
+            "session_000024": 138.75100000000003
+          },
+          "largest_capture_share": 0.39285714285714285,
+          "windows": 168,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000003": 24,
+            "session_000005": 1,
+            "session_000016": 66,
+            "session_000018": 8,
+            "session_000019": 1,
+            "session_000023": 31,
+            "session_000024": 36
+          }
+        },
+        "joint_known:stationary_running|warming": {
+          "capture_groups": 7,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000005": 27.247999999999934,
+            "session_000006": 29.749000000000002,
+            "session_000014": 292.251,
+            "session_000015": 29.751,
+            "session_000016": 315.2479999999996,
+            "session_000023": 22.25,
+            "session_000024": 69.749
+          },
+          "largest_capture_share": 0.461864406779661,
+          "windows": 236,
+          "windows_by_capture": {
+            "session_000005": 7,
+            "session_000006": 8,
+            "session_000014": 109,
+            "session_000015": 8,
+            "session_000016": 79,
+            "session_000023": 5,
+            "session_000024": 20
+          }
+        },
+        "operating:moving_accelerating": {
+          "capture_groups": 9,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000005": 14.751000000000005,
+            "session_000007": 12.248999999999995,
+            "session_000016": 46.74600000000005,
+            "session_000018": 76.2539999999999,
+            "session_000021": 27.00200000000001,
+            "session_000022": 12.25,
+            "session_000023": 73.75199999999984,
+            "session_000024": 32.25
+          },
+          "largest_capture_share": 0.2682926829268293,
+          "windows": 41,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000005": 2,
+            "session_000007": 1,
+            "session_000016": 7,
+            "session_000018": 11,
+            "session_000021": 3,
+            "session_000022": 1,
+            "session_000023": 10,
+            "session_000024": 5
+          }
+        },
+        "operating:moving_decelerating": {
+          "capture_groups": 9,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 17.25,
+            "session_000004": 17.25,
+            "session_000007": 12.249000000000024,
+            "session_000016": 73.50099999999969,
+            "session_000018": 90.99699999999913,
+            "session_000019": 27.002999999999986,
+            "session_000021": 12.249000000000024,
+            "session_000023": 105.74900000000002,
+            "session_000024": 34.499000000000024
+          },
+          "largest_capture_share": 0.29411764705882354,
+          "windows": 51,
+          "windows_by_capture": {
+            "session_000002": 3,
+            "session_000004": 3,
+            "session_000007": 1,
+            "session_000016": 6,
+            "session_000018": 13,
+            "session_000019": 3,
+            "session_000021": 1,
+            "session_000023": 15,
+            "session_000024": 6
+          }
+        },
+        "operating:moving_steady": {
+          "capture_groups": 10,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000007": 17.250999999999976,
+            "session_000016": 14.750999999999749,
+            "session_000017": 93.75299999999993,
+            "session_000018": 821.7410000000007,
+            "session_000019": 46.99800000000002,
+            "session_000021": 289.7459999999999,
+            "session_000022": 335.49699999999996,
+            "session_000023": 813.2480000000002,
+            "session_000024": 56.75299999999993
+          },
+          "largest_capture_share": 0.34181240063593005,
+          "windows": 629,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000007": 3,
+            "session_000016": 2,
+            "session_000017": 18,
+            "session_000018": 192,
+            "session_000019": 11,
+            "session_000021": 73,
+            "session_000022": 103,
+            "session_000023": 215,
+            "session_000024": 11
+          }
+        },
+        "operating:moving_variable": {
+          "capture_groups": 15,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 269.0049999999999,
+            "session_000003": 24.501999999999995,
+            "session_000004": 81.24800000000005,
+            "session_000005": 422.25199999999995,
+            "session_000006": 49.498999999999995,
+            "session_000007": 263.74600000000004,
+            "session_000015": 14.749000000000002,
+            "session_000016": 583.7439999999997,
+            "session_000017": 66.50299999999996,
+            "session_000018": 364.4969999999996,
+            "session_000019": 49.50000000000006,
+            "session_000021": 17.25,
+            "session_000022": 37.00200000000012,
+            "session_000023": 350.24999999999955,
+            "session_000024": 199.2460000000001
+          },
+          "largest_capture_share": 0.2017353579175705,
+          "windows": 461,
+          "windows_by_capture": {
+            "session_000002": 45,
+            "session_000003": 2,
+            "session_000004": 13,
+            "session_000005": 79,
+            "session_000006": 12,
+            "session_000007": 39,
+            "session_000015": 2,
+            "session_000016": 93,
+            "session_000017": 11,
+            "session_000018": 56,
+            "session_000019": 12,
+            "session_000021": 3,
+            "session_000022": 7,
+            "session_000023": 58,
+            "session_000024": 29
+          }
+        },
+        "operating:stationary_running": {
+          "capture_groups": 14,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 12.25,
+            "session_000003": 70.249,
+            "session_000004": 81.49800000000005,
+            "session_000005": 108.74899999999997,
+            "session_000006": 44.499,
+            "session_000007": 19.750999999999976,
+            "session_000014": 292.251,
+            "session_000015": 29.751,
+            "session_000016": 609.994999999999,
+            "session_000017": 37.499,
+            "session_000018": 71.25200000000041,
+            "session_000019": 44.24999999999994,
+            "session_000023": 195.24300000000108,
+            "session_000024": 270.24799999999993
+          },
+          "largest_capture_share": 0.3149284253578732,
+          "windows": 489,
+          "windows_by_capture": {
+            "session_000002": 1,
+            "session_000003": 24,
+            "session_000004": 17,
+            "session_000005": 24,
+            "session_000006": 10,
+            "session_000007": 4,
+            "session_000014": 109,
+            "session_000015": 8,
+            "session_000016": 154,
+            "session_000017": 11,
+            "session_000018": 9,
+            "session_000019": 6,
+            "session_000023": 43,
+            "session_000024": 69
+          }
+        },
+        "thermal:stable": {
+          "capture_groups": 14,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 273.7549999999999,
+            "session_000003": 94.75099999999999,
+            "session_000004": 86.24900000000002,
+            "session_000005": 434.50199999999995,
+            "session_000006": 29.748999999999995,
+            "session_000007": 305.495,
+            "session_000016": 937.2389999999989,
+            "session_000017": 160.2559999999999,
+            "session_000018": 1306.4919999999995,
+            "session_000019": 106.001,
+            "session_000021": 331.49699999999996,
+            "session_000022": 357.7490000000001,
+            "session_000023": 1367.9910000000004,
+            "session_000024": 350.25000000000006
+          },
+          "largest_capture_share": 0.24742268041237114,
+          "windows": 1261,
+          "windows_by_capture": {
+            "session_000002": 43,
+            "session_000003": 26,
+            "session_000004": 15,
+            "session_000005": 80,
+            "session_000006": 8,
+            "session_000007": 44,
+            "session_000016": 172,
+            "session_000017": 29,
+            "session_000018": 261,
+            "session_000019": 19,
+            "session_000021": 78,
+            "session_000022": 108,
+            "session_000023": 312,
+            "session_000024": 66
+          }
+        },
+        "thermal:unknown": {
+          "capture_groups": 13,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 32.0,
+            "session_000004": 93.74700000000007,
+            "session_000005": 84.00200000000001,
+            "session_000006": 14.75,
+            "session_000007": 19.750999999999976,
+            "session_000016": 76.24999999999977,
+            "session_000017": 37.499,
+            "session_000018": 118.24900000000025,
+            "session_000019": 61.75,
+            "session_000021": 14.75,
+            "session_000022": 27.0,
+            "session_000023": 128.2510000000002,
+            "session_000024": 160.745
+          },
+          "largest_capture_share": 0.20625,
+          "windows": 160,
+          "windows_by_capture": {
+            "session_000002": 5,
+            "session_000004": 18,
+            "session_000005": 18,
+            "session_000006": 2,
+            "session_000007": 4,
+            "session_000016": 11,
+            "session_000017": 11,
+            "session_000018": 20,
+            "session_000019": 13,
+            "session_000021": 2,
+            "session_000022": 3,
+            "session_000023": 20,
+            "session_000024": 33
+          }
+        },
+        "thermal:warming": {
+          "capture_groups": 8,
+          "eligible_window_time_union_s_by_capture": {
+            "session_000002": 17.25,
+            "session_000005": 27.247999999999934,
+            "session_000006": 49.499,
+            "session_000014": 292.251,
+            "session_000015": 44.5,
+            "session_000016": 315.2479999999996,
+            "session_000023": 42.0,
+            "session_000024": 82.00099999999995
+          },
+          "largest_capture_share": 0.436,
+          "windows": 250,
+          "windows_by_capture": {
+            "session_000002": 3,
+            "session_000005": 7,
+            "session_000006": 12,
+            "session_000014": 109,
+            "session_000015": 10,
+            "session_000016": 79,
+            "session_000023": 9,
+            "session_000024": 21
+          }
+        }
+      },
+      "counts": {
+        "both_known": 1511,
+        "both_known_without_measured_discrepancy": 1511,
+        "either_abstained": 160,
+        "either_boundary_ambiguous": 8318,
+        "measured_evidence_discrepancy_windows": 6,
+        "operating:ambiguous": 8318,
+        "operating:homogeneous": 1671,
+        "thermal:abstained": 160,
+        "thermal:ambiguous": 8318,
+        "thermal:homogeneous": 1511,
+        "touches_unknown": 2337
+      },
+      "segment_duration_s": {
+        "operating:engine_off": {
+          "count": 7,
+          "max": 10.375999999999976,
+          "mean": 9.696857142857185,
+          "median": 10.373500000000035,
+          "min": 6.126500000000306,
+          "p05": 7.3263500000002075,
+          "p25": 10.125999999999989,
+          "p75": 10.375,
+          "p95": 10.375699999999984
+        },
+        "operating:moving_accelerating": {
+          "count": 561,
+          "max": 24.250500000000102,
+          "mean": 6.844607843137251,
+          "median": 5.999499999999898,
+          "min": 4.0,
+          "p05": 4.248999999999796,
+          "p25": 4.750499999999988,
+          "p75": 7.999000000000009,
+          "p95": 12.75
+        },
+        "operating:moving_decelerating": {
+          "count": 554,
+          "max": 29.749499999999898,
+          "mean": 6.8516651624548714,
+          "median": 5.75,
+          "min": 4.0,
+          "p05": 4.248999999999935,
+          "p25": 4.75,
+          "p75": 7.9366249999999425,
+          "p95": 13.500174999999956
+        },
+        "operating:moving_steady": {
+          "count": 315,
+          "max": 116.001,
+          "mean": 13.54720317460317,
+          "median": 8.248499999999694,
+          "min": 0.4995000000001255,
+          "p05": 4.25,
+          "p25": 5.749499999999941,
+          "p75": 15.249500000000012,
+          "p95": 38.874850000000045
+        },
+        "operating:moving_variable": {
+          "count": 1409,
+          "max": 44.749500000000126,
+          "mean": 7.479040099361254,
+          "median": 4.75,
+          "min": 0.7490000000000236,
+          "p05": 4.0,
+          "p25": 4.0,
+          "p75": 9.5,
+          "p95": 18.149900000000024
+        },
+        "operating:stationary_running": {
+          "count": 126,
+          "max": 227.625,
+          "mean": 19.887873015873005,
+          "median": 14.250250000000051,
+          "min": 0.2504999999999882,
+          "p05": 4.2505000000000255,
+          "p25": 8.749624999999998,
+          "p75": 26.000000000000057,
+          "p95": 40.84249999999999
+        },
+        "operating:unknown": {
+          "count": 112,
+          "max": 10.499499999999998,
+          "mean": 1.5590535714285758,
+          "median": 0.8137499999999251,
+          "min": 0.1245,
+          "p05": 0.24950000000039835,
+          "p25": 0.25050000000010186,
+          "p75": 2.063875000000081,
+          "p95": 4.882349999999987
+        },
+        "thermal:stable": {
+          "count": 2410,
+          "max": 116.001,
+          "mean": 8.20850497925311,
+          "median": 5.750500000000102,
+          "min": 0.125,
+          "p05": 4.0,
+          "p25": 4.001000000000005,
+          "p75": 9.499999999999993,
+          "p95": 19.99899999999992
+        },
+        "thermal:unknown": {
+          "count": 544,
+          "max": 39.6245,
+          "mean": 7.135066176470592,
+          "median": 5.375499999999974,
+          "min": 0.1245,
+          "p05": 1.8757249999999999,
+          "p25": 4.0,
+          "p75": 8.5,
+          "p95": 16.96165000000022
+        },
+        "thermal:warming": {
+          "count": 130,
+          "max": 227.625,
+          "mean": 11.733653846153846,
+          "median": 6.125750000000002,
+          "min": 0.1245,
+          "p05": 1.475,
+          "p25": 4.248624999999999,
+          "p75": 9.936124999999993,
+          "p95": 33.774725
+        }
+      },
+      "switching_by_capture": [
+        {
+          "operating": {
+            "interval_boundaries": 6,
+            "label_changes": 4,
+            "label_changes_per_hour": 496.56884720162765
+          },
+          "session_id": "session_000001",
+          "thermal": {
+            "interval_boundaries": 6,
+            "label_changes": 0,
+            "label_changes_per_hour": 0.0
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 202,
+            "label_changes": 202,
+            "label_changes_per_hour": 502.7296866995782
+          },
+          "session_id": "session_000002",
+          "thermal": {
+            "interval_boundaries": 202,
+            "label_changes": 9,
+            "label_changes_per_hour": 22.39884742720893
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 40,
+            "label_changes": 39,
+            "label_changes_per_hour": 449.28143770060063
+          },
+          "session_id": "session_000003",
+          "thermal": {
+            "interval_boundaries": 40,
+            "label_changes": 1,
+            "label_changes_per_hour": 11.520036864117964
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 109,
+            "label_changes": 107,
+            "label_changes_per_hour": 510.1979997377487
+          },
+          "session_id": "session_000004",
+          "thermal": {
+            "interval_boundaries": 109,
+            "label_changes": 8,
+            "label_changes_per_hour": 38.14564484020551
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 254,
+            "label_changes": 251,
+            "label_changes_per_hour": 460.0821691682828
+          },
+          "session_id": "session_000005",
+          "thermal": {
+            "interval_boundaries": 254,
+            "label_changes": 12,
+            "label_changes_per_hour": 21.99596027896173
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 29,
+            "label_changes": 29,
+            "label_changes_per_hour": 452.43770314192847
+          },
+          "session_id": "session_000006",
+          "thermal": {
+            "interval_boundaries": 29,
+            "label_changes": 2,
+            "label_changes_per_hour": 31.202600216684722
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 215,
+            "label_changes": 214,
+            "label_changes_per_hour": 482.10202490359836
+          },
+          "session_id": "session_000007",
+          "thermal": {
+            "interval_boundaries": 215,
+            "label_changes": 6,
+            "label_changes_per_hour": 13.516879202904628
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 4,
+            "label_changes": 2,
+            "label_changes_per_hour": 23.960066555740433
+          },
+          "session_id": "session_000014",
+          "thermal": {
+            "interval_boundaries": 4,
+            "label_changes": 2,
+            "label_changes_per_hour": 23.960066555740433
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 16,
+            "label_changes": 16,
+            "label_changes_per_hour": 434.71370027396017
+          },
+          "session_id": "session_000015",
+          "thermal": {
+            "interval_boundaries": 16,
+            "label_changes": 0,
+            "label_changes_per_hour": 0.0
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 575,
+            "label_changes": 547,
+            "label_changes_per_hour": 438.1353039780603
+          },
+          "session_id": "session_000016",
+          "thermal": {
+            "interval_boundaries": 575,
+            "label_changes": 68,
+            "label_changes_per_hour": 54.46654601555411
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 107,
+            "label_changes": 104,
+            "label_changes_per_hour": 428.62049227246706
+          },
+          "session_id": "session_000017",
+          "thermal": {
+            "interval_boundaries": 107,
+            "label_changes": 7,
+            "label_changes_per_hour": 28.849456210646824
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 533,
+            "label_changes": 528,
+            "label_changes_per_hour": 422.77570667800114
+          },
+          "session_id": "session_000018",
+          "thermal": {
+            "interval_boundaries": 533,
+            "label_changes": 16,
+            "label_changes_per_hour": 12.81138505084852
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 66,
+            "label_changes": 64,
+            "label_changes_per_hour": 419.92454480835477
+          },
+          "session_id": "session_000019",
+          "thermal": {
+            "interval_boundaries": 66,
+            "label_changes": 6,
+            "label_changes_per_hour": 39.36792607578326
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 3,
+            "label_changes": 3,
+            "label_changes_per_hour": 502.302218501465
+          },
+          "session_id": "session_000020",
+          "thermal": {
+            "interval_boundaries": 3,
+            "label_changes": 0,
+            "label_changes_per_hour": 0.0
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 94,
+            "label_changes": 94,
+            "label_changes_per_hour": 379.6914446002805
+          },
+          "session_id": "session_000021",
+          "thermal": {
+            "interval_boundaries": 94,
+            "label_changes": 3,
+            "label_changes_per_hour": 12.11781206171108
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 65,
+            "label_changes": 64,
+            "label_changes_per_hour": 305.1651587216441
+          },
+          "session_id": "session_000022",
+          "thermal": {
+            "interval_boundaries": 65,
+            "label_changes": 5,
+            "label_changes_per_hour": 23.841028025128445
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 513,
+            "label_changes": 502,
+            "label_changes_per_hour": 411.55299769628704
+          },
+          "session_id": "session_000023",
+          "thermal": {
+            "interval_boundaries": 513,
+            "label_changes": 50,
+            "label_changes_per_hour": 40.9913344319011
+          }
+        },
+        {
+          "operating": {
+            "interval_boundaries": 235,
+            "label_changes": 222,
+            "label_changes_per_hour": 410.0566495929449
+          },
+          "session_id": "session_000024",
+          "thermal": {
+            "interval_boundaries": 235,
+            "label_changes": 36,
+            "label_changes_per_hour": 66.49567290696403
+          }
+        }
+      ],
+      "switching_distribution_per_hour": {
+        "operating": {
+          "count": 18,
+          "max": 510.1979997377487,
+          "mean": 418.34989734625395,
+          "median": 436.4245021260102,
+          "min": 23.960066555740433,
+          "p05": 262.98439489675854,
+          "p25": 413.64588447430395,
+          "p75": 476.5970609697695,
+          "p95": 503.8499336553038
+        },
+        "thermal": {
+          "count": 18,
+          "max": 66.49567290696403,
+          "mean": 24.537844231353407,
+          "median": 23.119937726168686,
+          "min": 0.0,
+          "p05": 0.0,
+          "p25": 12.29120530899544,
+          "p75": 36.409883684325315,
+          "p95": 56.27091504926558
+        }
+      }
+    }
+  },
+  "schema_version": "h10-context-window-eligibility-v1",
+  "signal_label_discrepancies": [
+    {
+      "action": "preserved, flagged for independent human review; no relabeling",
+      "canonical_indices": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "interval_id": "auto_suggest_837689bf6fbfc321032b",
+      "kind": "stationary_label_with_raw_speed_above_configured_stationary_threshold",
+      "representation": "micro",
+      "review_provenance": "manually_corrected",
+      "samples": 17,
+      "session_id": "session_000001",
+      "speed_kmh": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "action": "preserved, flagged for independent human review; no relabeling",
+      "canonical_indices": [
+        49,
+        50
+      ],
+      "interval_id": "auto_suggest_bb333d5833164f1c4c5a",
+      "kind": "stationary_label_with_raw_speed_above_configured_stationary_threshold",
+      "representation": "micro",
+      "review_provenance": "manually_corrected",
+      "samples": 2,
+      "session_id": "session_000001",
+      "speed_kmh": [
+        2,
+        3
+      ]
+    },
+    {
+      "action": "preserved, flagged for independent human review; no relabeling",
+      "canonical_indices": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        49,
+        50
+      ],
+      "interval_id": "macro-4364bf33d6ffe28671a8a2b4",
+      "kind": "stationary_label_with_raw_speed_above_configured_stationary_threshold",
+      "representation": "macro",
+      "review_provenance": "bulk_operator_endorsement",
+      "samples": 19,
+      "session_id": "session_000001",
+      "speed_kmh": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+      ]
+    }
+  ],
+  "window_count": 9989,
+  "window_duration_s": {
+    "count": 9989,
+    "max": 14.242999999999938,
+    "mean": 12.260646210831915,
+    "median": 12.25,
+    "min": 12.246999999999986,
+    "p05": 12.248999999999796,
+    "p25": 12.249000000000024,
+    "p75": 12.25,
+    "p95": 12.252999999999929
+  }
+}

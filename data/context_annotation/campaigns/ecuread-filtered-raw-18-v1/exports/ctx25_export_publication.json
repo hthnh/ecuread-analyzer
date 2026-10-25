@@ -1,0 +1,15 @@
+{
+  "authoritative_approved_export": "data/context_annotation/datasets/ecuread-filtered-raw-18-v1-approved-v2",
+  "content_sha256": "5fd672ff45b69681e310efff7661cc8313989cfc10191047dc476e8161e156c1",
+  "dataset_id": "ecuread-filtered-raw-18-v1",
+  "decision": "approval_recorded_snapshot_blocked",
+  "frozen_snapshot": null,
+  "schema_version": "context-approved-export-publication-v1",
+  "superseded_exports": [
+    {
+      "content_sha256": "9ee5a6ca20d96f44b19340303fda9d9b5d257c4b4eefa5e1f133d34414fef8ed",
+      "path": "data/context_annotation/datasets/ecuread-filtered-raw-18-v1-approved-v1",
+      "reason": "Initial non-frozen export incorrectly grouped all named confirmations as individually_confirmed, including shared multi-item UI actions. Superseded before handoff; labels/source bytes unchanged. Use the authoritative export only; never concatenate versions."
+    }
+  ]
+}

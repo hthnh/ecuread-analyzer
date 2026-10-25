@@ -1,0 +1,682 @@
+--- deployed/models.py
++++ P3/models.py
+@@ -443,7 +443,9 @@
+     anomaly_ratio = db.Column(db.Float)
+     anomaly_window_count = db.Column(db.Integer)
+     result_summary = db.Column(db.JSON)
+-    canonical_telemetry = db.Column(db.JSON)
++    # Canonical samples are only needed for the selected detail/export/chart run.
++    # Deferral changes ORM loading, not the existing database column or schema.
++    canonical_telemetry = db.deferred(db.Column(db.JSON))
+     result_fingerprint = db.Column(db.String(64))
+     analyzed_at = db.Column(db.DateTime(timezone=True), nullable=False, default=utc_now)
+     created_at = db.Column(db.DateTime(timezone=True), nullable=False, default=utc_now)
+--- deployed/services/analysis.py
++++ P3/services/analysis.py
+@@ -7,7 +7,9 @@
+ from copy import deepcopy
+ from types import SimpleNamespace
+ 
++from flask import has_request_context, request
+ from sqlalchemy import func, or_
++from sqlalchemy.orm import defer
+ 
+ from models import AnalysisResult, Device, RideSession, SyncBatch, TelemetryRecord
+ from services.diagnostic_presentation import finding_view, check_view, event_anchor, message as semantic_message
+@@ -243,11 +245,25 @@
+     return available
+ 
+ 
+-def session_records(session: RideSession, *, limit: int | None = MAX_ANALYSIS_RECORDS) -> list[TelemetryRecord]:
++def _request_view(key, build):
++    """Reuse read work within one GET/HEAD; never retain expired write views."""
++    if not has_request_context() or request.method not in ("GET", "HEAD"):
++        return build()
++    cache = request.environ.setdefault('drisafe.analysis_read_views', {})
++    if key not in cache:
++        cache[key] = build()
++    return cache[key]
++
++
++def session_records(session: RideSession, *, limit: int | None = MAX_ANALYSIS_RECORDS, presentation: bool = False) -> list[TelemetryRecord]:
+     query = TelemetryRecord.query.filter_by(ride_session_id=session.id).order_by(TelemetryRecord.seq)
++    if presentation:
++        # Stored-run page statistics use scalar signals and raw-frame validity.
++        # Leave full JSON available to explicit chart/export/submission readers.
++        query = query.options(defer(TelemetryRecord.candidate_signals), defer(TelemetryRecord.quality_flags))
+     if limit:
+         query = query.limit(limit)
+-    return query.all()
++    return _request_view(("records", session.id, limit, presentation), query.all)
+ 
+ 
+ def downsample_records(records: list[TelemetryRecord], max_points: int = 1200) -> list[TelemetryRecord]:
+@@ -576,7 +592,11 @@
+     values_by_signal = {signal: [] for signal in SUPPORTED_FINDING_SIGNALS}
+     sessions_by_signal = {signal: 0 for signal in SUPPORTED_FINDING_SIGNALS}
+     for candidate in clean_sessions:
+-        records = session_records(candidate, limit=5000)
++        # The baseline consumes these seven numeric columns only. Loading full
++        # ORM rows also deserialized RAW, quality and candidate-signal JSON.
++        keys = sorted({key for config in SUPPORTED_FINDING_SIGNALS.values() for key in config['keys']})
++        records = (TelemetryRecord.query.with_entities(*(getattr(TelemetryRecord, key) for key in keys))
++                   .filter_by(ride_session_id=candidate.id).order_by(TelemetryRecord.seq).limit(5000).all())
+         for signal in SUPPORTED_FINDING_SIGNALS:
+             values = _signal_values(records, signal)
+             if values:
+@@ -1707,8 +1727,8 @@
+     counts = _mapping(windows.get("coverage_status_counts"))
+     if not counts:
+         return evidence
+-    evidence = deepcopy(evidence)
+-    aggregate = evidence["aggregate"]
++    evidence = dict(evidence)
++    aggregate = evidence["aggregate"] = dict(aggregate)
+     full, partial, none = (int(counts.get(key, 0) or 0) for key in ("full", "partial", "none"))
+     total = int(windows.get("window_count", full + partial + none) or 0)
+     aggregate["coverage_status"] = "full" if total > 0 and full == total else "partial" if full + partial else "none"
+@@ -1968,6 +1988,11 @@
+ 
+ 
+ def _selected_record_views(records: list[TelemetryRecord], result: AnalysisResult | None) -> list:
++    return _request_view(('selected_records', id(records), result.analysis_run_id if result else None),
++                         lambda: _build_selected_record_views(records, result))
++
++
++def _build_selected_record_views(records: list[TelemetryRecord], result: AnalysisResult | None) -> list:
+     canonical = _mapping(result.canonical_telemetry) if result else {}
+     samples = canonical.get("samples") or []
+     if not samples:
+@@ -1975,7 +2000,11 @@
+     by_sequence = {sample.get("sequence"): sample for sample in samples if isinstance(sample, dict)}
+     views = []
+     for record in records:
+-        values = {column.name: getattr(record, column.name) for column in TelemetryRecord.__table__.columns}
++        values = {column.name: getattr(record, column.name) for column in TelemetryRecord.__table__.columns
++                  if column.name not in ("quality_flags", "candidate_signals")}
++        # These are not consumed by statistics/maintenance. Do not load a
++        # deferred JSON column for every sample merely to overwrite it below.
++        values["quality_flags"] = record.__dict__.get("quality_flags", {})
+         sample = by_sequence.get(record.seq, {})
+         for name in ([parameter["key"] for parameter in PARAMETERS] + ["timestamp_ms", "frame_valid", "checksum_valid"]):
+             values[name] = sample.get(name)
+@@ -1984,9 +2013,10 @@
+     return views
+ 
+ 
+-def statistics_for_selected_analysis(session: RideSession, records: list[TelemetryRecord] | None = None) -> dict:
+-    records = session_records(session) if records is None else records
+-    return statistics_for_records(_selected_record_views(records, latest_analysis_result(session)), session)
++def statistics_for_selected_analysis(session: RideSession, records: list[TelemetryRecord] | None = None, *, latest_external=_UNSET) -> dict:
++    selected = latest_analysis_result(session) if latest_external is _UNSET else latest_external
++    records = session_records(session, presentation=bool(selected)) if records is None else records
++    return statistics_for_records(_selected_record_views(records, selected), session)
+ 
+ 
+ def _selected_timeline(summary: dict, records: list[TelemetryRecord]) -> tuple[list[dict], int | None, str]:
+@@ -2021,8 +2051,8 @@
+     records: list[TelemetryRecord] | None = None,
+     latest_external=_UNSET,
+ ) -> dict:
+-    records = records if records is not None else session_records(session)
+     latest_external = latest_analysis_result(session) if latest_external is _UNSET else latest_external
++    records = records if records is not None else session_records(session, presentation=bool(latest_external))
+     result_summary = latest_external.result_summary if latest_external and isinstance(latest_external.result_summary, dict) else {}
+     samples = [] if latest_external else scored_samples(records)
+     events = [] if latest_external else group_anomaly_events(records, samples)
+@@ -2057,6 +2087,8 @@
+         anomalous_percentage=anomalous_percentage,
+         events=events,
+     )
++    from services.analysis_submission import manual_rerun_state
++    rerun = manual_rerun_state(session, records)
+     signals = Counter()
+     for event in events:
+         for signal in event["signals"]:
+@@ -2090,7 +2122,8 @@
+         "analysis_run_id": session.analysis_run_id,
+         "analysis_origin": "Server Harness" if source == "server-harness" else "Pi-local imported analysis" if source == "pi-local" else "Stored analysis" if latest_external else "Local screening",
+         "submission_state": {"pending": "Queued", "submitted": "Running", "completed": "Succeeded", "failed": "Failed"}.get(session.analysis_status, "Not requested"),
+-        "can_rerun": session.sync_status == "complete" and session.capture_status == "completed" and session.record_count > 0,
++        "can_rerun": rerun["eligible"],
++        "rerun": rerun,
+         "timeline_message": timeline_message,
+         "telemetry_schema_version": session.telemetry_schema_version,
+         "source_type": session.source_type,
+--- deployed/services/analysis_submission.py
++++ P3/services/analysis_submission.py
+@@ -2,6 +2,7 @@
+ 
+ import hashlib
+ import json
++import math
+ from datetime import timedelta
+ from sqlalchemy import or_
+ 
+@@ -158,6 +159,59 @@
+     }
+ 
+ 
++def manual_rerun_state(ride_session: RideSession, records) -> dict:
++    """Presentation eligibility, independent of the selected result's success.
++
++    The endpoint still validates the complete input; this view never runs ML.
++    """
++    reason = None
++    if ride_session.sync_status != "complete" or ride_session.capture_status != "completed":
++        reason = "rerun.incomplete"
++    elif not records or len(records) != ride_session.record_count:
++        reason = "rerun.missing_records"
++    elif ride_session.source_type not in (PI_SOURCE_TYPE, "esp_raw"):
++        reason = "rerun.unsupported"
++    elif ride_session.source_type == "esp_raw" and ride_session.raw_representation != "legacy29_ff5":
++        reason = "rerun.unsupported"
++    else:
++        # Eligibility needs RAW/timestamp completeness, not uploaded speed JSON.
++        # Avoid deserializing candidate_signals for every row in a page request.
++        raw_complete = all(_record_raw_hex(record) and _evidence_timestamp(ride_session, record) is not None for record in records)
++        raw_complete = raw_complete and all(getattr(ride_session, name) for name in
++                                          ("raw_representation", "ecu_profile_id", "decoder_id", "decoder_version"))
++        if raw_complete and len(records) > 20_000:
++            reason = "rerun.record_limit"
++        elif raw_complete:
++            try:
++                for record in records:
++                    bytes.fromhex(_record_raw_hex(record))
++                    if not math.isfinite(_evidence_timestamp(ride_session, record)):
++                        raise ValueError("nonfinite timestamp")
++            except (TypeError, ValueError):
++                reason = "rerun.invalid_raw"
++        else:
++            canonical_fields = ("rpm", "tps_voltage", "tps_raw", "battery_voltage", "iat_c", "ect_c")
++            canonical_ok = ride_session.source_type == PI_SOURCE_TYPE and all(
++                getattr(ride_session, name) for name in ("ecu_profile_id", "decoder_id", "decoder_version", "telemetry_schema_version")
++            ) and all(
++                _evidence_timestamp(ride_session, record) is not None
++                and all(isinstance(getattr(record, name), (int, float)) and math.isfinite(getattr(record, name)) for name in canonical_fields)
++                for record in records
++            )
++            if not canonical_ok:
++                reason = "rerun.missing_evidence"
++    updated = ride_session.updated_at
++    # SQLite fixtures may return naive UTC datetimes.
++    from datetime import timezone
++    if updated is not None and updated.tzinfo is None:
++        updated = updated.replace(tzinfo=timezone.utc)
++    processing = ride_session.analysis_status in ("pending", "submitted") and (
++        updated is None or updated >= utc_now() - timedelta(seconds=180)
++    )
++    return {"eligible": reason is None, "processing": processing,
++            "message": reason or ("rerun.processing" if processing else "rerun.ready")}
++
++
+ def _raw_records_for_analyzer(ride_session: RideSession) -> list[dict]:
+     records = _stored_records(ride_session)
+     payload_records = []
+@@ -517,6 +571,8 @@
+     # Atomic claim across Gunicorn workers; a crashed request can be reclaimed
+     # after the 120s worker timeout. No new queue or schema is introduced.
+     lease_start = utc_now()
++    previous_status = ride_session.analysis_status
++    previous_updated_at = ride_session.updated_at
+     previous_run_id = ride_session.analysis_run_id
+     claimed = RideSession.query.filter(
+         RideSession.id == ride_session_id,
+@@ -546,10 +602,16 @@
+         db.session.rollback()
+         ride_session = db.session.get(RideSession, ride_session_id)
+         # A late failure must not overwrite another completed result.
++        busy = exc.status_code == 429 and exc.code == "RAW_ANALYSIS_BUSY"
++        current_app.logger.warning("Harness rerun session=%s upstream_status=%s code=%s retryable=%s",
++                                   ride_session_id, exc.status_code, exc.code, exc.retryable)
+         RideSession.query.filter_by(id=ride_session_id, analysis_status="submitted", analysis_run_id=previous_run_id).update(
+-            {RideSession.analysis_status: "failed", RideSession.updated_at: utc_now()}, synchronize_session=False)
++            {RideSession.analysis_status: previous_status if busy else "failed",
++             RideSession.updated_at: previous_updated_at if busy else utc_now()}, synchronize_session=False)
+         db.session.commit()
+-        return {"state": "failed", "error": str(exc)}
++        return {"state": "busy" if busy else "failed", "error": str(exc),
++                "error_code": exc.code, "upstream_status": exc.status_code,
++                "retryable": exc.retryable, "retry_after": exc.retry_after}
+ 
+     ride_session = db.session.get(RideSession, ride_session_id)
+     _store_analysis_success(ride_session, summary, canonical=canonical)
+--- deployed/routes/dashboard.py
++++ P3/routes/dashboard.py
+@@ -467,10 +467,11 @@
+             json_url=url_for("dashboard.session_json", session_pk=ride_session.id),
+         )
+     ride_session = _session_by_pk(session_pk)
+-    records = session_records(ride_session)
++    selected = latest_analysis_result(ride_session)
++    records = session_records(ride_session, presentation=bool(selected))
+     recent_records = list(reversed(records[-30:]))
+-    stats = statistics_for_selected_analysis(ride_session, records)
+-    analysis = analysis_snapshot(ride_session, records)
++    stats = statistics_for_selected_analysis(ride_session, records, latest_external=selected)
++    analysis = analysis_snapshot(ride_session, records, latest_external=selected)
+     return render_template(
+         "session_detail.html",
+         session=ride_session,
+@@ -587,9 +588,10 @@
+             abort(404)
+         return jsonify({"analysis": payload["analysis"], "ml_status": demo_ml_status()})
+     ride_session = _session_by_pk(session_pk)
++    records = session_records(ride_session)
+     return jsonify({
+-        "analysis": analysis_snapshot(ride_session), "ml_status": ml_status(),
+-        "reanalysis_evidence": reanalysis_evidence(ride_session),
++        "analysis": analysis_snapshot(ride_session, records), "ml_status": ml_status(),
++        "reanalysis_evidence": reanalysis_evidence(ride_session, records),
+     })
+ 
+ 
+@@ -618,12 +620,20 @@
+         return jsonify({"state": "failed", "error": "request_id must be 1-128 ASCII letters, digits, hyphens or underscores."}), 400
+     result = submit_session_to_analyzer(ride_session.id, force=True, submission_key=submission_key)
+     if result["state"] != "completed":
+-        return jsonify({
++        response = jsonify({
+             "state": result["state"],
+             "error": result.get("error", "Analysis submission failed."),
++            "error_code": result.get("error_code"),
++            "upstream_status": result.get("upstream_status"),
++            "retryable": result.get("retryable", result["state"] == "running"),
++            "retry_after": result.get("retry_after"),
+             "analysis": snapshot,
+             "reanalysis_evidence": reanalysis_evidence(ride_session),
+-        }), 409 if result["state"] in {"running", "ineligible"} else 503
++        })
++        response.status_code = 429 if result["state"] == "busy" else 409 if result["state"] in {"running", "ineligible"} else 503
++        if result.get("retry_after"):
++            response.headers["Retry-After"] = str(result["retry_after"])
++        return response
+     return jsonify({
+         "state": "completed",
+         "message": result.get("message", "Stored evidence was submitted to the analyzer."),
+--- deployed/templates/session_detail.html
++++ P3/templates/session_detail.html
+@@ -16,6 +16,15 @@
+         <a class="secondary button" href="{{ json_url }}">{{ _('Download JSON') }}</a>
+     </div>
+ </section>
++
++{% if not demo_mode %}
++<div class="button-row harness-rerun-action">
++    {% if analysis.can_rerun %}
++    <button class="secondary js-session-rerun" type="button" data-session="{{ session.id }}" {% if analysis.rerun.processing %}disabled{% endif %}>{{ _('rerun.action') }}</button>
++    {% endif %}
++    <span class="muted js-session-rerun-state" aria-live="polite">{{ _(analysis.rerun.message) }}</span>
++</div>
++{% endif %}
+ 
+ <section class="card feature-card capture-status-card">
+     <div class="card-title">
+@@ -119,12 +128,7 @@
+ 	            <div><dt>{{ (item.label)|t }}</dt><dd>{{ detail_value(item) }}</dd></div>
+ 	            {% endfor %}
+ 	        </dl>
+-	        {% if analysis.can_rerun and not demo_mode %}
+-	        <div class="button-row">
+-	            <button class="secondary js-session-rerun" type="button" data-session="{{ session.id }}">{{ _('Re-run analysis') }}</button>
+-	            <span class="muted js-session-rerun-state" aria-live="polite">{{ _('Analyze complete stored telemetry with the server Harness.') }}</span>
+-	        </div>
+-	        {% endif %}
++
+ 	        {% if evidence.harness.details %}
+ 	        <dl class="timeline-summary research-harness-summary">
+ 	            {% for item in evidence.harness.details %}
+@@ -519,6 +523,7 @@
+         {% endfor %}
+     </div>
+ </section>
++<script id="session-timeline-data" type="application/json">{{ {'session': {'duration_seconds': analysis.duration_seconds|default(summary.duration_seconds), 'timeline_message': analysis.timeline_message|default('No grouped anomaly events were detected in available telemetry.')}, 'events': analysis.events, 'samples': [], 'parameters': []}|tojson }}</script>
+ {% endblock %}
+ {% block scripts %}
+ <script src="{{ url_for('static', filename='js/dashboardApi.js') }}"></script>
+--- deployed/static/js/dashboardApi.js
++++ P3/static/js/dashboardApi.js
+@@ -19,7 +19,10 @@
+             const message = (payload.error && payload.error.message) || payload.error || response.statusText || "Request failed";
+             const error = new Error(typeof message === "string" ? message : JSON.stringify(message));
+             error.state = payload.state;
++            error.code = payload.error_code;
+             error.status = response.status;
++            error.retryAfter = payload.retry_after;
++            error.retryable = payload.retryable;
+             throw error;
+         }
+         return payload;
+--- deployed/static/js/sessionDetail.js
++++ P3/static/js/sessionDetail.js
+@@ -22,12 +22,15 @@
+                 window.location.reload();
+             } catch (error) {
+                 if (state) {
+-                    state.textContent = t(error.state === "running" ? "Re-analysis running. Retry to check the result."
++                    state.textContent = t(error.state === "busy" ? "rerun.busy" : error.state === "running" ? "rerun.processing"
++                        : error.code === "ANALYZER_TIMEOUT" ? "Result unconfirmed. Retry safely."
+                         : error.state === "failed" ? "Re-analysis failed"
+                         : "Result unconfirmed. Retry safely.");
+                     state.title = t(error.message);
+                 }
+-                button.disabled = false;
++                if (error.state === "running") button.disabled = true;
++                else if (error.state === "busy") setTimeout(() => { button.disabled = false; }, (error.retryAfter || 5) * 1000);
++                else button.disabled = false;
+             }
+         });
+     });
+@@ -51,6 +54,8 @@
+     const MIN_TRACK_WIDTH = 960;
+     const MAX_TRACK_WIDTH = 3600;
+     let payload = null;
++    let chartDataLoaded = false;
++    let loadPromise = null;
+     let availableChartParameters = [];
+     let activeRange = null;
+     let chartsInitialized = false;
+@@ -316,8 +321,8 @@
+     }
+ 
+     function requestCharts() {
+-        if (payload) initializeCharts();
+-        else showChartState("Loading charts...");
++        if (chartDataLoaded) initializeCharts();
++        else load();
+     }
+ 
+     function handleChartDisclosure() {
+@@ -532,7 +537,7 @@
+             retryChartsButton.addEventListener("click", () => {
+                 chartsInitialized = false;
+                 clearChartContent();
+-                if (payload) initializeCharts();
++                if (chartDataLoaded) initializeCharts();
+                 else load();
+             });
+         }
+@@ -541,11 +546,19 @@
+     }
+ 
+     async function load() {
++        if (loadPromise) return loadPromise;
++        loadPromise = loadChartData();
++        try { return await loadPromise; }
++        finally { loadPromise = null; }
++    }
++
++    async function loadChartData() {
+         try {
+             payload = await fetch(root.dataset.samplesUrl, { credentials: "same-origin", cache: "no-store" }).then((response) => {
+                 if (!response.ok) throw new Error("Session samples are unavailable");
+                 return response.json();
+             });
++            chartDataLoaded = true;
+             renderTimeline();
+             focusEventFromHash();
+             if (payload.downsampled && chartDownsampleNote) {
+@@ -571,6 +584,13 @@
+     }
+ 
+     bindEvents();
+-    if (document.readyState === "complete") load();
++    const timelineBoot = document.getElementById('session-timeline-data');
++    if (timelineBoot) {
++        payload = JSON.parse(timelineBoot.textContent);
++        renderTimeline();
++        focusEventFromHash();
++        window.dispatchEvent(new Event('drisafe:viewready'));
++        if (root.open) load();
++    } else if (document.readyState === "complete") load();
+     else window.addEventListener("load", load, { once: true });
+ })();
+--- deployed/static/locales/messages.json
++++ P3/static/locales/messages.json
+@@ -3771,6 +3771,46 @@
+     "p2.limits_details": {
+       "en": "Measurements and interpretation limits",
+       "vi": "Giá trị đo và giới hạn diễn giải"
++    },
++    "rerun.action": {
++      "en": "Re-run Harness Analysis",
++      "vi": "Phân tích lại bằng Harness"
++    },
++    "rerun.ready": {
++      "en": "Analyze complete stored telemetry with the server Harness.",
++      "vi": "Phân tích toàn bộ dữ liệu đã lưu bằng Harness trên máy chủ."
++    },
++    "rerun.processing": {
++      "en": "A Harness request is processing. Refresh to check its result before retrying.",
++      "vi": "Yêu cầu Harness đang được xử lý. Tải lại trang để kiểm tra kết quả trước khi thử lại."
++    },
++    "rerun.incomplete": {
++      "en": "Harness rerun requires a completed capture and complete synchronization.",
++      "vi": "Chỉ phân tích lại bằng Harness khi phiên thu thập đã hoàn tất và đồng bộ đầy đủ."
++    },
++    "rerun.missing_records": {
++      "en": "Stored telemetry is incomplete; Harness rerun is unavailable.",
++      "vi": "Dữ liệu đo đã lưu chưa đầy đủ; chưa thể phân tích lại bằng Harness."
++    },
++    "rerun.missing_evidence": {
++      "en": "Complete RAW or complete canonical signals and decoder provenance are required.",
++      "vi": "Cần RAW đầy đủ hoặc tín hiệu chuẩn hóa đầy đủ cùng thông tin bộ giải mã."
++    },
++    "rerun.record_limit": {
++      "en": "This session exceeds the 20,000-record manual RAW limit. No partial analysis will be submitted.",
++      "vi": "Phiên này vượt giới hạn RAW thủ công 20.000 bản ghi. Hệ thống sẽ không gửi dữ liệu phân tích thiếu."
++    },
++    "rerun.unsupported": {
++      "en": "The stored session format is not supported by the manual Harness workflow.",
++      "vi": "Định dạng phiên đã lưu chưa được luồng Harness thủ công hỗ trợ."
++    },
++    "rerun.busy": {
++      "en": "The Analyzer is processing another session. Wait, then retry safely with the same request.",
++      "vi": "Analyzer đang xử lý phiên khác. Vui lòng chờ rồi thử lại an toàn với cùng yêu cầu."
++    },
++    "rerun.invalid_raw": {
++      "en": "Stored RAW or timestamps are invalid. Review the original evidence before retrying.",
++      "vi": "RAW hoặc dấu thời gian đã lưu không hợp lệ. Cần xem lại dữ liệu gốc trước khi thử lại."
+     }
+   },
+   "aliases": {
+--- deployed/integrations/analyzer_client.py
++++ P3/integrations/analyzer_client.py
+@@ -7,7 +7,12 @@
+ 
+ 
+ class AnalyzerClientError(RuntimeError):
+-    pass
++    def __init__(self, message, *, status_code=None, code=None, retry_after=None, retryable=False):
++        super().__init__(message)
++        self.status_code = status_code
++        self.code = code
++        self.retry_after = retry_after
++        self.retryable = retryable
+ 
+ 
+ class AnalyzerClient:
+@@ -69,17 +74,26 @@
+             response.raise_for_status()
+         except requests.HTTPError as exc:
+             detail = ""
++            code = None
+             try:
+                 detail_payload = response.json()
+                 detail = f": {detail_payload}"[:1000]
++                upstream_detail = detail_payload.get("detail") if isinstance(detail_payload, dict) else None
++                if isinstance(upstream_detail, dict):
++                    code = upstream_detail.get("code")
+             except ValueError:
+                 if response.text:
+                     detail = f": {response.text[:500]}"
+-            raise AnalyzerClientError(f"analysis request failed: HTTP {response.status_code}{detail}") from exc
++            retry_after = response.headers.get("Retry-After")
++            retry_after = min(180, max(1, int(retry_after))) if retry_after and retry_after.isdigit() else None
++            raise AnalyzerClientError(f"analysis request failed: HTTP {response.status_code}{detail}",
++                status_code=response.status_code, code=code, retry_after=retry_after,
++                retryable=response.status_code in (408, 429, 502, 503, 504)) from exc
+         except requests.Timeout as exc:
+             raise AnalyzerClientError(
+                 f"Analyzer timed out after {self.timeout_seconds:g} seconds. "
+-                "Stored RAW is unchanged. Retry the request; its key reuses any completed RAW analysis."
++                "Stored RAW is unchanged. Retry the request; its key reuses any completed RAW analysis.",
++                code="ANALYZER_TIMEOUT", retryable=True,
+             ) from exc
+         except requests.RequestException as exc:
+             raise AnalyzerClientError(f"analysis request failed: {exc.__class__.__name__}") from exc
+--- /dev/null
++++ P3/tests/test_p3_rerun_recovery.py
+@@ -0,0 +1,152 @@
++"""Manual-action visibility, admission recovery and read-only view regressions."""
++from copy import deepcopy
++from datetime import timedelta
++from html.parser import HTMLParser
++import json
++import unittest
++from unittest.mock import patch
++
++from extensions import db
++from integrations.analyzer_client import AnalyzerClient, AnalyzerClientError
++from models import AnalysisResult, RideSession, utc_now
++from services.analysis import analysis_snapshot, _evidence_for_presentation
++from tests import test_app as fixtures
++
++
++class Actions(HTMLParser):
++    def __init__(self):
++        super().__init__(); self.details=[]; self.buttons=[]
++    def handle_starttag(self, tag, attrs):
++        attrs=dict(attrs)
++        if tag=='details':self.details.append(attrs.get('id'))
++        if tag=='button' and 'js-session-rerun' in attrs.get('class',''):
++            self.buttons.append({'details':list(self.details),'disabled':'disabled' in attrs})
++    def handle_endtag(self, tag):
++        if tag=='details':self.details.pop()
++
++
++class P3RerunRecoveryTests(unittest.TestCase):
++    def setUp(self):
++        self.c=fixtures.DashboardTestCase('runTest');self.c.setUp();self.addCleanup(self.c.tearDown)
++        self.c.app.config['ML_API_BASE_URL']='http://analyzer.example';self.c.login()
++    def page(self, ride, language='en'):
++        self.c.client.set_cookie('drisafe.language',language)
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session') as infer:
++            response=self.c.client.get(f'/sessions/{ride.id}')
++            self.assertEqual(response.status_code,200);infer.assert_not_called()
++        html=response.get_data(as_text=True);parser=Actions();parser.feed(html);return html,parser.buttons
++    def test_visible_outside_disclosures_after_pi_and_server_success_both_locales(self):
++        ride=self.c.post_pi_v2_session('p3-visible')
++        for lang,label in [('en','Re-run Harness Analysis'),('vi','Phân tích lại bằng Harness')]:
++            html,buttons=self.page(ride,lang);self.assertIn(label,html);self.assertEqual(buttons,[{'details':[],'disabled':False}])
++        url=f'/api/sessions/{ride.id}/analysis/re-run'
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=lambda r:self.c.raw_analyzer_response(r,run_id='p3-visible-server')):
++            self.assertEqual(self.c.client.post(url,json={'request_id':'p3-visible'}).status_code,200)
++        self.assertEqual(self.page(ride)[1],[{'details':[],'disabled':False}])
++    def test_failed_fresh_running_and_stale_claim_states(self):
++        ride=self.c.post_pi_v2_session('p3-status')
++        for status,age,disabled in [('failed',0,False),('pending',0,True),('submitted',0,True),('submitted',181,False)]:
++            ride.analysis_status=status;ride.updated_at=utc_now()-timedelta(seconds=age);db.session.commit()
++            self.assertEqual(self.page(ride)[1],[{'details':[],'disabled':disabled}])
++    def test_incomplete_missing_raw_and_guest_have_no_action(self):
++        ride=self.c.post_pi_v2_session('p3-ineligible');ride.capture_status='interrupted';db.session.commit()
++        html,buttons=self.page(ride);self.assertEqual(buttons,[]);self.assertIn('completed capture',html)
++        ride.capture_status='completed';record=ride.telemetry_records[0];record.raw_hex=None;record.raw_frame=None;record.iat_c=None;db.session.commit()
++        html,buttons=self.page(ride);self.assertEqual(buttons,[]);self.assertIn('Complete RAW',html)
++        self.c.client.post('/auth/logout')
++        with self.c.client.session_transaction() as state:state.clear();state['demo_mode']=True
++        html=self.c.client.get('/sessions/900101').get_data(as_text=True);parser=Actions();parser.feed(html);self.assertEqual(parser.buttons,[])
++    def test_another_owner_cannot_view_or_submit(self):
++        ride=self.c.post_pi_v2_session('p3-owned')
++        self.c.client.post('/auth/logout')
++        self.c.login(self.c.user_b.email)
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session') as infer:
++            self.assertEqual(self.c.client.get(f'/sessions/{ride.id}').status_code,404)
++            self.assertEqual(self.c.client.post(f'/api/sessions/{ride.id}/analysis/re-run',json={'request_id':'unauthorized'}).status_code,404)
++            infer.assert_not_called()
++    def test_malformed_raw_is_explained_without_submitting(self):
++        ride=self.c.post_pi_v2_session('p3-malformed')
++        ride.telemetry_records[0].raw_hex='NOT-HEX';db.session.commit()
++        html,buttons=self.page(ride);self.assertEqual(buttons,[])
++        self.assertIn('Stored RAW or timestamps are invalid',html)
++    def test_busy_is_retryable_preserves_selected_result_and_reuses_request_identity(self):
++        ride=self.c.post_pi_v2_session('p3-busy');original=ride.analysis_run_id
++        old=deepcopy(AnalysisResult.query.filter_by(ride_session_id=ride.id).one().result_summary)
++        calls=[]
++        def analyzer(request):
++            calls.append(deepcopy(request))
++            if len(calls)==1:raise AnalyzerClientError('Another RAW analysis is running',status_code=429,code='RAW_ANALYSIS_BUSY',retry_after=5,retryable=True)
++            return self.c.raw_analyzer_response(request,run_id='p3-recovered')
++        url=f'/api/sessions/{ride.id}/analysis/re-run'
++        with patch.object(AnalyzerClient,'decode_analyze_raw_session',side_effect=analyzer):
++            busy=self.c.client.post(url,json={'request_id':'same-attempt'});self.assertEqual(busy.status_code,429)
++            self.assertEqual(busy.json['state'],'busy');self.assertTrue(busy.json['retryable']);self.assertEqual(busy.headers['Retry-After'],'5')
++            db.session.refresh(ride);self.assertEqual(ride.analysis_status,'completed');self.assertEqual(ride.analysis_run_id,original)
++            ok=self.c.client.post(url,json={'request_id':'same-attempt'});self.assertEqual(ok.status_code,200)
++            again=self.c.client.post(url,json={'request_id':'same-attempt'});self.assertEqual(again.status_code,200)
++        self.assertEqual(len(calls),2);self.assertEqual(calls[0],calls[1])
++        self.assertEqual(AnalysisResult.query.filter_by(ride_session_id=ride.id).count(),2)
++        self.assertEqual(AnalysisResult.query.filter_by(analysis_run_id=original).one().result_summary,old)
++    def test_real_client_preserves_busy_code_and_retry_after(self):
++        import requests
++        response=requests.Response();response.status_code=429;response.headers['Retry-After']='5'
++        response._content=json.dumps({'detail':{'code':'RAW_ANALYSIS_BUSY','message':'busy'}}).encode()
++        with patch('integrations.analyzer_client.requests.post',return_value=response):
++            with self.assertRaises(AnalyzerClientError) as caught:AnalyzerClient(base_url='http://isolated',timeout_seconds=60).decode_analyze_raw_session({})
++        self.assertEqual(caught.exception.status_code,429);self.assertEqual(caught.exception.code,'RAW_ANALYSIS_BUSY');self.assertTrue(caught.exception.retryable)
++    def test_evidence_presentation_is_immutable(self):
++        e={'aggregate':{'window_summary':{'coverage_status_counts':{'full':1,'partial':1},'window_count':2,'evidence_state_counts':{'detector_disagreement':1}}},'interpretation':{'observations':[{'measured':10.7}]}}
++        old=deepcopy(e);out=_evidence_for_presentation(e);self.assertEqual(out['aggregate']['coverage_status'],'partial');self.assertEqual(e,old)
++    def test_page_skips_unused_sample_json_but_export_retains_it(self):
++        from sqlalchemy import event
++        from services.analysis import session_records
++        ride=self.c.post_pi_v2_session('p3-read-cost')
++        original=[record.to_dict() for record in session_records(ride)]
++        queries=[]
++        def before(conn,cursor,statement,parameters,context,many):queries.append(statement)
++        event.listen(db.engine,'before_cursor_execute',before)
++        try:self.page(ride)
++        finally:event.remove(db.engine,'before_cursor_execute',before)
++        telemetry_queries=[q for q in queries if 'FROM telemetry_records' in q]
++        self.assertTrue(telemetry_queries)
++        self.assertTrue(all('telemetry_records.candidate_signals' not in q and 'telemetry_records.quality_flags' not in q for q in telemetry_queries))
++        exported=self.c.client.get(f'/sessions/{ride.id}.json')
++        self.assertEqual(exported.status_code,200)
++        self.assertEqual(exported.json['records'],original)
++    def test_raw_record_limit_does_not_hide_supported_canonical_fallback(self):
++        from services.analysis_submission import manual_rerun_state
++        ride=self.c.post_pi_v2_session('p3-raw-only-limit')
++        record=ride.telemetry_records[0]
++        rows=[record]*20_001
++        ride.record_count=len(rows)
++        self.assertEqual(manual_rerun_state(ride,rows)['message'],'rerun.record_limit')
++        record.raw_hex=None;record.raw_frame=None
++        self.assertTrue(manual_rerun_state(ride,rows)['eligible'])
++    def test_read_cache_does_not_survive_another_http_request(self):
++        from models import TelemetryRecord
++        ride=self.c.post_pi_v2_session('p3-fresh-read')
++        self.assertTrue(self.page(ride)[1])
++        first=ride.telemetry_records[0]
++        values={column.name:deepcopy(getattr(first,column.name)) for column in TelemetryRecord.__table__.columns if column.name!='id'}
++        values['seq']=ride.record_count
++        values['timestamp_ms']=values['seq']*250.0
++        values['device_time_ms']=values['seq']*250
++        db.session.add(TelemetryRecord(**values))
++        ride.record_count+=1;ride.last_seq=values['seq'];db.session.commit()
++        self.assertTrue(self.page(ride)[1])
++    def test_post_refreshes_expired_records_in_bulk_after_commit(self):
++        from sqlalchemy import event
++        from services.analysis import session_records
++        ride=self.c.post_pi_v2_session('p3-post-read')
++        with self.c.app.test_request_context('/api/sessions/1/analysis/re-run',method='POST'):
++            original=session_records(ride)
++            db.session.commit()
++            queries=[]
++            def before(conn,cursor,statement,parameters,context,many):
++                if 'FROM telemetry_records' in statement:queries.append(statement)
++            event.listen(db.engine,'before_cursor_execute',before)
++            try:
++                refreshed=session_records(ride)
++                self.assertEqual([r.rpm for r in refreshed],[r.rpm for r in original])
++            finally:event.remove(db.engine,'before_cursor_execute',before)
++            self.assertEqual(len(queries),1)

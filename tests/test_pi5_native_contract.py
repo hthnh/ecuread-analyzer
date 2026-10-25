@@ -202,11 +202,17 @@ def test_v2_windowing_features_and_inference(settings, tmp_path: Path) -> None:
     assert output.summary["overall_status"] in {"ok", "monitor", "attention", "limited_data"}
 
 
-def test_v1_model_rejects_v2_session(settings, fixture_204330, tmp_path: Path) -> None:
+def test_v1_model_degrades_for_v2_session(settings, fixture_204330, tmp_path: Path) -> None:
     train_from_raw_files([fixture_204330], settings, sample_interval_ms=100)
     path = tmp_path / "native.jsonl"
     write_native_jsonl(path, count=45)
     imported = import_native_jsonl_file(path, session_id="sess_v2_against_v1_model", sample_interval_ms=250)
 
-    with pytest.raises(ValueError, match="telemetry schema mismatch|signal column mismatch|missing model features"):
-        AnalysisService(settings).analyze(imported.canonical_session, process_with_model=True, persist=False)
+    output = AnalysisService(settings).analyze(imported.canonical_session, process_with_model=True, persist=False)
+
+    assert output.summary["overall_status"] == "model_unavailable"
+    assert output.summary["model_loaded"] is False
+    assert output.summary["detectors"][0]["status"] == "skipped"
+    assert output.summary["detectors"][0]["reason"] == "model_unavailable"
+    assert output.summary["diagnostic_evidence"]["status"] in {"available", "partial"}
+    assert "diagnostic_evidence" in output.summary

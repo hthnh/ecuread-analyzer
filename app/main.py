@@ -43,6 +43,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(uploads.router)
     app.include_router(sessions.router)
     app.include_router(analysis.router)
+    app.include_router(analysis.canonical_router)
     app.include_router(raw.router)
     app.include_router(model.router)
     return app

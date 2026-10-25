@@ -1,0 +1,5516 @@
+{
+  "accepted_annotations_unchanged": true,
+  "annotation_file_count": 2,
+  "auto_acceptance_performed": false,
+  "canonical_samples": 100688,
+  "created_at": "2026-10-11T08:14:49.477364+00:00",
+  "dataset_id": "ecuread-filtered-raw-18-v1",
+  "engineering_readiness": "ready_for_operator_pilot",
+  "engineering_verified_at": "2026-10-11T08:36:10.372572+00:00",
+  "final_decision": "pending_human_validation",
+  "historical57_already_retired": true,
+  "human_validation_readiness": "pending",
+  "input_frames": 100688,
+  "manual_gates": {
+    "important_context_loss": "pending",
+    "large_scale_labeling_approval": "pending",
+    "manual_boundary_quality": "pending",
+    "timed_human_review": "pending"
+  },
+  "pilots": [
+    {
+      "canonical_samples": 5781,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 45,
+        "default_queue_before": 287,
+        "detailed_intervals_before": 203,
+        "event_markers_after": 84,
+        "event_markers_before": 84,
+        "event_types": {
+          "engine_stop": 1,
+          "throttle_burst": 83
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999996453,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 45,
+          "coverage_s": 1446.503,
+          "duration_distribution": {
+            "count": 45,
+            "max_s": 257.25,
+            "median_s": 7.500500000000001,
+            "min_s": 0.0009999999999763531,
+            "p10_s": 1.4992000000000645,
+            "p90_s": 95.65030000000006,
+            "total_s": 1446.503
+          }
+        },
+        "operating_plus_thermal_decisions_after": 55,
+        "operating_runs_before": 203,
+        "preserved_states": {
+          "engine_off": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                1436.127,
+                1446.503
+              ]
+            ]
+          },
+          "moving_steady": {
+            "after": 9,
+            "before": 9,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                381.627,
+                386.6265
+              ],
+              [
+                482.1265,
+                488.1265
+              ],
+              [
+                578.377,
+                583.3775
+              ],
+              [
+                649.126,
+                656.3765
+              ],
+              [
+                780.626,
+                787.6265
+              ],
+              [
+                1035.377,
+                1039.377
+              ],
+              [
+                1135.1275,
+                1139.3775
+              ],
+              [
+                1229.1265,
+                1244.1265
+              ],
+              [
+                1284.877,
+                1294.376
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 3,
+            "before": 3,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                110.127,
+                118.877
+              ],
+              [
+                930.8765,
+                945.6265
+              ],
+              [
+                1185.127,
+                1193.626
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 11,
+            "before": 11,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                2.627
+              ],
+              [
+                6.8755,
+                8.626
+              ],
+              [
+                16.1265,
+                18.627
+              ],
+              [
+                118.877,
+                124.377
+              ],
+              [
+                559.6255,
+                561.6275
+              ],
+              [
+                591.1265,
+                592.6255
+              ],
+              [
+                1165.876,
+                1168.3765
+              ],
+              [
+                1181.627,
+                1182.626
+              ],
+              [
+                1193.626,
+                1195.877
+              ],
+              [
+                1197.3765,
+                1198.1265
+              ],
+              [
+                1435.126,
+                1436.127
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 10,
+          "coverage_s": 1446.503,
+          "duration_distribution": {
+            "count": 10,
+            "max_s": 766.251,
+            "median_s": 39.0,
+            "min_s": 10.0,
+            "p10_s": 14.949100000000021,
+            "p90_s": 264.9500999999998,
+            "total_s": 1446.503
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "3c951bdebae9573a203f05efe47ba5c0279d77b4bdeaf476d242d35f0895f5f4",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 1446.503,
+      "input_frames": 5781,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 10,
+          "rejected": 0,
+          "total": 10,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 3.747593979933299,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000002",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000002.jsonl",
+      "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa"
+    },
+    {
+      "canonical_samples": 3017,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 29,
+        "default_queue_before": 174,
+        "detailed_intervals_before": 110,
+        "event_markers_after": 64,
+        "event_markers_before": 64,
+        "event_types": {
+          "repeated_stop_go": 1,
+          "throttle_burst": 63
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12600000000000477,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 29,
+          "coverage_s": 755.001,
+          "duration_distribution": {
+            "count": 29,
+            "max_s": 129.24900000000002,
+            "median_s": 7.25,
+            "min_s": 0.125,
+            "p10_s": 0.4749000000000024,
+            "p90_s": 72.54929999999999,
+            "total_s": 755.001
+          }
+        },
+        "operating_plus_thermal_decisions_after": 38,
+        "operating_runs_before": 108,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 2,
+            "before": 2,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                201.376,
+                209.875
+              ],
+              [
+                309.3745,
+                315.876
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 7,
+            "before": 7,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.125,
+                7.375
+              ],
+              [
+                111.375,
+                143.1255
+              ],
+              [
+                213.876,
+                218.126
+              ],
+              [
+                220.625,
+                227.6255
+              ],
+              [
+                373.8745,
+                392.375
+              ],
+              [
+                557.875,
+                580.626
+              ],
+              [
+                639.875,
+                664.876
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 9,
+            "before": 9,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                0.125
+              ],
+              [
+                7.375,
+                8.126
+              ],
+              [
+                38.8765,
+                40.8755
+              ],
+              [
+                143.1255,
+                143.376
+              ],
+              [
+                227.6255,
+                228.626
+              ],
+              [
+                426.876,
+                428.626
+              ],
+              [
+                580.626,
+                581.126
+              ],
+              [
+                664.876,
+                665.3765
+              ],
+              [
+                754.6265,
+                755.001
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 9,
+          "coverage_s": 755.001,
+          "duration_distribution": {
+            "count": 9,
+            "max_s": 179.74949999999998,
+            "median_s": 87.74950000000001,
+            "min_s": 19.999500000000012,
+            "p10_s": 22.59910000000002,
+            "p90_s": 137.1499,
+            "total_s": 755.001
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "858af9789e2b0f960a049fe0780ed48e4aa63df4a57ef2dd1d19071f0fb1753f",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 755.001,
+      "input_frames": 3017,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 29,
+          "rejected": 0,
+          "total": 29,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 9,
+          "rejected": 0,
+          "total": 9,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 1.8548607010161504,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000004",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000004.jsonl",
+      "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7"
+    },
+    {
+      "canonical_samples": 7851,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 45,
+        "default_queue_before": 393,
+        "detailed_intervals_before": 255,
+        "event_markers_after": 138,
+        "event_markers_before": 138,
+        "event_types": {
+          "throttle_burst": 138
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12650000000000006,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 45,
+          "coverage_s": 1963.997,
+          "duration_distribution": {
+            "count": 45,
+            "max_s": 274.5,
+            "median_s": 8.750999999999976,
+            "min_s": 0.2504999999998745,
+            "p10_s": 1.3494999999999893,
+            "p90_s": 136.9996999999999,
+            "total_s": 1963.997
+          }
+        },
+        "operating_plus_thermal_decisions_after": 58,
+        "operating_runs_before": 252,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 11,
+            "before": 11,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                174.1245,
+                185.1235
+              ],
+              [
+                255.373,
+                260.8735
+              ],
+              [
+                450.874,
+                455.373
+              ],
+              [
+                554.874,
+                566.124
+              ],
+              [
+                1185.374,
+                1191.8735
+              ],
+              [
+                1367.1245,
+                1371.6235
+              ],
+              [
+                1440.124,
+                1447.873
+              ],
+              [
+                1451.873,
+                1459.1235
+              ],
+              [
+                1495.8735,
+                1504.6245
+              ],
+              [
+                1512.873,
+                1517.6245
+              ],
+              [
+                1703.874,
+                1714.1245
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 4,
+            "before": 4,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                311.1235,
+                335.8735
+              ],
+              [
+                696.3725,
+                742.1235
+              ],
+              [
+                1016.874,
+                1043.623
+              ],
+              [
+                1202.3735,
+                1225.3735
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 10,
+            "before": 10,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                2.6235
+              ],
+              [
+                5.3745,
+                8.6235
+              ],
+              [
+                335.8735,
+                336.124
+              ],
+              [
+                742.1235,
+                742.374
+              ],
+              [
+                1043.623,
+                1043.8735
+              ],
+              [
+                1225.3735,
+                1225.624
+              ],
+              [
+                1839.623,
+                1842.1235
+              ],
+              [
+                1950.3735,
+                1952.874
+              ],
+              [
+                1954.1235,
+                1960.8745
+              ],
+              [
+                1962.374,
+                1963.997
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 13,
+          "coverage_s": 1963.997,
+          "duration_distribution": {
+            "count": 13,
+            "max_s": 709.1235000000001,
+            "median_s": 73.75099999999986,
+            "min_s": 5.250999999999976,
+            "p10_s": 16.099100000000004,
+            "p90_s": 301.99870000000004,
+            "total_s": 1963.997
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "29dc79dd7ce3df5bd0a247ce2579fc67e81a2ad93d76d45e44d872ecdf877a95",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 1963.997,
+      "input_frames": 7851,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 13,
+          "rejected": 0,
+          "total": 13,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 4.6213778590317816,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000005",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000005.jsonl",
+      "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4"
+    },
+    {
+      "canonical_samples": 6389,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 45,
+        "default_queue_before": 281,
+        "detailed_intervals_before": 216,
+        "event_markers_after": 65,
+        "event_markers_before": 65,
+        "event_types": {
+          "repeated_stop_go": 1,
+          "throttle_burst": 64
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999999295,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 45,
+          "coverage_s": 1598.002,
+          "duration_distribution": {
+            "count": 45,
+            "max_s": 255.7505,
+            "median_s": 8.750000000000002,
+            "min_s": 0.5004999999999882,
+            "p10_s": 4.000400000000002,
+            "p90_s": 96.45049999999999,
+            "total_s": 1598.002
+          }
+        },
+        "operating_plus_thermal_decisions_after": 52,
+        "operating_runs_before": 215,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 16,
+            "before": 16,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                26.626,
+                31.3745
+              ],
+              [
+                95.626,
+                101.875
+              ],
+              [
+                135.375,
+                139.376
+              ],
+              [
+                144.626,
+                150.3755
+              ],
+              [
+                174.3755,
+                178.6255
+              ],
+              [
+                230.376,
+                234.626
+              ],
+              [
+                468.125,
+                473.126
+              ],
+              [
+                479.626,
+                498.626
+              ],
+              [
+                538.876,
+                544.626
+              ],
+              [
+                671.126,
+                678.126
+              ],
+              [
+                700.3745,
+                711.1265
+              ],
+              [
+                738.626,
+                745.6255
+              ],
+              [
+                761.126,
+                765.876
+              ],
+              [
+                1209.376,
+                1215.3765
+              ],
+              [
+                1219.3765,
+                1232.8755
+              ],
+              [
+                1350.126,
+                1356.6265
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 3,
+            "before": 3,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                795.875,
+                817.8755
+              ],
+              [
+                856.625,
+                862.375
+              ],
+              [
+                927.6255,
+                951.6245
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 5,
+            "before": 5,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                8.876
+              ],
+              [
+                17.626,
+                19.3755
+              ],
+              [
+                817.8755,
+                818.376
+              ],
+              [
+                951.6245,
+                953.6255
+              ],
+              [
+                1597.1255,
+                1598.002
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 7,
+          "coverage_s": 1598.002,
+          "duration_distribution": {
+            "count": 7,
+            "max_s": 784.3755,
+            "median_s": 64.50149999999996,
+            "min_s": 17.125999999999976,
+            "p10_s": 21.69920000000002,
+            "p90_s": 673.0002000000001,
+            "total_s": 1598.002
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "98b4e88620bd91f98aad34629bed9b9c7c46559644e5d5b6c4b08cc7f5a53bcd",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 1598.002,
+      "input_frames": 6389,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 7,
+          "rejected": 0,
+          "total": 7,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 3.6966805330011994,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000007",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000007.jsonl",
+      "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879"
+    },
+    {
+      "canonical_samples": 17976,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 208,
+        "default_queue_before": 846,
+        "detailed_intervals_before": 534,
+        "event_markers_after": 312,
+        "event_markers_before": 312,
+        "event_types": {
+          "throttle_burst": 312
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999996453,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 208,
+          "coverage_s": 4496.001,
+          "duration_distribution": {
+            "count": 208,
+            "max_s": 115.5,
+            "median_s": 13.250749999999925,
+            "min_s": 0.24949999999989814,
+            "p10_s": 4.25,
+            "p90_s": 49.649950000000054,
+            "total_s": 4496.001
+          }
+        },
+        "operating_plus_thermal_decisions_after": 225,
+        "operating_runs_before": 529,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 92,
+            "before": 92,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                58.1265,
+                65.8755
+              ],
+              [
+                69.8755,
+                76.6265
+              ],
+              [
+                104.8765,
+                120.3765
+              ],
+              [
+                143.1265,
+                148.627
+              ],
+              [
+                158.127,
+                163.626
+              ],
+              [
+                213.1255,
+                225.626
+              ],
+              [
+                274.875,
+                279.8755
+              ],
+              [
+                330.3755,
+                340.126
+              ],
+              [
+                396.376,
+                427.126
+              ],
+              [
+                507.125,
+                511.877
+              ],
+              [
+                515.877,
+                547.3755
+              ],
+              [
+                551.3755,
+                561.1255
+              ],
+              [
+                597.376,
+                603.375
+              ],
+              [
+                611.1255,
+                640.625
+              ],
+              [
+                809.376,
+                820.876
+              ],
+              [
+                842.6265,
+                858.3755
+              ],
+              [
+                870.6255,
+                902.876
+              ],
+              [
+                952.125,
+                961.626
+              ],
+              [
+                980.876,
+                1016.127
+              ],
+              [
+                1022.876,
+                1029.3755
+              ],
+              [
+                1046.1265,
+                1058.376
+              ],
+              [
+                1062.376,
+                1079.626
+              ],
+              [
+                1103.3765,
+                1122.6255
+              ],
+              [
+                1141.626,
+                1146.1265
+              ],
+              [
+                1160.626,
+                1209.1265
+              ],
+              [
+                1214.6265,
+                1218.8765
+              ],
+              [
+                1231.626,
+                1236.6255
+              ],
+              [
+                1242.1265,
+                1252.8765
+              ],
+              [
+                1282.6255,
+                1288.6255
+              ],
+              [
+                1375.6255,
+                1383.8755
+              ],
+              [
+                1455.127,
+                1459.3755
+              ],
+              [
+                1570.126,
+                1587.6255
+              ],
+              [
+                1592.375,
+                1596.626
+              ],
+              [
+                1600.626,
+                1618.8755
+              ],
+              [
+                1627.6255,
+                1634.876
+              ],
+              [
+                1748.6265,
+                1753.1255
+              ],
+              [
+                1770.626,
+                1796.127
+              ],
+              [
+                1814.376,
+                1822.1255
+              ],
+              [
+                1851.875,
+                1856.8765
+              ],
+              [
+                1874.1255,
+                1899.126
+              ],
+              [
+                1906.126,
+                1913.126
+              ],
+              [
+                1918.626,
+                1939.8765
+              ],
+              [
+                1945.3765,
+                1953.8755
+              ],
+              [
+                1987.3765,
+                1996.3745
+              ],
+              [
+                2017.376,
+                2040.6255
+              ],
+              [
+                2065.376,
+                2077.126
+              ],
+              [
+                2186.8765,
+                2201.3755
+              ],
+              [
+                2226.376,
+                2233.8755
+              ],
+              [
+                2328.876,
+                2349.626
+              ],
+              [
+                2386.876,
+                2400.876
+              ],
+              [
+                2418.876,
+                2445.3755
+              ],
+              [
+                2509.8755,
+                2558.6255
+              ],
+              [
+                2571.8765,
+                2596.3755
+              ],
+              [
+                2619.626,
+                2624.127
+              ],
+              [
+                2663.6255,
+                2667.8755
+              ],
+              [
+                2724.375,
+                2732.626
+              ],
+              [
+                2745.876,
+                2755.8755
+              ],
+              [
+                2760.125,
+                2766.375
+              ],
+              [
+                2816.376,
+                2831.1265
+              ],
+              [
+                2860.626,
+                2865.625
+              ],
+              [
+                2948.876,
+                2955.3755
+              ],
+              [
+                3013.1255,
+                3018.6255
+              ],
+              [
+                3132.1255,
+                3155.376
+              ],
+              [
+                3172.127,
+                3176.8755
+              ],
+              [
+                3200.126,
+                3206.375
+              ],
+              [
+                3262.876,
+                3269.876
+              ],
+              [
+                3275.876,
+                3285.625
+              ],
+              [
+                3353.3765,
+                3359.3765
+              ],
+              [
+                3370.376,
+                3384.1265
+              ],
+              [
+                3455.8765,
+                3469.7505
+              ],
+              [
+                3481.876,
+                3520.126
+              ],
+              [
+                3532.1255,
+                3541.126
+              ],
+              [
+                3545.126,
+                3569.875
+              ],
+              [
+                3614.8755,
+                3623.375
+              ],
+              [
+                3651.1265,
+                3695.1265
+              ],
+              [
+                3715.376,
+                3721.1255
+              ],
+              [
+                3731.3765,
+                3761.626
+              ],
+              [
+                3765.626,
+                3780.1265
+              ],
+              [
+                3784.1265,
+                3788.3765
+              ],
+              [
+                3799.126,
+                3853.376
+              ],
+              [
+                3893.625,
+                3925.3755
+              ],
+              [
+                3951.126,
+                3965.875
+              ],
+              [
+                4007.8755,
+                4036.1265
+              ],
+              [
+                4063.626,
+                4068.1265
+              ],
+              [
+                4116.376,
+                4121.3755
+              ],
+              [
+                4125.3755,
+                4129.8755
+              ],
+              [
+                4188.6265,
+                4213.1255
+              ],
+              [
+                4226.376,
+                4234.626
+              ],
+              [
+                4238.626,
+                4243.875
+              ],
+              [
+                4254.8765,
+                4262.1265
+              ],
+              [
+                4273.126,
+                4277.8765
+              ],
+              [
+                4385.126,
+                4397.1255
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 7,
+            "before": 7,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                6.126
+              ],
+              [
+                684.376,
+                693.625
+              ],
+              [
+                2275.376,
+                2284.376
+              ],
+              [
+                2682.126,
+                2706.626
+              ],
+              [
+                4311.626,
+                4324.8755
+              ],
+              [
+                4432.625,
+                4475.376
+              ],
+              [
+                4488.1265,
+                4496.001
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 8,
+            "before": 8,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                249.126,
+                253.376
+              ],
+              [
+                693.625,
+                693.876
+              ],
+              [
+                2284.376,
+                2284.8755
+              ],
+              [
+                2706.626,
+                2706.8755
+              ],
+              [
+                3066.875,
+                3068.875
+              ],
+              [
+                3073.126,
+                3075.1265
+              ],
+              [
+                4324.8755,
+                4325.126
+              ],
+              [
+                4475.376,
+                4475.6255
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 17,
+          "coverage_s": 4496.001,
+          "duration_distribution": {
+            "count": 17,
+            "max_s": 2655.25,
+            "median_s": 40.24950000000035,
+            "min_s": 7.874499999999898,
+            "p10_s": 22.000700000000144,
+            "p90_s": 484.5000000000003,
+            "total_s": 4496.001
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "9012cb9075bd71cb0938b8e5a4334bcf295400898fcaa33f7028ef9931042401",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 4496.001,
+      "input_frames": 17976,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 208,
+          "rejected": 0,
+          "total": 208,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 17,
+          "rejected": 0,
+          "total": 17,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 10.372097268002108,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000018",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000018.jsonl",
+      "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04"
+    }
+  ],
+  "processing_time_s": 62.792207151069306,
+  "protected_files": {
+    "changed": [],
+    "protected_file_count": 439,
+    "unchanged": true
+  },
+  "recovery_backup": {
+    "file_count": 18,
+    "file_sha256": {
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000001.suggestions.json": "c41c187aa7763aab8fab79211098fa2f896ff9a818edc26443650102e5538f49",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000002.suggestions.json": "5f7870fed1d1a3d9be383606f62b66f892e8f9de4563e7fdc9d196f3d3bcdc6a",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000003.suggestions.json": "cb17829ef5fab9dfc9bbc1adb7b908b2a8157805e565b7363d7901f405637a49",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000004.suggestions.json": "8aaaacda32ad5a927a4dfed5513cdfc7b6a2c3d87f2630f9304d7aa428d307ad",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000005.suggestions.json": "d5f7e15a7d36334cfec25b04da0951d12d39ace76c18e79dfa45eee02ba8258d",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000006.suggestions.json": "dc85a3e8b4df5e5e93fef438caa284aeb1d90eb3acb1a7b98e043575c29a140a",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000007.suggestions.json": "0a4ec9a5f4491e9bc21f0d76b0731dedd2fea0afda8eca94304affa46b6a025f",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000014.suggestions.json": "fb6bbc7df03b15e1b97c564c5de6b9b9e671d339a54c68637aec6f1ddc9bea4e",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000015.suggestions.json": "53fd6af228480bf2bea3eaa3e65fa449d4287cdf57c927364b89cbbdafdfa0cf",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000016.suggestions.json": "470fd4b287dabe585218e94ed83c48b82638233b38c32e00f5f78a0b6b365bac",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000017.suggestions.json": "edcb1b23eb8fc946e46bec73a19242633525470aa68ea3c49460af1d7d4f2354",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000018.suggestions.json": "beda88f6658affabc2c3e69a485040663e75a22495e9cdeb38fdc55b5e19a566",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000019.suggestions.json": "e9bbb307869879fa14845a5634b7b76700bf6d3b0625cb987a69d72ff6db1f6f",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000020.suggestions.json": "e65eb48f659d15eb7d12a06a55c6517697ac69374a85483247cb9471257156d1",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000021.suggestions.json": "59f6bad3c487fe5698cebcf5607c441f6eaddab63e4b590b452784f7fde81ec2",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000022.suggestions.json": "9cc77f579241a205c2d8bd4e4b956c4e2d2f00a84a421301e4f0bb1b0fc93eb0",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000023.suggestions.json": "e6fae57c6c7064fc3e92b3a6b0b78c430d2382c3bee5c0861e75dd0936b6d0cd",
+      "data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/suggestions/session_000024.suggestions.json": "1a4278191aa5da913c6dc92c07a64496ea89744ce5c70a9c644b40590ba15e9b"
+    },
+    "path": "/home/hthnh/ecuread-analyzer-backups/ctx24-before-regeneration-2026-10-11T081345.105047_0000.tar.gz",
+    "sha256": "c1cda1fc1d677045ddb85331f5d0d4d188a2182fabc3a4b8f0c3a7bc81b53b0f"
+  },
+  "schema_version": "ctx24-engineering-audit-v1",
+  "sessions": [
+    {
+      "canonical_samples": 117,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 5,
+        "default_queue_before": 8,
+        "detailed_intervals_before": 7,
+        "event_markers_after": 1,
+        "event_markers_before": 1,
+        "event_types": {
+          "throttle_burst": 1
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12600000000000122,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 5,
+          "coverage_s": 28.999,
+          "duration_distribution": {
+            "count": 5,
+            "max_s": 12.625,
+            "median_s": 4.499500000000001,
+            "min_s": 1.25,
+            "p10_s": 1.9997999999999991,
+            "p90_s": 10.575000000000001,
+            "total_s": 28.999
+          }
+        },
+        "operating_plus_thermal_decisions_after": 6,
+        "operating_runs_before": 5,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "stationary_running": {
+            "after": 2,
+            "before": 2,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                12.625
+              ],
+              [
+                13.875,
+                21.375
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                25.8745,
+                28.999
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 1,
+          "coverage_s": 28.999,
+          "duration_distribution": {
+            "count": 1,
+            "max_s": 28.999,
+            "median_s": 28.999,
+            "min_s": 28.999,
+            "p10_s": 28.999,
+            "p90_s": 28.999,
+            "total_s": 28.999
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "4a4f6ecc3e3349ae3feb5eb8074d7a88fe9c7fe302fd394e3e6a833c59fbab45",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 28.999,
+      "input_frames": 117,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 5,
+          "rejected": 0,
+          "total": 5,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 1,
+          "rejected": 0,
+          "total": 1,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 0.15199238900095224,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000001",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000001.jsonl",
+      "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017"
+    },
+    {
+      "canonical_samples": 5781,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 45,
+        "default_queue_before": 287,
+        "detailed_intervals_before": 203,
+        "event_markers_after": 84,
+        "event_markers_before": 84,
+        "event_types": {
+          "engine_stop": 1,
+          "throttle_burst": 83
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999996453,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 45,
+          "coverage_s": 1446.503,
+          "duration_distribution": {
+            "count": 45,
+            "max_s": 257.25,
+            "median_s": 7.500500000000001,
+            "min_s": 0.0009999999999763531,
+            "p10_s": 1.4992000000000645,
+            "p90_s": 95.65030000000006,
+            "total_s": 1446.503
+          }
+        },
+        "operating_plus_thermal_decisions_after": 55,
+        "operating_runs_before": 203,
+        "preserved_states": {
+          "engine_off": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                1436.127,
+                1446.503
+              ]
+            ]
+          },
+          "moving_steady": {
+            "after": 9,
+            "before": 9,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                381.627,
+                386.6265
+              ],
+              [
+                482.1265,
+                488.1265
+              ],
+              [
+                578.377,
+                583.3775
+              ],
+              [
+                649.126,
+                656.3765
+              ],
+              [
+                780.626,
+                787.6265
+              ],
+              [
+                1035.377,
+                1039.377
+              ],
+              [
+                1135.1275,
+                1139.3775
+              ],
+              [
+                1229.1265,
+                1244.1265
+              ],
+              [
+                1284.877,
+                1294.376
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 3,
+            "before": 3,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                110.127,
+                118.877
+              ],
+              [
+                930.8765,
+                945.6265
+              ],
+              [
+                1185.127,
+                1193.626
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 11,
+            "before": 11,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                2.627
+              ],
+              [
+                6.8755,
+                8.626
+              ],
+              [
+                16.1265,
+                18.627
+              ],
+              [
+                118.877,
+                124.377
+              ],
+              [
+                559.6255,
+                561.6275
+              ],
+              [
+                591.1265,
+                592.6255
+              ],
+              [
+                1165.876,
+                1168.3765
+              ],
+              [
+                1181.627,
+                1182.626
+              ],
+              [
+                1193.626,
+                1195.877
+              ],
+              [
+                1197.3765,
+                1198.1265
+              ],
+              [
+                1435.126,
+                1436.127
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 10,
+          "coverage_s": 1446.503,
+          "duration_distribution": {
+            "count": 10,
+            "max_s": 766.251,
+            "median_s": 39.0,
+            "min_s": 10.0,
+            "p10_s": 14.949100000000021,
+            "p90_s": 264.9500999999998,
+            "total_s": 1446.503
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "3c951bdebae9573a203f05efe47ba5c0279d77b4bdeaf476d242d35f0895f5f4",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 1446.503,
+      "input_frames": 5781,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 10,
+          "rejected": 0,
+          "total": 10,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 3.747593979933299,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000002",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000002.jsonl",
+      "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa"
+    },
+    {
+      "canonical_samples": 1249,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 7,
+        "default_queue_before": 73,
+        "detailed_intervals_before": 41,
+        "event_markers_after": 32,
+        "event_markers_before": 32,
+        "event_types": {
+          "throttle_burst": 32
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999999295,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 7,
+          "coverage_s": 312.499,
+          "duration_distribution": {
+            "count": 7,
+            "max_s": 172.12500000000003,
+            "median_s": 24.50099999999999,
+            "min_s": 0.2505000000000024,
+            "p10_s": 2.5002000000000013,
+            "p90_s": 111.37350000000005,
+            "total_s": 312.499
+          }
+        },
+        "operating_plus_thermal_decisions_after": 9,
+        "operating_runs_before": 40,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                136.374,
+                140.374
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 2,
+            "before": 2,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                70.8725
+              ],
+              [
+                103.1235,
+                111.873
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                70.8725,
+                71.123
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 2,
+          "coverage_s": 312.499,
+          "duration_distribution": {
+            "count": 2,
+            "max_s": 307.8735,
+            "median_s": 156.2495,
+            "min_s": 4.625500000000045,
+            "p10_s": 34.95030000000004,
+            "p90_s": 277.5487,
+            "total_s": 312.499
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "9b7c9de78c106922ed0e38c514b6c83fc29f019da61e9265a62bb26006c12b48",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 312.499,
+      "input_frames": 1249,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 7,
+          "rejected": 0,
+          "total": 7,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 2,
+          "rejected": 0,
+          "total": 2,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 0.8600328200263903,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000003",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000003.jsonl",
+      "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c"
+    },
+    {
+      "canonical_samples": 3017,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 29,
+        "default_queue_before": 174,
+        "detailed_intervals_before": 110,
+        "event_markers_after": 64,
+        "event_markers_before": 64,
+        "event_types": {
+          "repeated_stop_go": 1,
+          "throttle_burst": 63
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12600000000000477,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 29,
+          "coverage_s": 755.001,
+          "duration_distribution": {
+            "count": 29,
+            "max_s": 129.24900000000002,
+            "median_s": 7.25,
+            "min_s": 0.125,
+            "p10_s": 0.4749000000000024,
+            "p90_s": 72.54929999999999,
+            "total_s": 755.001
+          }
+        },
+        "operating_plus_thermal_decisions_after": 38,
+        "operating_runs_before": 108,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 2,
+            "before": 2,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                201.376,
+                209.875
+              ],
+              [
+                309.3745,
+                315.876
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 7,
+            "before": 7,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.125,
+                7.375
+              ],
+              [
+                111.375,
+                143.1255
+              ],
+              [
+                213.876,
+                218.126
+              ],
+              [
+                220.625,
+                227.6255
+              ],
+              [
+                373.8745,
+                392.375
+              ],
+              [
+                557.875,
+                580.626
+              ],
+              [
+                639.875,
+                664.876
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 9,
+            "before": 9,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                0.125
+              ],
+              [
+                7.375,
+                8.126
+              ],
+              [
+                38.8765,
+                40.8755
+              ],
+              [
+                143.1255,
+                143.376
+              ],
+              [
+                227.6255,
+                228.626
+              ],
+              [
+                426.876,
+                428.626
+              ],
+              [
+                580.626,
+                581.126
+              ],
+              [
+                664.876,
+                665.3765
+              ],
+              [
+                754.6265,
+                755.001
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 9,
+          "coverage_s": 755.001,
+          "duration_distribution": {
+            "count": 9,
+            "max_s": 179.74949999999998,
+            "median_s": 87.74950000000001,
+            "min_s": 19.999500000000012,
+            "p10_s": 22.59910000000002,
+            "p90_s": 137.1499,
+            "total_s": 755.001
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "858af9789e2b0f960a049fe0780ed48e4aa63df4a57ef2dd1d19071f0fb1753f",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 755.001,
+      "input_frames": 3017,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 29,
+          "rejected": 0,
+          "total": 29,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 9,
+          "rejected": 0,
+          "total": 9,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 1.8548607010161504,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000004",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000004.jsonl",
+      "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7"
+    },
+    {
+      "canonical_samples": 7851,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 45,
+        "default_queue_before": 393,
+        "detailed_intervals_before": 255,
+        "event_markers_after": 138,
+        "event_markers_before": 138,
+        "event_types": {
+          "throttle_burst": 138
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12650000000000006,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 45,
+          "coverage_s": 1963.997,
+          "duration_distribution": {
+            "count": 45,
+            "max_s": 274.5,
+            "median_s": 8.750999999999976,
+            "min_s": 0.2504999999998745,
+            "p10_s": 1.3494999999999893,
+            "p90_s": 136.9996999999999,
+            "total_s": 1963.997
+          }
+        },
+        "operating_plus_thermal_decisions_after": 58,
+        "operating_runs_before": 252,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 11,
+            "before": 11,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                174.1245,
+                185.1235
+              ],
+              [
+                255.373,
+                260.8735
+              ],
+              [
+                450.874,
+                455.373
+              ],
+              [
+                554.874,
+                566.124
+              ],
+              [
+                1185.374,
+                1191.8735
+              ],
+              [
+                1367.1245,
+                1371.6235
+              ],
+              [
+                1440.124,
+                1447.873
+              ],
+              [
+                1451.873,
+                1459.1235
+              ],
+              [
+                1495.8735,
+                1504.6245
+              ],
+              [
+                1512.873,
+                1517.6245
+              ],
+              [
+                1703.874,
+                1714.1245
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 4,
+            "before": 4,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                311.1235,
+                335.8735
+              ],
+              [
+                696.3725,
+                742.1235
+              ],
+              [
+                1016.874,
+                1043.623
+              ],
+              [
+                1202.3735,
+                1225.3735
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 10,
+            "before": 10,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                2.6235
+              ],
+              [
+                5.3745,
+                8.6235
+              ],
+              [
+                335.8735,
+                336.124
+              ],
+              [
+                742.1235,
+                742.374
+              ],
+              [
+                1043.623,
+                1043.8735
+              ],
+              [
+                1225.3735,
+                1225.624
+              ],
+              [
+                1839.623,
+                1842.1235
+              ],
+              [
+                1950.3735,
+                1952.874
+              ],
+              [
+                1954.1235,
+                1960.8745
+              ],
+              [
+                1962.374,
+                1963.997
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 13,
+          "coverage_s": 1963.997,
+          "duration_distribution": {
+            "count": 13,
+            "max_s": 709.1235000000001,
+            "median_s": 73.75099999999986,
+            "min_s": 5.250999999999976,
+            "p10_s": 16.099100000000004,
+            "p90_s": 301.99870000000004,
+            "total_s": 1963.997
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "29dc79dd7ce3df5bd0a247ce2579fc67e81a2ad93d76d45e44d872ecdf877a95",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 1963.997,
+      "input_frames": 7851,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 13,
+          "rejected": 0,
+          "total": 13,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 4.6213778590317816,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000005",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000005.jsonl",
+      "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4"
+    },
+    {
+      "canonical_samples": 923,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 13,
+        "default_queue_before": 35,
+        "detailed_intervals_before": 30,
+        "event_markers_after": 5,
+        "event_markers_before": 5,
+        "event_types": {
+          "engine_stop": 1,
+          "throttle_burst": 4
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999999295,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 13,
+          "coverage_s": 230.75,
+          "duration_distribution": {
+            "count": 13,
+            "max_s": 75.25,
+            "median_s": 7.750000000000001,
+            "min_s": 0.1245,
+            "p10_s": 0.25009999999999766,
+            "p90_s": 65.19990000000003,
+            "total_s": 230.75
+          }
+        },
+        "operating_plus_thermal_decisions_after": 16,
+        "operating_runs_before": 30,
+        "preserved_states": {
+          "engine_off": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                220.375,
+                230.75
+              ]
+            ]
+          },
+          "moving_steady": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "stationary_running": {
+            "after": 3,
+            "before": 3,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.1245,
+                4.3755
+              ],
+              [
+                12.1255,
+                43.125
+              ],
+              [
+                127.6255,
+                143.8745
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 6,
+            "before": 6,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                0.1245
+              ],
+              [
+                4.3755,
+                12.1255
+              ],
+              [
+                43.125,
+                53.6245
+              ],
+              [
+                127.3745,
+                127.6255
+              ],
+              [
+                143.8745,
+                144.125
+              ],
+              [
+                220.125,
+                220.375
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 3,
+          "coverage_s": 230.75,
+          "duration_distribution": {
+            "count": 3,
+            "max_s": 127.6255,
+            "median_s": 86.87549999999999,
+            "min_s": 16.24900000000001,
+            "p10_s": 30.374300000000005,
+            "p90_s": 119.4755,
+            "total_s": 230.75
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "58c5b80939637699807e419a9a7a681d14d65c3d6596568391731b01ee0b3427",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 230.75,
+      "input_frames": 923,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 13,
+          "rejected": 0,
+          "total": 13,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 3,
+          "rejected": 0,
+          "total": 3,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 0.5921816440531984,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000006",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000006.jsonl",
+      "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9"
+    },
+    {
+      "canonical_samples": 6389,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 45,
+        "default_queue_before": 281,
+        "detailed_intervals_before": 216,
+        "event_markers_after": 65,
+        "event_markers_before": 65,
+        "event_types": {
+          "repeated_stop_go": 1,
+          "throttle_burst": 64
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999999295,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 45,
+          "coverage_s": 1598.002,
+          "duration_distribution": {
+            "count": 45,
+            "max_s": 255.7505,
+            "median_s": 8.750000000000002,
+            "min_s": 0.5004999999999882,
+            "p10_s": 4.000400000000002,
+            "p90_s": 96.45049999999999,
+            "total_s": 1598.002
+          }
+        },
+        "operating_plus_thermal_decisions_after": 52,
+        "operating_runs_before": 215,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 16,
+            "before": 16,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                26.626,
+                31.3745
+              ],
+              [
+                95.626,
+                101.875
+              ],
+              [
+                135.375,
+                139.376
+              ],
+              [
+                144.626,
+                150.3755
+              ],
+              [
+                174.3755,
+                178.6255
+              ],
+              [
+                230.376,
+                234.626
+              ],
+              [
+                468.125,
+                473.126
+              ],
+              [
+                479.626,
+                498.626
+              ],
+              [
+                538.876,
+                544.626
+              ],
+              [
+                671.126,
+                678.126
+              ],
+              [
+                700.3745,
+                711.1265
+              ],
+              [
+                738.626,
+                745.6255
+              ],
+              [
+                761.126,
+                765.876
+              ],
+              [
+                1209.376,
+                1215.3765
+              ],
+              [
+                1219.3765,
+                1232.8755
+              ],
+              [
+                1350.126,
+                1356.6265
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 3,
+            "before": 3,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                795.875,
+                817.8755
+              ],
+              [
+                856.625,
+                862.375
+              ],
+              [
+                927.6255,
+                951.6245
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 5,
+            "before": 5,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                8.876
+              ],
+              [
+                17.626,
+                19.3755
+              ],
+              [
+                817.8755,
+                818.376
+              ],
+              [
+                951.6245,
+                953.6255
+              ],
+              [
+                1597.1255,
+                1598.002
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 7,
+          "coverage_s": 1598.002,
+          "duration_distribution": {
+            "count": 7,
+            "max_s": 784.3755,
+            "median_s": 64.50149999999996,
+            "min_s": 17.125999999999976,
+            "p10_s": 21.69920000000002,
+            "p90_s": 673.0002000000001,
+            "total_s": 1598.002
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "98b4e88620bd91f98aad34629bed9b9c7c46559644e5d5b6c4b08cc7f5a53bcd",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 1598.002,
+      "input_frames": 6389,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 7,
+          "rejected": 0,
+          "total": 7,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 3.6966805330011994,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000007",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000007.jsonl",
+      "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879"
+    },
+    {
+      "canonical_samples": 1202,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 3,
+        "default_queue_before": 6,
+        "detailed_intervals_before": 5,
+        "event_markers_after": 1,
+        "event_markers_before": 1,
+        "event_types": {
+          "throttle_burst": 1
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12599999999997635,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 3,
+          "coverage_s": 300.5,
+          "duration_distribution": {
+            "count": 3,
+            "max_s": 297.876,
+            "median_s": 2.3734999999999786,
+            "min_s": 0.250500000000045,
+            "p10_s": 0.6751000000000318,
+            "p90_s": 238.7755,
+            "total_s": 300.5
+          }
+        },
+        "operating_plus_thermal_decisions_after": 6,
+        "operating_runs_before": 3,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "stationary_running": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                297.876
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                297.876,
+                298.1265
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 3,
+          "coverage_s": 300.5,
+          "duration_distribution": {
+            "count": 3,
+            "max_s": 227.625,
+            "median_s": 68.12450000000001,
+            "min_s": 4.750499999999988,
+            "p10_s": 17.425299999999993,
+            "p90_s": 195.72490000000002,
+            "total_s": 300.5
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "cdd6bc5379c60f00af5afc9b0f479df2d829df2c71b3505f064210a8bdd20c6f",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 300.5,
+      "input_frames": 1202,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 3,
+          "rejected": 0,
+          "total": 3,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 3,
+          "rejected": 0,
+          "total": 3,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 0.5500330900540575,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000014",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000014.jsonl",
+      "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6"
+    },
+    {
+      "canonical_samples": 531,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 9,
+        "default_queue_before": 24,
+        "detailed_intervals_before": 17,
+        "event_markers_after": 7,
+        "event_markers_before": 7,
+        "event_types": {
+          "throttle_burst": 7
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12600000000000477,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 9,
+          "coverage_s": 132.501,
+          "duration_distribution": {
+            "count": 9,
+            "max_s": 30.749499999999998,
+            "median_s": 10.626500000000007,
+            "min_s": 1.25,
+            "p10_s": 1.6504000000000019,
+            "p90_s": 30.2499,
+            "total_s": 132.501
+          }
+        },
+        "operating_plus_thermal_decisions_after": 10,
+        "operating_runs_before": 17,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 2,
+            "before": 2,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                62.1245,
+                68.8755
+              ],
+              [
+                98.875,
+                106.1255
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                30.125
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 2,
+            "before": 2,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                30.125,
+                31.375
+              ],
+              [
+                120.124,
+                121.8745
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 1,
+          "coverage_s": 132.501,
+          "duration_distribution": {
+            "count": 1,
+            "max_s": 132.501,
+            "median_s": 132.501,
+            "min_s": 132.501,
+            "p10_s": 132.501,
+            "p90_s": 132.501,
+            "total_s": 132.501
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "c974765c8656f202fa826686f75e7a8a7a8596f081c5dd5332d9ab77d0b62747",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 132.501,
+      "input_frames": 531,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 9,
+          "rejected": 0,
+          "total": 9,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 1,
+          "rejected": 0,
+          "total": 1,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 0.3678068779408932,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000015",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000015.jsonl",
+      "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39"
+    },
+    {
+      "canonical_samples": 17965,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 161,
+        "default_queue_before": 877,
+        "detailed_intervals_before": 576,
+        "event_markers_after": 301,
+        "event_markers_before": 301,
+        "event_types": {
+          "engine_stop": 1,
+          "repeated_stop_go": 2,
+          "throttle_burst": 298
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.1269999999999527,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 161,
+          "coverage_s": 4494.502,
+          "duration_distribution": {
+            "count": 161,
+            "max_s": 250.7494999999999,
+            "median_s": 9.249500000000353,
+            "min_s": 0.24900000000025102,
+            "p10_s": 0.7489999999997963,
+            "p90_s": 81.2489999999998,
+            "total_s": 4494.502
+          }
+        },
+        "operating_plus_thermal_decisions_after": 230,
+        "operating_runs_before": 548,
+        "preserved_states": {
+          "engine_off": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                4488.3755,
+                4494.502
+              ]
+            ]
+          },
+          "moving_steady": {
+            "after": 35,
+            "before": 35,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                149.626,
+                154.126
+              ],
+              [
+                371.126,
+                379.6265
+              ],
+              [
+                470.8765,
+                480.3755
+              ],
+              [
+                553.375,
+                559.376
+              ],
+              [
+                680.6245,
+                687.8755
+              ],
+              [
+                704.875,
+                708.8765
+              ],
+              [
+                774.3765,
+                781.377
+              ],
+              [
+                866.376,
+                874.626
+              ],
+              [
+                1048.876,
+                1055.876
+              ],
+              [
+                1233.8755,
+                1240.6265
+              ],
+              [
+                1392.877,
+                1397.126
+              ],
+              [
+                1495.1265,
+                1499.375
+              ],
+              [
+                2170.376,
+                2177.1265
+              ],
+              [
+                2205.6255,
+                2211.626
+              ],
+              [
+                2432.376,
+                2437.126
+              ],
+              [
+                2441.375,
+                2448.1255
+              ],
+              [
+                2639.6265,
+                2644.626
+              ],
+              [
+                2660.875,
+                2667.6265
+              ],
+              [
+                2987.626,
+                2991.626
+              ],
+              [
+                3036.375,
+                3041.626
+              ],
+              [
+                3173.3765,
+                3184.3755
+              ],
+              [
+                3209.376,
+                3215.6265
+              ],
+              [
+                3229.625,
+                3234.875
+              ],
+              [
+                3259.6265,
+                3264.376
+              ],
+              [
+                3548.376,
+                3556.126
+              ],
+              [
+                3560.126,
+                3569.876
+              ],
+              [
+                3573.876,
+                3580.376
+              ],
+              [
+                3585.126,
+                3591.6255
+              ],
+              [
+                3605.625,
+                3609.8755
+              ],
+              [
+                3613.8755,
+                3621.8755
+              ],
+              [
+                3922.375,
+                3938.1255
+              ],
+              [
+                4140.626,
+                4145.6265
+              ],
+              [
+                4297.6255,
+                4304.6245
+              ],
+              [
+                4324.6255,
+                4329.6265
+              ],
+              [
+                4426.1255,
+                4430.3755
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 24,
+            "before": 24,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                794.376,
+                805.8765
+              ],
+              [
+                920.8755,
+                926.125
+              ],
+              [
+                947.1265,
+                1005.376
+              ],
+              [
+                1078.3745,
+                1092.125
+              ],
+              [
+                1165.8765,
+                1189.1255
+              ],
+              [
+                1348.3755,
+                1360.3755
+              ],
+              [
+                1429.3765,
+                1463.876
+              ],
+              [
+                1666.626,
+                1708.1255
+              ],
+              [
+                2069.125,
+                2154.626
+              ],
+              [
+                2224.1255,
+                2250.8765
+              ],
+              [
+                2260.126,
+                2280.875
+              ],
+              [
+                2283.8765,
+                2302.875
+              ],
+              [
+                2388.6255,
+                2426.6245
+              ],
+              [
+                2452.876,
+                2519.626
+              ],
+              [
+                2742.6255,
+                2763.8755
+              ],
+              [
+                2845.126,
+                2875.125
+              ],
+              [
+                2926.376,
+                2977.3745
+              ],
+              [
+                3403.876,
+                3446.1255
+              ],
+              [
+                3662.6255,
+                3713.8755
+              ],
+              [
+                3717.626,
+                3758.3755
+              ],
+              [
+                4012.376,
+                4040.8765
+              ],
+              [
+                4226.8755,
+                4293.375
+              ],
+              [
+                4368.3755,
+                4402.626
+              ],
+              [
+                4445.876,
+                4450.626
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 31,
+            "before": 31,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                3.876
+              ],
+              [
+                91.376,
+                93.875
+              ],
+              [
+                652.8755,
+                653.626
+              ],
+              [
+                805.8765,
+                806.3745
+              ],
+              [
+                926.125,
+                927.1265
+              ],
+              [
+                1073.1245,
+                1075.8755
+              ],
+              [
+                1092.125,
+                1092.376
+              ],
+              [
+                1189.1255,
+                1190.126
+              ],
+              [
+                1360.3755,
+                1360.626
+              ],
+              [
+                1789.8755,
+                1791.3765
+              ],
+              [
+                1792.376,
+                1794.125
+              ],
+              [
+                1797.375,
+                1798.125
+              ],
+              [
+                1816.126,
+                1818.3755
+              ],
+              [
+                2154.626,
+                2155.126
+              ],
+              [
+                2280.875,
+                2281.1255
+              ],
+              [
+                2302.875,
+                2304.376
+              ],
+              [
+                2426.6245,
+                2427.626
+              ],
+              [
+                2519.626,
+                2520.375
+              ],
+              [
+                2685.3755,
+                2687.8755
+              ],
+              [
+                2763.8755,
+                2764.375
+              ],
+              [
+                2875.125,
+                2875.3755
+              ],
+              [
+                2977.3745,
+                2977.625
+              ],
+              [
+                3446.1255,
+                3446.376
+              ],
+              [
+                3662.3765,
+                3662.6255
+              ],
+              [
+                3713.8755,
+                3714.126
+              ],
+              [
+                3758.3755,
+                3758.6265
+              ],
+              [
+                4040.8765,
+                4042.6265
+              ],
+              [
+                4293.375,
+                4293.6255
+              ],
+              [
+                4402.626,
+                4402.8765
+              ],
+              [
+                4453.626,
+                4456.125
+              ],
+              [
+                4487.8755,
+                4488.3755
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 69,
+          "coverage_s": 4494.502,
+          "duration_distribution": {
+            "count": 69,
+            "max_s": 868.749,
+            "median_s": 34.9994999999999,
+            "min_s": 0.25050000000010186,
+            "p10_s": 5.64870000000019,
+            "p90_s": 153.25020000000004,
+            "total_s": 4494.502
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "16c08523d9de1421e186ad9e544740a8108681ac5e6911602427e277cb180655",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 4494.502,
+      "input_frames": 17965,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 161,
+          "rejected": 0,
+          "total": 161,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 69,
+          "rejected": 0,
+          "total": 69,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 10.77050127799157,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000016",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000016.jsonl",
+      "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d"
+    },
+    {
+      "canonical_samples": 3492,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 38,
+        "default_queue_before": 154,
+        "detailed_intervals_before": 108,
+        "event_markers_after": 46,
+        "event_markers_before": 46,
+        "event_types": {
+          "throttle_burst": 46
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12600000000000477,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 38,
+          "coverage_s": 873.5,
+          "duration_distribution": {
+            "count": 38,
+            "max_s": 86.74950000000001,
+            "median_s": 14.250249999999994,
+            "min_s": 0.4984999999999786,
+            "p10_s": 4.175350000000002,
+            "p90_s": 58.400850000000034,
+            "total_s": 873.5
+          }
+        },
+        "operating_plus_thermal_decisions_after": 46,
+        "operating_runs_before": 105,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 15,
+            "before": 15,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                65.625,
+                75.374
+              ],
+              [
+                131.375,
+                138.125
+              ],
+              [
+                202.1255,
+                217.6245
+              ],
+              [
+                223.374,
+                236.875
+              ],
+              [
+                277.1255,
+                297.1245
+              ],
+              [
+                306.6245,
+                319.875
+              ],
+              [
+                336.875,
+                361.1255
+              ],
+              [
+                389.625,
+                395.125
+              ],
+              [
+                575.875,
+                581.3755
+              ],
+              [
+                585.3755,
+                599.3755
+              ],
+              [
+                675.125,
+                685.875
+              ],
+              [
+                718.1245,
+                727.124
+              ],
+              [
+                745.8745,
+                776.875
+              ],
+              [
+                782.875,
+                797.3755
+              ],
+              [
+                843.374,
+                855.3755
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 2,
+            "before": 2,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                51.875
+              ],
+              [
+                481.8745,
+                502.875
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 3,
+            "before": 3,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                55.6245,
+                61.3745
+              ],
+              [
+                502.875,
+                503.3735
+              ],
+              [
+                872.875,
+                873.5
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 8,
+          "coverage_s": 873.5,
+          "duration_distribution": {
+            "count": 8,
+            "max_s": 354.0,
+            "median_s": 30.93725,
+            "min_s": 14.75,
+            "p10_s": 16.32465000000001,
+            "p90_s": 345.8625,
+            "total_s": 873.5
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "9a97c27afa8f774410326179669c6d2f311880104881fa049ea8b72447837a32",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 873.5,
+      "input_frames": 3492,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 38,
+          "rejected": 0,
+          "total": 38,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 8,
+          "rejected": 0,
+          "total": 8,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 2.0311268819496036,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000017",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000017.jsonl",
+      "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab"
+    },
+    {
+      "canonical_samples": 17976,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 208,
+        "default_queue_before": 846,
+        "detailed_intervals_before": 534,
+        "event_markers_after": 312,
+        "event_markers_before": 312,
+        "event_types": {
+          "throttle_burst": 312
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999996453,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 208,
+          "coverage_s": 4496.001,
+          "duration_distribution": {
+            "count": 208,
+            "max_s": 115.5,
+            "median_s": 13.250749999999925,
+            "min_s": 0.24949999999989814,
+            "p10_s": 4.25,
+            "p90_s": 49.649950000000054,
+            "total_s": 4496.001
+          }
+        },
+        "operating_plus_thermal_decisions_after": 225,
+        "operating_runs_before": 529,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 92,
+            "before": 92,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                58.1265,
+                65.8755
+              ],
+              [
+                69.8755,
+                76.6265
+              ],
+              [
+                104.8765,
+                120.3765
+              ],
+              [
+                143.1265,
+                148.627
+              ],
+              [
+                158.127,
+                163.626
+              ],
+              [
+                213.1255,
+                225.626
+              ],
+              [
+                274.875,
+                279.8755
+              ],
+              [
+                330.3755,
+                340.126
+              ],
+              [
+                396.376,
+                427.126
+              ],
+              [
+                507.125,
+                511.877
+              ],
+              [
+                515.877,
+                547.3755
+              ],
+              [
+                551.3755,
+                561.1255
+              ],
+              [
+                597.376,
+                603.375
+              ],
+              [
+                611.1255,
+                640.625
+              ],
+              [
+                809.376,
+                820.876
+              ],
+              [
+                842.6265,
+                858.3755
+              ],
+              [
+                870.6255,
+                902.876
+              ],
+              [
+                952.125,
+                961.626
+              ],
+              [
+                980.876,
+                1016.127
+              ],
+              [
+                1022.876,
+                1029.3755
+              ],
+              [
+                1046.1265,
+                1058.376
+              ],
+              [
+                1062.376,
+                1079.626
+              ],
+              [
+                1103.3765,
+                1122.6255
+              ],
+              [
+                1141.626,
+                1146.1265
+              ],
+              [
+                1160.626,
+                1209.1265
+              ],
+              [
+                1214.6265,
+                1218.8765
+              ],
+              [
+                1231.626,
+                1236.6255
+              ],
+              [
+                1242.1265,
+                1252.8765
+              ],
+              [
+                1282.6255,
+                1288.6255
+              ],
+              [
+                1375.6255,
+                1383.8755
+              ],
+              [
+                1455.127,
+                1459.3755
+              ],
+              [
+                1570.126,
+                1587.6255
+              ],
+              [
+                1592.375,
+                1596.626
+              ],
+              [
+                1600.626,
+                1618.8755
+              ],
+              [
+                1627.6255,
+                1634.876
+              ],
+              [
+                1748.6265,
+                1753.1255
+              ],
+              [
+                1770.626,
+                1796.127
+              ],
+              [
+                1814.376,
+                1822.1255
+              ],
+              [
+                1851.875,
+                1856.8765
+              ],
+              [
+                1874.1255,
+                1899.126
+              ],
+              [
+                1906.126,
+                1913.126
+              ],
+              [
+                1918.626,
+                1939.8765
+              ],
+              [
+                1945.3765,
+                1953.8755
+              ],
+              [
+                1987.3765,
+                1996.3745
+              ],
+              [
+                2017.376,
+                2040.6255
+              ],
+              [
+                2065.376,
+                2077.126
+              ],
+              [
+                2186.8765,
+                2201.3755
+              ],
+              [
+                2226.376,
+                2233.8755
+              ],
+              [
+                2328.876,
+                2349.626
+              ],
+              [
+                2386.876,
+                2400.876
+              ],
+              [
+                2418.876,
+                2445.3755
+              ],
+              [
+                2509.8755,
+                2558.6255
+              ],
+              [
+                2571.8765,
+                2596.3755
+              ],
+              [
+                2619.626,
+                2624.127
+              ],
+              [
+                2663.6255,
+                2667.8755
+              ],
+              [
+                2724.375,
+                2732.626
+              ],
+              [
+                2745.876,
+                2755.8755
+              ],
+              [
+                2760.125,
+                2766.375
+              ],
+              [
+                2816.376,
+                2831.1265
+              ],
+              [
+                2860.626,
+                2865.625
+              ],
+              [
+                2948.876,
+                2955.3755
+              ],
+              [
+                3013.1255,
+                3018.6255
+              ],
+              [
+                3132.1255,
+                3155.376
+              ],
+              [
+                3172.127,
+                3176.8755
+              ],
+              [
+                3200.126,
+                3206.375
+              ],
+              [
+                3262.876,
+                3269.876
+              ],
+              [
+                3275.876,
+                3285.625
+              ],
+              [
+                3353.3765,
+                3359.3765
+              ],
+              [
+                3370.376,
+                3384.1265
+              ],
+              [
+                3455.8765,
+                3469.7505
+              ],
+              [
+                3481.876,
+                3520.126
+              ],
+              [
+                3532.1255,
+                3541.126
+              ],
+              [
+                3545.126,
+                3569.875
+              ],
+              [
+                3614.8755,
+                3623.375
+              ],
+              [
+                3651.1265,
+                3695.1265
+              ],
+              [
+                3715.376,
+                3721.1255
+              ],
+              [
+                3731.3765,
+                3761.626
+              ],
+              [
+                3765.626,
+                3780.1265
+              ],
+              [
+                3784.1265,
+                3788.3765
+              ],
+              [
+                3799.126,
+                3853.376
+              ],
+              [
+                3893.625,
+                3925.3755
+              ],
+              [
+                3951.126,
+                3965.875
+              ],
+              [
+                4007.8755,
+                4036.1265
+              ],
+              [
+                4063.626,
+                4068.1265
+              ],
+              [
+                4116.376,
+                4121.3755
+              ],
+              [
+                4125.3755,
+                4129.8755
+              ],
+              [
+                4188.6265,
+                4213.1255
+              ],
+              [
+                4226.376,
+                4234.626
+              ],
+              [
+                4238.626,
+                4243.875
+              ],
+              [
+                4254.8765,
+                4262.1265
+              ],
+              [
+                4273.126,
+                4277.8765
+              ],
+              [
+                4385.126,
+                4397.1255
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 7,
+            "before": 7,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                6.126
+              ],
+              [
+                684.376,
+                693.625
+              ],
+              [
+                2275.376,
+                2284.376
+              ],
+              [
+                2682.126,
+                2706.626
+              ],
+              [
+                4311.626,
+                4324.8755
+              ],
+              [
+                4432.625,
+                4475.376
+              ],
+              [
+                4488.1265,
+                4496.001
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 8,
+            "before": 8,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                249.126,
+                253.376
+              ],
+              [
+                693.625,
+                693.876
+              ],
+              [
+                2284.376,
+                2284.8755
+              ],
+              [
+                2706.626,
+                2706.8755
+              ],
+              [
+                3066.875,
+                3068.875
+              ],
+              [
+                3073.126,
+                3075.1265
+              ],
+              [
+                4324.8755,
+                4325.126
+              ],
+              [
+                4475.376,
+                4475.6255
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 17,
+          "coverage_s": 4496.001,
+          "duration_distribution": {
+            "count": 17,
+            "max_s": 2655.25,
+            "median_s": 40.24950000000035,
+            "min_s": 7.874499999999898,
+            "p10_s": 22.000700000000144,
+            "p90_s": 484.5000000000003,
+            "total_s": 4496.001
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "9012cb9075bd71cb0938b8e5a4334bcf295400898fcaa33f7028ef9931042401",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 4496.001,
+      "input_frames": 17976,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 208,
+          "rejected": 0,
+          "total": 208,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 17,
+          "rejected": 0,
+          "total": 17,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 10.372097268002108,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000018",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000018.jsonl",
+      "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04"
+    },
+    {
+      "canonical_samples": 2194,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 23,
+        "default_queue_before": 103,
+        "detailed_intervals_before": 67,
+        "event_markers_after": 36,
+        "event_markers_before": 36,
+        "event_types": {
+          "engine_stop": 1,
+          "throttle_burst": 35
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999996453,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 23,
+          "coverage_s": 548.67,
+          "duration_distribution": {
+            "count": 23,
+            "max_s": 94.24999999999999,
+            "median_s": 16.0,
+            "min_s": 1.0,
+            "p10_s": 4.550999999999976,
+            "p90_s": 61.00040000000001,
+            "total_s": 548.67
+          }
+        },
+        "operating_plus_thermal_decisions_after": 30,
+        "operating_runs_before": 65,
+        "preserved_states": {
+          "engine_off": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                538.544,
+                548.67
+              ]
+            ]
+          },
+          "moving_steady": {
+            "after": 8,
+            "before": 8,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                76.0445,
+                81.545
+              ],
+              [
+                175.795,
+                206.295
+              ],
+              [
+                229.544,
+                234.295
+              ],
+              [
+                276.295,
+                299.545
+              ],
+              [
+                328.295,
+                335.2955
+              ],
+              [
+                351.2955,
+                357.7955
+              ],
+              [
+                379.0455,
+                384.0445
+              ],
+              [
+                500.0445,
+                504.5455
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 2,
+            "before": 2,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                449.795,
+                488.0455
+              ],
+              [
+                520.044,
+                538.544
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                1.545
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 7,
+          "coverage_s": 548.67,
+          "duration_distribution": {
+            "count": 7,
+            "max_s": 284.2505,
+            "median_s": 38.74949999999998,
+            "min_s": 17.499500000000012,
+            "p10_s": 20.499500000000012,
+            "p90_s": 171.75110000000006,
+            "total_s": 548.67
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "bd15e952e12265c374885e3635d3799ee635e850ff323b58cf93a4e0ae62bd06",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 548.67,
+      "input_frames": 2194,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 23,
+          "rejected": 0,
+          "total": 23,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 7,
+          "rejected": 0,
+          "total": 7,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 1.378216810990125,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000019",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000019.jsonl",
+      "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011"
+    },
+    {
+      "canonical_samples": 87,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 5,
+        "default_queue_before": 6,
+        "detailed_intervals_before": 4,
+        "event_markers_after": 2,
+        "event_markers_before": 2,
+        "event_types": {
+          "engine_stop": 1,
+          "throttle_burst": 1
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.125,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 5,
+          "coverage_s": 21.501,
+          "duration_distribution": {
+            "count": 5,
+            "max_s": 10.126000000000001,
+            "median_s": 3.2504999999999997,
+            "min_s": 1.0,
+            "p10_s": 1.3502,
+            "p90_s": 8.175200000000002,
+            "total_s": 21.501
+          }
+        },
+        "operating_plus_thermal_decisions_after": 6,
+        "operating_runs_before": 4,
+        "preserved_states": {
+          "engine_off": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                11.375,
+                21.501
+              ]
+            ]
+          },
+          "moving_steady": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "stationary_running": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                7.1245,
+                11.375
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                1.8755
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 1,
+          "coverage_s": 21.501,
+          "duration_distribution": {
+            "count": 1,
+            "max_s": 21.501,
+            "median_s": 21.501,
+            "min_s": 21.501,
+            "p10_s": 21.501,
+            "p90_s": 21.501,
+            "total_s": 21.501
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "176a1c40e437707ec2d65b879ff5640e4669db75098aa92f44ed232a79ee0b28",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 21.501,
+      "input_frames": 87,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 5,
+          "rejected": 0,
+          "total": 5,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 1,
+          "rejected": 0,
+          "total": 1,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 0.17063757800497115,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000020",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000020.jsonl",
+      "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23"
+    },
+    {
+      "canonical_samples": 3564,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 46,
+        "default_queue_before": 125,
+        "detailed_intervals_before": 95,
+        "event_markers_after": 30,
+        "event_markers_before": 30,
+        "event_types": {
+          "engine_stop": 1,
+          "throttle_burst": 29
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999996453,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 46,
+          "coverage_s": 891.25,
+          "duration_distribution": {
+            "count": 46,
+            "max_s": 49.50149999999999,
+            "median_s": 15.250000000000007,
+            "min_s": 1.0,
+            "p10_s": 4.0,
+            "p90_s": 43.74975,
+            "total_s": 891.25
+          }
+        },
+        "operating_plus_thermal_decisions_after": 50,
+        "operating_runs_before": 95,
+        "preserved_states": {
+          "engine_off": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                880.8765,
+                891.25
+              ]
+            ]
+          },
+          "moving_steady": {
+            "after": 20,
+            "before": 20,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                48.3765,
+                56.6265
+              ],
+              [
+                93.6265,
+                105.3765
+              ],
+              [
+                120.877,
+                131.877
+              ],
+              [
+                159.127,
+                172.126
+              ],
+              [
+                176.127,
+                184.1265
+              ],
+              [
+                233.628,
+                252.126
+              ],
+              [
+                272.127,
+                277.1265
+              ],
+              [
+                283.3775,
+                293.628
+              ],
+              [
+                305.627,
+                338.6265
+              ],
+              [
+                383.127,
+                412.377
+              ],
+              [
+                416.377,
+                421.8765
+              ],
+              [
+                453.3775,
+                469.377
+              ],
+              [
+                487.877,
+                504.6265
+              ],
+              [
+                549.877,
+                563.6275
+              ],
+              [
+                586.626,
+                610.8765
+              ],
+              [
+                614.8765,
+                663.627
+              ],
+              [
+                667.627,
+                702.127
+              ],
+              [
+                706.127,
+                716.627
+              ],
+              [
+                721.128,
+                763.8775
+              ],
+              [
+                807.6265,
+                851.1265
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                876.376,
+                880.8765
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                4.377
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 4,
+          "coverage_s": 891.25,
+          "duration_distribution": {
+            "count": 4,
+            "max_s": 657.6220000000001,
+            "median_s": 106.25049999999999,
+            "min_s": 21.127,
+            "p10_s": 37.139199999999995,
+            "p90_s": 501.73540000000014,
+            "total_s": 891.25
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "d108ce60d5563bacbb64f5064c690eb38d5fca54e41711b59956ac4389490972",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 891.25,
+      "input_frames": 3564,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 46,
+          "rejected": 0,
+          "total": 46,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 4,
+          "rejected": 0,
+          "total": 4,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 1.8715912089683115,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000021",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000021.jsonl",
+      "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d"
+    },
+    {
+      "canonical_samples": 3021,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 32,
+        "default_queue_before": 94,
+        "detailed_intervals_before": 66,
+        "event_markers_after": 28,
+        "event_markers_before": 28,
+        "event_types": {
+          "engine_stop": 1,
+          "throttle_burst": 27
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.1260000000000001,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 32,
+          "coverage_s": 755.001,
+          "duration_distribution": {
+            "count": 32,
+            "max_s": 157.2495,
+            "median_s": 10.374749999999992,
+            "min_s": 0.7490000000000236,
+            "p10_s": 2.0893,
+            "p90_s": 41.349550000000015,
+            "total_s": 755.001
+          }
+        },
+        "operating_plus_thermal_decisions_after": 38,
+        "operating_runs_before": 65,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 13,
+            "before": 13,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                19.878,
+                43.377
+              ],
+              [
+                47.377,
+                82.1265
+              ],
+              [
+                89.126,
+                96.627
+              ],
+              [
+                136.627,
+                147.3775
+              ],
+              [
+                165.6265,
+                172.8765
+              ],
+              [
+                181.626,
+                186.127
+              ],
+              [
+                190.127,
+                207.1275
+              ],
+              [
+                211.1275,
+                221.1265
+              ],
+              [
+                234.6265,
+                367.6275
+              ],
+              [
+                386.1275,
+                390.8765
+              ],
+              [
+                404.3775,
+                445.877
+              ],
+              [
+                449.877,
+                478.6265
+              ],
+              [
+                516.378,
+                590.377
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "unknown": {
+            "after": 3,
+            "before": 3,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                1.877
+              ],
+              [
+                748.6265,
+                752.877
+              ],
+              [
+                753.626,
+                755.001
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 6,
+          "coverage_s": 755.001,
+          "duration_distribution": {
+            "count": 6,
+            "max_s": 250.12399999999997,
+            "median_s": 117.87424999999999,
+            "min_s": 15.878,
+            "p10_s": 21.064249999999994,
+            "p90_s": 238.562,
+            "total_s": 755.001
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "77f8a66e76cef49ecf90719224ef48a2f64c1b52c93201bd86360ccf51a56d8d",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 755.001,
+      "input_frames": 3021,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 32,
+          "rejected": 0,
+          "total": 32,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 6,
+          "rejected": 0,
+          "total": 6,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 1.5641274040099233,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000022",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000022.jsonl",
+      "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d"
+    },
+    {
+      "canonical_samples": 17539,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 182,
+        "default_queue_before": 791,
+        "detailed_intervals_before": 514,
+        "event_markers_after": 277,
+        "event_markers_before": 277,
+        "event_types": {
+          "engine_stop": 1,
+          "throttle_burst": 276
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999985084,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 182,
+          "coverage_s": 4391.172,
+          "duration_distribution": {
+            "count": 182,
+            "max_s": 240.4994999999999,
+            "median_s": 13.250750000000153,
+            "min_s": 0.24950000000080763,
+            "p10_s": 4.0,
+            "p90_s": 55.800150000000016,
+            "total_s": 4391.172
+          }
+        },
+        "operating_plus_thermal_decisions_after": 233,
+        "operating_runs_before": 503,
+        "preserved_states": {
+          "engine_off": {
+            "after": 1,
+            "before": 1,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                4380.797,
+                4391.172
+              ]
+            ]
+          },
+          "moving_steady": {
+            "after": 77,
+            "before": 77,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                163.546,
+                265.048
+              ],
+              [
+                310.5465,
+                317.047
+              ],
+              [
+                333.547,
+                337.797
+              ],
+              [
+                350.296,
+                354.5465
+              ],
+              [
+                373.296,
+                429.296
+              ],
+              [
+                433.296,
+                455.547
+              ],
+              [
+                486.5465,
+                522.798
+              ],
+              [
+                527.797,
+                532.298
+              ],
+              [
+                538.045,
+                542.797
+              ],
+              [
+                546.797,
+                553.047
+              ],
+              [
+                571.796,
+                596.7975
+              ],
+              [
+                609.048,
+                630.297
+              ],
+              [
+                795.7955,
+                813.0465
+              ],
+              [
+                821.047,
+                826.7965
+              ],
+              [
+                1012.297,
+                1019.2975
+              ],
+              [
+                1125.797,
+                1130.047
+              ],
+              [
+                1135.797,
+                1141.796
+              ],
+              [
+                1329.296,
+                1338.7965
+              ],
+              [
+                1391.796,
+                1397.7965
+              ],
+              [
+                1537.297,
+                1555.5475
+              ],
+              [
+                1615.547,
+                1620.7975
+              ],
+              [
+                1771.7975,
+                1778.047
+              ],
+              [
+                1855.797,
+                1863.046
+              ],
+              [
+                1900.0475,
+                1933.0475
+              ],
+              [
+                1937.0475,
+                1950.796
+              ],
+              [
+                1954.796,
+                1963.047
+              ],
+              [
+                1989.297,
+                1996.2965
+              ],
+              [
+                2020.0475,
+                2026.047
+              ],
+              [
+                2055.7965,
+                2065.0465
+              ],
+              [
+                2121.047,
+                2125.797
+              ],
+              [
+                2140.547,
+                2148.047
+              ],
+              [
+                2189.047,
+                2197.047
+              ],
+              [
+                2267.048,
+                2273.297
+              ],
+              [
+                2295.5465,
+                2315.047
+              ],
+              [
+                2319.047,
+                2323.5475
+              ],
+              [
+                2368.7965,
+                2383.297
+              ],
+              [
+                2387.297,
+                2391.297
+              ],
+              [
+                2564.2975,
+                2572.546
+              ],
+              [
+                2576.546,
+                2586.7965
+              ],
+              [
+                2629.047,
+                2633.2975
+              ],
+              [
+                2873.797,
+                2888.2965
+              ],
+              [
+                2974.0475,
+                2989.547
+              ],
+              [
+                3004.547,
+                3012.297
+              ],
+              [
+                3044.547,
+                3053.2965
+              ],
+              [
+                3097.297,
+                3105.547
+              ],
+              [
+                3114.797,
+                3119.047
+              ],
+              [
+                3124.547,
+                3162.297
+              ],
+              [
+                3168.5475,
+                3180.547
+              ],
+              [
+                3185.0475,
+                3205.0465
+              ],
+              [
+                3240.2975,
+                3246.546
+              ],
+              [
+                3291.7985,
+                3297.797
+              ],
+              [
+                3301.797,
+                3309.297
+              ],
+              [
+                3314.2965,
+                3359.546
+              ],
+              [
+                3363.546,
+                3377.547
+              ],
+              [
+                3381.547,
+                3423.797
+              ],
+              [
+                3429.047,
+                3461.547
+              ],
+              [
+                3475.797,
+                3480.296
+              ],
+              [
+                3484.296,
+                3493.2965
+              ],
+              [
+                3502.796,
+                3524.047
+              ],
+              [
+                3563.297,
+                3585.047
+              ],
+              [
+                3589.2965,
+                3602.797
+              ],
+              [
+                3627.297,
+                3656.797
+              ],
+              [
+                3660.797,
+                3720.547
+              ],
+              [
+                3725.297,
+                3733.797
+              ],
+              [
+                3754.547,
+                3760.2975
+              ],
+              [
+                3805.5475,
+                3833.047
+              ],
+              [
+                3863.5465,
+                3871.0465
+              ],
+              [
+                3875.5465,
+                3906.047
+              ],
+              [
+                3911.047,
+                3924.047
+              ],
+              [
+                3969.796,
+                3982.797
+              ],
+              [
+                3988.297,
+                3995.5465
+              ],
+              [
+                4006.046,
+                4010.547
+              ],
+              [
+                4028.797,
+                4033.5465
+              ],
+              [
+                4054.7975,
+                4114.5475
+              ],
+              [
+                4148.797,
+                4156.546
+              ],
+              [
+                4172.7965,
+                4208.547
+              ],
+              [
+                4331.046,
+                4337.046
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 8,
+            "before": 8,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                656.796,
+                689.2965
+              ],
+              [
+                1045.7955,
+                1099.797
+              ],
+              [
+                1218.7955,
+                1254.7965
+              ],
+              [
+                1694.547,
+                1728.297
+              ],
+              [
+                2436.796,
+                2507.296
+              ],
+              [
+                2922.5455,
+                2931.297
+              ],
+              [
+                4280.2965,
+                4294.297
+              ],
+              [
+                4357.297,
+                4380.797
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 8,
+            "before": 8,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                3.798
+              ],
+              [
+                689.2965,
+                689.547
+              ],
+              [
+                1099.797,
+                1100.296
+              ],
+              [
+                1254.7965,
+                1255.2965
+              ],
+              [
+                2507.296,
+                2507.5465
+              ],
+              [
+                2931.297,
+                2932.046
+              ],
+              [
+                4294.297,
+                4294.5465
+              ],
+              [
+                4302.7965,
+                4305.297
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 51,
+          "coverage_s": 4391.172,
+          "duration_distribution": {
+            "count": 51,
+            "max_s": 720.7499999999995,
+            "median_s": 33.249999999999886,
+            "min_s": 4.0,
+            "p10_s": 12.499499999999898,
+            "p90_s": 201.75,
+            "total_s": 4391.172
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "b705b620a64465d7e374200a2464a6b19279b115e792ae50973020e92e674244",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 4391.172,
+      "input_frames": 17539,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 182,
+          "rejected": 0,
+          "total": 182,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 51,
+          "rejected": 0,
+          "total": 51,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 9.961898564943112,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000023",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000023.jsonl",
+      "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a"
+    },
+    {
+      "canonical_samples": 7790,
+      "comparison": {
+        "actual_human_review_time_after_s": null,
+        "actual_human_review_time_before_s": null,
+        "automated_boundary_lineage_check": "pass",
+        "default_operating_queue_after": 45,
+        "default_queue_before": 366,
+        "detailed_intervals_before": 236,
+        "event_markers_after": 130,
+        "event_markers_before": 130,
+        "event_types": {
+          "throttle_burst": 130
+        },
+        "hidden_by_default": [
+          "event-marker queue",
+          "fine transition queue"
+        ],
+        "hidden_evidence_access": "expand episode or open Detailed Intervals & Events",
+        "important_context_loss_human_check": "pending",
+        "lost_event_markers": 0,
+        "lost_original_intervals": 0,
+        "manual_boundary_quality": "pending",
+        "max_boundary_nearest_sample_distance_s": 0.12649999999985084,
+        "operating": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 45,
+          "coverage_s": 1948.999,
+          "duration_distribution": {
+            "count": 45,
+            "max_s": 359.5005,
+            "median_s": 19.749000000000024,
+            "min_s": 0.1245,
+            "p10_s": 0.2509999999999991,
+            "p90_s": 110.3008,
+            "total_s": 1948.999
+          }
+        },
+        "operating_plus_thermal_decisions_after": 82,
+        "operating_runs_before": 223,
+        "preserved_states": {
+          "engine_off": {
+            "after": 0,
+            "before": 0,
+            "boundaries_identical": true,
+            "intervals_s": []
+          },
+          "moving_steady": {
+            "after": 8,
+            "before": 8,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                259.124,
+                263.374
+              ],
+              [
+                720.8745,
+                725.1235
+              ],
+              [
+                897.624,
+                917.373
+              ],
+              [
+                921.373,
+                927.373
+              ],
+              [
+                1258.874,
+                1270.623
+              ],
+              [
+                1287.373,
+                1311.623
+              ],
+              [
+                1457.6235,
+                1487.3735
+              ],
+              [
+                1874.8745,
+                1881.1235
+              ]
+            ]
+          },
+          "stationary_running": {
+            "after": 8,
+            "before": 8,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.1245,
+                22.374
+              ],
+              [
+                24.8735,
+                58.873
+              ],
+              [
+                280.624,
+                361.123
+              ],
+              [
+                791.624,
+                853.123
+              ],
+              [
+                995.3735,
+                1054.6225
+              ],
+              [
+                1113.373,
+                1181.874
+              ],
+              [
+                1616.124,
+                1630.8735
+              ],
+              [
+                1904.8725,
+                1918.873
+              ]
+            ]
+          },
+          "unknown": {
+            "after": 10,
+            "before": 10,
+            "boundaries_identical": true,
+            "intervals_s": [
+              [
+                0.0,
+                0.1245
+              ],
+              [
+                58.873,
+                60.623
+              ],
+              [
+                361.123,
+                361.374
+              ],
+              [
+                853.123,
+                853.374
+              ],
+              [
+                995.1235,
+                995.3735
+              ],
+              [
+                1054.6225,
+                1054.873
+              ],
+              [
+                1181.874,
+                1182.124
+              ],
+              [
+                1612.8745,
+                1615.3735
+              ],
+              [
+                1630.8735,
+                1631.374
+              ],
+              [
+                1657.6235,
+                1661.873
+              ]
+            ]
+          }
+        },
+        "thermal": {
+          "all_detailed_children_traceable": true,
+          "all_event_markers_traceable": true,
+          "count": 37,
+          "coverage_s": 1948.999,
+          "duration_distribution": {
+            "count": 37,
+            "max_s": 249.25,
+            "median_s": 34.00150000000008,
+            "min_s": 0.2504999999999882,
+            "p10_s": 9.924100000000044,
+            "p90_s": 106.6996,
+            "total_s": 1948.999
+          }
+        },
+        "time_savings_verified": false
+      },
+      "detailed_content_sha256": "71704369ec8ee32e0b4a18f106576010cdd91dcfb8986398a00d51fd1de3aae0",
+      "detailed_proposals_unchanged": true,
+      "duration_s": 1948.999,
+      "input_frames": 7790,
+      "macro_progress": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 37,
+          "rejected": 0,
+          "total": 37,
+          "uncertain": 0
+        }
+      },
+      "macro_rule_version": "ctx24-macro-v1",
+      "processing_time_s": 4.503070186008699,
+      "rule_version": "ctx2-rules-v1",
+      "session_id": "session_000024",
+      "source_path": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean/session_000024.jsonl",
+      "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547"
+    }
+  ],
+  "source_count": 18
+}

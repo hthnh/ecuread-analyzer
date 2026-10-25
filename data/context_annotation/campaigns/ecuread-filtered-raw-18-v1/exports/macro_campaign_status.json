@@ -1,0 +1,586 @@
+{
+  "dataset_id": "ecuread-filtered-raw-18-v1",
+  "detailed_annotation_status": "annotation_campaign_status.json",
+  "generated_at": "2026-10-11T08:36:10.343906+00:00",
+  "human_pilot_validation": "pending",
+  "macro_acceptance_implies_detailed_acceptance": false,
+  "schema_version": "context-macro-campaign-status-v1",
+  "sessions": {
+    "session_000001": {
+      "detailed_events": {
+        "accepted": 1,
+        "pending": 0,
+        "rejected": 0,
+        "total": 1,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 7,
+        "pending": 0,
+        "rejected": 0,
+        "total": 7,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 5,
+          "rejected": 0,
+          "total": 5,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 1,
+          "rejected": 0,
+          "total": 1,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000002": {
+      "detailed_events": {
+        "accepted": 84,
+        "pending": 0,
+        "rejected": 0,
+        "total": 84,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 203,
+        "pending": 0,
+        "rejected": 0,
+        "total": 203,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 10,
+          "rejected": 0,
+          "total": 10,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000003": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 32,
+        "rejected": 0,
+        "total": 32,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 41,
+        "rejected": 0,
+        "total": 41,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 7,
+          "rejected": 0,
+          "total": 7,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 2,
+          "rejected": 0,
+          "total": 2,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000004": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 64,
+        "rejected": 0,
+        "total": 64,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 110,
+        "rejected": 0,
+        "total": 110,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 29,
+          "rejected": 0,
+          "total": 29,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 9,
+          "rejected": 0,
+          "total": 9,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000005": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 138,
+        "rejected": 0,
+        "total": 138,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 255,
+        "rejected": 0,
+        "total": 255,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 13,
+          "rejected": 0,
+          "total": 13,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000006": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 5,
+        "rejected": 0,
+        "total": 5,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 30,
+        "rejected": 0,
+        "total": 30,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 13,
+          "rejected": 0,
+          "total": 13,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 3,
+          "rejected": 0,
+          "total": 3,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000007": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 65,
+        "rejected": 0,
+        "total": 65,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 216,
+        "rejected": 0,
+        "total": 216,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 7,
+          "rejected": 0,
+          "total": 7,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000014": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 1,
+        "rejected": 0,
+        "total": 1,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 5,
+        "rejected": 0,
+        "total": 5,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 3,
+          "rejected": 0,
+          "total": 3,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 3,
+          "rejected": 0,
+          "total": 3,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000015": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 7,
+        "rejected": 0,
+        "total": 7,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 17,
+        "rejected": 0,
+        "total": 17,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 9,
+          "rejected": 0,
+          "total": 9,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 1,
+          "rejected": 0,
+          "total": 1,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000016": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 301,
+        "rejected": 0,
+        "total": 301,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 576,
+        "rejected": 0,
+        "total": 576,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 161,
+          "rejected": 0,
+          "total": 161,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 69,
+          "rejected": 0,
+          "total": 69,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000017": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 46,
+        "rejected": 0,
+        "total": 46,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 108,
+        "rejected": 0,
+        "total": 108,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 38,
+          "rejected": 0,
+          "total": 38,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 8,
+          "rejected": 0,
+          "total": 8,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000018": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 312,
+        "rejected": 0,
+        "total": 312,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 534,
+        "rejected": 0,
+        "total": 534,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 208,
+          "rejected": 0,
+          "total": 208,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 17,
+          "rejected": 0,
+          "total": 17,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000019": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 36,
+        "rejected": 0,
+        "total": 36,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 67,
+        "rejected": 0,
+        "total": 67,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 23,
+          "rejected": 0,
+          "total": 23,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 7,
+          "rejected": 0,
+          "total": 7,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000020": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 2,
+        "rejected": 0,
+        "total": 2,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 4,
+        "rejected": 0,
+        "total": 4,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 5,
+          "rejected": 0,
+          "total": 5,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 1,
+          "rejected": 0,
+          "total": 1,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000021": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 30,
+        "rejected": 0,
+        "total": 30,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 95,
+        "rejected": 0,
+        "total": 95,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 46,
+          "rejected": 0,
+          "total": 46,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 4,
+          "rejected": 0,
+          "total": 4,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000022": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 28,
+        "rejected": 0,
+        "total": 28,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 66,
+        "rejected": 0,
+        "total": 66,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 32,
+          "rejected": 0,
+          "total": 32,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 6,
+          "rejected": 0,
+          "total": 6,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000023": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 277,
+        "rejected": 0,
+        "total": 277,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 514,
+        "rejected": 0,
+        "total": 514,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 182,
+          "rejected": 0,
+          "total": 182,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 51,
+          "rejected": 0,
+          "total": 51,
+          "uncertain": 0
+        }
+      }
+    },
+    "session_000024": {
+      "detailed_events": {
+        "accepted": 0,
+        "pending": 130,
+        "rejected": 0,
+        "total": 130,
+        "uncertain": 0
+      },
+      "detailed_intervals": {
+        "accepted": 0,
+        "pending": 236,
+        "rejected": 0,
+        "total": 236,
+        "uncertain": 0
+      },
+      "macro": {
+        "operating": {
+          "accepted": 0,
+          "pending": 45,
+          "rejected": 0,
+          "total": 45,
+          "uncertain": 0
+        },
+        "thermal": {
+          "accepted": 0,
+          "pending": 37,
+          "rejected": 0,
+          "total": 37,
+          "uncertain": 0
+        }
+      }
+    }
+  }
+}

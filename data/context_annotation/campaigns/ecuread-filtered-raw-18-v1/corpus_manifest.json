@@ -1,0 +1,424 @@
+{
+  "archive_sha256": "63273c4b61101ac913afa30d1788b00b98a057c77348fe1624b786f021278d4c",
+  "capture_independence": {
+    "machine_verified_independent_captures": null,
+    "operator_attested_independent_captures": 18,
+    "status": "operator_attested_not_machine_verified",
+    "technical_verification": "Distinct file hashes and full-frame overlap checks do not establish physical capture independence.",
+    "user_attestation": "18 files are the selected files after filtering previously captured sessions",
+    "verified_independent_physical_captures": null
+  },
+  "created_at": "2026-10-11T01:13:50.175293+00:00",
+  "dataset_id": "ecuread-filtered-raw-18-v1",
+  "excluded_sessions": [],
+  "independent_captured_sessions": null,
+  "machine_verified_independent_captures": null,
+  "operator_attestation": {
+    "capture_groups_path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/provenance/capture_groups.v1.json",
+    "capture_groups_sha256": "db4dc3905a7293b13272c840a88698c8d7fb4a2926f422fe1ba2c56786f9bafc",
+    "path": "/home/hthnh/ecuread-analyzer/data/context_annotation/campaigns/ecuread-filtered-raw-18-v1/provenance/operator_attestation.v1.json",
+    "sha256": "585b873b49d7eef6c13230b96be2dc4b6e88d70eb1f03c54e520655bb1f4d062"
+  },
+  "operator_attested_independent_captures": 18,
+  "operator_evaluation_policy": "operator_attested_capture_groups_v1",
+  "partition_policy": "quarantine_until_physical_capture_groups_verified",
+  "schema_version": "context-raw-corpus-v2",
+  "selection_rule": "Exactly the 18 researcher-supplied SHA-pinned original RAW files; absent 008-013 are intentional. No augmentation or automatic discovery.",
+  "sessions": [
+    {
+      "origin": {
+        "archive_member": "raw/session_000001.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+        "confirmed_session_metadata": {},
+        "duration_s": 28.999,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017",
+        "recording_type": "user_attested_captured",
+        "sample_count": 117,
+        "source_origin": "real_data/fulldata_afterclean/session_000001.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000001",
+      "source_path": "real_data/fulldata_afterclean/session_000001.jsonl",
+      "source_sha256": "5af43708ba2f707e5d8c46b7d61ee86d3a2e62a0698427fd771114156933d017"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000002.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+        "confirmed_session_metadata": {},
+        "duration_s": 1446.503,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa",
+        "recording_type": "user_attested_captured",
+        "sample_count": 5781,
+        "source_origin": "real_data/fulldata_afterclean/session_000002.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000002",
+      "source_path": "real_data/fulldata_afterclean/session_000002.jsonl",
+      "source_sha256": "19071f9dac5a874ca4245233a3bb94770dc34d8db10a1dfa54fbf6cdb29c5eaa"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000003.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+        "confirmed_session_metadata": {},
+        "duration_s": 312.499,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c",
+        "recording_type": "user_attested_captured",
+        "sample_count": 1249,
+        "source_origin": "real_data/fulldata_afterclean/session_000003.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000003",
+      "source_path": "real_data/fulldata_afterclean/session_000003.jsonl",
+      "source_sha256": "34b3f52954f08c1e71aa5b337f016286433aa7613a429ddfd42957db1dcd0a4c"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000004.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+        "confirmed_session_metadata": {},
+        "duration_s": 755.001,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7",
+        "recording_type": "user_attested_captured",
+        "sample_count": 3017,
+        "source_origin": "real_data/fulldata_afterclean/session_000004.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000004",
+      "source_path": "real_data/fulldata_afterclean/session_000004.jsonl",
+      "source_sha256": "8fe7ee4652a9154007eed9d04d199911c909d13327b0f5bf90c7f3bddb34a0d7"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000005.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+        "confirmed_session_metadata": {},
+        "duration_s": 1963.997,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4",
+        "recording_type": "user_attested_captured",
+        "sample_count": 7851,
+        "source_origin": "real_data/fulldata_afterclean/session_000005.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000005",
+      "source_path": "real_data/fulldata_afterclean/session_000005.jsonl",
+      "source_sha256": "260b706c68fc4807cf23ddb8977059ca3523d77c105d7f27093354b9d7072be4"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000006.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+        "confirmed_session_metadata": {},
+        "duration_s": 230.75,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9",
+        "recording_type": "user_attested_captured",
+        "sample_count": 923,
+        "source_origin": "real_data/fulldata_afterclean/session_000006.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000006",
+      "source_path": "real_data/fulldata_afterclean/session_000006.jsonl",
+      "source_sha256": "61d64e80833db597b4e10725bbc12dc6eb844157e6fc3db52ceaaeb33b45ffb9"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000007.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+        "confirmed_session_metadata": {},
+        "duration_s": 1598.002,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879",
+        "recording_type": "user_attested_captured",
+        "sample_count": 6389,
+        "source_origin": "real_data/fulldata_afterclean/session_000007.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000007",
+      "source_path": "real_data/fulldata_afterclean/session_000007.jsonl",
+      "source_sha256": "509cc87f61d71f39f7ca4f0651424d1ba73dc15b97f49325b7586dcbbec77879"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000014.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+        "confirmed_session_metadata": {},
+        "duration_s": 300.5,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6",
+        "recording_type": "user_attested_captured",
+        "sample_count": 1202,
+        "source_origin": "real_data/fulldata_afterclean/session_000014.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000014",
+      "source_path": "real_data/fulldata_afterclean/session_000014.jsonl",
+      "source_sha256": "88245a15180859689db636159008582db646071e03c9d4eacb69476a7e95d8d6"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000015.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+        "confirmed_session_metadata": {},
+        "duration_s": 132.501,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39",
+        "recording_type": "user_attested_captured",
+        "sample_count": 531,
+        "source_origin": "real_data/fulldata_afterclean/session_000015.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000015",
+      "source_path": "real_data/fulldata_afterclean/session_000015.jsonl",
+      "source_sha256": "ef4362cc2350e8047eab72c91346b6cefb1b4ef4a3a50419ec3a57ba685e0f39"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000016.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+        "confirmed_session_metadata": {
+          "capture_type": "road",
+          "metadata_source": "operator_attestation",
+          "ride_pattern": "continuous_long_ride",
+          "trip_context": "out_of_city"
+        },
+        "duration_s": 4494.502,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d",
+        "recording_type": "user_attested_captured",
+        "sample_count": 17965,
+        "source_origin": "real_data/fulldata_afterclean/session_000016.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000016",
+      "source_path": "real_data/fulldata_afterclean/session_000016.jsonl",
+      "source_sha256": "02abc8a32bc9c9e33116cd028789bdae739cdd8e59607cdc0ced2c75a8f0275d"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000017.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+        "confirmed_session_metadata": {},
+        "duration_s": 873.5,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab",
+        "recording_type": "user_attested_captured",
+        "sample_count": 3492,
+        "source_origin": "real_data/fulldata_afterclean/session_000017.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000017",
+      "source_path": "real_data/fulldata_afterclean/session_000017.jsonl",
+      "source_sha256": "69e7c5c425f789ca6b813a4c263089dd18f56099cd13a979e5c7d170737acaab"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000018.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+        "confirmed_session_metadata": {
+          "capture_type": "road",
+          "metadata_source": "operator_attestation",
+          "ride_pattern": "continuous_long_ride",
+          "trip_context": "out_of_city"
+        },
+        "duration_s": 4496.001,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04",
+        "recording_type": "user_attested_captured",
+        "sample_count": 17976,
+        "source_origin": "real_data/fulldata_afterclean/session_000018.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000018",
+      "source_path": "real_data/fulldata_afterclean/session_000018.jsonl",
+      "source_sha256": "6ef183818d3743c5bae2527928487f7f5991264f2f07528b965bddd0979e4b04"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000019.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+        "confirmed_session_metadata": {},
+        "duration_s": 548.67,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011",
+        "recording_type": "user_attested_captured",
+        "sample_count": 2194,
+        "source_origin": "real_data/fulldata_afterclean/session_000019.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000019",
+      "source_path": "real_data/fulldata_afterclean/session_000019.jsonl",
+      "source_sha256": "b7b1dfe49ff6b2708f687de9fd6e81a9484cdd905e6b73bd7a8804a000233011"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000020.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+        "confirmed_session_metadata": {},
+        "duration_s": 21.501,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23",
+        "recording_type": "user_attested_captured",
+        "sample_count": 87,
+        "source_origin": "real_data/fulldata_afterclean/session_000020.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000020",
+      "source_path": "real_data/fulldata_afterclean/session_000020.jsonl",
+      "source_sha256": "739b3dc0453eccfa8c04e228374e1f5b87a58511a929784e531ef681e0165d23"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000021.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+        "confirmed_session_metadata": {},
+        "duration_s": 891.25,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d",
+        "recording_type": "user_attested_captured",
+        "sample_count": 3564,
+        "source_origin": "real_data/fulldata_afterclean/session_000021.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000021",
+      "source_path": "real_data/fulldata_afterclean/session_000021.jsonl",
+      "source_sha256": "1243dbc68061137ab0174a4c20a752908a1e2275ff1ecc430ed3dc98c621208d"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000022.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+        "confirmed_session_metadata": {},
+        "duration_s": 755.001,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d",
+        "recording_type": "user_attested_captured",
+        "sample_count": 3021,
+        "source_origin": "real_data/fulldata_afterclean/session_000022.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000022",
+      "source_path": "real_data/fulldata_afterclean/session_000022.jsonl",
+      "source_sha256": "85402d4fce614e0b52ef79ba5f3123e5ba4a59c3bfc9a2f2642859df18816e1d"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000023.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+        "confirmed_session_metadata": {
+          "capture_type": "road",
+          "metadata_source": "operator_attestation",
+          "ride_pattern": "continuous_long_ride",
+          "trip_context": "out_of_city"
+        },
+        "duration_s": 4391.172,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a",
+        "recording_type": "user_attested_captured",
+        "sample_count": 17539,
+        "source_origin": "real_data/fulldata_afterclean/session_000023.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000023",
+      "source_path": "real_data/fulldata_afterclean/session_000023.jsonl",
+      "source_sha256": "f034aa1aba5d36cca1f4e99c43b94e5cb298181e86dd74125c8f10d45d883e5a"
+    },
+    {
+      "origin": {
+        "archive_member": "raw/session_000024.jsonl",
+        "capture_group_basis": "operator_attestation",
+        "capture_group_id": "raw-source:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+        "confirmed_session_metadata": {},
+        "duration_s": 1948.999,
+        "evaluation_eligible": false,
+        "evaluation_exclusion": "physical_capture_group_unverified",
+        "operator_evaluation_eligible": true,
+        "physical_capture_group_id": "operator-capture:1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547",
+        "recording_type": "user_attested_captured",
+        "sample_count": 7790,
+        "source_origin": "real_data/fulldata_afterclean/session_000024.jsonl",
+        "technical_capture_identity_verified": false
+      },
+      "reason_included": "Explicit researcher-selected original RAW; archive, staging and imported hashes match.",
+      "session_id": "session_000024",
+      "source_path": "real_data/fulldata_afterclean/session_000024.jsonl",
+      "source_sha256": "1282b1ba2577dcef14bc8b6b07982475f4bc2eab86b716a00b6ec5e43f6c0547"
+    }
+  ],
+  "source_count": 18,
+  "source_root": "/home/hthnh/ecuread-analyzer/real_data/fulldata_afterclean"
+}
